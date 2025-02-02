@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+    --font-rawline: 'rawline', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+}
+
+.uk-leader-fill::after {
+    display: inline-block;
+    margin-left: 15px;
+    width: 0;
+    content: attr(data-fill);
+    white-space: nowrap
+}
+
+.uk-leader-fill.uk-leader-hide::after {
+    display: none
+}
+
+:root {
+    --uk-leader-fill-content: '.';
+}
