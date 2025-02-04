@@ -6,24 +6,36 @@ import Curve from '@/components/curve';
 
 const navItems = [
     {
-        title: "Home",
-        href: "#section-one",
+        title: "Inicio",
+        href: "#section-home",
     },
     {
-        title: "About",
-        href: "#section-two",
+        title: "Evaluación",
+        href: "#section-assessment",
     },
     {
-        title: "Contact",
-        href: "#section-three",
+        title: "Beneficio",
+        href: "#section-benefit",
     },
     {
-        title: "Work",
-        href: "#section-four",
+        title: "Trazabilidad",
+        href: "#section-traceability",
     },
+    {
+        title: "Ubicación",
+        href: "#section-location",
+    },
+    {
+        title: "Historia",
+        href: "#section-history",
+    },
+    {
+        title: "Responsabilidad Social",
+        href: "#section-responsive",
+    }
 ]
 
-export default function index() {
+export default function index({ children }: { children: React.ReactNode }) {
 
     const [selectedIndicator, setSelectedIndicator] = useState("");
 
@@ -36,6 +48,9 @@ export default function index() {
             className="menu"
         >
             <nav className="body">
+                <div className='pt-10 w-full flex justify-center items-center'>
+                    {children}
+                </div>
                 <ul className="nav">
                     {
                         navItems.map((data, index) => {

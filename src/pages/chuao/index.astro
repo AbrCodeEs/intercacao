@@ -28,7 +28,6 @@ import RespSocial from "../../images/chuao/responsabilidad-social-fundacion-pros
 import RespSocial2 from "../../images/chuao/responsabilidad-social-regreso-al-agro-color.png";
 
 import { Progress } from "@/components/progress";
-import { Header } from "@/components/header";
 ---
 
 <Layout
@@ -38,19 +37,8 @@ import { Header } from "@/components/header";
   keywords="Cacao de Chuao, cacao trinitario, cacao criollo, granos de cacao, análisis de corte, características organolépticas, sabor a cacao, aroma floral, fermentación del cacao, técnicas de secado, trazabilidad del cacao, certificado de origen, cosecha de cacao, producción sostenible, agricultura en Venezuela, historia del cacao en Chuao, folklore venezolano, comunidad de Chuao, responsabilidad social, Fundación Prosperi, mapa sensorial del cacao, cacao gourmet, cacao artesanal, cultura del cacao, cacao de alta calidad, tradiciones de Chuao"
 >
   <article class="w-full overflow-x-hidden overflow-y-auto">
-    <Header client:load/>
-    <!-- <nav class="fixed top-0 left-0 z-50 bg-white p-10">
-      <ul>
-        <li><a href="#section-one">Sección 1</a></li>
-        <li><a href="#section-two">Sección 2</a></li>
-        <li><a href="#section-three">Sección 3</a></li>
-        <li><a href="#section-four">Sección 4</a></li>
-        <li><a href="#section-five">Sección 5</a></li>
-        <li><a href="#section-six">Sección 6</a></li>
-        <li><a href="#section-seven">Sección 7</a></li>
-      </ul>
-    </nav> -->
-    <div
+
+    <div id="section-home"
       class="flex h-auto w-full xl:flex-row lg:flex-row md:flex-row flex-col flex-wrap bg-gray-200"
     >
       <div class="xl:h-screen xl:w-auto lg:w-auto md:w-auto size-auto flex-1">
@@ -256,7 +244,7 @@ import { Header } from "@/components/header";
       </div>
     </div>
 
-    <section id="section-one" class="xl:px-50 lg:px-50 md:px-50 px-5">
+    <section  class="xl:px-50 lg:px-50 md:px-50 px-5">
       <div class="my-10 flex flex-col gap-5">
         <h1 class="text-4xl font-bold text-neutral-600 uppercase">
           Características Físicas y Organolépticas
@@ -378,7 +366,7 @@ import { Header } from "@/components/header";
           <div class="w-md flex-none rounded-lg"></div>
         </div>
 
-        <div
+        <div id="section-assessment"
           class="flex h-auto w-full xl:flex-row lg:flex-row md:flex-row flex-col gap-5"
         >
           <div class="flex w-auto flex-1 flex-col gap-5">
@@ -500,7 +488,6 @@ import { Header } from "@/components/header";
     </section>
 
     <section
-      id="section-two"
       class="xl:h-screen lg:h-screen md:h-screen h-full xl:w-screen lg:w-screen md:w-screen w-full bg-gray-400"
     >
       <Image
@@ -511,7 +498,7 @@ import { Header } from "@/components/header";
       />
     </section>
 
-    <section id="section-three" class="xl:px-50 lg:px-50 md:px-50 px-5">
+    <section  class="xl:px-50 lg:px-50 md:px-50 px-5">
       <div
         class="my-10 flex xl:flex-row lg:flex-row md:flex-row flex-col gap-5"
       >
@@ -560,7 +547,7 @@ import { Header } from "@/components/header";
       </div>
     </section>
 
-    <section id="section-four" class="xl:px-50 lg:px-50 md:px-50 px-5">
+    <section class="xl:px-50 lg:px-50 md:px-50 px-5">
       <div
         class="my-10 flex xl:flex-row lg:flex-row md:flex-row flex-col gap-5"
       >
@@ -595,7 +582,7 @@ import { Header } from "@/components/header";
     </section>
 
     <section
-      id="section-five"
+      id="section-benefit"
       class="flex w-full flex-col gap-5 bg-neutral-100 xl:px-50 lg:px-50 md:px-50 px-5 py-10"
     >
       <h1 class="text-4xl font-bold text-neutral-600 uppercase">
@@ -771,7 +758,7 @@ import { Header } from "@/components/header";
     </section>
 
     <section
-      id="section-six"
+      id="section-traceability"
       class="flex w-full flex-col gap-5 xl:px-50 lg:px-50 md:px-50 px-5 py-10"
     >
       <h1 class="text-4xl font-bold text-neutral-600 uppercase">
@@ -920,7 +907,7 @@ import { Header } from "@/components/header";
     </section>
 
     <section
-      id="section-seven"
+      id="section-location"
       class="flex w-full flex-col gap-5 bg-neutral-200 xl:px-50 lg:px-50 md:px-50 px-5 py-10"
     >
       <h1 class="text-4xl font-bold text-neutral-600 uppercase">
@@ -1044,7 +1031,7 @@ import { Header } from "@/components/header";
     </section>
 
     <section
-      id="section-eight"
+      id="section-history"
       class="flex w-full flex-col gap-5 xl:px-50 lg:px-50 md:px-50 px-5 py-10"
     >
       <h1 class="text-4xl font-bold text-neutral-600 uppercase">Historia</h1>
@@ -1142,7 +1129,7 @@ import { Header } from "@/components/header";
     </section>
 
     <section
-      id="section-nine"
+      id="section-responsive"
       class="bg-neutral-100 flex w-full flex-col gap-5 xl:px-50 lg:px-50 md:px-50 px-5 py-10 pt-10 pb-20"
     >
       <h1 class="text-4xl font-bold text-neutral-600 uppercase">
@@ -1178,24 +1165,3 @@ import { Header } from "@/components/header";
     </section>
   </article>
 </Layout>
-
-<script>
-  const links = document.querySelectorAll("nav a");
-
-  links.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault(); // Evita el comportamiento por defecto del enlace
-      const targetId = link.getAttribute("href")?.substring(1); // Obtiene el ID del destino
-      const targetElement = document.getElementById(targetId);
-
-      // Aplicamos una clase para iniciar la animación CSS
-      targetElement?.classList.add("active");
-
-      // Desplazamiento suave
-      window.scrollTo({
-        top: targetElement?.offsetTop,
-        behavior: "smooth",
-      });
-    });
-  });
-</script>
