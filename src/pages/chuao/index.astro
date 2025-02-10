@@ -27,7 +27,8 @@ import historia2 from "../../images/chuao/historia-dime-chuao-pared.jpg";
 import RespSocial from "../../images/chuao/responsabilidad-social-fundacion-prosperi-color.png";
 import RespSocial2 from "../../images/chuao/responsabilidad-social-regreso-al-agro-color.png";
 
-import { Progress } from "@/components/progress";
+import Blendy from "@/components/blendy-img";
+import Characteristics from "@/components/template/Characteristics.astro";
 ---
 
 <Layout
@@ -37,8 +38,8 @@ import { Progress } from "@/components/progress";
   keywords="Cacao de Chuao, cacao trinitario, cacao criollo, granos de cacao, análisis de corte, características organolépticas, sabor a cacao, aroma floral, fermentación del cacao, técnicas de secado, trazabilidad del cacao, certificado de origen, cosecha de cacao, producción sostenible, agricultura en Venezuela, historia del cacao en Chuao, folklore venezolano, comunidad de Chuao, responsabilidad social, Fundación Prosperi, mapa sensorial del cacao, cacao gourmet, cacao artesanal, cultura del cacao, cacao de alta calidad, tradiciones de Chuao"
 >
   <article class="w-full overflow-x-hidden overflow-y-auto">
-
-    <div id="section-home"
+    <div
+      id="section-home"
       class="flex h-auto w-full xl:flex-row lg:flex-row md:flex-row flex-col flex-wrap bg-gray-200"
     >
       <div class="xl:h-screen xl:w-auto lg:w-auto md:w-auto size-auto flex-1">
@@ -47,6 +48,7 @@ import { Progress } from "@/components/progress";
           class="h-full w-full object-cover object-center"
           src={ChuaoWeb}
           alt="portadad de chuaco cacao"
+          loading="eager"
         />
       </div>
       <div
@@ -69,6 +71,7 @@ import { Progress } from "@/components/progress";
                   class="h-full w-30 object-fill"
                   src={ratingStars}
                   alt="5.0"
+                  loading="eager"
                 />
               </span>
             </p>
@@ -80,7 +83,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span>2.6</span>
+              <b>2.6</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
@@ -88,7 +91,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span>4.0</span>
+              <b>4.0</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
@@ -96,7 +99,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span>0.5</span>
+              <b>0.5</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
@@ -104,7 +107,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> 3.4</span>
+              <b>3.4</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
@@ -112,14 +115,14 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> 3.6</span>
+              <b>3.6</b>
             </p>
             <p class="flex flex-wrap justify-between gap-2">
               <span>BOSCOSO</span>
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> 0.8</span>
+              <b>0.8</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
@@ -127,7 +130,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span>0.6</span>
+              <b>0.6</b>
             </p>
           </div>
 
@@ -137,7 +140,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> 25</span>
+              <b>25</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
@@ -145,7 +148,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> DIC-MAR </span>
+              <b>DIC-MAR</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
@@ -153,7 +156,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> JUN-JUL</span>
+              <b>JUN-JUL</b>
             </p>
           </div>
 
@@ -163,7 +166,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> 22%</span>
+              <b>22%</b>
             </p>
           </div>
 
@@ -182,8 +185,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-
-              <span> 6%</span>
+              <b>6%</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
@@ -191,8 +193,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-
-              <span> 2%</span>
+              <b>2%</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
@@ -200,26 +201,25 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-
-              <span> 100%</span>
+              <b>100%</b>
             </p>
           </div>
 
           <div class="flex flex-col gap-0.5">
             <p class="flex flex-wrap justify-between gap-2">
-              <span> Granos / <b>100 g</b>:</span>
+              <span> Granos / 100g:</span>
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> 83</span>
+              <b>83</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
-              <span>g<b>.</b>/1 Grano:</span>
+              <span>g./1 Grano:</span>
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> 1,20 g</span>
+              <b>1,20 g</b>
             </p>
           </div>
 
@@ -229,7 +229,7 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> SI</span>
+              <b>SI</b>
             </p>
 
             <p class="flex flex-wrap justify-between gap-2">
@@ -237,255 +237,167 @@ import { Progress } from "@/components/progress";
               <span
                 class="mb-2 flex-grow border-b border-dashed border-gray-300"
               ></span>
-              <span> NO</span>
+              <b>NO</b>
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <section  class="xl:px-50 lg:px-50 md:px-50 px-5">
-      <div class="my-10 flex flex-col gap-5">
-        <h1 class="text-4xl font-bold text-neutral-600 uppercase">
-          Características Físicas y Organolépticas
-        </h1>
-        <h3 class="py-4 text-3xl text-neutral-600 uppercase">
-          Sabores Positivos
-        </h3>
-        <div
-          class="flex w-full xl:flex-row lg:flex-row md:flex-row flex-col gap-5 pb-10"
-        >
-          <div class="w-auto flex-1 flex flex-col gap-4 justify-start">
-            <div class="flex flex-col gap-1 justify-between w-full">
-              <Progress
-                className="border-l-12 border-l-red-500"
-                value={70}
-                client:load
-              >
-                <div
-                  class="h-full flex flex-row justify-between items-center text-white px-5"
-                >
-                  <span class="uppercase">Afrutado Dulce</span>
-                  <span>3.5</span>
-                </div>
-              </Progress>
-              <p class="text-lg">Uvas pasas • Ciruelas pasas</p>
-            </div>
-            <div class="flex flex-col gap-1 justify-between w-full">
-              <Progress
-                className="border-l-12 border-l-amber-500"
-                value={100}
-                client:load
-              >
-                <div
-                  class="h-full flex flex-row justify-between items-center text-white px-5"
-                >
-                  <span class="uppercase">Afrutado Cítrico</span>
-                  <span>5.0</span>
-                </div>
-              </Progress>
-              <p class="text-lg">Naranja</p>
-            </div>
-            <div class="flex flex-col gap-1 justify-between w-full">
-              <Progress
-                className="border-l-12 border-l-pink-500"
-                value={36}
-                client:load
-              >
-                <div
-                  class="h-full flex flex-row justify-between items-center text-white px-5"
-                >
-                  <span class="uppercase">Aflorado</span>
-                  <span>2.0</span>
-                </div>
-              </Progress>
-              <p class="text-lg">Naranja • Mandarina</p>
-            </div>
-            <div class="flex flex-col gap-1 justify-between w-full">
-              <Progress
-                className="border-l-12 border-l-yellow-500/50"
-                value={70}
-                client:load
-              >
-                <div
-                  class="h-full flex flex-row justify-between items-center text-white px-5"
-                >
-                  <span class="uppercase">Acriollado</span>
-                  <span>3.5</span>
-                </div>
-              </Progress>
-              <p class="text-lg">
-                Malta • Caña de azúcar • Panela • Maní tostado • Almendras •
-                Nuez • Caramelo
-              </p>
-            </div>
-            <div class="flex flex-col gap-1 justify-between w-full">
-              <Progress
-                className="border-l-12 border-l-yellow-900"
-                value={57}
-                client:load
-              >
-                <div
-                  class="h-full flex flex-row justify-between items-center text-white px-5"
-                >
-                  <span class="uppercase">Cacao</span>
-                  <span>3.0</span>
-                </div>
-              </Progress>
-              <p class="text-lg">Cacao</p>
-            </div>
-            <div class="flex flex-col gap-1 justify-between w-full pb-5">
-              <Progress
-                className="border-l-12 border-l-lime-300"
-                value={0}
-                client:load
-              >
-                <div
-                  class="h-full flex flex-row justify-between items-center text-white px-5"
-                >
-                  <span class="uppercase">Boscoso</span>
-                  <span>0.0</span>
-                </div>
-              </Progress>
-            </div>
-            <div class="flex flex-col gap-1 justify-between w-full">
-              <Progress
-                className="border-l-12 border-l-yellow-300"
-                value={0}
-                client:load
-              >
-                <div
-                  class="h-full flex flex-row justify-between items-center text-white px-5"
-                >
-                  <span class="uppercase">Especias</span>
-                  <span>0.0</span>
-                </div>
-              </Progress>
-            </div>
-          </div>
-          <div class="w-md flex-none rounded-lg"></div>
-        </div>
-
-        <div id="section-assessment"
-          class="flex h-auto w-full xl:flex-row lg:flex-row md:flex-row flex-col gap-5"
-        >
-          <div class="flex w-auto flex-1 flex-col gap-5">
-            <h3 class="text-3xl text-neutral-600">EVALUACIÓN</h3>
-            <div class="h-70 w-full flex-none">
-              <Image
-                inferSize={true}
-                class="h-full w-full object-contain object-left-bottom"
-                src={clasificacion}
-                alt="Clasificacion de Chuao"
-              />
-            </div>
-            <div class="w-full flex-1">
-              <div class="flex flex-wrap">
-                <p class="w-50 uppercase font-bold">S = Sabor:</p>
-                <p class="text-sm">
-                  <b class="pr-3 text-base">FUERTE</b>
-                  Denota sabor a frutos secos
-                </p>
-              </div>
-              <div class="flex">
-                <p class="w-50 uppercase font-bold">A = Aroma:</p>
-                <p class="text-sm">
-                  <b class="pr-3 text-base">FUERTE</b> Notas pronunciadas a esencias
-                  afrutadas y florales
-                </p>
-              </div>
-              <div class="flex flex-wrap">
-                <p class="w-50 uppercase font-bold">F = Fermentación:</p>
-                <p class="text-sm">
-                  <b class="pr-3 text-base">ALTAB</b> ajos niveles de astringencia
-                  y amargura
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-5">
-              <h2>
-                <i> Fuente: </i>
-              </h2>
-              <div>
-                <p class="text-blue-500">
-                  <em>
-                    <a href="http://www.intercacao.com/ing-gladys-ramos/"
-                      >Ing. Ms. Gladys Ramos</a
-                    ></em
-                  >
-                </p>
-                <p class="text-blue-500">
-                  <em
-                    ><a href="http://www.intercacao.com/evaluacion/"
-                      >Manual de Evaluación</a
-                    ></em
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="flex h-full w-full flex-row gap-5"></div>
-          </div>
-          <div
-            class="xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex-none rounded-lg bg-neutral-300 overflow-hidden"
-          >
-            <Image
-              inferSize={true}
-              class="h-full w-full object-contain object-left-bottom"
-              src={equipoCata}
-              alt="Equipo Cata"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="my-10 flex xl:flex-row lg:flex-row md:flex-row flex-col gap-5"
-      >
-        <div
-          class="xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex-1 rounded-lg bg-neutral-300 overflow-hidden"
-        >
-          <Image
-            inferSize={true}
-            class="h-full w-full object-contain object-left-bottom"
-            src={cuencaCacao}
-            alt=""
-          />
-        </div>
-        <div
-          class="flex xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex-1 flex-col gap-5"
-        >
-          <h3 class="py-4 text-3xl text-neutral-600 uppercase">
-            Análisis de Corte
-          </h3>
-          <p class="px-3 text-justify text-lg border-x border-black">
-            <i>
-              <b>
-                El cacao de Chuao debido a su genética trinitaria con alta
-                descendencia criolla, produce hasta un 40% de granos blancos que
-                le proporcionan su calidad y aroma.
-              </b>
-            </i>
-          </p>
-          <p class="text-lg">
-            El grano posee unas cualidades físicas específicas debido a los
-            tipos genéticos que adquiere del grano trinitario con alta
-            introgresión criolla.
-          </p>
-          <p class="text-lg">
-            La tonalidad que predomina en el aspecto de la semilla varía entre
-            color caoba, canela y caramelo.
-          </p>
-          <p class="text-lg">
-            Su análisis de corte posee granos fermentados (± 86%),con granos
-            violetas (±8%) y granos pizarrosos (±6%).
-          </p>
-          <p class="text-lg">
-            En relación a su peso generalmente los granos contienen 69 almendras
-            sobre un peso de 100 gr,es decir que cada almendra pesa 1,45 gr.
-          </p>
-        </div>
-      </div>
-    </section>
+    <Characteristics
+      characteristics={{
+        flavors: [
+          {
+            name: "Afrutado Dulce",
+            percentage: "3.5",
+            progress: 70,
+            icon: {
+              src: "/icons/ceresa-white-icon-intercacao.svg",
+              alt: "Ceresa-white-icon",
+            },
+            className: "border-l-12 border-l-red-500",
+            description: "Uvas pasas • Ciruelas pasas",
+            color: "#ef4444",
+          },
+          {
+            name: "Afrutado Cítrico",
+            percentage: "5.0",
+            progress: 100,
+            icon: {
+              src: "/icons/naranja-white-icon-intercacao.svg",
+              alt: "Naranja-white-icon",
+            },
+            className: "border-l-12 border-l-amber-500",
+            description: "Naranja",
+            color: "#f59e0b",
+          },
+          {
+            name: "Aflorado",
+            percentage: "2.0",
+            progress: 36,
+            icon: {
+              src: "/icons/flor-white-icon-intercacao.svg",
+              alt: "Flor-white-icon",
+            },
+            className: "border-l-12 border-l-pink-500",
+            description: "Naranja • Mandarina",
+            color: "#ec4899",
+          },
+          {
+            name: "Acriollado",
+            percentage: "3.5",
+            progress: 70,
+            icon: {
+              src: "/icons/bellota-white-icon-intercacao.svg",
+              alt: "Bellota-white-icon",
+            },
+            className: "border-l-12 border-l-yellow-500/50",
+            description:
+              "Malta • Caña de azúcar • Panela • Maní tostado • Almendras • Nuez • Caramelo",
+            color: "#eab30880",
+          },
+          {
+            name: "Cacao",
+            percentage: "3.0",
+            progress: 57,
+            icon: {
+              src: "/icons/cacao-white-icon-intercacao.svg",
+              alt: "Cacao-white-icon",
+            },
+            className: "border-l-12 border-l-yellow-900",
+            description: "Cacao",
+            color: "#713f12",
+          },
+          {
+            name: "Boscoso",
+            percentage: "0.0",
+            progress: 0,
+            icon: {
+              src: "/icons/pinos-white-icon-intercacao.svg",
+              alt: "Pino-white-icon",
+            },
+            className: "border-l-12 border-l-lime-300",
+            description: "",
+            color: "#bef264",
+          },
+          {
+            name: "Especias",
+            percentage: "0.0",
+            progress: 0,
+            icon: {
+              src: "/icons/clabos-white-icon-intercacao.svg",
+              alt: "Clabos-white-icon",
+            },
+            className: "border-l-12 border-l-yellow-300",
+            description: "",
+            color: "#fde047",
+          },
+        ],
+        assessment: {
+          classification: {
+            image: clasificacion,
+            imageAlt: "Clasificacion de Chuao",
+          },
+          equipment: {
+            image: equipoCata,
+            imageAlt: "Equipo Cata",
+          },
+        },
+        information: [
+          {
+            title: "S = Sabor:",
+            indicatorColor: "bg-amber-950",
+            description: {
+              boldText: "FUERTE",
+              additionalText: "Denota sabor a frutos secos",
+            },
+          },
+          {
+            title: "A = Aroma:",
+            indicatorColor: "bg-amber-950",
+            description: {
+              boldText: "FUERTE",
+              additionalText:
+                "Notas pronunciadas a esencias afrutadas y florales",
+            },
+          },
+          {
+            title: "F = Fermentación:",
+            indicatorColor: "bg-amber-950",
+            description: {
+              boldText: "ALTAB",
+              additionalText: "ajos niveles de astringencia y amargura",
+            },
+          },
+        ],
+        analysis: {
+          image: cuencaCacao,
+          imageAlt: "",
+          description: [
+            {
+              text: "El cacao de Chuao debido a su genética trinitaria con alta descendencia criolla, produce hasta un 40% de granos blancos que le proporcionan su calidad y aroma.",
+              information_block: true,
+            },
+            {
+              text: "El grano posee unas cualidades físicas específicas debido a los tipos genéticos que adquiere del grano trinitario con alta introgresión criolla.",
+              information_block: false,
+            },
+            {
+              text: "La tonalidad que predomina en el aspecto de la semilla varía entre color caoba, canela y caramelo.",
+              information_block: false,
+            },
+            {
+              text: "Su análisis de corte posee granos fermentados (± 86%),con granos violetas (±8%) y granos pizarrosos (±6%).",
+              information_block: false,
+            },
+            {
+              text: "En relación a su peso generalmente los granos contienen 69 almendras sobre un peso de 100 gr,es decir que cada almendra pesa 1,45 gr.",
+              information_block: false,
+            },
+          ],
+        },
+      }}
+    />
 
     <section
       class="xl:h-screen lg:h-screen md:h-screen h-full xl:w-screen lg:w-screen md:w-screen w-full bg-gray-400"
@@ -498,7 +410,7 @@ import { Progress } from "@/components/progress";
       />
     </section>
 
-    <section  class="xl:px-50 lg:px-50 md:px-50 px-5">
+    <section class="xl:px-50 lg:px-50 md:px-50 px-5">
       <div
         class="my-10 flex xl:flex-row lg:flex-row md:flex-row flex-col gap-5"
       >
@@ -730,6 +642,7 @@ import { Progress } from "@/components/progress";
         <div class="flex flex-col gap-5 justify-between items-center flex-1">
           <div class="w-full flex-none rounded-lg bg-neutral-300">
             <Image
+            
               inferSize={true}
               class="object-fill object-center rounded-lg"
               src={protocoloSecado}
@@ -739,10 +652,13 @@ import { Progress } from "@/components/progress";
 
           <div class="w-full h-100 flex-none">
             <iframe
+              loading="lazy"
+              allowfullscreen
+              title="video de secado de Chuao"
               class="w-full h-full rounded-lg overflow-hidden"
               src="https://www.youtube.com/embed/RXWVmyqSa2o"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              accessibility-title="video de secado de Chuao"
             >
             </iframe>
           </div>
@@ -875,12 +791,15 @@ import { Progress } from "@/components/progress";
           <div
             class="size-auto flex-none rounded-lg overflow-hidden bg-neutral-300 p-1"
           >
-            <Image
-              inferSize={true}
-              src={certificadoOrigen}
-              alt="certificado de origen"
-              class="object-fill object-center rounded-lg"
-            />
+
+           <Blendy client:only >
+             <Image
+               inferSize={true}
+               src={certificadoOrigen}
+               alt="certificado de origen"
+               class="object-fill object-center rounded-lg w-auto h-auto"
+             />
+           </Blendy>
           </div>
           <div
             class="size-auto flex-none rounded-lg overflow-hidden bg-neutral-300"
