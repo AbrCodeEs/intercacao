@@ -3,6 +3,13 @@ import BaseHead from '@/components/parts/BaseHead.astro';
 import Header from '@/components/parts/Header.astro';
 import Footer from '@/components/parts/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+
+export async function getStaticPaths() {
+  return [
+    { params: { locale: 'en' } },
+    { params: { locale: 'es' } },
+  ];
+}
 ---
 
 <!doctype html>
