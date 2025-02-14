@@ -113,7 +113,7 @@ section.active {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #432918;
+  background-color: #39200f;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -170,7 +170,7 @@ section.active {
 
 .menu {
   height: 100vh;
-  background-color: rgb(41, 41, 41);
+  background-color: #432918;
   position: fixed;
   left: -100px;
   top: 0;
@@ -207,7 +207,7 @@ section.active {
   right: -99px;
   width: 100px;
   height: 100%;
-  fill: rgb(41, 41, 41);
+  fill: #432918;
   stroke: none;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);

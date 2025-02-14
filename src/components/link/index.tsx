@@ -33,7 +33,7 @@ export default function Index({ data, isActive, setSelectedIndicator }) {
 
     return (
         <motion.li
-            className="link uppercase px-7 py-2 text-lg hover:bg-neutral-600"
+            className="link uppercase px-7 py-2 text-lg hover:bg-[#30261f]"
             onMouseEnter={() => { setSelectedIndicator(href); }}
             custom={index}
             variants={slide}
