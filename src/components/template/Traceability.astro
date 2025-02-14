@@ -1,0 +1,88 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+import ImgDialog from "@/components/dialog/Img";
+type Props = CollectionEntry<"template">["data"];
+
+const { traceability } = Astro.props;
+---
+
+<section
+    id="section-traceability"
+    class="flex w-full flex-col gap-5 xl:px-50 lg:px-50 md:px-50 px-5 py-10"
+>
+    <!-- Título principal -->
+    <h1 class="text-4xl font-bold text-neutral-600 uppercase">
+        {traceability.title}
+    </h1>
+
+    <div class="my-3 flex xl:flex-row lg:flex-row md:flex-row flex-col gap-5">
+        <!-- Columna de texto -->
+        <div
+            class="flex xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex-1 flex-col gap-5"
+        >
+            <!-- Subtítulo -->
+            <h3 class="py-4 text-3xl text-neutral-600 uppercase">
+                {traceability.subtitle}
+            </h3>
+
+            <!-- Contenido dinámico -->
+            {
+                traceability.content.map((item) => (
+                    <p
+                        class:list={[
+                            "text-lg",
+                            item.type === "highlight" &&
+                                "px-3 text-justify border-x border-black",
+                        ]}
+                    >
+                        {item.type === "highlight" ? (
+                            <i>
+                                <b>{item.text}</b>
+                            </i>
+                        ) : (
+                            item.text
+                        )}
+                    </p>
+                ))
+            }
+        </div>
+
+        <!-- Columna de imágenes -->
+        <div
+            class="xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex-1 flex flex-col gap-3 justify-start items-start"
+        >
+            {
+                traceability.images.map((image, index) => (
+                    <div
+                        class:list={[
+                            "size-auto flex-none rounded-lg bg-neutral-300 relative group animate-trigger-left",
+                            index === 0 &&
+                                "h-80 w-auto rounded-lg bg-neutral-300 scale-40 xl:-translate-y-30 lg:-translate-y-30 md:-translate-y-30 -translate-y-10",
+                            index !== 0 && "overflow-hidden",
+                        ]}
+                    >
+                        {image.useDialog ? (
+                            <ImgDialog client:load>
+                                <Image
+                                    inferSize={true}
+                                    src={image.src}
+                                    alt={image.alt}
+                                    class="object-fill object-center rounded-lg transform transition-all duration-500 ease-out group-hover:scale-105"
+                                />
+                            </ImgDialog>
+                        ) : (
+                            <Image
+                                inferSize={true}
+                                src={image.src}
+                                alt={image.alt}
+                                 class="object-fill object-center rounded-lg transform transition-all duration-500 ease-out group-hover:scale-105"
+                            />
+                        )}
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

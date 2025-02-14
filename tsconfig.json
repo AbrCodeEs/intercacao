@@ -12,6 +12,10 @@
       "@/assets/*": ["src/assets/*"],
       "@/public/*": ["/public/*"],
       "@/lib/*": ["src/lib/*"],
+      "@/images/*": ["src/images/*"],
+      "@/layouts/*": ["src/layouts/*"],
+      "@/i18n/*": ["src/i18n/*"],
+      "@/*": ["src/*"]
     }
   }
 }

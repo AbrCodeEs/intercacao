@@ -1,0 +1,50 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+type Props = CollectionEntry<"template">["data"];
+
+const { cocoaMap } = Astro.props;
+---
+
+{
+  cocoaMap.map((section) => (
+    <section class="xl:px-50 lg:px-50 md:px-50 px-5">
+      <div class="my-10 flex xl:flex-row lg:flex-row md:flex-row flex-col gap-5">
+        <div class="flex xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex-1 flex-col gap-5">
+          <h3 class="py-4 text-3xl text-neutral-600 uppercase">
+            {section.title}
+          </h3>
+
+          {section.content.map((content) => {
+            switch (content.type) {
+              case "quote":
+                return (
+                  <p
+                    class={`px-3 text-justify text-lg ${content.border ? "border-x border-black" : ""}`}
+                  >
+                    <i>
+                      <b>{content.quote}</b>, {content.author}
+                    </i>
+                  </p>
+                );
+              case "paragraph":
+                return <p class="text-lg">{content.text}</p>;
+            }
+          })}
+        </div>
+
+        <div
+          class={`xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex-1 rounded-lg flex justify-center items-center relative group animate-trigger-left ${section.image.align === "left" ? "order-first" : ""}`}
+        >
+          <Image
+            inferSize={true}
+            class="object-fill object-center rounded-lg transform transition-all duration-500 ease-out group-hover:scale-105"
+            src={section.image.src}
+            alt={section.image.alt}
+          />
+        </div>
+      </div>
+    </section>
+  ))
+}

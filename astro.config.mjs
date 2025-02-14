@@ -8,6 +8,13 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
 	site: 'https://example.com',
 	integrations: [react(), sitemap()],
+	i18n: {
+		locales: ["en", "es"], // Idiomas que deseas soportar
+		defaultLocale: "en", // Idioma predeterminado
+		routing: {
+			prefixDefaultLocale: true, // Asegura que el idioma predeterminado también tenga prefijo
+		},
+	},
 	vite: {
 		plugins: [tailwindcss()],
 	},
