@@ -1,8 +1,13 @@
 ---
-import BaseHead from '@/components/parts/BaseHead.astro';
-import Header from '@/components/parts/Header.astro';
-import Footer from '@/components/parts/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import { Image } from "astro:assets";
+
+import Layout from "@/layouts/MainLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+
+import banner from "@/images/index/banner.webp";
+import mundoDeSabores from "@/images/index/imagotipo-mundo-de-sabores.webp";
+import lienzo from "@/images/index/lienzo-bg.webp";
+import mundoDeSaboresPanel from "@/images/index/mundo-de-sabores-panel.webp";
 
 export async function getStaticPaths() {
   return [
@@ -12,14 +17,33 @@ export async function getStaticPaths() {
 }
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-	
-		<Footer />
-	</body>
-</html>
+<Layout
+	title={SITE_TITLE}
+	description={SITE_DESCRIPTION}
+	pubDate={new Date()}
+	keywords=""
+>
+	<Image
+		inferSize={true}
+		src={banner}
+		alt="Intercacao banner principal"
+		class="object-fill object-center w-full h-screen"
+	/>
+	<div class="w-full flex justify-center items-center p-10" style={`background-image: url(${lienzo.src});`}>
+		<Image
+			inferSize={true}
+			src={mundoDeSabores}
+			alt="Intercacao banner principal"
+			class="object-fill object-center w-75"
+		/>
+	</div>
+	<div class="w-full h-5 bg-primary"></div>
+	<div class="w-full flex justify-center items-center px-10 pb-10" style={`background-image: url(${lienzo.src});`}>
+		<Image
+			inferSize={true}
+			src={mundoDeSaboresPanel}
+			alt="Intercacao banner principal"
+			class="object-fill object-center shadow-2xl"
+		/>
+	</div>
+</Layout>

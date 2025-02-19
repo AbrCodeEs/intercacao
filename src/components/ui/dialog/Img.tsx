@@ -6,7 +6,7 @@ import {
     DialogTrigger,
     DialogHeader,
     DialogTitle
-} from "@/components/dialog"
+} from "@/components/ui/dialog"
 
 const ImgDialog = ({ children, title }: { children: React.ReactNode, title: string }) => (
     <Dialog>

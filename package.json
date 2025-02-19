@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "oxlint src && oxlint --fix"
+    "lint": "pnpm oxlint format ./src/**/*.{ts,tsx,js,jsx}"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
@@ -15,12 +15,15 @@
     "@astrojs/sitemap": "^3.2.1",
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-progress": "^1.1.1",
+    "@radix-ui/react-slot": "^1.1.2",
     "@tailwindcss/vite": "^4.0.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "astro": "^5.1.10",
     "blendy": "^0.0.1",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.5.2",
     "framer-motion": "^12.0.6",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",

@@ -1,0 +1,30 @@
+{
+    "printWidth": 90,
+    "tabWidth": 2,
+    "jsxSingleQuote": true,
+    "bracketSameLine": true,
+    "jsxBracketSpacing": false,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "avoid",
+    "overrides": [
+        {
+            "files": [
+                "*.tsx"
+            ],
+            "options": {
+                "bracketSpacing": true,
+                "jsxSingleQuote": false
+            }
+        },
+        {
+            "files": [
+                "*.test.tsx"
+            ],
+            "options": {
+                "printWidth": 120
+            }
+        }
+    ]
+}

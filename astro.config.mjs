@@ -12,7 +12,7 @@ export default defineConfig({
 		locales: ["en", "es"], // Idiomas que deseas soportar
 		defaultLocale: "en", // Idioma predeterminado
 		routing: {
-			prefixDefaultLocale: true, // Asegura que el idioma predeterminado también tenga prefijo
+			prefixDefaultLocale: false, // Asegura que el idioma predeterminado también tenga prefijo
 		},
 	},
 	vite: {

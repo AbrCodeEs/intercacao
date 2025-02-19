@@ -1,0 +1,8 @@
+{
+    "[javascript]": {
+        "editor.defaultFormatter": "oxc.oxc-formatter"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "oxc.oxc-formatter"
+    }
+}
