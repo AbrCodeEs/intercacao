@@ -9,7 +9,7 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
+    --primary: 24, 47%, 18%;
     --primary-foreground: 0 0% 98%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
@@ -37,7 +37,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
+    --primary: 24, 47%, 18%;
     --primary-foreground: 240 5.9% 10%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -87,6 +87,73 @@
   --color-chart-3: hsl(var(--chart-3));
   --color-chart-4: hsl(var(--chart-4));
   --color-chart-5: hsl(var(--chart-5));
+
+  --color-fruity-sweet : #ef4444;
+  --color-fruity-citrus : #f59e0b;
+  --color-floral : #ec4899;
+  --color-creole : #eab30880;
+  --color-cocoa : #713f12;
+  --color-wood : #bef264;
+  --color-spices : #fde047;
+}
+
+.bg-fruity-sweet {
+  background: var(--color-fruity-sweet);
+}
+
+.bg-fruity-citrus {
+  background: var(--color-fruity-citrus);
+}
+
+.bg-flower {
+  background: var(--color-floral);
+}
+.bg-flowers {
+  background: var(--color-floral);
+}
+
+.bg-creole {
+  background: var(--color-creole);
+}
+
+.bg-cocoa {
+  background: var(--color-cocoa);
+}
+
+.bg-wood {
+  background: var(--color-wood);
+}
+
+.bg-spices {
+  background: var(--color-spices);
+}
+
+.border-fruity-sweet {
+  border-color: var(--color-fruity-sweet);
+}
+
+.border-fruity-citrus {
+  border-color: var(--color-fruity-citrus);
+}
+
+.border-floral {
+  border-color: var(--color-floral);
+}
+
+.border-creole {
+  border-color: var(--color-creole);
+}
+
+.border-cocoa {
+  border-color: var(--color-cocoa);
+}
+
+.border-wood {
+  border-color: var(--color-wood);
+}
+
+.border-spices {
+  border-color: var(--color-spices);
 }
 
 section.active {
@@ -170,7 +237,7 @@ section.active {
 
 .menu {
   height: 100vh;
-  background-color: #432918;
+  background-color: hsl(var(--primary));
   position: fixed;
   left: -100px;
   top: 0;
@@ -207,7 +274,7 @@ section.active {
   right: -99px;
   width: 100px;
   height: 100%;
-  fill: #432918;
+  fill: hsl(var(--primary));
   stroke: none;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);

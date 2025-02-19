@@ -1,0 +1,7 @@
+# Ignorar archivos generados
+/dist
+/node_modules
+*.min.js
+# Ignorar configuraciones
+.eslintrc
+.prettierrc

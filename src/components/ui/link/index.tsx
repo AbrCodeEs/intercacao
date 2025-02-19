@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { slide, scale } from '../nav/anim';
 
-export default function Index({ data, isActive, setSelectedIndicator }) {
+export default function Index({ data, isActive, setSelectedIndicator, setIsActive }: { data: { title: string, href: string, index: number }, isActive: boolean, setSelectedIndicator: React.Dispatch<React.SetStateAction<string>>, setIsActive: React.Dispatch<React.SetStateAction<boolean>> }) {
     const { title, href, index } = data;
 
     useEffect(() => {
-        const handleClick = (e) => {
+        const handleClick = (e: Event) => {
             e.preventDefault(); // Evita el comportamiento por defecto del enlace
             const targetId = href.substring(1); // Obtiene el ID del destino
             const targetElement = document.getElementById(targetId);
@@ -34,12 +34,14 @@ export default function Index({ data, isActive, setSelectedIndicator }) {
     return (
         <motion.li
             className="link uppercase px-7 py-2 text-lg hover:bg-[#30261f]"
-            onMouseEnter={() => { setSelectedIndicator(href); }}
+            onMouseEnter={() => { setSelectedIndicator(href); /* setIsActive(true)  */}}
+            // onMouseLeave={() => { setIsActive(false) }}
             custom={index}
             variants={slide}
             initial="initial"
             animate="enter"
             exit="exit"
+            onClick={() => { setIsActive(false) }}
         >
             <motion.div
                 variants={scale}
