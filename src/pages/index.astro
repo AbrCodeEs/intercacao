@@ -18,9 +18,14 @@ import logoWilfriedMerle from "@/images/index/logo-wilfried-merle.webp";
 import logoRegresoAlAgro from "@/images/index/logo-regreso-al-agro.webp";
 import logoFundacionProsperi from "@/images/index/logo-fundacion-prosperi.webp";
 import logoWhiteImagotipoCacaoGourmet from "@/images/index/logo-white-imagotipo-cacao-gourmet.webp";
+import logoElectronDeporte from "@/images/index/logo-electron-deporte.png";
+import logoElectronMusica from "@/images/index/logo-electron-musica-y-dansa.png";
+import logoElectronReligion from "@/images/index/logo-electron-religion.png";
+import image from "@/images/index/image.png";
 
 import { CarouselPost } from "@/components/ui/carousel/Post";
 import ChocolateGallery from "@/components/page";
+import { OrbitingCirclesDemo } from "@/components/OrbitingCircles";
 import { Mail, MapPin, Facebook, Instagram, MessageCircle } from "lucide-react";
 
 const posts = [
@@ -146,7 +151,7 @@ const posts = [
 
 		<div
 			id="section-prosperi"
-			class="w-full xl:h-screen lg:h-screen md:h-screen h-auto flex justify-center xl:items-center lg:items-center md:items-center items-start bg-no-repeat bg-start"
+			class="w-full xl:h-screen lg:h-screen md:h-screen h-auto flex justify-center xl:items-center lg:items-center md:items-center items-start bg-no-repeat bg-start overflow-hidden"
 			style={`background-image: url(${lienzoCacao.src});`}
 		>
 			<div
@@ -193,19 +198,51 @@ const posts = [
 						/>
 					</div>
 				</div>
-				<div class="flex justify-center items-center gap-5">
-					<div class="w-100 h-auto">
+				<div
+					class="flex xl:flex-row lg:flex-row md:flex-row flex-col justify-center items-center gap-5 "
+				>
+					<div class="h-full w-70 block z-50">
+						<Image
+							inferSize={true}
+							src={logoElectronDeporte}
+							alt="Intercacao banner principal"
+							class="h-full w-full object-fill object-center block z-50"
+						/>
+					</div>
+					<div class="h-full w-70 block z-50">
+						<Image
+							inferSize={true}
+							src={logoElectronReligion}
+							alt="Intercacao banner principal"
+							class="h-full w-full object-fill object-center block z-50"
+						/>
+					</div>
+					<div class="h-full w-70 block z-50">
+						<Image
+							inferSize={true}
+							src={logoElectronMusica}
+							alt="Intercacao banner principal"
+							class="h-full w-full object-fill object-center "
+						/>
+					</div>
+					
+				</div>
+				<div class="w-full flex justify-center items-center relative">
+					<div class="h-full w-100 block z-50 bg-white">
 						<Image
 							inferSize={true}
 							src={logoFundacionProsperi}
 							alt="Intercacao banner principal"
-							class="h-full w-full object-fill object-center"
+							class="h-full w-full object-fill object-center block z-50"
 						/>
+
 					</div>
+					<div class="absolute -top-[280px] -left-[-80px] w-200 h-200 rounded-full border-2 border-black"/>
+					<div class="absolute -top-[80px] w-100 h-100 rounded-full border-2 border-black"/>
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="w-full h-5 bg-primary"></div>
 
 		<div
