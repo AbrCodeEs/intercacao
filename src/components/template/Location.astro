@@ -1,15 +1,15 @@
 ---
-import type { CollectionEntry } from "astro:content";
-import { Image } from "astro:assets";
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 
-type Props = CollectionEntry<"template">["data"];
+type Props = CollectionEntry<'template'>['data'];
 
 const { location } = Astro.props;
 ---
 
 <section
   id="section-location"
-  class="flex w-full flex-col gap-5 bg-neutral-100 xl:px-50 lg:px-50 md:px-50 px-5 py-10"
+  class="flex w-full flex-col gap-5 bg-neutral-100 px-5 py-10 md:px-50 lg:px-50 xl:px-50"
 >
   <!-- Título principal -->
   <h1 class="text-4xl font-bold text-neutral-600 uppercase">
@@ -17,64 +17,70 @@ const { location } = Astro.props;
   </h1>
 
   <!-- Sección de ubicación geográfica -->
-  <div class="flex xl:flex-row lg:flex-row md:flex-row flex-col w-full gap-5 py-5">
+  <div class="flex w-full flex-col gap-5 py-5 md:flex-row lg:flex-row xl:flex-row">
     <!-- Mapa -->
-    <div class="flex-1 xl:w-2/4 lg:w-2/4 md:w-2/4 w-full">
-      <div class="size-auto flex-none rounded-lg bg-neutral-300 overflow-hidden relative group animate-trigger-right">
+    <div class="w-full flex-1 md:w-2/4 lg:w-2/4 xl:w-2/4">
+      <div
+        class="group animate-trigger-right relative size-auto flex-none overflow-hidden rounded-lg bg-neutral-300"
+      >
         <a href={location.locationInfo.map.link} target="_blank">
           <Image
             src={location.locationInfo.map.src}
             alt={location.locationInfo.map.alt}
-            class="object-fill object-center rounded-lg transform transition-all duration-500 ease-out group-hover:scale-105"
+            class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
           />
         </a>
       </div>
     </div>
 
     <!-- Detalles de ubicación -->
-    <div class="flex-1 xl:w-2/4 lg:w-2/4 md:w-2/4 w-full">
+    <div class="w-full flex-1 md:w-2/4 lg:w-2/4 xl:w-2/4">
       <h2 class="py-4 text-3xl text-neutral-600 uppercase">
-        Ubicación Geográfica
+        {location.subtitle}
       </h2>
       <ul class="flex flex-col gap-5 text-lg">
-        {location.locationInfo.details.map((detail) => (
-          <li>
-            <b>{detail.label}: </b>
-            {detail.value}
-          </li>
-        ))}
+        {
+          location.locationInfo.details.map((detail) => (
+            <li>
+              <b>{detail.label}: </b>
+              {detail.value}
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>
 
   <!-- Párrafos descriptivos -->
-  {location.paragraphs.map((paragraph) => (
-    <p class="text-lg">{paragraph}</p>
-  ))}
+  {location.paragraphs.map((paragraph) => <p class="text-lg">{paragraph}</p>)}
 
   <!-- Sección de ecología -->
-  <div class="flex xl:flex-row lg:flex-row md:flex-row flex-col w-full gap-5">
+  <div class="flex w-full flex-col gap-5 md:flex-row lg:flex-row xl:flex-row">
     <!-- Texto de ecología -->
-    <div class="flex-1 xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex flex-col gap-5">
+    <div class="flex w-full flex-1 flex-col gap-5 md:w-2/4 lg:w-2/4 xl:w-2/4">
       <h3 class="py-4 text-3xl text-neutral-600 uppercase">
         {location.ecology.title}
       </h3>
-      {location.ecology.paragraphs.map((paragraph) => (
-        <p class="text-lg">{paragraph}</p>
-      ))}
+      {location.ecology.paragraphs.map((paragraph) => <p class="text-lg">{paragraph}</p>)}
     </div>
 
     <!-- Imágenes de ecología -->
-    <div class="flex-1 xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex flex-col gap-5">
-      {location.ecology.images.map((image) => (
-        <div class="size-auto flex-none rounded-lg overflow-hidden relative group animate-trigger-left">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            class="object-fill object-center rounded-lg transform transition-all duration-500 ease-out group-hover:scale-105"
-          />
-        </div>
-      ))}
+    <div class="flex w-full flex-1 flex-col gap-5 md:w-2/4 lg:w-2/4 xl:w-2/4">
+      {
+        location.ecology.images.map((image) => (
+          <div class="group animate-trigger-left relative w-full h-auto flex-none overflow-hidden rounded-lg">
+            <Image
+              inferSize={true}
+              width={1000}
+              height={1000}
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+            />
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

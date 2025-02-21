@@ -1,50 +1,56 @@
 ---
-import Layout from "@/layouts/CocoaLayout.astro";
-import { Image } from "astro:assets";
+import Layout from '@/layouts/CocoaLayout.astro';
+import { Image } from 'astro:assets';
+Astro;
+import ChuaoWeb from '@/images/chuao/chuao-web.webp';
+import ratingStars from '@/images/chuao/rating-stars-cut.png';
+import clasificacion from '@/images/chuao/clasificacion-rating.png';
+import saboresPositivos from '@/images/chuao/sabores-positivos.jpg';
+import equipoCata from '@/images/chuao/equipo-de-cata.jpg';
+import cuencaCacao from '@/images/chuao/cuenca-de-cacao.jpg';
+import corteChuao from '@/images/chuao/corte-chuao.jpg';
+import ruedaSabores from '@/images/chuao/rueda-de-sabores.png';
+import mapaSensorial from '@/images/chuao/mapa-perfil-sensorial-chuao.png';
+import semillaPorcelana from '@/images/chuao/semililla-porcelana-uno.png';
+import semillaPorcelanaDos from '@/images/chuao/semililla-porcelana-dos.png';
+import protocoloFermentacion from '@/images/chuao/protocolo-fermentacion.jpg';
+import protocoloSecado from '@/images/chuao/protocolo-secado.jpg';
+import corteChuaoTrinitario from '@/images/chuao/corte-chuao-trinitario.png';
+import corteChuaoCriollo from '@/images/chuao/corte-chuao-criollo.png';
+import certificadoOrigen from '@/images/chuao/certificado-de-origen-chuao.jpg';
+import agricultores from '@/images/chuao/chuao-agricultores.jpeg';
+import mosaico from '@/images/chuao/chuao-mosaico.jpeg';
+import mapa from '@/images/chuao/mapa-chuao.jpg';
+import ubicacion from '@/images/chuao/ubicacion-ecologia.jpg';
+import ubicacion2 from '@/images/chuao/ubicacion-henry-pittier.jpg';
+import historia from '@/images/chuao/historia-pueblo-iglesia-sepia.jpg';
+import historia2 from '@/images/chuao/historia-dime-chuao-pared.jpg';
+import RespSocial from '@/images/chuao/responsabilidad-social-fundacion-prosperi-color.png';
+import RespSocial2 from '@/images/chuao/responsabilidad-social-regreso-al-agro-color.png';
 
-import ChuaoWeb from "@/images/chuao/chuao-web.webp";
-import ratingStars from "@/images/chuao/rating-stars-cut.png";
-import clasificacion from "@/images/chuao/clasificacion-rating.png";
-import saboresPositivos from "@/images/chuao/sabores-positivos.jpg";
-import equipoCata from "@/images/chuao/equipo-de-cata.jpg";
-import cuencaCacao from "@/images/chuao/cuenca-de-cacao.jpg";
-import corteChuao from "@/images/chuao/corte-chuao.jpg";
-import ruedaSabores from "@/images/chuao/rueda-de-sabores.png";
-import mapaSensorial from "@/images/chuao/mapa-perfil-sensorial-chuao.png";
-import semillaPorcelana from "@/images/chuao/semililla-porcelana-uno.png";
-import semillaPorcelanaDos from "@/images/chuao/semililla-porcelana-dos.png";
-import protocoloFermentacion from "@/images/chuao/protocolo-fermentacion.jpg";
-import protocoloSecado from "@/images/chuao/protocolo-secado.jpg";
-import corteChuaoTrinitario from "@/images/chuao/corte-chuao-trinitario.png";
-import corteChuaoCriollo from "@/images/chuao/corte-chuao-criollo.png";
-import certificadoOrigen from "@/images/chuao/certificado-de-origen-chuao.jpg";
-import agricultores from "@/images/chuao/chuao-agricultores.jpeg";
-import mosaico from "@/images/chuao/chuao-mosaico.jpeg";
-import mapa from "@/images/chuao/mapa-chuao.jpg";
-import ubicacion from "@/images/chuao/ubicacion-ecologia.jpg";
-import ubicacion2 from "@/images/chuao/ubicacion-henry-pittier.jpg";
-import historia from "@/images/chuao/historia-pueblo-iglesia-sepia.jpg";
-import historia2 from "@/images/chuao/historia-dime-chuao-pared.jpg";
-import RespSocial from "@/images/chuao/responsabilidad-social-fundacion-prosperi-color.png";
-import RespSocial2 from "@/images/chuao/responsabilidad-social-regreso-al-agro-color.png";
+import GeneralInformation from '@/components/template/GeneralInformation.astro';
+import Characteristics from '@/components/template/Characteristics.astro';
+import CocoaMap from '@/components/template/CocoaMap.astro';
+import PostHarvestBenefit from '@/components/template/PostHarvestBenefit.astro';
+import Traceability from '@/components/template/Traceability.astro';
+import Location from '@/components/template/Location.astro';
+import History from '@/components/template/History.astro';
+import SocialResponsibility from '@/components/template/SocialResponsibility.astro';
 
-import Characteristics from "@/components/template/Characteristics.astro";
-import CocoaMap from "@/components/template/CocoaMap.astro";
-import PostHarvestBenefit from "@/components/template/PostHarvestBenefit.astro";
-import Traceability from "@/components/template/Traceability.astro";
-import Location from "@/components/template/Location.astro";
-import History from "@/components/template/History.astro";
-import SocialResponsibility from "@/components/template/SocialResponsibility.astro";
+import data from '@/data/chuao/data';
 
-import { getLangFromUrl, useTranslations } from '@/i18n/utils';
-const lang = getLangFromUrl(Astro.url);
-const trans = useTranslations(lang);
+const {
+  characteristics,
+  cocoaMap,
+  postHarvestBenefit,
+  traceability,
+  location,
+  history,
+  socialResponsibility,
+} = data(Astro);
 
 export async function getStaticPaths() {
-  return [
-    { params: { locale: 'en' } },
-    { params: { locale: 'es' } },
-  ];
+  return [{ params: { locale: 'en' } }, { params: { locale: 'es' } }];
 }
 ---
 
@@ -55,372 +61,70 @@ export async function getStaticPaths() {
   keywords="Cacao de Chuao, cacao trinitario, cacao criollo, granos de cacao, análisis de corte, características organolépticas, sabor a cacao, aroma floral, fermentación del cacao, técnicas de secado, trazabilidad del cacao, certificado de origen, cosecha de cacao, producción sostenible, agricultura en Venezuela, historia del cacao en Chuao, folklore venezolano, comunidad de Chuao, responsabilidad social, Fundación Prosperi, mapa sensorial del cacao, cacao gourmet, cacao artesanal, cultura del cacao, cacao de alta calidad, tradiciones de Chuao"
 >
   <article class="w-full overflow-x-hidden overflow-y-auto">
-    <div
-      id="section-home"
-      class="flex h-auto w-full xl:flex-row lg:flex-row md:flex-row flex-col flex-wrap bg-gray-200"
-    >
-      <div class="xl:h-screen xl:w-auto lg:w-auto md:w-auto size-auto flex-1">
-        <Image
-          inferSize={true}
-          class="h-full w-full object-cover object-center"
-          src={ChuaoWeb}
-          alt="portadad de chuaco cacao"
-          loading="eager"
-        />
-      </div>
-      <div
-        class="xl:h-screen xl:w-lg lg:w-lg md:w-lg w-full flex-none bg-neutral-700 px-20 py-10 text-white"
-      >
-        <div class="flex flex-col gap-7 text-base font-thin">
-          <div>
-            <p
-              class="flex xl:flex-wrap lg:flex-wrap md:flex-wrap justify-between gap-2"
-            >
-              <span>EVALUACIÓN</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <span
-                class="flex items-center justify-between xl:gap-5 lg:gap-5 md:gap-5 gap-2"
-              >
-                <b>5.0</b>
-                <Image
-                  inferSize={true}
-                  class="h-full w-30 object-fill"
-                  src={ratingStars}
-                  alt="5.0"
-                  loading="eager"
-                />
-              </span>
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-0.5">
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>AFRUTADO DULCE</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>2.6</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>AFRUTADO CÍTRICO</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>4.0</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>AFLORADO</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>0.5</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>ACRIOLLADO</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>3.4</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>CACAO</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>3.6</b>
-            </p>
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>BOSCOSO</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>0.8</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>ESPECIAS</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>0.6</b>
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-0.5">
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>PRODUCCIÓN ANUAL (TM)</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>25</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>COSECHA PRINCIPAL</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>DIC-MAR</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>COSECHA MEDIA</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>JUN-JUL</b>
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-0.5">
-            <p class="flex flex-wrap justify-between gap-2">
-              <span> GRANOS CRIOLLOS</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>22%</b>
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-0.5">
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>GRANOS FERMENTADOS</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-
-              <b>90%</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>GRANOS VIOLETAS</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>6%</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>GRANOS PIZARROSOS</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>2%</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>TOTAL</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>100%</b>
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-0.5">
-            <p class="flex flex-wrap justify-between gap-2">
-              <span> Granos / 100g:</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>83</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>g./1 Grano:</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>1,20 g</b>
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-0.5">
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>CERTIFICADO</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>SI</b>
-            </p>
-
-            <p class="flex flex-wrap justify-between gap-2">
-              <span>PREMIOS</span>
-              <span
-                class="mb-2 flex-grow border-b border-dashed border-gray-300"
-              ></span>
-              <b>NO</b>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <Characteristics
-      characteristics={{
-        title: trans("chuao.characteristics.title"),
-        flavors: [
-          {
-            name: "Afrutado Dulce",
-            percentage: "3.5",
-            progress: 70,
-            icon: {
-              src: "/icons/ceresa-white-icon-intercacao.svg",
-              alt: "Ceresa-white-icon",
-            },
-            className: "border-l-12 border-l-red-500",
-            description: "Uvas pasas • Ciruelas pasas",
-            color: "#ef4444",
-          },
-          {
-            name: "Afrutado Cítrico",
-            percentage: "5.0",
-            progress: 100,
-            icon: {
-              src: "/icons/naranja-white-icon-intercacao.svg",
-              alt: "Naranja-white-icon",
-            },
-            className: "border-l-12 border-l-amber-500",
-            description: "Naranja",
-            color: "#f59e0b",
-          },
-          {
-            name: "Aflorado",
-            percentage: "2.0",
-            progress: 36,
-            icon: {
-              src: "/icons/flor-white-icon-intercacao.svg",
-              alt: "Flor-white-icon",
-            },
-            className: "border-l-12 border-l-pink-500",
-            description: "Naranja • Mandarina",
-            color: "#ec4899",
-          },
-          {
-            name: "Acriollado",
-            percentage: "3.5",
-            progress: 70,
-            icon: {
-              src: "/icons/bellota-white-icon-intercacao.svg",
-              alt: "Bellota-white-icon",
-            },
-            className: "border-l-12 border-l-yellow-500/50",
-            description:
-              "Malta • Caña de azúcar • Panela • Maní tostado • Almendras • Nuez • Caramelo",
-            color: "#eab30880",
-          },
-          {
-            name: "Cacao",
-            percentage: "3.0",
-            progress: 57,
-            icon: {
-              src: "/icons/cacao-white-icon-intercacao.svg",
-              alt: "Cacao-white-icon",
-            },
-            className: "border-l-12 border-l-yellow-900",
-            description: "Cacao",
-            color: "#713f12",
-          },
-          {
-            name: "Boscoso",
-            percentage: "0.0",
-            progress: 0,
-            icon: {
-              src: "/icons/pinos-white-icon-intercacao.svg",
-              alt: "Pino-white-icon",
-            },
-            className: "border-l-12 border-l-lime-300",
-            description: "",
-            color: "#bef264",
-          },
-          {
-            name: "Especias",
-            percentage: "0.0",
-            progress: 0,
-            icon: {
-              src: "/icons/clabos-white-icon-intercacao.svg",
-              alt: "Clabos-white-icon",
-            },
-            className: "border-l-12 border-l-yellow-300",
-            description: "",
-            color: "#fde047",
-          },
-        ],
-        flavors_image: saboresPositivos,
-        assessment: {
-          classification: {
-            image: clasificacion,
-            imageAlt: "Clasificacion de Chuao",
-          },
-          equipment: {
-            image: equipoCata,
-            imageAlt: "Equipo Cata",
+    <GeneralInformation
+      generalInformation={{
+        title: 'evaluacion',
+        mainImage: {
+          src: ChuaoWeb,
+          alt: 'portada de chuao cacao',
+        },
+        rating: {
+          value: '5.0',
+          stars: {
+            src: ratingStars,
+            alt: 'estrellas de calificación 5.0',
           },
         },
-        information: [
+        sections: [
           {
-            title: "S = Sabor:",
-            indicatorColor: "bg-amber-950",
-            description: {
-              boldText: "FUERTE",
-              additionalText: "Denota sabor a frutos secos",
-            },
+            items: [
+              { label: 'AFRUTADO DULCE', value: '2.6' },
+              { label: 'AFRUTADO CÍTRICO', value: '4.0' },
+              { label: 'AFLORADO', value: '0.5' },
+              { label: 'ACRIOLLADO', value: '3.4' },
+              { label: 'CACAO', value: '3.6' },
+              { label: 'BOSCOSO', value: '0.8' },
+              { label: 'ESPECIAS', value: '0.6' },
+            ],
           },
           {
-            title: "A = Aroma:",
-            indicatorColor: "bg-amber-950",
-            description: {
-              boldText: "FUERTE",
-              additionalText:
-                "Notas pronunciadas a esencias afrutadas y florales",
-            },
+            items: [
+              { label: 'PRODUCCIÓN ANUAL (TM)', value: '25' },
+              { label: 'COSECHA PRINCIPAL', value: 'DIC-MAR' },
+              { label: 'COSECHA MEDIA', value: 'JUN-JUL' },
+            ],
           },
           {
-            title: "F = Fermentación:",
-            indicatorColor: "bg-amber-950",
-            description: {
-              boldText: "ALTAB",
-              additionalText: "ajos niveles de astringencia y amargura",
-            },
+            items: [{ label: 'GRANOS CRIOLLOS', value: '22%' }],
+          },
+          {
+            items: [
+              { label: 'GRANOS FERMENTADOS', value: '90%' },
+              { label: 'GRANOS VIOLETAS', value: '6%' },
+              { label: 'GRANOS PIZARROSOS', value: '2%' },
+              { label: 'TOTAL', value: '100%' },
+            ],
+          },
+          {
+            items: [
+              { label: 'Granos / 100g:', value: '83' },
+              { label: 'g./1 Grano:', value: '1,20 g' },
+            ],
+          },
+          {
+            items: [
+              { label: 'CERTIFICADO', value: 'SI' },
+              { label: 'PREMIOS', value: 'NO' },
+            ],
           },
         ],
-        analysis: {
-          image: cuencaCacao,
-          imageAlt: "",
-          description: [
-            {
-              text: "El cacao de Chuao debido a su genética trinitaria con alta descendencia criolla, produce hasta un 40% de granos blancos que le proporcionan su calidad y aroma.",
-              information_block: true,
-            },
-            {
-              text: "El grano posee unas cualidades físicas específicas debido a los tipos genéticos que adquiere del grano trinitario con alta introgresión criolla.",
-              information_block: false,
-            },
-            {
-              text: "La tonalidad que predomina en el aspecto de la semilla varía entre color caoba, canela y caramelo.",
-              information_block: false,
-            },
-            {
-              text: "Su análisis de corte posee granos fermentados (± 86%),con granos violetas (±8%) y granos pizarrosos (±6%).",
-              information_block: false,
-            },
-            {
-              text: "En relación a su peso generalmente los granos contienen 69 almendras sobre un peso de 100 gr,es decir que cada almendra pesa 1,45 gr.",
-              information_block: false,
-            },
-          ],
-        },
       }}
     />
+    <!-- @ts-ignore -->
+    <Characteristics characteristics={characteristics} />
 
     <section
-      class="xl:h-screen lg:h-screen md:h-screen h-full xl:w-screen lg:w-screen md:w-screen w-full bg-gray-400"
+      class="h-full w-full bg-gray-400 md:h-screen md:w-screen lg:h-screen lg:w-screen xl:h-screen xl:w-screen"
     >
       <Image
         inferSize={true}
@@ -430,345 +134,22 @@ export async function getStaticPaths() {
       />
     </section>
 
-    <CocoaMap
-      cocoaMap={[
-        {
-          title: "Mapa de Sabores",
-          content: [
-            {
-              type: "quote",
-              quote:
-                "Sus cualidades de aroma y sabor son moldeadas por el medio geográfico, la condición agroclimática, por la cercanía a la costa aunado a lo que un beneficio post cosecha muy particular ancestral donde se controlan remociones, volteos y buen drenaje de exudados, así como la entrega de sus productores en el manejo agronómico, le confieren la denominación del mejor y más costoso cacao del mundo",
-              author:
-                "Ing. Ms. Gladys Ramos, investigadora en Ciencias Agrícolas.",
-              border: true,
-            },
-            {
-              type: "paragraph",
-              text: "El prodigioso Cacao de Chuao posee un sabor único e interesante que motiva un sentimiento sublime, producto de una genética inigualable.",
-            },
-            {
-              type: "paragraph",
-              text: "Como principales características organolépticas destacan una moderada intensidad de sabor a cacao de 4 en una escala de 0 a 10, con acidez cítrica limpia de frutos tropicales y la dulzura de frutos negros como ciruelas pasas (por el proceso realizado en sombra) manteniendo un bajo nivel de astringencia.",
-            },
-          ],
-          image: {
-            src: ruedaSabores,
-            alt: "Rueda de sabores del cacao",
-            align: "right",
-          },
-        },
-        {
-          title: "Mapa Sensorial",
-          content: [
-            {
-              type: "paragraph",
-              text: "Emana un aroma con un alto nivel de fragancia que lo diferencia de muchos otros con esencias florales como naranjo, mandarinas y notas afrutadas como ciruelas pasas.",
-            },
-            {
-              type: "paragraph",
-              text: "El destacado grano tiene como particularidad esencial una sensación cremosa, suave y aterciopelada, (mouthfeel) ,ya que se disuelve en la boca, evocando el privilegio de la invisibilidad, su denso sabor llena el retrogusto y concede un prominente nivel de permanencia de sabor a chocolate, nueces y avellanas en la cavidad bucal.",
-            },
-          ],
-          image: {
-            src: mapaSensorial,
-            alt: "Mapa Sensorial de sabor",
-            align: "right",
-          },
-        },
-      ]}
-    />
+    <!-- @ts-ignore -->
+    <CocoaMap cocoaMap={cocoaMap} />
 
-    <PostHarvestBenefit
-      postHarvestBenefit={{
-        title: "Beneficio Post Cosecha",
-        backgroundColor: "bg-neutral-100",
-        content: [
-          {
-            type: "quote",
-            text: "Para el desarrollo del producto Cacao Chuao se deben cumplir las siguientes etapas, comenzando con el proceso de cosecha que se ejecuta mediante la colecta del fruto con machete o con desgarretadera si la rama es muy alta; una vez recopilado el producto se transporta al sitio donde se realizará el proceso de quiebre, extracción de granos y su fermentación.",
-            border: true,
-          },
-          {
-            type: "protocols",
-            protocols: [
-              {
-                title: "Protocolo de Refinamiento",
-                items: [
-                  {
-                    category: "keyValue",
-                    key: "Tipo de Cacao",
-                    value: "",
-                  },
-                  {
-                    category: "imageText",
-                    image: semillaPorcelanaDos,
-                    alt: "semilla porcelana",
-                    text: "Trinitario",
-                    size: 24,
-                  },
-                  {
-                    category: "imageText",
-                    image: semillaPorcelana,
-                    alt: "semilla porcelana",
-                    text: "Criollo",
-                    size: 20,
-                  },
-                  {
-                    category: "keyValue",
-                    key: "Días de Fermentación",
-                    value: "4 a 5 días",
-                  },
-                  {
-                    category: "list",
-                    items: [
-                      "Tipo de cajon: Madera",
-                      "Frecuencia de volteos: cada 24 horas",
-                      "Forma de Fermentación: se inicia distribuyendo los granos en baba sobre hojas de cambur o plátano, donde el fruto es partido en seis cajones de madera, con paredes laterales removibles.",
-                    ],
-                  },
-                ],
-                mainImage: {
-                  src: protocoloFermentacion,
-                  alt: "protocolo de fermentacion",
-                },
-              },
-              {
-                title: "Protocolo de Secado",
-                items: [
-                  {
-                    category: "keyValue",
-                    key: "Tipo de Cacao",
-                    value: "",
-                  },
-                  {
-                    category: "imageText",
-                    image: corteChuaoTrinitario,
-                    alt: "semilla porcelana",
-                    text: "Trinitario",
-                    size: 24,
-                  },
-                  {
-                    category: "imageText",
-                    image: corteChuaoCriollo,
-                    alt: "semilla porcelana",
-                    text: "Criollo",
-                  },
-                  {
-                    category: "keyValue",
-                    key: "Días de Secado",
-                    value: "4 a 5 días",
-                  },
-                  {
-                    category: "keyValue",
-                    key: "Técnicas de Secado",
-                    // value: "4 a 5 días",
-                  },
-                  {
-                    category: "list",
-                    items: [
-                      "Tipo de piso: cemento / concreto",
-                      "Humedad: 7,5%",
-                      "Forma de Secado: Al Sol",
-                    ],
-                  },
-                ],
-                mainImage: {
-                  src: protocoloSecado,
-                  alt: "protocolo de secado",
-                },
-                video: {
-                  src: "https://www.youtube.com/embed/RXWVmyqSa2o",
-                  title: "video de secado de Chuao",
-                  text: "El procedimiento lo realizan las mujeres del sector, las cuales aplican la amplia experiencia y conocimiento que poseen de la materia, evalúan el color y las condiciones climáticas, para la óptima condición del producto final.",
-                },
-              },
-            ],
-          },
-        ],
-      }}
-    />
+    <!-- @ts-ignore -->
+    <PostHarvestBenefit postHarvestBenefit={postHarvestBenefit} />
 
-    <Traceability
-      traceability={{
-        title: "Trazabilidad",
-        subtitle: "certificaciones y premios",
-        content: [
-          {
-            type: "highlight",
-            text: "Certificado de origen y trazabilidad que avala la procedencia del grano de cacao.",
-          },
-          {
-            type: "paragraph",
-            text: "Nosotros en unión con La empresa Campesina Chuao garantizamos un Certificado de Origen y trazabilidad que avala la autenticidad y procedencia del distinguido grano.",
-          },
-          {
-            type: "paragraph",
-            text: "La población total de la parroquia Chuao se ha estimado aproximadamente en 2.331 habitantes nativos del sector, de los cuales 125 se dedican a la producción del cacao. Todos son miembros activos de la Asociación de productores y artesanos de la zona, constituida como Empresa Campesina Chuao.",
-          },
-          {
-            type: "highlight",
-            text: "La mayoría de los habitantes de Chuao provienen de los antiguos esclavos afrodescendientes que actualmente se dedican a difundir de generación en generación la tradición y el amor desde la siembra del cacao, hasta el último paso de producción del exquisito fruto.",
-          },
-          {
-            type: "paragraph",
-            text: "En Chuao, el trabajo y dedicación a la tierra es ejecutada por familias donde predomina como actividad económica principal, el cultivo de cacao. Es realizado en su mayoría por mujeres, las cuales poseen el privilegio de producir el mejor cacao del mundo con técnicas comprobadas, experiencia y en ocasiones, acompañado de un canto para animar la valiosa faena del cultivo de tan fino producto.",
-          },
-          {
-            type: "highlight",
-            text: "Los moradores del sector habitan en viviendas dignas, organizadas y distribuidas alrededor de la superficie con una unidad productiva de 287,4 hectáreas que comprenden 162 Ha en producción del fruto, obteniendo un promedio de 25 Tm de cacao al año.",
-          },
-          {
-            type: "paragraph",
-            text: "Como segunda actividad de importancia para la comunidad trabajan la pesca de mar, seguidamente el turismo y el comercio, utilizando como medio de transporte imprescindible, los botes y lanchas que anclan en el rio el cual desemboca de las entrañables montañas del mágico pueblo.",
-          },
-          {
-            type: "highlight",
-            text: "En Chuao se destacan tres temporadas de cosecha como la Pascuera, Cuaresmera y Sanjuanera, siendo esta última la más extensa durante el mes de junio.",
-          },
-          {
-            type: "paragraph",
-            text: "La transformación del producto se realiza mediante la unión de los productores que conforman la Cooperativa campesina Chuao quienes cosechan, fermentan y secan de manera organizada el grano del cacao. Ellos se dividen en dos equipos, el de cosecha los cuales aplican la fase de siembra realizada por alineamiento, luego el riego artificial de la plantación la cual se realiza con agua de rio. El otro grupo de mantenimiento realiza el proceso de deschuponado y poda donde los trabajadores se distribuyen en 73 mujeres y 50 hombres, reafirmando que la labor es dominada por las ancestrales féminas.",
-          },
-          {
-            type: "highlight",
-            text: "El sistema de riego en Chuao es artificial se efectúa por inundación o escurrimiento, construyéndose tomas en el río para derivar en acequias y mediante canales que llegan a todas las plantas. El drenaje es estupendo por las condiciones de valle que drena hacia el mar, manteniendo siempre una óptima pendiente.",
-          },
-          {
-            type: "paragraph",
-            text: "Una vez realizado todo el proceso de beneficio, los granos son seleccionados y empacados en sacos de fique nuevos de 61 kg para luego ser despachados en camiones hasta el muelle de Chuao y ser trasladado en lanchas hasta Puerto Colombia, Choroní, donde siguen su camino hacia los almacenes de los comercializadores.",
-          },
-        ],
-        images: [
-          {
-            src: certificadoOrigen,
-            alt: "Certificado de origen",
-            useDialog: true,
-          },
-          {
-            src: agricultores,
-            alt: "Agricultores",
-          },
-          {
-            src: mosaico,
-            alt: "Mosaico",
-          },
-        ],
-      }}
-    />
+    <!-- @ts-ignore -->
+    <Traceability traceability={traceability} />
 
-    <Location
-      location={{
-        title: "Ubicación Geográfica y su Ecología",
-        locationInfo: {
-          map: {
-            src: mapa,
-            alt: "mapa de Chuao",
-            link: "https://www.google.co.ve/maps/place/Chuao,+Aragua/@10.490428,-67.5375832,15z/data=!3m1!4b1!4m5!3m4!1s0x8e81d2c13131e607:0xf4644f78cc342be5!8m2!3d10.4898143!4d-67.5276414?hl=en",
-          },
-          details: [
-            { label: "País", value: "Venezuela" },
-            { label: "Estado", value: "Aragua" },
-            { label: "Municipio", value: "Santiago Mariño" },
-            { label: "Superficie", value: "160 km2" },
-            { label: "Altitud promedio", value: "254 m (833 pies)" },
-            { label: "Coordenadas GPS", value: "10º29´36”N 67º31´38”W" },
-            { label: "Habitantes", value: "2331" },
-          ],
-        },
-        paragraphs: [
-          "La parroquia Chuao está situada en el corazón del valle intermontano de la Cordillera de Costa Venezolana específicamente en el Estado Aragua, se encuentra a 6 km del mar Caribe y pertenece al Parque nacional Henri Pittier.",
-          "Para trasladarse a Chuao es exclusivamente por vía marítima y para ello existen dos caminos, uno es Choroní, donde se toma la lancha con un recorrido de 25 minutos y la otra opción es atravesando las montañas que rodean el picacho de Turmero hacia el parque, por la ruta del cacao.",
-        ],
-        ecology: {
-          title: "Ecología",
-          paragraphs: [
-            "La diversidad de Fauna existente se deriva por la ubicación que delimita el pueblo de Chuao con el parque nacional Henri Pittier, su sistema ecológico es rico y abundante aunado a la temperatura y pluviosidad que rige 27°C y 1.000 mm respectivamente.",
-            "Con una gran variedad de especies de aves y especies endémicas, se han reportado unas 140 especies de mamíferos y 580 tipos de aves, entre los más representativos se encuentran: el halcón peregrino, la golondrina, el águila arpía, el águila solitaria, la polla de Wetmore, el paují copete de piedra, la guacharaca, el sorocuá acorallado, el guacamayo verde y el cardenalito, sólo por citar algunos ejemplos.",
-            "Por formar parte del Parque Nacional Henri Pittier las especies vegetales que predominan en el bosque nublado alcanza hasta la actualidad 150 especies diferentes de árboles en un área de 0,25 ha, y donde el “niño” o cucharón es la especie de árbol más representativa.",
-          ],
-          images: [
-            {
-              src: ubicacion2,
-              alt: "ubicacion de Chuao",
-            },
-            {
-              src: ubicacion,
-              alt: "ubicacion de Chuao",
-            },
-          ],
-        },
-      }}
-    />
+    <!-- @ts-ignore -->
+    <Location location={location} />
 
-    <History
-      history={{
-        title: "Historia",
-        images: [
-          {
-            src: historia,
-            alt: "historia de Chuao",
-          },
-          {
-            src: historia2,
-            alt: "historia de Chuao",
-          },
-        ],
-        content: [
-          {
-            type: "paragraph",
-            text: 'Por más de 450 años Chuao ha tenido el privilegio de producir cacao, el origen del cultivo en la costa aragüeña se remontan al siglo XVII, siendo sus habitantes originarios de la Etnia Caribe, nativos americanos "indígenas", quienes de manera brutal fueron casi absolutamente exterminados por los colonizadores españoles.',
-          },
-          {
-            type: "paragraph",
-            text: "Posteriormente con la llegada del encomendado Cristóbal Mejía, se exploran nuevas tierras en el cálido valle y comienza lo que fue el impulso en plantación y marca una escala definitiva de hacienda mediante la incorporación de la fuerza de trabajo del esclavo afrodescendiente, conformando así un nuevo tipo de explotación.",
-          },
-          {
-            type: "paragraph",
-            text: 'En 1671 la Hacienda de Chuao es donada a la Iglesia para su administración y comienza a ser conocida como "La Obra Pía de Chuao".',
-          },
-          {
-            type: "paragraph",
-            text: 'En 1671 la Hacienda de Chuao es donada a la Iglesia para su administración y comienza a ser conocida como "La Obra Pía de Chuao".',
-          },
-          {
-            type: "paragraph",
-            text: "Ciento cincuenta y seis años después, en 1827, como resultado de la lucha independentista finaliza la Obra Pía y por decreto del Libertador Simón Bolívar la Hacienda Chuao pasa a ser patrimonio de la Universidad de Caracas, hoy Universidad Central de Venezuela.",
-          },
-          {
-            type: "highlight",
-            text: "Chuao está rodeado por un sistema montañoso, de selva nublada y ambiente estuarino, es ideal para la producción de la semilla de más alta calidad en el mundo.",
-          },
-          {
-            type: "paragraph",
-            text: "En 1883 el General Guzmán Blanco, entonces presidente de la República, despoja a la institución de esta propiedad. Ésta luego pasa a manos del dictador Juan Vicente Gómez durante su presidencia. Al culminar el periodo, la Hacienda pasa a manos de la Nación y comienza a ser administrada por el Instituto Agrario Nacional (IAN) hasta 1976, cuando este organismo adscrito al Ministerio de Agricultura (MAC) impulsa la creación de la Empresa Campesina Chuao, la cual es conformada por los campesinos residentes en la vieja hacienda y les otorga la propiedad colectiva.",
-          },
-        ],
-        paragraphs: [
-          "Durante el recorrido del boscoso camino de la playa hacia el pueblo se pueden observar los extensos lotes de terrenos cubiertos de las plantas de cacao que deleita a grandes y pequeños dejando al mar como testigo de las mejores cosechas.",
-          "Chuao es un pueblo próspero, alegre y considerado por muchos como el bendecido valle de las costas aragüeñas que celebra durante las festividades de San Juan Bautista así como también los diablos danzantes (corpus christi) tradiciones representativas del folklore venezolano realizadas durante el mes de junio. Dichas costumbres amplían el alma y aunado a ello este pueblo nos deleita el paladar con el sabor de su inconfundible cacao.",
-        ],
-      }}
-    />
+    <!-- @ts-ignore -->
+    <History history={history} />
 
-    <SocialResponsibility
-      socialResponsibility={{
-        title: "Responsabilidad Social",
-       
-        images: [
-          {
-            src: RespSocial,
-            alt: "imagen1",
-          },
-          {
-            src: RespSocial2,
-            alt: "imagen2",
-          },
-        ],
-        paragraphs:
-          "El objetivo primordial es colaborar, enriquecer y ser promotor de las buenas prácticas agrícolas en la generación de relevo de la comunidad, gracias al aporte y unión con la FUNDACION PROSPERI, fundación sin fines de lucro, que mantiene el compromiso de difundir los valores históricos, culturales y agrícolas de Venezuela, a través de sus programas educativos como “Regreso al agro”, se logra demostrar que el cultivo de cacao es una profesión rentable, que genera un cambio social.",
-      
-      }}
-    />
+    <!-- @ts-ignore -->
+    <SocialResponsibility socialResponsibility={socialResponsibility} />
   </article>
 </Layout>

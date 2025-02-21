@@ -4,9 +4,16 @@
 export const SITE_TITLE = 'Intercacao';
 export const SITE_DESCRIPTION = 'Bienvenido a la intercacao';
 
-type SortOption = 'rated' | 'fermented' | 'certified' | 'awarded' | 'creole'
-type FlavorOption = 'Fruity Sweet' | 'Fruity Citrus' | 'Floral' | 'Criollo' | 'Cocoa' | 'Wood' | 'Spices'
-type CountryOption = 'Colombia' | 'Peru' | 'Venezuela'
+type SortOption = 'rated' | 'fermented' | 'certified' | 'awarded' | 'creole';
+type FlavorOption =
+  | 'Fruity Sweet'
+  | 'Fruity Citrus'
+  | 'Floral'
+  | 'Criollo'
+  | 'Cocoa'
+  | 'Wood'
+  | 'Spices';
+type CountryOption = 'Colombia' | 'Peru' | 'Venezuela';
 
 enum Flavor {
   Fruity_Sweet = 'Fruity Sweet',
@@ -15,40 +22,47 @@ enum Flavor {
   Criollo = 'Criollo',
   Cocoa = 'Cocoa',
   Wood = 'Wood',
-  Spices = 'Spices'
+  Spices = 'Spices',
 }
 
 enum Country {
   Colombia = 'Colombia',
   Peru = 'Peru',
-  Venezuela = 'Venezuela'
+  Venezuela = 'Venezuela',
 }
 enum Sort {
   rated = 'rated',
   fermented = 'fermented',
   certified = 'certified',
   awarded = 'awarded',
-  creole = 'creole'
+  creole = 'creole',
 }
 
 interface FilterOptionSortItems {
-  label: string
-  value: SortOption
-  icon: React.ReactNode
+  label: string;
+  value: SortOption;
+  icon: React.ReactNode;
 }
 
 interface FilterOptionFlavorItems {
-  label: string
-  value: FlavorOption
-  icon: React.ReactNode
-  className: string
+  label: string;
+  value: FlavorOption;
+  icon: React.ReactNode;
+  className: string;
 }
 
 interface FilterOptionCountryItems {
-  label: string
-  value: CountryOption
+  label: string;
+  value: CountryOption;
 }
 
-export type { SortOption, FlavorOption, CountryOption, FilterOptionSortItems, FilterOptionFlavorItems, FilterOptionCountryItems }
+export type {
+  SortOption,
+  FlavorOption,
+  CountryOption,
+  FilterOptionSortItems,
+  FilterOptionFlavorItems,
+  FilterOptionCountryItems,
+};
 
-export { Sort, Flavor, Country } 
+export { Sort, Flavor, Country };

@@ -1,201 +1,164 @@
 ---
-import type { CollectionEntry } from "astro:content";
-import { Image } from "astro:assets";
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 
-import { Progress } from "@/components/ui/progress";
-type Props = CollectionEntry<"template">["data"];
+import { Progress } from '@/components/ui/progress';
+type Props = CollectionEntry<'template'>['data'];
 
 const { characteristics } = Astro.props;
 ---
 
-<section class="xl:px-50 lg:px-50 md:px-50 px-5">
-    <div class="my-10 flex flex-col gap-5">
-        <h1 class="text-4xl font-bold text-neutral-600 uppercase">
-            {characteristics?.title}
-        </h1>
-        <h3 class="py-4 text-3xl text-neutral-600 uppercase">
-            Sabores Positivos
-        </h3>
-        <div
-            class="flex w-full xl:flex-row lg:flex-row md:flex-row flex-col gap-5 pb-10"
-        >
-            <div class="w-auto flex-1 flex flex-col gap-4 justify-start">
-                {
-                    characteristics?.flavors?.map((flavor) => (
-                        <div class="flex flex-col gap-1 justify-between w-full">
-                            <Progress
-                                className={`border-l-12 border-l-${flavor.color} ${flavor.className}`}
-                                value={flavor.progress}
-                                client:load
-                            >
-                                <div class="h-full flex flex-row justify-between items-center text-white px-5">
-                                    <div class="flex gap-3 items-center">
-                                        <img
-                                            src={flavor.icon?.src}
-                                            alt={flavor.icon?.alt}
-                                            class="w-8 h-8"
-                                            loading="lazy"
-                                        />
-                                        <span class="uppercase">
-                                            {flavor.name}
-                                        </span>
-                                    </div>
-                                    <span>{flavor.percentage}</span>
-                                </div>
-                            </Progress>
-                            <p class="text-lg">{flavor.description}</p>
-                        </div>
-                    ))
-                }
-            </div>
-            <div
-                class="xl:w-md lg:w-md md:w-md w-full flex-none rounded-lg overflow-hidden relative group animate-trigger-left"
-            >
-                {
-                    characteristics?.flavors_image && (
-                        <Image
-                            inferSize={true}
-                             class="object-fill object-center rounded-lg transform transition-all duration-500 ease-out group-hover:scale-105"
-                            src={characteristics?.flavors_image}
-                            alt="Flavors"
-                        />
-                    )
-                }
-            </div>
-        </div>
-
-        <div
-            id="section-assessment"
-            class="flex h-auto w-full xl:flex-row lg:flex-row md:flex-row flex-col gap-5"
-        >
-            <div class="flex w-auto flex-1 flex-col gap-5">
-                <h3 class="text-3xl text-neutral-600 uppercase">evaluación</h3>
-                <div class="h-70 w-full flex-none overflow-hidden relative group animate-trigger-right">
-                    {
-                        characteristics?.assessment?.classification && (
-                            <Image
-                                inferSize={true}
-                                class="object-fill object-center rounded-lg transform transition-all duration-500 ease-out group-hover:scale-105"
-                                src={
-                                    characteristics?.assessment?.classification
-                                        ?.image
-                                }
-                                alt={
-                                    characteristics?.assessment?.classification
-                                        ?.imageAlt
-                                }
-                            />
-                        )
-                    }
-                </div>
-                <div class="w-full flex-1 flex flex-col gap-2">
-                    {
-                        characteristics?.information &&
-                            characteristics?.information?.map(
-                                (information: any) => (
-                                    <div class="flex flex-row items-center">
-                                        <p class="grow w-47 uppercase font-bold text-sm">
-                                            {information.title}
-                                        </p>
-                                        <span
-                                            class={`block size-3 p-1.5 mx-1 rounded-full ${information.indicatorColor}`}
-                                        />
-                                        <p class="grow w-full text-sm">
-                                            <b>
-                                                {
-                                                    information.description
-                                                        .boldText
-                                                }
-                                            </b>
-                                            {
-                                                information.description
-                                                    .additionalText
-                                            }
-                                        </p>
-                                    </div>
-                                ),
-                            )
-                    }
-                </div>
-                <div class="flex gap-5">
-                    <h2>
-                        <i> Fuente: </i>
-                    </h2>
-                    <div>
-                        <p class="text-blue-500">
-                            <em>
-                                <a
-                                    href="http://www.intercacao.com/ing-gladys-ramos/"
-                                    >Ing. Ms. Gladys Ramos</a
-                                ></em
-                            >
-                        </p>
-                        <p class="text-blue-500">
-                            <em
-                                ><a href="http://www.intercacao.com/evaluacion/"
-                                    >Manual de Evaluación</a
-                                ></em
-                            >
-                        </p>
-                    </div>
-                </div>
-                <div class="flex h-full w-full flex-row gap-5"></div>
-            </div>
-            <div
-                class="xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex-none rounded-lg bg-neutral-300 overflow-hidden relative group animate-trigger-left"
-            >
-                {
-                    characteristics?.assessment?.equipment && (
-                        <Image
-                            inferSize={true}
-                            class="object-fill object-center rounded-lg transform transition-all duration-500 ease-out group-hover:scale-105"
-                            src={characteristics?.assessment?.equipment?.image}
-                            alt={
-                                characteristics?.assessment?.equipment?.imageAlt
-                            }
-                        />
-                    )
-                }
-            </div>
-        </div>
-    </div>
-
-    <div class="my-10 flex xl:flex-row lg:flex-row md:flex-row flex-col gap-5">
-        <div
-            class="xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex-1 rounded-lg bg-neutral-300 overflow-hidden relative group animate-trigger-right"
-        >
-            {
-                characteristics?.analysis && (
-                    <Image
-                        inferSize={true}
-                        class="h-full w-full object-contain object-left-bottom rounded-lg transform transition-all duration-500 ease-out group-hover:scale-105"
-                        src={characteristics?.analysis?.image}
-                        alt={characteristics?.analysis?.imageAlt}
+<section class="px-5 md:px-50 lg:px-50 xl:px-50">
+  <div class="my-10 flex flex-col gap-5">
+    <h1 class="text-4xl font-bold text-neutral-600 uppercase">
+      {characteristics?.title}
+    </h1>
+    <h3 class="py-4 text-3xl text-neutral-600 uppercase">Sabores Positivos</h3>
+    <div class="flex w-full flex-col gap-5 pb-10 md:flex-row lg:flex-row xl:flex-row">
+      <div class="flex w-auto flex-1 flex-col justify-start gap-4">
+        {
+          characteristics?.flavors?.map((flavor) => (
+            <div class="flex w-full flex-col justify-between gap-1">
+              <Progress
+                className={`border-l-12 border-l-${flavor.color} ${flavor.className}`}
+                value={flavor.progress}
+                client:load
+              >
+                <div class="flex h-full flex-row items-center justify-between px-5 text-white">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src={flavor.icon?.src}
+                      alt={flavor.icon?.alt}
+                      class="h-8 w-8"
+                      loading="lazy"
                     />
-                )
-            }
-        </div>
-        <div
-            class="flex xl:w-2/4 lg:w-2/4 md:w-2/4 w-full flex-1 flex-col gap-5"
-        >
-            <h3 class="py-4 text-3xl text-neutral-600 uppercase">
-                Análisis de Corte
-            </h3>
-
-            {
-                characteristics?.analysis?.description &&
-                    characteristics?.analysis?.description.map((description) =>
-                        description.information_block ? (
-                            <p class="px-3 text-justify text-lg border-x border-black">
-                                <i>
-                                    <b>{description.text}</b>
-                                </i>
-                            </p>
-                        ) : (
-                            <p class="text-lg">{description.text}</p>
-                        ),
-                    )
-            }
-        </div>
+                    <span class="uppercase">{flavor.name}</span>
+                  </div>
+                  <span>{flavor.percentage}</span>
+                </div>
+              </Progress>
+              <p class="text-lg">{flavor.description}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div
+        class="group animate-trigger-left relative w-full flex-none overflow-hidden rounded-lg md:w-md lg:w-md xl:w-md"
+      >
+        {
+          characteristics?.flavors_image && (
+            <Image
+              inferSize={true}
+              class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+              src={characteristics?.flavors_image}
+              alt="Flavors"
+            />
+          )
+        }
+      </div>
     </div>
+
+    <div
+      id="section-assessment"
+      class="flex h-auto w-full flex-col gap-5 md:flex-row lg:flex-row xl:flex-row"
+    >
+      <div class="flex w-auto flex-1 flex-col gap-5">
+        <h3 class="text-3xl text-neutral-600 uppercase">{characteristics?.assessment?.title}</h3>
+        <div class="group animate-trigger-right relative h-70 w-full flex-none overflow-hidden">
+          {
+            characteristics?.assessment?.classification && (
+              <Image
+                inferSize={true}
+                class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+                src={characteristics?.assessment?.classification?.image}
+                alt={characteristics?.assessment?.classification?.imageAlt}
+              />
+            )
+          }
+        </div>
+        <div class="flex w-full flex-1 flex-col gap-2">
+          {
+            characteristics?.information &&
+              characteristics?.information?.map((information: any) => (
+                <div class="flex flex-row items-center">
+                  <p class="w-47 grow text-sm font-bold uppercase">{information.title}</p>
+                  <span
+                    class={`mx-1 block size-3 rounded-full p-1.5 ${information.indicatorColor}`}
+                  />
+                  <p class="w-full grow text-sm">
+                    <b>{information.description.boldText}</b>
+                    {information.description.additionalText}
+                  </p>
+                </div>
+              ))
+          }
+        </div>
+        <div class="flex gap-5">
+          <h2>
+            <i> Fuente: </i>
+          </h2>
+          <div>
+            <p class="text-blue-500">
+              <em>
+                <a href="http://www.intercacao.com/ing-gladys-ramos/">Ing. Ms. Gladys Ramos</a></em
+              >
+            </p>
+            <p class="text-blue-500">
+              <em><a href="http://www.intercacao.com/evaluacion/">Manual de Evaluación</a></em>
+            </p>
+          </div>
+        </div>
+        <div class="flex h-full w-full flex-row gap-5"></div>
+      </div>
+      <div
+        class="group animate-trigger-left relative w-full flex-none overflow-hidden rounded-lg bg-neutral-300 md:w-2/4 lg:w-2/4 xl:w-2/4"
+      >
+        {
+          characteristics?.assessment?.equipment && (
+            <Image
+              inferSize={true}
+              class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+              src={characteristics?.assessment?.equipment?.image}
+              alt={characteristics?.assessment?.equipment?.imageAlt}
+            />
+          )
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="my-10 flex flex-col gap-5 md:flex-row lg:flex-row xl:flex-row">
+    <div
+      class="group animate-trigger-right relative w-full flex-1 overflow-hidden rounded-lg bg-neutral-300 md:w-2/4 lg:w-2/4 xl:w-2/4"
+    >
+      {
+        characteristics?.analysis && (
+          <Image
+            inferSize={true}
+            class="h-full w-full transform rounded-lg object-contain object-left-bottom transition-all duration-500 ease-out group-hover:scale-105"
+            src={characteristics?.analysis?.image}
+            alt={characteristics?.analysis?.imageAlt}
+          />
+        )
+      }
+    </div>
+    <div class="flex w-full flex-1 flex-col gap-5 md:w-2/4 lg:w-2/4 xl:w-2/4">
+      <h3 class="py-4 text-3xl text-neutral-600 uppercase">{characteristics?.analysis?.title}</h3>
+
+      {
+        characteristics?.analysis?.description &&
+          characteristics?.analysis?.description.map((description) =>
+            description.information_block ? (
+              <p class="border-x border-black px-3 text-justify text-lg">
+                <i>
+                  <b>{description.text}</b>
+                </i>
+              </p>
+            ) : (
+              <p class="text-lg">{description.text}</p>
+            ),
+          )
+      }
+    </div>
+  </div>
 </section>
