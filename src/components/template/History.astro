@@ -1,42 +1,42 @@
 ---
-import type { CollectionEntry } from "astro:content";
-import { Image } from "astro:assets";
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 
-type Props = CollectionEntry<"template">["data"];
+type Props = CollectionEntry<'template'>['data'];
 
 const { history } = Astro.props;
 ---
 
 <section
   id="section-history"
-  class="flex w-full flex-col gap-5 xl:px-50 lg:px-50 md:px-50 px-5 py-10"
+  class="flex w-full flex-col gap-5 px-5 py-10 md:px-50 lg:px-50 xl:px-50"
 >
   <h1 class="text-4xl font-bold text-neutral-600 uppercase">{history.title}</h1>
-  <div class="flex xl:flex-row lg:flex-row md:flex-row flex-col w-full gap-8">
-    <div class="flex-none xl:w-90 lg:w-90 md:w-90 w-full flex flex-col gap-5">
+  <div class="flex w-full flex-col gap-8 md:flex-row lg:flex-row xl:flex-row">
+    <div class="flex w-full flex-none flex-col gap-5 md:w-90 lg:w-90 xl:w-90">
       {
         history.images.map((image, index) => (
-          <div class="size-90 flex-none rounded-lg overflow-hidden relative group animate-trigger-right">
+          <div class="group animate-trigger-right relative size-90 flex-none overflow-hidden rounded-lg">
             <Image
               inferSize={true}
               src={image.src}
               alt={image.alt}
-              class="object-fill object-center rounded-lg transform transition-all duration-500 ease-out group-hover:scale-105"
+              class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
             />
           </div>
         ))
       }
     </div>
 
-    <div class="flex-1 w-full flex flex-col gap-5">
+    <div class="flex w-full flex-1 flex-col gap-5">
       {
         history.content.map(({ text, type }) => {
           switch (type) {
-            case "paragraph":
+            case 'paragraph':
               return <p class="text-lg">{text}</p>;
-            case "highlight":
+            case 'highlight':
               return (
-                <p class="px-3 text-justify text-lg border-x border-black">
+                <p class="border-x border-black px-3 text-justify text-lg">
                   <i>
                     <b>{text}</b>
                   </i>
@@ -48,9 +48,5 @@ const { history } = Astro.props;
     </div>
   </div>
 
-  {
-    history.paragraphs.map((paragraph, index) => (
-      <p class="text-lg">{paragraph}</p>
-    ))
-  }
+  {history.paragraphs.map((paragraph, index) => <p class="text-lg">{paragraph}</p>)}
 </section>

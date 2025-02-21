@@ -10,11 +10,9 @@
     "paths": {
       "@/components/*": ["src/components/*"],
       "@/assets/*": ["src/assets/*"],
-      "@/public/*": ["/public/*"],
-      "@/lib/*": ["src/lib/*"],
-      "@/images/*": ["src/images/*"],
+      "@/images/*": ["src/assets/img/*"],
+      "@/lib/*": ["src/assets/lib/*"],
       "@/layouts/*": ["src/layouts/*"],
-      "@/i18n/*": ["src/i18n/*"],
       "@/*": ["src/*"]
     }
   }

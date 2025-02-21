@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tailwindcss-animated";
+@import 'tailwindcss';
+@import 'tailwindcss-animated';
 
 @layer base {
   :root {
@@ -198,7 +198,7 @@ section.active {
 
   &::after,
   &::before {
-    content: "";
+    content: '';
     display: block;
     height: 1px;
     width: 40%;
@@ -265,7 +265,6 @@ section.active {
         color: white;
         font-weight: 300;
       }
-
     }
   }
 }
@@ -288,18 +287,17 @@ section.active {
 /* Definición de keyframes */
 @keyframes orbit {
   0% {
-    transform:
-      rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+    transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px))
+      rotate(calc(var(--angle) * -1deg));
   }
 
   100% {
-    transform:
-      rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg));
+    transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px))
+      rotate(calc((var(--angle) * -1deg) - 360deg));
   }
 }
 
 /* Clase para aplicar la animación */
 .animate-orbit {
-  animation:
-    orbit calc(var(--duration) * 1s) linear infinite;
+  animation: orbit calc(var(--duration) * 1s) linear infinite;
 }

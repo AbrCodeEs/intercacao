@@ -1,13 +1,16 @@
 {
   "name": "intercacao",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "pnpm oxlint format ./src/**/*.{ts,tsx,js,jsx}"
+    "lint": "oxlint --fix ./src",
+    "lint:ci": "oxlint ./src",
+    "format": "prettier --write . && pnpm run lint",
+    "precommit": "pnpm run format"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
@@ -16,11 +19,7 @@
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-progress": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.2",
-    "@tailwindcss/vite": "^4.0.0",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
     "astro": "^5.1.10",
-    "blendy": "^0.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.5.2",
@@ -28,11 +27,19 @@
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "sharp": "^0.33.5",
     "tailwind-merge": "^3.0.1",
-    "tailwindcss": "^4.0.0",
-    "tailwindcss-animated": "^2.0.0"
+    "tailwindcss-animated": "^2.0.0",
+    "vite-plugin-pwa": "^0.21.1"
   },
   "devDependencies": {
-    "oxlint": "^0.15.9"
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "oxlint": "^0.15.11",
+    "prettier": "^3.5.1",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.0"
   }
 }

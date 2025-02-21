@@ -1,7 +1,7 @@
-import chuao from '../images/chuao/chuao-web.webp'
-import carupano from '../images/index/carupano-pintao-web.webp'
-import porcelana from '../images/index/porcelana-web.webp'
-import tesoro from '../images/index/tesoro-web.webp'
+import chuao from '@/images/chuao/chuao-web.webp';
+import carupano from '@/images/carupano/carupano-pintao-web.webp';
+import porcelana from '@/images/porcelana/porcelana-web.webp';
+import tesoro from '@/images/tesoro/tesoro-web.webp';
 
 export interface ChocolateBar {
   id: string;
@@ -9,7 +9,7 @@ export interface ChocolateBar {
   image: string;
   rating: number;
   fermented: number;
-  certified:  number;
+  certified: number;
   awarded: number;
   creole: number;
   flavors: string[];
@@ -21,16 +21,16 @@ export interface ChocolateBar {
 
 export const chocolateBars: ChocolateBar[] = [
   {
-    id: "1",
-    name: "Chuao",
+    id: '1',
+    name: 'Chuao',
     image: chuao.src,
     rating: 5,
     fermented: 90,
     certified: 1,
     awarded: 0,
     creole: 22,
-    flavors: ["Fruity Sweet", "Fruity Citrus", "Flower", "Creole", "Cocoa"],
-    country: "Venezuela",
+    flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa'],
+    country: 'Venezuela',
     ingredients: {
       fruity_sweet: 2.5,
       fruity_citrus: 4,
@@ -38,20 +38,20 @@ export const chocolateBars: ChocolateBar[] = [
       creole: 3.4,
       cocoa: 3.6,
       wood: 0,
-      spices: 0
+      spices: 0,
     },
   },
   {
-    id: "2",
-    name: "Porcelana",
+    id: '2',
+    name: 'Porcelana',
     image: porcelana.src,
     rating: 4.2,
     fermented: 96,
     certified: 3,
     awarded: 2,
     creole: 22,
-    flavors: ["Fruity Sweet", "Fruity Citrus", "Flower", "Creole", "Cocoa"],
-    country: "Peru",
+    flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa'],
+    country: 'Peru',
     ingredients: {
       fruity_sweet: 2.3,
       fruity_citrus: 2.4,
@@ -59,20 +59,20 @@ export const chocolateBars: ChocolateBar[] = [
       creole: 2.2,
       cocoa: 3.6,
       wood: 0,
-      spices: 0
+      spices: 0,
     },
   },
   {
-    id: "3",
-    name: "Carupano pintao",
+    id: '3',
+    name: 'Carupano pintao',
     image: carupano.src,
     rating: 5,
     fermented: 90,
     certified: 2,
     awarded: 0,
     creole: 14,
-    flavors: ["Fruity Sweet", "Fruity Citrus", "Flower", "Creole", "Cocoa", "Wood" ,"Spices"],
-    country: "Venezuela",
+    flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
+    country: 'Venezuela',
     ingredients: {
       fruity_sweet: 2.5,
       fruity_citrus: 2.9,
@@ -80,20 +80,20 @@ export const chocolateBars: ChocolateBar[] = [
       creole: 3.0,
       cocoa: 3.6,
       wood: 1.4,
-      spices: 1.1
+      spices: 1.1,
     },
   },
   {
-    id: "4",
-    name: "El tesoro",
+    id: '4',
+    name: 'El tesoro',
     image: tesoro.src,
     rating: 4.3,
     fermented: 88,
     certified: 1,
     awarded: 0,
     creole: 18,
-    flavors: ["Fruity Sweet", "Fruity Citrus", "Flower", "Creole", "Cocoa", "Wood" ,"Spices"],
-    country: "Venezuela",
+    flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
+    country: 'Venezuela',
     ingredients: {
       fruity_sweet: 2.5,
       fruity_citrus: 2.8,
@@ -101,7 +101,7 @@ export const chocolateBars: ChocolateBar[] = [
       creole: 3.0,
       cocoa: 3.6,
       wood: 1.4,
-      spices: 1.1
+      spices: 1.1,
     },
   },
   // {
@@ -232,4 +232,4 @@ export const chocolateBars: ChocolateBar[] = [
   //     chili: 5,
   //   },
   // },
-]
+];
