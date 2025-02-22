@@ -19,7 +19,7 @@ export function CarouselPost({
     <Carousel {...props}>
       <CarouselContent>
         {posts.map((post, index) => (
-          <CarouselItem key={index} className="basis-xs md:basis-1/3 lg:basis-1/3 xl:basis-1/3">
+          <CarouselItem key={index} className="basis-xs p-5 md:basis-1/3 lg:basis-1/3 xl:basis-1/3">
             <CardPost {...post} />
           </CarouselItem>
         ))}

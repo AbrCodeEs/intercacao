@@ -45,6 +45,7 @@ const {
                             <div class="group animate-trigger-right relative flex items-center justify-start gap-5 overflow-hidden">
                               <Image
                                 inferSize={true}
+                                loading="eager"
                                 class={`size-${detail.size ?? 20} transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105`}
                                 src={detail.image}
                                 alt={detail.alt}
@@ -82,6 +83,7 @@ const {
                   <div class="group animate-trigger-left relative w-full flex-none overflow-hidden rounded-lg bg-neutral-300">
                     <Image
                       inferSize={true}
+                      loading="eager"
                       src={protocol.mainImage.src}
                       class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
                       alt={protocol.mainImage.alt}

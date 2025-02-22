@@ -49,6 +49,7 @@ const { characteristics } = Astro.props;
           characteristics?.flavors_image && (
             <Image
               inferSize={true}
+              loading="eager"
               class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
               src={characteristics?.flavors_image}
               alt="Flavors"
@@ -69,6 +70,7 @@ const { characteristics } = Astro.props;
             characteristics?.assessment?.classification && (
               <Image
                 inferSize={true}
+                loading="eager"
                 class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
                 src={characteristics?.assessment?.classification?.image}
                 alt={characteristics?.assessment?.classification?.imageAlt}
@@ -117,6 +119,7 @@ const { characteristics } = Astro.props;
           characteristics?.assessment?.equipment && (
             <Image
               inferSize={true}
+              loading="eager"
               class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
               src={characteristics?.assessment?.equipment?.image}
               alt={characteristics?.assessment?.equipment?.imageAlt}

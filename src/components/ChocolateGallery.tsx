@@ -1,9 +1,57 @@
 'use client';
 
+import * as React from 'react';
+import { cn } from '@/lib/utils';
 import { useState } from 'react';
 import { chocolateBars, type ChocolateBar } from '@/data/chocolateBars';
 import { ChocolateCard } from '@/components/ChocolateCard';
 import { Button } from '@/components/ui/button';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
+// navigationMenuTriggerStyle,
+
+const components: { title: string; href: string; description: string }[] = [
+  {
+    title: 'Alert Dialog',
+    href: '/docs/primitives/alert-dialog',
+    description:
+      'A modal dialog that interrupts the user with important content and expects a response.',
+  },
+  {
+    title: 'Hover Card',
+    href: '/docs/primitives/hover-card',
+    description: 'For sighted users to preview content available behind a link.',
+  },
+  {
+    title: 'Progress',
+    href: '/docs/primitives/progress',
+    description:
+      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+  },
+  {
+    title: 'Scroll-area',
+    href: '/docs/primitives/scroll-area',
+    description: 'Visually or semantically separates content.',
+  },
+  {
+    title: 'Tabs',
+    href: '/docs/primitives/tabs',
+    description:
+      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
+  },
+  {
+    title: 'Tooltip',
+    href: '/docs/primitives/tooltip',
+    description:
+      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
+  },
+];
 
 import type {
   SortOption,
@@ -25,8 +73,7 @@ import {
   Leaf,
   Award,
   Trophy,
-  Circle,
-  icons,
+  Nut,
 } from 'lucide-react';
 
 import { motion, AnimatePresence } from 'framer-motion';
@@ -55,7 +102,7 @@ const TypesSortOption = [
   {
     label: 'Criollo',
     value: 'creole',
-    icon: <Circle className="mr-1 h-6 w-6 fill-current text-yellow-400" />,
+    icon: <Nut className="mr-1 h-6 w-6 fill-current text-yellow-400" />,
   },
 ];
 
@@ -76,10 +123,10 @@ const CountriesSortOption = [
 
 const FlavorsSortOption = [
   {
-    label: 'Afrutado dulce',
+    label: 'Afrutado dulce ',
     value: 'Fruity Sweet',
-    className: 'bg-fruity-sweet',
-    icon: <Fruit className="h-4 w-4" />,
+    className: 'bg-fruity-sweet text-white',
+    icon: <Fruit className="h-4 w-4 text-white" />,
   },
   {
     label: 'Afrutado cítrico',
@@ -90,26 +137,26 @@ const FlavorsSortOption = [
   {
     label: 'Aflorado',
     value: 'Flower',
-    className: 'bg-flower',
-    icon: <Flower className="h-4 w-4" />,
+    className: 'bg-flower text-white',
+    icon: <Flower className="h-4 w-4 text-white" />,
   },
   {
     label: 'Acriollado',
     value: 'Creole',
     className: 'bg-creole',
-    icon: <Circle className="h-4 w-4" />,
+    icon: <Nut className="h-4 w-4" />,
   },
   {
     label: 'Cacao',
     value: 'Cocoa',
-    className: 'bg-cocoa',
-    icon: <Coffee className="h-4 w-4" />,
+    className: 'bg-cocoa text-white',
+    icon: <Coffee className="h-4 w-4 text-white" />,
   },
   {
     label: 'Boscoso',
     value: 'Wood',
-    className: 'bg-wood',
-    icon: <Tree className="h-4 w-4" />,
+    className: 'bg-wood text-white',
+    icon: <Tree className="h-4 w-4 text-white" />,
   },
   {
     label: 'Especias',
@@ -118,6 +165,29 @@ const FlavorsSortOption = [
     icon: <Spices className="h-4 w-4" />,
   },
 ];
+
+const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <li>
+        <NavigationMenuLink asChild>
+          <a
+            ref={ref}
+            className={cn(
+              'hover:bg-accent focus:bg-accent block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:text-black focus:text-black',
+              className,
+            )}
+            {...props}
+          >
+            <p className="line-clamp-2 text-sm leading-snug">{children}</p>
+          </a>
+        </NavigationMenuLink>
+      </li>
+    );
+  },
+);
+
+ListItem.displayName = 'ListItem';
 
 export function ChocolateGallery() {
   const [sortBy, setSortBy] = useState<SortOption>('rated');
@@ -191,9 +261,9 @@ export function ChocolateGallery() {
   return (
     <div className="p-5">
       <div className="space-y-4 py-5">
-        <div className="flex flex-col justify-center gap-10 p-3">
-          <h2 className="flex items-center gap-2 text-center text-xl font-semibold text-white before:content-[''] before:w-full before:h-px before:block before:border-t before:border-gray-100/20  after:content-[''] after:w-full after:h-px after:block after:border-t after:border-gray-100/20">
-           <span className="w-80">Ordenar por:</span>
+        <div className="flex hidden flex-col justify-center gap-10 p-3 md:block lg:block xl:block">
+          <h2 className="flex items-center gap-2 pb-5 text-center text-xl font-semibold text-white before:block before:h-px before:w-full before:border-t before:border-gray-100/20 before:content-[''] after:block after:h-px after:w-full after:border-t after:border-gray-100/20 after:content-['']">
+            <span className="w-80">Ordenar por:</span>
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-2">
             {(TypesSortOption as FilterOptionSortItems[]).map((option) => (
@@ -204,8 +274,8 @@ export function ChocolateGallery() {
                 size="sm"
                 className={
                   sortBy === option.value
-                    ? 'bg-white text-black hover:bg-white/90'
-                    : 'bg-black text-white hover:bg-black/90 hover:text-white'
+                    ? 'bg-gray-500 text-black hover:bg-white/90'
+                    : 'bg-gray-300 text-black hover:bg-gray-400'
                 }
               >
                 {option.icon}
@@ -214,8 +284,8 @@ export function ChocolateGallery() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-center gap-10 p-3">
-          <h2 className="flex items-center gap-2 text-center text-xl font-semibold text-white before:content-[''] before:w-full before:h-px before:block before:border-t before:border-gray-100/20  after:content-[''] after:w-full after:h-px after:block after:border-t after:border-gray-100/20">
+        <div className="flex hidden flex-col justify-center gap-10 p-3 md:block lg:block xl:block">
+          <h2 className="flex items-center gap-2 pb-5 text-center text-xl font-semibold text-white before:block before:h-px before:w-full before:border-t before:border-gray-100/20 before:content-[''] after:block after:h-px after:w-full after:border-t after:border-gray-100/20 after:content-['']">
             <span className="w-110">Mundo de sabores</span>
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-2">
@@ -227,8 +297,8 @@ export function ChocolateGallery() {
                 size="sm"
                 className={
                   selectedFlavors.includes(flavor.value)
-                    ? `${flavor.className} text-black`
-                    : 'bg-black text-white hover:bg-black/90 hover:text-white'
+                    ? `${flavor.className}`
+                    : `${flavor.className}`
                 }
               >
                 {flavor.icon}
@@ -237,9 +307,9 @@ export function ChocolateGallery() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-center gap-10 p-3">
-          <h2 className="flex items-center gap-2 text-center text-xl font-semibold text-white before:content-[''] before:w-full before:h-px before:block before:border-t before:border-gray-100/20  after:content-[''] after:w-full after:h-px after:block after:border-t after:border-gray-100/20">
-           <span className="w-50">País</span>
+        <div className="flex hidden flex-col justify-center gap-10 p-3 md:block lg:block xl:block">
+          <h2 className="flex items-center gap-2 pb-5 text-center text-xl font-semibold text-white before:block before:h-px before:w-full before:border-t before:border-gray-100/20 before:content-[''] after:block after:h-px after:w-full after:border-t after:border-gray-100/20 after:content-['']">
+            <span className="w-50">País</span>
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-2">
             {(CountriesSortOption as FilterOptionCountryItems[]).map((country) => (
@@ -250,13 +320,68 @@ export function ChocolateGallery() {
                 size="sm"
                 className={
                   selectedCountries.includes(country.value)
-                    ? 'bg-white text-black hover:bg-white/90'
-                    : 'bg-black text-white hover:bg-black/90 hover:text-white'
+                    ? // ? 'bg-white text-black hover:bg-white/90'
+                      // : 'bg-black text-white hover:bg-black/90 hover:text-white'
+                      'bg-gray-500 text-black hover:bg-white/90'
+                    : 'bg-gray-300 text-black hover:bg-gray-400'
                 }
               >
+                <div className="flex size-5 items-center gap-2 overflow-hidden rounded-full">
+                  <img src={`/icons/${country.value}.png`} className="size-5" alt="" />
+                </div>
                 {country.label.charAt(0).toUpperCase() + country.label.slice(1)}
               </Button>
             ))}
+          </div>
+        </div>
+        <div className="block flex flex-col justify-center gap-10 p-3 md:hidden lg:hidden xl:hidden">
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Ordenar por</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid h-auto w-75 gap-3 p-4 lg:grid-cols-1">
+                      {(TypesSortOption as FilterOptionSortItems[]).map((option) => (
+                        <ListItem
+                          key={option.value}
+                          onClick={() => setSortBy(option.value as SortOption)}
+                          className="bg-none text-black shadow-none"
+                        >
+                          <div className="flex gap-5">
+                            <p> {option.icon}</p>
+                            <p>{option.label.charAt(0).toUpperCase() + option.label.slice(1)}</p>
+                          </div>
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Mundo de sabores</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid h-auto w-75 gap-3 p-4 lg:grid-cols-1">
+                      {(FlavorsSortOption as FilterOptionFlavorItems[]).map((flavor) => (
+                        <ListItem
+                          key={flavor.value}
+                          onClick={() => handleFlavorToggle(flavor.value as FlavorOption)}
+                          className={
+                            selectedFlavors.includes(flavor.value)
+                              ? `${flavor.className} text-black`
+                              : `text-black`
+                          }
+                        >
+                          <div className="flex gap-5">
+                            <p>{flavor.icon}</p>
+                            <p>{flavor.label.charAt(0).toUpperCase() + flavor.label.slice(1)}</p>
+                          </div>
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
         </div>
       </div>

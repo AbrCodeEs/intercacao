@@ -8,7 +8,14 @@ import banner from '@/images/home/banner.webp';
 import mundoDeSabores from '@/images/home/imagotipo-mundo-de-sabores.webp';
 import lienzo from '@/images/home/lienzo-bg.webp';
 import lienzoCacao from '@/images/home/lienzo-cacao-bg.webp';
-import post1 from '@/images/home/post.webp';
+
+import postGranoDeDacao from '@/images/home/post-grano-de-cacao.webp';
+import postChloeDoutre from '@/images/home/post-chloe-doutre.webp';
+import postIngAlexis from '@/images/home/post-ing-alexys.webp';
+import postFundacionProsperi from '@/images/home/post-fundacion-prosperi.webp';
+import postPintao from '@/images/home/post-pintao.webp';
+import postTesoro from '@/images/home/post-tesoro.webp';
+
 import mundoDeSaboresPanel from '@/images/home/mundo-de-sabores-panel.webp';
 import lienzoMundoBg from '@/images/home/lienzo-mundo-bg.webp';
 import logo from '@/images/global/logo.webp';
@@ -32,7 +39,7 @@ const posts = [
     description:
       'El metodo de evaluacion “cacao grader” complementa el metodo tradicional con un una evaluacion organoléptica completa, desarrollada por la reconocida Chloe Doutre',
     image: {
-      src: post1.src,
+      src: postGranoDeDacao.src,
       alt: 'Metodo de evaluación',
     },
   },
@@ -40,7 +47,7 @@ const posts = [
     title: 'Chloe Doutre Rousell',
     description: 'Consultora, Educadora y Experta en cacao fino y chocolate. ',
     image: {
-      src: post1.src,
+      src: postChloeDoutre.src,
       alt: 'Metodo de evaluación',
     },
   },
@@ -48,7 +55,7 @@ const posts = [
     title: 'Ing. Alexis Zambrano',
     description: 'Profesor, PhD, Magister, Ingeniero Quimico. ',
     image: {
-      src: post1.src,
+      src: postIngAlexis.src,
       alt: 'Metodo de evaluación',
     },
   },
@@ -57,7 +64,7 @@ const posts = [
     description:
       'Organización sin fines de lucro creada con la misión de promover y difundir los valores históricos y agrícolas de Venezuela a través de programas educativos y sociales como “Regreso al agro” y “Proyecto Agua”. ',
     image: {
-      src: post1.src,
+      src: postFundacionProsperi.src,
       alt: 'Metodo de evaluación',
     },
   },
@@ -66,7 +73,7 @@ const posts = [
     description:
       'Situado en La Concepción, Rio Caribe, nuestras instalaciones cuentan con un equipo de expertos que garantiza los mejores protocolos de fermentación y secado y trazabilidad',
     image: {
-      src: post1.src,
+      src: postPintao.src,
       alt: 'Metodo de evaluación',
     },
   },
@@ -75,7 +82,7 @@ const posts = [
     description:
       'Situado en el sur del lago (SDLG), nuestras instalaciones cuentan con un equipo de expertos que garantiza los mejores protocolos de fermentacion y secado y trazabilidad',
     image: {
-      src: post1.src,
+      src: postTesoro.src,
       alt: 'Metodo de evaluación',
     },
   },
@@ -90,16 +97,14 @@ const posts = [
     >
       <Image
         loading="eager"
-        width={1000}
-        height={1000}
+        inferSize={true}
         src={banner}
         alt="Intercacao banner principal"
         class="h-full w-full object-cover object-center"
       />
       <Image
-      loading="eager"
-      width={1000}
-      height={1000}
+        loading="eager"
+        inferSize={true}
         class="absolute top-10 left-25 w-15 md:top-20 md:left-20 md:w-30 lg:top-20 lg:left-20 lg:w-30 xl:top-20 xl:left-20 xl:w-30"
         src={logoInteracao}
         alt="Intercacao banner principal"
@@ -111,8 +116,7 @@ const posts = [
     >
       <Image
         loading="lazy"
-        width={1000}
-        height={1000}
+        inferSize={true}
         src={mundoDeSabores}
         alt="Intercacao banner principal"
         class="w-75 object-fill object-center"
@@ -128,8 +132,7 @@ const posts = [
     >
       <Image
         loading="lazy"
-        width={1000}
-        height={1000}
+        inferSize={true}
         src={mundoDeSaboresPanel}
         alt="Intercacao banner principal"
         class="object-fill object-center shadow-2xl"
@@ -140,8 +143,7 @@ const posts = [
       <div class="flex w-full items-center justify-center pt-10">
         <Image
           loading="lazy"
-          width={1000}
-          height={1000}
+          inferSize={true}
           src={logoWhiteImagotipoCacaoGourmet}
           alt="Intercacao banner principal"
           class="w-75 object-fill object-center"
@@ -171,8 +173,7 @@ const posts = [
           <div class="h-full w-70">
             <Image
               loading="lazy"
-              width={1000}
-              height={1000}
+              inferSize={true}
               src={logoRegresoAlAgua}
               alt="Intercacao banner principal"
               class="h-full w-full object-fill object-center"
@@ -181,8 +182,7 @@ const posts = [
           <div class="h-full w-70">
             <Image
               loading="lazy"
-              width={1000}
-              height={1000}
+              inferSize={true}
               src={logoWilfriedMerle}
               alt="Intercacao banner principal"
               class="h-full w-full object-fill object-center"
@@ -191,8 +191,7 @@ const posts = [
           <div class="h-full w-70">
             <Image
               loading="lazy"
-              width={1000}
-              height={1000}
+              inferSize={true}
               src={logoRegresoAlAgro}
               alt="Intercacao banner principal"
               class="h-full w-full object-fill object-center"
@@ -205,8 +204,7 @@ const posts = [
           <div class="z-50 block h-full w-70">
             <Image
               loading="lazy"
-              width={1000}
-              height={1000}
+              inferSize={true}
               src={logoElectronDeporte}
               alt="Intercacao banner principal"
               class="z-50 block h-full w-full object-fill object-center"
@@ -215,8 +213,7 @@ const posts = [
           <div class="z-50 block h-full w-70">
             <Image
               loading="lazy"
-              width={1000}
-              height={1000}
+              inferSize={true}
               src={logoElectronReligion}
               alt="Intercacao banner principal"
               class="z-50 block h-full w-full object-fill object-center"
@@ -225,8 +222,7 @@ const posts = [
           <div class="z-50 block h-full w-70">
             <Image
               loading="lazy"
-              width={1000}
-              height={1000}
+              inferSize={true}
               src={logoElectronMusica}
               alt="Intercacao banner principal"
               class="h-full w-full object-fill object-center"
@@ -237,116 +233,103 @@ const posts = [
           <div class="z-50 block h-full w-100 bg-white">
             <Image
               loading="lazy"
-              width={1000}
-              height={1000}
+              inferSize={true}
               src={logoFundacionProsperi}
               alt="Intercacao banner principal"
               class="z-50 block h-full w-full object-fill object-center"
             />
           </div>
-          <div
-            class="absolute -top-[150px] -left-[40px] h-100 w-100 rounded-full border-2 border-primary md:-top-[280px] md:-left-[-80px] md:h-200 md:w-200 lg:-top-[280px] lg:-left-[-80px] lg:h-200 lg:w-200 xl:-top-[280px] xl:-left-[-80px] xl:h-200 xl:w-200"
-          >
-          </div>
-          <div
-            class="absolute -top-[40px] h-50 w-50 rounded-full border-2 border-primary md:-top-[80px] md:h-100 md:w-100 lg:-top-[80px] lg:h-100 lg:w-100 xl:-top-[80px] xl:h-100 xl:w-100"
-          >
-          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="bg-primary h-5 w-full"></div>
+  <div class="bg-primary h-5 w-full"></div>
 
+  <div
+    id="section-about"
+    class="bg-start flex h-auto w-full items-start justify-center bg-no-repeat py-20 md:items-center lg:items-center xl:items-center"
+    style={`background-image: url(${lienzoCacao.src});`}
+  >
     <div
-      id="section-about"
-      class="bg-start flex h-auto w-full items-start justify-center bg-no-repeat py-20 md:items-center lg:items-center xl:items-center"
-      style={`background-image: url(${lienzoCacao.src});`}
+      class="flex w-full flex-col items-center justify-center gap-10 p-10 md:w-2/3 md:p-0 lg:w-1/2 lg:p-0 xl:w-1/2 xl:p-0"
     >
-      <div
-        class="flex w-full flex-col items-center justify-center gap-10 p-10 md:w-2/3 md:p-0 lg:w-1/2 lg:p-0 xl:w-1/2 xl:p-0"
-      >
-        <div>
-          <h1 class="text-4xl font-bold text-neutral-600 uppercase">Nosotros</h1>
-        </div>
-        <div>
-          <h3 class="py-4 text-3xl text-neutral-600 uppercase">
-            Somos un equipo de apasionados por el cacao.
-          </h3>
-        </div>
-        <p class="text-lg">
-          Nuestra misión es buscar los más deseados cacaos que contribuyan a la elaboración de los
-          mejores chocolates del mundo. Trabajamos en los lugares donde crecen los mejores cacaos,
-          hogar de los grandiosos cacaos criollos, llegamos a orígenes inaccesibles buscando una
-          completa trazabilidad y aplicando protocolos post cosecha logrando así aromas y sabores
-          extraordinarios para que los grandes chocolateros puedan elaborar los mejores chocolates
-          del mundo.
-        </p>
-        <div class="flex h-150 w-full items-center justify-center gap-5">
-          <iframe
-            loading="lazy"
-            allowfullscreen
-            title="Intercacao"
-            class="h-full w-full overflow-hidden rounded-lg"
-            src="https://www.youtube.com/embed/7jUvTbe8DPE"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          ></iframe>
-        </div>
-        <div class="flex w-full items-center justify-center gap-5">
-          <CarouselPost posts={posts} client:load />
-        </div>
+      <div>
+        <h1 class="text-4xl font-bold text-neutral-600 uppercase">Nosotros</h1>
+      </div>
+      <div>
+        <h3 class="py-4 text-3xl text-neutral-600 uppercase">
+          Somos un equipo de apasionados por el cacao.
+        </h3>
+      </div>
+      <p class="text-lg">
+        Nuestra misión es buscar los más deseados cacaos que contribuyan a la elaboración de los
+        mejores chocolates del mundo. Trabajamos en los lugares donde crecen los mejores cacaos,
+        hogar de los grandiosos cacaos criollos, llegamos a orígenes inaccesibles buscando una
+        completa trazabilidad y aplicando protocolos post cosecha logrando así aromas y sabores
+        extraordinarios para que los grandes chocolateros puedan elaborar los mejores chocolates del
+        mundo.
+      </p>
+      <div class="flex h-150 w-full items-center justify-center gap-5">
+        <iframe
+          loading="lazy"
+          allowfullscreen
+          title="Intercacao"
+          class="h-full w-full overflow-hidden rounded-lg"
+          src="https://www.youtube.com/embed/7jUvTbe8DPE"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+      </div>
+      <div class="flex w-full items-center justify-center gap-5">
+        <CarouselPost posts={posts} client:load />
       </div>
     </div>
+  </div>
 
-    <div class="bg-primary h-5 w-full"></div>
+  <div class="bg-primary h-5 w-full"></div>
 
-    <div
-      id="section-contact"
-      class="bg-start flex size-dvw h-screen items-center justify-center bg-no-repeat md:w-auto lg:w-auto xl:h-screen xl:w-auto"
-      style={`background-image: url(${lienzoMundoBg.src});`}
-    >
-      <div
-        class="flex w-full flex-col items-center justify-center gap-10 md:w-1/2 lg:w-1/2 xl:w-1/2"
-      >
-        <Image class="w-80" src={logo} alt="Intercacao banner principal" />
-        <ul class="flex flex-col items-start justify-start gap-5">
-          <li class="flex gap-5">
-            <MapPin className="size-8 md:size-14 lg:size-14 xl:size-14" />
-            <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
-              800 Brickell Ave Ste 411A<br />
-              FL, 33149<br />
-              USA<br />
-            </div>
-          </li>
-          <li class="flex gap-5">
-            <MessageCircle className="size-8 md:size-14 lg:size-14 xl:size-14" />
-            <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
-              +1 (786) 7190106
-            </div>
-          </li>
-          <li class="flex items-center justify-center gap-5">
-            <Mail className="size-8 md:size-14 lg:size-14 xl:size-14" />
-            <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
-              <a href="mailto:ania@intercacao.com">ania@intercacao.com</a>
-            </div>
-          </li>
-          <li class="flex gap-5">
-            <Facebook className="size-8 md:size-14 lg:size-14 xl:size-14" />
-            <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
-              <a target="_blank" href="http://www.facebook.com/intercacao.web">Intercacao</a>
-            </div>
-          </li>
-          <li class="flex gap-5">
-            <Instagram className="size-8 md:size-14 lg:size-14 xl:size-14" />
-            <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
-              <a target="_blank" href="http://www.instagram.com/intercacaoweb/">intercacaoweb</a>
-            </div>
-          </li>
-        </ul>
-        <p class="text-xs font-thin">
-          Copyrights © 2025 Intercacao Todos los derechos reservados.
-        </p>
-      </div>
+  <div
+    id="section-contact"
+    class="bg-start flex size-dvw h-screen items-center justify-center bg-no-repeat md:w-auto lg:w-auto xl:h-screen xl:w-auto"
+    style={`background-image: url(${lienzoMundoBg.src});`}
+  >
+    <div class="flex w-full flex-col items-center justify-center gap-10 md:w-1/2 lg:w-1/2 xl:w-1/2">
+      <Image class="w-80" src={logo} alt="Intercacao banner principal" />
+      <ul class="flex flex-col items-start justify-start gap-5">
+        <li class="flex gap-5">
+          <MapPin className="size-8 md:size-14 lg:size-14 xl:size-14" />
+          <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
+            800 Brickell Ave Ste 411A<br />
+            FL, 33149<br />
+            USA<br />
+          </div>
+        </li>
+        <li class="flex gap-5">
+          <MessageCircle className="size-8 md:size-14 lg:size-14 xl:size-14" />
+          <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
+            +1 (786) 7190106
+          </div>
+        </li>
+        <li class="flex items-center justify-center gap-5">
+          <Mail className="size-8 md:size-14 lg:size-14 xl:size-14" />
+          <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
+            <a href="mailto:ania@intercacao.com">ania@intercacao.com</a>
+          </div>
+        </li>
+        <li class="flex gap-5">
+          <Facebook className="size-8 md:size-14 lg:size-14 xl:size-14" />
+          <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
+            <a target="_blank" href="http://www.facebook.com/intercacao.web">Intercacao</a>
+          </div>
+        </li>
+        <li class="flex gap-5">
+          <Instagram className="size-8 md:size-14 lg:size-14 xl:size-14" />
+          <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
+            <a target="_blank" href="http://www.instagram.com/intercacaoweb/">intercacaoweb</a>
+          </div>
+        </li>
+      </ul>
+      <p class="text-xs font-thin">Copyrights © 2025 Intercacao Todos los derechos reservados.</p>
     </div>
   </div>
 </Layout>

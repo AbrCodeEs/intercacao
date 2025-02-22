@@ -88,13 +88,13 @@
   --color-chart-4: hsl(var(--chart-4));
   --color-chart-5: hsl(var(--chart-5));
 
-  --color-fruity-sweet: #ef4444;
-  --color-fruity-citrus: #f59e0b;
-  --color-floral: #ec4899;
-  --color-creole: #eab30880;
-  --color-cocoa: #713f12;
-  --color-wood: #bef264;
-  --color-spices: #fde047;
+  --color-fruity-sweet: #e20d30;
+  --color-fruity-citrus: #f19301;
+  --color-floral: #de0e82;
+  --color-creole: #c7a06b;
+  --color-cocoa: #683b1a;
+  --color-wood: #3caa33;
+  --color-spices: #f8dc38;
 }
 
 .bg-fruity-sweet {
@@ -300,4 +300,122 @@ section.active {
 /* Clase para aplicar la animación */
 .animate-orbit {
   animation: orbit calc(var(--duration) * 1s) linear infinite;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.navigation-menu-content {
+  animation-duration: 300ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navigation-menu-content[data-motion='from-start'] {
+  animation-name: slide-in-left;
+}
+
+.navigation-menu-content[data-motion='from-end'] {
+  animation-name: slide-in-right;
+}
+
+.navigation-menu-content[data-motion='to-start'] {
+  animation-name: slide-out-left;
+}
+
+.navigation-menu-content[data-motion='to-end'] {
+  animation-name: slide-out-right;
+}
+
+.navigation-menu-viewport {
+  animation-duration: 200ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navigation-menu-viewport[data-state='open'] {
+  animation-name: scale-in;
+}
+
+.navigation-menu-viewport[data-state='closed'] {
+  animation-name: scale-out;
+}
+
+.navigation-menu-indicator[data-state='visible'] {
+  animation: fade-in 200ms ease;
+}
+
+.navigation-menu-indicator[data-state='hidden'] {
+  animation: fade-out 200ms ease;
 }
