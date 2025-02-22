@@ -68,11 +68,9 @@ const { location } = Astro.props;
     <div class="flex w-full flex-1 flex-col gap-5 md:w-2/4 lg:w-2/4 xl:w-2/4">
       {
         location.ecology.images.map((image) => (
-          <div class="group animate-trigger-left relative w-full h-auto flex-none overflow-hidden rounded-lg">
+          <div class="group animate-trigger-left relative h-auto w-full flex-none overflow-hidden rounded-lg">
             <Image
               inferSize={true}
-              width={1000}
-              height={1000}
               src={image.src}
               alt={image.alt}
               loading="lazy"

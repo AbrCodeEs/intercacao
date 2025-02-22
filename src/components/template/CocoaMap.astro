@@ -37,6 +37,7 @@ const { cocoaMap } = Astro.props;
         >
           <Image
             inferSize={true}
+            loading="eager"
             class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
             src={section.image.src}
             alt={section.image.alt}

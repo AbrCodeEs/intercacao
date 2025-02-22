@@ -73,7 +73,7 @@ export function ChocolateCard({
               height={1000}
               className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
-            <div className="from-primary/80 absolute inset-0 flex flex-col justify-start bg-gradient-to-t to-transparent p-4 text-xl">
+            <div className="from-primary/80 absolute inset-0 flex flex-col justify-start bg-gradient-to-t to-transparent p-2 text-xl md:p-4 lg:p-4 xl:p-6">
               {sortBy === Sort.rated && (
                 <div className="flex items-center text-white">
                   <Star className="mr-1 h-6 w-6 fill-current text-amber-400" />
@@ -108,7 +108,7 @@ export function ChocolateCard({
             </div>
           </motion.div>
           <motion.div
-            className="xl:bg-primary/55 lg:bg-primary/55 md:bg-primary/55 bg-primary/90 text-secondary-foreground absolute inset-0 flex flex-col items-center justify-center p-4"
+            className="xl:bg-primary/65 lg:bg-primary/65 md:bg-primary/65 bg-primary/90 text-secondary-foreground absolute inset-0 flex flex-col items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: isHovered ? 1 : 0 }}
             transition={{ duration: 0.2 }}
@@ -120,7 +120,7 @@ export function ChocolateCard({
               <p className="text-md hidden pt-2 text-white md:hidden lg:block xl:block">
                 {chocolate.country}
               </p>
-              <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div className="grid grid-cols-2 gap-4 text-sm md:mt-4 md:gap-3 lg:mt-4 lg:gap-3 xl:mt-4 xl:gap-3">
                 {Object.entries(chocolate.ingredients).map(
                   ([ingredient, amount]: [string, number]) => (
                     <div key={ingredient} className="flex items-center justify-start gap-2">
@@ -129,18 +129,18 @@ export function ChocolateCard({
                         className="flex flex-col items-center justify-center font-bold"
                       >
                         <p
-                          className={`bg-${ingredient.replace(/_/g, '-')} flex size-5 flex-col items-center justify-center rounded-full text-black md:size-10 lg:size-20 xl:size-20`}
+                          className={`bg-${ingredient.replace(/_/g, '-')} flex size-6 flex-col items-center justify-center rounded-full text-black md:size-10 lg:size-20 xl:size-20`}
                         >
                           {iconMap[ingredient] || ingredient}
-                          <span className="text-md mt-1 hidden text-center md:hidden lg:block xl:block">
+                          <span className="md:text-md mt-1 hidden text-center text-xs md:hidden lg:block lg:text-lg xl:block xl:text-lg">
                             {amount}%
                           </span>
                         </p>
                       </div>
-                      <div className="text-md hidden text-white md:hidden lg:block xl:block">
+                      <div className="md:text-md hidden text-xs text-white md:hidden lg:block lg:text-lg xl:block xl:text-lg">
                         {IconTraslation[ingredient] || ingredient}
                       </div>
-                      <div className="text-md block text-white md:block lg:hidden xl:hidden">
+                      <div className="md:text-md block text-xs text-white md:block lg:hidden lg:text-lg xl:hidden xl:text-lg">
                         {amount}%
                       </div>
                     </div>
@@ -149,11 +149,11 @@ export function ChocolateCard({
                 <a href="/es/chuao">
                   <div className="flex items-center justify-start gap-2">
                     <div className="flex flex-col items-center justify-center font-bold">
-                      <p className="flex size-5 flex-col items-center justify-center rounded-full bg-red-500 text-black md:size-10 lg:size-20 xl:size-20">
-                        <Search className="h-6 w-6" />
+                      <p className="flex size-6 flex-col items-center justify-center rounded-full bg-red-500 text-black md:size-10 lg:size-20 xl:size-20">
+                        <Search className="h-4 w-4" />
                       </p>
                     </div>
-                    <div className="text-md hidden text-white md:hidden lg:block xl:block">
+                    <div className="md:text-md text-xs text-white lg:text-lg xl:text-lg">
                       Ver mas
                     </div>
                   </div>

@@ -26,7 +26,7 @@ export default function Index({ children, setIsActive, items }: Props) {
       const pathSegments = window.location.pathname.split('/');
       pathSegments[1] = lang;
       const newPath = pathSegments.join('/');
-      
+
       // Forzar recarga completa
       window.location.href = newPath;
     }
@@ -55,7 +55,7 @@ export default function Index({ children, setIsActive, items }: Props) {
             ))}
           </ul>
 
-          <ul className="flex gap-5 w-full justify-end p-10">
+          <ul className="flex w-full justify-end gap-5 p-10">
             <li
               onClick={() => changeLanguage('es')}
               className={`cursor-pointer ${currentLang === 'es' ? 'font-bold' : ''}`}
@@ -72,10 +72,7 @@ export default function Index({ children, setIsActive, items }: Props) {
         </nav>
         <Curve />
       </motion.div>
-      <div
-        className="fixed top-0 left-0 size-full"
-        onClick={() => setIsActive(false)}
-      />
+      <div className="fixed top-0 left-0 size-full" onClick={() => setIsActive(false)} />
     </>
   );
 }
