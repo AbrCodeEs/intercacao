@@ -156,7 +156,7 @@ export async function getStaticPaths() {
           class="w-75 object-fill object-center"
         />
       </div>
-      <ChocolateGallery lang={lang} client:only="react" />
+      <ChocolateGallery lang={lang} client:load />
     </div>
 
     <div
@@ -164,7 +164,9 @@ export async function getStaticPaths() {
       class="bg-start flex h-auto w-full items-start justify-center overflow-hidden bg-no-repeat md:h-screen md:items-center lg:h-screen lg:items-center xl:h-screen xl:items-center"
       style={`background-image: url(${lienzoCacao.src});`}
     >
-      <div class="flex w-full flex-col gap-10 p-10 md:w-1/2 md:p-0 lg:w-1/2 lg:p-0 xl:w-1/2 xl:p-0">
+      <div
+        class="flex w-4/5 w-full flex-col gap-10 p-10 md:w-1/2 md:p-0 lg:w-1/2 lg:p-0 xl:w-4/5 xl:p-0"
+      >
         <h1 class="text-4xl font-bold text-neutral-600 uppercase">Fundación Quirico Prosperi</h1>
         <p class="text-lg">
           La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el compromiso
@@ -259,7 +261,7 @@ export async function getStaticPaths() {
     style={`background-image: url(${lienzoCacao.src});`}
   >
     <div
-      class="flex w-full flex-col items-center justify-center gap-10 p-10 md:w-2/3 md:p-0 lg:w-1/2 lg:p-0 xl:w-1/2 xl:p-0"
+      class="flex w-4/5 w-full flex-col items-center justify-center gap-10 p-10 md:w-1/2 md:p-0 lg:w-1/2 lg:p-0 xl:w-4/5 xl:p-0"
     >
       <div>
         <h1 class="text-4xl font-bold text-neutral-600 uppercase">Nosotros</h1>
@@ -297,11 +299,13 @@ export async function getStaticPaths() {
 
   <div
     id="section-contact"
-    class="bg-start flex size-dvw h-screen items-center justify-center bg-no-repeat md:w-auto lg:w-auto xl:h-screen xl:w-auto"
+    class="bg-start flex size-dvw h-auto items-center justify-center bg-no-repeat md:w-auto lg:w-auto xl:w-auto"
     style={`background-image: url(${lienzoMundoBg.src});`}
   >
-    <div class="flex w-full flex-col items-center justify-center gap-10 md:w-1/2 lg:w-1/2 xl:w-1/2">
-      <Image class="w-80" src={logo} alt="Intercacao banner principal" />
+    <div
+      class="flex w-full flex-col items-center justify-center gap-10 py-30 md:w-1/2 lg:w-1/2 xl:w-1/2"
+    >
+      <Image class="w-60" src={logo} alt="Intercacao banner principal" />
       <ul class="flex flex-col items-start justify-start gap-5">
         <li class="flex gap-5">
           <MapPin className="size-8 md:size-14 lg:size-14 xl:size-14" />

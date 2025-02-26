@@ -20,19 +20,16 @@ import mundoDeSaboresPanel from '@/images/home/mundo-de-sabores-panel.webp';
 import lienzoMundoBg from '@/images/home/lienzo-mundo-bg.webp';
 import logo from '@/images/global/logo.webp';
 import logoInteracao from '@/images/global/logo-intercacao.webp';
-import logoRegresoAlAgua from '@/images/global/logo-regreso-al-agua.webp';
-import logoWilfriedMerle from '@/images/global/logo-wilfried-merle.webp';
-import logoRegresoAlAgro from '@/images/global/logo-regreso-al-agro.webp';
-import logoFundacionProsperi from '@/images/global/logo-fundacion-prosperi.webp';
 import logoWhiteImagotipoCacaoGourmet from '@/images/global/logo-white-imagotipo-cacao-gourmet.webp';
-import logoElectronDeporte from '@/images/global/logo-electron-deporte.png';
-import logoElectronMusica from '@/images/global/logo-electron-musica-y-dansa.png';
-import logoElectronReligion from '@/images/global/logo-electron-religion.png';
 
 import { CarouselPost } from '@/components/ui/carousel/Post';
 import { ChocolateGallery } from '@/components/ChocolateGallery';
 import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { getLangFromUrl } from '@/assets/lib/i18n/utils';
+import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
+
+
+const lang = getLangFromUrl(Astro.url);
 
 const posts = [
   {
@@ -43,6 +40,7 @@ const posts = [
       src: postGranoDeDacao.src,
       alt: 'Metodo de evaluación',
     },
+    url: `https://www.intercacao.com/${lang}/evaluacion/`,
   },
   {
     title: 'Chloe Doutre Rousell',
@@ -51,6 +49,7 @@ const posts = [
       src: postChloeDoutre.src,
       alt: 'Metodo de evaluación',
     },
+    url: `https://www.intercacao.com/${lang}/chloe-doutre-roussel/`,
   },
   {
     title: 'Ing. Alexis Zambrano',
@@ -59,6 +58,7 @@ const posts = [
       src: postIngAlexis.src,
       alt: 'Metodo de evaluación',
     },
+    url: `https://www.intercacao.com/${lang}/ing-alexis-zambrano/`,
   },
   {
     title: 'Fundacion Quirico Prosperi',
@@ -68,6 +68,7 @@ const posts = [
       src: postFundacionProsperi.src,
       alt: 'Metodo de evaluación',
     },
+    url: 'http://fundacionprosperi.org/',
   },
   {
     title: 'Central de Beneficio “Pintao“',
@@ -89,7 +90,6 @@ const posts = [
   },
 ];
 
-const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} pubDate={new Date()} keywords="">
@@ -157,91 +157,14 @@ const lang = getLangFromUrl(Astro.url);
 
     <div
       id="section-prosperi"
-      class="bg-start flex h-auto w-full items-start justify-center overflow-hidden bg-no-repeat md:h-screen md:items-center lg:h-screen lg:items-center xl:h-screen xl:items-center"
+      class="bg-start flex h-auto min-h-screen w-full items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
       style={`background-image: url(${lienzoCacao.src});`}
     >
-      <div class="flex w-full flex-col gap-10 p-10 md:p-0 md:w-1/2 lg:w-1/2 xl:w-4/5 w-4/5 lg:p-0 xl:p-0">
-        <h1 class="text-4xl font-bold text-neutral-600 uppercase">Fundación Quirico Prosperi</h1>
-        <p class="text-lg">
-          La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el compromiso
-          de difundir los valores historicos, culturales y agricolas de venezuela a traves de su
-          programa educacional "Regreso al Agro", probando que la siembra de cacao es una profesion
-          rentable que genera cambios sociales. El objetivo principal es el de colaborar con la
-          comunidad, enriqueciendo y promoviendo las buenas practicas agricolas para las
-          generaciones futuras de Chuao.
-        </p>
-        <div
-          class="flex flex-col items-center justify-center gap-5 md:flex-row lg:flex-row xl:flex-row"
-        >
-          <div class="h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoRegresoAlAgua}
-              alt="Intercacao banner principal"
-              class="h-full w-full object-fill object-center"
-            />
-          </div>
-          <div class="h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoWilfriedMerle}
-              alt="Intercacao banner principal"
-              class="h-full w-full object-fill object-center"
-            />
-          </div>
-          <div class="h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoRegresoAlAgro}
-              alt="Intercacao banner principal"
-              class="h-full w-full object-fill object-center"
-            />
-          </div>
-        </div>
-        <div
-          class="flex flex-col items-center justify-center gap-5 md:flex-row lg:flex-row xl:flex-row"
-        >
-          <div class="z-50 block h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoElectronDeporte}
-              alt="Intercacao banner principal"
-              class="z-50 block h-full w-full object-fill object-center"
-            />
-          </div>
-          <div class="z-50 block h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoElectronReligion}
-              alt="Intercacao banner principal"
-              class="z-50 block h-full w-full object-fill object-center"
-            />
-          </div>
-          <div class="z-50 block h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoElectronMusica}
-              alt="Intercacao banner principal"
-              class="h-full w-full object-fill object-center"
-            />
-          </div>
-        </div>
-        <div class="relative flex w-full items-center justify-center">
-          <div class="z-50 block h-full w-100 bg-white">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoFundacionProsperi}
-              alt="Intercacao banner principal"
-              class="z-50 block h-full w-full object-fill object-center"
-            />
-          </div>
+      <div
+        class="flex w-4/5 md:w-1/2 lg:w-1/2 xl:w-4/5 h-full flex-col gap-10 p-10 md:pt-10 lg:pt-10 xl:pt-20"
+      >
+        <div class="h-full">
+          <TabsTransitionPanel client:only="react" />
         </div>
       </div>
     </div>
@@ -255,7 +178,7 @@ const lang = getLangFromUrl(Astro.url);
     style={`background-image: url(${lienzoCacao.src});`}
   >
     <div
-      class="flex w-full flex-col items-center justify-center gap-10 p-10 md:p-0 md:w-1/2 lg:w-1/2 xl:w-4/5 w-4/5 lg:p-0 xl:p-0"
+      class="flex w-4/5 flex-col items-center justify-center gap-10 p-10 md:w-1/2 md:p-0 lg:w-1/2 lg:p-0 xl:w-4/5 xl:p-0"
     >
       <div>
         <h1 class="text-4xl font-bold text-neutral-600 uppercase">Nosotros</h1>
@@ -293,11 +216,13 @@ const lang = getLangFromUrl(Astro.url);
 
   <div
     id="section-contact"
-    class="bg-start flex size-dvw h-screen items-center justify-center bg-no-repeat md:w-auto lg:w-auto xl:h-screen xl:w-auto"
+    class="bg-start flex size-dvw h-auto items-center justify-center bg-no-repeat md:w-auto lg:w-auto xl:w-auto"
     style={`background-image: url(${lienzoMundoBg.src});`}
   >
-    <div class="flex w-full flex-col items-center justify-center gap-10 md:w-1/2 lg:w-1/2 xl:w-1/2">
-      <Image class="w-80" src={logo} alt="Intercacao banner principal" />
+    <div
+      class="flex w-full flex-col items-center justify-center gap-10 py-30 md:w-1/2 lg:w-1/2 xl:w-1/2"
+    >
+      <Image class="w-60" src={logo} alt="Intercacao banner principal" />
       <ul class="flex flex-col items-start justify-start gap-5">
         <li class="flex gap-5">
           <MapPin className="size-8 md:size-14 lg:size-14 xl:size-14" />
