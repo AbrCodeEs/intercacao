@@ -55,7 +55,7 @@ export function ChocolateCard({
               decoding="async"
               width={1000}
               height={1000}
-              className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+              className={`object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 ${isHovered && 'blur'}`}
             />
             <div className="absolute inset-0 flex flex-col justify-start p-2 text-xl md:p-4 lg:p-4 xl:p-6">
               <div className="flex grow items-start justify-start">
@@ -192,7 +192,7 @@ export function ChocolateCard({
             </div>
           </motion.div>
           <motion.div
-            className="xl:bg-primary/70 lg:bg-primary/70 md:bg-primary/70 bg-primary/90 bg-blur text-secondary-foreground absolute inset-0 flex flex-col items-center justify-center p-4"
+            className="xl:bg-primary/70 lg:bg-primary/70 md:bg-primary/70 bg-primary/90 text-secondary-foreground absolute inset-0 flex flex-col items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: isHovered ? 1 : 0 }}
             transition={{ duration: 0.2 }}
@@ -243,7 +243,8 @@ export function ChocolateCard({
                 <a
                   href={chocolate.url}
                   target="_blank"
-                  className="mt-12 flex w-30 items-center justify-start gap-2 rounded-lg bg-gray-500 py-2 px-3"
+                  className="mt-12
+                   flex w-30 items-center justify-start gap-2 rounded-lg bg-gray-500 py-2 px-3"
                 >
                   <p className="md:text-md text-xs text-white lg:text-base xl:text-base">
                     Ver mas
