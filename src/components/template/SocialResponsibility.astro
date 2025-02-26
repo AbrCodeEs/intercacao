@@ -25,7 +25,7 @@ const { socialResponsibility } = Astro.props;
         socialResponsibility?.images?.map((image, index) => (
           <Image
             inferSize={true}
-      loading="eager"
+            loading="eager"
             src={image.src}
             alt={image.alt}
             class="rounded-lg object-fill object-center"

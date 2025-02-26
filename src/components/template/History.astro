@@ -49,5 +49,5 @@ const { history } = Astro.props;
     </div>
   </div>
 
-  {history.paragraphs.map((paragraph, index) => <p class="text-lg">{paragraph}</p>)}
+  {history.paragraphs?.map((paragraph, index) => <p class="text-lg">{paragraph}</p>)}
 </section>

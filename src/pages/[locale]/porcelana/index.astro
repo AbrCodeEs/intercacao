@@ -1,0 +1,65 @@
+---
+import Layout from '@/layouts/CocoaLayout.astro';
+import { Image } from 'astro:assets';
+
+import ratingStars from '@/images/chuao/rating-stars-cut.png';
+
+import GeneralInformation from '@/components/template/GeneralInformation.astro';
+import Characteristics from '@/components/template/Characteristics.astro';
+import CocoaMap from '@/components/template/CocoaMap.astro';
+import PostHarvestBenefit from '@/components/template/PostHarvestBenefit.astro';
+import Traceability from '@/components/template/Traceability.astro';
+import Location from '@/components/template/Location.astro';
+import History from '@/components/template/History.astro';
+import SocialResponsibility from '@/components/template/SocialResponsibility.astro';
+
+import data from '@/data/porcelana/data';
+
+const {
+  generalInformation,
+  characteristics,
+  cocoaMap,
+  postHarvestBenefit,
+  traceability,
+  location,
+  history,
+  socialResponsibility,
+} = data(Astro);
+
+export async function getStaticPaths() {
+  return [{ params: { locale: 'en' } }, { params: { locale: 'es' } }];
+}
+---
+
+<Layout
+  title="Porcelana de Venezuela | Intercacao Europe Bv"
+  description="Cacao Porcelana Criollo 5 estrellas: Único en el mundo con 98% granos blancos, notas de nueces caramelizadas/malta. Certificado, ancestral (fermentación 3 días, secado solar). Producción 5t/año en Zulia, Venezuela."
+  pubDate={new Date()}
+  keywords="cacao porcelana venezuela, evaluación cacao criollo, cacao ancestral 5 estrellas, granos blancos 98%, fermentación cacao 3 días, secado solar cacao, certificación cacao orgánico, banco germoplasma porcelana, mapa sensorial cacao, producción anual 1.5 TM, agricultura sostenible zulia, notas de sabor nueces caramelizadas, protocolos postcosecha cacao, ing. iraima chacón cesid-cacao, cacao sur lago maracaibo, cacao certificado si, premios cacao venezuela, características físicas cacao, análisis de corte porcelana, trazabilidad cacao criollo, historia cacao zulia, ecología municipio colon, cacao chuao venezuela, comprar cacao porcelana, propiedades organolépticas cacao, cacao con 72% granos blancos, rueda de sabores cacao, cacao de origen único, microclima andino cacao, cacao gourmet venezolano, relevo generacional agricultura"
+>
+  <article class="w-full overflow-x-hidden overflow-y-auto">
+    <!-- @ts-ignore -->
+    <GeneralInformation generalInformation={generalInformation} />
+
+    <!-- @ts-ignore -->
+    <Characteristics characteristics={characteristics} />
+
+    <!-- @ts-ignore -->
+    <CocoaMap cocoaMap={cocoaMap} />
+
+    <!-- @ts-ignore -->
+    <PostHarvestBenefit postHarvestBenefit={postHarvestBenefit} />
+
+    <!-- @ts-ignore -->
+    <Traceability traceability={traceability} />
+
+    <!-- @ts-ignore -->
+    <Location location={location} />
+
+    <!-- @ts-ignore -->
+    <History history={history} />
+
+    <!-- @ts-ignore -->
+    <SocialResponsibility socialResponsibility={socialResponsibility} />
+  </article>
+</Layout>

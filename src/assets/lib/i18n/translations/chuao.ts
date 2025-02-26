@@ -1,4 +1,56 @@
 const es = {
+  generalInformation: {
+    title: 'evaluacion',
+    image: {
+      alt: 'portada de chuao cacao',
+    },
+    rating: {
+      stars: 'estrellas de calificación 5.0',
+    },
+    sections: [
+      {
+        items: [
+          { label: 'AFRUTADO DULCE', value: '2.6' },
+          { label: 'AFRUTADO CÍTRICO', value: '4.0' },
+          { label: 'AFLORADO', value: '0.5' },
+          { label: 'ACRIOLLADO', value: '3.4' },
+          { label: 'CACAO', value: '3.6' },
+          { label: 'BOSCOSO', value: '0.8' },
+          { label: 'ESPECIAS', value: '0.6' },
+        ],
+      },
+      {
+        items: [
+          { label: 'PRODUCCIÓN ANUAL (TM)', value: '25' },
+          { label: 'COSECHA PRINCIPAL', value: 'DIC-MAR' },
+          { label: 'COSECHA MEDIA', value: 'JUN-JUL' },
+        ],
+      },
+      {
+        items: [{ label: 'GRANOS CRIOLLOS', value: '22%' }],
+      },
+      {
+        items: [
+          { label: 'GRANOS FERMENTADOS', value: '90%' },
+          { label: 'GRANOS VIOLETAS', value: '6%' },
+          { label: 'GRANOS PIZARROSOS', value: '2%' },
+          { label: 'TOTAL', value: '100%' },
+        ],
+      },
+      {
+        items: [
+          { label: 'Granos / 100g:', value: '83' },
+          { label: 'g./1 Grano:', value: '1,20 g' },
+        ],
+      },
+      {
+        items: [
+          { label: 'CERTIFICADO', value: 'SI' },
+          { label: 'PREMIOS', value: 'NO' },
+        ],
+      },
+    ],
+  },
   characteristics: {
     title: 'Características Físicas y Organolépticas',
     flavors: [
@@ -337,6 +389,58 @@ const es = {
 };
 
 const en = {
+  generalInformation: {
+    title: 'Evaluation',
+    image: {
+      alt: 'Chuao cacao cover',
+    },
+    rating: {
+      stars: '5.0 rating stars',
+    },
+    sections: [
+      {
+        items: [
+          { label: 'SWEET FRUITY', value: '2.6' },
+          { label: 'CITRUS FRUITY', value: '4.0' },
+          { label: 'FLORAL', value: '0.5' },
+          { label: 'CREOLE', value: '3.4' },
+          { label: 'CACAO', value: '3.6' },
+          { label: 'WOODSY', value: '0.8' },
+          { label: 'SPICES', value: '0.6' },
+        ],
+      },
+      {
+        items: [
+          { label: 'ANNUAL PRODUCTION (MT)', value: '25' },
+          { label: 'MAIN HARVEST', value: 'DEC-MAR' },
+          { label: 'MID HARVEST', value: 'JUN-JUL' },
+        ],
+      },
+      {
+        items: [{ label: 'CREOLE BEANS', value: '22%' }],
+      },
+      {
+        items: [
+          { label: 'FERMENTED BEANS', value: '90%' },
+          { label: 'PURPLE BEANS', value: '6%' },
+          { label: 'SLATE BEANS', value: '2%' },
+          { label: 'TOTAL', value: '100%' },
+        ],
+      },
+      {
+        items: [
+          { label: 'Beans / 100g:', value: '83' },
+          { label: 'g./1 Bean:', value: '1.20 g' },
+        ],
+      },
+      {
+        items: [
+          { label: 'CERTIFIED', value: 'YES' },
+          { label: 'AWARDS', value: 'NO' },
+        ],
+      },
+    ],
+  },
   characteristics: {
     title: 'Physical and Organoleptic Characteristics',
     flavors: [

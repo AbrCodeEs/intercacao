@@ -62,7 +62,10 @@ const template = defineCollection({
             color: z.string().optional(),
           })
           .array(),
-        flavors_image: z.any().optional(),
+        flavors_images: z.object({
+          src: z.string(), //z.union([z.string(), z.custom<ImageMetadata>()]),
+          alt: z.string(),
+        }).optional().array(),
         assessment: z.object({
           title: z.string(),
           classification: z.object({

@@ -14,44 +14,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
-// navigationMenuTriggerStyle,
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: 'Alert Dialog',
-    href: '/docs/primitives/alert-dialog',
-    description:
-      'A modal dialog that interrupts the user with important content and expects a response.',
-  },
-  {
-    title: 'Hover Card',
-    href: '/docs/primitives/hover-card',
-    description: 'For sighted users to preview content available behind a link.',
-  },
-  {
-    title: 'Progress',
-    href: '/docs/primitives/progress',
-    description:
-      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
-  },
-  {
-    title: 'Scroll-area',
-    href: '/docs/primitives/scroll-area',
-    description: 'Visually or semantically separates content.',
-  },
-  {
-    title: 'Tabs',
-    href: '/docs/primitives/tabs',
-    description:
-      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
-  },
-  {
-    title: 'Tooltip',
-    href: '/docs/primitives/tooltip',
-    description:
-      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
-  },
-];
 
 import type {
   SortOption,
@@ -63,14 +26,9 @@ import type {
 } from '@/consts';
 import { Sort, Flavor, Country } from '@/consts';
 import {
-  Cherry as Fruit,
-  Citrus,
-  Flower,
-  Coffee,
   SpadeIcon as Spices,
   TreePine as Tree,
   Star,
-  Leaf,
   Award,
   Trophy,
   Nut,
@@ -82,27 +40,27 @@ const TypesSortOption = [
   {
     label: 'Valorado',
     value: 'rated',
-    icon: <Star className="mr-1 h-6 w-6 fill-current text-amber-400" />,
+    icon: <Star className="mr-1 h-6 w-6 fill-current text-black" />,
   },
   {
     label: 'Fermentado',
     value: 'fermented',
-    icon: <Leaf className="mr-1 h-6 w-6 fill-current text-green-400" />,
+    icon: <img src="/icons/fermentado.png" alt="fermentado" className="size-3 fill-current text-black md:size-5 lg:size-5 xl:size-5" />,
   },
   {
     label: 'Certificado',
     value: 'certified',
-    icon: <Award className="mr-1 h-6 w-6 fill-current text-yellow-400" />,
+    icon: <Award className="mr-1 h-6 w-6 fill-current text-black" />,
   },
   {
     label: 'Premiado',
     value: 'awarded',
-    icon: <Trophy className="mr-1 h-6 w-6 fill-current text-yellow-400" />,
+    icon: <Trophy className="mr-1 h-6 w-6 fill-current text-black" />,
   },
   {
     label: 'Criollo',
     value: 'creole',
-    icon: <Nut className="mr-1 h-6 w-6 fill-current text-yellow-400" />,
+    icon: <Nut className="mr-1 h-6 w-6 fill-current text-black" />,
   },
 ];
 
@@ -125,44 +83,51 @@ const FlavorsSortOption = [
   {
     label: 'Afrutado dulce ',
     value: 'Fruity Sweet',
-    className: 'bg-fruity-sweet text-white',
-    icon: <Fruit className="h-4 w-4 text-white" />,
+    className: 'bg-fruity-sweet   text-white hover:text-white',
+    icon: <img className="h-4 w-4" loading="eager" src="/icons/afrutado_dulces-icon.svg" alt="afrutado dulces" />,
+    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/afrutado_dulces-white-icon.svg" alt="afrutado dulces" />,
   },
   {
     label: 'Afrutado cítrico',
     value: 'Fruity Citrus',
     className: 'bg-fruity-citrus',
-    icon: <Citrus className="h-4 w-4" />,
+    icon: <img className="h-4 w-4" loading="eager" src="/icons/afrutado_citricos-icon.svg" alt="afrutado citricos" />,
+    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/afrutado_citricos-white-icon.svg" alt="afrutado citricos" />,
   },
   {
     label: 'Aflorado',
     value: 'Flower',
-    className: 'bg-flower text-white',
-    icon: <Flower className="h-4 w-4 text-white" />,
+    className: 'bg-flower text-white hover:text-white',
+    icon: <img className="h-4 w-4" loading="eager" src="/icons/aflorado-icon.svg" alt="aflorados" />,
+    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/aflorado-white-icon.svg" alt="aflorados" />,
   },
   {
     label: 'Acriollado',
     value: 'Creole',
     className: 'bg-creole',
-    icon: <Nut className="h-4 w-4" />,
+    icon: <img className="h-4 w-4" loading="eager" src="/icons/acriollado-icon.svg" alt="acriollado" />,
+    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/acriollado-white-icon.svg" alt="acriollado" />,
   },
   {
     label: 'Cacao',
     value: 'Cocoa',
-    className: 'bg-cocoa text-white',
-    icon: <Coffee className="h-4 w-4 text-white" />,
+    className: 'bg-cocoa text-white hover:text-white',
+    icon: <img className="h-4 w-4" loading="eager" src="/icons/cacao-icon.svg" alt="cacao" />,
+    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/cacao-white-icon.svg" alt="cacao" />,
   },
   {
     label: 'Boscoso',
     value: 'Wood',
-    className: 'bg-wood text-white',
-    icon: <Tree className="h-4 w-4 text-white" />,
+    className: 'bg-wood text-white hover:text-white',
+    icon: <img className="h-4 w-4" loading="eager" src="/icons/boscoso-icon.svg" alt="boscoso" />,
+    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/boscoso-white-icon.svg" alt="boscoso" />,
   },
   {
     label: 'Especias',
     value: 'Spices',
     className: 'bg-spices',
-    icon: <Spices className="h-4 w-4" />,
+    icon: <img className="h-4 w-4 text-white" loading="eager" src="/icons/especias-icon.svg" alt="especias" />,
+    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/especias-icon.svg" alt="especias" />,
   },
 ];
 
@@ -189,73 +154,68 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWit
 
 ListItem.displayName = 'ListItem';
 
-export function ChocolateGallery() {
-  const [sortBy, setSortBy] = useState<SortOption>('rated');
-  const [selectedFlavors, setSelectedFlavors] = useState<FlavorOption[]>([]);
-  const [selectedCountries, setSelectedCountries] = useState<CountryOption[]>([]);
+export function ChocolateGallery({ lang }: { lang: string }) {
+  const [sortBy, setSortBy] = useState<SortOption | null>(null);
+  const [selectedFlavor, setSelectedFlavor] = useState<FlavorOption | null>(null);
+  const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
 
-  const filteredChocolates = chocolateBars
-    .filter((chocolate) => {
-      if (selectedFlavors.length) {
-        return selectedFlavors.some((flavor) => chocolate.flavors.includes(flavor));
-      }
+  const cocoaData = chocolateBars.map((cocoa) => ({
+    ...cocoa,
+    url: lang === 'en' ? `${cocoa.url}/${lang}` : `${cocoa.url}`,
+  }));
 
-      if (selectedCountries.length) {
-        return selectedCountries.includes(chocolate.country as CountryOption);
-      }
+  const filteredChocolates = cocoaData.filter((item) => {
 
-      return true;
+      const flavorFilter = selectedFlavor && item.flavors.includes(selectedFlavor)
+        ? item.ingredients[selectedFlavor.toLowerCase().replace(' ', '_') as keyof typeof item.ingredients] > 0
+        : true;
+
+      
+      const countryFilter = selectedCountry 
+        ? item.country === selectedCountry
+        : true;
+      
+      const sortFilter = {
+        [Sort.rated]: item.rating > 0,
+        [Sort.fermented]: item.fermented > 0,
+        [Sort.certified]: item.certified,
+        [Sort.awarded]: item.awarded,
+        [Sort.creole]: item.creole > 0,
+      }[sortBy];
+
+      return flavorFilter && countryFilter && sortFilter || true;
     })
     .sort((a, b) => {
-      if (sortBy === Sort.rated) return b.rating - a.rating;
-      if (sortBy === Sort.fermented) return b.fermented - a.fermented;
-      if (sortBy === Sort.certified) return b.certified - a.certified;
-      if (sortBy === Sort.awarded) return b.awarded - a.awarded;
-      if (sortBy === Sort.creole) return b.creole - a.creole;
-      return 0;
+      // Sorting by selected flavor if any
+      if (selectedFlavor) {
+        const flavorKey = selectedFlavor.toLowerCase().replace(' ', '_') as keyof typeof a.ingredients;
+        return b.ingredients[flavorKey] - a.ingredients[flavorKey];
+      }
+      
+      // Default sorting by selected criteria
+      return sortBy && {
+        [Sort.rated]: b.rating - a.rating,
+        [Sort.fermented]: b.fermented - a.fermented,
+        [Sort.certified]: b.certified ? 1 : -1,
+        [Sort.awarded]: b.awarded ? 1 : -1,
+        [Sort.creole]: b.creole - a.creole,
+      }[sortBy];
     });
 
-  const handleFlavorToggle = (flavor: FlavorOption) => {
-    setSelectedFlavors((prev) =>
-      prev.includes(flavor) ? prev.filter((f) => f !== flavor) : [...prev, flavor],
-    );
+  const handleSortSelect = (sort: SortOption) => {
+    setSortBy(current => current === sort ? null : sort);
+    setSelectedFlavor(null);
+    setSelectedCountry(null);
   };
 
-  const handleCountryToggle = (country: CountryOption) => {
-    setSelectedCountries((prev) =>
-      prev.includes(country) ? prev.filter((c) => c !== country) : [...prev, country],
-    );
+  const handleFlavorSelect = (flavor: FlavorOption) => {
+    setSelectedFlavor(current => current === flavor ? null : flavor);
+    setSortBy(null);
+    setSelectedCountry(null);
   };
 
-  const getFilteredChocolates = (cocoaItems: ChocolateBar[]) => {
-    // Primero aplicamos todos los filtros necesarios
-    let filtered = cocoaItems.filter((items) => {
-      // Filtrado basado en el criterio de ordenamiento seleccionado
-
-      if (selectedFlavors.includes(Flavor.Fruity_Sweet)) return items.ingredients.fruity_sweet > 0;
-      if (selectedFlavors.includes(Flavor.Fruity_Citrus))
-        return items.ingredients.fruity_citrus > 0;
-      if (selectedFlavors.includes(Flavor.Floral)) return items.ingredients.floral > 0;
-      if (selectedFlavors.includes(Flavor.Criollo)) return items.ingredients.criollo > 0;
-      if (selectedFlavors.includes(Flavor.Cocoa)) return items.ingredients.cocoa > 0;
-      if (selectedFlavors.includes(Flavor.Wood)) return items.ingredients.wood > 0;
-      if (selectedFlavors.includes(Flavor.Spices)) return items.ingredients.spices > 0;
-
-      if (sortBy === Sort.rated) return items.rating > 0;
-      if (sortBy === Sort.fermented) return items.fermented > 0;
-      if (sortBy === Sort.certified) return items.certified > 0;
-      if (sortBy === Sort.awarded) return items.awarded > 0;
-      if (sortBy === Sort.creole) return items.creole > 0;
-
-      if (selectedCountries.includes(Country.Colombia)) return items.country === Country.Colombia;
-      if (selectedCountries.includes(Country.Peru)) return items.country === Country.Peru;
-      if (selectedCountries.includes(Country.Venezuela)) return items.country === Country.Venezuela;
-
-      return true;
-    });
-
-    // Aseguramos que los filtros se aplican correctamente
-    return filtered;
+  const handleCountrySelect = (country: CountryOption) => {
+    setSelectedCountry(current => current === country ? null : country);
   };
 
   return (
@@ -270,7 +230,7 @@ export function ChocolateGallery() {
               <Button
                 key={option.value}
                 variant={sortBy === option.value ? 'default' : 'ghost'}
-                onClick={() => setSortBy(option.value as SortOption)}
+                onClick={() => handleSortSelect(option.value as SortOption)}
                 size="sm"
                 className={
                   sortBy === option.value
@@ -292,22 +252,22 @@ export function ChocolateGallery() {
             {(FlavorsSortOption as FilterOptionFlavorItems[]).map((flavor) => (
               <Button
                 key={flavor.value}
-                variant={selectedFlavors.includes(flavor.value) ? 'default' : 'ghost'}
-                onClick={() => handleFlavorToggle(flavor.value as FlavorOption)}
+                variant={selectedFlavor === flavor.value ? 'default' : 'ghost'}
+                onClick={() => handleFlavorSelect(flavor.value as FlavorOption)}
                 size="sm"
                 className={
-                  selectedFlavors.includes(flavor.value)
+                  selectedFlavor === flavor.value
                     ? `${flavor.className}`
                     : `${flavor.className}`
                 }
               >
-                {flavor.icon}
+                {flavor.iconWhite}
                 {flavor.label.charAt(0).toUpperCase() + flavor.label.slice(1)}
               </Button>
             ))}
           </div>
         </div>
-        <div className="flex hidden flex-col justify-center gap-10 p-3 md:block lg:block xl:block">
+        {/* <div className="flex hidden flex-col justify-center gap-10 p-3 md:block lg:block xl:block">
           <h2 className="flex items-center gap-2 pb-5 text-center text-xl font-semibold text-white before:block before:h-px before:w-full before:border-t before:border-gray-100/20 before:content-[''] after:block after:h-px after:w-full after:border-t after:border-gray-100/20 after:content-['']">
             <span className="w-50">País</span>
           </h2>
@@ -315,14 +275,12 @@ export function ChocolateGallery() {
             {(CountriesSortOption as FilterOptionCountryItems[]).map((country) => (
               <Button
                 key={country.value}
-                variant={selectedCountries.includes(country.value) ? 'default' : 'ghost'}
-                onClick={() => handleCountryToggle(country.value as CountryOption)}
+                variant={selectedCountry === country.value ? 'default' : 'ghost'}
+                onClick={() => handleCountrySelect(country.value as CountryOption)}
                 size="sm"
                 className={
-                  selectedCountries.includes(country.value)
-                    ? // ? 'bg-white text-black hover:bg-white/90'
-                      // : 'bg-black text-white hover:bg-black/90 hover:text-white'
-                      'bg-gray-500 text-black hover:bg-white/90'
+                  selectedCountry === country.value
+                    ? 'bg-gray-500 text-black hover:bg-white/90'
                     : 'bg-gray-300 text-black hover:bg-gray-400'
                 }
               >
@@ -333,7 +291,7 @@ export function ChocolateGallery() {
               </Button>
             ))}
           </div>
-        </div>
+        </div> */}
         <div className="block flex flex-col justify-center gap-10 p-3 md:hidden lg:hidden xl:hidden">
           <div className="flex flex-wrap items-center justify-center gap-2">
             <NavigationMenu>
@@ -345,7 +303,7 @@ export function ChocolateGallery() {
                       {(TypesSortOption as FilterOptionSortItems[]).map((option) => (
                         <ListItem
                           key={option.value}
-                          onClick={() => setSortBy(option.value as SortOption)}
+                          onClick={() => handleSortSelect(option.value as SortOption)}
                           className="bg-none text-black shadow-none"
                         >
                           <div className="flex gap-5">
@@ -364,9 +322,9 @@ export function ChocolateGallery() {
                       {(FlavorsSortOption as FilterOptionFlavorItems[]).map((flavor) => (
                         <ListItem
                           key={flavor.value}
-                          onClick={() => handleFlavorToggle(flavor.value as FlavorOption)}
+                          onClick={() => handleFlavorSelect(flavor.value as FlavorOption)}
                           className={
-                            selectedFlavors.includes(flavor.value)
+                            selectedFlavor === flavor.value
                               ? `${flavor.className} text-black`
                               : `text-black`
                           }
@@ -391,7 +349,7 @@ export function ChocolateGallery() {
         layout
       >
         <AnimatePresence initial={false}>
-          {getFilteredChocolates(filteredChocolates).map((chocolate) => (
+          {filteredChocolates.map((chocolate) => (
             <motion.div
               key={chocolate.id}
               layout
@@ -400,7 +358,7 @@ export function ChocolateGallery() {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3, type: 'spring' }}
             >
-              <ChocolateCard chocolate={chocolate} sortBy={sortBy} />
+              <ChocolateCard chocolate={chocolate} sortBy={sortBy} flavors={selectedFlavor} />
             </motion.div>
           ))}
         </AnimatePresence>

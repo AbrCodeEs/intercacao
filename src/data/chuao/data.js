@@ -31,61 +31,19 @@ export default (Astro) => {
 
   return {
     generalInformation: {
-      title: 'evaluacion',
+      title: trans('chuao').generalInformation.title,
       mainImage: {
         src: ChuaoWeb,
-        alt: 'portada de chuao cacao',
+        alt: trans('chuao').generalInformation.image.alt,
       },
       rating: {
         value: '5.0',
         stars: {
           src: ratingStars,
-          alt: 'estrellas de calificación 5.0',
+          alt: trans('chuao').generalInformation.rating.stars,
         },
       },
-      sections: [
-        {
-          items: [
-            { label: 'AFRUTADO DULCE', value: '2.6' },
-            { label: 'AFRUTADO CÍTRICO', value: '4.0' },
-            { label: 'AFLORADO', value: '0.5' },
-            { label: 'ACRIOLLADO', value: '3.4' },
-            { label: 'CACAO', value: '3.6' },
-            { label: 'BOSCOSO', value: '0.8' },
-            { label: 'ESPECIAS', value: '0.6' },
-          ],
-        },
-        {
-          items: [
-            { label: 'PRODUCCIÓN ANUAL (TM)', value: '25' },
-            { label: 'COSECHA PRINCIPAL', value: 'DIC-MAR' },
-            { label: 'COSECHA MEDIA', value: 'JUN-JUL' },
-          ],
-        },
-        {
-          items: [{ label: 'GRANOS CRIOLLOS', value: '22%' }],
-        },
-        {
-          items: [
-            { label: 'GRANOS FERMENTADOS', value: '90%' },
-            { label: 'GRANOS VIOLETAS', value: '6%' },
-            { label: 'GRANOS PIZARROSOS', value: '2%' },
-            { label: 'TOTAL', value: '100%' },
-          ],
-        },
-        {
-          items: [
-            { label: 'Granos / 100g:', value: '83' },
-            { label: 'g./1 Grano:', value: '1,20 g' },
-          ],
-        },
-        {
-          items: [
-            { label: 'CERTIFICADO', value: 'SI' },
-            { label: 'PREMIOS', value: 'NO' },
-          ],
-        },
-      ],
+      sections: trans('chuao').generalInformation.sections,
     },
     characteristics: {
       title: trans('chuao').characteristics.title,
@@ -95,8 +53,8 @@ export default (Astro) => {
           percentage: '3.5',
           progress: 70,
           icon: {
-            src: '/icons/ceresa-white-icon-intercacao.svg',
-            alt: 'Ceresa-white-icon',
+            src: '/icons/afrutado_dulces-icon.svg',
+            alt: 'Afrutado-dulces-icon',
           },
           className: 'border-l-12 border-l-red-500',
           description: trans('chuao').characteristics.flavors[0].description,
@@ -107,8 +65,8 @@ export default (Astro) => {
           percentage: '5.0',
           progress: 100,
           icon: {
-            src: '/icons/naranja-white-icon-intercacao.svg',
-            alt: 'Naranja-white-icon',
+            src: '/icons/afrutado_citricos-icon.svg',
+            alt: 'Afrutado-citricos-icon',
           },
           className: 'border-l-12 border-l-amber-500',
           description: trans('chuao').characteristics.flavors[1].description,
@@ -119,8 +77,8 @@ export default (Astro) => {
           percentage: '2.0',
           progress: 36,
           icon: {
-            src: '/icons/flor-white-icon-intercacao.svg',
-            alt: 'Flor-white-icon',
+            src: '/icons/aflorado-icon.svg',
+            alt: 'Aflorado-icon',
           },
           className: 'border-l-12 border-l-pink-500',
           description: trans('chuao').characteristics.flavors[2].description,
@@ -131,8 +89,8 @@ export default (Astro) => {
           percentage: '3.5',
           progress: 70,
           icon: {
-            src: '/icons/bellota-white-icon-intercacao.svg',
-            alt: 'Bellota-white-icon',
+            src: '/icons/acriollado-icon.svg',
+            alt: 'Acriollado-icon',
           },
           className: 'border-l-12 border-l-yellow-500/50',
           description: trans('chuao').characteristics.flavors[3].description,
@@ -143,8 +101,8 @@ export default (Astro) => {
           percentage: '3.0',
           progress: 57,
           icon: {
-            src: '/icons/cacao-white-icon-intercacao.svg',
-            alt: 'Cacao-white-icon',
+            src: '/icons/cacao-icon.svg',
+            alt: 'Cacao-icon',
           },
           className: 'border-l-12 border-l-yellow-900',
           description: trans('chuao').characteristics.flavors[4].description,
@@ -155,8 +113,8 @@ export default (Astro) => {
           percentage: '0.0',
           progress: 0,
           icon: {
-            src: '/icons/pinos-white-icon-intercacao.svg',
-            alt: 'Pino-white-icon',
+            src: '/icons/boscoso-icon.svg',
+            alt: 'Boscoso-icon',
           },
           className: 'border-l-12 border-l-lime-300',
           description: trans('chuao').characteristics.flavors[5].description,
@@ -167,15 +125,15 @@ export default (Astro) => {
           percentage: '0.0',
           progress: 0,
           icon: {
-            src: '/icons/clabos-white-icon-intercacao.svg',
-            alt: 'Clabos-white-icon',
+            src: '/icons/especias-icon.svg',
+            alt: 'Especias-icon',
           },
           className: 'border-l-12 border-l-yellow-300',
           description: trans('chuao').characteristics.flavors[6].description,
           color: '#fde047',
         },
       ],
-      flavors_image: saboresPositivos,
+      flavors_images: [{src: saboresPositivos.src, alt: 'Sabores positivos'}],
       assessment: {
         title: trans('chuao').characteristics.assessment.title,
         classification: {

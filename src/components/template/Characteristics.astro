@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 
 import { Progress } from '@/components/ui/progress';
+import {CarouselImages} from '@/components/ui/carousel/Img';
 type Props = CollectionEntry<'template'>['data'];
 
 const { characteristics } = Astro.props;
@@ -45,17 +46,14 @@ const { characteristics } = Astro.props;
       <div
         class="group animate-trigger-left relative w-full flex-none overflow-hidden rounded-lg md:w-md lg:w-md xl:w-md"
       >
-        {
-          characteristics?.flavors_image && (
-            <Image
-              inferSize={true}
-              loading="eager"
-              class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
-              src={characteristics?.flavors_image}
-              alt="Flavors"
-            />
-          )
-        }
+        <CarouselImages images={characteristics?.flavors_images} client:only="react" className="w-full" />  
+          <!-- <Image
+            inferSize={true}
+            loading="eager"
+            class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+            src={flavor.src}
+            alt={flavor.alt}
+          /> -->
       </div>
     </div>
 
@@ -70,7 +68,7 @@ const { characteristics } = Astro.props;
             characteristics?.assessment?.classification && (
               <Image
                 inferSize={true}
-                loading="eager"
+                loading="lazy"
                 class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
                 src={characteristics?.assessment?.classification?.image}
                 alt={characteristics?.assessment?.classification?.imageAlt}
@@ -119,7 +117,7 @@ const { characteristics } = Astro.props;
           characteristics?.assessment?.equipment && (
             <Image
               inferSize={true}
-              loading="eager"
+              loading="lazy"
               class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
               src={characteristics?.assessment?.equipment?.image}
               alt={characteristics?.assessment?.equipment?.imageAlt}

@@ -26,6 +26,8 @@ type CarouselContextProps = {
   scrollNext: () => void;
   canScrollPrev: boolean;
   canScrollNext: boolean;
+  isHovered: boolean;
+  setIsHovered: React.Dispatch<React.SetStateAction<boolean>>;
 } & CarouselProps;
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null);
@@ -53,6 +55,7 @@ const Carousel = React.forwardRef<
   );
   const [canScrollPrev, setCanScrollPrev] = React.useState(false);
   const [canScrollNext, setCanScrollNext] = React.useState(false);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   const onSelect = React.useCallback((api: CarouselApi) => {
     if (!api) {
@@ -117,10 +120,14 @@ const Carousel = React.forwardRef<
         scrollNext,
         canScrollPrev,
         canScrollNext,
+        isHovered,
+        setIsHovered,
       }}
     >
       <div
         ref={ref}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         onKeyDownCapture={handleKeyDown}
         className={cn('relative', className)}
         role="region"
@@ -178,7 +185,7 @@ CarouselItem.displayName = 'CarouselItem';
 
 const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProps<typeof Button>>(
   ({ className, variant = 'outline', size = 'icon', ...props }, ref) => {
-    const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+    const { orientation, scrollPrev, canScrollPrev, isHovered } = useCarousel();
 
     return (
       <Button
@@ -186,10 +193,11 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProp
         variant={variant}
         size={size}
         className={cn(
-          'absolute h-8 w-8 rounded-full',
+          'absolute h-8 w-8 rounded-full disabled:opacity-0',
           orientation === 'horizontal'
             ? 'top-1/2 -left-8 -translate-y-1/2 md:-left-12 lg:-left-12 xl:-left-12'
             : 'top-1/2 -translate-y-1/2',
+          !isHovered && 'opacity-0', // Control de visibilidad
           className,
         )}
         disabled={!canScrollPrev}
@@ -206,18 +214,19 @@ CarouselPrevious.displayName = 'CarouselPrevious';
 
 const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<typeof Button>>(
   ({ className, variant = 'outline', size = 'icon', ...props }, ref) => {
-    const { orientation, scrollNext, canScrollNext } = useCarousel();
+  const { orientation, scrollNext, canScrollNext, isHovered } = useCarousel();
 
-    return (
-      <Button
-        ref={ref}
-        variant={variant}
-        size={size}
-        className={cn(
-          'absolute h-8 w-8 rounded-full',
-          orientation === 'horizontal'
-            ? 'top-1/2 -right-8 -translate-y-1/2 md:-right-12 lg:-right-12 xl:-right-12'
-            : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
+  return (
+    <Button
+      ref={ref}
+      variant={variant}
+      size={size}
+      className={cn(
+        'absolute h-8 w-8 rounded-full disabled:opacity-0',
+        orientation === 'horizontal'
+          ? 'top-1/2 -right-8 -translate-y-1/2 md:-right-12 lg:-right-12 xl:-right-12'
+          : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
+          !isHovered && 'opacity-0', // Control de visibilidad
           className,
         )}
         disabled={!canScrollNext}

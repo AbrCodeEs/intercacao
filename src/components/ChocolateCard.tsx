@@ -4,53 +4,37 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import type { ChocolateBar } from '@/data/chocolateBars';
 import {
-  Cherry as Fruit,
-  Citrus,
-  Flower,
-  Coffee,
-  SpadeIcon as Spices,
-  TreePine as Tree,
   Star,
-  Leaf,
   Award,
   Trophy,
-  Circle,
-  Search,
+  Nut,
+  CornerRightUp,
 } from 'lucide-react';
-import type { SortOption } from '@/consts';
+import type { SortOption, FlavorOption } from '@/consts';
 import { Sort } from '@/consts';
 
 import { motion } from 'framer-motion';
-const iconMap: { [key: string]: React.ReactNode } = {
-  fruity_sweet: <Fruit className="h-4 w-4" />,
-  fruity_citrus: <Citrus className="h-4 w-4" />,
-  flowers: <Flower className="h-4 w-4" />,
-  cocoa: <Coffee className="h-4 w-4" />,
-  spices: <Spices className="h-4 w-4" />,
-  wood: <Tree className="h-4 w-4" />,
-  citrus: <Fruit className="h-4 w-4" />,
-  creole: <Circle className="h-4 w-4" />,
-};
 
 const IconTraslation = {
-  fruity_sweet: 'Afrutado dulce',
-  fruity_citrus: 'Afrutado cítrico',
-  flowers: 'Aflorado',
-  creole: 'Acriollado',
-  cocoa: 'Cacao',
-  wood: 'Boscoso',
-  spices: 'Especias',
+  fruity_sweet: 'fruity_sweet',
+  fruity_citrus: 'fruity_citrus',
+  flower: 'flower',
+  creole: 'creole',
+  cocoa: 'cocoa',
+  wood: 'wood',
+  spices: 'spices',
 };
 
 export function ChocolateCard({
   chocolate,
   sortBy,
+  flavors,
 }: {
   chocolate: ChocolateBar;
   sortBy: SortOption;
+  flavors: FlavorOption[] | null;
 }) {
   const [isHovered, setIsHovered] = useState(false);
-
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
       <Card
@@ -67,98 +51,214 @@ export function ChocolateCard({
             <img
               src={chocolate.image}
               alt={chocolate.name}
-              loading="lazy"
+              loading="eager"
               decoding="async"
               width={1000}
               height={1000}
               className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
-            <div className="from-primary/80 absolute inset-0 flex flex-col justify-start bg-gradient-to-t to-transparent p-2 text-xl md:p-4 lg:p-4 xl:p-6">
-              {sortBy === Sort.rated && (
-                <div className="flex items-center text-white">
-                  <Star className="mr-1 h-6 w-6 fill-current text-amber-400" />
-                  <span>{chocolate.rating.toFixed(1)}</span>
-                </div>
-              )}
-              {sortBy === Sort.fermented && (
-                <div className="flex items-center text-white">
-                  <Leaf className="mr-1 h-6 w-6 fill-current text-green-400" />
-                  <span>{chocolate.fermented.toFixed(1)}%</span>
-                </div>
-              )}
-              {sortBy === Sort.certified && (
-                <div className="flex items-center text-white">
-                  <Award className="mr-1 h-6 w-6 fill-current text-amber-400" />
-                  <span>{chocolate.certified}</span>
-                </div>
-              )}
-              {sortBy === Sort.awarded && (
-                <div className="flex items-center text-white">
-                  <Trophy className="mr-1 h-6 w-6 fill-current text-amber-400" />
-                  <span>{chocolate.awarded} Premios</span>
-                </div>
-              )}
+            <div className="absolute inset-0 flex flex-col justify-start p-2 text-xl md:p-4 lg:p-4 xl:p-6">
+              <div className="flex grow items-start justify-start">
+                {(flavors || sortBy) && (
+                  <div className="bg-primary rounded-xl p-2">
+                    {!flavors && sortBy === Sort.rated && (
+                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                        <Star className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+                        <span>{chocolate.rating.toFixed(1)}</span>
+                      </div>
+                    )}
+                    {!flavors && sortBy === Sort.fermented && (
+                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                        <img
+                          src="/icons/fermentado.png"
+                          alt="fermentado"
+                          loading="eager"
+                          className="mr-1 h-5 w-5 brightness-100 contrast-100 invert filter transition-all hover:opacity-80"
+                        />
+                        <span>{chocolate.fermented.toFixed(1)}%</span>
+                      </div>
+                    )}
+                    {!flavors && sortBy === Sort.certified && (
+                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                        <Award className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+                        <span>{chocolate.certified.toFixed(1)}</span>
+                      </div>
+                    )}
+                    {!flavors && sortBy === Sort.awarded && (
+                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                        <Trophy className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+                        <span>{chocolate.awarded.toFixed(1)} Premios</span>
+                      </div>
+                    )}
 
-              {sortBy === Sort.creole && (
-                <div className="flex items-center text-white">
-                  <Circle className="mr-1 h-6 w-6 fill-current text-amber-400" />
-                  <span>{chocolate.creole}%</span>
-                </div>
-              )}
+                    {!flavors && sortBy === Sort.creole && (
+                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                        <Nut className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+                        <span>{chocolate.creole.toFixed(1)}%</span>
+                      </div>
+                    )}
+                    {flavors &&
+                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.fruity_sweet && (
+                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                          <img
+                            className="mr-1 size-5"
+                            loading="eager"
+                            src="/icons/afrutado_dulces-white-icon.svg"
+                            alt="afrutado dulces"
+                          />
+                          <span>{chocolate.ingredients.fruity_sweet.toFixed(1)}%</span>
+                        </div>
+                      )}
+
+                    {flavors &&
+                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.fruity_citrus && (
+                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                          <img
+                            className="mr-1 size-5"
+                            loading="eager"
+                            src="/icons/afrutado_citricos-white-icon.svg"
+                            alt="afrutado citricos"
+                          />
+                          <span>{chocolate.ingredients.fruity_citrus.toFixed(1)}%</span>
+                        </div>
+                      )}
+
+                    {flavors &&
+                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.flower && (
+                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                          <img
+                            className="mr-1 size-5"
+                            loading="eager"
+                            src="/icons/aflorado-white-icon.svg"
+                            alt="aflorados"
+                          />
+                          <span>{chocolate.ingredients.flower.toFixed(1)}%</span>
+                        </div>
+                      )}
+
+                    {flavors &&
+                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.creole && (
+                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                          <img
+                            className="mr-1 size-5"
+                            loading="eager"
+                            src="/icons/acriollado-white-icon.svg"
+                            alt="acriollado"
+                          />
+                          <span>{chocolate.ingredients.creole.toFixed(1)}%</span>
+                        </div>
+                      )}
+
+                    {flavors &&
+                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.cocoa && (
+                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                          <img
+                            className="mr-1 size-5"
+                            loading="eager"
+                            src="/icons/cacao-white-icon.svg"
+                            alt="cacao"
+                          />
+                          <span>{chocolate.ingredients.cocoa.toFixed(1)}%</span>
+                        </div>
+                      )}
+
+                    {flavors && flavors.toLowerCase().replace(' ', '_') === IconTraslation.wood && (
+                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                        <img
+                          className="mr-1 size-5"
+                          loading="eager"
+                          src="/icons/boscoso-white-icon.svg"
+                          alt="boscoso"
+                        />
+                        <span>{chocolate.ingredients.wood.toFixed(1)}%</span>
+                      </div>
+                    )}
+
+                    {flavors &&
+                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.spices && (
+                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+                          <img
+                            className="mr-1 size-5"
+                            loading="eager"
+                            src="/icons/especias-white-icon.svg"
+                            alt="especias"
+                          />
+                          <span>{chocolate.ingredients.spices.toFixed(1)}%</span>
+                        </div>
+                      )}
+                  </div>
+                )}
+              </div>
             </div>
           </motion.div>
           <motion.div
-            className="xl:bg-primary/65 lg:bg-primary/65 md:bg-primary/65 bg-primary/90 text-secondary-foreground absolute inset-0 flex flex-col items-center justify-center p-4"
+            className="xl:bg-primary/70 lg:bg-primary/70 md:bg-primary/70 bg-primary/90 bg-blur text-secondary-foreground absolute inset-0 flex flex-col items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: isHovered ? 1 : 0 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="w-full space-y-2 text-center md:w-11/12 lg:w-3/4 xl:w-3/4">
+            <div className="relative flex w-10/12 flex-col justify-between space-y-2 text-center">
               <div className="mb-2 flex hidden flex-wrap justify-center gap-1 md:hidden lg:block xl:block">
-                <h3 className="mb-1 text-3xl font-semibold text-white">{chocolate.name}</h3>
+                <h3 className="mb-1 text-4xl font-semibold text-white">{chocolate.name}</h3>
               </div>
-              <p className="text-md hidden pt-2 text-white md:hidden lg:block xl:block">
+
+              <p className="xl:text-lg lg:text-lg md:text-sm hidden pt-2 text-white md:hidden lg:block xl:block">
                 {chocolate.country}
               </p>
-              <div className="grid grid-cols-2 gap-4 text-sm md:mt-4 md:gap-3 lg:mt-4 lg:gap-3 xl:mt-4 xl:gap-3">
-                {Object.entries(chocolate.ingredients).map(
-                  ([ingredient, amount]: [string, number]) => (
-                    <div key={ingredient} className="flex items-center justify-start gap-2">
-                      <div
-                        key={ingredient}
-                        className="flex flex-col items-center justify-center font-bold"
-                      >
-                        <p
-                          className={`bg-${ingredient.replace(/_/g, '-')} flex size-6 flex-col items-center justify-center rounded-full text-black md:size-10 lg:size-20 xl:size-20`}
-                        >
-                          {iconMap[ingredient] || ingredient}
-                          <span className="md:text-md mt-1 hidden text-center text-xs md:hidden lg:block lg:text-lg xl:block xl:text-lg">
-                            {amount}%
-                          </span>
-                        </p>
-                      </div>
-                      <div className="md:text-md hidden text-xs text-white md:hidden lg:block lg:text-lg xl:block xl:text-lg">
-                        {IconTraslation[ingredient] || ingredient}
-                      </div>
-                      <div className="md:text-md block text-xs text-white md:block lg:hidden lg:text-lg xl:hidden xl:text-lg">
-                        {amount}%
-                      </div>
-                    </div>
-                  ),
-                )}
-                <a href="/es/chuao">
-                  <div className="flex items-center justify-start gap-2">
-                    <div className="flex flex-col items-center justify-center font-bold">
-                      <p className="flex size-6 flex-col items-center justify-center rounded-full bg-red-500 text-black md:size-10 lg:size-20 xl:size-20">
-                        <Search className="h-4 w-4" />
-                      </p>
-                    </div>
-                    <div className="md:text-md text-xs text-white lg:text-lg xl:text-lg">
-                      Ver mas
-                    </div>
+
+              <div className="flex items-center justify-center gap-x-0 gap-y-5 text-sm md:mt-4 md:gap-3 lg:gap-4 xl:gap-4">
+                <div className="xl:w-20 lg:w-20 md:w-20 flex flex-col xl:gap-5 lg:gap-5 md:gap-5 gap-2">
+                  <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
+                    <Star className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+                    <span>{chocolate.rating.toFixed(1)}</span>
                   </div>
+                  <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
+                    <img
+                      src="/icons/fermentado.png"
+                      alt="fermentado"
+                      loading="eager"
+                      className="xl:size-6 lg:size-6 md:size-6 size-4 brightness-100 contrast-100 invert filter transition-all hover:opacity-80"
+                    />
+                    <span>{chocolate.fermented.toFixed(1)}%</span>
+                  </div>
+                  <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
+                    <Award className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+
+                    <span>{chocolate.certified}</span>
+                  </div>
+                  <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
+                      <Trophy className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+                    
+                    <span>{chocolate.awarded}</span>
+                  </div>
+                  <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
+                      <Nut className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+                
+                    <span>{chocolate.creole}%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="items-center justify-end xl:pt-20 lg:pt-10 md:pt-0 pt-0 xl:mb-2 lg:mb-2 md:mb-2 mb-2 hidden md:flex lg:flex xl:flex">
+                <a
+                  href={chocolate.url}
+                  target="_blank"
+                  className="mt-12 flex w-30 items-center justify-start gap-2 rounded-lg bg-gray-500 py-2 px-3"
+                >
+                  <p className="md:text-md text-xs text-white lg:text-base xl:text-base">
+                    Ver mas
+                  </p>
+                  <CornerRightUp className="size-4 text-white" />
                 </a>
               </div>
+
+              <a
+                  href={chocolate.url}
+                  target="_blank"
+                  className="absolute bottom-0 right-0 w-auto flex items-center justify-start gap-2 rounded-lg bg-gray-500 p-2 xl:hidden lg:hidden md:hidden block"
+                >
+                  <CornerRightUp className="size-2 text-white" />
+                </a>
             </div>
           </motion.div>
         </CardContent>

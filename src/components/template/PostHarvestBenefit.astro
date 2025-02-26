@@ -65,7 +65,7 @@ const {
                         case 'list':
                           return (
                             <ul class="flex list-disc flex-col gap-3 px-10">
-                              {detail.items.map((li) => (
+                              {detail.items?.map((li) => (
                                 <li>
                                   <p class="text-lg">{li}</p>
                                 </li>
