@@ -30,8 +30,9 @@ import logoElectronMusica from '@/images/global/logo-electron-musica-y-dansa.png
 import logoElectronReligion from '@/images/global/logo-electron-religion.png';
 
 import { CarouselPost } from '@/components/ui/carousel/Post';
-import ChocolateGallery from '@/components/page';
+import { ChocolateGallery } from '@/components/ChocolateGallery';
 import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { getLangFromUrl } from '@/assets/lib/i18n/utils';
 
 const posts = [
   {
@@ -87,6 +88,8 @@ const posts = [
     },
   },
 ];
+
+const lang = getLangFromUrl(Astro.url);
 
 export async function getStaticPaths() {
   return [{ params: { locale: 'en' } }, { params: { locale: 'es' } }];
@@ -153,7 +156,7 @@ export async function getStaticPaths() {
           class="w-75 object-fill object-center"
         />
       </div>
-      <ChocolateGallery client:load />
+      <ChocolateGallery lang={lang} client:only="react" />
     </div>
 
     <div

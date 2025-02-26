@@ -33,12 +33,13 @@ export async function getStaticPaths() {
 ---
 
 <Layout
-  title="Intercacao Europe Bv | Cacao de Chuao"
+  title="Cacao de Chuao | Intercacao Europe Bv"
   description="Descubre el Cacao de Chuao, reconocido mundialmente por su calidad y sabor excepcionales. Conoce su proceso de producción sostenible, desde la cosecha hasta la fermentación, y explora las tradiciones culturales de la comunidad que lo cultiva. Sumérgete en la rica historia del cacao venezolano y su impacto en la industria gourmet."
   pubDate={new Date()}
   keywords="Cacao de Chuao, cacao trinitario, cacao criollo, granos de cacao, análisis de corte, características organolépticas, sabor a cacao, aroma floral, fermentación del cacao, técnicas de secado, trazabilidad del cacao, certificado de origen, cosecha de cacao, producción sostenible, agricultura en Venezuela, historia del cacao en Chuao, folklore venezolano, comunidad de Chuao, responsabilidad social, Fundación Prosperi, mapa sensorial del cacao, cacao gourmet, cacao artesanal, cultura del cacao, cacao de alta calidad, tradiciones de Chuao"
 >
   <article class="w-full overflow-x-hidden overflow-y-auto">
+    <!-- @ts-ignore -->
     <GeneralInformation
       generalInformation={{
         title: 'evaluacion',
@@ -104,6 +105,7 @@ export async function getStaticPaths() {
     <section
       class="h-full w-full bg-gray-400 md:h-screen md:w-screen lg:h-screen lg:w-screen xl:h-screen xl:w-screen"
     >
+    <!-- @ts-ignore -->
       <Image
         inferSize={true}
         class="h-full w-full object-fill object-center"

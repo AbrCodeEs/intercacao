@@ -39,7 +39,7 @@ export default function Index({ children, setIsActive, items }: Props) {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="menu"
+        className="menu border-r border-gray-500/50 shadow-lg"
       >
         <nav className="body justify-between">
           <div className="flex w-full items-center justify-center pt-10">{children}</div>
