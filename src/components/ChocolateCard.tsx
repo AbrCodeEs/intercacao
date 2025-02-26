@@ -81,13 +81,13 @@ export function ChocolateCard({
                     {!flavors && sortBy === Sort.certified && (
                       <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                         <Award className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-                        <span>{chocolate.certified.toFixed(1)}</span>
+                        <span>{chocolate.certified}</span>
                       </div>
                     )}
                     {!flavors && sortBy === Sort.awarded && (
                       <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                         <Trophy className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-                        <span>{chocolate.awarded.toFixed(1)} Premios</span>
+                        <span>{chocolate.awarded}</span>
                       </div>
                     )}
 
@@ -239,26 +239,26 @@ export function ChocolateCard({
                 </div>
               </div>
 
-              <div className="items-center justify-end xl:pt-20 lg:pt-10 md:pt-0 pt-0 xl:mb-2 lg:mb-2 md:mb-2 mb-2 hidden md:flex lg:flex xl:flex">
+              <div className="items-center justify-end xl:pt-9 lg:pt-8 md:pt-0 pt-0 xl:mb-2 lg:mb-2 md:mb-2 mb-2 hidden md:hidden lg:flex xl:flex">
                 <a
                   href={chocolate.url}
                   target="_blank"
                   className="mt-12
-                   flex w-30 items-center justify-start gap-2 rounded-lg bg-gray-500 py-2 px-3"
+                   flex w-27 items-center justify-between rounded-lg bg-gray-300 py-2 px-3"
                 >
-                  <p className="md:text-md text-xs text-white lg:text-base xl:text-base">
+                  <p className="md:text-md text-xs text-black lg:text-base xl:text-base">
                     Ver mas
                   </p>
-                  <CornerRightUp className="size-4 text-white" />
+                  <CornerRightUp className="size-4 text-black" />
                 </a>
               </div>
 
               <a
                   href={chocolate.url}
                   target="_blank"
-                  className="absolute bottom-0 right-0 w-auto flex items-center justify-start gap-2 rounded-lg bg-gray-500 p-2 xl:hidden lg:hidden md:hidden block"
+                  className="absolute bottom-0 right-0 w-auto flex items-center justify-start gap-2 rounded-lg bg-gray-300 p-2 xl:hidden lg:hidden md:block block"
                 >
-                  <CornerRightUp className="size-2 text-white" />
+                  <CornerRightUp className="size-2 text-black" />
                 </a>
             </div>
           </motion.div>

@@ -7,10 +7,12 @@ export function CardPost({
   title,
   description,
   image,
+  url,
 }: {
   title: string;
   description: string;
   image: { src: string; alt: string };
+  url?: string;
 }) {
   return (
     <Card className="overflow-hidden">
@@ -19,9 +21,13 @@ export function CardPost({
       <CardContent>
         <CardDescription>{description}</CardDescription>
       </CardContent>
-      <CardFooter>
-        <Button variant="outline">Ver mas ...</Button>
-      </CardFooter>
+      {url && (
+        <CardFooter>
+          <a href={url} target='_blank'>
+            <Button variant="outline">Ver mas ...</Button>
+          </a>
+        </CardFooter>
+      )}
     </Card>
   );
 }
