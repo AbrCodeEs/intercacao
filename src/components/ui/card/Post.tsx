@@ -16,14 +16,14 @@ export function CardPost({
 }) {
   return (
     <Card className="overflow-hidden">
-      <img src={image.src} alt={image.alt} className='w-full' />
+      <img src={image.src} alt={image.alt} className="w-full" />
       <CardHeader>{title}</CardHeader>
       <CardContent>
         <CardDescription>{description}</CardDescription>
       </CardContent>
       {url && (
         <CardFooter>
-          <a href={url} target='_blank'>
+          <a href={url} target="_blank">
             <Button variant="outline">Ver mas ...</Button>
           </a>
         </CardFooter>

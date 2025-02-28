@@ -13,7 +13,12 @@ export function CarouselPost({
   posts,
   ...props
 }: {
-  posts: { title: string; description: string; image: { src: string; alt: string }, url?: string }[];
+  posts: {
+    title: string;
+    description: string;
+    image: { src: string; alt: string };
+    url?: string;
+  }[];
 }) {
   return (
     <Carousel {...props}>

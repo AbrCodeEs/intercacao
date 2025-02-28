@@ -354,13 +354,13 @@ const es = {
         text: 'Posteriormente las vías de comunicación evolucionaron y comenzó el tráfico comercial por el río Escalante',
       },
       {
-        text: "En el año 1700, comienza un desarrollo por necesidades de vías de comunicación hacia Maracaibo y necesitaron más que a San Carlos del Zulia para soportar los viajes de un lado al otro del Lago de Maracaibo, con ello evolucionó la vía de comunicación el tráfico comercial por el río Escalante hasta lograr variadas vías que trajeron consigo algunos agricultores de San Carlos, logrando asi el crecimiento de la población hasta fundar en 1778 a Santa Cruz del Zulia, Santa Bárbara y posteriormente Moralito y Urribarrí.",
+        text: 'En el año 1700, comienza un desarrollo por necesidades de vías de comunicación hacia Maracaibo y necesitaron más que a San Carlos del Zulia para soportar los viajes de un lado al otro del Lago de Maracaibo, con ello evolucionó la vía de comunicación el tráfico comercial por el río Escalante hasta lograr variadas vías que trajeron consigo algunos agricultores de San Carlos, logrando asi el crecimiento de la población hasta fundar en 1778 a Santa Cruz del Zulia, Santa Bárbara y posteriormente Moralito y Urribarrí.',
       },
       {
         text: 'El 6 de octubre de 1873 obtiene autonomía del Distrito Perijá, conformándose el nuevo distrito Fraternidad, pasando a llamarse luego Distrito Colón en el año 1881 y es en 1989 cuando se declara como Municipio.',
       },
       {
-        text: "Lleva la batuta en el ámbito cultural con el Ateneo “Don Jesús María Semprún” destacándose por sus grupos de danzas, y otros como la Casa de la Cultura Colón, Salón Parroquial, Centro Integral de Arte, Sala de Cine “San Carlos”, Parque Exposición “Luís Alberto Camacho”, y Paseo Colón. También cuentan con grupos musicales, como conjuntos de gaitas, grupos de teatro y bandas.",
+        text: 'Lleva la batuta en el ámbito cultural con el Ateneo “Don Jesús María Semprún” destacándose por sus grupos de danzas, y otros como la Casa de la Cultura Colón, Salón Parroquial, Centro Integral de Arte, Sala de Cine “San Carlos”, Parque Exposición “Luís Alberto Camacho”, y Paseo Colón. También cuentan con grupos musicales, como conjuntos de gaitas, grupos de teatro y bandas.',
       },
       {
         text: 'En el sector artesanal podemos encontrar gran variedad, la artesanía predominante es la indígena, fabricada con enea y palmas de coco, también construyen canoas de pesca en forma manual, tejidos de chinchorros, etc.',
@@ -721,28 +721,28 @@ const en = {
   history: {
     title: 'History',
     images: [{ alt: 'Porcelana history' }, { alt: 'Porcelana history' }],
-  
+
     content: [
       {
-      text: 'Before the arrival of the conquistadors, these lands were populated by indigenous tribes, located on the coast of Lake Maracaibo and the banks of its rivers. The first inhabitants were the Arawakos, Aliles, Onotos and finally the Buredes; that for 700 years came from the northern part of Venezuela. In 1499, with the discovery of the Lake, a predominantly agricultural period began, marking a series of structural changes that led to the elimination of most of the indigenous groups by the Spanish conquerors, due to an economy turned abroad.',
+        text: 'Before the arrival of the conquistadors, these lands were populated by indigenous tribes, located on the coast of Lake Maracaibo and the banks of its rivers. The first inhabitants were the Arawakos, Aliles, Onotos and finally the Buredes; that for 700 years came from the northern part of Venezuela. In 1499, with the discovery of the Lake, a predominantly agricultural period began, marking a series of structural changes that led to the elimination of most of the indigenous groups by the Spanish conquerors, due to an economy turned abroad.',
       },
       {
-      text: 'Later, the communication routes evolved and commercial traffic began on the Escalante River',
+        text: 'Later, the communication routes evolved and commercial traffic began on the Escalante River',
       },
       {
-      text: "In the year 1700, a development began due to the need for communication routes to Maracaibo and they needed more than San Carlos del Zulia to support the trips from one side to the other of Lake Maracaibo, with this the communication route evolved and commercial traffic on the Escalante River until achieving various routes that brought with them some farmers from San Carlos, thus achieving population growth until founding Santa Cruz del Zulia, Santa Bárbara and later Moralito and Urribarrí in 1778.",
+        text: 'In the year 1700, a development began due to the need for communication routes to Maracaibo and they needed more than San Carlos del Zulia to support the trips from one side to the other of Lake Maracaibo, with this the communication route evolved and commercial traffic on the Escalante River until achieving various routes that brought with them some farmers from San Carlos, thus achieving population growth until founding Santa Cruz del Zulia, Santa Bárbara and later Moralito and Urribarrí in 1778.',
       },
       {
-      text: 'On October 6, 1873, the Perijá District gained autonomy, forming the new Fraternidad district, later renamed the Colón District in 1881, and in 1989 it was declared a Municipality.',
+        text: 'On October 6, 1873, the Perijá District gained autonomy, forming the new Fraternidad district, later renamed the Colón District in 1881, and in 1989 it was declared a Municipality.',
       },
       {
-      text: 'It leads the way in the cultural field with the “Don Jesús Maria Semprún” Athenaeum, standing out for its dance groups, and others such as the Colón House of Culture, the Parish Hall, the Comprehensive Art Center, the “San Carlos” Movie Theater, the “Luís Alberto Camacho” Exhibition Park, and the Paseo Colón. They also have musical groups, such as bagpipe groups, theatre groups and bands.',
+        text: 'It leads the way in the cultural field with the “Don Jesús Maria Semprún” Athenaeum, standing out for its dance groups, and others such as the Colón House of Culture, the Parish Hall, the Comprehensive Art Center, the “San Carlos” Movie Theater, the “Luís Alberto Camacho” Exhibition Park, and the Paseo Colón. They also have musical groups, such as bagpipe groups, theatre groups and bands.',
       },
       {
-      text: 'In the artisan sector we can find great variety, the predominant crafts are indigenous, made with reeds and coconut palms, they also build fishing canoes by hand, weave chinchorros, etc.',
+        text: 'In the artisan sector we can find great variety, the predominant crafts are indigenous, made with reeds and coconut palms, they also build fishing canoes by hand, weave chinchorros, etc.',
       },
       {
-      text: 'The main tourist attraction would be the Chama, an important river for the region that flows down with white Andean waters to the municipality and beyond. In this Municipality there is also the tourist part of the Urribarri Parish through Puerto Concha and its tourist stop, exhibition of crafts and the tasting of Colonial gastronomy.',
+        text: 'The main tourist attraction would be the Chama, an important river for the region that flows down with white Andean waters to the municipality and beyond. In this Municipality there is also the tourist part of the Urribarri Parish through Puerto Concha and its tourist stop, exhibition of crafts and the tasting of Colonial gastronomy.',
       },
     ],
   },

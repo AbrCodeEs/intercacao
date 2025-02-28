@@ -133,7 +133,7 @@ export default (Astro) => {
           color: '#fde047',
         },
       ],
-      flavors_images: [{src: saboresPositivos.src, alt: 'Sabores positivos'}],
+      flavors_images: [{ src: saboresPositivos.src, alt: 'Sabores positivos' }],
       assessment: {
         title: trans('chuao').characteristics.assessment.title,
         classification: {

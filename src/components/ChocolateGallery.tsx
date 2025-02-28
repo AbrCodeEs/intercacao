@@ -15,7 +15,6 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 
-
 import type {
   SortOption,
   FlavorOption,
@@ -25,14 +24,7 @@ import type {
   FilterOptionCountryItems,
 } from '@/consts';
 import { Sort, Flavor, Country } from '@/consts';
-import {
-  SpadeIcon as Spices,
-  TreePine as Tree,
-  Star,
-  Award,
-  Trophy,
-  Nut,
-} from 'lucide-react';
+import { SpadeIcon as Spices, TreePine as Tree, Star, Award, Trophy, Nut } from 'lucide-react';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -45,7 +37,13 @@ const TypesSortOption = [
   {
     label: 'Fermentado',
     value: 'fermented',
-    icon: <img src="/icons/fermentado.png" alt="fermentado" className="size-3 fill-current text-black md:size-5 lg:size-5 xl:size-5" />,
+    icon: (
+      <img
+        src="/icons/fermentado.png"
+        alt="fermentado"
+        className="size-3 fill-current text-black md:size-5 lg:size-5 xl:size-5"
+      />
+    ),
   },
   {
     label: 'Certificado',
@@ -84,50 +82,109 @@ const FlavorsSortOption = [
     label: 'Afrutado dulce ',
     value: 'Fruity Sweet',
     className: 'bg-fruity-sweet   text-white hover:text-white',
-    icon: <img className="h-4 w-4" loading="eager" src="/icons/afrutado_dulces-icon.svg" alt="afrutado dulces" />,
-    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/afrutado_dulces-white-icon.svg" alt="afrutado dulces" />,
+    icon: (
+      <img
+        className="h-4 w-4"
+        loading="eager"
+        src="/icons/afrutado_dulces-icon.svg"
+        alt="afrutado dulces"
+      />
+    ),
+    iconWhite: (
+      <img
+        className="h-4 w-4"
+        loading="eager"
+        src="/icons/afrutado_dulces-white-icon.svg"
+        alt="afrutado dulces"
+      />
+    ),
   },
   {
     label: 'Afrutado cítrico',
     value: 'Fruity Citrus',
     className: 'bg-fruity-citrus',
-    icon: <img className="h-4 w-4" loading="eager" src="/icons/afrutado_citricos-icon.svg" alt="afrutado citricos" />,
-    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/afrutado_citricos-white-icon.svg" alt="afrutado citricos" />,
+    icon: (
+      <img
+        className="h-4 w-4"
+        loading="eager"
+        src="/icons/afrutado_citricos-icon.svg"
+        alt="afrutado citricos"
+      />
+    ),
+    iconWhite: (
+      <img
+        className="h-4 w-4"
+        loading="eager"
+        src="/icons/afrutado_citricos-white-icon.svg"
+        alt="afrutado citricos"
+      />
+    ),
   },
   {
     label: 'Aflorado',
     value: 'Flower',
     className: 'bg-flower text-white hover:text-white',
-    icon: <img className="h-4 w-4" loading="eager" src="/icons/aflorado-icon.svg" alt="aflorados" />,
-    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/aflorado-white-icon.svg" alt="aflorados" />,
+    icon: (
+      <img className="h-4 w-4" loading="eager" src="/icons/aflorado-icon.svg" alt="aflorados" />
+    ),
+    iconWhite: (
+      <img
+        className="h-4 w-4"
+        loading="eager"
+        src="/icons/aflorado-white-icon.svg"
+        alt="aflorados"
+      />
+    ),
   },
   {
     label: 'Acriollado',
     value: 'Creole',
     className: 'bg-creole',
-    icon: <img className="h-4 w-4" loading="eager" src="/icons/acriollado-icon.svg" alt="acriollado" />,
-    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/acriollado-white-icon.svg" alt="acriollado" />,
+    icon: (
+      <img className="h-4 w-4" loading="eager" src="/icons/acriollado-icon.svg" alt="acriollado" />
+    ),
+    iconWhite: (
+      <img
+        className="h-4 w-4"
+        loading="eager"
+        src="/icons/acriollado-white-icon.svg"
+        alt="acriollado"
+      />
+    ),
   },
   {
     label: 'Cacao',
     value: 'Cocoa',
     className: 'bg-cocoa text-white hover:text-white',
     icon: <img className="h-4 w-4" loading="eager" src="/icons/cacao-icon.svg" alt="cacao" />,
-    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/cacao-white-icon.svg" alt="cacao" />,
+    iconWhite: (
+      <img className="h-4 w-4" loading="eager" src="/icons/cacao-white-icon.svg" alt="cacao" />
+    ),
   },
   {
     label: 'Boscoso',
     value: 'Wood',
     className: 'bg-wood text-white hover:text-white',
     icon: <img className="h-4 w-4" loading="eager" src="/icons/boscoso-icon.svg" alt="boscoso" />,
-    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/boscoso-white-icon.svg" alt="boscoso" />,
+    iconWhite: (
+      <img className="h-4 w-4" loading="eager" src="/icons/boscoso-white-icon.svg" alt="boscoso" />
+    ),
   },
   {
     label: 'Especias',
     value: 'Spices',
     className: 'bg-spices',
-    icon: <img className="h-4 w-4 text-white" loading="eager" src="/icons/especias-icon.svg" alt="especias" />,
-    iconWhite: <img className="h-4 w-4" loading="eager" src="/icons/especias-icon.svg" alt="especias" />,
+    icon: (
+      <img
+        className="h-4 w-4 text-white"
+        loading="eager"
+        src="/icons/especias-icon.svg"
+        alt="especias"
+      />
+    ),
+    iconWhite: (
+      <img className="h-4 w-4" loading="eager" src="/icons/especias-icon.svg" alt="especias" />
+    ),
   },
 ];
 
@@ -154,7 +211,7 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWit
 
 ListItem.displayName = 'ListItem';
 
-export function ChocolateGallery({ lang }: { lang: string }) {
+export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<string, any> }) {
   const [sortBy, setSortBy] = useState<SortOption | null>(null);
   const [selectedFlavor, setSelectedFlavor] = useState<FlavorOption | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
@@ -164,17 +221,18 @@ export function ChocolateGallery({ lang }: { lang: string }) {
     url: lang === 'en' ? `${cocoa.url}/${lang}` : `${cocoa.url}`,
   }));
 
-  const filteredChocolates = cocoaData.filter((item) => {
 
-      const flavorFilter = selectedFlavor && item.flavors.includes(selectedFlavor)
-        ? item.ingredients[selectedFlavor.toLowerCase().replace(' ', '_') as keyof typeof item.ingredients] > 0
-        : true;
+  const filteredChocolates = cocoaData
+    .filter((item) => {
+      const flavorFilter =
+        selectedFlavor && item.flavors.includes(selectedFlavor)
+          ? item.ingredients[
+              selectedFlavor.toLowerCase().replace(' ', '_') as keyof typeof item.ingredients
+            ] > 0
+          : true;
 
-      
-      const countryFilter = selectedCountry 
-        ? item.country === selectedCountry
-        : true;
-      
+      const countryFilter = selectedCountry ? item.country === selectedCountry : true;
+
       const sortFilter = {
         [Sort.rated]: item.rating > 0,
         [Sort.fermented]: item.fermented > 0,
@@ -183,39 +241,44 @@ export function ChocolateGallery({ lang }: { lang: string }) {
         [Sort.creole]: item.creole > 0,
       }[sortBy];
 
-      return flavorFilter && countryFilter && sortFilter || true;
+      return (flavorFilter && countryFilter && sortFilter) || true;
     })
     .sort((a, b) => {
       // Sorting by selected flavor if any
       if (selectedFlavor) {
-        const flavorKey = selectedFlavor.toLowerCase().replace(' ', '_') as keyof typeof a.ingredients;
+        const flavorKey = selectedFlavor
+          .toLowerCase()
+          .replace(' ', '_') as keyof typeof a.ingredients;
         return b.ingredients[flavorKey] - a.ingredients[flavorKey];
       }
-      
+
       // Default sorting by selected criteria
-      return sortBy && {
-        [Sort.rated]: b.rating - a.rating,
-        [Sort.fermented]: b.fermented - a.fermented,
-        [Sort.certified]: b.certified ? 1 : -1,
-        [Sort.awarded]: b.awarded ? 1 : -1,
-        [Sort.creole]: b.creole - a.creole,
-      }[sortBy];
+      return (
+        sortBy &&
+        {
+          [Sort.rated]: b.rating - a.rating,
+          [Sort.fermented]: b.fermented - a.fermented,
+          [Sort.certified]: b.certified ? 1 : -1,
+          [Sort.awarded]: b.awarded ? 1 : -1,
+          [Sort.creole]: b.creole - a.creole,
+        }[sortBy]
+      );
     });
 
   const handleSortSelect = (sort: SortOption) => {
-    setSortBy(current => current === sort ? null : sort);
+    setSortBy((current) => (current === sort ? null : sort));
     setSelectedFlavor(null);
     setSelectedCountry(null);
   };
 
   const handleFlavorSelect = (flavor: FlavorOption) => {
-    setSelectedFlavor(current => current === flavor ? null : flavor);
+    setSelectedFlavor((current) => (current === flavor ? null : flavor));
     setSortBy(null);
     setSelectedCountry(null);
   };
 
   const handleCountrySelect = (country: CountryOption) => {
-    setSelectedCountry(current => current === country ? null : country);
+    setSelectedCountry((current) => (current === country ? null : country));
   };
 
   return (
@@ -223,7 +286,7 @@ export function ChocolateGallery({ lang }: { lang: string }) {
       <div className="space-y-4 py-5">
         <div className="flex hidden flex-col justify-center gap-10 p-3 md:block lg:block xl:block">
           <h2 className="flex items-center gap-2 pb-5 text-center text-xl font-semibold text-white before:block before:h-px before:w-full before:border-t before:border-gray-100/20 before:content-[''] after:block after:h-px after:w-full after:border-t after:border-gray-100/20 after:content-['']">
-            <span className="w-80">Ordenar por:</span>
+            <span className="w-80">{trans.order_by}</span>
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-2">
             {(TypesSortOption as FilterOptionSortItems[]).map((option) => (
@@ -246,7 +309,7 @@ export function ChocolateGallery({ lang }: { lang: string }) {
         </div>
         <div className="flex hidden flex-col justify-center gap-10 p-3 md:block lg:block xl:block">
           <h2 className="flex items-center gap-2 pb-5 text-center text-xl font-semibold text-white before:block before:h-px before:w-full before:border-t before:border-gray-100/20 before:content-[''] after:block after:h-px after:w-full after:border-t after:border-gray-100/20 after:content-['']">
-            <span className="w-110">Mundo de sabores</span>
+            <span className="w-110">{trans.filter_flavor}</span>
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-2">
             {(FlavorsSortOption as FilterOptionFlavorItems[]).map((flavor) => (
@@ -256,9 +319,7 @@ export function ChocolateGallery({ lang }: { lang: string }) {
                 onClick={() => handleFlavorSelect(flavor.value as FlavorOption)}
                 size="sm"
                 className={
-                  selectedFlavor === flavor.value
-                    ? `${flavor.className}`
-                    : `${flavor.className}`
+                  selectedFlavor === flavor.value ? `${flavor.className}` : `${flavor.className}`
                 }
               >
                 {flavor.iconWhite}
@@ -297,7 +358,7 @@ export function ChocolateGallery({ lang }: { lang: string }) {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Ordenar por</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>{trans.order_by}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid h-auto w-75 gap-3 p-4 lg:grid-cols-1">
                       {(TypesSortOption as FilterOptionSortItems[]).map((option) => (
@@ -316,7 +377,7 @@ export function ChocolateGallery({ lang }: { lang: string }) {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Mundo de sabores</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>{trans.filter_flavor}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid h-auto w-75 gap-3 p-4 lg:grid-cols-1">
                       {(FlavorsSortOption as FilterOptionFlavorItems[]).map((flavor) => (
@@ -358,7 +419,7 @@ export function ChocolateGallery({ lang }: { lang: string }) {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3, type: 'spring' }}
             >
-              <ChocolateCard chocolate={chocolate} sortBy={sortBy} flavors={selectedFlavor} />
+              <ChocolateCard chocolate={chocolate} sortBy={sortBy} flavors={selectedFlavor} trans={trans} />
             </motion.div>
           ))}
         </AnimatePresence>

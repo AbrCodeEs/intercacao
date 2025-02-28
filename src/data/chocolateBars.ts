@@ -361,5 +361,5 @@ export const chocolateBars: ChocolateBar[] = [
       spices: 0.0,
     },
     url: 'http://paloblanco.intercacao.com',
-  }
+  },
 ];

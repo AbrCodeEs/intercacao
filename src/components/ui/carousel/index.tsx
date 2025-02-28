@@ -141,12 +141,14 @@ const Carousel = React.forwardRef<
 });
 Carousel.displayName = 'Carousel';
 
-const CarouselContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
-  ({ className, ...props }, ref) => {
-    const { carouselRef, orientation } = useCarousel();
+const CarouselContent = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement> & { classNameWrapper: string }
+>(({ className, classNameWrapper, ...props }, ref) => {
+  const { carouselRef, orientation } = useCarousel();
 
-    return (
-      <div ref={carouselRef} className="w-xs overflow-hidden md:w-xl lg:w-xl xl:w-full">
+  return (
+    <div ref={carouselRef} className={cn('w-xs overflow-hidden md:w-xl lg:w-xl xl:w-full', classNameWrapper)}>
         <div
           ref={ref}
           className={cn(
@@ -214,18 +216,18 @@ CarouselPrevious.displayName = 'CarouselPrevious';
 
 const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<typeof Button>>(
   ({ className, variant = 'outline', size = 'icon', ...props }, ref) => {
-  const { orientation, scrollNext, canScrollNext, isHovered } = useCarousel();
+    const { orientation, scrollNext, canScrollNext, isHovered } = useCarousel();
 
-  return (
-    <Button
-      ref={ref}
-      variant={variant}
-      size={size}
-      className={cn(
-        'absolute h-8 w-8 rounded-full disabled:opacity-0',
-        orientation === 'horizontal'
-          ? 'top-1/2 -right-8 -translate-y-1/2 md:-right-12 lg:-right-12 xl:-right-12'
-          : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
+    return (
+      <Button
+        ref={ref}
+        variant={variant}
+        size={size}
+        className={cn(
+          'absolute h-8 w-8 rounded-full disabled:opacity-0',
+          orientation === 'horizontal'
+            ? 'top-1/2 -right-8 -translate-y-1/2 md:-right-12 lg:-right-12 xl:-right-12'
+            : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
           !isHovered && 'opacity-0', // Control de visibilidad
           className,
         )}

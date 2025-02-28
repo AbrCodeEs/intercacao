@@ -20,76 +20,72 @@ import mundoDeSaboresPanel from '@/images/home/mundo-de-sabores-panel.webp';
 import lienzoMundoBg from '@/images/home/lienzo-mundo-bg.webp';
 import logo from '@/images/global/logo.webp';
 import logoInteracao from '@/images/global/logo-intercacao.webp';
-import logoRegresoAlAgua from '@/images/global/logo-regreso-al-agua.webp';
-import logoWilfriedMerle from '@/images/global/logo-wilfried-merle.webp';
-import logoRegresoAlAgro from '@/images/global/logo-regreso-al-agro.webp';
-import logoFundacionProsperi from '@/images/global/logo-fundacion-prosperi.webp';
 import logoWhiteImagotipoCacaoGourmet from '@/images/global/logo-white-imagotipo-cacao-gourmet.webp';
-import logoElectronDeporte from '@/images/global/logo-electron-deporte.png';
-import logoElectronMusica from '@/images/global/logo-electron-musica-y-dansa.png';
-import logoElectronReligion from '@/images/global/logo-electron-religion.png';
 
 import { CarouselPost } from '@/components/ui/carousel/Post';
 import { ChocolateGallery } from '@/components/ChocolateGallery';
 import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
-import { getLangFromUrl } from '@/assets/lib/i18n/utils';
+import { getLangFromUrl, useTranslations } from '@/assets/lib/i18n/utils';
+import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
+
+const lang = getLangFromUrl(Astro.url);
+
+const trans = useTranslations(lang);
 
 const posts = [
   {
-    title: 'Metodo de evaluación',
-    description:
-      'El metodo de evaluacion “cacao grader” complementa el metodo tradicional con un una evaluacion organoléptica completa, desarrollada por la reconocida Chloe Doutre',
+    title: trans('home').posts[0].title,
+    description: trans('home').posts[0].description,
     image: {
       src: postGranoDeDacao.src,
-      alt: 'Metodo de evaluación',
+      alt: trans('home').posts[0].image_alt,
     },
+    url: `https://www.intercacao.com/${lang}/evaluacion/`,
   },
   {
-    title: 'Chloe Doutre Rousell',
-    description: 'Consultora, Educadora y Experta en cacao fino y chocolate. ',
+    title: trans('home').posts[1].title,
+    description: trans('home').posts[1].description,
     image: {
       src: postChloeDoutre.src,
-      alt: 'Metodo de evaluación',
+      alt: trans('home').posts[1].image_alt,
     },
+    url: `https://www.intercacao.com/${lang}/chloe-doutre-roussel/`,
   },
   {
-    title: 'Ing. Alexis Zambrano',
-    description: 'Profesor, PhD, Magister, Ingeniero Quimico. ',
+    title: trans('home').posts[2].title,
+    description: trans('home').posts[2].description,
     image: {
       src: postIngAlexis.src,
-      alt: 'Metodo de evaluación',
+      alt: trans('home').posts[2].image_alt,
     },
+    url: `https://www.intercacao.com/${lang}/ing-alexis-zambrano/`,
   },
   {
-    title: 'Fundacion Quirico Prosperi',
-    description:
-      'Organización sin fines de lucro creada con la misión de promover y difundir los valores históricos y agrícolas de Venezuela a través de programas educativos y sociales como “Regreso al agro” y “Proyecto Agua”. ',
+    title: trans('home').posts[3].title,
+    description: trans('home').posts[3].description,
     image: {
       src: postFundacionProsperi.src,
-      alt: 'Metodo de evaluación',
+      alt: trans('home').posts[3].image_alt,
     },
+    url: 'http://fundacionprosperi.org/',
   },
   {
-    title: 'Central de Beneficio “Pintao“',
-    description:
-      'Situado en La Concepción, Rio Caribe, nuestras instalaciones cuentan con un equipo de expertos que garantiza los mejores protocolos de fermentación y secado y trazabilidad',
+    title: trans('home').posts[4].title,
+    description: trans('home').posts[4].description,
     image: {
       src: postPintao.src,
-      alt: 'Metodo de evaluación',
+      alt: trans('home').posts[4].image_alt,
     },
   },
   {
-    title: 'Central de Beneficio “Tesoro”',
-    description:
-      'Situado en el sur del lago (SDLG), nuestras instalaciones cuentan con un equipo de expertos que garantiza los mejores protocolos de fermentacion y secado y trazabilidad',
+    title: trans('home').posts[5].title,
+    description: trans('home').posts[5].description,
     image: {
       src: postTesoro.src,
-      alt: 'Metodo de evaluación',
+      alt: trans('home').posts[5].image_alt,
     },
   },
 ];
-
-const lang = getLangFromUrl(Astro.url);
 
 export async function getStaticPaths() {
   return [{ params: { locale: 'en' } }, { params: { locale: 'es' } }];
@@ -105,18 +101,19 @@ export async function getStaticPaths() {
       <Image
         loading="eager"
         inferSize={true}
-        src={banner}
-        alt="Intercacao banner principal"
+        src={trans('home').banner.src}
+        alt={trans('home').banner.alt}
         class="h-full w-full object-cover object-center"
       />
       <Image
         loading="eager"
         inferSize={true}
         class="absolute top-10 left-25 w-15 md:top-20 md:left-20 md:w-30 lg:top-20 lg:left-20 lg:w-30 xl:top-20 xl:left-20 xl:w-30"
-        src={logoInteracao}
-        alt="Intercacao banner principal"
+        src={trans('home').logo.src}
+        alt={trans('home').logo.alt}
       />
     </div>
+
     <div
       class="flex w-full items-center justify-center p-10"
       style={`background-image: url(${lienzo.src});`}
@@ -124,8 +121,8 @@ export async function getStaticPaths() {
       <Image
         loading="lazy"
         inferSize={true}
-        src={mundoDeSabores}
-        alt="Intercacao banner principal"
+        src={trans('home').mundo_de_sabores.src}
+        alt={trans('home').mundo_de_sabores.alt}
         class="w-75 object-fill object-center"
       />
     </div>
@@ -140,8 +137,8 @@ export async function getStaticPaths() {
       <Image
         loading="lazy"
         inferSize={true}
-        src={mundoDeSaboresPanel}
-        alt="Intercacao banner principal"
+        src={trans('home').mundo_de_sabores_panel.src}
+        alt={trans('home').mundo_de_sabores_panel.alt}
         class="object-fill object-center shadow-2xl"
       />
     </div>
@@ -151,103 +148,24 @@ export async function getStaticPaths() {
         <Image
           loading="lazy"
           inferSize={true}
-          src={logoWhiteImagotipoCacaoGourmet}
-          alt="Intercacao banner principal"
+          src={trans('home').logo_white_imagotipo_cacao_gourmet.src}
+          alt={trans('home').logo_white_imagotipo_cacao_gourmet.alt}
           class="w-75 object-fill object-center"
         />
       </div>
-      <ChocolateGallery lang={lang} client:load />
+      <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:load />
     </div>
 
     <div
       id="section-prosperi"
-      class="bg-start flex h-auto w-full items-start justify-center overflow-hidden bg-no-repeat md:h-screen md:items-center lg:h-screen lg:items-center xl:h-screen xl:items-center"
+      class="bg-start flex h-auto min-h-screen w-full items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
       style={`background-image: url(${lienzoCacao.src});`}
     >
       <div
-        class="flex w-4/5 w-full flex-col gap-10 p-10 md:w-1/2 md:p-0 lg:w-1/2 lg:p-0 xl:w-4/5 xl:p-0"
+        class="flex h-full w-4/5 flex-col gap-10 p-10 md:w-1/2 md:pt-10 lg:w-1/2 lg:pt-10 xl:w-4/5 xl:pt-20"
       >
-        <h1 class="text-4xl font-bold text-neutral-600 uppercase">Fundación Quirico Prosperi</h1>
-        <p class="text-lg">
-          La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el compromiso
-          de difundir los valores historicos, culturales y agricolas de venezuela a traves de su
-          programa educacional "Regreso al Agro", probando que la siembra de cacao es una profesion
-          rentable que genera cambios sociales. El objetivo principal es el de colaborar con la
-          comunidad, enriqueciendo y promoviendo las buenas practicas agricolas para las
-          generaciones futuras de Chuao.
-        </p>
-        <div
-          class="flex flex-col items-center justify-center gap-5 md:flex-row lg:flex-row xl:flex-row"
-        >
-          <div class="h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoRegresoAlAgua}
-              alt="Intercacao banner principal"
-              class="h-full w-full object-fill object-center"
-            />
-          </div>
-          <div class="h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoWilfriedMerle}
-              alt="Intercacao banner principal"
-              class="h-full w-full object-fill object-center"
-            />
-          </div>
-          <div class="h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoRegresoAlAgro}
-              alt="Intercacao banner principal"
-              class="h-full w-full object-fill object-center"
-            />
-          </div>
-        </div>
-        <div
-          class="flex flex-col items-center justify-center gap-5 md:flex-row lg:flex-row xl:flex-row"
-        >
-          <div class="z-50 block h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoElectronDeporte}
-              alt="Intercacao banner principal"
-              class="z-50 block h-full w-full object-fill object-center"
-            />
-          </div>
-          <div class="z-50 block h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoElectronReligion}
-              alt="Intercacao banner principal"
-              class="z-50 block h-full w-full object-fill object-center"
-            />
-          </div>
-          <div class="z-50 block h-full w-70">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoElectronMusica}
-              alt="Intercacao banner principal"
-              class="h-full w-full object-fill object-center"
-            />
-          </div>
-        </div>
-        <div class="relative flex w-full items-center justify-center">
-          <div class="z-50 block h-full w-100 bg-white">
-            <Image
-              loading="lazy"
-              inferSize={true}
-              src={logoFundacionProsperi}
-              alt="Intercacao banner principal"
-              class="z-50 block h-full w-full object-fill object-center"
-            />
-          </div>
+        <div class="h-full">
+          <TabsTransitionPanel client:only="react" />
         </div>
       </div>
     </div>
@@ -261,23 +179,18 @@ export async function getStaticPaths() {
     style={`background-image: url(${lienzoCacao.src});`}
   >
     <div
-      class="flex w-4/5 w-full flex-col items-center justify-center gap-10 p-10 md:w-1/2 md:p-0 lg:w-1/2 lg:p-0 xl:w-4/5 xl:p-0"
+      class="flex w-4/5 flex-col items-center justify-center gap-10 p-10 md:w-1/2 md:p-0 lg:w-1/2 lg:p-0 xl:w-4/5 xl:p-0"
     >
       <div>
-        <h1 class="text-4xl font-bold text-neutral-600 uppercase">Nosotros</h1>
+        <h1 class="text-4xl font-bold text-neutral-600 uppercase">{trans('home').about.title}</h1>
       </div>
       <div>
         <h3 class="py-4 text-3xl text-neutral-600 uppercase">
-          Somos un equipo de apasionados por el cacao.
+          {trans('home').about.subtitle}
         </h3>
       </div>
       <p class="text-lg">
-        Nuestra misión es buscar los más deseados cacaos que contribuyan a la elaboración de los
-        mejores chocolates del mundo. Trabajamos en los lugares donde crecen los mejores cacaos,
-        hogar de los grandiosos cacaos criollos, llegamos a orígenes inaccesibles buscando una
-        completa trazabilidad y aplicando protocolos post cosecha logrando así aromas y sabores
-        extraordinarios para que los grandes chocolateros puedan elaborar los mejores chocolates del
-        mundo.
+        {trans('home').about.description}
       </p>
       <div class="flex h-150 w-full items-center justify-center gap-5">
         <iframe
