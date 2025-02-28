@@ -3,13 +3,7 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import type { ChocolateBar } from '@/data/chocolateBars';
-import {
-  Star,
-  Award,
-  Trophy,
-  Nut,
-  CornerRightUp,
-} from 'lucide-react';
+import { Star, Award, Trophy, Nut, CornerRightUp } from 'lucide-react';
 import type { SortOption, FlavorOption } from '@/consts';
 import { Sort } from '@/consts';
 
@@ -29,10 +23,12 @@ export function ChocolateCard({
   chocolate,
   sortBy,
   flavors,
+  trans
 }: {
   chocolate: ChocolateBar;
   sortBy: SortOption;
   flavors: FlavorOption[] | null;
+  trans: Record<string, any>;
 }) {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -202,12 +198,12 @@ export function ChocolateCard({
                 <h3 className="mb-1 text-4xl font-semibold text-white">{chocolate.name}</h3>
               </div>
 
-              <p className="xl:text-lg lg:text-lg md:text-sm hidden pt-2 text-white md:hidden lg:block xl:block">
+              <p className="hidden pt-2 text-white md:hidden md:text-sm lg:block lg:text-lg xl:block xl:text-lg">
                 {chocolate.country}
               </p>
 
               <div className="flex items-center justify-center gap-x-0 gap-y-5 text-sm md:mt-4 md:gap-3 lg:gap-4 xl:gap-4">
-                <div className="xl:w-20 lg:w-20 md:w-20 flex flex-col xl:gap-5 lg:gap-5 md:gap-5 gap-2">
+                <div className="flex flex-col gap-2 md:w-20 md:gap-5 lg:w-20 lg:gap-5 xl:w-20 xl:gap-5">
                   <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
                     <Star className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
                     <span>{chocolate.rating.toFixed(1)}</span>
@@ -217,7 +213,7 @@ export function ChocolateCard({
                       src="/icons/fermentado.png"
                       alt="fermentado"
                       loading="eager"
-                      className="xl:size-6 lg:size-6 md:size-6 size-4 brightness-100 contrast-100 invert filter transition-all hover:opacity-80"
+                      className="size-4 brightness-100 contrast-100 invert filter transition-all hover:opacity-80 md:size-6 lg:size-6 xl:size-6"
                     />
                     <span>{chocolate.fermented.toFixed(1)}%</span>
                   </div>
@@ -227,39 +223,36 @@ export function ChocolateCard({
                     <span>{chocolate.certified}</span>
                   </div>
                   <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
-                      <Trophy className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-                    
+                    <Trophy className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+
                     <span>{chocolate.awarded}</span>
                   </div>
                   <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
-                      <Nut className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-                
+                    <Nut className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+
                     <span>{chocolate.creole}%</span>
                   </div>
                 </div>
               </div>
 
-              <div className="items-center justify-end xl:pt-9 lg:pt-8 md:pt-0 pt-0 xl:mb-2 lg:mb-2 md:mb-2 mb-2 hidden md:hidden lg:flex xl:flex">
+              <div className="mb-2 hidden items-center justify-end pt-0 md:mb-2 md:hidden md:pt-0 lg:mb-2 lg:flex lg:pt-8 xl:mb-2 xl:flex xl:pt-9">
                 <a
                   href={chocolate.url}
                   target="_blank"
-                  className="mt-12
-                   flex w-27 items-center justify-between rounded-lg bg-gray-300 py-2 px-3"
+                  className="mt-12 flex w-27 items-center justify-between rounded-lg bg-gray-300 px-3 py-2"
                 >
-                  <p className="md:text-md text-xs text-black lg:text-base xl:text-base">
-                    Ver mas
-                  </p>
+                  <p className="md:text-md text-xs text-black lg:text-base xl:text-base">{trans.link}</p>
                   <CornerRightUp className="size-4 text-black" />
                 </a>
               </div>
 
               <a
-                  href={chocolate.url}
-                  target="_blank"
-                  className="absolute bottom-0 right-0 w-auto flex items-center justify-start gap-2 rounded-lg bg-gray-300 p-2 xl:hidden lg:hidden md:block block"
-                >
-                  <CornerRightUp className="size-2 text-black" />
-                </a>
+                href={chocolate.url}
+                target="_blank"
+                className="absolute right-0 bottom-0 block flex w-auto items-center justify-start gap-2 rounded-lg bg-gray-300 p-2 md:block lg:hidden xl:hidden"
+              >
+                <CornerRightUp className="size-2 text-black" />
+              </a>
             </div>
           </motion.div>
         </CardContent>
