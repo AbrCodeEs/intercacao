@@ -105,13 +105,15 @@ const posts = [
         alt="Intercacao banner principal"
         class="h-full w-full object-cover object-center"
       />
-      <Image
-        loading="eager"
-        inferSize={true}
-        class="absolute top-10 left-25 w-15 md:top-20 md:left-20 md:w-30 lg:top-20 lg:left-20 lg:w-30 xl:top-20 xl:left-20 xl:w-30"
-        src={logoInteracao}
-        alt="Intercacao banner principal"
-      />
+      <div class="absolute inset-x-0 top-0 flex w-full items-center xl:justify-between lg:justify-between md:justify-between justify-center p-10">
+        <Image
+          loading="eager"
+          inferSize={true}
+          class="xl:w-30 lg:w-30 md:w-30 w-20"
+          src={logoInteracao}
+          alt="Intercacao banner principal"
+        />
+      </div>
     </div>
     <div
       class="flex w-full items-center justify-center p-10"
@@ -157,7 +159,7 @@ const posts = [
 
     <div
       id="section-prosperi"
-      class="bg-start flex h-auto min-h-screen w-full items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
+      class="bg-start flex flex-col h-auto min-h-screen w-full items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
       style={`background-image: url(${lienzoCacao.src});`}
     >
       <div
@@ -176,9 +178,11 @@ const posts = [
             </p>
           </div>
 
-          <TabsTransitionPanel client:only="react" />
+          
         </div>
       </div>
+
+      <TabsTransitionPanel client:only="react" />
     </div>
   </div>
 

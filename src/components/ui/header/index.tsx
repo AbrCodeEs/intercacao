@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { AnimatePresence } from 'framer-motion';
 
@@ -14,6 +14,26 @@ function Header({
 }) {
   const [isActive, setIsActive] = useState(false);
 
+  const [currentLang, setCurrentLang] = useState('es');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const pathSegments = window.location.pathname.split('/');
+      setCurrentLang(pathSegments[1] || 'es');
+    }
+  }, []);
+
+  const changeLanguage = (lang: string) => {
+    if (typeof window !== 'undefined') {
+      const pathSegments = window.location.pathname.split('/');
+      pathSegments[1] = lang;
+      const newPath = pathSegments.join('/');
+
+      // Forzar recarga completa
+      window.location.href = newPath;
+    }
+  };
+
   return (
     <>
       <div
@@ -23,6 +43,22 @@ function Header({
         className="button"
       >
         <div className={`burger ${isActive ? 'burgerActive' : ''}`}></div>
+      </div>
+      <div className='fixed top-0 right-0 z-50'>
+        <ul className="flex w-full justify-end gap-3 px-10 py-5">
+          <li
+            onClick={() => changeLanguage('es')}
+            className={`cursor-pointer p-3 rounded-lg ${currentLang === 'es' ? 'font-bold bg-black text-white' : 'bg-gray-400 opacity-50'}`}
+          >
+            es
+          </li>
+          <li
+            onClick={() => changeLanguage('en')}
+            className={`cursor-pointer p-3 rounded-lg ${currentLang === 'en' ? 'font-bold bg-black text-white' : 'bg-gray-400 opacity-50'}`}
+          >
+            en
+          </li>
+        </ul>
       </div>
       <AnimatePresence mode="wait">
         {isActive && (

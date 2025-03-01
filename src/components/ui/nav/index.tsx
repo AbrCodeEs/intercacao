@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { menuSlide } from './anim';
 import Link from '@/components/ui/link';
@@ -12,25 +12,6 @@ interface Props {
 
 export default function Index({ children, setIsActive, items }: Props) {
   const [selectedIndicator, setSelectedIndicator] = useState('');
-  const [currentLang, setCurrentLang] = useState('es');
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const pathSegments = window.location.pathname.split('/');
-      setCurrentLang(pathSegments[1] || 'es');
-    }
-  }, []);
-
-  const changeLanguage = (lang: string) => {
-    if (typeof window !== 'undefined') {
-      const pathSegments = window.location.pathname.split('/');
-      pathSegments[1] = lang;
-      const newPath = pathSegments.join('/');
-
-      // Forzar recarga completa
-      window.location.href = newPath;
-    }
-  };
 
   return (
     <>
@@ -54,25 +35,10 @@ export default function Index({ children, setIsActive, items }: Props) {
               />
             ))}
           </ul>
-
-          <ul className="flex w-full justify-end gap-5 p-10">
-            <li
-              onClick={() => changeLanguage('es')}
-              className={`cursor-pointer ${currentLang === 'es' ? 'font-bold' : ''}`}
-            >
-              es
-            </li>
-            <li
-              onClick={() => changeLanguage('en')}
-              className={`cursor-pointer ${currentLang === 'en' ? 'font-bold' : ''}`}
-            >
-              en
-            </li>
-          </ul>
         </nav>
         <Curve />
       </motion.div>
-      <div className="fixed top-0 left-0 size-full" onClick={() => setIsActive(false)} />
+      <div className="fixed top-0 left-0 size-full" onClick={() => setIsActive(false)}/>
     </>
   );
 }

@@ -43,7 +43,7 @@ export default function Index({
 
   return (
     <motion.li
-      className="link border-b border-gray-500/50 px-7 py-2 text-lg uppercase hover:bg-[#30261f]"
+      className="link border-b border-gray-500/50 text-lg uppercase hover:bg-[#30261f]"
       onMouseEnter={() => {
         setSelectedIndicator(href); /* setIsActive(true)  */
       }}
@@ -62,7 +62,9 @@ export default function Index({
         animate={isActive ? 'open' : 'closed'}
         className="indicato"
       ></motion.div>
-      <a href={href}>{title}</a>
+      <a href={href} className="block px-7 py-2">
+        {title}
+      </a>
     </motion.li>
   );
 }
