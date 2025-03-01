@@ -380,7 +380,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
                           className={sortBy === option.value ? "bg-gray-500 text-black shadow-none" : "bg-none text-black shadow-none"}
                         >
                           <div className="flex gap-5 items-center p-2">
-                            <p> {option.icon}</p>
+                            <p>{option.icon}</p>
                             <p>{option.label.charAt(0).toUpperCase() + option.label.slice(1)}</p>
                           </div>
                         </ListItem>

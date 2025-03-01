@@ -249,7 +249,7 @@ section.active {
   .body {
     box-sizing: border-box;
     height: 100%;
-    width: 320px;
+    /* width: 320px; */
     display: flex;
     flex-direction: column;
 

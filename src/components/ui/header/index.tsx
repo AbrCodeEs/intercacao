@@ -45,16 +45,16 @@ function Header({
         <div className={`burger ${isActive ? 'burgerActive' : ''}`}></div>
       </div>
       <div className='fixed top-0 right-0 z-50'>
-        <ul className="flex w-full justify-end gap-3 px-10 py-5">
+        <ul className="flex w-full justify-end gap-1 px-10 py-5">
           <li
             onClick={() => changeLanguage('es')}
-            className={`cursor-pointer p-3 rounded-lg ${currentLang === 'es' ? 'font-bold bg-black text-white' : 'bg-gray-400 opacity-50'}`}
+            className={`cursor-pointer py-2 px-2.5 rounded-lg ${currentLang === 'es' ? 'font-bold bg-black text-white' : 'bg-gray-400 opacity-50'}`}
           >
             es
           </li>
           <li
             onClick={() => changeLanguage('en')}
-            className={`cursor-pointer p-3 rounded-lg ${currentLang === 'en' ? 'font-bold bg-black text-white' : 'bg-gray-400 opacity-50'}`}
+            className={`cursor-pointer py-2 px-2.5 rounded-lg ${currentLang === 'en' ? 'font-bold bg-black text-white' : 'bg-gray-400 opacity-50'}`}
           >
             en
           </li>
