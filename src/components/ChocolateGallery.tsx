@@ -41,7 +41,7 @@ const TypesSortOption = [
       <img
         src="/icons/fermentado.png"
         alt="fermentado"
-        className="size-3 fill-current text-black md:size-5 lg:size-5 xl:size-5"
+        className="size-4 fill-current text-black md:size-5 lg:size-5 xl:size-5"
       />
     ),
   },
@@ -84,7 +84,7 @@ const FlavorsSortOption = [
     className: 'bg-fruity-sweet   text-white hover:text-white',
     icon: (
       <img
-        className="h-4 w-4"
+        className="size-4"
         loading="eager"
         src="/icons/afrutado_dulces-icon.svg"
         alt="afrutado dulces"
@@ -92,7 +92,7 @@ const FlavorsSortOption = [
     ),
     iconWhite: (
       <img
-        className="h-4 w-4"
+        className="size-4"
         loading="eager"
         src="/icons/afrutado_dulces-white-icon.svg"
         alt="afrutado dulces"
@@ -105,7 +105,7 @@ const FlavorsSortOption = [
     className: 'bg-fruity-citrus',
     icon: (
       <img
-        className="h-4 w-4"
+         className="size-4"
         loading="eager"
         src="/icons/afrutado_citricos-icon.svg"
         alt="afrutado citricos"
@@ -113,7 +113,7 @@ const FlavorsSortOption = [
     ),
     iconWhite: (
       <img
-        className="h-4 w-4"
+       className="size-4"
         loading="eager"
         src="/icons/afrutado_citricos-white-icon.svg"
         alt="afrutado citricos"
@@ -125,11 +125,16 @@ const FlavorsSortOption = [
     value: 'Flower',
     className: 'bg-flower text-white hover:text-white',
     icon: (
-      <img className="h-4 w-4" loading="eager" src="/icons/aflorado-icon.svg" alt="aflorados" />
+      <img
+        className="size-4"
+        loading="eager"
+        src="/icons/aflorado-icon.svg"
+        alt="aflorados"
+      />
     ),
     iconWhite: (
       <img
-        className="h-4 w-4"
+        className="size-4"
         loading="eager"
         src="/icons/aflorado-white-icon.svg"
         alt="aflorados"
@@ -141,11 +146,16 @@ const FlavorsSortOption = [
     value: 'Creole',
     className: 'bg-creole',
     icon: (
-      <img className="h-4 w-4" loading="eager" src="/icons/acriollado-icon.svg" alt="acriollado" />
+      <img
+        className="size-4"
+        loading="eager"
+        src="/icons/acriollado-icon.svg"
+        alt="acriollado"
+      />
     ),
     iconWhite: (
       <img
-        className="h-4 w-4"
+        className="size-4"
         loading="eager"
         src="/icons/acriollado-white-icon.svg"
         alt="acriollado"
@@ -156,18 +166,20 @@ const FlavorsSortOption = [
     label: 'Cacao',
     value: 'Cocoa',
     className: 'bg-cocoa text-white hover:text-white',
-    icon: <img className="h-4 w-4" loading="eager" src="/icons/cacao-icon.svg" alt="cacao" />,
+    icon: (
+      <img className="size-4" loading="eager" src="/icons/cacao-icon.svg" alt="cacao" />
+    ),
     iconWhite: (
-      <img className="h-4 w-4" loading="eager" src="/icons/cacao-white-icon.svg" alt="cacao" />
+      <img className="size-4" loading="eager" src="/icons/cacao-white-icon.svg" alt="cacao" />
     ),
   },
   {
     label: 'Boscoso',
     value: 'Wood',
     className: 'bg-wood text-white hover:text-white',
-    icon: <img className="h-4 w-4" loading="eager" src="/icons/boscoso-icon.svg" alt="boscoso" />,
+    icon: <img className="size-4" loading="eager" src="/icons/boscoso-icon.svg" alt="boscoso" />,
     iconWhite: (
-      <img className="h-4 w-4" loading="eager" src="/icons/boscoso-white-icon.svg" alt="boscoso" />
+      <img className="size-4" loading="eager" src="/icons/boscoso-white-icon.svg" alt="boscoso" />
     ),
   },
   {
@@ -176,14 +188,14 @@ const FlavorsSortOption = [
     className: 'bg-spices',
     icon: (
       <img
-        className="h-4 w-4 text-white"
+        className="size-4 text-white"
         loading="eager"
         src="/icons/especias-icon.svg"
         alt="especias"
       />
     ),
     iconWhite: (
-      <img className="h-4 w-4" loading="eager" src="/icons/especias-icon.svg" alt="especias" />
+      <img className="size-4" loading="eager" src="/icons/especias-icon.svg" alt="especias" />
     ),
   },
 ];
@@ -196,7 +208,7 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWit
           <a
             ref={ref}
             className={cn(
-              'hover:bg-accent focus:bg-accent block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:text-black focus:text-black',
+              ' block space-y-1 p-3 leading-none no-underline transition-colors outline-none select-none hover:text-black focus:text-black',
               className,
             )}
             {...props}
@@ -360,14 +372,14 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>{trans.order_by}</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid h-auto w-75 gap-3 p-4 lg:grid-cols-1">
+                    <ul className="grid h-auto w-75 gap-3 p-0 lg:grid-cols-1">
                       {(TypesSortOption as FilterOptionSortItems[]).map((option) => (
                         <ListItem
                           key={option.value}
                           onClick={() => handleSortSelect(option.value as SortOption)}
-                          className="bg-none text-black shadow-none"
+                          className={sortBy === option.value ? "bg-gray-500 text-black shadow-none" : "bg-none text-black shadow-none"}
                         >
-                          <div className="flex gap-5">
+                          <div className="flex gap-5 items-center p-2">
                             <p> {option.icon}</p>
                             <p>{option.label.charAt(0).toUpperCase() + option.label.slice(1)}</p>
                           </div>
@@ -379,7 +391,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>{trans.filter_flavor}</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid h-auto w-75 gap-3 p-4 lg:grid-cols-1">
+                    <ul className="grid h-auto w-75 gap-3 p-0 lg:grid-cols-1">
                       {(FlavorsSortOption as FilterOptionFlavorItems[]).map((flavor) => (
                         <ListItem
                           key={flavor.value}
@@ -390,8 +402,8 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
                               : `text-black`
                           }
                         >
-                          <div className="flex gap-5">
-                            <p>{flavor.icon}</p>
+                          <div className="flex gap-5 items-center">
+                            <p className={`${flavor.className} text-black p-2 rounded-lg`}>{flavor.iconWhite}</p>
                             <p>{flavor.label.charAt(0).toUpperCase() + flavor.label.slice(1)}</p>
                           </div>
                         </ListItem>
