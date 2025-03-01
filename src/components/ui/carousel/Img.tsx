@@ -25,8 +25,8 @@ export function CarouselImages({ images, ...props }: { images: { src: string; al
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="disabled:!opacity-1" />
-      <CarouselNext className="disabled:!opacity-1" />
+      <CarouselPrevious className="disabled:!opacity-50" />
+      <CarouselNext className="disabled:!opacity-50" />
     </Carousel>
   );
 }

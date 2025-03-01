@@ -44,11 +44,14 @@ const navItems = [
     const animationConfig = {
       right: 'animate-fade-right',
       left: 'animate-fade-left',
+      top: 'animate-fade-up',
+      bottom: 'animate-fade-down',
     };
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          console.log('aaa');
           if (entry.isIntersecting) {
             const target = entry.target;
 

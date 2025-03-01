@@ -20,7 +20,7 @@ import carouselMusica5 from '@/images/home/carousels/musica/carousel-5.jpeg';
 import carouselMusica6 from '@/images/home/carousels/musica/carousel-6.jpeg';
 import carouselMusica7 from '@/images/home/carousels/musica/carousel-7.jpeg';
 
-import carouselDanza1 from '@/images/home/carousels/danza/carousel-1.jpeg';
+import carouselDanza1 from '@/images/home/carousels/danza/carousel-1.png';
 import carouselDanza2 from '@/images/home/carousels/danza/carousel-2.jpeg';
 import carouselDanza3 from '@/images/home/carousels/danza/carousel-3.jpeg';
 import carouselDanza4 from '@/images/home/carousels/danza/carousel-4.jpeg';
@@ -30,6 +30,7 @@ import carouselDanza7 from '@/images/home/carousels/danza/carousel-7.jpeg';
 import carouselDanza8 from '@/images/home/carousels/danza/carousel-8.jpeg';
 import carouselDanza9 from '@/images/home/carousels/danza/carousel-9.jpeg';
 import carouselDanza10 from '@/images/home/carousels/danza/carousel-10.jpeg';
+import carouselDanza11 from '@/images/home/carousels/danza/carousel-11.jpeg';
 
 import carouselRegresoAlAgua1 from '@/images/home/carousels/regreso-al-agua/carousel-1.jpeg';
 import carouselRegresoAlAgua2 from '@/images/home/carousels/regreso-al-agua/carousel-2.jpeg';
@@ -65,6 +66,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from '@/components/ui/carousel';
+
 const ITEMS = [
   {
     title: 'Regreso al Agua',
@@ -74,7 +76,7 @@ const ITEMS = [
       src: logoRegresoAlAgua.src,
       alt: 'Regreso al Agua',
     },
-    classNameImg: 'xl:pt-20 lg:pt-10 md:pt-10 pt-5',
+    classNameImg: 'xl:pt-20 lg:pt-10 md:pt-10 pt-5 animate-trigger-top',
     images: [
       {
         src: carouselRegresoAlAgua1.src,
@@ -126,7 +128,7 @@ const ITEMS = [
       src: logoWilfriedMerle.src,
       alt: 'Regreso al Agua',
     },
-    classNameImg: 'xl:pb-20 lg:pb-10 md:pb-10 pb-5',
+    classNameImg: 'xl:pb-20 lg:pb-10 md:pb-10 pb-5 animate-trigger-top',
     images: [{
       src: carouselWilfriedMerle1.src,
       alt: 'Regreso al Agua',
@@ -189,7 +191,7 @@ const ITEMS = [
       src: logoRegresoAlAgro.src,
       alt: 'Regreso al Agua',
     },
-    classNameImg: 'xl:pt-20 lg:pt-10 md:pt-10 pt-5',
+    classNameImg: 'xl:pt-20 lg:pt-10 md:pt-10 pt-5 animate-trigger-top',
     images: [],
   },
   {
@@ -277,6 +279,10 @@ const ITEMS = [
         alt: 'Danza',
       },
       {
+        src: carouselDanza11.src,
+        alt: 'Danza',
+      },
+      {
         src: carouselMusica1.src,
         alt: 'Regreso al Agua',
       },
@@ -348,7 +354,7 @@ export function TabsTransitionPanel() {
           >
             {ITEMS.map((item, index) => (
               <>
-                <Carousel className="overflow-hidden">
+                <Carousel key={`index-${index}`} className="overflow-hidden xl:rounded-lg lg:rounded-lg md:rounded-lg">
                   <CarouselContent
                     classNameWrapper="w-full xl:overflow-hidden lg:overflow-hidden md:overflow-hidden overflow-visible"
                     className="-ml-0 w-full"

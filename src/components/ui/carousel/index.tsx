@@ -195,11 +195,11 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProp
         variant={variant}
         size={size}
         className={cn(
-          'absolute h-8 w-8 rounded-full disabled:opacity-0',
+          'absolute h-8 w-8 rounded-full disabled:opacity-0.5',
           orientation === 'horizontal'
             ? 'top-1/2 -left-8 -translate-y-1/2 md:-left-12 lg:-left-12 xl:-left-12'
             : 'top-1/2 -translate-y-1/2',
-          !isHovered && 'opacity-0', // Control de visibilidad
+          !isHovered && 'opacity-50', // Control de visibilidad
           className,
         )}
         disabled={!canScrollPrev}
@@ -224,11 +224,11 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<ty
         variant={variant}
         size={size}
         className={cn(
-          'absolute h-8 w-8 rounded-full disabled:opacity-0',
+          'absolute h-8 w-8 rounded-full disabled:opacity-0.5',
           orientation === 'horizontal'
             ? 'top-1/2 -right-8 -translate-y-1/2 md:-right-12 lg:-right-12 xl:-right-12'
             : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
-          !isHovered && 'opacity-0', // Control de visibilidad
+          !isHovered && 'opacity-50', // Control de visibilidad
           className,
         )}
         disabled={!canScrollNext}

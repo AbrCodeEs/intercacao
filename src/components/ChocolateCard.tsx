@@ -97,7 +97,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.fruity_sweet && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 size-5"
+                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
                             loading="eager"
                             src="/icons/afrutado_dulces-white-icon.svg"
                             alt="afrutado dulces"
@@ -110,7 +110,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.fruity_citrus && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 size-5"
+                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
                             loading="eager"
                             src="/icons/afrutado_citricos-white-icon.svg"
                             alt="afrutado citricos"
@@ -123,7 +123,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.flower && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 size-5"
+                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
                             loading="eager"
                             src="/icons/aflorado-white-icon.svg"
                             alt="aflorados"
@@ -136,7 +136,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.creole && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 size-5"
+                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
                             loading="eager"
                             src="/icons/acriollado-white-icon.svg"
                             alt="acriollado"
@@ -149,7 +149,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.cocoa && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 size-5"
+                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
                             loading="eager"
                             src="/icons/cacao-white-icon.svg"
                             alt="cacao"
@@ -161,7 +161,7 @@ export function ChocolateCard({
                     {flavors && flavors.toLowerCase().replace(' ', '_') === IconTraslation.wood && (
                       <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                         <img
-                          className="mr-1 size-5"
+                          className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
                           loading="eager"
                           src="/icons/boscoso-white-icon.svg"
                           alt="boscoso"
@@ -174,7 +174,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.spices && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 size-5"
+                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
                             loading="eager"
                             src="/icons/especias-white-icon.svg"
                             alt="especias"
