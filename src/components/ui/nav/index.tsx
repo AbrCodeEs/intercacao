@@ -22,9 +22,9 @@ export default function Index({ children, setIsActive, items }: Props) {
         exit="exit"
         className="menu border-r border-gray-500/50 shadow-lg"
       >
-        <nav className="body justify-between">
+        <nav className="body" >
           <div className="flex w-full items-center justify-center pt-10">{children}</div>
-          <ul className="nav">
+          <ul className="nav pt-50">
             {items.map((data, index) => (
               <Link
                 key={index}
