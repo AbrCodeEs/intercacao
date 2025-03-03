@@ -20,7 +20,7 @@ export default function Index() {
   };
 
   return (
-    <svg className="svgCurve">
+    <svg className="svgCurve z-40">
       <motion.path variants={curve} initial="initial" animate="enter" exit="exit"></motion.path>
     </svg>
   );

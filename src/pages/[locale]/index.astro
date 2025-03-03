@@ -105,13 +105,17 @@ export async function getStaticPaths() {
         alt={trans('home').banner.alt}
         class="h-full w-full object-cover object-center"
       />
-      <Image
-        loading="eager"
-        inferSize={true}
-        class="absolute top-10 left-25 w-15 md:top-20 md:left-20 md:w-30 lg:top-20 lg:left-20 lg:w-30 xl:top-20 xl:left-20 xl:w-30"
-        src={trans('home').logo.src}
-        alt={trans('home').logo.alt}
-      />
+      <div
+        class="absolute inset-x-0 top-0 flex w-full items-center justify-center p-10 md:justify-between lg:justify-between xl:justify-between"
+      >
+        <Image
+          loading="eager"
+          inferSize={true}
+          class="w-20 md:w-30 lg:w-30 xl:w-30"
+          src={trans('home').logo.src}
+          alt={trans('home').logo.alt}
+        />
+      </div>
     </div>
 
     <div
@@ -158,16 +162,30 @@ export async function getStaticPaths() {
 
     <div
       id="section-prosperi"
-      class="bg-start flex h-auto min-h-screen w-full items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
+      class="bg-start flex h-auto min-h-screen w-full flex-col items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
       style={`background-image: url(${lienzoCacao.src});`}
     >
       <div
-        class="flex h-full w-4/5 flex-col gap-10 p-10 md:w-1/2 md:pt-10 lg:w-1/2 lg:pt-10 xl:w-4/5 xl:pt-20"
+        class="flex h-full w-full flex-col gap-10 p-10 md:w-4/5 md:pt-10 lg:w-2/3 lg:pt-10 xl:w-4/5 xl:pt-20"
       >
         <div class="h-full">
-          <TabsTransitionPanel client:only="react" />
+          <div class="py-2">
+            <h1 class="py-2 text-4xl font-bold text-neutral-600 uppercase">
+              Fundación Quirico Prosperi
+            </h1>
+            <p class="text-lg">
+              La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el
+              compromiso de difundir los valores historicos, culturales y agricolas de venezuela a
+              traves de su programa educacional "Regreso al Agro", probando que la siembra de cacao
+              es una profesion rentable que genera cambios sociales. El objetivo principal es el de
+              colaborar con la comunidad, enriqueciendo y promoviendo las buenas practicas agricolas
+              para las generaciones futuras de Chuao.',
+            </p>
+          </div>
         </div>
       </div>
+
+      <TabsTransitionPanel client:only="react" />
     </div>
   </div>
 
@@ -192,7 +210,7 @@ export async function getStaticPaths() {
       <p class="text-lg">
         {trans('home').about.description}
       </p>
-      <div class="flex h-150 w-full items-center justify-center gap-5">
+      <div class="flex xl:h-150 lg:h-130 md:h-100 h-70 w-full items-center justify-center gap-5">
         <iframe
           loading="lazy"
           allowfullscreen
