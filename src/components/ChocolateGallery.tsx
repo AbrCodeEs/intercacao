@@ -203,7 +203,7 @@ const FlavorsSortOption = [
 const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
   ({ className, children, ...props }, ref) => {
     return (
-      <li>
+      <li className='border-b border-gray-400/50'>
         <NavigationMenuLink asChild>
           <a
             ref={ref}
@@ -365,14 +365,14 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
             ))}
           </div>
         </div> */}
-        <div className="block flex flex-col justify-center gap-10 p-3 md:hidden lg:hidden xl:hidden">
+        <div className="flex flex-col justify-center gap-10 p-3 md:hidden lg:hidden xl:hidden">
           <div className="flex flex-wrap items-center justify-center gap-2">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>{trans.order_by}</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid h-auto w-75 gap-3 p-0 lg:grid-cols-1">
+                    <ul className="grid h-auto w-65 p-0 lg:grid-cols-1">
                       {(TypesSortOption as FilterOptionSortItems[]).map((option) => (
                         <ListItem
                           key={option.value}
@@ -391,7 +391,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>{trans.filter_flavor}</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid h-auto w-75 gap-3 p-0 lg:grid-cols-1">
+                    <ul className="grid h-auto w-65 p-0 lg:grid-cols-1">
                       {(FlavorsSortOption as FilterOptionFlavorItems[]).map((flavor) => (
                         <ListItem
                           key={flavor.value}
