@@ -67,8 +67,7 @@ const template = defineCollection({
             src: z.string(), //z.union([z.string(), z.custom<ImageMetadata>()]),
             alt: z.string(),
           })
-          .optional()
-          .array(),
+          .optional(),
         assessment: z.object({
           title: z.string(),
           classification: z.object({

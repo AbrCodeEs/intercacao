@@ -46,18 +46,13 @@ const { characteristics } = Astro.props;
       <div
         class="group animate-trigger-left relative w-full flex-none overflow-hidden rounded-lg md:w-md lg:w-md xl:w-md"
       >
-        <CarouselImages
-          images={characteristics?.flavors_images}
-          client:only="react"
-          className="w-full"
-        />
-        <!-- <Image
+        <Image
             inferSize={true}
             loading="eager"
             class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
-            src={flavor.src}
-            alt={flavor.alt}
-          /> -->
+            src={characteristics?.flavors_image?.src}
+            alt={characteristics?.flavors_image?.alt}
+          />
       </div>
     </div>
 

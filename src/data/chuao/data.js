@@ -53,7 +53,7 @@ export default (Astro) => {
           percentage: '3.5',
           progress: 70,
           icon: {
-            src: '/icons/afrutado_dulces-icon.svg',
+            src: '/icons/afrutado_dulces-white-icon.svg',
             alt: 'Afrutado-dulces-icon',
           },
           className: 'border-l-12 border-l-red-500',
@@ -65,7 +65,7 @@ export default (Astro) => {
           percentage: '5.0',
           progress: 100,
           icon: {
-            src: '/icons/afrutado_citricos-icon.svg',
+            src: '/icons/afrutado_citricos-white-icon.svg',
             alt: 'Afrutado-citricos-icon',
           },
           className: 'border-l-12 border-l-amber-500',
@@ -77,7 +77,7 @@ export default (Astro) => {
           percentage: '2.0',
           progress: 36,
           icon: {
-            src: '/icons/aflorado-icon.svg',
+            src: '/icons/aflorado-white-icon.svg',
             alt: 'Aflorado-icon',
           },
           className: 'border-l-12 border-l-pink-500',
@@ -89,7 +89,7 @@ export default (Astro) => {
           percentage: '3.5',
           progress: 70,
           icon: {
-            src: '/icons/acriollado-icon.svg',
+            src: '/icons/acriollado-white-icon.svg',
             alt: 'Acriollado-icon',
           },
           className: 'border-l-12 border-l-yellow-500/50',
@@ -101,7 +101,7 @@ export default (Astro) => {
           percentage: '3.0',
           progress: 57,
           icon: {
-            src: '/icons/cacao-icon.svg',
+            src: '/icons/cacao-white-icon.svg',
             alt: 'Cacao-icon',
           },
           className: 'border-l-12 border-l-yellow-900',
@@ -113,7 +113,7 @@ export default (Astro) => {
           percentage: '0.0',
           progress: 0,
           icon: {
-            src: '/icons/boscoso-icon.svg',
+            src: '/icons/boscoso-white-icon.svg',
             alt: 'Boscoso-icon',
           },
           className: 'border-l-12 border-l-lime-300',
@@ -125,7 +125,7 @@ export default (Astro) => {
           percentage: '0.0',
           progress: 0,
           icon: {
-            src: '/icons/especias-icon.svg',
+            src: '/icons/especias-white-icon.svg',
             alt: 'Especias-icon',
           },
           className: 'border-l-12 border-l-yellow-300',
@@ -133,7 +133,7 @@ export default (Astro) => {
           color: '#fde047',
         },
       ],
-      flavors_images: [{ src: saboresPositivos.src, alt: 'Sabores positivos' }],
+      flavors_image: { src: saboresPositivos, alt: 'Sabores positivos' },
       assessment: {
         title: trans('chuao').characteristics.assessment.title,
         classification: {
