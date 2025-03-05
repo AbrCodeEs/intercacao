@@ -93,6 +93,7 @@ export function ChocolateCard({
                         <span>{chocolate.creole.toFixed(1)}%</span>
                       </div>
                     )}
+                    
                     {flavors &&
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.fruity_sweet && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
@@ -102,7 +103,7 @@ export function ChocolateCard({
                             src="/icons/afrutado_dulces-white-icon.svg"
                             alt="afrutado dulces"
                           />
-                          <span>{chocolate.ingredients.fruity_sweet.toFixed(1)}%</span>
+                          <span>{chocolate.ingredients.fruity_sweet.toFixed(1)}</span>
                         </div>
                       )}
 
@@ -115,7 +116,7 @@ export function ChocolateCard({
                             src="/icons/afrutado_citricos-white-icon.svg"
                             alt="afrutado citricos"
                           />
-                          <span>{chocolate.ingredients.fruity_citrus.toFixed(1)}%</span>
+                          <span>{chocolate.ingredients.fruity_citrus.toFixed(1)}</span>
                         </div>
                       )}
 
@@ -128,7 +129,7 @@ export function ChocolateCard({
                             src="/icons/aflorado-white-icon.svg"
                             alt="aflorados"
                           />
-                          <span>{chocolate.ingredients.flower.toFixed(1)}%</span>
+                          <span>{chocolate.ingredients.flower.toFixed(1)}</span>
                         </div>
                       )}
 
@@ -141,7 +142,7 @@ export function ChocolateCard({
                             src="/icons/acriollado-white-icon.svg"
                             alt="acriollado"
                           />
-                          <span>{chocolate.ingredients.creole.toFixed(1)}%</span>
+                          <span>{chocolate.ingredients.creole.toFixed(1)}</span>
                         </div>
                       )}
 
@@ -154,7 +155,7 @@ export function ChocolateCard({
                             src="/icons/cacao-white-icon.svg"
                             alt="cacao"
                           />
-                          <span>{chocolate.ingredients.cocoa.toFixed(1)}%</span>
+                          <span>{chocolate.ingredients.cocoa.toFixed(1)}</span>
                         </div>
                       )}
 
@@ -166,7 +167,7 @@ export function ChocolateCard({
                           src="/icons/boscoso-white-icon.svg"
                           alt="boscoso"
                         />
-                        <span>{chocolate.ingredients.wood.toFixed(1)}%</span>
+                        <span>{chocolate.ingredients.wood.toFixed(1)}</span>
                       </div>
                     )}
 
