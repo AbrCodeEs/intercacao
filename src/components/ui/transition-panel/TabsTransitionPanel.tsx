@@ -373,7 +373,7 @@ const ITEMS = [
     }]
   },
   {
-    title: 'Electro Religioso',
+    title: 'Electron Religioso',
     content:
       'La Fundación Quirico Prosperi fortalece la fe y los valores en la comunidad a través de su programa de apoyo religioso. Contribuye a las iglesias Santa Rosa de Lima en Carúpano y la Iglesia Pedro y Pablo en El Rincón mediante donaciones, respaldo a los grupos y profesores de catequesis así como diversas iniciativas que unen y enriquecen la espiritualidad. ¡Fe, solidaridad y comunidad en acción!',
     img: {
@@ -441,7 +441,7 @@ const ITEMS = [
     ],
   },
   {
-    title: 'Electro Musica y Danza',
+    title: 'Electron Musica y Danza',
     content:
       'La Fundación Quirico Prosperi celebra la cultura, el arte y el talento de los jóvenes de El Rincón con su programa  electrón de danza y música. A través de la danza folclórica dirigida desde hace más de 15 años por Roger Urbano y la formación musical del Sistema Nacional de Orquestas, herencia del maestro Abreu, niños y jóvenes descubren su pasión, fortalecen sus raíces y brillan con su arte. ¡Tradición y música que transforman vidas!',
     img: {
@@ -530,7 +530,7 @@ const ITEMS = [
     ],
   },
   {
-    title: 'Electro Deporte',
+    title: 'Electron Deporte',
     content:
       'La Fundación Quirico Prosperi impulsa el talento deportivo en El Rincón a través de sus programas de baloncesto y fútbol, brindando a niños y jóvenes la oportunidad de entrenar, competir y crecer en un ambiente de disciplina y trabajo en equipo. ¡El deporte está transformando vidas y construyendo un futuro mejor para la comunidad!',
     img: {
