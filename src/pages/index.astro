@@ -120,11 +120,11 @@ const posts = [
       style={`background-image: url(${lienzo.src});`}
     >
       <Image
-        loading="lazy"
-        inferSize={true}
-        src={mundoDeSabores}
-        alt="Intercacao banner principal"
-        class="w-75 object-fill object-center"
+          loading="lazy"
+          inferSize={true}
+          src={mundoDeSabores}
+          alt="Intercacao banner principal"
+          class="w-75 object-fill object-center"
       />
     </div>
 
@@ -135,13 +135,15 @@ const posts = [
       class="flex size-auto items-center justify-center md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
       style={`background-image: url(${lienzo.src});`}
     >
-      <Image
-        loading="lazy"
-        inferSize={true}
-        src={mundoDeSaboresPanel}
-        alt="Intercacao banner principal"
-        class="object-fill object-center shadow-2xl"
-      />
+      <a href={`https://www.intercacao.com/${lang}/world-of-flavors/`}> 
+        <Image
+          loading="lazy"
+          inferSize={true}
+          src={mundoDeSaboresPanel}
+          alt="Intercacao banner principal"
+          class="object-fill object-center shadow-2xl"
+        />
+      </a>
     </div>
 
     <div id="section-gourmet" class="bg-primary h-auto w-full">

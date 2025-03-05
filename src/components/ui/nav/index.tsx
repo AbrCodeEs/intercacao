@@ -20,9 +20,9 @@ export default function Index({ children, setIsActive, items }: Props) {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="menu border-r border-gray-500/50 shadow-lg z-50"
+        className="menu border-r border-gray-500/50 shadow-lg"
       >
-        <nav className="body justify-start">
+        <nav className="body justify-start z-50">
           <div className="flex w-full items-center justify-center pt-10">{children}</div>
           <ul className="nav pt-20">
             {items.map((data, index) => (
@@ -36,7 +36,9 @@ export default function Index({ children, setIsActive, items }: Props) {
             ))}
           </ul>
         </nav>
-        <Curve />
+        <div onClick={() => setIsActive(false)}>
+          <Curve />
+        </div>
       </motion.div>
       <div className="fixed top-0 left-0 size-full z-40" onClick={() => setIsActive(false)}/>
     </>
