@@ -7,37 +7,41 @@ import BaseHead from '@/components/parts/BaseHead.astro';
 import Footer from '@/components/parts/Footer.astro';
 import logo from '@/images/chuao/logo-intercacao.png';
 
+import { getLangFromUrl } from '@/assets/lib/i18n/utils';
+
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, keywords } = Astro.props;
 
+const lang = getLangFromUrl(Astro.url);
+
 const navItems = [
   {
-    title: 'Inicio',
+    title: lang === "en" ? "Home" : 'Inicio',
     href: '#section-home',
   },
   {
-    title: 'Evaluación',
+    title: lang === "en" ? "Evaluation" : 'Evaluación',
     href: '#section-assessment',
   },
   {
-    title: 'Beneficio',
+    title: lang === "en" ? "Benefit" : 'Beneficio',
     href: '#section-benefit',
   },
   {
-    title: 'Trazabilidad',
+    title: lang === "en" ? "Traceability" : 'Trazabilidad',
     href: '#section-traceability',
   },
   {
-    title: 'Ubicación',
+    title: lang === "en" ? "Location" : 'Ubicación',
     href: '#section-location',
   },
   {
-    title: 'Historia',
+    title: lang === "en" ? "History" : 'Historia',
     href: '#section-history',
   },
   {
-    title: 'Responsabilidad Social',
+    title: lang === "en" ? "Social Responsibility" : 'Responsabilidad Social',
     href: '#section-responsive',
   },
 ];
