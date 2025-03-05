@@ -228,10 +228,19 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
   const [selectedFlavor, setSelectedFlavor] = useState<FlavorOption | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
 
-  const cocoaData = chocolateBars.map((cocoa) => ({
+  const cocoaData = chocolateBars.map((cocoa) => {
+    let url;
+
+    if (cocoa.url === '/chuao') {
+      url = `/${lang}${cocoa.url}`;
+    } else {
+      url = lang === 'en' ? `${cocoa.url}/${lang}` : `${cocoa.url}`;
+    }
+
+    return {
     ...cocoa,
-    url: lang === 'en' ? `${cocoa.url}/${lang}` : `${cocoa.url}`,
-  }));
+    url: url,
+  }});
 
 
   const filteredChocolates = cocoaData

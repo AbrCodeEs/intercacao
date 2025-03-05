@@ -133,10 +133,7 @@ export default (Astro) => {
           color: '#fde047',
         },
       ],
-      flavors_images: [
-        { src: saboresPositivos.src, alt: 'a' },
-        { src: saboresPositivos.src, alt: 'a' },
-      ],
+      flavors_image: { src: saboresPositivos, alt: 'a' },
       assessment: {
         title: trans('porcelana').characteristics.assessment.title,
         classification: {

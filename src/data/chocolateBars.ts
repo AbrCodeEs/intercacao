@@ -52,7 +52,7 @@ export const chocolateBars: ChocolateBar[] = [
       wood: 0,
       spices: 0,
     },
-    url: 'http://chuao.intercacao.com',
+    url: '/chuao',
   },
   {
     id: '2',

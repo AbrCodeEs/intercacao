@@ -97,6 +97,35 @@ import carouselReligion16 from '@/images/home/carousels/religion/16.jpg';
 import carouselReligion17 from '@/images/home/carousels/religion/17.jpg';
 import carouselReligion18 from '@/images/home/carousels/religion/18.jpg';
 
+import carouselAgro1 from '@/images/home/carousels/agro/01.jpg';
+import carouselAgro2 from '@/images/home/carousels/agro/02.jpg';
+import carouselAgro3 from '@/images/home/carousels/agro/03.jpg';
+import carouselAgro4 from '@/images/home/carousels/agro/04.jpg';
+import carouselAgro5 from '@/images/home/carousels/agro/05.jpg';
+import carouselAgro6 from '@/images/home/carousels/agro/06.jpg';
+import carouselAgro7 from '@/images/home/carousels/agro/07.jpg';
+import carouselAgro8 from '@/images/home/carousels/agro/08.jpg';
+import carouselAgro9 from '@/images/home/carousels/agro/09.jpg';
+import carouselAgro10 from '@/images/home/carousels/agro/10.jpg';
+
+import carrouselProperi1 from '@/images/home/carousels/prosperi/01.jpg';
+import carrouselProperi2 from '@/images/home/carousels/prosperi/02.jpg';
+import carrouselProperi3 from '@/images/home/carousels/prosperi/03.jpg';
+import carrouselProperi4 from '@/images/home/carousels/prosperi/04.jpg';
+import carrouselProperi5 from '@/images/home/carousels/prosperi/05.jpg';
+import carrouselProperi6 from '@/images/home/carousels/prosperi/06.jpg';
+import carrouselProperi7 from '@/images/home/carousels/prosperi/07.jpg';
+import carrouselProperi8 from '@/images/home/carousels/prosperi/08.jpg';
+import carrouselProperi9 from '@/images/home/carousels/prosperi/09.jpg';
+import carrouselProperi10 from '@/images/home/carousels/prosperi/10.jpg';
+import carrouselProperi11 from '@/images/home/carousels/prosperi/11.jpg';
+import carrouselProperi12 from '@/images/home/carousels/prosperi/12.jpg';
+import carrouselProperi13 from '@/images/home/carousels/prosperi/13.jpg';
+import carrouselProperi14 from '@/images/home/carousels/prosperi/14.jpg';
+import carrouselProperi15 from '@/images/home/carousels/prosperi/15.jpg';
+import carrouselProperi16 from '@/images/home/carousels/prosperi/16.jpg';
+import carrouselProperi17 from '@/images/home/carousels/prosperi/17.jpg';
+import carrouselProperi18 from '@/images/home/carousels/prosperi/18.jpg';
 
 import {
   Carousel,
@@ -243,7 +272,38 @@ const ITEMS = [
     },
     className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
     icon: <img src='/icons/grano.png' loading="eager" className='w-5'/>,
-    images: [],
+    images: [{
+      src: carouselAgro1.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carouselAgro2.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carouselAgro3.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carouselAgro4.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carouselAgro5.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carouselAgro6.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carouselAgro7.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carouselAgro8.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carouselAgro9.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carouselAgro10.src,
+      alt: 'Regreso al Agua',
+    }
+    ],
   },
   {
     title: 'Fundación Quirico Prosperi',
@@ -256,7 +316,61 @@ const ITEMS = [
     className: 'flex justify-center items-center col-start-2 my-8',
     classNameImg: 'w-100',
     icon:  <img src='/icons/fqp.png' loading="eager" className='w-5'/>,
-    images: [],
+    images: [{
+      src: carrouselProperi1.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi2.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi3.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi4.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi5.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi6.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi7.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi8.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi9.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi10.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi11.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi12.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi13.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi14.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi15.src,
+      alt: 'Regreso al Agua', 
+    },{
+      src: carrouselProperi16.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi17.src,
+      alt: 'Regreso al Agua',
+    },{
+      src: carrouselProperi18.src,
+      alt: 'Regreso al Agua',
+    }]
   },
   {
     title: 'Electro Religioso',
@@ -267,7 +381,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center row-start-3 xl:mb-20 lg:mb-10 md:mb-10 mb-5',
-    icon: <div className='w-5 text-amber-500 font-bold'>R</div>,
+    icon: <div className='w-5 text-yellow-300 font-bold'>R</div>,
     images: [
       {
         src: carouselReligion1.src,
@@ -424,7 +538,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center row-start-3 xl:mb-20 lg:mb-10 md:mb-10 mb-5',
-    icon: <div className='w-5 text-red-500 font-bold'>D</div>,
+    icon: <div className='w-5 text-red-600 font-bold'>D</div>,
     images: [
       {
         src: carouselDeporte1.src,
