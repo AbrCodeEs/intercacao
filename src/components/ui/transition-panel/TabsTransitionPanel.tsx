@@ -449,7 +449,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center row-start-3',
-    icon: <div className='w-5 text-blue-500 font-bold'>MD</div>,
+    icon: <div className='w-5 text-blue-500 font-bold'>M</div>,
     images: [
       {
         src: carouselDanza1.src,
