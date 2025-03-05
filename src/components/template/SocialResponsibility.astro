@@ -1,6 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
+import { CarouselImages } from '@/components/ui/carousel/Img';
+
+import carousel1 from '@/images/chuao/carousel/01.jpg';
+import carousel2 from '@/images/chuao/carousel/02.jpg';
+import carousel3 from '@/images/chuao/carousel/03.jpg';
+import carousel4 from '@/images/chuao/carousel/04.jpg';
+import carousel5 from '@/images/chuao/carousel/05.jpg';
+import carousel6 from '@/images/chuao/carousel/06.jpg';
 
 type Props = CollectionEntry<'template'>['data'];
 
@@ -33,5 +41,35 @@ const { socialResponsibility } = Astro.props;
         ))
       }
     </div>
+  </div>
+
+  <div class="relative w-full grow overflow-hidden">
+    <CarouselImages client:only="react" images={
+      [{
+        src: carousel1.src,
+        alt: '',
+      },
+      {
+        src: carousel2.src,
+        alt: '',
+      },
+      {
+        src: carousel3.src,
+        alt: '',
+      },
+      {
+        src: carousel4.src,
+        alt: '',
+      },
+      {
+        src: carousel5.src,
+        alt: '',
+      },
+      {
+        src: carousel6.src,
+        alt: '',
+      },
+      ]}
+    />
   </div>
 </section>

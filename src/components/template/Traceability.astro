@@ -54,9 +54,9 @@ const { traceability } = Astro.props;
         traceability.images.map((image, index) => (
           <div
             class:list={[
-              'group animate-trigger-left relative size-auto flex-none rounded-lg bg-neutral-300',
+              'group animate-trigger-left relative size-auto flex-none rounded-lg bg-white pt-4',
               index === 0 &&
-                'h-80 w-auto -translate-y-10 scale-40 rounded-lg bg-neutral-300 md:-translate-y-30 lg:-translate-y-30 xl:-translate-y-30',
+                'h-80 w-auto -translate-y-10 scale-40 rounded-lg bg-white md:-translate-y-30 lg:-translate-y-30 xl:-translate-y-30',
               index !== 0 && 'overflow-hidden',
             ]}
           >
