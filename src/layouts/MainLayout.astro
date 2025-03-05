@@ -7,36 +7,42 @@ import BaseHead from '@/components/parts/BaseHead.astro';
 import Footer from '@/components/parts/Footer.astro';
 import logo from '@/images/chuao/logo-intercacao.png';
 
+import { getLangFromUrl } from '@/assets/lib/i18n/utils';
+
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, keywords } = Astro.props;
 
+
+const lang = getLangFromUrl(Astro.url);
+
 const navItems = [
   {
-    title: 'Inicio',
+    title: lang === "en" ? "Home" : 'Inicio',
     href: '#section-home',
   },
   {
-    title: 'Mundo de sabores',
+    title: lang === "en" ? 'Flavours world' : 'Mundo de sabores',
     href: '#section-flavours',
   },
   {
-    title: 'Cacao gourmet',
+    title: lang === "en" ? 'Cacao gourmet' : 'Cacao gourmet',
     href: '#section-gourmet',
   },
   {
-    title: 'Fundación Quirico Prosperi',
+    title: lang === "en" ? 'Fundación Quirico Prosperi' : 'Fundación Quirico Prosperi',
     href: '#section-prosperi',
   },
   {
-    title: 'Sobre Nosotros',
+    title: lang === "en" ? 'Sobre Nosotros' : 'Sobre Nosotros',
     href: '#section-about',
   },
   {
-    title: 'Contactanos',
+    title: lang === "en" ? 'Contactanos' : 'Contactanos',
     href: '#section-contact',
   },
 ];
+
 ---
 
 <script is:inline>
