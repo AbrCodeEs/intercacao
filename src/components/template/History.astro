@@ -16,7 +16,7 @@ const { history } = Astro.props;
     <div class="flex w-full flex-none flex-col gap-5 md:w-90 lg:w-90 xl:w-90">
       {
         history.images.map((image, index) => (
-          <div class="group animate-trigger-right relative size-90 flex-none overflow-hidden rounded-lg">
+          <div class="group animate-trigger-right relative xl:size-90 lg:size-90 md:size-90 size-full flex-none overflow-hidden rounded-lg">
             <Image
               inferSize={true}
               loading="eager"
