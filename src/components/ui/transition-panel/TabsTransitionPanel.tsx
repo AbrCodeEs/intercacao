@@ -14,14 +14,6 @@ import logoElectronMusica from '@/images/global/logo-electron-musica-y-dansa.png
 import logoElectronReligion from '@/images/global/logo-electron-religion.png';
 import { cn } from '@/assets/lib/utils';
 
-import carouselMusica1 from '@/images/home/carousels/musica/carousel-1.jpeg';
-import carouselMusica2 from '@/images/home/carousels/musica/carousel-2.jpeg';
-import carouselMusica3 from '@/images/home/carousels/musica/carousel-3.jpeg';
-import carouselMusica4 from '@/images/home/carousels/musica/carousel-4.jpeg';
-import carouselMusica5 from '@/images/home/carousels/musica/carousel-5.jpeg';
-import carouselMusica6 from '@/images/home/carousels/musica/carousel-6.jpeg';
-import carouselMusica7 from '@/images/home/carousels/musica/carousel-7.jpeg';
-
 import carouselDanza1 from '@/images/home/carousels/danza/01.jpg';
 import carouselDanza2 from '@/images/home/carousels/danza/02.jpg';
 import carouselDanza3 from '@/images/home/carousels/danza/03.jpg';
@@ -50,8 +42,8 @@ import carouselRegresoAlAgua5 from '@/images/home/carousels/regreso-al-agua/caro
 import carouselRegresoAlAgua6 from '@/images/home/carousels/regreso-al-agua/carousel-6.jpeg';
 import carouselRegresoAlAgua7 from '@/images/home/carousels/regreso-al-agua/carousel-7.jpeg';
 import carouselRegresoAlAgua8 from '@/images/home/carousels/regreso-al-agua/carousel-8.jpeg';
-import carouselRegresoAlAgua9 from '@/images/home/carousels/regreso-al-agua/carousel-9.jpeg';
-import carouselRegresoAlAgua10 from '@/images/home/carousels/regreso-al-agua/carousel-10.jpeg';
+import carouselRegresoAlAgua10 from '@/images/home/carousels/regreso-al-agua/carousel-9.jpeg';
+import carouselRegresoAlAgua9 from '@/images/home/carousels/regreso-al-agua/carousel-10.jpeg';
 
 import carouselWilfriedMerle1 from '@/images/home/carousels/wilfried-merle/carousel-1.jpeg';
 import carouselWilfriedMerle2 from '@/images/home/carousels/wilfried-merle/carousel-2.jpeg';
@@ -68,6 +60,44 @@ import carouselWilfriedMerle12 from '@/images/home/carousels/wilfried-merle/caro
 import carouselWilfriedMerle13 from '@/images/home/carousels/wilfried-merle/carousel-13.jpeg';
 import carouselWilfriedMerle14 from '@/images/home/carousels/wilfried-merle/carousel-14.jpeg';
 import carouselWilfriedMerle15 from '@/images/home/carousels/wilfried-merle/carousel-15.jpeg';
+
+import carouselDeporte1 from '@/images/home/carousels/deporte/01.jpg';
+import carouselDeporte2 from '@/images/home/carousels/deporte/02.jpg';
+import carouselDeporte3 from '@/images/home/carousels/deporte/03.jpg';
+import carouselDeporte4 from '@/images/home/carousels/deporte/04.jpg';
+import carouselDeporte5 from '@/images/home/carousels/deporte/05.jpg';
+import carouselDeporte6 from '@/images/home/carousels/deporte/06.jpg';
+import carouselDeporte7 from '@/images/home/carousels/deporte/07.jpg';
+import carouselDeporte8 from '@/images/home/carousels/deporte/08.jpg';
+import carouselDeporte9 from '@/images/home/carousels/deporte/09.jpg';
+import carouselDeporte10 from '@/images/home/carousels/deporte/10.jpg';
+import carouselDeporte11 from '@/images/home/carousels/deporte/11.jpg';
+import carouselDeporte12 from '@/images/home/carousels/deporte/12.jpg';
+import carouselDeporte13 from '@/images/home/carousels/deporte/13.jpg';
+import carouselDeporte14 from '@/images/home/carousels/deporte/14.jpg';
+import carouselDeporte15 from '@/images/home/carousels/deporte/15.jpg';
+import carouselDeporte16 from '@/images/home/carousels/deporte/16.jpg';
+
+import carouselReligion1 from '@/images/home/carousels/religion/01.jpg';
+import carouselReligion2 from '@/images/home/carousels/religion/02.jpg';
+import carouselReligion3 from '@/images/home/carousels/religion/03.jpg';
+import carouselReligion4 from '@/images/home/carousels/religion/04.jpg';
+import carouselReligion5 from '@/images/home/carousels/religion/05.jpg';
+import carouselReligion6 from '@/images/home/carousels/religion/06.jpg';
+import carouselReligion7 from '@/images/home/carousels/religion/07.jpg';
+import carouselReligion8 from '@/images/home/carousels/religion/08.jpg';
+import carouselReligion9 from '@/images/home/carousels/religion/09.jpg';
+import carouselReligion10 from '@/images/home/carousels/religion/10.jpg';
+import carouselReligion11 from '@/images/home/carousels/religion/11.jpg';
+import carouselReligion12 from '@/images/home/carousels/religion/12.jpg';
+import carouselReligion13 from '@/images/home/carousels/religion/13.jpg';
+import carouselReligion14 from '@/images/home/carousels/religion/14.jpg';
+import carouselReligion15 from '@/images/home/carousels/religion/15.jpg';
+import carouselReligion16 from '@/images/home/carousels/religion/16.jpg';
+import carouselReligion17 from '@/images/home/carousels/religion/17.jpg';
+import carouselReligion18 from '@/images/home/carousels/religion/18.jpg';
+
+
 import {
   Carousel,
   CarouselContent,
@@ -80,7 +110,7 @@ const ITEMS = [
   {
     title: 'Regreso al Agua',
     content:
-      'La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el compromiso de difundir los valores historicos, culturales y agricolas de venezuela a traves de su programa educacional "Regreso al Agro", probando que la siembra de cacao es una profesion rentable que genera cambios sociales. El objetivo principal es el de colaborar con la comunidad, enriqueciendo y promoviendo las buenas practicas agricolas para las generaciones futuras de Chuao.',
+      'La Fundación Quirico Prosperi lidera “Regreso del Agua”,  un proyecto innovador que combina tecnología, investigación y acción comunitaria para revivir el cauce del río. A través de cultivos ecológicos y prácticas sostenibles, trabajamos juntos para que el agua vuelva a fluir, devolviendo vida y esperanza a nuestra tierra. ¡Un futuro más verde y próspero nos espera! Si se puede!',
     img: {
       src: logoRegresoAlAgua.src,
       alt: 'Regreso al Agua',
@@ -133,7 +163,7 @@ const ITEMS = [
   {
     title: 'Vivero Wilfried Merle',
     content:
-      'La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el compromiso de difundir los valores historicos, culturales y agricolas de venezuela a traves de su programa educacional "Regreso al Agro", probando que la siembra de cacao es una profesion rentable que genera cambios sociales. El objetivo principal es el de colaborar con la comunidad, enriqueciendo y promoviendo las buenas practicas agricolas para las generaciones futuras de Chuao.',
+      'La Fundación Quirico Prosperi honra el legado de Wilfried Merle con el “Vivero Wilfried Merle”, un espacio dedicado a la investigación, producción y preservación de las mejores plantas de cacao, café y otras especies que fortalecen estos cultivos. Inspirado en su visión de sostenibilidad y desarrollo comunitario, el vivero no solo impulsa la agricultura responsable, sino que también sirve como centro de aprendizaje para colegios y universidades. Aquí, nuevas generaciones descubren el valor del campo y la importancia de cultivar con conciencia ambiental. ¡Sembrando conocimiento, cosechando futuro!',
     img: {
       src: logoWilfriedMerle.src,
       alt: 'Regreso al Agua',
@@ -206,7 +236,7 @@ const ITEMS = [
   {
     title: 'Regreso al Agro',
     content:
-      'La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el compromiso de difundir los valores historicos, culturales y agricolas de venezuela a traves de su programa educacional "Regreso al Agro", probando que la siembra de cacao es una profesion rentable que genera cambios sociales. El objetivo principal es el de colaborar con la comunidad, enriqueciendo y promoviendo las buenas practicas agricolas para las generaciones futuras de Chuao.',
+      'La Fundación Quirico Prosperi, comprometida con el rescate de los valores históricos, culturales y agrícolas de Venezuela, impulsa “Regreso al Agro”, un programa educativo que demuestra que el cultivo de cacao y café no solo es una tradición, sino una profesión rentable y transformadora. A través de la promoción de buenas prácticas agrícolas, buscamos empoderar a la comunidad y sembrar un futuro sostenible para las nuevas generaciones. ¡El campo es vida, progreso y oportunidad!',
     img: {
       src: logoRegresoAlAgro.src,
       alt: 'Regreso al Agua',
@@ -218,12 +248,12 @@ const ITEMS = [
   {
     title: 'Fundación Quirico Prosperi',
     content:
-      'La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el compromiso de difundir los valores historicos, culturales y agricolas de venezuela a traves de su programa educacional "Regreso al Agro", probando que la siembra de cacao es una profesion rentable que genera cambios sociales. El objetivo principal es el de colaborar con la comunidad, enriqueciendo y promoviendo las buenas practicas agricolas para las generaciones futuras de Chuao.',
+      'Fundación Quirico Prosperi es una organización sin fines de lucro dedicada a promover los valores históricos, culturales y agrícolas de Venezuela, con especial énfasis en la región de Paria. A través de sus programas, la fundación impulsa el desarrollo sostenible, la educación y el rescate de tradiciones como el cultivo de cacao y café. La FQP busca mejorar la calidad de vida de las comunidades, promover la agricultura responsable y garantizar el bienestar de la región. ¡Descubra más sobre su impactante trabajo en su página web oficial!',
     img: {
       src: logoFundacionProsperi.src,
       alt: 'Regreso al Agua',
     },
-    className: 'xl:w-90 lg:w-70 flex justify-center items-center col-start-2',
+    className: 'xl:w-90 lg:w-70 flex justify-center items-center col-start-2 -m-10',
     classNameImg: 'w-200',
     icon:  <img src='/icons/fqp.png' loading="eager" className='w-5'/>,
     images: [],
@@ -231,37 +261,81 @@ const ITEMS = [
   {
     title: 'Electro Religioso',
     content:
-      'La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el compromiso de difundir los valores historicos, culturales y agricolas de venezuela a traves de su programa educacional "Regreso al Agro", probando que la siembra de cacao es una profesion rentable que genera cambios sociales. El objetivo principal es el de colaborar con la comunidad, enriqueciendo y promoviendo las buenas practicas agricolas para las generaciones futuras de Chuao.',
+      'La Fundación Quirico Prosperi fortalece la fe y los valores en la comunidad a través de su programa de apoyo religioso. Contribuye a las iglesias Santa Rosa de Lima en Carúpano y la Iglesia Pedro y Pablo en El Rincón mediante donaciones, respaldo a los grupos y profesores de catequesis así como diversas iniciativas que unen y enriquecen la espiritualidad. ¡Fe, solidaridad y comunidad en acción!',
     img: {
       src: logoElectronReligion.src,
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center row-start-3 xl:mb-20 lg:mb-10 md:mb-10 mb-5',
     icon: <div className='w-5 text-amber-500 font-bold'>R</div>,
-    images: [],
+    images: [
+      {
+        src: carouselReligion1.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion2.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion3.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion4.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion5.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion6.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion7.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion8.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion9.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion10.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion11.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion12.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion13.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion14.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion15.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion16.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion17.src,
+        alt: 'Regreso al Agua',
+      }, {
+        src: carouselReligion18.src,
+        alt: 'Regreso al Agua',
+      }
+    ],
   },
   {
     title: 'Electro Musica y Danza',
     content:
-      'La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el compromiso de difundir los valores historicos, culturales y agricolas de venezuela a traves de su programa educacional "Regreso al Agro", probando que la siembra de cacao es una profesion rentable que genera cambios sociales. El objetivo principal es el de colaborar con la comunidad, enriqueciendo y promoviendo las buenas practicas agricolas para las generaciones futuras de Chuao.',
+      'La Fundación Quirico Prosperi celebra la cultura, el arte y el talento de los jóvenes de El Rincón con su programa  electrón de danza y música. A través de la danza folclórica dirigida desde hace más de 15 años por Roger Urbano y la formación musical del Sistema Nacional de Orquestas, herencia del maestro Abreu, niños y jóvenes descubren su pasión, fortalecen sus raíces y brillan con su arte. ¡Tradición y música que transforman vidas!',
     img: {
       src: logoElectronMusica.src,
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center row-start-3',
     icon: <div className='w-5 text-blue-500 font-bold'>MD</div>,
-    images: [],
-  },
-  {
-    title: 'Electro Deporte',
-    content:
-      'La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el compromiso de difundir los valores historicos, culturales y agricolas de venezuela a traves de su programa educacional "Regreso al Agro", probando que la siembra de cacao es una profesion rentable que genera cambios sociales. El objetivo principal es el de colaborar con la comunidad, enriqueciendo y promoviendo las buenas practicas agricolas para las generaciones futuras de Chuao.',
-    img: {
-      src: logoElectronDeporte.src,
-      alt: 'Regreso al Agua',
-    },
-    className: 'flex justify-center items-center row-start-3 xl:mb-20 lg:mb-10 md:mb-10 mb-5',
-    icon: <div className='w-5 text-red-500 font-bold'>D</div>,
     images: [
       {
         src: carouselDanza1.src,
@@ -341,6 +415,68 @@ const ITEMS = [
       },
     ],
   },
+  {
+    title: 'Electro Deporte',
+    content:
+      'La Fundación Quirico Prosperi impulsa el talento deportivo en El Rincón a través de sus programas de baloncesto y fútbol, brindando a niños y jóvenes la oportunidad de entrenar, competir y crecer en un ambiente de disciplina y trabajo en equipo. ¡El deporte está transformando vidas y construyendo un futuro mejor para la comunidad!',
+    img: {
+      src: logoElectronDeporte.src,
+      alt: 'Regreso al Agua',
+    },
+    className: 'flex justify-center items-center row-start-3 xl:mb-20 lg:mb-10 md:mb-10 mb-5',
+    icon: <div className='w-5 text-red-500 font-bold'>D</div>,
+    images: [
+      {
+        src: carouselDeporte1.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte2.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte3.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte4.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte5.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte6.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte7.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte8.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte9.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte10.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte11.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte12.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte13.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte14.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte15.src,
+        alt: 'Deporte',
+      }, {
+        src: carouselDeporte16.src,
+        alt: 'Deporte',
+      }
+    ],
+  },
 ];
 
 export function TabsTransitionPanel() {
@@ -375,7 +511,7 @@ export function TabsTransitionPanel() {
 
   return (
     <>
-      <div className="grid grid-flow-row auto-rows-max grid-cols-3 grid-rows-3 items-center justify-center gap-0">
+      <div className="grid grid-flow-row auto-rows-max grid-cols-3 items-center justify-center gap-0">
         <AnimatedBackground
           className={cn('group flex items-center justify-center rounded-lg bg-zinc-100')}
           transition={{
