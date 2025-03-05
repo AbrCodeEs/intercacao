@@ -32,7 +32,7 @@ const { history } = Astro.props;
     <div class="flex w-full flex-1 flex-col gap-5">
       {
         history.content.map(({ text, type }) => {
-          switch (type) {``
+          switch (type) {
             case 'paragraph':
               return <p class="text-lg">{text}</p>;
             case 'highlight':
