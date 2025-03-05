@@ -412,7 +412,7 @@ export function TabsTransitionPanel() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 50 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            className="fixed top-3/4 right-4 flex -translate-y-1/2 flex-col items-center gap-1 md:hidden z-10"
+            className="fixed top-2/3 right-4 flex -translate-y-1/2 flex-col items-center gap-1 md:hidden z-10"
           >
             {ITEMS.map((item, index) => (
               <motion.button
