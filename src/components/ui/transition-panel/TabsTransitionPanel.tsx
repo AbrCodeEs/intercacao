@@ -86,7 +86,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
-    icon: <img src='/icons/agua.png' className='w-5'/>,
+    icon: <img src='/icons/agua.png' loading="eager" className='w-5'/>,
     images: [
       {
         src: carouselRegresoAlAgua1.src,
@@ -139,7 +139,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center',
-    icon: <img src='/icons/wilfried.png' className='w-5'/>,
+    icon: <img src='/icons/wilfried.png' loading="eager" className='w-5'/>,
     images: [
       {
         src: carouselWilfriedMerle1.src,
@@ -212,7 +212,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
-    icon: <img src='/icons/grano.png' className='w-5'/>,
+    icon: <img src='/icons/grano.png' loading="eager" className='w-5'/>,
     images: [],
   },
   {
@@ -225,7 +225,7 @@ const ITEMS = [
     },
     className: 'xl:w-90 lg:w-70 flex justify-center items-center col-start-2',
     classNameImg: 'w-200',
-    icon:  <img src='/icons/fqp.png' className='w-5'/>,
+    icon:  <img src='/icons/fqp.png' loading="eager" className='w-5'/>,
     images: [],
   },
   {
@@ -412,7 +412,7 @@ export function TabsTransitionPanel() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 50 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            className="fixed top-1/2 right-4 flex -translate-y-1/2 flex-col items-center gap-1 md:hidden z-10"
+            className="fixed top-3/4 right-4 flex -translate-y-1/2 flex-col items-center gap-1 md:hidden z-10"
           >
             {ITEMS.map((item, index) => (
               <motion.button
