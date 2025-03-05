@@ -6,7 +6,7 @@ import {
   type Variant,
   motion,
   type MotionProps,
-} from 'framer-motion';
+} from 'motion/react';
 
 import { cn } from '@/lib/utils';
 
