@@ -16,7 +16,7 @@ const { history } = Astro.props;
     <div class="flex w-full flex-none flex-col gap-5 md:w-90 lg:w-90 xl:w-90">
       {
         history.images.map((image, index) => (
-          <div class="group animate-trigger-right relative xl:size-90 lg:size-90 md:size-90 size-full flex-none overflow-hidden rounded-lg">
+          <div class="group animate-trigger-right relative size-full flex-none overflow-hidden rounded-lg md:size-90 lg:size-90 xl:size-90">
             <Image
               inferSize={true}
               loading="eager"
@@ -32,7 +32,7 @@ const { history } = Astro.props;
     <div class="flex w-full flex-1 flex-col gap-5">
       {
         history.content.map(({ text, type }) => {
-          switch (type) {
+          switch (type) {``
             case 'paragraph':
               return <p class="text-lg">{text}</p>;
             case 'highlight':
@@ -43,6 +43,7 @@ const { history } = Astro.props;
                   </i>
                 </p>
               );
+
           }
         })
       }
