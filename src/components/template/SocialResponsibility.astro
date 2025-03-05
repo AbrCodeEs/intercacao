@@ -24,23 +24,23 @@ const { socialResponsibility } = Astro.props;
   <h1 class="text-4xl font-bold text-neutral-600 uppercase">
     {socialResponsibility?.title}
   </h1>
+  
   <p class="text-lg">
     {socialResponsibility?.paragraphs}
   </p>
+
   <div class="flex items-center justify-center gap-5 py-10">
     <div
       class="flex w-full flex-none flex-col items-center justify-center gap-20 rounded-lg md:w-110 lg:w-110 xl:w-110"
     >
       {
-        socialResponsibility?.images?.map((image, index) => (
-          <Image
-            inferSize={true}
-            loading="eager"
-            src={image.src}
-            alt={image.alt}
-            class="rounded-lg object-fill object-center"
-          />
-        ))
+        <Image
+          inferSize={true}
+          loading="eager"
+          src={ socialResponsibility?.images?.[0].src}
+          alt={ socialResponsibility?.images?.[0].alt}
+          class="rounded-lg object-fill object-center"
+        />
       }
     </div>
   </div>
@@ -82,5 +82,20 @@ const { socialResponsibility } = Astro.props;
       ]}
     />
   </div>
-</section>
+
+  <div class="flex items-center justify-center gap-5 py-10">
+    <div
+      class="flex w-full flex-none flex-col items-center justify-center gap-20 rounded-lg md:w-110 lg:w-110 xl:w-110"
+    >
+      {
+        <Image
+          inferSize={true}
+          loading="eager"
+          src={ socialResponsibility?.images?.[1].src}
+          alt={ socialResponsibility?.images?.[1].alt}
+          class="rounded-lg object-fill object-center"
+        />
+      }
+    </div>
+  </div>
 </section>
