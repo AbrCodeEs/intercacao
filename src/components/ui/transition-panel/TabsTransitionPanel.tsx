@@ -127,6 +127,9 @@ import carrouselProperi16 from '@/images/home/carousels/prosperi/16.jpg';
 import carrouselProperi17 from '@/images/home/carousels/prosperi/17.jpg';
 import carrouselProperi18 from '@/images/home/carousels/prosperi/18.jpg';
 
+import carouselHistoria1 from '@/images/home/carousels/historia/01.jpeg';
+import carouselHistoria2 from '@/images/home/carousels/historia/02.jpeg';
+
 import {
   Carousel,
   CarouselContent,
@@ -593,6 +596,14 @@ const ITEMS = [
   },
 ];
 
+const historia = [{
+  src: carouselHistoria1.src,
+  alt: 'Historia',
+},{
+  src: carouselHistoria2.src,
+  alt: 'Historia',
+}]
+
 export function TabsTransitionPanel() {
   const [activeIndex, setActiveIndex] = useState(ITEMS.length - 1);
   const [isPanelVisible, setIsPanelVisible] = useState(false);
@@ -625,6 +636,31 @@ export function TabsTransitionPanel() {
 
   return (
     <>
+      <Carousel className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
+        <CarouselContent
+          classNameWrapper="w-1/2 xl:overflow-hidden lg:overflow-hidden md:overflow-hidden overflow-visible"
+        >
+          {
+            historia?.map((image, index) => (
+              <CarouselItem
+                key={index}
+                className="basis-2/4"
+              >
+                <div className="flex aspect-square items-center justify-center">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading="eager"
+                    className="aspect-[4/5] object-cover overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+        </CarouselContent>
+        <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
+        <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
+      </Carousel>
+
       <div className="grid grid-flow-row auto-rows-max grid-cols-3 items-center justify-center gap-0">
         <AnimatedBackground
           className={cn('group flex items-center justify-center rounded-lg bg-zinc-100')}

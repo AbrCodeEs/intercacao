@@ -448,3 +448,5 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
     </div>
   );
 }
+
+
