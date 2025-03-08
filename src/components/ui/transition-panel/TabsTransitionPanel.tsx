@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { TransitionPanel } from '@/components/ui/transition-panel';
 import { AnimatedBackground } from '@/components/ui/animated-background';
+import { Card, CardHeader, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { motion, AnimatePresence, useInView } from 'motion/react';
 
 import logoRegresoAlAgua from '@/images/global/logo-regreso-al-agua.webp';
@@ -148,7 +149,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
-    icon: <img src='/icons/agua.png' loading="eager" className='w-5'/>,
+    icon: <img src="/icons/agua.png" loading="eager" className="w-5" />,
     images: [
       {
         src: carouselRegresoAlAgua1.src,
@@ -201,7 +202,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center',
-    icon: <img src='/icons/wilfried.png' loading="eager" className='w-5'/>,
+    icon: <img src="/icons/wilfried.png" loading="eager" className="w-5" />,
     images: [
       {
         src: carouselWilfriedMerle1.src,
@@ -274,38 +275,48 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
-    icon: <img src='/icons/grano.png' loading="eager" className='w-5'/>,
-    images: [{
-      src: carouselAgro1.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carouselAgro2.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carouselAgro3.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carouselAgro4.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carouselAgro5.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carouselAgro6.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carouselAgro7.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carouselAgro8.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carouselAgro9.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carouselAgro10.src,
-      alt: 'Regreso al Agua',
-    }
+    icon: <img src="/icons/grano.png" loading="eager" className="w-5" />,
+    images: [
+      {
+        src: carouselAgro1.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carouselAgro2.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carouselAgro3.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carouselAgro4.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carouselAgro5.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carouselAgro6.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carouselAgro7.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carouselAgro8.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carouselAgro9.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carouselAgro10.src,
+        alt: 'Regreso al Agua',
+      },
     ],
   },
   {
@@ -318,62 +329,81 @@ const ITEMS = [
     },
     className: 'flex justify-center items-center col-start-2 my-8',
     classNameImg: 'w-100',
-    icon:  <img src='/icons/fqp.png' loading="eager" className='w-5'/>,
-    images: [{
-      src: carrouselProperi1.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi2.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi3.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi4.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi5.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi6.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi7.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi8.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi9.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi10.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi11.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi12.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi13.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi14.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi15.src,
-      alt: 'Regreso al Agua', 
-    },{
-      src: carrouselProperi16.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi17.src,
-      alt: 'Regreso al Agua',
-    },{
-      src: carrouselProperi18.src,
-      alt: 'Regreso al Agua',
-    }]
+    icon: <img src="/icons/fqp.png" loading="eager" className="w-5" />,
+    images: [
+      {
+        src: carrouselProperi1.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi2.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi3.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi4.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi5.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi6.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi7.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi8.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi9.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi10.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi11.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi12.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi13.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi14.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi15.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi16.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi17.src,
+        alt: 'Regreso al Agua',
+      },
+      {
+        src: carrouselProperi18.src,
+        alt: 'Regreso al Agua',
+      },
+    ],
   },
   {
     title: 'Electron Religioso',
@@ -384,63 +414,80 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center row-start-3 xl:mb-20 lg:mb-10 md:mb-10 mb-5',
-    icon: <div className='w-5 text-yellow-300 font-bold'>R</div>,
+    icon: <div className="w-5 font-bold text-yellow-300">R</div>,
     images: [
       {
         src: carouselReligion1.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion2.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion3.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion4.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion5.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion6.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion7.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion8.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion9.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion10.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion11.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion12.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion13.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion14.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion15.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion16.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion17.src,
         alt: 'Regreso al Agua',
-      }, {
+      },
+      {
         src: carouselReligion18.src,
         alt: 'Regreso al Agua',
-      }
+      },
     ],
   },
   {
@@ -452,7 +499,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center row-start-3',
-    icon: <div className='w-5 text-blue-500 font-bold'>M</div>,
+    icon: <div className="w-5 font-bold text-blue-500">M</div>,
     images: [
       {
         src: carouselDanza1.src,
@@ -541,68 +588,86 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center row-start-3 xl:mb-20 lg:mb-10 md:mb-10 mb-5',
-    icon: <div className='w-5 text-red-600 font-bold'>D</div>,
+    icon: <div className="w-5 font-bold text-red-600">D</div>,
     images: [
       {
         src: carouselDeporte1.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte2.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte3.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte4.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte5.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte6.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte7.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte8.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte9.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte10.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte11.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte12.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte13.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte14.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte15.src,
         alt: 'Deporte',
-      }, {
+      },
+      {
         src: carouselDeporte16.src,
         alt: 'Deporte',
-      }
+      },
     ],
   },
 ];
 
-const historia = [{
-  src: carouselHistoria1.src,
-  alt: 'Historia',
-},{
-  src: carouselHistoria2.src,
-  alt: 'Historia',
-}]
+const historia = [
+  {
+    src: carouselHistoria1.src,
+    alt: 'Historia',
+  },
+  {
+    src: carouselHistoria2.src,
+    alt: 'Historia',
+  },
+];
 
 export function TabsTransitionPanel() {
   const [activeIndex, setActiveIndex] = useState(ITEMS.length - 1);
@@ -636,30 +701,35 @@ export function TabsTransitionPanel() {
 
   return (
     <>
-      <Carousel className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
-        <CarouselContent
-          classNameWrapper="w-1/2 xl:overflow-hidden lg:overflow-hidden md:overflow-hidden overflow-visible"
-        >
-          {
-            historia?.map((image, index) => (
+      <div className='w-full xl:container lg:container md:container xl:px-30 flex justify-center items-center'>
+        <Carousel className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg w-11/12">
+          <CarouselContent classNameWrapper="w-full">
+            {historia.map((image, index) => (
               <CarouselItem
                 key={index}
-                className="basis-2/4"
+                className="basis-[24rem] md:basis-full lg:basis-1/2 xl:basis-1/2"
               >
-                <div className="flex aspect-square items-center justify-center">
+                <Card className="overflow-hidden">
                   <img
                     src={image.src}
                     alt={image.alt}
                     loading="eager"
-                    className="aspect-[4/5] object-cover overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg"
+                    className="aspect-auto overflow-hidden object-fill md:rounded-lg lg:rounded-lg xl:rounded-lg"
                   />
-                </div>
+                </Card>
               </CarouselItem>
             ))}
-        </CarouselContent>
-        <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
-        <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
-      </Carousel>
+          </CarouselContent>
+          <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
+          <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
+        </Carousel>
+      </div>
+
+      {/* <div className="container flex w-full justify-end p-5">
+        <a href="/historia" className="text-primary underline">
+          Ver más
+        </a>
+      </div> */}
 
       <div className="grid grid-flow-row auto-rows-max grid-cols-3 items-center justify-center gap-0">
         <AnimatedBackground
@@ -698,7 +768,7 @@ export function TabsTransitionPanel() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 50 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            className="fixed top-2/3 right-4 flex -translate-y-1/2 flex-col items-center gap-1 md:hidden z-10"
+            className="fixed top-2/3 right-4 z-10 flex -translate-y-1/2 flex-col items-center gap-1 md:hidden"
           >
             {ITEMS.map((item, index) => (
               <motion.button
@@ -709,7 +779,7 @@ export function TabsTransitionPanel() {
                 className={`rounded-lg bg-white px-4 py-3 shadow-lg transition-colors hover:bg-zinc-100 ${
                   activeIndex === index ? 'bg-zinc-200' : ''
                 }`}
-              > 
+              >
                 {item.icon}
               </motion.button>
             ))}
