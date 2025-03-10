@@ -165,30 +165,10 @@ export async function getStaticPaths() {
 
     <div
       id="section-prosperi"
-      class="bg-start flex h-auto min-h-screen w-full flex-col items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
+      class="bg-start flex flex-col h-auto min-h-screen w-full items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
       style={`background-image: url(${lienzoCacao.src});`}
     >
-      <div
-        class="flex h-full w-full flex-col gap-10 p-10 md:w-4/5 md:pt-10 lg:w-2/3 lg:pt-10 xl:w-4/5 xl:pt-20"
-      >
-        <div class="h-full">
-          <div class="py-2">
-            <h1 class="py-2 text-4xl font-bold text-neutral-600 uppercase">
-              Fundación Quirico Prosperi
-            </h1>
-            <p class="text-lg">
-              La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el
-              compromiso de difundir los valores historicos, culturales y agricolas de venezuela a
-              traves de su programa educacional "Regreso al Agro", probando que la siembra de cacao
-              es una profesion rentable que genera cambios sociales. El objetivo principal es el de
-              colaborar con la comunidad, enriqueciendo y promoviendo las buenas practicas agricolas
-              para las generaciones futuras de Chuao.',
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <TabsTransitionPanel client:only="react" />
+      <TabsTransitionPanel trans={trans('home').tabs_transition_panel} client:only="react" />
     </div>
   </div>
 

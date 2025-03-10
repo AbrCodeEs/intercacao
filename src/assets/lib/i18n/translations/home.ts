@@ -27,6 +27,10 @@ const es = {
     src: logoWhiteImagotipoCacaoGourmet,
     alt: 'Logo White Imagotipo Cacao Gourmet',
   },
+  tabs_transition_panel: {
+    time_line_title: 'line de tiempo',
+  },
+
   about: {
     title: 'Nosotros',
     subtitle: 'Somos un equipo de apasionados por el cacao.',
@@ -96,6 +100,9 @@ const en = {
   logo_white_imagotipo_cacao_gourmet: {
     src: logoWhiteImagotipoCacaoGourmet,
     alt: 'White Logo Imagotype Gourmet Cacao',
+  },
+  tabs_transition_panel: {
+    time_line_title: 'line de tiempo',
   },
   about: {
     title: 'About Us',
