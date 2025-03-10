@@ -240,7 +240,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
     return {
     ...cocoa,
     url: url,
-  }});
+  }}).filter((cocoa) => !cocoa.disabled);
 
 
   const filteredChocolates = cocoaData

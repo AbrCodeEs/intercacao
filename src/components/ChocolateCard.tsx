@@ -180,7 +180,7 @@ export function ChocolateCard({
                             src="/icons/especias-white-icon.svg"
                             alt="especias"
                           />
-                          <span>{chocolate.ingredients.spices.toFixed(1)}%</span>
+                          <span>{chocolate.ingredients.spices.toFixed(1)}</span>
                         </div>
                       )}
                   </div>
