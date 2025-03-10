@@ -29,6 +29,7 @@ export interface ChocolateBar {
     [key: string]: number;
   };
   url: string;
+  disabled?: boolean;
 }
 
 export const chocolateBars: ChocolateBar[] = [
@@ -317,6 +318,7 @@ export const chocolateBars: ChocolateBar[] = [
       spices: 0.0,
     },
     url: 'http://nativoblanco.intercacao.com',
+    disabled: true,
   },
   {
     id: '14',
@@ -361,5 +363,6 @@ export const chocolateBars: ChocolateBar[] = [
       spices: 0.0,
     },
     url: 'http://paloblanco.intercacao.com',
+    disabled: true,
   },
 ];
