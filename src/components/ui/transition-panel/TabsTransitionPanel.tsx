@@ -3,8 +3,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { TransitionPanel } from '@/components/ui/transition-panel';
 import { AnimatedBackground } from '@/components/ui/animated-background';
-import { Card, CardHeader, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { motion, AnimatePresence, useInView } from 'motion/react';
+import { TimelineDemo } from "@/components/ui/timeline/TimelineDemo";
 
 import logoRegresoAlAgua from '@/images/global/logo-regreso-al-agua.webp';
 import logoWilfriedMerle from '@/images/global/logo-wilfried-merle.webp';
@@ -138,6 +139,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from '@/components/ui/carousel';
+import { MorphingDialogBasicOne } from '@/components/ui/morphing-dialog/MorphingDialogBasicOne';
 
 const ITEMS = [
   {
@@ -202,7 +204,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center',
-    icon: <img src="/icons/wilfried.png" loading="eager" className="size-5 " />,
+    icon: <img src="/icons/wilfried.png" loading="eager" className="size-5" />,
     images: [
       {
         src: carouselWilfriedMerle1.src,
@@ -669,9 +671,9 @@ const historia = [
   },
 ];
 
-export function TabsTransitionPanel() {
+export function TabsTransitionPanel({ trans }: { trans: { [key: string]: string } }) {
   const [activeIndex, setActiveIndex] = useState(ITEMS.length - 1);
-  const [isPanelVisible, setIsPanelVisible] = useState(false);
+  const [isPanelVisible, setIsPanelVisible] = useState(true);
   const [isButtonVisible, setIsButtonVisible] = useState(false);
   const containerRef = useRef(null);
   const carouselRef = useRef(null);
@@ -684,7 +686,6 @@ export function TabsTransitionPanel() {
 
   // Controlar visibilidad del panel
   useEffect(() => {
-    console.log(isCarouselInView);
     const handleScroll = () => {
       if (!containerRef.current) return;
 
@@ -692,8 +693,8 @@ export function TabsTransitionPanel() {
       const viewportHeight = window.innerHeight;
       const isFullyHidden = top > viewportHeight || bottom < 0;
 
-      // setIsPanelVisible(isCarouselInView && !isFullyHidden);
       setIsButtonVisible(isCarouselInView && !isFullyHidden);
+      setIsPanelVisible(isCarouselInView && !isFullyHidden);
     };
 
     handleScroll(); // Verificar estado inicial
@@ -701,10 +702,11 @@ export function TabsTransitionPanel() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isCarouselInView]);
 
-  return (
+  return (<>
+   
     <div ref={containerRef}>
       <div ref={carouselRef}>
-        <div className="flex h-full w-full flex-col gap-10 p-10 md:w-4/5 md:pt-10 lg:w-2/3 lg:pt-10 xl:w-4/5 xl:pt-20">
+        <div className="flex h-full w-full flex-col gap-10 px-10 py-20 md:container md:px-20 lg:px-10 xl:px-10 lg:container xl:container">
           <div className="h-full">
             <div className="py-2">
               <h1 className="py-2 text-4xl font-bold text-neutral-600 uppercase">
@@ -712,11 +714,11 @@ export function TabsTransitionPanel() {
               </h1>
               <p className="text-lg">
                 La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el
-                compromiso de difundir los valores historicos, culturales y agricolas de venezuela a
+                compromiso de difundir los valores historicos, culturales y agricolas de Venezuela a
                 traves de su programa educacional "Regreso al Agro", probando que la siembra de
                 cacao es una profesion rentable que genera cambios sociales. El objetivo principal
                 es el de colaborar con la comunidad, enriqueciendo y promoviendo las buenas
-                practicas agricolas para las generaciones futuras de Chuao.',
+                practicas agricolas para las generaciones futuras,
               </p>
             </div>
           </div>
@@ -746,11 +748,38 @@ export function TabsTransitionPanel() {
           </Carousel>
         </div>
 
-        <div className="container flex w-full justify-end p-5">
-          <a href="/historia" className="text-primary underline">
-            Ver más
-          </a>
-        </div>
+        <MorphingDialogBasicOne />
+        
+        {/* <div className="container flex w-full justify-end p-5">
+          <Accordion
+            className="flex w-full flex-col"
+            transition={{ type: 'spring', stiffness: 120, damping: 20 }}
+            variants={{
+              expanded: {
+                opacity: 1,
+                scale: 1,
+              },
+              collapsed: {
+                opacity: 0,
+                scale: 0.7,
+              },
+            }}
+          >
+            <AccordionItem value="getting-started" className="py-2">
+              <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950">
+                <div className="flex items-center">
+                  <ChevronRight className="h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90" />
+                  <div className="ml-2 text-zinc-950">
+                    {trans?.time_line_title}
+                  </div>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="origin-left relative">
+                <TimelineDemo />
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div> */}
 
         <div className="grid grid-flow-row auto-rows-max grid-cols-3 items-center justify-center gap-0">
           <AnimatedBackground
@@ -781,10 +810,11 @@ export function TabsTransitionPanel() {
             ))}
           </AnimatedBackground>
         </div>
-        {isButtonVisible &&(
+
+        {isButtonVisible && (
           <motion.button
             onClick={() => setIsPanelVisible(!isPanelVisible)}
-            className="fixed right-4.5 bottom-4 z-50 rounded-full bg-primary p-4 text-white flex items-center justify-center shadow-lg md:hidden"
+            className="bg-primary fixed right-4.5 bottom-4 z-50 flex items-center justify-center rounded-full p-4 text-white shadow-lg"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -812,7 +842,7 @@ export function TabsTransitionPanel() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 100 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              className="fixed right-5.5 bottom-20 z-40 flex flex-col items-center gap-2 md:hidden"
+              className="fixed right-5.5 bottom-20 z-40 flex flex-col items-center gap-2"
             >
               {ITEMS.map((item, index) => (
                 <motion.button
@@ -887,5 +917,6 @@ export function TabsTransitionPanel() {
         </motion.div>
       </div>
     </div>
+  </>
   );
 }
