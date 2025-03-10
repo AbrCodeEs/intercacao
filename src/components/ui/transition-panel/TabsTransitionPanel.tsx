@@ -149,7 +149,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
-    icon: <img src="/icons/agua.png" loading="eager" className="w-5" />,
+    icon: <img src="/icons/agua.png" loading="eager" className="size-5 p-1" />,
     images: [
       {
         src: carouselRegresoAlAgua1.src,
@@ -202,7 +202,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center',
-    icon: <img src="/icons/wilfried.png" loading="eager" className="w-5" />,
+    icon: <img src="/icons/wilfried.png" loading="eager" className="size-5 " />,
     images: [
       {
         src: carouselWilfriedMerle1.src,
@@ -275,7 +275,7 @@ const ITEMS = [
       alt: 'Regreso al Agua',
     },
     className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
-    icon: <img src="/icons/grano.png" loading="eager" className="w-5" />,
+    icon: <img src="/icons/grano.png" loading="eager" className="size-5" />,
     images: [
       {
         src: carouselAgro1.src,
@@ -672,6 +672,7 @@ const historia = [
 export function TabsTransitionPanel() {
   const [activeIndex, setActiveIndex] = useState(ITEMS.length - 1);
   const [isPanelVisible, setIsPanelVisible] = useState(false);
+  const [isButtonVisible, setIsButtonVisible] = useState(false);
   const containerRef = useRef(null);
   const carouselRef = useRef(null);
 
@@ -691,7 +692,8 @@ export function TabsTransitionPanel() {
       const viewportHeight = window.innerHeight;
       const isFullyHidden = top > viewportHeight || bottom < 0;
 
-      setIsPanelVisible(isCarouselInView && !isFullyHidden);
+      // setIsPanelVisible(isCarouselInView && !isFullyHidden);
+      setIsButtonVisible(isCarouselInView && !isFullyHidden);
     };
 
     handleScroll(); // Verificar estado inicial
@@ -700,148 +702,190 @@ export function TabsTransitionPanel() {
   }, [isCarouselInView]);
 
   return (
-    <>
-      <div className='w-full xl:container lg:container md:container xl:px-30 flex justify-center items-center'>
-        <Carousel className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg w-11/12">
-          <CarouselContent classNameWrapper="w-full">
-            {historia.map((image, index) => (
-              <CarouselItem
-                key={index}
-                className="basis-[24rem] md:basis-full lg:basis-1/2 xl:basis-1/2"
-              >
-                <Card className="overflow-hidden">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    loading="eager"
-                    className="aspect-auto overflow-hidden object-fill md:rounded-lg lg:rounded-lg xl:rounded-lg"
-                  />
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
-          <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
-        </Carousel>
-      </div>
-
-      {/* <div className="container flex w-full justify-end p-5">
-        <a href="/historia" className="text-primary underline">
-          Ver más
-        </a>
-      </div> */}
-
-      <div className="grid grid-flow-row auto-rows-max grid-cols-3 items-center justify-center gap-0">
-        <AnimatedBackground
-          className={cn('group flex items-center justify-center rounded-lg bg-zinc-100')}
-          transition={{
-            type: 'spring',
-            bounce: 0.5,
-            duration: 0.6,
-          }}
-          enableHover
-        >
-          {ITEMS.map((item, index) => (
-            <div key={index} data-id={`card-${index}`} className={cn(item.className)}>
-              <div className="flex flex-col items-center justify-center space-y-1 p-4 select-none">
-                <button key={index} onClick={() => setActiveIndex(index)}>
-                  <img
-                    src={item.img.src}
-                    alt={item.img.alt}
-                    loading="lazy"
-                    className={cn(
-                      'block h-full w-80 cursor-pointer object-fill object-center transition-all duration-500 ease-out group-hover:scale-105',
-                      item.classNameImg,
-                    )}
-                  />
-                </button>
-              </div>
+    <div ref={containerRef}>
+      <div ref={carouselRef}>
+        <div className="flex h-full w-full flex-col gap-10 p-10 md:w-4/5 md:pt-10 lg:w-2/3 lg:pt-10 xl:w-4/5 xl:pt-20">
+          <div className="h-full">
+            <div className="py-2">
+              <h1 className="py-2 text-4xl font-bold text-neutral-600 uppercase">
+                Fundación Quirico Prosperi
+              </h1>
+              <p className="text-lg">
+                La Fundacion Quirico Prosperi, es una organizacion no lucrativa, que tiene el
+                compromiso de difundir los valores historicos, culturales y agricolas de venezuela a
+                traves de su programa educacional "Regreso al Agro", probando que la siembra de
+                cacao es una profesion rentable que genera cambios sociales. El objetivo principal
+                es el de colaborar con la comunidad, enriqueciendo y promoviendo las buenas
+                practicas agricolas para las generaciones futuras de Chuao.',
+              </p>
             </div>
-          ))}
-        </AnimatedBackground>
-      </div>
-
-      <AnimatePresence initial={false}>
-        {isPanelVisible && (
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 50 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            className="fixed top-2/3 right-4 z-10 flex -translate-y-1/2 flex-col items-center gap-1 md:hidden"
-          >
-            {ITEMS.map((item, index) => (
-              <motion.button
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className={`rounded-lg bg-white px-4 py-3 shadow-lg transition-colors hover:bg-zinc-100 ${
-                  activeIndex === index ? 'bg-zinc-200' : ''
-                }`}
-              >
-                {item.icon}
-              </motion.button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <motion.div
-        className="mx-auto flex flex-col items-center justify-between gap-10 py-10 md:container lg:container xl:container"
-        ref={containerRef}
-      >
-        <motion.div className="relative w-full grow overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center p-4">
-            <motion.div ref={carouselRef} />
           </div>
-          <TransitionPanel
-            activeIndex={activeIndex}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            variants={{
-              enter: { opacity: 0, y: -50, filter: 'blur(4px)' },
-              center: { opacity: 1, y: 0, filter: 'blur(0px)' },
-              exit: { opacity: 0, y: 50, filter: 'blur(4px)' },
+        </div>
+
+        <div className="flex w-full items-center justify-center md:container lg:container xl:container xl:px-30">
+          <Carousel className="w-11/12 overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
+            <CarouselContent classNameWrapper="w-full">
+              {historia.map((image, index) => (
+                <CarouselItem
+                  key={index}
+                  className="basis-[24rem] md:basis-full lg:basis-1/2 xl:basis-1/2"
+                >
+                  <Card className="overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      loading="eager"
+                      className="aspect-auto overflow-hidden object-fill md:rounded-lg lg:rounded-lg xl:rounded-lg"
+                    />
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
+            <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
+          </Carousel>
+        </div>
+
+        <div className="container flex w-full justify-end p-5">
+          <a href="/historia" className="text-primary underline">
+            Ver más
+          </a>
+        </div>
+
+        <div className="grid grid-flow-row auto-rows-max grid-cols-3 items-center justify-center gap-0">
+          <AnimatedBackground
+            className={cn('group flex items-center justify-center rounded-lg bg-zinc-100')}
+            transition={{
+              type: 'spring',
+              bounce: 0.5,
+              duration: 0.6,
             }}
+            enableHover
           >
             {ITEMS.map((item, index) => (
-              <motion.div key={index}>
-                <Carousel className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
-                  <CarouselContent
-                    classNameWrapper="w-full xl:overflow-hidden lg:overflow-hidden md:overflow-hidden overflow-visible"
-                    className="-ml-0 w-full"
-                  >
-                    {!!item.images.length &&
-                      item.images?.map((image, index) => (
-                        <CarouselItem
-                          key={index}
-                          className="basis-120 pl-0 md:basis-1/2 lg:basis-1/3 xl:basis-1/3"
-                        >
-                          <div className="flex aspect-square items-center justify-center">
-                            <img
-                              src={image.src}
-                              alt={image.alt}
-                              loading="eager"
-                              className="aspect-[4/5] object-cover"
-                            />
-                          </div>
-                        </CarouselItem>
-                      ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
-                  <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
-                </Carousel>
-                <div key={index} className="p-10 md:py-5 lg:py-5 xl:py-5">
-                  <h1 className="py-2 text-4xl font-bold text-neutral-600 uppercase">
-                    {item.title}
-                  </h1>
-                  <p className="text-lg">{item.content}</p>
+              <div key={index} data-id={`card-${index}`} className={cn(item.className)}>
+                <div className="flex flex-col items-center justify-center space-y-1 p-4 select-none">
+                  <button key={index} onClick={() => setActiveIndex(index)}>
+                    <img
+                      src={item.img.src}
+                      alt={item.img.alt}
+                      loading="lazy"
+                      className={cn(
+                        'block h-full w-80 cursor-pointer object-fill object-center transition-all duration-500 ease-out group-hover:scale-105',
+                        item.classNameImg,
+                      )}
+                    />
+                  </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </TransitionPanel>
+          </AnimatedBackground>
+        </div>
+        {isButtonVisible &&(
+          <motion.button
+            onClick={() => setIsPanelVisible(!isPanelVisible)}
+            className="fixed right-4.5 bottom-4 z-50 rounded-full bg-primary p-4 text-white flex items-center justify-center shadow-lg md:hidden"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="size-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </motion.button>
+        )}
+
+        <AnimatePresence>
+          {isPanelVisible && (
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 100 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="fixed right-5.5 bottom-20 z-40 flex flex-col items-center gap-2 md:hidden"
+            >
+              {ITEMS.map((item, index) => (
+                <motion.button
+                  key={index}
+                  onClick={() => {
+                    setActiveIndex(index);
+                    setIsPanelVisible(false);
+                  }}
+                  initial={{ scale: 0, y: 20 }}
+                  animate={{ scale: 1, y: 0 }}
+                  exit={{ scale: 0, y: 20 }}
+                  transition={{ type: 'spring', delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="rounded-full bg-white p-3 shadow-lg transition-colors hover:bg-zinc-100"
+                >
+                  {item.icon}
+                </motion.button>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <motion.div className="mx-auto flex flex-col items-center justify-between gap-10 py-10 md:container lg:container xl:container">
+          <motion.div className="relative w-full grow overflow-hidden">
+            <TransitionPanel
+              activeIndex={activeIndex}
+              transition={{ duration: 0.2, ease: 'easeInOut' }}
+              variants={{
+                enter: { opacity: 0, y: 50, filter: 'blur(4px)' },
+                center: { opacity: 1, y: 0, filter: 'blur(0px)' },
+                exit: { opacity: 0, y: 50, filter: 'blur(4px)' },
+              }}
+            >
+              {ITEMS.map((item, index) => (
+                <motion.div key={index}>
+                  <Carousel className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
+                    <CarouselContent
+                      classNameWrapper="w-full xl:overflow-hidden lg:overflow-hidden md:overflow-hidden overflow-visible"
+                      className="-ml-0 w-full"
+                    >
+                      {!!item.images.length &&
+                        item.images?.map((image, index) => (
+                          <CarouselItem
+                            key={index}
+                            className="basis-120 pl-0 md:basis-1/2 lg:basis-1/3 xl:basis-1/3"
+                          >
+                            <div className="flex aspect-square items-center justify-center">
+                              <img
+                                src={image.src}
+                                alt={image.alt}
+                                loading="eager"
+                                className="aspect-[4/5] object-cover"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
+                    <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
+                  </Carousel>
+                  <div key={index} className="p-10 md:py-5 lg:py-5 xl:py-5">
+                    <h1 className="py-2 text-4xl font-bold text-neutral-600 uppercase">
+                      {item.title}
+                    </h1>
+                    <p className="text-lg">{item.content}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </TransitionPanel>
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </>
+      </div>
+    </div>
   );
 }
