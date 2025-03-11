@@ -41,14 +41,17 @@ export function MorphingDialogBasicOne() {
             <MorphingDialogSubtitle className="text-zinc-700">
               Nacio en Brustico Corsica Francia 🇫🇷 el 24 de Octubre 1850 - Murio 1919 New York
             </MorphingDialogSubtitle>
+
+            <div className="flex w-full items-center justify-start mt-5">
+              <button
+                type="button"
+                className="relative flex h-10 w-10 shrink-0 scale-100 appearance-none items-center justify-center rounded-lg border border-zinc-800 text-zinc-500 transition-colors select-none hover:bg-zinc-100 hover:text-zinc-800 focus-visible:ring-2 active:scale-[0.98]"
+                aria-label="Open dialog"
+              >
+                <PlusIcon size={12} />
+              </button>
+            </div>
           </div>
-          <button
-            type="button"
-            className="relative ml-1 flex h-6 w-6 shrink-0 scale-100 appearance-none items-center justify-center rounded-lg border border-zinc-950/10 text-zinc-500 transition-colors select-none hover:bg-zinc-100 hover:text-zinc-800 focus-visible:ring-2 active:scale-[0.98] dark:border-zinc-50/10 dark:text-zinc-500 dark:focus-visible:ring-zinc-500"
-            aria-label="Open dialog"
-          >
-            <PlusIcon size={12} />
-          </button>
         </div>
       </MorphingDialogTrigger>
 
@@ -59,10 +62,17 @@ export function MorphingDialogBasicOne() {
           }}
           className="pointer-events-auto relative flex h-11/12 w-11/12 flex-col overflow-hidden border border-zinc-950/10 bg-white pb-10"
         >
-          <div className="p-6">
-            <MorphingDialogTitle className="text-2xl font-bold text-zinc-950 md:text-5xl lg:text-5xl xl:text-5xl">
-              QUIRICO PROSPERI BOSCHETI
-            </MorphingDialogTitle>
+          <div className="p-6 pt-12">
+            <div className="flex items-center justify-between gap-4">
+              <MorphingDialogImage
+                src={carouselHistoria3.src}
+                alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
+                className="size-17 rounded-lg object-cover object-center md:size-30 lg:size-40 xl:size-50"
+              />
+              <MorphingDialogTitle className="text-2xl font-bold text-zinc-950 md:text-5xl lg:text-5xl xl:text-5xl">
+                QUIRICO PROSPERI BOSCHETI
+              </MorphingDialogTitle>
+            </div>
             <MorphingDialogSubtitle className="text-zinc-700">
               Nacio en Brustico Corsica Francia 🇫🇷 el 24 de Octubre 1850 - Murio 1919 New York
             </MorphingDialogSubtitle>
