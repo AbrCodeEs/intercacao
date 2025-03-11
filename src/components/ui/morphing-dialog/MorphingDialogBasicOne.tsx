@@ -26,7 +26,7 @@ export function MorphingDialogBasicOne() {
         style={{
           borderRadius: '8px',
         }}
-        className="mx-5 my-10 flex w-3/5 flex-col overflow-hidden bg-white p-2 transition-colors duration-100 ease-out hover:bg-zinc-100 md:mx-10 md:flex-row lg:mx-10 lg:flex-row xl:mx-10 xl:flex-row"
+        className="mx-5 my-10 flex xl:w-3/5 lg:w-3/5 md:w-3/5 w-90 flex-col overflow-hidden bg-white p-2 transition-colors duration-100 ease-out hover:bg-zinc-100 md:mx-10 md:flex-row lg:mx-10 lg:flex-row xl:mx-10 xl:flex-row"
       >
         <MorphingDialogImage
           src={carouselHistoria3.src}
