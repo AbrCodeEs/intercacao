@@ -19,7 +19,7 @@ export function TimelineDemo() {
               height={500}
               className="rounded-lg object-cover size-auto"
             /> */}
-            <div className="size-60 bg-neutral-200 rounded-lg"></div>
+            <div className="xl:size-90 lg:size-80 md:size-70 size-60 bg-neutral-200 rounded-lg"></div>
           </div>
         </div>
       ),
@@ -40,7 +40,7 @@ export function TimelineDemo() {
               height={500}
               className="rounded-lg object-cover size-auto"
             /> */}
-            <div className="size-60 bg-neutral-200 rounded-lg"></div>
+              <div className="xl:size-90 lg:size-80 md:size-70 size-60 bg-neutral-200 rounded-lg"></div>
           </div>
         </div>
       ),
@@ -61,7 +61,7 @@ export function TimelineDemo() {
               height={500}
               className="rounded-lg object-cover size-auto"
             /> */}
-            <div className="size-60 bg-neutral-200 rounded-lg"></div>
+              <div className="xl:size-90 lg:size-80 md:size-70 size-60 bg-neutral-200 rounded-lg"></div>
           </div>
         </div>
       ),
@@ -83,7 +83,7 @@ export function TimelineDemo() {
               height={500}
               className="rounded-lg object-cover size-auto"
             /> */}
-            <div className="size-60 bg-neutral-200 rounded-lg"></div>
+              <div className="xl:size-90 lg:size-80 md:size-70 size-60 bg-neutral-200 rounded-lg"></div>
           </div>
         </div>
       ),

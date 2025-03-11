@@ -5,7 +5,7 @@ import { TransitionPanel } from '@/components/ui/transition-panel';
 import { AnimatedBackground } from '@/components/ui/animated-background';
 import { Card } from '@/components/ui/card';
 import { motion, AnimatePresence, useInView } from 'motion/react';
-import { TimelineDemo } from "@/components/ui/timeline/TimelineDemo";
+import { TimelineDemo } from '@/components/ui/timeline/TimelineDemo';
 
 import logoRegresoAlAgua from '@/images/global/logo-regreso-al-agua.webp';
 import logoWilfriedMerle from '@/images/global/logo-wilfried-merle.webp';
@@ -732,10 +732,10 @@ export function TabsTransitionPanel({ trans }: { trans: { [key: string]: string 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isCarouselInView]);
 
-  return (<>
-   
+  return (
     <>
-        <div className="flex h-full w-full flex-col gap-10 px-10 py-20 md:container md:px-20 lg:px-10 xl:px-10 lg:container xl:container">
+      <>
+        <div className="flex h-full w-full flex-col gap-10 px-10 py-20 md:container md:px-20 lg:container lg:px-10 xl:container xl:px-10">
           <div className="h-full">
             <div className="py-2">
               <h1 className="py-2 text-4xl font-bold text-neutral-600 uppercase">
@@ -778,10 +778,9 @@ export function TabsTransitionPanel({ trans }: { trans: { [key: string]: string 
         </div>
 
         <MorphingDialogBasicOne />
-        
+
         <motion.div ref={containerRef}>
           <motion.div ref={carouselRef}>
-
             <div className="grid grid-flow-row auto-rows-max grid-cols-3 items-center justify-center gap-0">
               <AnimatedBackground
                 className={cn('group flex items-center justify-center rounded-lg bg-zinc-100')}
@@ -919,6 +918,6 @@ export function TabsTransitionPanel({ trans }: { trans: { [key: string]: string 
           </motion.div>
         </motion.div>
       </>
-  </>
+    </>
   );
 }

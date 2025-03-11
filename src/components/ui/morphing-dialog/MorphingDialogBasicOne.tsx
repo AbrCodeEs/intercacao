@@ -26,7 +26,7 @@ export function MorphingDialogBasicOne() {
         style={{
           borderRadius: '8px',
         }}
-        className="mx-5 my-10 flex flex-col overflow-hidden bg-white p-2 transition-colors duration-100 ease-out hover:bg-zinc-100 md:mx-10 md:flex-row lg:mx-10 lg:flex-row xl:mx-10 xl:flex-row"
+        className="mx-5 my-10 flex w-3/5 flex-col overflow-hidden bg-white p-2 transition-colors duration-100 ease-out hover:bg-zinc-100 md:mx-10 md:flex-row lg:mx-10 lg:flex-row xl:mx-10 xl:flex-row"
       >
         <MorphingDialogImage
           src={carouselHistoria3.src}
@@ -42,7 +42,7 @@ export function MorphingDialogBasicOne() {
               Nacio en Brustico Corsica Francia 🇫🇷 el 24 de Octubre 1850 - Murio 1919 New York
             </MorphingDialogSubtitle>
 
-            <div className="flex w-full items-center justify-start mt-5">
+            <div className="mt-5 flex w-full items-center justify-start">
               <button
                 type="button"
                 className="relative flex h-10 w-10 shrink-0 scale-100 appearance-none items-center justify-center rounded-lg border border-zinc-800 text-zinc-500 transition-colors select-none hover:bg-zinc-100 hover:text-zinc-800 focus-visible:ring-2 active:scale-[0.98]"
@@ -63,19 +63,21 @@ export function MorphingDialogBasicOne() {
           className="pointer-events-auto relative flex h-11/12 w-11/12 flex-col overflow-hidden border border-zinc-950/10 bg-white pb-10"
         >
           <div className="p-6 pt-12">
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex items-start justify-between gap-4 md:justify-start lg:justify-start xl:justify-start">
               <MorphingDialogImage
                 src={carouselHistoria3.src}
                 alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
-                className="size-17 rounded-lg object-cover object-center md:size-30 lg:size-40 xl:size-50"
+                className="size-17 rounded-lg object-cover object-center md:size-10 lg:size-20 xl:size-30"
               />
-              <MorphingDialogTitle className="text-2xl font-bold text-zinc-950 md:text-5xl lg:text-5xl xl:text-5xl">
-                QUIRICO PROSPERI BOSCHETI
-              </MorphingDialogTitle>
+              <div className="flex flex-col">
+                <MorphingDialogTitle className="text-2xl font-bold text-zinc-950 md:text-3xl lg:text-3xl xl:text-3xl">
+                  QUIRICO PROSPERI BOSCHETI
+                </MorphingDialogTitle>
+                <MorphingDialogSubtitle className="text-zinc-700">
+                  Nacio en Brustico Corsica Francia 🇫🇷 el 24 de Octubre 1850 - Murio 1919 New York
+                </MorphingDialogSubtitle>
+              </div>
             </div>
-            <MorphingDialogSubtitle className="text-zinc-700">
-              Nacio en Brustico Corsica Francia 🇫🇷 el 24 de Octubre 1850 - Murio 1919 New York
-            </MorphingDialogSubtitle>
           </div>
 
           <TimelineDemo />
