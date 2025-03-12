@@ -24,7 +24,7 @@ const { socialResponsibility } = Astro.props;
   <h1 class="text-4xl font-bold text-neutral-600 uppercase">
     {socialResponsibility?.title}
   </h1>
-  
+
   <p class="text-lg">
     {socialResponsibility?.paragraphs}
   </p>
@@ -34,51 +34,55 @@ const { socialResponsibility } = Astro.props;
       class="flex w-full flex-none flex-col items-center justify-center gap-20 rounded-lg md:w-110 lg:w-110 xl:w-110"
     >
       {
-        <Image
-          inferSize={true}
-          loading="eager"
-          src={ socialResponsibility?.images?.[0].src}
-          alt={ socialResponsibility?.images?.[0].alt}
-          class="rounded-lg object-fill object-center"
-        />
+        (
+          <Image
+            inferSize={true}
+            loading="eager"
+            src={socialResponsibility?.images?.[0].src}
+            alt={socialResponsibility?.images?.[0].alt}
+            class="rounded-lg object-fill object-center"
+          />
+        )
       }
     </div>
   </div>
 
   <div class="relative w-full grow overflow-hidden">
-    <CarouselImages client:only="react" images={
-      [{
-        src: carousel1.src,
-        alt: '',
-      },
-      {
-        src: carousel2.src,
-        alt: '',
-      },
-      {
-        src: carousel3.src,
-        alt: '',
-      },
-      {
-        src: carousel4.src,
-        alt: '',
-      },
-      {
-        src: carousel5.src,
-        alt: '',
-      },
-      {
-        src: carousel6.src,
-        alt: '',
-      },
-      {
-        src: carousel7.src,
-        alt: '',
-      },
-      {
-        src: carousel8.src,
-        alt: '',
-      },
+    <CarouselImages
+      client:only="react"
+      images={[
+        {
+          src: carousel1.src,
+          alt: '',
+        },
+        {
+          src: carousel2.src,
+          alt: '',
+        },
+        {
+          src: carousel3.src,
+          alt: '',
+        },
+        {
+          src: carousel4.src,
+          alt: '',
+        },
+        {
+          src: carousel5.src,
+          alt: '',
+        },
+        {
+          src: carousel6.src,
+          alt: '',
+        },
+        {
+          src: carousel7.src,
+          alt: '',
+        },
+        {
+          src: carousel8.src,
+          alt: '',
+        },
       ]}
     />
   </div>
@@ -88,13 +92,15 @@ const { socialResponsibility } = Astro.props;
       class="flex w-full flex-none flex-col items-center justify-center gap-20 rounded-lg md:w-110 lg:w-110 xl:w-110"
     >
       {
-        <Image
-          inferSize={true}
-          loading="eager"
-          src={ socialResponsibility?.images?.[1].src}
-          alt={ socialResponsibility?.images?.[1].alt}
-          class="rounded-lg object-fill object-center"
-        />
+        (
+          <Image
+            inferSize={true}
+            loading="eager"
+            src={socialResponsibility?.images?.[1].src}
+            alt={socialResponsibility?.images?.[1].alt}
+            class="rounded-lg object-fill object-center"
+          />
+        )
       }
     </div>
   </div>

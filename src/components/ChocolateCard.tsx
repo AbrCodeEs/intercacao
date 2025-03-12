@@ -23,11 +23,11 @@ export function ChocolateCard({
   chocolate,
   sortBy,
   flavors,
-  trans
+  trans,
 }: {
   chocolate: ChocolateBar;
-  sortBy: SortOption;
-  flavors: FlavorOption[] | null;
+  sortBy: SortOption | null;
+  flavors: FlavorOption[] | string | null;
   trans: Record<string, any>;
 }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -93,12 +93,12 @@ export function ChocolateCard({
                         <span>{chocolate.creole.toFixed(1)}%</span>
                       </div>
                     )}
-                    
+
                     {flavors &&
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.fruity_sweet && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
+                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
                             loading="eager"
                             src="/icons/afrutado_dulces-white-icon.svg"
                             alt="afrutado dulces"
@@ -111,7 +111,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.fruity_citrus && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
+                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
                             loading="eager"
                             src="/icons/afrutado_citricos-white-icon.svg"
                             alt="afrutado citricos"
@@ -124,7 +124,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.flower && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
+                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
                             loading="eager"
                             src="/icons/aflorado-white-icon.svg"
                             alt="aflorados"
@@ -137,7 +137,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.creole && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
+                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
                             loading="eager"
                             src="/icons/acriollado-white-icon.svg"
                             alt="acriollado"
@@ -150,7 +150,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.cocoa && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
+                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
                             loading="eager"
                             src="/icons/cacao-white-icon.svg"
                             alt="cacao"
@@ -162,7 +162,7 @@ export function ChocolateCard({
                     {flavors && flavors.toLowerCase().replace(' ', '_') === IconTraslation.wood && (
                       <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                         <img
-                          className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
+                          className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
                           loading="eager"
                           src="/icons/boscoso-white-icon.svg"
                           alt="boscoso"
@@ -175,7 +175,7 @@ export function ChocolateCard({
                       flavors.toLowerCase().replace(' ', '_') === IconTraslation.spices && (
                         <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
                           <img
-                            className="mr-1 xl:size-5 lg:size-5 md:size-5 size-3"
+                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
                             loading="eager"
                             src="/icons/especias-white-icon.svg"
                             alt="especias"
@@ -242,7 +242,9 @@ export function ChocolateCard({
                   target="_blank"
                   className="mt-12 flex w-27 items-center justify-between rounded-lg bg-gray-300 px-3 py-2"
                 >
-                  <p className="md:text-md text-xs text-black lg:text-base xl:text-base">{trans.link}</p>
+                  <p className="md:text-md text-xs text-black lg:text-base xl:text-base">
+                    {trans.link}
+                  </p>
                   <CornerRightUp className="size-4 text-black" />
                 </a>
               </div>

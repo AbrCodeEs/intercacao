@@ -129,7 +129,6 @@ export async function getStaticPaths() {
         alt={trans('home').mundo_de_sabores.alt}
         class="w-75 object-fill object-center"
       />
-     
     </div>
 
     <div class="bg-primary h-5 w-full"></div>
@@ -165,10 +164,10 @@ export async function getStaticPaths() {
 
     <div
       id="section-prosperi"
-      class="bg-start flex flex-col h-auto min-h-screen w-full items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
+      class="bg-start flex h-auto min-h-screen w-full flex-col items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
       style={`background-image: url(${lienzoCacao.src});`}
     >
-      <TabsTransitionPanel trans={trans('home').tabs_transition_panel} client:only="react" />
+      <TabsTransitionPanel trans={trans('home').tabs_transition_panel} items={trans('home').tabs_transition_panel.items} client:only="react" />
     </div>
   </div>
 
@@ -180,7 +179,7 @@ export async function getStaticPaths() {
     style={`background-image: url(${lienzoCacao.src});`}
   >
     <div
-     class="flex w-full md:w-4/5 lg:w-2/3 xl:w-4/5 flex-col items-center justify-center gap-10 p-10 md:p-0 lg:p-0 xl:p-0"
+      class="flex w-full flex-col items-center justify-center gap-10 p-10 md:w-4/5 md:p-0 lg:w-2/3 lg:p-0 xl:w-4/5 xl:p-0"
     >
       <div>
         <h1 class="text-4xl font-bold text-neutral-600 uppercase">{trans('home').about.title}</h1>
@@ -193,7 +192,7 @@ export async function getStaticPaths() {
       <p class="text-lg">
         {trans('home').about.description}
       </p>
-      <div class="flex xl:h-150 lg:h-130 md:h-100 h-70 w-full items-center justify-center gap-5">
+      <div class="flex h-70 w-full items-center justify-center gap-5 md:h-100 lg:h-130 xl:h-150">
         <iframe
           loading="lazy"
           allowfullscreen
@@ -217,7 +216,7 @@ export async function getStaticPaths() {
     style={`background-image: url(${lienzoMundoBg.src});`}
   >
     <div
-      class="flex w-full md:w-4/5 lg:w-2/3 xl:w-4/5 flex-col items-center justify-center gap-10 py-30"
+      class="flex w-full flex-col items-center justify-center gap-10 py-30 md:w-4/5 lg:w-2/3 xl:w-4/5"
     >
       <Image class="w-60" src={logo} alt="Intercacao banner principal" />
       <ul class="flex flex-col items-start justify-start gap-5">

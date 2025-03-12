@@ -3,6 +3,7 @@
 
 export const SITE_TITLE = 'Intercacao';
 export const SITE_DESCRIPTION = 'Bienvenido a la intercacao';
+import type { LucideIcon } from 'lucide-react';
 
 type SortOption = 'rated' | 'fermented' | 'certified' | 'awarded' | 'creole';
 type FlavorOption =
@@ -41,7 +42,7 @@ enum Sort {
 interface FilterOptionSortItems {
   label: string;
   value: SortOption;
-  icon: React.ReactNode;
+  key: string;
 }
 
 interface FilterOptionFlavorItems {

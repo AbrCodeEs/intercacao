@@ -13,7 +13,9 @@ const { history } = Astro.props;
 >
   <h1 class="text-4xl font-bold text-neutral-600 uppercase">{history.title}</h1>
   <div class="flex w-full flex-col gap-8 md:flex-col lg:flex-row xl:flex-row">
-    <div class="flex w-full flex-none flex-col md:flex-row lg:flex-col xl:flex-col gap-5 md:w-1/2 lg:w-90 xl:w-90">
+    <div
+      class="flex w-full flex-none flex-col gap-5 md:w-1/2 md:flex-row lg:w-90 lg:flex-col xl:w-90 xl:flex-col"
+    >
       {
         history.images.map((image, index) => (
           <div class="group animate-trigger-right relative size-full flex-none overflow-hidden rounded-lg md:size-full lg:size-90 xl:size-90">
@@ -43,7 +45,6 @@ const { history } = Astro.props;
                   </i>
                 </p>
               );
-
           }
         })
       }

@@ -116,7 +116,7 @@ const { characteristics } = Astro.props;
             <Image
               inferSize={true}
               loading="lazy"
-              class="h-full w-full transform rounded-lg xl:object-fill lg:object-fill md:object-cover object-center transition-all duration-500 ease-out group-hover:scale-105"
+              class="h-full w-full transform rounded-lg object-center transition-all duration-500 ease-out group-hover:scale-105 md:object-cover lg:object-fill xl:object-fill"
               src={characteristics?.assessment?.equipment?.image}
               alt={characteristics?.assessment?.equipment?.imageAlt}
             />
@@ -135,7 +135,7 @@ const { characteristics } = Astro.props;
           <Image
             inferSize={true}
             loading="lazy"
-            class="h-full w-full transform rounded-lg xl:object-fill lg:object-fill md:object-cover object-center transition-all duration-500 ease-out group-hover:scale-105"
+            class="h-full w-full transform rounded-lg object-center transition-all duration-500 ease-out group-hover:scale-105 md:object-cover lg:object-fill xl:object-fill"
             src={characteristics?.analysis?.image}
             alt={characteristics?.analysis?.imageAlt}
           />

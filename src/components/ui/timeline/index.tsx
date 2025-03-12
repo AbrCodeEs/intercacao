@@ -1,21 +1,50 @@
-"use client";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+'use client';
+import { useScroll, useTransform, motion } from 'motion/react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface TimelineEntry {
   title: string;
-  content: React.ReactNode;
+  name?: string;
+  content?: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+// Actualiza la interfaz para incluir el callback
+interface TimelineProps {
+  data: TimelineEntry[];
+  onActiveIndexChange?: (index: number) => void;
+}
+
+export const Timeline = ({ data, onActiveIndexChange }: TimelineProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  const entryRefs = useRef<Array<HTMLDivElement | null>>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            const index = Number(entry.target.getAttribute('data-index'));
+            onActiveIndexChange?.(index);
+          }
+        });
+      },
+      {
+        root: containerRef.current,
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      },
+    );
+
+    entryRefs.current.forEach((ref, index) => {
+      if (ref) {
+        ref.setAttribute('data-index', index.toString());
+        observer.observe(ref);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, [data, onActiveIndexChange]);
 
   useEffect(() => {
     if (ref.current) {
@@ -26,52 +55,64 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    offset: ['start 10%', 'end 50%'],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
-      className="w-full bg-white font-sans md:px-10 overflow-auto"
-      ref={containerRef}
-    >
-      <div ref={ref} className="relative w-full ">
+    <div className="w-full overflow-auto bg-white pb-40 font-sans md:px-10" ref={containerRef}>
+      <div ref={ref} className="relative w-full">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            ref={(el) => (entryRefs.current[index] = el)}
+            className="flex justify-start pt-10 md:gap-10 md:pt-40"
           >
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-primary  border border-neutral-300 p-2" />
+            <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
+              <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full bg-white md:left-3">
+                <div className="bg-primary h-4 w-4 rounded-full border border-neutral-300 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 ">
+              <h3 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-5xl">
                 {item.title}
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 ">
+            <div className="relative w-full pr-4 pl-20 md:pl-4">
+              <h3 className="mb-4 block text-left text-2xl font-bold text-neutral-500 md:hidden">
                 {item.title}
               </h3>
-              {item.content}
+
+              <div>
+                <h1 className="text-xl font-bold text-neutral-800">{item.name}</h1>
+                <p className="mb-8 text-base font-normal text-neutral-800">{item.content}</p>
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                  {/* <img
+                    src="https://assets.aceternity.com/templates/startup-1.webp"
+                    alt="startup template"
+                    width={500}
+                    height={500}
+                    className="rounded-lg object-cover size-auto"
+                  /> */}
+                  <div className="size-60 rounded-lg bg-neutral-200 md:size-70 lg:size-80 xl:size-90"></div>
+                </div>
+              </div>
             </div>
           </div>
         ))}
         <div
           style={{
-            height: height + "px",
+            height: height + 'px',
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute top-0 left-8 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8 dark:via-neutral-700"
         >
           <motion.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-primary rounded-full"
+            className="bg-primary absolute inset-x-0 top-0 w-[2px] rounded-full"
           />
         </div>
       </div>
