@@ -1,17 +1,20 @@
 ---
-import { TimelineDemo } from "@/components/ui/timeline/TimelineDemo";
+import { TimelineDemo } from '@/components/ui/timeline/TimelineDemo';
 import BaseHead from '@/components/parts/BaseHead.astro';
 ---
 
-
 <html lang="es">
   <head>
-    <BaseHead title={"Historia | Intercacao Europe Bv"} description="Historia de Intercacao Europe Bv" keywords="" />
+    <BaseHead
+      title={'Historia | Intercacao Europe Bv'}
+      description="Historia de Intercacao Europe Bv"
+      keywords=""
+    />
   </head>
 
   <body>
     <main class="font-rawline">
-        <TimelineDemo client:only />
+      <TimelineDemo client:only />
     </main>
   </body>
 </html>

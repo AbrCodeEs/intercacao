@@ -44,17 +44,17 @@ function Header({
       >
         <div className={`burger ${isActive ? 'burgerActive' : ''}`}></div>
       </div>
-      <div className='absolute top-0 right-0 z-50'>
-        <ul className="flex flex-col w-full justify-end gap-1 px-5 py-5">
+      <div className="absolute top-0 right-0 z-50">
+        <ul className="flex w-full flex-col justify-end gap-1 px-5 py-5">
           <li
             onClick={() => changeLanguage('es')}
-            className={`cursor-pointer py-2 px-2.5 rounded-lg ${currentLang === 'es' ? 'font-bold bg-black text-white' : 'bg-gray-400 opacity-50'}`}
+            className={`cursor-pointer rounded-lg px-2.5 py-2 ${currentLang === 'es' ? 'bg-black font-bold text-white' : 'bg-gray-400 opacity-50'}`}
           >
             es
           </li>
           <li
             onClick={() => changeLanguage('en')}
-            className={`cursor-pointer py-2 px-2.5 rounded-lg ${currentLang === 'en' ? 'font-bold bg-black text-white' : 'bg-gray-400 opacity-50'}`}
+            className={`cursor-pointer rounded-lg px-2.5 py-2 ${currentLang === 'en' ? 'bg-black font-bold text-white' : 'bg-gray-400 opacity-50'}`}
           >
             en
           </li>

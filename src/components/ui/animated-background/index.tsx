@@ -1,19 +1,10 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, type Transition, motion } from 'motion/react';
-import {
-  Children,
-  cloneElement,
-  type ReactElement,
-  useEffect,
-  useState,
-  useId,
-} from 'react';
+import { Children, cloneElement, type ReactElement, useEffect, useState, useId } from 'react';
 
 export type AnimatedBackgroundProps = {
-  children:
-    | ReactElement<{ 'data-id': string }>[]
-    | ReactElement<{ 'data-id': string }>;
+  children: ReactElement<{ 'data-id': string }>[] | ReactElement<{ 'data-id': string }>;
   defaultValue?: string;
   onValueChange?: (newActiveId: string | null) => void;
   className?: string;
@@ -83,8 +74,8 @@ export function AnimatedBackground({
             />
           )}
         </AnimatePresence>
-        <div className='z-10'>{child.props.children}</div>
-      </>
+        <div className="z-10">{child.props.children}</div>
+      </>,
     );
   });
 }
