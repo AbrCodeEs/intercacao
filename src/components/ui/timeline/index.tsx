@@ -103,7 +103,7 @@ export const Timeline = ({ data, onActiveIndexChange }: TimelineProps) => {
         ))}
         <div
           style={{
-            height: height + 100 + 'px',
+            height: height + 300 + 'px',
           }}
           className="absolute top-0 left-8 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8 dark:via-neutral-700"
         >
