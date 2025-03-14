@@ -5,7 +5,7 @@ export function TimelineDemo({
   data,
   onActiveIndexChange,
 }: {
-  data: { title: string; content: React.ReactNode }[];
+  data: { title: string; content: React.ReactNode, img?: string }[];
   onActiveIndexChange: (index: number) => void;
 }) {
   return <Timeline data={data} onActiveIndexChange={onActiveIndexChange} />;

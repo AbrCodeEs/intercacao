@@ -1,9 +1,11 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import React, { useState } from 'react';
-import { chocolateBars, type ChocolateBar } from '@/data/chocolateBars';
-import type { LucideIcon } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { chocolateBars } from '@/data/chocolateBars';
+import { useIntersectionObserver } from '@uidotdev/usehooks';
+// ... (imports previos se mantienen)
+import { Filter } from 'lucide-react';
 
 import { FloatingButtonPanel } from '@/components/ui/floating-button';
 import { ChocolateCard } from '@/components/ChocolateCard';
@@ -23,12 +25,12 @@ import type {
   CountryOption,
   FilterOptionSortItems,
   FilterOptionFlavorItems,
-  FilterOptionCountryItems,
 } from '@/consts';
-import { Sort, Flavor, Country } from '@/consts';
-import { SpadeIcon as Spices, TreePine as Tree, Star, Award, Trophy, Nut } from 'lucide-react';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { Sort } from '@/consts';
+import { Star, Award, Trophy, Nut } from 'lucide-react';
+
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 
 const IconsSortOption = {
   rated: <Star className="h-6 w-6 fill-current text-black" />,
@@ -43,130 +45,6 @@ const IconsSortOption = {
   awarded: <Trophy className="h-6 w-6 fill-current text-black" />,
   creole: <Nut className="h-6 w-6 fill-current text-black" />,
 };
-
-const CountriesSortOption = [
-  {
-    label: 'Colombia',
-    value: 'Colombia',
-  },
-  {
-    label: 'Peru',
-    value: 'Peru',
-  },
-  {
-    label: 'Venezuela',
-    value: 'Venezuela',
-  },
-];
-
-// const FlavorsSortOption = [
-//   {
-//     label: 'Afrutado dulce ',
-//     value: 'Fruity Sweet',
-//     className: 'bg-fruity-sweet text-white hover:text-white',
-//     icon: (
-//       <img
-//         className="size-4"
-//         loading="eager"
-//         src="/icons/afrutado_dulces-icon.svg"
-//         alt="afrutado dulces"
-//       />
-//     ),
-//     iconWhite: (
-//       <img
-//         className="size-4"
-//         loading="eager"
-//         src="/icons/afrutado_dulces-white-icon.svg"
-//         alt="afrutado dulces"
-//       />
-//     ),
-//   },
-//   {
-//     label: 'Afrutado cítrico',
-//     value: 'Fruity Citrus',
-//     className: 'bg-fruity-citrus',
-//     icon: (
-//       <img
-//         className="size-4"
-//         loading="eager"
-//         src="/icons/afrutado_citricos-icon.svg"
-//         alt="afrutado citricos"
-//       />
-//     ),
-//     iconWhite: (
-//       <img
-//         className="size-4"
-//         loading="eager"
-//         src="/icons/afrutado_citricos-white-icon.svg"
-//         alt="afrutado citricos"
-//       />
-//     ),
-//   },
-//   {
-//     label: 'Aflorado',
-//     value: 'Flower',
-//     className: 'bg-flower text-white hover:text-white',
-//     icon: <img className="size-4" loading="eager" src="/icons/aflorado-icon.svg" alt="aflorados" />,
-//     iconWhite: (
-//       <img
-//         className="size-4"
-//         loading="eager"
-//         src="/icons/aflorado-white-icon.svg"
-//         alt="aflorados"
-//       />
-//     ),
-//   },
-//   {
-//     label: 'Acriollado',
-//     value: 'Creole',
-//     className: 'bg-creole',
-//     icon: (
-//       <img className="size-4" loading="eager" src="/icons/acriollado-icon.svg" alt="acriollado" />
-//     ),
-//     iconWhite: (
-//       <img
-//         className="size-4"
-//         loading="eager"
-//         src="/icons/acriollado-white-icon.svg"
-//         alt="acriollado"
-//       />
-//     ),
-//   },
-//   {
-//     label: 'Cacao',
-//     value: 'Cocoa',
-//     className: 'bg-cocoa text-white hover:text-white',
-//     icon: <img className="size-4" loading="eager" src="/icons/cacao-icon.svg" alt="cacao" />,
-//     iconWhite: (
-//       <img className="size-4" loading="eager" src="/icons/cacao-white-icon.svg" alt="cacao" />
-//     ),
-//   },
-//   {
-//     label: 'Boscoso',
-//     value: 'Wood',
-//     className: 'bg-wood text-white hover:text-white',
-//     icon: <img className="size-4" loading="eager" src="/icons/boscoso-icon.svg" alt="boscoso" />,
-//     iconWhite: (
-//       <img className="size-4" loading="eager" src="/icons/boscoso-white-icon.svg" alt="boscoso" />
-//     ),
-//   },
-//   {
-//     label: 'Especias',
-//     value: 'Spices',
-//     className: 'bg-spices',
-//     icon: (
-//       <img
-//         className="size-4 text-white"
-//         loading="eager"
-//         src="/icons/especias-icon.svg"
-//         alt="especias"
-//       />
-//     ),
-//     iconWhite: (
-//       <img className="size-4" loading="eager" src="/icons/especias-icon.svg" alt="especias" />
-//     ),
-//   },
-// ];
 
 const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
   ({ className, children, ...props }, ref) => {
@@ -199,6 +77,14 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
   const [selectedFlavor, setSelectedFlavor] = useState<FlavorOption | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
 
+  // ... otros estados
+  // const [buttonPositions, setButtonPositions] = useState<Record<string, DOMRect>>({});
+  const flavorsSectionRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isFlavorSectionVisible, setIsFlavorSectionVisible] = useState(true);
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
+
+  // ... otros estados
   const cocoaData = chocolateBars
     .map((cocoa) => {
       let url;
@@ -271,12 +157,52 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
     setSelectedCountry(null);
   };
 
-  const handleCountrySelect = (country: CountryOption) => {
-    setSelectedCountry((current) => (current === country ? null : country));
-  };
+  const isFlavorSectionInView = useInView(flavorsSectionRef, {
+    margin: '0px 0px -50px 0px',
+    amount: 'some',
+  });
+
+  const isContainerInView = useInView(containerRef, {
+    margin: '0px 0px -50px 0px',
+    amount: 'some',
+  });
+  // Configurar Intersection Observer
+  const [sectionEntry] = useIntersectionObserver(flavorsSectionRef, {
+    threshold: 0.1,
+    rootMargin: '0px',
+  });
+
+  // useEffect(() => {
+  //   if (!isInView) {
+  //     setIsPanelOpen(true);
+  //     setIsFlavorSectionVisible(false)
+     
+  //   } else {
+  //     setIsPanelOpen(false);
+  //     setIsFlavorSectionVisible(sectionEntry?.isIntersecting ?? true);
+  //     if (sectionEntry?.isIntersecting) {
+  //       setIsPanelOpen(false); // Cerrar panel cuando la sección es visible
+  //     }
+  //   }
+
+  // }, [sectionEntry, isInView, isContainerInView]);
+
+  useEffect(() => {
+    const isSectionVisible = sectionEntry?.isIntersecting ?? true;
+    const shouldShow = !isSectionVisible && isContainerInView;
+    
+    setIsFlavorSectionVisible(isSectionVisible);
+    setIsPanelOpen(shouldShow); // Forzar estado basado en condiciones
+  
+    // Ocultar si el contenedor no es visible
+    if (!isContainerInView) {
+      setIsPanelOpen(false);
+    }
+  }, [sectionEntry, isContainerInView]);
+  
 
   return (
-    <div className="p-5">
+    <div className="p-5" ref={containerRef}>
       <div className="space-y-4 py-5">
         <div className="hidden flex-col justify-center gap-10 p-3 md:flex lg:flex xl:flex">
           <h2 className="flex items-center gap-2 pb-5 text-center text-xl font-semibold text-white before:block before:h-px before:w-full before:border-t before:border-gray-100/20 before:content-[''] after:block after:h-px after:w-full after:border-t after:border-gray-100/20 after:content-['']">
@@ -285,20 +211,22 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
           <div className="flex flex-wrap items-center justify-center gap-2">
             {(TypesSortOption as FilterOptionSortItems[]).map(({ value, label, key }) => {
               return (
-                <Button
-                  key={value}
-                  variant={sortBy === value ? 'default' : 'ghost'}
-                  onClick={() => handleSortSelect(value as SortOption)}
-                  size="sm"
-                  className={
-                    sortBy === value
-                      ? 'bg-gray-500 text-black hover:bg-white/90'
-                      : 'bg-gray-300 text-black hover:bg-gray-400'
-                  }
-                >
-                  {IconsSortOption[key]}
-                  <span className="ml-2">{label.charAt(0).toUpperCase() + label.slice(1)}</span>
-                </Button>
+                <motion.div key={value} layoutId={`flavor-${value}`}>
+                  <Button
+                    key={value}
+                    variant={sortBy === value ? 'default' : 'ghost'}
+                    onClick={() => handleSortSelect(value as SortOption)}
+                    size="sm"
+                    className={
+                      sortBy === value
+                        ? 'bg-gray-500 text-black hover:bg-white/90'
+                        : 'bg-gray-300 text-black hover:bg-gray-400'
+                    }
+                  >
+                    {IconsSortOption[key]}
+                    <span className="ml-2">{label.charAt(0).toUpperCase() + label.slice(1)}</span>
+                  </Button>
+                </motion.div>
               );
             })}
           </div>
@@ -308,6 +236,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
           <h2 className="flex items-center gap-2 pb-5 text-center text-xl font-semibold text-white before:block before:h-px before:w-full before:border-t before:border-gray-100/20 before:content-[''] after:block after:h-px after:w-full after:border-t after:border-gray-100/20 after:content-['']">
             <span className="w-110">{trans.filter_flavor}</span>
           </h2>
+
           <div className="flex flex-col justify-center gap-10 p-3 md:hidden lg:hidden xl:hidden">
             <div className="flex flex-wrap items-center justify-center gap-2">
               <NavigationMenu>
@@ -339,48 +268,102 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
               </NavigationMenu>
             </div>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-2">
+
+          <div ref={flavorsSectionRef} className="flex flex-wrap items-center justify-center gap-2">
+            <AnimatePresence>
             {(FlavorsSortOption as FilterOptionFlavorItems[]).map((flavor) => (
-              <Button
+              <motion.div
                 key={flavor.value}
-                variant={selectedFlavor === flavor.value ? 'default' : 'ghost'}
-                onClick={() => handleFlavorSelect(flavor.value as FlavorOption)}
-                size="sm"
-                className={
-                  selectedFlavor === flavor.value ? `${flavor.className}` : `${flavor.className}`
-                }
+                layoutId={`flavor-${flavor.value}`} // Identificador único para la animación
               >
-                <img className="size-4" loading="eager" src={flavor.iconWhite} alt={flavor.label} />
-                {flavor.label.charAt(0).toUpperCase() + flavor.label.slice(1)}
-              </Button>
+                <Button
+                  data-value={flavor.value}
+                  variant={selectedFlavor === flavor.value ? 'default' : 'ghost'}
+                  onClick={() => handleFlavorSelect(flavor.value as FlavorOption)}
+                  size="sm"
+                  className={cn(
+                    selectedFlavor === flavor.value ? `${flavor.className}` : `${flavor.className}`,
+                  )}
+                >
+                  <img
+                    className="size-4"
+                    loading="eager"
+                    src={flavor.iconWhite}
+                    alt={flavor.label}
+                  />
+                  {flavor.label.charAt(0).toUpperCase() + flavor.label.slice(1)}
+                </Button>
+              </motion.div>
             ))}
+            </AnimatePresence>
           </div>
         </div>
-        {/* <div className="flex hidden flex-col justify-center gap-10 p-3 md:block lg:block xl:block">
-          <h2 className="flex items-center gap-2 pb-5 text-center text-xl font-semibold text-white before:block before:h-px before:w-full before:border-t before:border-gray-100/20 before:content-[''] after:block after:h-px after:w-full after:border-t after:border-gray-100/20 after:content-['']">
-            <span className="w-50">País</span>
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {(CountriesSortOption as FilterOptionCountryItems[]).map((country) => (
-              <Button
-                key={country.value}
-                variant={selectedCountry === country.value ? 'default' : 'ghost'}
-                onClick={() => handleCountrySelect(country.value as CountryOption)}
-                size="sm"
-                className={
-                  selectedCountry === country.value
-                    ? 'bg-gray-500 text-black hover:bg-white/90'
-                    : 'bg-gray-300 text-black hover:bg-gray-400'
-                }
+    
+      </div>
+
+      {/* Panel flotante */}
+      <div className="fixed right-5 bottom-20 z-[60]">
+        <motion.div className="flex flex-col items-end gap-2">
+          <AnimatePresence>
+            {isPanelOpen || (!isFlavorSectionInView && isContainerInView) && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                className="flex flex-col gap-2"
               >
-                <div className="flex size-5 items-center gap-2 overflow-hidden rounded-full">
-                  <img src={`/icons/${country.value}.png`} className="size-5" alt="" />
-                </div>
-                {country.label.charAt(0).toUpperCase() + country.label.slice(1)}
-              </Button>
-            ))}
-          </div>
-        </div> */}
+                {(FlavorsSortOption as FilterOptionFlavorItems[]).map((flavor) => (
+                  <motion.div
+                    key={flavor.value}
+                    layoutId={`flavor-${flavor.value}`} // Mismo layoutId que en la sección original
+                    transition={{ stiffness: 300, damping: 20 }}
+                  >
+                    <Button
+                      onClick={() => {
+                        handleFlavorSelect(flavor.value as FlavorOption);
+                        // setIsPanelOpen(false);
+                      }}
+                      className={cn(
+                        'h-10 w-10 rounded-full p-2',
+                        flavor.className,
+                        selectedFlavor === flavor.value && 'ring-2 ring-black',
+                      )}
+                    >
+                      <img
+                        src={flavor.iconWhite}
+                        className="size-5"
+                        alt={flavor.label}
+                      />
+                    </Button>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Botón del filtro */}
+          {(!isFlavorSectionInView && isContainerInView) && (
+            <motion.div
+              layout
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 100 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            >
+              <motion.button
+                onClick={() => setIsPanelOpen(!isPanelOpen)}
+                className="bg-primary flex h-11 w-11 items-center justify-center rounded-full p-3 shadow-lg"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0 }}
+              >
+                <Filter className="size-5 text-white" />
+              </motion.button>
+            </motion.div>
+          )}
+        </motion.div>
       </div>
 
       <FloatingButtonPanel
@@ -391,6 +374,9 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
         buttonClassName="bg-primary text-white"
         panelClassName="gap-4"
         panelItemClassName=""
+        panelVisible={false}
+        buttonVisible={!isFlavorSectionInView}
+        direction="left"
       >
         <motion.div
           className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-4 xl:grid-cols-3 xl:gap-4"
