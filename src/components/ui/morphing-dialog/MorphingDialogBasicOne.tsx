@@ -90,7 +90,7 @@ const data = [
   },
   {
     title: '1900',
-    name: 'Jaime Martin Prosperi ',
+    name: 'Pablo y Martín Prosperi',
     content: 'A finales del siglo XIX, su hijo Pablo se incorporó al negocio, posteriormente Martín a comienzos del XX.',
     img: MartinPROSPERI.src
   },
@@ -222,7 +222,7 @@ const data = [
   },
   {
     title: '2024',
-    name: 'Jaime Martin Prosperi',
+    name: 'Alejandro Prosperi',
     content: "Se cumplieron 150 años de haber pisado tierra carupanera (Quirico Prosperi) y de haber visto lo que cambiaría el destino de él y su familia: El Cacao."
   },
   {
@@ -298,7 +298,7 @@ export function MorphingDialogBasicOne() {
         >
           <div className="p-6 pt-12">
             <div className="flex items-start justify-between gap-4 md:justify-start lg:justify-start xl:justify-start">
-              {data[activeIndex].img && <MorphingDialogImage
+              {data[activeIndex].img && <img
                 src={data[activeIndex].img}
                 alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
                 className="size-17 rounded-lg object-cover object-center md:size-10 lg:size-20 xl:size-30"
