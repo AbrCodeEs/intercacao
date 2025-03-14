@@ -294,19 +294,19 @@ export function MorphingDialogBasicOne() {
               QUIRICO PROSPERI BOSCHETI
             </MorphingDialogTitle>
             <MorphingDialogSubtitle className="text-zinc-700">
-              Nació el 24 de octubre de 1850 en Brustico, una pequeña aldea en las montañas de Córcega, Francia, donde creció rodeado de castaños ...
+              Nació el 24 de octubre de <b>1850</b> en Brustico, una pequeña aldea en las montañas de <b>Córcega</b>, Francia, donde creció rodeado de castaños ...
             </MorphingDialogSubtitle>
             <div className="text-zinc-700 pl-5 py-3">
               <div className="flex flex-col border-zinc-800 border-l-2">
-                <h1 className="pl-3 text-xl font-bold">1870-1871</h1>
+                <h1 className="pl-3 text-xl font-bold">1873-1874</h1>
                 <h2 className="pl-3 text-lg font-bold text-neutral-600">Quirico Prosperi Boschetti</h2>
-                <p className="pl-3 text-sm">Desde joven, mostró un espíritu inquieto y valiente, alistándose en el ejército francés y participando en la Guerra Franco-Prusiana (1870-1871)...</p>
+                <p className="pl-3 text-sm">Nace su primer hijo, Paul Prosperi, y en <b>1874</b>, amigos corsos en Venezuela...</p>
               </div>
 
               <div className="flex flex-col border-zinc-800 border-l-2 pt-3">
-                <h1 className="pl-3 text-xl font-bold">1872</h1>
+                <h1 className="pl-3 text-xl font-bold">1882</h1>
                 <h2 className="pl-3 text-lg font-bold text-neutral-600">Quirico Prosperi Boschetti</h2>
-                <p className="pl-3 text-sm">Finalizada la guerra, Francia derrotada y económicamente deprimida, Quirico Prosperi, con 21 años, regresa a Brustico, Córcega, para casarse...</p>
+                <p className="pl-3 text-sm">Adquiere la plantación de Cacao y Café llamada "El Rincón". Municipio Benitez, Edo Sucre. Venezuela...</p>
               </div>
             </div>
 
