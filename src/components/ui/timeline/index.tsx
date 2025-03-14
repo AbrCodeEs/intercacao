@@ -6,6 +6,7 @@ interface TimelineEntry {
   title: string;
   name?: string;
   content?: React.ReactNode;
+  img?: string;
 }
 
 // Actualiza la interfaz para incluir el callback
@@ -88,14 +89,14 @@ export const Timeline = ({ data, onActiveIndexChange }: TimelineProps) => {
                 <h1 className="text-xl font-bold text-neutral-800">{item.name}</h1>
                 <p className="mb-8 text-base font-normal text-neutral-800">{item.content}</p>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-                  {/* <img
-                    src="https://assets.aceternity.com/templates/startup-1.webp"
-                    alt="startup template"
-                    width={500}
-                    height={500}
-                    className="rounded-lg object-cover size-auto"
-                  /> */}
-                  <div className="size-60 rounded-lg bg-neutral-200 md:size-70 lg:size-80 xl:size-90"></div>
+                  {item.img && (
+                    <img
+                      src={item.img}
+                      alt="timeline image"
+                      className="size-full rounded-lg object-cover"
+                    />
+                  )}
+                  
                 </div>
               </div>
             </div>

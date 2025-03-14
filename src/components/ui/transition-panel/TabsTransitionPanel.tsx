@@ -4,6 +4,9 @@ import React, { useRef, useState, useEffect } from 'react';
 import { TransitionPanel } from '@/components/ui/transition-panel';
 import { AnimatedBackground } from '@/components/ui/animated-background';
 import { motion, AnimatePresence, useInView } from 'motion/react';
+import logoFundacionProsperi from '@/images/global/logo-fundacion-prosperi.webp';
+// En tu página/layout
+import { DevelopmentAlertSection } from '@/components/DevelopmentAlertSection';
 
 import { cn } from '@/assets/lib/utils';
 
@@ -16,46 +19,10 @@ import {
 } from '@/components/ui/carousel';
 import { MorphingDialogBasicOne } from '@/components/ui/morphing-dialog/MorphingDialogBasicOne';
 
-// const historia = [
-//   {
-//     src: carouselHistoria1.src,
-//     alt: 'Historia',
-//   },
-//   {
-//     src: carouselHistoria2.src,
-//     alt: 'Historia',
-//   },
-//   {
-//     src: carouselHistoria3.src,
-//     alt: 'Historia',
-//   },
-//   {
-//     src: carouselHistoria4.src,
-//     alt: 'Historia',
-//   },
-//   {
-//     src: carouselHistoria5.src,
-//     alt: 'Historia',
-//   },
-//   {
-//     src: carouselHistoria6.src,
-//     alt: 'Historia',
-//   },
-//   {
-//     src: carouselHistoria7.src,
-//     alt: 'Historia',
-//   },
-//   {
-//     src: carouselHistoria8.src,
-//     alt: 'Historia',
-//   },
-// ];
-
 interface TabsTransitionPanelProps {
   trans: [string, string];
   items: { title: string; icon: string; images: { src: string; alt: string }[] }[];
 }
-
 
 export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) {
   const [activeIndex, setActiveIndex] = useState(items.length - 1);
@@ -105,9 +72,10 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
         <div className="flex h-full w-full flex-col gap-10 px-10 py-20 md:container md:px-20 lg:container lg:px-10 xl:container xl:px-10">
           <div className="h-full">
             <div className="py-2">
-              <h1 className="py-2 text-4xl font-bold text-neutral-600 uppercase">
+              {/* <h1 className="py-2 text-4xl font-bold text-neutral-600 uppercase">
                 {trans.title}
-              </h1>
+              </h1> */}
+              <img src={logoFundacionProsperi.src} alt="Fundacion Prosperi" className="w-100 pb-3" />
               <p className="text-lg">
                 {trans.description}
               </p>
@@ -242,39 +210,40 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
                   }}
                 >
                   {items.map((item, index) => (
-                    <motion.div key={index}>
-                      <Carousel className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
-                        <CarouselContent
-                          classNameWrapper="w-full xl:overflow-hidden lg:overflow-hidden md:overflow-hidden overflow-visible"
-                          className="-ml-0 w-full"
-                        >
-                          {!!item.images.length &&
-                            item.images?.map((image, index) => (
-                              <CarouselItem
-                                key={index}
-                                className="basis-120 pl-0 md:basis-1/2 lg:basis-1/3 xl:basis-1/3"
-                              >
-                                <div className="flex aspect-square items-center justify-center">
-                                  <img
-                                    src={image.src}
-                                    alt={image.alt}
-                                    loading="eager"
-                                    className="aspect-[4/5] object-cover"
-                                  />
-                                </div>
-                              </CarouselItem>
-                            ))}
-                        </CarouselContent>
-                        <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
-                        <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
-                      </Carousel>
-                      <div key={index} className="p-10 md:py-5 lg:py-5 xl:py-5">
-                        <h1 className="py-2 text-4xl font-bold text-neutral-600 uppercase">
-                          {item.title}
-                        </h1>
-                        <p className="text-lg">{item.content}</p>
-                      </div>
-                    </motion.div>
+                    <DevelopmentAlertSection />
+                    // <motion.div key={index}>
+                    //   <Carousel className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
+                    //     <CarouselContent
+                    //       classNameWrapper="w-full xl:overflow-hidden lg:overflow-hidden md:overflow-hidden overflow-visible"
+                    //       className="-ml-0 w-full"
+                    //     >
+                    //       {!!item.images.length &&
+                    //         item.images?.map((image, index) => (
+                    //           <CarouselItem
+                    //             key={index}
+                    //             className="basis-120 pl-0 md:basis-1/2 lg:basis-1/3 xl:basis-1/3"
+                    //           >
+                    //             <div className="flex aspect-square items-center justify-center">
+                    //               <img
+                    //                 src={image.src}
+                    //                 alt={image.alt}
+                    //                 loading="eager"
+                    //                 className="aspect-[4/5] object-cover"
+                    //               />
+                    //             </div>
+                    //           </CarouselItem>
+                    //         ))}
+                    //     </CarouselContent>
+                    //     <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
+                    //     <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
+                    //   </Carousel>
+                    //   <div key={index} className="p-10 md:py-5 lg:py-5 xl:py-5">
+                    //     <h1 className="py-2 text-4xl font-bold text-neutral-600 uppercase">
+                    //       {item.title}
+                    //     </h1>
+                    //     <p className="text-lg">{item.content}</p>
+                    //   </div>
+                    // </motion.div>
                   ))}
                 </TransitionPanel>
               </motion.div>
