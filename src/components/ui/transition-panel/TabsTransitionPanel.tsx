@@ -75,10 +75,12 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
               {/* <h1 className="py-2 text-4xl font-bold text-neutral-600 uppercase">
                 {trans.title}
               </h1> */}
-              <img src={logoFundacionProsperi.src} alt="Fundacion Prosperi" className="w-100 pb-3" />
-              <p className="text-lg">
-                {trans.description}
-              </p>
+              <img
+                src={logoFundacionProsperi.src}
+                alt="Fundacion Prosperi"
+                className="w-100 pb-3"
+              />
+              <p className="text-lg">{trans.description}</p>
             </div>
           </div>
         </div>
@@ -189,9 +191,20 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
                       whileTap={{ scale: 0.95 }}
                       className="rounded-full bg-white p-3 shadow-lg transition-colors hover:bg-zinc-100"
                     >
-                      {item.icon.split('/').length > 1 ? <img className="size-5" src={item.icon} alt={item.title} /> : 
-                      <span className={cn("p-1 ", item.icon == 'R' && ' text-yellow-500', item.icon == 'M' && ' text-blue-500', item.icon == 'D' && ' text-red-500')}>{item.icon}</span>
-                      }
+                      {item.icon.split('/').length > 1 ? (
+                        <img className="size-5" src={item.icon} alt={item.title} />
+                      ) : (
+                        <span
+                          className={cn(
+                            'p-1',
+                            item.icon == 'R' && 'text-yellow-500',
+                            item.icon == 'M' && 'text-blue-500',
+                            item.icon == 'D' && 'text-red-500',
+                          )}
+                        >
+                          {item.icon}
+                        </span>
+                      )}
                     </motion.button>
                   ))}
                 </motion.div>

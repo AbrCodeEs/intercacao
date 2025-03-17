@@ -8,11 +8,9 @@ export const DevelopmentAlertSection = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   return (
-    <div
-      className="relative mb-6 overflow-hidden border-2 border-yellow-500 "
-    >
-      <div className="flex items-center justify-center gap-4 p-6 h-[50vh]">
-        <div className="flex-1 flex flex-col items-center justify-center ">
+    <div className="relative mb-6 overflow-hidden border-2 border-yellow-500">
+      <div className="flex h-[50vh] items-center justify-center gap-4 p-6">
+        <div className="flex flex-1 flex-col items-center justify-center">
           <h3 className="mb-2 text-3xl font-semibold text-yellow-800">
             Nuevo contenido en desarrollo
           </h3>

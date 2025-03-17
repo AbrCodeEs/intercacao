@@ -95,6 +95,8 @@
   --color-cocoa: #683b1a;
   --color-wood: #3caa33;
   --color-spices: #f8dc38;
+
+  --color-cocoa-dark: #39200f;
 }
 
 .bg-fruity-sweet {
@@ -127,6 +129,10 @@
 
 .bg-spices {
   background: var(--color-spices);
+}
+
+.bg-cocoa-dark {
+  background: var(--color-cocoa-dark)
 }
 
 .border-fruity-sweet {
@@ -181,7 +187,7 @@ section.active {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #39200f;
+  background-color: var(--color-cocoa-dark);
   cursor: pointer;
   display: flex;
   align-items: center;

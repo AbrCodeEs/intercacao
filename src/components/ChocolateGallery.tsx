@@ -30,7 +30,7 @@ import type {
 import { Sort } from '@/consts';
 import { Star, Award, Trophy, Nut } from 'lucide-react';
 
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { motion, AnimatePresence, useInView, useScroll, useSpring } from 'framer-motion';
 
 const IconsSortOption = {
   rated: <Star className="h-6 w-6 fill-current text-black" />,
@@ -77,12 +77,66 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
   const [selectedFlavor, setSelectedFlavor] = useState<FlavorOption | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
 
-  // ... otros estados
   // const [buttonPositions, setButtonPositions] = useState<Record<string, DOMRect>>({});
   const flavorsSectionRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
   const [isFlavorSectionVisible, setIsFlavorSectionVisible] = useState(true);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const [isContainerEndVisible, setIsContainerEndVisible] = useState(false);
+
+  // 1. Configurar IntersectionObserver con parámetros optimizados
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Actualizar estado solo cuando cambia la visibilidad
+        setIsContainerEndVisible(entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1, // Se activa con al menos 10% visible
+      }
+    );
+
+    const sentinel = sentinelRef.current;
+    if (sentinel) {
+      observer.observe(sentinel);
+    }
+
+    return () => {
+      if (sentinel) observer.unobserve(sentinel);
+    };
+  }, []);
+
+  // 2. Calcular posición del panel en modo absoluto
+  const [absolutePosition, setAbsolutePosition] = useState({ bottom: 0, right: 0 });
+  
+  useEffect(() => {
+    const calculatePosition = () => {
+      if (!containerRef.current) return;
+      
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const scrollBottom = window.scrollY + window.innerHeight;
+      
+      setAbsolutePosition({
+        bottom: scrollBottom - containerRect.bottom + 20,
+        right: window.innerWidth - containerRect.right + 20
+      });
+    };
+
+    // Actualizar posición en eventos relevantes
+    window.addEventListener('scroll', calculatePosition);
+    window.addEventListener('resize', calculatePosition);
+    calculatePosition();
+
+    return () => {
+      window.removeEventListener('scroll', calculatePosition);
+      window.removeEventListener('resize', calculatePosition);
+    };
+  }, []);
 
   // ... otros estados
   const cocoaData = chocolateBars
@@ -172,21 +226,6 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
     rootMargin: '0px',
   });
 
-  // useEffect(() => {
-  //   if (!isInView) {
-  //     setIsPanelOpen(true);
-  //     setIsFlavorSectionVisible(false)
-     
-  //   } else {
-  //     setIsPanelOpen(false);
-  //     setIsFlavorSectionVisible(sectionEntry?.isIntersecting ?? true);
-  //     if (sectionEntry?.isIntersecting) {
-  //       setIsPanelOpen(false); // Cerrar panel cuando la sección es visible
-  //     }
-  //   }
-
-  // }, [sectionEntry, isInView, isContainerInView]);
-
   useEffect(() => {
     const isSectionVisible = sectionEntry?.isIntersecting ?? true;
     const shouldShow = !isSectionVisible && isContainerInView;
@@ -202,7 +241,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
   
 
   return (
-    <div className="p-5" ref={containerRef}>
+    <div className="p-5 relative" ref={containerRef}>
       <div className="space-y-4 py-5">
         <div className="hidden flex-col justify-center gap-10 p-3 md:flex lg:flex xl:flex">
           <h2 className="flex items-center gap-2 pb-5 text-center text-xl font-semibold text-white before:block before:h-px before:w-full before:border-t before:border-gray-100/20 before:content-[''] after:block after:h-px after:w-full after:border-t after:border-gray-100/20 after:content-['']">
@@ -301,8 +340,19 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
     
       </div>
 
+      {/* Sentinel para detectar el final del contenedor */}
+      <div ref={sentinelRef} className="absolute bottom-[-1px] left-0 h-1 w-full pointer-events-none"/>
+
       {/* Panel flotante */}
-      <div className="fixed right-5 bottom-20 z-[60]">
+      <motion.div 
+         ref={panelRef} 
+         className="z-[60]"
+         style={{
+           position: isContainerEndVisible ? 'absolute' : 'fixed',
+           right: isContainerEndVisible ? 'calc(var(--spacing) * 6)' : 'calc(var(--spacing) * 5)',
+           bottom: isContainerEndVisible ? 'calc(var(--spacing) * 25)' : 'calc(var(--spacing) * 20)', 
+         }}
+         transition={{ type: 'spring', stiffness: 200, damping: 25 }}>
         <motion.div className="flex flex-col items-end gap-2">
           <AnimatePresence>
             {isPanelOpen || (!isFlavorSectionInView && isContainerInView) && (
@@ -352,7 +402,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
             >
               <motion.button
                 onClick={() => setIsPanelOpen(!isPanelOpen)}
-                className="bg-primary flex h-11 w-11 items-center justify-center rounded-full p-3 shadow-lg"
+                className="bg-cocoa-dark flex h-11 w-11 items-center justify-center rounded-full p-3 shadow-lg"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -364,15 +414,15 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
             </motion.div>
           )}
         </motion.div>
-      </div>
+      </motion.div>
 
       <FloatingButtonPanel
         items={TypesSortOption.map((option) => ({
           icon: IconsSortOption[option.key],
           onClick: () => handleSortSelect(option.value as SortOption),
         }))}
-        buttonClassName="bg-primary text-white"
-        panelClassName="gap-4"
+        buttonClassName={`bg-cocoa-dark text-white ${isContainerEndVisible ? 'absolute right-0' : 'fixed'}`}
+        panelClassName={`gap-4 ${isContainerEndVisible ? 'absolute' : 'fixed'}`}
         panelItemClassName=""
         panelVisible={false}
         buttonVisible={!isFlavorSectionInView}
