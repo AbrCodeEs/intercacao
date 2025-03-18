@@ -41,7 +41,7 @@ export function DialogFlavours() {
           style={{
             borderRadius: '12px',
           }}
-          className="pointer-events-auto relative flex xl:h-200 lg:h-200 xl:w-300 lg:w-300 md:w-200 w-100 xl:flex-row lg:flex-row flex-col overflow-hidden border border-zinc-950/10 bg-white p-5"
+          className="pointer-events-auto relative flex xl:h-200 lg:h-200 md:h-250 h-190 xl:w-300 lg:w-300 md:w-200 w-100 xl:flex-row lg:flex-row flex-col overflow-auto border border-zinc-950/10 bg-white p-5"
         >
             <div className="xl:w-1/2 lg:w-1/2 w-full flex items-center justify-center">
 
