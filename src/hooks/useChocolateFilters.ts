@@ -1,26 +1,48 @@
+// hooks/useChocolateFilters.ts
 import { useState } from 'react';
-import { type SortOption, type FlavorOption } from '@/consts';
+import { Sort, type SortOption, type FlavorOption } from '@/consts';
 
-import type { CountryOption } from '@/consts';
 export const useChocolateFilters = () => {
   const [sortBy, setSortBy] = useState<SortOption | null>(null);
   const [selectedFlavor, setSelectedFlavor] = useState<FlavorOption | null>(null);
-  const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
   const [isFlavorPanelOpen, setIsFlavorPanelOpen] = useState(false);
   const [isTypePanelOpen, setIsTypePanelOpen] = useState(false);
 
   const handleSortSelect = (sort: SortOption) => {
-    setSortBy(current => (current === sort ? null : sort));
-    setSelectedFlavor(null);
-    setSelectedCountry(null);
-    setIsTypePanelOpen(false);
+    // Actualización funcional del estado
+    setSortBy((currentSort) => {
+      const newSort = currentSort === sort ? null : sort;
+      // Resetear estados relacionados
+      if (newSort !== null) {
+        setSelectedFlavor(null);
+        setIsFlavorPanelOpen(false);
+      }
+      return newSort;
+    });
   };
 
   const handleFlavorSelect = (flavor: FlavorOption) => {
-    setSelectedFlavor(current => (current === flavor ? null : flavor));
-    setSortBy(null);
-    setSelectedCountry(null);
-    setIsFlavorPanelOpen(false);
+    // Actualización funcional del estado
+    setSelectedFlavor((currentFlavor) => {
+      const newFlavor = currentFlavor === flavor ? null : flavor;
+      // Resetear estados relacionados
+      if (newFlavor !== null) {
+        setSortBy(null);
+        setIsTypePanelOpen(false);
+      }
+
+      return newFlavor;
+    });
+  };
+
+  const togglePanel = (panelType: 'flavor' | 'type') => {
+    if (panelType === 'flavor') {
+      setIsFlavorPanelOpen((prev) => !prev);
+      setIsTypePanelOpen(false);
+    } else {
+      setIsTypePanelOpen((prev) => !prev);
+      setIsFlavorPanelOpen(false);
+    }
   };
 
   return {
@@ -28,11 +50,10 @@ export const useChocolateFilters = () => {
     selectedFlavor,
     isFlavorPanelOpen,
     isTypePanelOpen,
-    setIsFlavorPanelOpen,
-    setIsTypePanelOpen,
     handleSortSelect,
     handleFlavorSelect,
-    selectedCountry,
-    setSelectedCountry
+    togglePanel,
+    setIsFlavorPanelOpen,
+    setIsTypePanelOpen,
   };
 };

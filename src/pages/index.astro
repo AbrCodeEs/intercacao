@@ -24,9 +24,10 @@ import logoWhiteImagotipoCacaoGourmet from '@/images/global/logo-white-imagotipo
 
 import { CarouselPost } from '@/components/ui/carousel/Post';
 import { ChocolateGallery } from '@/components/ChocolateGallery';
-import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { PlusIcon } from 'lucide-react';
 import { getLangFromUrl, useTranslations } from '@/assets/lib/i18n/utils';
 import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
+import { DialogFlavours } from '@/components/ui/morphing-dialog/DialogFlavours';
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -128,16 +129,17 @@ const posts = [
         alt="Intercacao banner principal"
         class="w-75 object-fill object-center"
       />
+    
     </div>
 
     <div class="bg-primary h-5 w-full"></div>
 
     <div
       id="section-flavours"
-      class="flex size-auto items-center justify-center md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
+      class="relative flex size-auen/world-of-flavors/to items-center justify-center md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
       style={`background-image: url(${lienzo.src});`}
     >
-      <a href={`https://www.intercacao.com/${lang}/world-of-flavors/`}>
+      <!-- <a href={`https://www.intercacao.com/${lang}/world-of-flavors/`}> -->
         <Image
           loading="lazy"
           inferSize={true}
@@ -145,7 +147,10 @@ const posts = [
           alt="Intercacao banner principal"
           class="object-fill object-center shadow-2xl"
         />
-      </a>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <DialogFlavours client:only="react" />
+        </div>
+      <!-- </a> -->
     </div>
 
     <div id="section-gourmet" class="bg-primary h-auto w-full">
