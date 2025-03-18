@@ -158,7 +158,7 @@ const posts = [
           class="w-75 object-fill object-center"
         />
       </div>
-      <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:load />
+      <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:only="react" />
     </div>
 
     <div
@@ -166,7 +166,11 @@ const posts = [
       class="bg-start flex h-auto min-h-screen w-full flex-col items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
       style={`background-image: url(${lienzoCacao.src});`}
     >
-      <TabsTransitionPanel trans={trans('home').tabs_transition_panel} items={trans('home').tabs_transition_panel.items} client:only="react" />
+      <TabsTransitionPanel
+        trans={trans('home').tabs_transition_panel}
+        items={trans('home').tabs_transition_panel.items}
+        client:only="react"
+      />
     </div>
   </div>
 

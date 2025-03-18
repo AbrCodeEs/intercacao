@@ -167,7 +167,11 @@ export async function getStaticPaths() {
       class="bg-start flex h-auto min-h-screen w-full flex-col items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
       style={`background-image: url(${lienzoCacao.src});`}
     >
-      <TabsTransitionPanel trans={trans('home').tabs_transition_panel} items={trans('home').tabs_transition_panel.items} client:only="react" />
+      <TabsTransitionPanel
+        trans={trans('home').tabs_transition_panel}
+        items={trans('home').tabs_transition_panel.items}
+        client:only="react"
+      />
     </div>
   </div>
 

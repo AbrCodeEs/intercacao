@@ -92,13 +92,21 @@ export const FloatingButtonPanel = ({
       <AnimatePresence>
         {isPanelVisible && (
           <motion.div
-          initial={{ opacity: 0, y: direction === 'up' ? 100 : 0, x: direction === 'left' ? 100 : 0 }}
-          animate={{ opacity: 1, y: 0, x: 0 }}
-          exit={{ opacity: 0, y: direction === 'up' ? 100 : 0, x: direction === 'left' ? 100 : 0 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            initial={{
+              opacity: 0,
+              y: direction === 'up' ? 100 : 0,
+              x: direction === 'left' ? 100 : 0,
+            }}
+            animate={{ opacity: 1, y: 0, x: 0 }}
+            exit={{
+              opacity: 0,
+              y: direction === 'up' ? 100 : 0,
+              x: direction === 'left' ? 100 : 0,
+            }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             className={cn(
               `fixed right-5 bottom-20 z-40 flex items-center gap-2 ${panelClassName}`,
-              direction === 'up' ? 'flex-col' : 'flex-row right-20 bottom-4'
+              direction === 'up' ? 'flex-col' : 'right-20 bottom-4 flex-row',
             )}
           >
             {items.map((item, index) => (
@@ -111,26 +119,26 @@ export const FloatingButtonPanel = ({
                 className={cn(
                   `rounded-full bg-white p-3 shadow-lg transition-colors hover:bg-zinc-100 ${panelItemClassName}`,
                 )}
-                initial={{ 
-                  scale: 0, 
+                initial={{
+                  scale: 0,
                   y: direction === 'up' ? 50 : 0,
-                  x: direction === 'left' ? 50 : 0
+                  x: direction === 'left' ? 50 : 0,
                 }}
-                animate={{ 
-                  scale: 1, 
+                animate={{
+                  scale: 1,
                   y: 0,
-                  x: 0
+                  x: 0,
                 }}
-                exit={{ 
-                  scale: 0, 
+                exit={{
+                  scale: 0,
                   y: direction === 'up' ? 50 : 0,
-                  x: direction === 'left' ? 50 : 0
+                  x: direction === 'left' ? 50 : 0,
                 }}
-                transition={{ 
-                  type: 'spring', 
+                transition={{
+                  type: 'spring',
                   delay: index * 0.1,
                   stiffness: 300,
-                  damping: 20 
+                  damping: 20,
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
