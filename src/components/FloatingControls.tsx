@@ -18,15 +18,14 @@ type FloatingControlsProps = {
   onFlavorSelect: (value: string) => void;
   onTypeSelect: (value: string) => void;
   isVisible: boolean;
+  togglePanel: (panelType: 'flavor' | 'type') => void;
 };
 
 export const FloatingControls = ({
   isContainerEndVisible,
-  absolutePosition,
   isFlavorPanelOpen,
   isTypePanelOpen,
-  setIsFlavorPanelOpen,
-  setIsTypePanelOpen,
+  togglePanel,
   flavorItems,
   typeItems,
   selectedFlavor,
@@ -36,9 +35,11 @@ export const FloatingControls = ({
   isVisible,
 }: FloatingControlsProps) => (
   <motion.div
-    className="right-5 bottom-5 z-50"
+    className="z-50"
     style={{
       position: isContainerEndVisible ? 'absolute' : 'fixed',
+      bottom: 'calc(var(--spacing) * 5)',
+      right: isContainerEndVisible ? 'calc(var(--spacing) * 0)' : 'calc(var(--spacing) * 5)',
     }}
     transition={{ 
       type: 'spring', 
@@ -81,14 +82,8 @@ export const FloatingControls = ({
 
       <FilterButtons
         isVisible={isVisible}
-        onFlavorClick={() => {
-          setIsFlavorPanelOpen(!isFlavorPanelOpen);
-          setIsTypePanelOpen(false);
-        }}
-        onTypeClick={() => {
-          setIsTypePanelOpen(!isTypePanelOpen);
-          setIsFlavorPanelOpen(false);
-        }}
+        onFlavorClick={() => togglePanel('flavor')}
+        onTypeClick={() => togglePanel('type')}
       />
     </div>
   </motion.div>

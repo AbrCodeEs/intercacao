@@ -20,8 +20,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
     selectedFlavor,
     isFlavorPanelOpen,
     isTypePanelOpen,
-    setIsFlavorPanelOpen,
-    setIsTypePanelOpen,
+    togglePanel,
     handleSortSelect,
     handleFlavorSelect,
   } = useChocolateFilters();
@@ -59,8 +58,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
           absolutePosition={absolutePosition}
           isFlavorPanelOpen={isFlavorPanelOpen}
           isTypePanelOpen={isTypePanelOpen}
-          setIsFlavorPanelOpen={setIsFlavorPanelOpen}
-          setIsTypePanelOpen={setIsTypePanelOpen}
+          togglePanel={togglePanel}
           flavorItems={trans.world_of_flavors.flavors.map((flavor: any) => ({
             value: flavor.value,
             icon: <img src={flavor.iconWhite} className="size-5" alt={flavor.label} />,
