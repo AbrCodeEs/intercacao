@@ -306,12 +306,12 @@ export function MorphingDialogBasicOne() {
         style={{
           borderRadius: '8px',
         }}
-        className="xl:container lg:container md:container mx-5 my-10 flex flex-col overflow-hidden bg-white p-2 transition-colors duration-100 ease-out hover:bg-zinc-100 md:mx-10 md:flex-row lg:mx-10 lg:flex-row xl:mx-10 xl:flex-row"
+        className="mx-5 md:mx-10 lg:mx-20 xl:mx-20 my-10 flex flex-col overflow-hidden bg-white p-2 transition-colors duration-100 ease-out hover:bg-zinc-100 md:flex-row lg:flex-row xl:flex-row"
       >
         <MorphingDialogImage
           src={carouselHistoria3.src}
           alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
-          className="size-auto rounded-lg object-cover md:size-100 lg:size-70 xl:size-80"
+          className="size-auto rounded-lg object-cover md:size-100 lg:size-70 xl:size-150"
         />
         <div className="flex grow flex-row items-start justify-between px-3 py-2">
           <div>
@@ -349,7 +349,7 @@ export function MorphingDialogBasicOne() {
             <div className="my-5 flex w-full items-center justify-start pl-3">
               <button
                 type="button"
-                className="relative flex h-10 w-10 shrink-0 scale-100 appearance-none items-center justify-center rounded-lg border border-zinc-800 text-zinc-500 transition-colors select-none hover:bg-zinc-100 hover:text-zinc-800 focus-visible:ring-2 active:scale-[0.98]"
+                className="relative flex h-10 w-10 shrink-0 scale-100 appearance-none items-center justify-center rounded-lg border-2 border-zinc-800 text-zinc-500 transition-colors select-none hover:bg-zinc-100 hover:text-zinc-800 focus-visible:ring-2 active:scale-[0.98]"
                 aria-label="Open dialog"
               >
                 <PlusIcon size={12} />
