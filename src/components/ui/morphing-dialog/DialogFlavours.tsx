@@ -12,8 +12,9 @@ import {
 import { PlusIcon } from 'lucide-react';
 
 import ruedaMundoDeSabores from '@/images/home/rueda-mundo-de-sabores-es.png';
+import { cn } from '@/assets/lib/utils';
 
-export function DialogFlavours() {
+export function DialogFlavours({ trans }: { trans: Record<string, any> }) {
   return (
     <MorphingDialog
       transition={{
@@ -41,19 +42,22 @@ export function DialogFlavours() {
           style={{
             borderRadius: '12px',
           }}
-          className="pointer-events-auto relative flex xl:h-200 lg:h-200 md:h-250 h-190 xl:w-300 lg:w-300 md:w-200 w-100 xl:flex-row lg:flex-row flex-col overflow-auto border border-zinc-950/10 bg-white p-5"
+          className="pointer-events-auto relative flex h-190 w-100 flex-col overflow-auto border border-zinc-950/10 bg-white p-5 md:h-250 md:w-200 lg:h-200 lg:w-300 lg:flex-row xl:h-200 xl:w-300 xl:flex-row"
         >
-            <div className="xl:w-1/2 lg:w-1/2 w-full flex items-center justify-center">
-
-          <MorphingDialogImage
-            src={ruedaMundoDeSabores.src}
-            alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
-            className="size-auto p-5"
-          />
-            </div>
-          <div className="p-5 flex flex-col items-center justify-center gap-3 xl:w-1/2 lg:w-1/2 w-full">
-            <MorphingDialogTitle className="text-3xl text-zinc-950 font-bold">Mundo de Sabores</MorphingDialogTitle>
-            <MorphingDialogSubtitle className="text-2xl text-zinc-600">Destacamos los más deliciosos sabores en cada uno de nuestros cacaos:</MorphingDialogSubtitle>
+          <div className="flex w-full items-center justify-center lg:w-1/2 xl:w-1/2">
+            <MorphingDialogImage
+              src={ruedaMundoDeSabores.src}
+              alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
+              className="size-auto p-5"
+            />
+          </div>
+          <div className="flex w-full flex-col items-center justify-center gap-3 p-5 lg:w-1/2 xl:w-1/2">
+            <MorphingDialogTitle className="text-3xl font-bold text-zinc-950">
+              {trans.title}
+            </MorphingDialogTitle>
+            <MorphingDialogSubtitle className="text-2xl text-zinc-600">
+              {trans.description}
+            </MorphingDialogSubtitle>
             <MorphingDialogDescription
               disableLayoutAnimation
               variants={{
@@ -62,42 +66,24 @@ export function DialogFlavours() {
                 exit: { opacity: 0, scale: 0.8, y: 100 },
               }}
             >
-              <div className="wpb_wrapper">
-                <div className="wpb_text_column wpb_content_element">
-                  <div className="wpb_wrapper">
-                    <div className="positive-chart">
-                      <p className="p1 list-icon sweet_fruit">
-                        <strong>AFRUTADO DULCE:</strong> Frutas secas, frutas tropicales, higos,
-                        pasas, ciruelas pasas, melocotones, plátanos.
-                      </p>
-                      <p className="p1 list-icon soar_fruit">
-                        <strong>AFRUTADOS CÍTRICOS:</strong> Naranjas, mandarinas, frutas rojas,
-                        piñas, frambuesas, moras, frutas de la pasión.
-                      </p>
-                      <p className="p1 list-icon floral">
-                        <strong>AFLORADO:</strong> Flores silvestres, jazmines, rosas, lavandas.
-                      </p>
-                      <p className="p1 list-icon criollo">
-                        <strong>ACRIOLLADO:</strong> Malta, cereales, panela, caramelo, miel,
-                        macadamias, almendras, nueces.
-                      </p>
-                      <p className="p1 list-icon cocoa">
-                        <strong>CACAO:</strong> Predomina sabor pronunciado a cacao bien fermentado,
-                        barras de chocolate.
-                      </p>
-                      <p className="p1 list-icon forest">
-                        <strong>BOSCOSO:</strong> Corteza, madera fresca, pinos, tabaco, té verde.
-                      </p>
-                      <p className="p1 list-icon herbs">
-                        <strong>ESPECIAS:</strong> Canela, clavo, nuez moscada, jengibre, vainilla
-                      </p>
+              <div className="flex flex-col gap-2">
+                {trans.items.map((profile, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <div className='w-10'>
+                        <div className={cn("flex items-center justify-center rounded-full size-10", profile.icon.className)}>
+                            <img className="size-5" src={profile.icon.src} loading="eager"  alt={profile.title}  />
+                        </div>
                     </div>
+                    <p>
+                      <b>{profile.title}: </b>
+                      {profile.description}
+                    </p>
                   </div>
-                </div>
+                ))}
               </div>
             </MorphingDialogDescription>
           </div>
-          <MorphingDialogClose />
+          <MorphingDialogClose className="absolute top-5 right-5" />
         </MorphingDialogContent>
       </MorphingDialogContainer>
     </MorphingDialog>
