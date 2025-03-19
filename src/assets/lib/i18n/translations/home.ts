@@ -1135,7 +1135,7 @@ const en = {
         },
         {
           label: 'Woody Notes',
-          value: 'Woody',
+          value: 'Wood',
           className: 'bg-wood text-white hover:text-white',
           icon: '/icons/boscoso-icon.svg',
           iconWhite: '/icons/boscoso-white-icon.svg',

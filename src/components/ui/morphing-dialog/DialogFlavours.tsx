@@ -42,7 +42,7 @@ export function DialogFlavours({ trans }: { trans: Record<string, any> }) {
           style={{
             borderRadius: '12px',
           }}
-          className="pointer-events-auto relative flex h-190 w-100 flex-col overflow-auto border border-zinc-950/10 bg-white p-5 md:h-250 md:w-200 lg:h-200 lg:w-300 lg:flex-row xl:h-200 xl:w-300 xl:flex-row"
+          className="pointer-events-auto relative flex h-190 w-100 flex-col overflow-auto border border-zinc-950/10 bg-white p-5 md:h-150 md:w-200 lg:h-150 lg:w-300 lg:flex-row xl:h-150 xl:w-300 xl:flex-row"
         >
           <div className="flex w-full items-center justify-center lg:w-1/2 xl:w-1/2">
             <MorphingDialogImage

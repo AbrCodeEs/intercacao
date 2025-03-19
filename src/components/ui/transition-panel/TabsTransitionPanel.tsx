@@ -5,8 +5,6 @@ import { TransitionPanel } from '@/components/ui/transition-panel';
 import { AnimatedBackground } from '@/components/ui/animated-background';
 import { motion, AnimatePresence, useInView } from 'motion/react';
 import logoFundacionProsperi from '@/images/global/logo-fundacion-prosperi.webp';
-// En tu página/layout
-import { DevelopmentAlertSection } from '@/components/DevelopmentAlertSection';
 
 import { cn } from '@/assets/lib/utils';
 
@@ -17,7 +15,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from '@/components/ui/carousel';
-import { MorphingDialogBasicOne } from '@/components/ui/morphing-dialog/MorphingDialogBasicOne';
+import { DialogTimeLine } from '@/components/ui/morphing-dialog/DialogTimeLine';
 
 interface TabsTransitionPanelProps {
   trans: [string, string];
@@ -28,12 +26,18 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
   const [activeIndex, setActiveIndex] = useState(items.length - 1);
   const [isPanelVisible, setIsPanelVisible] = useState(true);
   const [isButtonVisible, setIsButtonVisible] = useState(false);
-  const containerRef = useRef(null);
-  const carouselRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const hasInitialDisplay = useRef(false); // Nuevo ref para controlar la visualización inicial
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
   // Detectar visibilidad del carrusel con Framer Motion
   const isCarouselInView = useInView(carouselRef, {
+    margin: '0px 0px -50px 0px',
+    amount: 'some',
+  });
+
+  const isContainerEndVisible = useInView(sentinelRef, {
     margin: '0px 0px -50px 0px',
     amount: 'some',
   });
@@ -85,33 +89,9 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
           </div>
         </div>
 
-        {/* <div className="flex w-full items-center justify-center md:container lg:container xl:container xl:px-30">
-          <Carousel className="w-11/12 overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
-            <CarouselContent classNameWrapper="w-full">
-              {historia.map((image, index) => (
-                <CarouselItem
-                  key={index}
-                  className="basis-[24rem] md:basis-full lg:basis-1/3 xl:basis-1/3"
-                >
-                  <Card className="overflow-hidden">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      loading="eager"
-                      className="aspect-auto overflow-hidden object-fill md:rounded-lg lg:rounded-lg xl:rounded-lg"
-                    />
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
-            <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
-          </Carousel>
-        </div> */}
+        <DialogTimeLine />
 
-        <MorphingDialogBasicOne />
-
-        <motion.div ref={containerRef}>
+        <motion.div ref={containerRef} className="relative overflow-hidden">
           <motion.div ref={carouselRef}>
             <div className="grid grid-flow-row auto-rows-max grid-cols-3 items-center justify-center gap-0">
               <AnimatedBackground
@@ -146,7 +126,7 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
             {isButtonVisible && (
               <motion.button
                 onClick={() => setIsPanelVisible(!isPanelVisible)}
-                className="bg-primary fixed right-4.5 bottom-4 z-50 flex items-center justify-center rounded-full p-4 text-white shadow-lg"
+                className={cn("bg-primary right-4.5 bottom-4 z-50 flex items-center justify-center rounded-full p-4 text-white shadow-lg", isContainerEndVisible ? 'absolute' : 'fixed')}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -174,7 +154,7 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 100 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                  className="fixed right-5.5 bottom-20 z-40 flex flex-col items-center gap-2"
+                  className={cn("right-5.5 bottom-20 z-40 flex flex-col items-center gap-2", isContainerEndVisible ? 'absolute' : 'fixed')}
                 >
                   {items.map((item, index) => (
                     <motion.button
@@ -261,6 +241,10 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
               </motion.div>
             </motion.div>
           </motion.div>
+          <div
+            ref={sentinelRef}
+            className="pointer-events-none absolute bottom-[-1px] left-0 h-1 w-full"
+          />
         </motion.div>
       </>
     </>
