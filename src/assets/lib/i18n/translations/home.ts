@@ -3,7 +3,6 @@ import mundoDeSabores from '@/images/home/imagotipo-mundo-de-sabores.webp';
 import mundoDeSaboresPanel from '@/images/home/mundo-de-sabores-panel.webp';
 import logoInteracao from '@/images/global/logo-intercacao.webp';
 import logoWhiteImagotipoCacaoGourmet from '@/images/global/logo-white-imagotipo-cacao-gourmet.webp';
-import { Star, Award, Trophy, Nut } from 'lucide-react';
 
 import logoRegresoAlAgua from '@/images/global/logo-regreso-al-agua.webp';
 import logoWilfriedMerle from '@/images/global/logo-wilfried-merle.webp';
@@ -586,10 +585,76 @@ const es = {
     src: mundoDeSabores,
     alt: 'Mundo de Sabores',
   },
+  info_mundo_de_sabores: {
+    title: 'Mundo de Sabores',
+    description: 'Destacamos los sabores más deliciosos en cada uno de nuestros cacaos:',
+    items: [
+      {
+        title: 'AFRUTADO DULCE',
+        description:
+          'Frutas secas, frutas tropicales, higos, pasas, ciruelas pasas, melocotones, plátanos.',
+        icon: {
+          src: '/icons/afrutado_dulces-white-icon.svg',
+          className: 'bg-fruity-sweet px-4 py-3',
+        },
+      },
+      {
+        title: 'AFRUTADOS CÍTRICOS',
+        description:
+          'Naranjas, mandarinas, frutas rojas, piñas, frambuesas, moras, frutas de la pasión.',
+        icon: {
+          src: '/icons/afrutado_citricos-white-icon.svg',
+          className: 'bg-fruity-citrus px-4 py-3',
+        },
+      },
+      {
+        title: 'AFLORADO',
+        description: 'Flores silvestres, jazmines, rosas, lavandas.',
+        icon: {
+          src: '/icons/aflorado-white-icon.svg',
+          className: 'bg-flower px-3 py-3',
+        },
+      },
+      {
+        title: 'ACRIOLLADO',
+        description: 'Malta, cereales, panela, caramelo, miel, macadamias, almendras, nueces.',
+        icon: {
+          src: '/icons/acriollado-white-icon.svg',
+          className: 'bg-creole px-3.5 py-3',
+        },
+      },
+      {
+        title: 'CACAO',
+        description: 'Predomina sabor pronunciado a cacao bien fermentado, barras de chocolate.',
+        icon: {
+          src: '/icons/cacao-white-icon.svg',
+          className: 'bg-cocoa px-3.5 py-3',
+        },
+      },
+      {
+        title: 'BOSCOSO',
+        description: 'Corteza, madera fresca, pinos, tabaco, té verde.',
+        icon: {
+          src: '/icons/boscoso-white-icon.svg',
+          className: 'bg-wood px-3 py-3',
+        },
+      },
+      {
+        title: 'ESPECIAS',
+        description: 'Canela, clavo, nuez moscada, jengibre, vainilla.',
+        icon: {
+          src: '/icons/especias-white-icon.svg',
+          className: 'bg-spices px-3 py-3',
+        },
+      },
+    ],
+  },
+
   mundo_de_sabores_panel: {
     src: mundoDeSaboresPanel,
     alt: 'Mundo de Sabores panel',
   },
+
   logo_white_imagotipo_cacao_gourmet: {
     src: logoWhiteImagotipoCacaoGourmet,
     alt: 'Logo White Imagotipo Cacao Gourmet',
@@ -830,6 +895,69 @@ const en = {
     src: mundoDeSaboresEN,
     alt: 'World of Flavors',
   },
+  info_mundo_de_sabores: {
+    title: 'World of Flavors',
+    description: 'We highlight the most delicious flavors in each of our cacaos:',
+    items: [
+      {
+        title: 'SWEET FRUITY',
+        description: 'Dried fruits, tropical fruits, figs, raisins, prunes, peaches, bananas.',
+        icon: {
+          src: '/icons/afrutado_dulces-white-icon.svg',
+          className: 'bg-fruity-sweet',
+        },
+      },
+      {
+        title: 'CITRUS FRUITS',
+        description:
+          'Oranges, tangerines, red fruits, pineapples, raspberries, blackberries, passion fruits.',
+        icon: {
+          src: '/icons/afrutado_citricos-white-icon.svg',
+          className: 'bg-fruity-citrus',
+        },
+      },
+      {
+        title: 'FLORAL',
+        description: 'Wild flowers, jasmines, roses, lavenders.',
+        icon: {
+          src: '/icons/aflorado-white-icon.svg',
+          className: 'bg-flower',
+        },
+      },
+      {
+        title: 'CREOLE',
+        description: 'Malt, cereals, panela, caramel, honey, macadamias, almonds, walnuts.',
+        icon: {
+          src: '/icons/acriollado-white-icon.svg',
+          className: 'bg-creole',
+        },
+      },
+      {
+        title: 'COCOA',
+        description: 'Predominant flavor of well-fermented cocoa, chocolate bars.',
+        icon: {
+          src: '/icons/cacao-white-icon.svg',
+          className: 'bg-cocoa',
+        },
+      },
+      {
+        title: 'WOODSY',
+        description: 'Bark, fresh wood, pines, tobacco, green tea.',
+        icon: {
+          src: '/icons/boscoso-white-icon.svg',
+          className: 'bg-wood',
+        },
+      },
+      {
+        title: 'SPICES',
+        description: 'Cinnamon, clove, nutmeg, ginger, vanilla.',
+        icon: {
+          src: '/icons/especias-white-icon.svg',
+          className: 'bg-spices',
+        },
+      },
+    ],
+  },
   mundo_de_sabores_panel: {
     src: mundoDeSaboresINGPanelConSombra,
     alt: 'World of Flavors Panel',
@@ -1007,7 +1135,7 @@ const en = {
         },
         {
           label: 'Woody Notes',
-          value: 'Woody',
+          value: 'Wood',
           className: 'bg-wood text-white hover:text-white',
           icon: '/icons/boscoso-icon.svg',
           iconWhite: '/icons/boscoso-white-icon.svg',

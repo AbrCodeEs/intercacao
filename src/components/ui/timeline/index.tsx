@@ -1,121 +1,143 @@
 'use client';
-import { useScroll, useTransform, motion } from 'motion/react';
-import React, { useEffect, useRef, useState } from 'react';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 
 interface TimelineEntry {
   title: string;
   name?: string;
   content?: React.ReactNode;
-  img?: string;
+  img?: Array<{ src: string; alt: string }>;
 }
 
-// Actualiza la interfaz para incluir el callback
 interface TimelineProps {
   data: TimelineEntry[];
   onActiveIndexChange?: (index: number) => void;
 }
 
 export const Timeline = ({ data, onActiveIndexChange }: TimelineProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const entryRefs = useRef<Array<HTMLDivElement | null>>([]);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const entryRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const lastVisibleIndex = useRef(-1);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    // offset: ['start 10%', 'end 50%'],
+    offset: ["end end", "start start"],
+  });
+
+  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, timelineRef.current?.offsetHeight || 0]);
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-            const index = Number(entry.target.getAttribute('data-index'));
-            onActiveIndexChange?.(index);
+          const index = Number(entry.target.getAttribute('data-index'));
+          
+          if (entry.isIntersecting) {
+            // Solo actualiza si el índice es diferente al último visible
+            if (index !== lastVisibleIndex.current) {
+              onActiveIndexChange?.(index);
+              lastVisibleIndex.current = index;
+            }
           }
         });
       },
       {
         root: containerRef.current,
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-      },
+        threshold: 0.8,
+      }
     );
-
+  
     entryRefs.current.forEach((ref, index) => {
       if (ref) {
         ref.setAttribute('data-index', index.toString());
         observer.observe(ref);
       }
     });
-
+  
     return () => observer.disconnect();
   }, [data, onActiveIndexChange]);
-
-  useEffect(() => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
-    }
-  }, [ref]);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start 10%', 'end 50%'],
-  });
-
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  
 
   return (
-    <div className="w-full overflow-auto bg-white pb-40 font-sans md:px-10" ref={containerRef}>
-      <div ref={ref} className="relative w-full">
-        {data.map((item, index) => (
-          <div
-            key={index}
+    <div className="w-full overflow-auto bg-white font-sans md:px-10" ref={containerRef}>
+      <motion.div ref={timelineRef} viewport={{ once: true }} className="relative w-full">
+        {data.map((entry, index) => (
+          <motion.div
+            key={`${entry.title}-${index}`}
             ref={(el) => (entryRefs.current[index] = el)}
-            className="flex justify-start pt-10 md:gap-10 md:pt-40"
+            className="flex justify-start md:gap-10"
           >
-            <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
+            {/* Left Column */}
+            <div className="sticky top-0 z-40 flex xl:w-1/3 lg:w-1/3 flex-col items-center self-start md:flex-row">
               <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full bg-white md:left-3">
                 <div className="bg-primary h-4 w-4 rounded-full border border-neutral-300 p-2" />
               </div>
-              <h3 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-5xl">
-                {item.title}
+              <h3 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-6xl">
+                {entry.title}
               </h3>
             </div>
 
-            <div className="relative w-full pr-4 pl-20 md:pl-4">
-              <h3 className="mb-4 block text-left text-2xl font-bold text-neutral-500 md:hidden">
-                {item.title}
-              </h3>
-
-              <div>
-                <h1 className="text-xl font-bold text-neutral-800">{item.name}</h1>
-                <p className="mb-8 text-base font-normal text-neutral-800">{item.content}</p>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-                  {item.img && (
-                    <img
-                      src={item.img}
-                      alt="timeline image"
-                      className="size-full rounded-lg object-cover"
-                    />
-                  )}
-                </div>
-              </div>
+            {/* Right Column */}
+            <div className="relative xl:w-2/3 lg:w-2/3 w-full pr-4 pl-20 md:pl-4">
+              <MobileTitle title={entry.title} />
+              <TimelineContent entry={entry} />
             </div>
-          </div>
+          </motion.div>
         ))}
-        <div
-          style={{
-            height: height + 3000 + 'px',
-          }}
-          className="absolute top-0 left-8 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8 dark:via-neutral-700"
-        >
-          <motion.div
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
-            className="bg-primary absolute inset-x-0 top-0 w-[2px] rounded-full"
-          />
-        </div>
-      </div>
+
+        <TimelineLine heightTransform={heightTransform} opacityTransform={opacityTransform} />
+      </motion.div>
     </div>
   );
 };
+
+const MobileTitle = ({ title }: { title: string }) => (
+  <h3 className="mb-4 block text-left text-2xl font-bold text-neutral-500 md:hidden">
+    {title}
+  </h3>
+);
+
+const TimelineContent = ({ entry }: { entry: TimelineEntry }) => (
+  <motion.div>
+    {entry.img && entry.img.length > 0 && (
+      <Carousel className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
+        <CarouselContent className="-ml-0 w-full">
+          {entry.img.map((image, imgIndex) => (
+            <CarouselItem key={imgIndex} className="basis-70 pl-0 md:basis-1/2 lg:basis-1/3 xl:basis-1/3">
+              <div className="flex aspect-square items-center justify-center mr-2">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  loading="eager"
+                  className="aspect-[4/5] object-cover overflow-hidden rounded-lg"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="left-5 md:left-5 lg:left-10 xl:left-10" />
+        <CarouselNext className="right-5 md:right-5 lg:right-10 xl:right-10" />
+      </Carousel>
+    )}
+    <p className="my-5 text-lg font-normal text-neutral-800">{entry.content}</p>
+  </motion.div>
+);
+
+const TimelineLine = ({ heightTransform, opacityTransform }: { 
+  heightTransform: any;
+  opacityTransform: any;
+}) => (
+  <div
+    style={{ height: '100%' }}
+    className="absolute top-0 left-8 w-[2px] overflow-hidden bg-primary md:left-8 "
+  >
+    <motion.div
+      style={{ height: heightTransform, opacity: opacityTransform }}
+      className="bg-primary absolute inset-x-0 top-0 w-[2px] rounded-full"
+    />
+  </div>
+);

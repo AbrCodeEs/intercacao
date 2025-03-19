@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import {
   MorphingDialog,
   MorphingDialogTrigger,
@@ -11,7 +11,7 @@ import {
   MorphingDialogContainer,
 } from '@/components/ui/morphing-dialog';
 import { PlusIcon } from 'lucide-react';
-import { TimelineDemo } from '@/components/ui/timeline/TimelineDemo';
+import { Timeline } from '@/components/ui/timeline';
 import carouselHistoria3 from '@/images/home/carousels/historia/03.jpeg';
 import carouselHistoria4 from '@/images/home/carousels/historia/04.jpeg';
 import carouselHistoria5 from '@/images/home/carousels/historia/05.jpeg';
@@ -26,15 +26,14 @@ import fproperi from '@/images/home/timeLine/fproperi.jpg';
 import CasaDelCable from '@/images/home/timeLine/CasaCableNueva.jpg';
 import Vivero from '@/images/home/timeLine/Vivero.jpg';
 
-import { motion } from 'motion/react';
-
-const data = [
+const timelineData = [
   {
     title: '1850',
     name: 'Quirico Prosperi Boscheti',
     content:
       'Nació el 24 de octubre de 1850 en Brustico, una pequeña aldea en las montañas de Córcega, Francia, donde creció rodeado de castaños y aprendiendo los secretos de la agricultura.',
-    img: carouselHistoria3.src,
+    img: [{ src: carouselHistoria3.src, alt: 'Quirico Prosperi Boscheti' }],
+    img_toggle: true
   },
   {
     title: '1870 - 1871',
@@ -52,7 +51,10 @@ const data = [
         </ul>
       </>
     ),
-    img: carouselHistoria5.src,
+    img: [
+      { src: carouselHistoria5.src, alt: 'Quirico Prosperi Boscheti' },
+      { src: carouselHistoria5.src, alt: 'Quirico Prosperi Boscheti' },
+    ],
   },
 
   {
@@ -60,14 +62,14 @@ const data = [
     name: 'Quirico Prosperi Boscheti',
     content:
       'Finalizada la guerra, Francia derrotada y económicamente deprimida, Quirico Prosperi, con 21 años, regresa a Brustico, Córcega, para casarse con Marie Luccioni Paoli.',
-    img: carouselHistoria6.src,
+    img: [{ src: carouselHistoria6.src, alt: 'Quirico Prosperi Boscheti' }],
   },
   {
     title: '1873-1874',
     name: 'Quirico Prosperi Boscheti',
     content:
       'Nace su primer hijo, Paul Prosperi, y en 1874, amigos corsos en Venezuela lo convencen de viajar para trabajar en Carúpano, estado Sucre.',
-    img: carouselHistoria4.src,
+    img: [{ src: carouselHistoria4.src, alt: 'Paul Prosperi' }],
   },
   {
     title: '1882',
@@ -86,21 +88,21 @@ const data = [
         </ul>
       </>
     ),
-    img: CasaSolariega1882.src,
+    img: [{ src: CasaSolariega1882.src, alt: 'Casa Solariega 1882' }],
   },
   {
     title: '1886',
     name: 'Quirico Prosperi Boscheti',
     content:
       'Nace su hijo Jaime Martin Prosperi  en la casa de la plantación de cacao. El Rincon, Edo Sucre',
-    img: SecadoCacao.src,
+    img: [{ src: SecadoCacao.src, alt: 'Secado de Cacao' }],
   },
 
   {
     title: '1890',
     name: 'Quirico Prosperi Boscheti',
     content: 'Funda "Prosperi & Cía" tras comprar la participación de su hermano Ambrosio.',
-    img: ProsperiyCia.src,
+    img: [{ src: ProsperiyCia.src, alt: 'Prosperi & Cía' }],
   },
   {
     title: '1892',
@@ -113,7 +115,7 @@ const data = [
     name: 'Pablo y Martín Prosperi',
     content:
       'A finales del siglo XIX, su hijo Pablo se incorporó al negocio, posteriormente Martín a comienzos del XX.',
-    img: MartinPROSPERI.src,
+    img: [{ src: MartinPROSPERI.src, alt: 'Martín Prosperi' }],
   },
   {
     title: '1902',
@@ -143,7 +145,7 @@ const data = [
         </p>
       </>
     ),
-    img: ExpulsionCorsos.src,
+    img: [{ src: ExpulsionCorsos.src, alt: 'Expulsion Corsos' }],
   },
   {
     title: '1910',
@@ -219,7 +221,7 @@ const data = [
     name: 'Alejandro Prosperi',
     content:
       'Alejandro Prosperi, hijo de Jaime Martín Prosperi, decidió recuperar el negocio de exportación de**"El Mejor Cacao del Mundo"** y, junto a Martín Urrutia, principal productor de cacao de Barlovento, constituyó la empresa "Cacao Flor de Baba, C.A.", incorporando al negocio a sus hermanos Martín y Pablo.',
-    img: AlejandroPROSPERI.src,
+    img: [{ src: AlejandroPROSPERI.src, alt: 'Alejandro Prosperi' }],
   },
   {
     title: '2006',
@@ -261,21 +263,21 @@ const data = [
     tile: '2012',
     name: 'Alejandro Prosperi',
     content: 'Compra la Casa del Cable Frances a su gran amigo de Wilfried Merle,',
-    img: fproperi.src,
+    img: [{ src: fproperi.src, alt: 'Fproperi' }],
   },
   {
     title: '2014',
     name: 'Alejandro Prosperi',
     content:
       'La Casa del Cable Frances fue restaurada por el Arquitecto Jorge Thielen, En esta casa Vivio Wilfried, gran amigo de Alejandro Prosperi.',
-    img: CasaDelCable.src,
+    img: [{ src: CasaDelCable.src, alt: 'Casa del Cable' }],
   },
   {
     title: '2023',
     name: 'Alejandro Prosperi',
     content:
       'La fundación inauguró el vivero Wilfried Merle en honor a este gran ecologista-conservacionista alemán-venezolano, quien entregó su vida por la flora y la fauna de Paria, estado Sucre. Así, cada árbol frutal y maderable que sembremos, estaremos dejando su legado y su huella de amor y espíritu en toda Paria.',
-    img: Vivero.src,
+    img: [{ src: Vivero.src, alt: 'Vivero' }],
   },
   {
     title: '2024',
@@ -291,141 +293,155 @@ const data = [
   },
 ];
 
-export function MorphingDialogBasicOne() {
+export function DialogTimeLine() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [currentEntry, setCurrentEntry] = useState<TimelineEntry>(timelineData[0]);
+  const lastValidImage = useRef<string | null>(null);
+  const [currentImage, setCurrentImage] = useState(lastValidImage.current);
+
+  
+  const handleIndexChange = useCallback((index: number) => {
+    // const newEntry = timelineData[index];
+    // setCurrentEntry(newEntry); // Actualiza directamente el currentEntry
+    // setActiveIndex(index);
+    const newEntry = timelineData[index].img_toggle && timelineData[index];
+    const newImage = newEntry.img?.[0]?.src;
+  
+    // Si no hay imagen, usa la última imagen válida
+    const imageToUse = newImage || lastValidImage.current;
+  
+    setCurrentEntry({
+      ...newEntry,
+      img: newEntry.img || currentEntry.img,
+    });
+  
+    setActiveIndex(index);
+    
+    // Actualiza currentImage para el renderizado
+    setCurrentImage(imageToUse);
+  
+    if (newImage) {
+      lastValidImage.current = newImage;
+    }
+  }, [currentImage]);
+  
+
+  useEffect(() => {
+    if (timelineData[0]?.img?.[0]?.src) {
+      lastValidImage.current = timelineData[0].img[0].src;
+    }
+  }, []);
 
   return (
-    <MorphingDialog
-      transition={{
-        type: 'spring',
-        bounce: 0.05,
-        duration: 0.25,
-      }}
-    >
-      <MorphingDialogTrigger
-        style={{
-          borderRadius: '8px',
-        }}
-        className="mx-5 md:mx-10 lg:mx-20 xl:mx-20 my-10 flex flex-col overflow-hidden bg-white p-2 transition-colors duration-100 ease-out hover:bg-zinc-100 md:flex-row lg:flex-row xl:flex-row"
-      >
-        <MorphingDialogImage
-          src={carouselHistoria3.src}
-          alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
-          className="size-auto rounded-lg object-cover md:size-100 lg:size-70 xl:size-150"
-        />
-        <div className="flex grow flex-row items-start justify-between px-3 py-2">
-          <div>
-            <MorphingDialogTitle className="text-xl font-bold text-zinc-950 md:text-2xl lg:text-2xl xl:text-2xl">
-              QUIRICO PROSPERI BOSCHETI
-            </MorphingDialogTitle>
-            <MorphingDialogSubtitle className="text-zinc-700">
-              Nació el 24 de octubre de <b>1850</b> en Brustico, una pequeña aldea en las montañas
-              de <b>Córcega</b>, Francia, donde creció rodeado de castaños ...
-            </MorphingDialogSubtitle>
-            <div className="py-3 pl-5 text-zinc-700">
-              <div className="flex flex-col border-l-2 border-zinc-800">
-                <h1 className="pl-3 text-xl font-bold">1873-1874</h1>
-                <h2 className="pl-3 text-lg font-bold text-neutral-600">
-                  Quirico Prosperi Boschetti
-                </h2>
-                <p className="pl-3 text-sm">
-                  Nace su primer hijo, Paul Prosperi, y en <b>1874</b>, amigos corsos en
-                  Venezuela...
-                </p>
-              </div>
-
-              <div className="flex flex-col border-l-2 border-zinc-800 pt-3">
-                <h1 className="pl-3 text-xl font-bold">1882</h1>
-                <h2 className="pl-3 text-lg font-bold text-neutral-600">
-                  Quirico Prosperi Boschetti
-                </h2>
-                <p className="pl-3 text-sm">
-                  Adquiere la plantación de Cacao y Café llamada "El Rincón". Municipio Benitez, Edo
-                  Sucre. Venezuela...
-                </p>
-              </div>
-            </div>
-
-            <div className="my-5 flex w-full items-center justify-start pl-3">
-              <button
-                type="button"
-                className="relative flex h-10 w-10 shrink-0 scale-100 appearance-none items-center justify-center rounded-lg border-2 border-zinc-800 text-zinc-500 transition-colors select-none hover:bg-zinc-100 hover:text-zinc-800 focus-visible:ring-2 active:scale-[0.98]"
-                aria-label="Open dialog"
-              >
-                <PlusIcon size={12} />
-              </button>
-            </div>
-
-            <div className="py-3 pl-5 text-zinc-700">
-              <div className="flex flex-col border-l-2 border-zinc-800">
-                <h1 className="pl-3 text-xl font-bold">2012</h1>
-                <h2 className="pl-3 text-lg font-bold text-neutral-600">Alejandro Prosperi</h2>
-                <p className="pl-3 text-sm">
-                  Su legado no solo se refleja en la prosperidad agrícola y comercial que impulsó,
-                  sino también en la Fundación Quirico Prosperi, creada en 2012 por su bisnieto
-                  Alejandro Prosperi. Esta organización sin fines de lucro honra su memoria
-                  promoviendo la agricultura, la reforestación y la conservación de los valores
-                  históricos y culturales de Venezuela, especialmente en la zona de Paria.
-                </p>
-              </div>
-
-              <div className="flex flex-col border-l-2 border-zinc-800 pt-3">
-                <h1 className="pl-3 text-xl font-bold">2025</h1>
-                <h2 className="pl-3 text-lg font-bold text-neutral-600">
-                  Alessia y Anabella Prosperi
-                </h2>
-                <p className="pl-3 text-sm">
-                  La Fundación Quirico Prosperi trabaja incansablemente para rescatar y difundir el
-                  legado de Quirico, fomentando el desarrollo sostenible y el sentido de pertenencia
-                  entre los venezolanos. Desde programas de música y danza hasta la siembra de
-                  árboles frutales y la preservación de la fauna, la fundación continúa escribiendo
-                  la historia de un hombre que, con esfuerzo y dedicación, transformó el destino de
-                  su familia y de toda una región.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <MorphingDialog transition={{ type: 'spring', bounce: 0.05, duration: 0.25 }}>
+      <MorphingDialogTrigger className="mx-5 my-10 flex flex-col overflow-hidden bg-white p-2 transition-colors duration-100 ease-out hover:bg-zinc-100 md:mx-10 md:flex-row lg:mx-20 lg:flex-row xl:mx-20 xl:flex-row">
+        <DialogTriggerContent />
       </MorphingDialogTrigger>
 
       <MorphingDialogContainer>
         <MorphingDialogContent
-          style={{
-            borderRadius: '12px',
-          }}
+          style={{ borderRadius: '12px' }}
           className="pointer-events-auto relative flex h-11/12 w-11/12 flex-col overflow-hidden border border-zinc-950/10 bg-white pb-10"
         >
-          <div className="p-6 pt-12">
-            <div className="flex items-start justify-between gap-4 md:justify-start lg:justify-start xl:justify-start">
-              {data[activeIndex].img && (
+          <div className="p-6 pt-5">
+            <div className="flex items-center justify-start gap-4">
+              {currentImage && (
                 <img
-                  src={data[activeIndex].img}
-                  alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
-                  className="size-17 rounded-lg object-cover object-center md:size-10 lg:size-20 xl:size-30"
+                  src={currentImage}
+                  alt="Timeline entry"
+                  className="size-10 rounded-lg object-cover object-center md:size-10 lg:size-20 xl:size-30"
                 />
               )}
               <div className="flex flex-col">
-                <MorphingDialogTitle className="text-2xl font-bold text-zinc-950 md:text-3xl lg:text-3xl xl:text-3xl">
-                  {data[activeIndex].name}
+                <MorphingDialogTitle className="text-xl font-bold text-zinc-950 md:text-3xl lg:text-3xl xl:text-3xl">
+                  {currentEntry.name || 'Nombre no disponible'}
                 </MorphingDialogTitle>
                 <MorphingDialogSubtitle className="text-zinc-700">
-                  {data[activeIndex].title}
+                  {currentEntry.title}
                 </MorphingDialogSubtitle>
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="mt-2 ml-10 hidden text-zinc-600 md:block lg:block xl:block"
-                >
-                  {data[activeIndex].content}
-                </motion.p>
               </div>
             </div>
           </div>
 
-          <TimelineDemo data={data} onActiveIndexChange={setActiveIndex} />
+          <Timeline data={timelineData} onActiveIndexChange={handleIndexChange} />
           <MorphingDialogClose />
         </MorphingDialogContent>
       </MorphingDialogContainer>
     </MorphingDialog>
   );
 }
+
+const DialogTriggerContent = () => (
+  <>
+    <MorphingDialogImage
+      src={carouselHistoria3.src}
+      alt="Quirico Prosperi Boscheti"
+      className="size-auto rounded-lg object-cover md:size-100 lg:size-70 xl:size-150"
+    />
+    <div className="flex grow flex-row items-start justify-between px-3 py-2">
+      <div>
+        <MorphingDialogTitle className="text-xl font-bold text-zinc-950 md:text-2xl lg:text-2xl xl:text-2xl">
+          QUIRICO PROSPERI BOSCHETI
+        </MorphingDialogTitle>
+        <DialogTriggerSubtitle />
+        <TimelineHighlights />
+      </div>
+    </div>
+  </>
+);
+
+const DialogTriggerSubtitle = () => (
+  <MorphingDialogSubtitle className="text-zinc-700">
+    Nació el 24 de octubre de <b>1850</b> en Brustico, una pequeña aldea en las montañas de{' '}
+    <b>Córcega</b>, Francia, donde creció rodeado de castaños ...
+  </MorphingDialogSubtitle>
+);
+
+const TimelineHighlights = () => (
+  <div className="py-3 pl-5 text-zinc-700">
+    <TimelineHighlightItem
+      year="1882"
+      title="Quirico Prosperi Boschetti"
+      content="Adquiere la plantación de Cacao y Café llamada 'El Rincón'"
+    />
+    <ExpandButton />
+    <TimelineHighlightItem
+      year="2012"
+      title="Alejandro Prosperi"
+      content="Fundación Quirico Prosperi"
+    />
+    <TimelineHighlightItem
+      year="2025"
+      title="Alejandro Prosperi"
+      content="La Fundación Quirico Prosperi trabaja incansablemente"
+    />
+  </div>
+);
+
+const TimelineHighlightItem = ({
+  year,
+  title,
+  content,
+}: {
+  year: string;
+  title: string;
+  content: string;
+}) => (
+  <div className="flex flex-col border-l-2 border-zinc-800 pt-3">
+    <h1 className="pl-3 text-xl font-bold">{year}</h1>
+    <h2 className="pl-3 text-lg font-bold text-neutral-600">{title}</h2>
+    <p className="pl-3 text-sm">{content}</p>
+  </div>
+);
+
+const ExpandButton = () => (
+  <div className="my-5 flex w-full items-center justify-start pl-3">
+    <button
+      type="button"
+      className="relative flex h-10 w-10 shrink-0 scale-100 appearance-none items-center justify-center rounded-lg border-2 border-zinc-800 text-zinc-500 transition-colors select-none hover:bg-zinc-100 hover:text-zinc-800 focus-visible:ring-2 active:scale-[0.98]"
+      aria-label="Open dialog"
+    >
+      <PlusIcon size={12} />
+    </button>
+  </div>
+);
