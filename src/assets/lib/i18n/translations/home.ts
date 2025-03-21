@@ -11,8 +11,8 @@ import logoElectronDeporte from '@/images/global/logo-electron-deporte.png';
 import logoElectronMusica from '@/images/global/logo-electron-musica-y-dansa.png';
 import logoElectronReligion from '@/images/global/logo-electron-religion.png';
 import mundoDeSaboresEN from '@/images/home/imagotipo-world-of-flavors.webp';
-import mundoDeSaboresINGPanelConSombra from '@/images/home/mundo-de-sabores-ing-panel-con-sombra.webp';
-import mundoDeSaboresESPanelConSombra from '@/images/home/mundo-de-sabores-es-panel-con-sombra.webp';
+import mundoDeSaboresINGPanelConSombra from '@/images/home/mundo-de-sabores-panel-en.webp';
+import mundoDeSaboresESPanelConSombra from '@/images/home/mundo-de-sabores-panel-es.webp';
 
 import carouselDanza1 from '@/images/home/carousels/danza/01.jpg';
 import carouselDanza2 from '@/images/home/carousels/danza/02.jpg';
@@ -141,12 +141,22 @@ import QuiricoDaughtersBw from '@/images/home/carousels/timeline/03Quirico_daugh
 import CertificadoMedalla from '@/images/home/carousels/timeline/04Certificado_Medalla.jpg';
 import MedallaHonor from '@/images/home/carousels/timeline/05medalla_honor.jpg';
 import Medalla from '@/images/home/carousels/timeline/06Medalla.jpg';
+import Escrito1906 from '@/images/home/carousels/timeline/escrito_1906.jpg';
+import FirmaQuirico from '@/images/home/carousels/timeline/Firma_Quirico.jpg';
+import QuiricoCursos from '@/images/home/carousels/timeline/quirico_corsos.jpg';
+import Secado3 from '@/images/home/carousels/timeline/secado3.jpg';
 
 import AntonioyPablo from '@/images/home/carousels/timeline/01AntonioyPablo.jpg';
 import Antonio from '@/images/home/carousels/timeline/02Antonio.jpg';
 import PabloProsperi from '@/images/home/carousels/timeline/03Pablo_Prosperi.jpg';
 import LuriaHijas from '@/images/home/carousels/timeline/04Luria_hijas.jpg';
 import ProsperiCia from '@/images/home/carousels/timeline/05ProsperiCia.jpg';
+import Elanunciador from '@/images/home/carousels/timeline/elanunciador.jpg';
+import Huracan from '@/images/home/carousels/timeline/huracan.jpg';
+import IglesiaElricon from '@/images/home/carousels/timeline/iglesia_elricon.jpg';
+import ProsperiCia1 from '@/images/home/carousels/timeline/Prosperi_cia.jpg';
+import ProsperiCA from '@/images/home/carousels/timeline/prosperi_CA.jpg';
+import Secado2 from '@/images/home/carousels/timeline/secado2.jpg';
 
 import JaimeMartinProsperi from '@/images/home/carousels/timeline/01Jaime_martin_prosperi.jpg';
 
@@ -154,6 +164,7 @@ import Alejandro_Wilfried from '@/images/home/carousels/timeline/Alejandro_Wilfr
 import AP_chuao from '@/images/home/carousels/timeline/AP-chuao.jpg';
 import AP_dia_campo from '@/images/home/carousels/timeline/AP-dia-campo.jpg';
 import AP_exportacion from '@/images/home/carousels/timeline/AP-Exportacion.jpg';
+import AlejandroProsperi from '@/images/home/carousels/timeline/Alejandro_Prosperi.jpg';
 
 const carouselRegresoAlAgua = [
   {
@@ -600,11 +611,6 @@ const carouselDeporte = [
   },
 ];
 
-import carouselHistoria3 from '@/images/home/carousels/historia/03.jpeg';
-import carouselHistoria4 from '@/images/home/carousels/historia/04.jpeg';
-import carouselHistoria5 from '@/images/home/carousels/historia/05.jpeg';
-import carouselHistoria6 from '@/images/home/carousels/historia/06.jpeg';
-
 const es = {
   banner: {
     src: banner,
@@ -700,14 +706,15 @@ const es = {
       'La Fundación Quirico Prosperi es nuestra organización sin fines de lucro creada en 2012 por Alejandro Prosperi, cuyo propósito fundamental es promover, rescatar y difundir los valores históricos, culturales y agrícolas relacionadas al cacao en Venezuela.Esta iniciativa honra el legado de Quirico Prosperi, un visionario que, junto a su familia, han producido el mejor cacao del mundo desde 1882.',
 
     timeline_preview: {
-      title: 'El Legado Prosperi',
+      title: 'Familia Prosperi: 140 Años de Cacao',
       description:
         'La historia de Intercacao y la Fundación Quirico Prosperi etsá profundamente ligada a la vida, obra y familia de Quirico Prosperi. Es un relato de visión, perseverancia y compromiso con la tierra y la comunidad. Desde la llegada de Quirico Prosperi a Venezuela en el siglo XIX, hasta el liderazgo actual de su bisnieto Alejandro Prosperi, cuatro generaciones han dedicado sus vidas al cultivo del cacao, la innovación agrícola y el desarrollo social. Este legado no solo ha consolidado a Intercacao como una de las productoras más importantes de cacao en Venezuela, sino que también ha dejado una huella imborrable en la región de Paria, inspirando un futuro sostenible y lleno de oportunidades.',
+      title_two: '4 Generaciones de Cacaoteros',
     },
     timeline_items: [
       {
         title: 'Primera Generación:',
-        subtitle: '1850-1918',
+        subtitle: '1850 - 1918',
         name: 'Quirico Prosperi Boschetti',
         content:
           'Quirico Prosperi, nacido en Córcega en 1850, llegó a Venezuela en 1874 y se estableció en Carúpano, donde adquirió la plantación "El Rincón" y en 1882, compra la Casa Solariega, hoy en día sede de la Fundación Quirico Prosperi, lugar que se convertiría en el corazón de su patrimonio. Con visión y tenacidad, fundó la empresa "Prosperi Hermanos", dedicada a la producción y exportación de cacao, café y sarrapia. Quirico no solo construyó un imperio agrícola, sino que también dejó un legado de perseverancia y compromiso con su familia y su comunidad.',
@@ -718,47 +725,58 @@ const es = {
           { src: CertificadoMedalla.src, alt: 'Quirico Prosperi Boschetti' },
           { src: MedallaHonor.src, alt: 'Quirico Prosperi Boschetti' },
           { src: Medalla.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Escrito1906.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: FirmaQuirico.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: QuiricoCursos.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Secado3.src, alt: 'Quirico Prosperi Boschetti' },
         ],
         img_toggle: true,
       },
       {
         title: 'Segunda Generación:',
-        subtitle: '1886-1960',
+        subtitle: '1873 - 1957',
         name: 'Antonio Martín Prosperi Luccioni ',
         content:
-          'Hijo de Quirico, Antonio Martín continuó y expandió el negocio familiar, consolidando a "Prosperi & Cía" como una de las empresas más importantes del oriente venezolano. Bajo su dirección, la empresa modernizó sus procesos y amplió su alcance internacional. Antonio también se destacó por su compromiso con la comunidad, liderando proyectos como la reconstrucción de la iglesia San Pedro Apóstol en El Rincón, un símbolo de su dedicación al desarrollo social y cultural de la región. Su liderazgo y espíritu innovador lo convirtieron en el principal exportador de cacao de Venezuela en 1915.',
+          'Hijos de Quirico Prosperi, Pablo (1873) y Martín (1886) continuaron y expandieron el negocio familiar. Pablo lideró "P. Prosperi y Cía." y fundó empresas pioneras como el primer concesionario Ford en Cumaná. Martín, por su parte, se enfocó en negocios industriales y financieros, destacándose como presidente de "C.A. Telares de Caracas y Valencia" y fundador de "Aceites Diana". Ambos hermanos dejaron un legado de innovación y compromiso con el desarrollo de Venezuela, incluyendo la reconstrucción de la Iglesia San Pedro Apóstol en El Rincón, un homenaje a su madre Marie Luccioni Paoli.',
         img: [
           { src: AntonioyPablo.src, alt: 'Quirico Prosperi Boschetti' },
           { src: Antonio.src, alt: 'Quirico Prosperi Boschetti' },
           { src: PabloProsperi.src, alt: 'Quirico Prosperi Boschetti' },
           { src: LuriaHijas.src, alt: 'Quirico Prosperi Boschetti' },
           { src: ProsperiCia.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Elanunciador.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Huracan.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: IglesiaElricon.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: ProsperiCia1.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: ProsperiCA.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Secado2.src, alt: 'Quirico Prosperi Boschetti' },
         ],
         img_toggle: true,
       },
       {
         title: 'Tercera Generación:',
-        subtitle: '1934-2008',
+        subtitle: '1934 - 2008',
         name: 'Jaime Martín Prosperi Luria',
         content:
           'Jaime Martín, nieto de Quirico, fundó "Mercantil Prosperi S.A." y "Prosperi Caracas, C.A.", empresas que posicionaron el cacao venezolano en mercados gourmet internacionales. A pesar de los desafíos políticos, como la nacionalización del cacao en 1975, Jaime mantuvo vivo el legado familiar, defendiendo los intereses de los productores y promoviendo la modernización del sector. Tras la devastación de un huracán de 1933, reconstruyó la iglesia San Pedro Apóstol, dejando un legado arquitectónico que aún sirve a la comunidad. Su liderazgo en gremios como FEDEAGRO y su apoyo a los agricultores reflejan su profundo compromiso con el agro venezolano.',
         img: [
           { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
-          { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' }
+          { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
         ],
         img_toggle: true,
       },
       {
         title: 'Cuarta Generación:',
-        subtitle: '1966-actualidad',
+        subtitle: '1966 - Actualidad',
         name: 'Alejandro Prosperi Álvarez',
         content:
-          ' Bisnieto de Quirico, Alejandro Prosperi recuperó el negocio familiar en 1993, fundando "Cacao Flor de Baba, C.A." y cofundando la Cámara Venezolana del Cacao (CAPEC). Su visión innovadora y su enfoque en la calidad llevaron al cacao venezolano a nuevos mercados internacionales. En 2012, en honor a su bisabuelo, creó la Fundación Quirico Prosperi, dedicada a preservar el legado histórico y promover el desarrollo sostenible en la región de Paria. Alejandro continúa honrando el espíritu emprendedor de Quirico Prosperi, impulsando proyectos que benefician a la comunidad y preservan el patrimonio agrícola y cultural de Venezuela.',
+          "Bisnieto de Quirico, Alejandro Prosperi recuperó el negocio familiar en 1993, fundando \"Cacao Flor de Baba, C.A.\" y cofundando la Cámara Venezolana del Cacao (CAPEC). Su visión innovadora y su enfoque en la calidad llevaron al cacao venezolano a nuevos mercados internacionales. En 2012, en honor a su bisabuelo, creó la Fundación Quirico Prosperi, dedicada a preservar el legado histórico y promover el desarrollo sostenible en la región de Paria. Alejandro continúa honrando el espíritu emprendedor de Quirico Prosperi, impulsando proyectos que benefician a la comunidad y preservan el patrimonio histórico, agrícola y cultural de Venezuela.",
         img: [
           { src: Alejandro_Wilfried.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: AP_chuao.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: AP_dia_campo.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: AP_exportacion.src, alt: 'Alejandro Prosperi Álvarez' },
+          { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
         ],
         img_toggle: true,
       },
@@ -1134,66 +1152,78 @@ const en = {
     description:
       'The Quirico Prosperi Foundation is our non-profit organization, founded in 2012 by Alejandro Prosperi. Its fundamental purpose is to promote, rescue, and disseminate the historical, cultural, and agricultural values ​​related to cacao in Venezuela. This initiative honors the legacy of Quirico Prosperi, a visionary who, along with his family, has produced the best cacao in the world since 1882.',
     timeline_preview: {
-      title: 'The Prosperi Legacy',
+      title: 'Prosperi Family: 140 Years of Cocoa',
       description:
         'The history of Intercacao and the Quirico Prosperi Foundation is deeply intertwined with the life, work, and family of Quirico Prosperi. It is a story of vision, perseverance, and commitment to the land and the community. From the arrival of Quirico Prosperi in Venezuela in the 19th century to the current leadership of his great-grandson Alejandro Prosperi, four generations have dedicated their lives to cocoa cultivation, agricultural innovation, and social development. This legacy has not only established Intercacao as one of the most important cocoa producers in Venezuela but has also left an indelible mark on the Paria region, inspiring a sustainable and opportunity-filled future.',
+      title_two: '4 Generations of Cocoa Farmers',
     },
     timeline_items: [
       {
         title: 'First Generation:',
-        subtitle: '1850-1918',
+        subtitle: '1850 - 1918',
         name: 'Quirico Prosperi Boschetti',
         content:
           'Quirico Prosperi, born in Corsica in 1850, arrived in Venezuela in 1874 and settled in Carúpano, where he acquired the "El Rincón" plantation. In 1882, he purchased the Casa Solariega, now the headquarters of the Quirico Prosperi Foundation, which would become the heart of his legacy. With vision and tenacity, he founded the company "Prosperi Hermanos," dedicated to the production and export of cacao, coffee, and sarrapia. Quirico not only built an agricultural empire but also left a legacy of perseverance and commitment to his family and community.',
-          img: [
+        img: [
             { src: QuiricoProsperi.src, alt: 'Quirico Prosperi Boschetti' },
             { src: QuiricoDaughters.src, alt: 'Quirico Prosperi Boschetti' },
             { src: QuiricoDaughtersBw.src, alt: 'Quirico Prosperi Boschetti' },
             { src: CertificadoMedalla.src, alt: 'Quirico Prosperi Boschetti' },
             { src: MedallaHonor.src, alt: 'Quirico Prosperi Boschetti' },
             { src: Medalla.src, alt: 'Quirico Prosperi Boschetti' },
+            { src: Escrito1906.src, alt: 'Quirico Prosperi Boschetti' },
+            { src: FirmaQuirico.src, alt: 'Quirico Prosperi Boschetti' },
+            { src: QuiricoCursos.src, alt: 'Quirico Prosperi Boschetti' },
+            { src: Secado3.src, alt: 'Quirico Prosperi Boschetti' },
           ],
         img_toggle: true,
       },
       {
         title: 'Second Generation:',
-        subtitle: '1886-1960',
+        subtitle: '1873 - 1957',
         name: 'Antonio Martín Prosperi Luccioni',
         content:
-          'Son of Quirico, Antonio Martín continued and expanded the family business, consolidating "Prosperi & Cía" as one of the most important companies in eastern Venezuela. Under his leadership, the company modernized its processes and expanded its international reach. Antonio also stood out for his commitment to the community, leading projects such as the reconstruction of the San Pedro Apóstol Church in El Rincón, a symbol of his dedication to the social and cultural development of the region. His leadership and innovative spirit made him Venezuela’s top cacao exporter in 1915.',
+          'Sons of Quirico Prosperi, Pablo (1873) and Martín (1886), continued and expanded the family business. Pablo led "P. Prosperi y Cía." and founded pioneering companies such as the first Ford dealership in Cumaná. Martín, on the other hand, focused on industrial and financial ventures, standing out as president of "C.A. Telares de Caracas y Valencia" and founder of "Aceites Diana." Both brothers left a legacy of innovation and commitment to the development of Venezuela, including the reconstruction of the San Pedro Apóstol Church in El Rincón, a tribute to their mother, Marie Luccioni Paoli.',
         img: [
             { src: AntonioyPablo.src, alt: 'Quirico Prosperi Boschetti' },
             { src: Antonio.src, alt: 'Quirico Prosperi Boschetti' },
             { src: PabloProsperi.src, alt: 'Quirico Prosperi Boschetti' },
             { src: LuriaHijas.src, alt: 'Quirico Prosperi Boschetti' },
             { src: ProsperiCia.src, alt: 'Quirico Prosperi Boschetti' },
-          ],
+            { src: Elanunciador.src, alt: 'Quirico Prosperi Boschetti' },
+            { src: Huracan.src, alt: 'Quirico Prosperi Boschetti' },
+            { src: IglesiaElricon.src, alt: 'Quirico Prosperi Boschetti' },
+            { src: ProsperiCia1.src, alt: 'Quirico Prosperi Boschetti' },
+            { src: ProsperiCA.src, alt: 'Quirico Prosperi Boschetti' },
+            { src: Secado2.src, alt: 'Quirico Prosperi Boschetti' },
+        ],
         img_toggle: true,
       },
       {
         title: 'Third Generation:',
-        subtitle: '1934-2008',
+        subtitle: '1934 - 2008',
         name: 'Jaime Martín Prosperi Luria',
         content:
-          'Jaime Martín, grandson of Quirico, founded "Mercantil Prosperi S.A." and "Prosperi Caracas, C.A.," companies that positioned Venezuelan cacao in international gourmet markets. Despite political challenges, such as the nationalization of cacao in 1975, Jaime kept the family legacy alive by advocating for producers’ interests and promoting modernization of the sector. After the devastation of a 1933 hurricane, he rebuilt the San Pedro Apóstol Church, leaving an architectural legacy that still serves the community. His leadership in associations like FEDEAGRO and his support for farmers reflect his deep commitment to Venezuelan agriculture.',
+          'Jaime Martín, grandson of Quirico, founded "Mercantil Prosperi S.A." and "Prosperi Caracas, C.A.", companies that positioned Venezuelan cocoa in international gourmet markets. Despite political challenges, such as the nationalization of cocoa in 1975, Jaime kept the family legacy alive, defending the interests of producers and promoting the modernization of the sector. His leadership in associations like FEDEAGRO and his support for farmers reflect his deep commitment to Venezuelan agriculture.',
         img: [
             { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
-            { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' }
-          ],
+            { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
+        ],
         img_toggle: true,
       },
       {
         title: 'Fourth Generation:',
-        subtitle: '1966-present',
+        subtitle: '1966 - Present',
         name: 'Alejandro Prosperi Álvarez',
         content:
-          'Great-grandson of Quirico, Alejandro Prosperi regained the family business in 1993, founding "Cacao Flor de Baba, C.A." and co-founding the Venezuelan Chamber of Cocoa (CAPEC). His innovative vision and focus on quality brought Venezuelan cacao to new international markets. In 2012, to honor his great-grandfather, he created the Quirico Prosperi Foundation, dedicated to preserving historical heritage and promoting sustainable development in the Paria region. Alejandro continues to honor Quirico Prosperi’s entrepreneurial spirit by driving projects that benefit the community and preserve Venezuela’s agricultural and cultural legacy.',
-          img: [
-            { src: Alejandro_Wilfried.src, alt: 'Alejandro Prosperi Álvarez' },
-            { src: AP_chuao.src, alt: 'Alejandro Prosperi Álvarez' },
-            { src: AP_dia_campo.src, alt: 'Alejandro Prosperi Álvarez' },
-            { src: AP_exportacion.src, alt: 'Alejandro Prosperi Álvarez' },
-          ],
+          "Great-grandson of Quirico, Alejandro Prosperi revived the family business in 1993, founding Cacao Flor de Baba, C.A. and co-founding the Venezuelan Cocoa Chamber (CAPEC). His innovative vision and focus on quality brought Venezuelan cocoa to new international markets. In 2012, in honor of his great-grandfather, he established the Quirico Prosperi Foundation, dedicated to preserving the historical legacy and promoting sustainable development in the Paria region. Alejandro continues to honor the entrepreneurial spirit of Quirico Prosperi, driving projects that benefit the community and preserve Venezuela's historical, agricultural, and cultural heritage.",
+        img: [
+          { src: Alejandro_Wilfried.src, alt: 'Alejandro Prosperi Álvarez' },
+          { src: AP_chuao.src, alt: 'Alejandro Prosperi Álvarez' },
+          { src: AP_dia_campo.src, alt: 'Alejandro Prosperi Álvarez' },
+          { src: AP_exportacion.src, alt: 'Alejandro Prosperi Álvarez' },
+          { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
+        ],
         img_toggle: true,
       },
     ],
