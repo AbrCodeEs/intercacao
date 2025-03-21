@@ -132,7 +132,7 @@
 }
 
 .bg-cocoa-dark {
-  background: var(--color-cocoa-dark)
+  background: var(--color-cocoa-dark);
 }
 
 .border-fruity-sweet {
@@ -424,4 +424,12 @@ section.active {
 
 .navigation-menu-indicator[data-state='hidden'] {
   animation: fade-out 200ms ease;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
