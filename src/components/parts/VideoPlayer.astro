@@ -1,0 +1,8 @@
+---
+const { videoSrc } = Astro.props;
+---
+
+<video controls preload="metadata" playsinline muted class="w-full max-w-4xl mx-auto">
+  <source src={videoSrc} type="video/mov">
+  <p>Tu navegador no soporta videos .mov. Descarga el <a href={videoSrc}>video aquí</a></p>
+</video>
