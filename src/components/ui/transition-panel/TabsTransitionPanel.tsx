@@ -95,47 +95,6 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
 
         <HorizontalScrollSection trans={trans.horizontal_scroll} />
 
-        <div className="container mx-auto flex gap-4 p-10">
-          <div className="w-1/3 flex-1">
-            <Card>
-              <CardHeader>
-                <Carousel className="w-full">
-                  <CarouselContent>
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <CarouselItem key={index}>
-                        <div className="p-1">
-                          <div className="flex aspect-square items-center justify-center p-6">
-                            <span className="text-4xl font-semibold">{index + 1}</span>
-                          </div>
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
-                  <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
-                </Carousel>
-              </CardHeader>
-            </Card>
-          </div>
-          <div className="w-1/3 flex-1">
-            <Card>
-              <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-          <div className="w-1/3 flex-1">
-            {' '}
-            <Card>
-              <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-              </CardHeader>
-              <VideoComponent />
-            </Card>
-          </div>
-        </div>
       </>
     </>
   );
