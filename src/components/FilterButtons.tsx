@@ -24,20 +24,20 @@ export const FilterButtons = ({
         <div className="flex flex-col gap-2">
           <motion.button
             onClick={onFlavorClick}
-            className="bg-cocoa-dark flex h-11 w-11 items-center justify-center rounded-full p-3 shadow-lg"
+            className="bg-cocoa-dark flex h-11 w-11 items-center justify-center rounded-full p-2 shadow-lg"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Filter className="size-5 text-white" />
+            <img src="/icons/ms.png" alt="" />
           </motion.button>
 
           <motion.button
             onClick={onTypeClick}
-            className="bg-cocoa-dark flex h-11 w-11 items-center justify-center rounded-full p-3 shadow-lg"
+            className="bg-cocoa-dark flex h-11 w-11 items-center justify-center rounded-full p-2 shadow-lg"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Menu className="size-5 text-white" />
+            <img src="/icons/bt.png" alt="" />
           </motion.button>
         </div>
       </motion.div>

@@ -5,6 +5,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 
 interface TimelineEntry {
   title: string;
+  subtitle?: string;
   name?: string;
   content?: React.ReactNode;
   img?: Array<{ src: string; alt: string }>;
@@ -76,9 +77,15 @@ export const Timeline = ({ data, onActiveIndexChange }: TimelineProps) => {
               <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full bg-white md:left-3">
                 <div className="bg-primary h-4 w-4 rounded-full border border-neutral-300 p-2" />
               </div>
-              <h3 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-6xl">
-                {entry.title}
-              </h3>
+              <div className="flex flex-col">
+
+                <h3 className="hidden text-xl text-neutral-500 md:block md:pl-20 md:text-4xl">
+                  {entry.title}
+                </h3>
+                <h2 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-5xl">
+                  {entry.subtitle}
+                </h2>
+              </div>
             </div>
 
             {/* Right Column */}

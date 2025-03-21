@@ -5,19 +5,20 @@ import type { ManifestOptions } from 'vite-plugin-pwa';
  * Defines the default SEO configuration for the website.
  */
 export const seoConfig = {
-  baseURL: 'https://localhost:4321/', // Production URL.
+  baseURL: 'https://intercacao.com/', // Production URL.
   description:
-    'Web Oficial de La Velada del Año IV, evento de boxeo entre streamers y creadores de contenido, organizado por Ibai Llanos.',
+    'Web Oficial de Intercacao, empresa de cacao y chocolate, especializada en la producción de cacao de calidad.',
   type: 'website',
   image: {
     url: 'https://cdn.lavelada.dev/og.jpg',
-    alt: 'La Velada',
+    alt: 'Intercacao',
     width: 705,
     height: 606,
   },
-  siteName: 'La Velada',
+  siteName: 'Intercacao',
   twitter: {
     card: 'summary_large_image',
+    site: 'Intercacao',
   },
 };
 
@@ -25,10 +26,10 @@ export const seoConfig = {
  * Defines the configuration for PWA webmanifest.
  */
 export const manifest: Partial<ManifestOptions> = {
-  name: 'La Velada',
-  short_name: 'La Velada',
+  name: 'Intercacao',
+  short_name: 'Intercacao',
   description:
-    'Web Oficial de La Velada del Año IV, evento de boxeo entre streamers y creadores de contenido, organizado por Ibai Llanos.',
+    'Web Oficial de Intercacao, empresa de cacao y chocolate, especializada en la producción de cacao de calidad.',
   theme_color: '#d5ff00',
   background_color: '#d5ff00',
   display: 'fullscreen',
