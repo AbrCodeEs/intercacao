@@ -86,7 +86,7 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
                   className="w-100 pb-3"
                 />
               </div>
-              <p className="text-center text-lg">{trans.description}</p>
+              <p className="xl:text-center md:text-center text-lg">{trans.description}</p>
             </div>
           </div>
         </div>

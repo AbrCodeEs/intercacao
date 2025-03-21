@@ -31,10 +31,11 @@ export function DialogTimeLine({ trans }: { trans: [string, string] }) {
 
   return (
     <div className="container mx-auto my-10 flex w-full flex-col px-10">
-      <div className="flex flex-col items-center gap-5 pb-20 text-center text-zinc-950">
-        <h1 className="text-4xl font-bold">{trans.timeline_preview.title}</h1>
+      <div className="flex flex-col items-center gap-5 pb-20 xl:text-center md:text-center text-zinc-950">
+        <h1 className="text-4xl font-bold text-center">{trans.timeline_preview.title}</h1>
         <p className="text-lg">{trans.timeline_preview.description}</p>
         <img src={carousel3.src} alt="" className="size-50 rounded-full object-cover" />
+        <h2 className="text-4xl font-bold text-center">{trans.timeline_preview.title_two}</h2>
       </div>
 
       <Accordion
@@ -55,7 +56,7 @@ export function DialogTimeLine({ trans }: { trans: [string, string] }) {
             <AccordionContent>
               <div className="flex flex-col items-center justify-center gap-5 py-4 md:flex-row md:items-start xl:flex-row xl:items-start">
                 {item.img.length && (
-                  <Carousel className="w-full max-w-xs px-5">
+                  <Carousel className="w-full max-w-xs xl:px-5 md:px-5">
                     <CarouselContent>
                       {item.img.map((img, index) => (
                         <CarouselItem key={index}>
@@ -63,14 +64,14 @@ export function DialogTimeLine({ trans }: { trans: [string, string] }) {
                             <img
                               src={img.src}
                               alt={item.title}
-                              className="aspect-[4/5] size-80 rounded-lg object-cover xl:size-70"
+                              className="size-90 rounded-lg object-cover xl:size-70"
                             />
                           </div>
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                    <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-7 lg:left-7 xl:left-7" />
-                    <CarouselNext className="right-5 disabled:!opacity-1 md:right-7 lg:right-7 xl:right-7" />
+                    <CarouselPrevious className="-left-10 disabled:!opacity-1 md:left-7 lg:left-7 xl:left-7" />
+                    <CarouselNext className="-right105 disabled:!opacity-1 md:right-7 lg:right-7 xl:right-7" />
                   </Carousel>
                 )}
 
