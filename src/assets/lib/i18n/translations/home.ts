@@ -772,11 +772,11 @@ const es = {
         content:
           "Bisnieto de Quirico, Alejandro Prosperi recuperó el negocio familiar en 1993, fundando \"Cacao Flor de Baba, C.A.\" y cofundando la Cámara Venezolana del Cacao (CAPEC). Su visión innovadora y su enfoque en la calidad llevaron al cacao venezolano a nuevos mercados internacionales. En 2012, en honor a su bisabuelo, creó la Fundación Quirico Prosperi, dedicada a preservar el legado histórico y promover el desarrollo sostenible en la región de Paria. Alejandro continúa honrando el espíritu emprendedor de Quirico Prosperi, impulsando proyectos que benefician a la comunidad y preservan el patrimonio histórico, agrícola y cultural de Venezuela.",
         img: [
+          { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: Alejandro_Wilfried.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: AP_chuao.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: AP_dia_campo.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: AP_exportacion.src, alt: 'Alejandro Prosperi Álvarez' },
-          { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
         ],
         img_toggle: true,
       },
@@ -1218,11 +1218,11 @@ const en = {
         content:
           "Great-grandson of Quirico, Alejandro Prosperi revived the family business in 1993, founding Cacao Flor de Baba, C.A. and co-founding the Venezuelan Cocoa Chamber (CAPEC). His innovative vision and focus on quality brought Venezuelan cocoa to new international markets. In 2012, in honor of his great-grandfather, he established the Quirico Prosperi Foundation, dedicated to preserving the historical legacy and promoting sustainable development in the Paria region. Alejandro continues to honor the entrepreneurial spirit of Quirico Prosperi, driving projects that benefit the community and preserve Venezuela's historical, agricultural, and cultural heritage.",
         img: [
+          { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: Alejandro_Wilfried.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: AP_chuao.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: AP_dia_campo.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: AP_exportacion.src, alt: 'Alejandro Prosperi Álvarez' },
-          { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
         ],
         img_toggle: true,
       },

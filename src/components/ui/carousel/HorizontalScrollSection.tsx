@@ -31,7 +31,7 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
   return (
     <div className="container mx-auto my-10 flex w-full flex-col px-10">
       <h1 className="pb-5 text-center text-4xl font-bold">{trans.title}</h1>
-      <p className="pb-5 xl:text-center md:text-center">{trans.description}</p>
+      <p className="pb-5 md:text-center xl:text-center">{trans.description}</p>
 
       <div
         ref={containerRef}
@@ -94,16 +94,21 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <a
-              href="https://fqp.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-lg border border-gray-300 xl:p-20 md:p-10 p-5 text-center"
-            >
+            <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-lg border border-gray-300 p-5 text-center md:p-10 xl:p-20">
               <img src={fqp.src} alt="FQP" className="w-20 object-cover" />
-              <p className="xl:text-lg md:text-lg text-sm font-bold">{trans.explore_section.title}</p>
-              <p className="xl:text-lg md:text-lg text-sm font-bold">{trans.explore_section.cta}</p>
-            </a>
+              <p className="text-sm font-bold md:text-lg xl:text-lg">
+                {trans.explore_section.title}
+              </p>
+              <p className="text-sm font-bold md:text-lg xl:text-lg">{trans.explore_section.cta}</p>
+              <a
+                className="underline"
+                href="https://fqp.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://fundacionprosperi.org
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -112,22 +117,28 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
         <h1 className="pb-5 text-center text-4xl font-bold">{trans.current_news_title}</h1>
       </div>
 
-      <div className="mx-auto flex flex-col gap-5 md:flex-row md:px-10 xl:flex-row xl:px-10">
-        <div className="flex flex-shrink-0 basis-50 flex-col gap-4 md:basis-1/3 xl:basis-1/3">
-          <div className="size-100 rounded-lg bg-gray-300"></div>
+      <div className="grid grid-cols-1 gap-4 px-4 md:grid-cols-3 md:gap-6 md:px-10">
+        {/* Elemento 1 */}
+        <div className="h-64 w-full rounded-lg bg-gray-300 md:h-auto">
+          <div className="flex h-full items-center justify-center">Contenido 1</div>
         </div>
-        <div className="flex flex-shrink-0 basis-50 flex-col gap-4 md:basis-1/3 xl:basis-1/3">
-          <div className="size-100 rounded-lg bg-gray-300"></div>
+
+        {/* Elemento 2 */}
+        <div className="h-64 w-full rounded-lg bg-gray-300 md:h-auto">
+          <div className="flex h-full items-center justify-center">Contenido 2</div>
         </div>
-        <div className="flex flex-shrink-0 basis-50 flex-col gap-4 md:basis-1/3 xl:basis-1/3">
-          <iframe
-            className="h-full w-full overflow-hidden rounded-lg md:size-100 xl:size-100"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/7eTjGEETdag"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+
+        {/* Elemento 3 - Video */}
+        <div className="h-64 w-full rounded-lg bg-gray-300 md:h-auto">
+          <div className="aspect-video h-full w-full overflow-hidden rounded-lg">
+            <iframe
+              src="https://www.youtube.com/embed/7eTjGEETdag"
+              className="h-full w-full"
+              frameBorder="0"
+              allowFullScreen
+              title="Video player"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
