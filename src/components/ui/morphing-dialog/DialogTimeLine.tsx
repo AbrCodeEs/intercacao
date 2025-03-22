@@ -84,11 +84,11 @@ export function DialogTimeLine({ trans }: { trans: [string, string] }) {
         ))}
       </Accordion>
 
-      <div className="container mx-auto my-10 flex w-full flex-row justify-end px-10">
+      {/* <div className="container mx-auto my-10 flex w-full flex-row justify-end px-10">
         <a href="https://fqp.vercel.app#timeline" target="_blank" rel="noopener noreferrer">
           ver más
         </a>
-      </div>
+      </div> */}
 
       {/* <Accordion
         className="flex w-full flex-col divide-y divide-zinc-700"
