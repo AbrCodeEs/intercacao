@@ -94,18 +94,21 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <a
-              href="https://fqp.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-lg border border-gray-300 p-5 text-center md:p-10 xl:p-20"
-            >
+            <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-lg border border-gray-300 p-5 text-center md:p-10 xl:p-20">
               <img src={fqp.src} alt="FQP" className="w-20 object-cover" />
               <p className="text-sm font-bold md:text-lg xl:text-lg">
                 {trans.explore_section.title}
               </p>
               <p className="text-sm font-bold md:text-lg xl:text-lg">{trans.explore_section.cta}</p>
-            </a>
+              <a
+                className="underline"
+                href="https://fqp.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://fundacionprosperi.org
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>
