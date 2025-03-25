@@ -125,7 +125,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
         </div>
       </div>
 
-      <div className="h-auto w-full flex flex-col items-center justify-center py-10">
+      <div className="h-auto w-full flex flex-col items-center justify-center xl:py-60 lg:py-60 md:py-40 py-10">
         <h1 className="xl:text-4xl lg:text-3xl text-2xl font-bold text-white w-1/2 text-center capitalize">{trans.title}</h1>
       </div>
     </>
