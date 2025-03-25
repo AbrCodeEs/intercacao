@@ -944,6 +944,7 @@ const es = {
     order_by: 'Ordenar por:',
     filter_flavor: 'Mundo de sabores',
     link: 'Ver mas',
+    title: 'Más de un siglo cultivando y exportando el mejor cacao fino de aroma del mundo.',
     world_of_flavors: {
       types_options: [
         {
@@ -1078,7 +1079,7 @@ const en = {
   },
   info_mundo_de_sabores: {
     title: 'World of Flavors',
-    description: 'We highlight the most delicious flavors in each of our cacaos:',
+    description: 'We highlight the most delicious flavors in each of our cocoa:',
     items: [
       {
         title: 'SWEET FRUITY',
@@ -1145,13 +1146,13 @@ const en = {
   },
   logo_white_imagotipo_cacao_gourmet: {
     src: logoWhiteImagotipoCacaoGourmet,
-    alt: 'White Logo Imagotype Gourmet Cacao',
+    alt: 'White Logo Imagotype Gourmet Cocoa',
   },
   tabs_transition_panel: {
     time_line_title: 'line de tiempo',
     title: 'Quirico Prosperi Foundation',
     description:
-      'The Quirico Prosperi Foundation is our non-profit organization, founded in 2012 by Alejandro Prosperi. Its fundamental purpose is to promote, rescue, and disseminate the historical, cultural, and agricultural values ​​related to cacao in Venezuela. This initiative honors the legacy of Quirico Prosperi, a visionary who, along with his family, has produced the best cacao in the world since 1882.',
+      'The Quirico Prosperi Foundation is our non-profit organization, founded in 2012 by Alejandro Prosperi. Its fundamental purpose is to promote, rescue, and disseminate the historical, cultural, and agricultural values related to cocoa in Venezuela. This initiative honors the legacy of Quirico Prosperi, a visionary who, along with his family, has produced the best cocoa in the world since 1882.',
     timeline_preview: {
       title: 'Prosperi Family: More Than 140 Years of Cocoa',
       description:
@@ -1164,7 +1165,7 @@ const en = {
         subtitle: '1850 - 1918',
         name: 'Quirico Prosperi Boschetti',
         content:
-          'Quirico Prosperi, born in Corsica in 1850, arrived in Venezuela in 1874 and settled in Carúpano, where he acquired the "El Rincón" plantation. In 1882, he purchased the Casa Solariega, now the headquarters of the Quirico Prosperi Foundation, which would become the heart of his legacy. With vision and tenacity, he founded the company "Prosperi Hermanos," dedicated to the production and export of cacao, coffee, and sarrapia. Quirico not only built an agricultural empire but also left a legacy of perseverance and commitment to his family and community.',
+          'Quirico Prosperi, born in Corsica in 1850, arrived in Venezuela in 1874 and settled in Carúpano, where he acquired the "El Rincón" plantation. In 1882, he purchased the Casa Solariega, now the headquarters of the Quirico Prosperi Foundation, which would become the heart of his legacy. With vision and tenacity, he founded the company "Prosperi Hermanos," dedicated to the production and export of cocoa, coffee, and sarrapia. Quirico not only built an agricultural empire but also left a legacy of perseverance and commitment to his family and community.',
         img: [
             { src: QuiricoProsperi.src, alt: 'Quirico Prosperi Boschetti' },
             { src: QuiricoDaughters.src, alt: 'Quirico Prosperi Boschetti' },
@@ -1217,7 +1218,7 @@ const en = {
         subtitle: '1966 - Present',
         name: 'Alejandro Prosperi Álvarez',
         content:
-          "Great-grandson of Quirico, Alejandro Prosperi, revived the family business in 1993 by founding Cacao Flor de Baba, C.A. and co-founding the Venezuelan Cocoa Chamber (CAPEC). His innovative vision and focus on quality brought Venezuelan cocoa to new international markets. In 2012, in honor of his great-grandfather, he established the Quirico Prosperi Foundation, dedicated to preserving historical heritage and promoting sustainable development in the Paria region. Alejandro continues to honor Quirico Prosperi’s entrepreneurial spirit by driving projects that benefit the community, the environment, and the preservation of native criollo cocoa, safeguarding Venezuela’s historical, agricultural, and cultural heritage.",
+          "Great-grandson of Quirico, Alejandro Prosperi, revived the family business in 1993 by founding Cocoa Flor de Baba, C.A. and co-founding the Venezuelan Cocoa Chamber (CAPEC). His innovative vision and focus on quality brought Venezuelan cocoa to new international markets. In 2012, in honor of his great-grandfather, he established the Quirico Prosperi Foundation, dedicated to preserving historical heritage and promoting sustainable development in the Paria region. Alejandro continues to honor Quirico Prosperi’s entrepreneurial spirit by driving projects that benefit the community, the environment, and the preservation of native criollo cocoa, safeguarding Venezuela’s historical, agricultural, and cultural heritage.",
         img: [
           { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: Alejandro_Wilfried.src, alt: 'Alejandro Prosperi Álvarez' },
@@ -1390,6 +1391,7 @@ const en = {
     order_by: 'Order by:',
     filter_flavor: 'World of Flavors',
     link: 'See',
+    title: 'For over a century, we have been cultivating and exporting the world\'s finest fine-flavored cocoa.',
     world_of_flavors: {
       types_options: [
         {
@@ -1475,7 +1477,7 @@ const en = {
     {
       title: 'Evaluation Method',
       description:
-        "The 'cacao grader' evaluation method complements traditional methods with a complete organoleptic assessment, developed by renowned expert Chloe Doutre.",
+        "The 'cocoa grader' evaluation method complements traditional methods with a complete organoleptic assessment, developed by renowned expert Chloe Doutre.",
       image_alt: 'Evaluation Method',
     },
     {
