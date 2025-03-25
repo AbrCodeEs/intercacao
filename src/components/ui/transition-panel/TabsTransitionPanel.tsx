@@ -94,7 +94,6 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
         <DialogTimeLine trans={trans} />
 
         <HorizontalScrollSection trans={trans.horizontal_scroll} />
-
       </>
     </>
   );

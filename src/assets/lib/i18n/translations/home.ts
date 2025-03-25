@@ -703,12 +703,12 @@ const es = {
     time_line_title: 'line de tiempo',
     title: 'Fundación Quirico Prosperi',
     description:
-      'La Fundación Quirico Prosperi es nuestra organización sin fines de lucro creada en 2012 por Alejandro Prosperi, cuyo propósito fundamental es promover, rescatar y difundir los valores históricos, culturales y agrícolas relacionadas al cacao en Venezuela.Esta iniciativa honra el legado de Quirico Prosperi, un visionario que, junto a su familia, han producido el mejor cacao del mundo desde 1882.',
+      'La Fundación Quirico Prosperi es nuestra organización sin fines de lucro creada en 2012 por Alejandro Prosperi, cuyo propósito fundamental es promover, rescatar y difundir los valores históricos, culturales y agrícolas relacionadas al cacao en Venezuela. Esta iniciativa honra el legado de Quirico Prosperi, un visionario que, junto a su familia, han producido el mejor cacao del mundo desde 1882.',
 
     timeline_preview: {
-      title: 'Familia Prosperi: 140 Años de Cacao',
+      title: 'Familia Prosperi: Más de 140 Años de Cacao',
       description:
-        'La historia de Intercacao y la Fundación Quirico Prosperi etsá profundamente ligada a la vida, obra y familia de Quirico Prosperi. Es un relato de visión, perseverancia y compromiso con la tierra y la comunidad. Desde la llegada de Quirico Prosperi a Venezuela en el siglo XIX, hasta el liderazgo actual de su bisnieto Alejandro Prosperi, cuatro generaciones han dedicado sus vidas al cultivo del cacao, la innovación agrícola y el desarrollo social. Este legado no solo ha consolidado a Intercacao como una de las productoras más importantes de cacao en Venezuela, sino que también ha dejado una huella imborrable en la región de Paria, inspirando un futuro sostenible y lleno de oportunidades.',
+        'La historia de Intercacao y la Fundación Quirico Prosperi está profundamente ligada a la vida, obra y familia Prosperi. Es un relato de visión, perseverancia y compromiso con la tierra y la comunidad. Desde la llegada de Quirico Prosperi a Venezuela en el siglo XIX, hasta el liderazgo actual de su bisnieto Alejandro Prosperi, cuatro generaciones han dedicado sus vidas al cultivo y exportación del mejor cacao fino de aroma del mundo y el desarrollo social. Este legado no solo ha consolidado a Intercacao como una de las compañias exportadoras de cacao más importantes en Venezuela, sino que también ha dejado una huella imborrable en la región oriental, occidental y central de Venezuela, sembrando un futuro sostenible y lleno de oportunidades.',
       title_two: '4 Generaciones de Cacaoteros',
     },
     timeline_items: [
@@ -717,7 +717,7 @@ const es = {
         subtitle: '1850 - 1918',
         name: 'Quirico Prosperi Boschetti',
         content:
-          'Quirico Prosperi, nacido en Córcega en 1850, llegó a Venezuela en 1874 y se estableció en Carúpano, donde adquirió la plantación "El Rincón" y en 1882, compra la Casa Solariega, hoy en día sede de la Fundación Quirico Prosperi, lugar que se convertiría en el corazón de su patrimonio. Con visión y tenacidad, fundó la empresa "Prosperi Hermanos", dedicada a la producción y exportación de cacao, café y sarrapia. Quirico no solo construyó un imperio agrícola, sino que también dejó un legado de perseverancia y compromiso con su familia y su comunidad.',
+          'Quirico Prosperi, nacido en Brustico - Corsica, Francia en 1850, llegó a Venezuela en 1874 y se estableció en Carúpano, donde adquirió la plantación "El Rincón" y en 1882, compra la Casa Solariega, hoy en día sede de la Fundación Quirico Prosperi, lugar que se convertiría en el corazón de su patrimonio. Con visión y tenacidad, fundó la empresa "Prosperi Hermanos", dedicada a la producción y exportación de cacao, café y sarrapia. Quirico no solo construyó un imperio agrícola, sino que también dejó un legado de perseverancia y compromiso con su familia y su comunidad.',
         img: [
           { src: QuiricoProsperi.src, alt: 'Quirico Prosperi Boschetti' },
           { src: QuiricoDaughters.src, alt: 'Quirico Prosperi Boschetti' },
@@ -737,7 +737,7 @@ const es = {
         subtitle: '1873 - 1957',
         name: 'Antonio Martín Prosperi Luccioni ',
         content:
-          'Hijos de Quirico Prosperi, Pablo (1873) y Martín (1886) continuaron y expandieron el negocio familiar. Pablo lideró "P. Prosperi y Cía." y fundó empresas pioneras como el primer concesionario Ford en Cumaná. Martín, por su parte, se enfocó en negocios industriales y financieros, destacándose como presidente de "C.A. Telares de Caracas y Valencia" y fundador de "Aceites Diana". Ambos hermanos dejaron un legado de innovación y compromiso con el desarrollo de Venezuela, incluyendo la reconstrucción de la Iglesia San Pedro Apóstol en El Rincón, un homenaje a su madre Marie Luccioni Paoli.',
+          'Hijos de Quirico Prosperi, Pablo (Nace en 1873 - Brustico - Córcega, Francia) y Martín (Nace en 1886 - Casa de la Plantación de Cacao, El Rincón, Edo. Sucre) continuaron y expandieron el negocio familiar. Pablo lideró "P. Prosperi y Cía." y fundó empresas pioneras como el primer concesionario Ford en Cumaná. Martín, por su parte, se enfocó en negocios industriales y financieros. Para 1908, durante la dictadura de Cipriano Castro, Quirico fue expulsado de Venezuela junto a otros corsos. Desde Trinidad, dirigió a su familia y negocios, demostrando una resiliencia inquebrantable. Ambos hermanos dejaron un legado de compromiso con el desarrollo de Venezuela.',
         img: [
           { src: AntonioyPablo.src, alt: 'Quirico Prosperi Boschetti' },
           { src: Antonio.src, alt: 'Quirico Prosperi Boschetti' },
@@ -758,7 +758,7 @@ const es = {
         subtitle: '1934 - 2008',
         name: 'Jaime Martín Prosperi Luria',
         content:
-          'Jaime Martín, nieto de Quirico, fundó "Mercantil Prosperi S.A." y "Prosperi Caracas, C.A.", empresas que posicionaron el cacao venezolano en mercados gourmet internacionales. A pesar de los desafíos políticos, como la nacionalización del cacao en 1975, Jaime mantuvo vivo el legado familiar, defendiendo los intereses de los productores y promoviendo la modernización del sector. Tras la devastación de un huracán de 1933, reconstruyó la iglesia San Pedro Apóstol, dejando un legado arquitectónico que aún sirve a la comunidad. Su liderazgo en gremios como FEDEAGRO y su apoyo a los agricultores reflejan su profundo compromiso con el agro venezolano.',
+          'Jaime Martín, nieto de Quirico, fundó "Mercantil Prosperi S.A." y "Prosperi Caracas, C.A.", empresas que posicionaron el cacao venezolano en mercados gourmet internacionales. Procedió a ampliar y expandir el negocio de cacao por el territorio nacional, comercializando cacaos de todos los orígenes y calidades de Venezuela, convirtiéndose en la primera empresa en lograr esto; posteriormente, fue nombrado Presidente de la "Asociación de Exportadores de Cacao de Venezuela". A pesar de los desafíos políticos, como la nacionalización del cacao en 1975, Jaime mantuvo vivo el legado familiar, defendiendo los intereses de los productores y promoviendo la modernización del sector. Su liderazgo en gremios como FEDEAGRO y su apoyo a los agricultores reflejan su profundo compromiso con el agro venezolano.',
         img: [
           { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
           { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
@@ -770,7 +770,7 @@ const es = {
         subtitle: '1966 - Actualidad',
         name: 'Alejandro Prosperi Álvarez',
         content:
-          "Bisnieto de Quirico, Alejandro Prosperi recuperó el negocio familiar en 1993, fundando \"Cacao Flor de Baba, C.A.\" y cofundando la Cámara Venezolana del Cacao (CAPEC). Su visión innovadora y su enfoque en la calidad llevaron al cacao venezolano a nuevos mercados internacionales. En 2012, en honor a su bisabuelo, creó la Fundación Quirico Prosperi, dedicada a preservar el legado histórico y promover el desarrollo sostenible en la región de Paria. Alejandro continúa honrando el espíritu emprendedor de Quirico Prosperi, impulsando proyectos que benefician a la comunidad y preservan el patrimonio histórico, agrícola y cultural de Venezuela.",
+          "Bisnieto de Quirico, Alejandro Prosperi recuperó el negocio familiar en 1993, fundando \"Cacao Flor de Baba, C.A.\" y cofundando la Cámara Venezolana del Cacao (CAPEC). Su visión innovadora y su enfoque en la calidad llevaron al cacao venezolano a nuevos mercados internacionales. En 2012, en honor a su bisabuelo, creó la Fundación Quirico Prosperi, dedicada a preservar el legado histórico y promover el desarrollo sostenible en la región de Paria. Alejandro continúa honrando el espíritu emprendedor de Quirico Prosperi, impulsando proyectos que benefician a la comunidad, al ambiente, a la preservación del cacao criollo autóctono, preservando el patrimonio histórico, agrícola y cultural de Venezuela.",
         img: [
           { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: Alejandro_Wilfried.src, alt: 'Alejandro Prosperi Álvarez' },
@@ -785,7 +785,7 @@ const es = {
       {
         title: 'Regreso al Agua',
         content:
-          'La Fundación Quirico Prosperi lidera “Regreso del Agua”,  un proyecto innovador que combina tecnología, investigación y acción comunitaria para revivir el cauce del río. A través de cultivos ecológicos y prácticas sostenibles, trabajamos juntos para que el agua vuelva a fluir, devolviendo vida y esperanza a nuestra tierra. ¡Un futuro más verde y próspero nos espera! Si se puede!',
+          '"Regreso del Agua" actualmente recupera la cuenca del río El Rincón mediante reforestación y buenas prácticas agrícolas. Asegura agua para más de 3,800 personas y para la fauna, protegiendo el medio ambiente con especies autóctonas como la guadua. Este programa combina educación ambiental y acción comunitaria para garantizar un futuro sostenible, de la mano de entes gubernamentales.',
         img: {
           src: logoRegresoAlAgua.src,
           alt: 'Regreso al Agua',
@@ -797,7 +797,7 @@ const es = {
       {
         title: 'Vivero Wilfried Merle',
         content:
-          'La Fundación Quirico Prosperi honra el legado de Wilfried Merle con el “Vivero Wilfried Merle”, un espacio dedicado a la investigación, producción y preservación de las mejores plantas de cacao, café y otras especies que fortalecen estos cultivos. Inspirado en su visión de sostenibilidad y desarrollo comunitario, el vivero no solo impulsa la agricultura responsable, sino que también sirve como centro de aprendizaje para colegios y universidades. Aquí, nuevas generaciones descubren el valor del campo y la importancia de cultivar con conciencia ambiental. ¡Sembrando conocimiento, cosechando futuro!',
+          'El Vivero Wilfried Merle produce plantas de cacao, frutales y forestales para reforestar y reactivar la economía local. Programas como "Regreso al Agro" y "Regreso del Agua" son posibles gracias al vivero, que también promueve la sostenibilidad y la educación ambiental. Además, en sus espacios salvaguarda y preserva la identidad especies autóctonas como el cacao pariano.',
         img: {
           src: logoWilfriedMerle.src,
           alt: 'Regreso al Agua',
@@ -809,7 +809,7 @@ const es = {
       {
         title: 'Regreso al Agro',
         content:
-          'La Fundación Quirico Prosperi, comprometida con el rescate de los valores históricos, culturales y agrícolas de Venezuela, impulsa “Regreso al Agro”, un programa educativo que demuestra que el cultivo de cacao y café no solo es una tradición, sino una profesión rentable y transformadora. A través de la promoción de buenas prácticas agrícolas, buscamos empoderar a la comunidad y sembrar un futuro sostenible para las nuevas generaciones. ¡El campo es vida, progreso y oportunidad!',
+          'Este programa fomenta el cultivo sostenible de cacao, donando plantas y capacitando a productores para mejorar su productividad y su calidad de vida. Preserva el cacao pariano, fomenta las buenas prácticas agrícolas y ecológicas, para garantizar un producto de calidad y dignificar la labor de los agricultores, asegurando un futuro próspero para la región.',
         img: {
           src: logoRegresoAlAgro.src,
           alt: 'Regreso al Agua',
@@ -872,7 +872,7 @@ const es = {
     horizontal_scroll: {
       title: 'Electrones: Programas de la Fundación',
       description:
-        'Inspirados en los átomos, la Fundación Quirico Prosperi actúa como el centro (núcleo) que impulsa y sostiene diversos programas de responsabilidad social (electrones), diseñados para impactar positivamente en la comunidad de El Rincón, fortaleciendo el desarrollo social, cultural y ambiental, beneficiando a las familias y el entorno que hacen posible nuestra labor cacaotera.',
+        'Inspirados en los átomos, la Fundación Quirico Prosperi actúa como el centro (núcleo) que impulsa y sostiene diversos programas de responsabilidad social (electrones), diseñados para impactar positivamente en la comunidad de El Rincón y otros municipios, fortaleciendo el desarrollo social, cultural y ambiental, beneficiando a las familias y el entorno que hacen posible nuestra labor cacaotera.',
       current_news_title: 'Actualidad FQP: Novedades de Nuestra Fundación',
       view_more: 'Ver más',
       explore_section: {
@@ -905,21 +905,21 @@ const es = {
         {
           title: 'Danza y Música',
           description:
-            'A través de talleres de danza y música, este programa preserva tradiciones afrocaribeñas y fomenta la creatividad en niños y jóvenes. Con grupos como el Ballet Roger Urbano y el Módulo de Música Afro-Paria, se fortalece el sentido de pertenencia y la identidad cultural de la comunidad.',
+            'A través de talleres de danza y música, este programa promueve la expresión de las distintas culturas y tradiciones de Venezuela y fomenta la creatividad en niños y jóvenes. Con grupos como el Ballet Roger Urbano, se fortalece el sentido de pertenencia y la identidad cultural de la comunidad.',
           url: 'https://fqp.vercel.app/electron/danza-y-musica',
           image: danza.src,
         },
         {
           title: 'Deporte',
           description:
-            'La Escuela de Fútbol Sala "Los Prosperi" y otras actividades deportivas forman atletas y enseñan valores como disciplina y trabajo en equipo. Con participación en torneos regionales, este programa inspira a la comunidad con el mensaje de que ¡Sí se puede triunfar!',
+            'La Escuela de Fútbol Sala y Basquetbol "Los Prosperi" forman atletas y enseñan valores como disciplina y trabajo en equipo. Gracias a este programa, tienen participación en torneos regionales, este programa inspira a la comunidad con el mensaje de que ¡Sí se puede triunfar!',
           url: 'https://fqp.vercel.app/electron/deporte',
           image: deporte.src,
         },
         {
           title: 'Religión',
           description:
-            'Este módulo apoya la Iglesia San Pedro Apóstol con actividades religiosas, culturales y de mantenimiento. Preserva el patrimonio espiritual y arquitectónico, fomentando la participación activa de la comunidad en la vida parroquial y celebrando tradiciones locales.',
+            'Este módulo apoya la Iglesia San Pedro Apóstol con actividades religiosas, culturales y de mantenimiento. Preserva el patrimonio espiritual y arquitectónico, fomentando la participación activa de la comunidad en la vida parroquial y celebrando las fiestas religiosas del pueblo El Rincón.',
           url: 'https://fqp.vercel.app/electron/religion',
           image: religion.src,
         },
@@ -938,6 +938,7 @@ const es = {
     subtitle: 'Somos un equipo de apasionados por el cacao.',
     description:
       'Nuestra misión es buscar los más deseados cacaos que contribuyan a la elaboración de los mejores chocolates del mundo. Trabajamos en los lugares donde crecen los mejores cacaos, hogar de los grandiosos cacaos criollos, llegamos a orígenes inaccesibles buscando una completa trazabilidad y aplicando protocolos post cosecha logrando así aromas y sabores extraordinarios para que los grandes chocolateros puedan elaborar los mejores chocolates del mundo.',
+    farewell: 'Exportamos el mejor cacao para los mejores chocolateros del mundo.',
   },
   cocoa_gallery: {
     order_by: 'Ordenar por:',
@@ -1152,7 +1153,7 @@ const en = {
     description:
       'The Quirico Prosperi Foundation is our non-profit organization, founded in 2012 by Alejandro Prosperi. Its fundamental purpose is to promote, rescue, and disseminate the historical, cultural, and agricultural values ​​related to cacao in Venezuela. This initiative honors the legacy of Quirico Prosperi, a visionary who, along with his family, has produced the best cacao in the world since 1882.',
     timeline_preview: {
-      title: 'Prosperi Family: 140 Years of Cocoa',
+      title: 'Prosperi Family: More Than 140 Years of Cocoa',
       description:
         'The history of Intercacao and the Quirico Prosperi Foundation is deeply intertwined with the life, work, and family of Quirico Prosperi. It is a story of vision, perseverance, and commitment to the land and the community. From the arrival of Quirico Prosperi in Venezuela in the 19th century to the current leadership of his great-grandson Alejandro Prosperi, four generations have dedicated their lives to cocoa cultivation, agricultural innovation, and social development. This legacy has not only established Intercacao as one of the most important cocoa producers in Venezuela but has also left an indelible mark on the Paria region, inspiring a sustainable and opportunity-filled future.',
       title_two: '4 Generations of Cocoa Farmers',
@@ -1183,7 +1184,7 @@ const en = {
         subtitle: '1873 - 1957',
         name: 'Antonio Martín Prosperi Luccioni',
         content:
-          'Sons of Quirico Prosperi, Pablo (1873) and Martín (1886), continued and expanded the family business. Pablo led "P. Prosperi y Cía." and founded pioneering companies such as the first Ford dealership in Cumaná. Martín, on the other hand, focused on industrial and financial ventures, standing out as president of "C.A. Telares de Caracas y Valencia" and founder of "Aceites Diana." Both brothers left a legacy of innovation and commitment to the development of Venezuela, including the reconstruction of the San Pedro Apóstol Church in El Rincón, a tribute to their mother, Marie Luccioni Paoli.',
+          'The sons of Quirico Prosperi, Pablo (born in 1873 - Brustico, Corsica, France) and Martín (born in 1886 - Cocoa Plantation House, El Rincón, Sucre State), continued and expanded the family business. Pablo led P. Prosperi y Cía. and founded pioneering enterprises, including the first Ford dealership in Cumaná. Martín, on the other hand, focused on industrial and financial ventures. By 1908, during Cipriano Castro’s dictatorship, Quirico was expelled from Venezuela along with other Corsicans. From Trinidad, he continued to guide his family and businesses, demonstrating unwavering resilience. Both brothers left a legacy of commitment to Venezuela’s development.',
         img: [
             { src: AntonioyPablo.src, alt: 'Quirico Prosperi Boschetti' },
             { src: Antonio.src, alt: 'Quirico Prosperi Boschetti' },
@@ -1204,7 +1205,7 @@ const en = {
         subtitle: '1934 - 2008',
         name: 'Jaime Martín Prosperi Luria',
         content:
-          'Jaime Martín, grandson of Quirico, founded "Mercantil Prosperi S.A." and "Prosperi Caracas, C.A.", companies that positioned Venezuelan cocoa in international gourmet markets. Despite political challenges, such as the nationalization of cocoa in 1975, Jaime kept the family legacy alive, defending the interests of producers and promoting the modernization of the sector. His leadership in associations like FEDEAGRO and his support for farmers reflect his deep commitment to Venezuelan agriculture.',
+          'Jaime Martín, grandson of Quirico, founded Mercantil Prosperi S.A. and Prosperi Caracas, C.A., companies that positioned Venezuelan cocoa in international gourmet markets. He expanded the cocoa business nationwide, commercializing cocoa from all origins and qualities across Venezuela, becoming the first company to achieve this. Later, he was appointed President of the Venezuelan Cocoa Exporters Association. Despite political challenges, such as the nationalization of cocoa in 1975, Jaime kept the family legacy alive, defending the interests of producers and promoting the modernization of the sector. His leadership in organizations like FEDEAGRO and his support for farmers reflect his deep commitment to Venezuelan agriculture.',
         img: [
             { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
             { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
@@ -1216,7 +1217,7 @@ const en = {
         subtitle: '1966 - Present',
         name: 'Alejandro Prosperi Álvarez',
         content:
-          "Great-grandson of Quirico, Alejandro Prosperi revived the family business in 1993, founding Cacao Flor de Baba, C.A. and co-founding the Venezuelan Cocoa Chamber (CAPEC). His innovative vision and focus on quality brought Venezuelan cocoa to new international markets. In 2012, in honor of his great-grandfather, he established the Quirico Prosperi Foundation, dedicated to preserving the historical legacy and promoting sustainable development in the Paria region. Alejandro continues to honor the entrepreneurial spirit of Quirico Prosperi, driving projects that benefit the community and preserve Venezuela's historical, agricultural, and cultural heritage.",
+          "Great-grandson of Quirico, Alejandro Prosperi, revived the family business in 1993 by founding Cacao Flor de Baba, C.A. and co-founding the Venezuelan Cocoa Chamber (CAPEC). His innovative vision and focus on quality brought Venezuelan cocoa to new international markets. In 2012, in honor of his great-grandfather, he established the Quirico Prosperi Foundation, dedicated to preserving historical heritage and promoting sustainable development in the Paria region. Alejandro continues to honor Quirico Prosperi’s entrepreneurial spirit by driving projects that benefit the community, the environment, and the preservation of native criollo cocoa, safeguarding Venezuela’s historical, agricultural, and cultural heritage.",
         img: [
           { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: Alejandro_Wilfried.src, alt: 'Alejandro Prosperi Álvarez' },
@@ -1243,7 +1244,7 @@ const en = {
       {
         title: 'Wilfried Merle Nursery',
         content:
-          'The Quirico Prosperi Foundation honors Wilfried Merle\'s legacy with the "Wilfried Merle Nursery", a space dedicated to researching, producing, and preserving the finest cocoa, coffee, and complementary plant species. Inspired by his vision of sustainability and community development, the nursery not only promotes responsible agriculture but also serves as a learning center for schools and universities. Here, new generations discover the value of farming and the importance of environmentally conscious cultivation. Planting knowledge, harvesting the future!',
+          'The Wilfried Merle Nursery produces cocoa, fruit, and forestry plants to support reforestation and revitalize the local economy. Programs such as “Return to Agriculture” and “Return of Water” are made possible thanks to the nursery, which also promotes sustainability and environmental education. Additionally, it safeguards and preserves the identity of native species, such as Pariano cocoa.',
         img: {
           src: logoWilfriedMerle.src,
           alt: 'Return to Water',
@@ -1255,7 +1256,7 @@ const en = {
       {
         title: 'Return to Agriculture',
         content:
-          'The Quirico Prosperi Foundation, committed to preserving Venezuela\'s historical, cultural, and agricultural values, drives "Return to Agriculture" - an educational program demonstrating that cocoa and coffee cultivation is not just a tradition, but a profitable and transformative profession. Through promoting good agricultural practices, we aim to empower communities and sow a sustainable future for new generations. The land represents life, progress, and opportunity!',
+          'This program promotes the sustainable cultivation of cocoa by donating plants and training producers to improve their productivity and quality of life. It preserves Pariano cocoa, encourages good agricultural and ecological practices to ensure a high-quality product, and dignifies the work of farmers, securing a prosperous future for the region.',
         img: {
           src: logoRegresoAlAgro.src,
           alt: 'Return to Water',
@@ -1317,7 +1318,7 @@ const en = {
     horizontal_scroll: {
       title: 'Electrons: Foundation Programs',
       description:
-        'Inspired by atoms, the Quirico Prosperi Foundation acts as the core (nucleus) that drives and sustains various social responsibility programs (electrons), designed to positively impact the community of El Rincón, strengthening social, cultural, and environmental development, benefiting families and the environment that make our cocoa work possible.',
+        'Inspired by atoms, the Quirico Prosperi Foundation acts as the core (nucleus) that drives and sustains various social responsibility programs (electrons), designed to positively impact the community of El Rincón and other municipalities, strengthening social, cultural, and environmental development, benefiting families and the environment that make our cocoa work possible.',
       current_news_title: 'FQP Current News: Updates from Our Foundation',
       view_more: 'View more',
       explore_section: {
@@ -1343,28 +1344,28 @@ const en = {
         {
           title: 'Return of Water',
           description:
-            '"Return of Water" recovers the El Rincón river basin through reforestation and sustainable practices. It ensures water for over 3,800 people and protects the environment with native species like bamboo. This program combines environmental education and community action to guarantee a sustainable future.',
+            '“Return of Water” is currently restoring the El Rincón river basin through reforestation and sustainable agricultural practices. It ensures water access for over 3,800 people and local wildlife, protecting the environment with native species such as Guadua. This program combines environmental education and community action to secure a sustainable future, working alongside government entities.',
           url: 'https://fqp.vercel.app/electron/regreso-del-agua',
           image: regresoAlAgua.src,
         },
         {
           title: 'Dance and Music',
           description:
-            'Through dance and music workshops, this program preserves Afro-Caribbean traditions and fosters creativity in children and youth. With groups like the Roger Urbano Ballet and the Afro-Paria Music Module, it strengthens community belonging and cultural identity.',
+            'Through dance and music workshops, this program promotes the expression of Venezuela’s diverse cultures and traditions while fostering creativity in children and young people. With groups like Ballet Roger Urbano, it strengthens the community’s sense of belonging and cultural identity.',
           url: 'https://fqp.vercel.app/electron/danza-y-musica',
           image: danza.src,
         },
         {
           title: 'Sports',
           description:
-            'The "Los Prosperi" Futsal School and other sports activities train athletes and teach values like discipline and teamwork. With participation in regional tournaments, this program inspires the community with the message that Yes We Can Succeed!',
+            'The “Los Prosperi” Futsal and Basketball School trains athletes while teaching values such as discipline and teamwork. Thanks to this program, participants compete in regional tournaments, inspiring the community with the message that success is possible!',
           url: 'https://fqp.vercel.app/electron/deporte',
           image: deporte.src,
         },
         {
           title: 'Religion',
           description:
-            'This module supports the San Pedro Apóstol Church with religious, cultural, and maintenance activities. It preserves spiritual and architectural heritage, encouraging active community participation in parish life and celebrating local traditions.',
+            'This program supports the San Pedro Apóstol Church through religious, cultural, and maintenance activities. It preserves the spiritual and architectural heritage, encourages active community participation in parish life, and celebrates the religious festivities of El Rincón.',
           url: 'https://fqp.vercel.app/electron/religion',
           image: religion.src,
         },
@@ -1383,6 +1384,7 @@ const en = {
     subtitle: 'We are a team passionate about cocoa.',
     description:
       "Our mission is to seek the most desirable cocoa beans that contribute to the creation of the world's finest chocolates. We work in the regions where the best cocoa grows, home to magnificent Criollo cocoa varieties. We reach inaccessible origins to ensure complete traceability, applying post-harvest protocols to achieve extraordinary aromas and flavors, enabling master chocolatiers to craft the world's finest chocolates.",
+    farewell: 'We export the best cocoa for the best chocolatiers in the world.',
   },
   cocoa_gallery: {
     order_by: 'Order by:',
