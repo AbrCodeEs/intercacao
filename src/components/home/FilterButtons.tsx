@@ -1,7 +1,5 @@
 'use client';
-
-import { motion, AnimatePresence } from 'framer-motion';
-import { Filter, Menu } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export const FilterButtons = ({
   isVisible,

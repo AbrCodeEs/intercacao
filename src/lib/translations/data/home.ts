@@ -3,6 +3,9 @@ import mundoDeSabores from '@/images/home/imagotipo-mundo-de-sabores.webp';
 import logoInteracao from '@/images/global/logo-intercacao.webp';
 import logoWhiteImagotipoCacaoGourmet from '@/images/global/logo-white-imagotipo-cacao-gourmet.webp';
 
+import bar from '@/images/home/bar.webp';
+import barLogo from '@/images/home/bar-logo.webp';
+
 import logoRegresoAlAgua from '@/images/global/logo-regreso-al-agua.webp';
 import logoWilfriedMerle from '@/images/global/logo-wilfried-merle.webp';
 import logoRegresoAlAgro from '@/images/global/logo-regreso-al-agro.webp';
@@ -770,7 +773,7 @@ const es = {
         subtitle: '1966 - Actualidad',
         name: 'Alejandro Prosperi Álvarez',
         content:
-          "Bisnieto de Quirico, Alejandro Prosperi recuperó el negocio familiar en 1993, fundando \"Cacao Flor de Baba, C.A.\" y cofundando la Cámara Venezolana del Cacao (CAPEC). Su visión innovadora y su enfoque en la calidad llevaron al cacao venezolano a nuevos mercados internacionales. En 2012, en honor a su bisabuelo, creó la Fundación Quirico Prosperi, dedicada a preservar el legado histórico y promover el desarrollo sostenible en la región de Paria. Alejandro continúa honrando el espíritu emprendedor de Quirico Prosperi, impulsando proyectos que benefician a la comunidad, al ambiente, a la preservación del cacao criollo autóctono, preservando el patrimonio histórico, agrícola y cultural de Venezuela.",
+          'Bisnieto de Quirico, Alejandro Prosperi recuperó el negocio familiar en 1993, fundando "Cacao Flor de Baba, C.A." y cofundando la Cámara Venezolana del Cacao (CAPEC). Su visión innovadora y su enfoque en la calidad llevaron al cacao venezolano a nuevos mercados internacionales. En 2012, en honor a su bisabuelo, creó la Fundación Quirico Prosperi, dedicada a preservar el legado histórico y promover el desarrollo sostenible en la región de Paria. Alejandro continúa honrando el espíritu emprendedor de Quirico Prosperi, impulsando proyectos que benefician a la comunidad, al ambiente, a la preservación del cacao criollo autóctono, preservando el patrimonio histórico, agrícola y cultural de Venezuela.',
         img: [
           { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: Alejandro_Wilfried.src, alt: 'Alejandro Prosperi Álvarez' },
@@ -945,6 +948,21 @@ const es = {
     filter_flavor: 'Mundo de sabores',
     link: 'Ver mas',
     title: 'Más de un siglo cultivando y exportando el mejor cacao fino de aroma del mundo.',
+    bar: {
+      title: 'Mandarina Miel & Vainilla Bar',
+      description: [
+        'En Mandarina Miel & Vainilla Bar creemos en el poder de lo natural. Cada una de nuestras galletas y barras energéticas está elaborada con ingredientes auténticos, seleccionados con cuidado para ofrecer sabor, nutrición y bienestar.',
+        'Combinamos mandarina fresca, miel pura y vainilla natural para crear una experiencia que conecta con lo esencial: alimentos honestos, llenos de energía y propósito.',
+      ],
+      img: {
+        alt: 'Rueda de sabores del cacao',
+        src: barLogo.src,
+      },
+      banner: {
+        alt: 'Banner del mundo de sabores',
+        src: bar.src,
+      },
+    },
     world_of_flavors: {
       types_options: [
         {
@@ -1167,17 +1185,17 @@ const en = {
         content:
           'Quirico Prosperi, born in Corsica in 1850, arrived in Venezuela in 1874 and settled in Carúpano, where he acquired the "El Rincón" plantation. In 1882, he purchased the Casa Solariega, now the headquarters of the Quirico Prosperi Foundation, which would become the heart of his legacy. With vision and tenacity, he founded the company "Prosperi Hermanos," dedicated to the production and export of cocoa, coffee, and sarrapia. Quirico not only built an agricultural empire but also left a legacy of perseverance and commitment to his family and community.',
         img: [
-            { src: QuiricoProsperi.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: QuiricoDaughters.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: QuiricoDaughtersBw.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: CertificadoMedalla.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: MedallaHonor.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: Medalla.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: Escrito1906.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: FirmaQuirico.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: QuiricoCursos.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: Secado3.src, alt: 'Quirico Prosperi Boschetti' },
-          ],
+          { src: QuiricoProsperi.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: QuiricoDaughters.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: QuiricoDaughtersBw.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: CertificadoMedalla.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: MedallaHonor.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Medalla.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Escrito1906.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: FirmaQuirico.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: QuiricoCursos.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Secado3.src, alt: 'Quirico Prosperi Boschetti' },
+        ],
         img_toggle: true,
       },
       {
@@ -1187,17 +1205,17 @@ const en = {
         content:
           'The sons of Quirico Prosperi, Pablo (born in 1873 - Brustico, Corsica, France) and Martín (born in 1886 - Cocoa Plantation House, El Rincón, Sucre State), continued and expanded the family business. Pablo led P. Prosperi y Cía. and founded pioneering enterprises, including the first Ford dealership in Cumaná. Martín, on the other hand, focused on industrial and financial ventures. By 1908, during Cipriano Castro’s dictatorship, Quirico was expelled from Venezuela along with other Corsicans. From Trinidad, he continued to guide his family and businesses, demonstrating unwavering resilience. Both brothers left a legacy of commitment to Venezuela’s development.',
         img: [
-            { src: AntonioyPablo.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: Antonio.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: PabloProsperi.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: LuriaHijas.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: ProsperiCia.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: Elanunciador.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: Huracan.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: IglesiaElricon.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: ProsperiCia1.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: ProsperiCA.src, alt: 'Quirico Prosperi Boschetti' },
-            { src: Secado2.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: AntonioyPablo.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Antonio.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: PabloProsperi.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: LuriaHijas.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: ProsperiCia.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Elanunciador.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Huracan.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: IglesiaElricon.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: ProsperiCia1.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: ProsperiCA.src, alt: 'Quirico Prosperi Boschetti' },
+          { src: Secado2.src, alt: 'Quirico Prosperi Boschetti' },
         ],
         img_toggle: true,
       },
@@ -1208,8 +1226,8 @@ const en = {
         content:
           'Jaime Martín, grandson of Quirico, founded Mercantil Prosperi S.A. and Prosperi Caracas, C.A., companies that positioned Venezuelan cocoa in international gourmet markets. He expanded the cocoa business nationwide, commercializing cocoa from all origins and qualities across Venezuela, becoming the first company to achieve this. Later, he was appointed President of the Venezuelan Cocoa Exporters Association. Despite political challenges, such as the nationalization of cocoa in 1975, Jaime kept the family legacy alive, defending the interests of producers and promoting the modernization of the sector. His leadership in organizations like FEDEAGRO and his support for farmers reflect his deep commitment to Venezuelan agriculture.',
         img: [
-            { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
-            { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
+          { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
+          { src: JaimeMartinProsperi.src, alt: 'Jaime Martín Prosperi Luria' },
         ],
         img_toggle: true,
       },
@@ -1218,7 +1236,7 @@ const en = {
         subtitle: '1966 - Present',
         name: 'Alejandro Prosperi Álvarez',
         content:
-          "Great-grandson of Quirico, Alejandro Prosperi, revived the family business in 1993 by founding Cocoa Flor de Baba, C.A. and co-founding the Venezuelan Cocoa Chamber (CAPEC). His innovative vision and focus on quality brought Venezuelan cocoa to new international markets. In 2012, in honor of his great-grandfather, he established the Quirico Prosperi Foundation, dedicated to preserving historical heritage and promoting sustainable development in the Paria region. Alejandro continues to honor Quirico Prosperi’s entrepreneurial spirit by driving projects that benefit the community, the environment, and the preservation of native criollo cocoa, safeguarding Venezuela’s historical, agricultural, and cultural heritage.",
+          'Great-grandson of Quirico, Alejandro Prosperi, revived the family business in 1993 by founding Cocoa Flor de Baba, C.A. and co-founding the Venezuelan Cocoa Chamber (CAPEC). His innovative vision and focus on quality brought Venezuelan cocoa to new international markets. In 2012, in honor of his great-grandfather, he established the Quirico Prosperi Foundation, dedicated to preserving historical heritage and promoting sustainable development in the Paria region. Alejandro continues to honor Quirico Prosperi’s entrepreneurial spirit by driving projects that benefit the community, the environment, and the preservation of native criollo cocoa, safeguarding Venezuela’s historical, agricultural, and cultural heritage.',
         img: [
           { src: AlejandroProsperi.src, alt: 'Alejandro Prosperi Álvarez' },
           { src: Alejandro_Wilfried.src, alt: 'Alejandro Prosperi Álvarez' },
@@ -1332,7 +1350,7 @@ const en = {
           title: 'Wilfried Merle Nursery',
           description:
             'The Wilfried Merle Nursery produces cocoa, fruit, and forest plants to reforest and reactivate the local economy. It\'s key for programs like "Return to Agriculture" and "Return of Water", promoting sustainability and environmental education. Additionally, it fosters agroecological tourism and preserves native species like bamboo.',
-          url: 'https://fqp.vercel.app/electron/vivero-wilfred-merle',
+          url: 'https://fqp.vercel.app/electron/vivero-wilfried-merle',
           image: vivero.src,
         },
         {
@@ -1346,7 +1364,7 @@ const en = {
           title: 'Return of Water',
           description:
             '“Return of Water” is currently restoring the El Rincón river basin through reforestation and sustainable agricultural practices. It ensures water access for over 3,800 people and local wildlife, protecting the environment with native species such as Guadua. This program combines environmental education and community action to secure a sustainable future, working alongside government entities.',
-          url: 'https://fqp.vercel.app/electron/regreso-del-agua',
+          url: 'https://fqp.vercel.app/electron/regreso-al-agua',
           image: regresoAlAgua.src,
         },
         {
@@ -1374,7 +1392,7 @@ const en = {
           title: 'Wilfred Merlle Brigade',
           description:
             'The Wilfred Merlle Brigade is a group of children who plant trees and collect seeds, promoting environmental awareness and teamwork. Through practical activities, it educates new generations about the importance of caring for the environment and preserving natural resources.',
-          url: 'https://fqp.vercel.app/electron/brigada-wilfred-merle',
+          url: 'https://fqp.vercel.app/electron/brigada-ambientalista-wilfried-merle',
           image: brigadaMerle.src,
         },
       ],
@@ -1391,7 +1409,23 @@ const en = {
     order_by: 'Order by:',
     filter_flavor: 'World of Flavors',
     link: 'See',
-    title: 'For over a century, we have been cultivating and exporting the world\'s finest fine-flavored cocoa.',
+    title:
+      "For over a century, we have been cultivating and exporting the world's finest fine-flavored cocoa.",
+    bar: {
+      title: 'Mandarina Honey & Vanilla Bar',
+      description: [
+        'At Mandarina Honey & Vanilla Bar, we believe in the power of nature. Each of our cookies and energy bars is made with authentic ingredients, carefully selected to offer flavor, nutrition, and well-being.',
+        'We combine fresh mandarin, pure honey, and natural vanilla to create an experience that connects with the essential: honest foods, full of energy and purpose.',
+      ],
+      img: {
+        alt: 'Rueda de sabores del cacao',
+        src: barLogo.src,
+      },
+      banner: {
+        alt: 'Banner del mundo de sabores',
+        src: bar.src,
+      },
+    },
     world_of_flavors: {
       types_options: [
         {
@@ -1437,7 +1471,7 @@ const en = {
         },
         {
           label: 'Floral',
-          value: 'Floral',
+          value: 'Flower',
           className: 'bg-flower text-white hover:text-white',
           icon: '/icons/aflorado-icon.svg',
           iconWhite: '/icons/aflorado-white-icon.svg',

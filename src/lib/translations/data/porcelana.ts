@@ -450,7 +450,7 @@ const en = {
         description: 'Orange',
       },
       {
-        name: 'Floral',
+        name: 'Flower',
         description: 'Orange • Tangerine',
       },
       {

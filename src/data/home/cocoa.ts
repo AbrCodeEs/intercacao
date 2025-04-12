@@ -14,25 +14,9 @@ import tumaco from '@/images/tumaco/tumaco-web.webp';
 import chulu from '@/images/chulu/chulu-web.webp';
 import trinchera from '@/images/trinchera/trincheras-web.webp';
 
-export interface ChocolateBar {
-  id: string;
-  name: string;
-  image: string;
-  rating: number;
-  fermented: number;
-  certified: number;
-  awarded: number;
-  creole: number;
-  flavors: string[];
-  country: string;
-  ingredients: {
-    [key: string]: number;
-  };
-  url: string;
-  disabled?: boolean;
-}
+import type { CocoaBar } from '@/types/home';
 
-export const chocolateBars: ChocolateBar[] = [
+export const chocolateBars: CocoaBar[] = [
   {
     id: '1',
     name: 'Chuao',

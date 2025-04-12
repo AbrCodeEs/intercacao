@@ -1,6 +1,6 @@
-import { chuao } from './translations/chuao';
-import { home } from './translations/home';
-import { porcelana } from './translations/porcelana';
+import { chuao } from '@/lib/translations/data/chuao';
+import { home } from '@/lib/translations/data/home';
+import { porcelana } from '@/lib/translations/data/porcelana';
 
 export const languages = {
   en: 'English',

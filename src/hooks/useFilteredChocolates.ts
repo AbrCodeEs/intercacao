@@ -1,8 +1,7 @@
 'use client';
 
-import { useMemo } from 'react';
-import { chocolateBars } from '@/data/chocolateBars';
-import { Sort, type SortOption, type FlavorOption } from '@/consts';
+import { chocolateBars } from '@/data/home/cocoa';
+import { Sort, type SortOption, type FlavorOption } from '@/types/home';
 
 export const useFilteredChocolates = (
   lang: string,

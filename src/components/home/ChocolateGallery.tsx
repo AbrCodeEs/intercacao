@@ -1,14 +1,12 @@
 'use client';
 
 import { useRef } from 'react';
-import { cn } from '@/lib/utils';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { useChocolateFilters } from '@/hooks/useChocolateFilters';
-import { FilterPanel } from '@/components/FilterPanel';
-import { ChocolateCard } from '@/components/ChocolateCard';
-import { IconsSortOption, ListItem, type FilterOption } from '@/components/FilterElements';
-import { FilterControls } from '@/components/FilterControls';
-import { FloatingControls } from '@/components/FloatingControls';
+import { ChocolateCard } from '@/components/home/ChocolateCard';
+import { IconsSortOption } from '@/components/home/FilterElements';
+import { FilterControls } from '@/components/home/FilterControls';
+import { FloatingControls } from '@/components/home/FloatingControls';
 
 import { useContainerPosition } from '@/hooks/useContainerPosition';
 import { useSectionVisibility } from '@/hooks/useSectionVisibility';
@@ -125,8 +123,38 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
         </div>
       </div>
 
-      <div className="h-auto w-full flex flex-col items-center justify-center xl:py-60 lg:py-60 md:py-40 py-10">
-        <h1 className="xl:text-4xl lg:text-3xl text-2xl font-bold text-white w-1/2 text-center capitalize">{trans.title}</h1>
+      <div className="flex h-auto w-full flex-col items-center justify-center gap-5 py-10 md:py-40 lg:py-60 xl:py-60">
+        <img
+          loading="eager"
+          src={trans.bar.img.src}
+          alt={trans.bar.img.alt}
+          className="size-90 rounded-full"
+          width="1000"
+          height="1000"
+        />
+
+        <h1 className="w-1/2 text-center text-2xl font-bold text-white capitalize lg:text-3xl xl:text-4xl">
+          {trans.bar.title}
+        </h1>
+
+        <p className="flex flex-col justify-center items-center gap-5 text-1xl w-1/2 text-center font-bold text-white capitalize lg:text-2xl xl:text-2xl">
+          {trans.bar.description.map((description: string, index: number) => (
+            <span key={index}>{description}</span>
+          ))}
+        </p>
+
+        <img
+          loading="eager"
+          src={trans.bar.banner.src}
+          alt={trans.bar.banner.alt}
+          className="size-200 rounded-2xl"
+          width="1000"
+          height="1000"
+        />
+
+        <h1 className="w-1/2 text-center text-2xl font-bold text-white capitalize lg:text-3xl xl:text-4xl">
+          {trans.title}
+        </h1>
       </div>
     </>
   );

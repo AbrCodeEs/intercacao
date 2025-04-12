@@ -1,5 +1,5 @@
 'use client';
-import { cn } from '@/assets/lib/utils';
+import { cn } from '@/lib/cn';
 import { AnimatePresence, motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';

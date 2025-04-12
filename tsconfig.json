@@ -11,8 +11,9 @@
       "@/components/*": ["src/components/*"],
       "@/assets/*": ["src/assets/*"],
       "@/images/*": ["src/assets/img/*"],
-      "@/lib/*": ["src/assets/lib/*"],
+      "@/lib/*": ["src/lib/*"],
       "@/layouts/*": ["src/layouts/*"],
+      "@/types/*": ["src/types/*"],
       "@/*": ["src/*"]
     }
   }

@@ -1,4 +1,4 @@
-import { getLangFromUrl, useTranslations } from '@/assets/lib/i18n/utils';
+import { getLangFromUrl, useTranslations } from '@/lib/translations';
 
 import PorcelanaWeb from '@/images/porcelana/porcelana-web.webp';
 import ratingStars from '@/images/chuao/rating-stars-cut.png';

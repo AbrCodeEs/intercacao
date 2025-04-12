@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/cn';
 import React from 'react';
 import { Star, Award, Trophy, Nut } from 'lucide-react';
 import { NavigationMenuLink } from '@/components/ui/navigation-menu';

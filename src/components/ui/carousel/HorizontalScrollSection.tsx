@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { Button } from '@/components/ui/button';
 
 import semillaCafe1 from '@/images/home/agro/01_semilla_cafe.jpg';
 import semillaCafe2 from '@/images/home/agro/02_semillas_cacao.jpg';
@@ -120,11 +121,11 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
                   />
                   <h3 className="text-xl font-bold">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
-                  {/* <div className="flex items-center justify-end py-4">
+                  <div className="flex items-center justify-end py-4">
                     <a href={item.url} target="_blank" rel="noopener noreferrer">
                       <Button variant={'link'}>{trans.view_more}</Button>
                     </a>
-                  </div> */}
+                  </div>
                 </div>
               </motion.div>
             );
@@ -142,14 +143,14 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
                 {trans.explore_section.title}
               </p>
               <p className="text-sm font-bold md:text-lg xl:text-lg">{trans.explore_section.cta}</p>
-              {/* <a
+              <a
                 className="underline"
                 href="https://fqp.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 https://fundacionprosperi.org
-              </a> */}
+              </a>
             </div>
           </motion.div>
         </div>

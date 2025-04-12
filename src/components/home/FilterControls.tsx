@@ -1,8 +1,8 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { Button } from '@/components/ui/button';
-import { ListItem, IconsSortOption } from '@/components/FilterElements';
+import { ListItem, IconsSortOption } from '@/components/home/FilterElements';
 import {
   NavigationMenu,
   NavigationMenuContent,

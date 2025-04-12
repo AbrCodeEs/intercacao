@@ -2,12 +2,11 @@
 
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import type { ChocolateBar } from '@/data/chocolateBars';
+import type { CocoaBar, SortOption, FlavorOption } from '@/types/home';
+import { Sort } from '@/types/home';
 import { Star, Award, Trophy, Nut, CornerRightUp } from 'lucide-react';
-import type { SortOption, FlavorOption } from '@/consts';
-import { Sort } from '@/consts';
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const IconTraslation = {
   fruity_sweet: 'fruity_sweet',
@@ -25,7 +24,7 @@ export function ChocolateCard({
   flavors,
   trans,
 }: {
-  chocolate: ChocolateBar;
+  chocolate: CocoaBar;
   sortBy: SortOption | null;
   flavors: FlavorOption[] | string | null;
   trans: Record<string, any>;
@@ -252,7 +251,7 @@ export function ChocolateCard({
               <a
                 href={chocolate.url}
                 target="_blank"
-                className="absolute right-0 bottom-0 block flex w-auto items-center justify-start gap-2 rounded-lg bg-gray-300 p-2 md:block lg:hidden xl:hidden"
+                className="absolute right-0 bottom-0 flex w-auto items-center justify-start gap-2 rounded-lg bg-gray-300 p-2 md:block lg:hidden xl:hidden"
               >
                 <CornerRightUp className="size-2 text-black" />
               </a>

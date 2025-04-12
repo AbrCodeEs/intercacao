@@ -1,8 +1,7 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { motion, AnimatePresence } from 'motion/react';
+import { cn } from '@/lib/cn';
 
 type FilterPanelProps = {
   isOpen: boolean;

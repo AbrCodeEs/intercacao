@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const animationConfig = {
+  const animationConfig: Record<string, string> = {
     right: 'animate-fade-right',
     left: 'animate-fade-left',
   };

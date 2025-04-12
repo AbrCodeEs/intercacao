@@ -1,8 +1,8 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { FilterButtons } from '@/components/FilterButtons';
-import { FilterPanel } from '@/components/FilterPanel';
+import { motion, AnimatePresence } from 'motion/react';
+import { FilterButtons } from '@/components/home/FilterButtons';
+import { FilterPanel } from '@/components/home/FilterPanel';
 
 type FloatingControlsProps = {
   isContainerEndVisible: boolean;

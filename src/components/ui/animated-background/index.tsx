@@ -1,5 +1,5 @@
 'use client';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/cn';
 import { AnimatePresence, type Transition, motion } from 'motion/react';
 import { Children, cloneElement, type ReactElement, useEffect, useState, useId } from 'react';
 

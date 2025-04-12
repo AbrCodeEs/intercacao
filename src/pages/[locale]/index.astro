@@ -2,10 +2,8 @@
 import { Image } from 'astro:assets';
 
 import Layout from '@/layouts/MainLayout.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/types/home/website';
 
-import banner from '@/images/home/banner.webp';
-import mundoDeSabores from '@/images/home/imagotipo-mundo-de-sabores.webp';
 import lienzo from '@/images/home/lienzo-bg.webp';
 import lienzoCacao from '@/images/home/lienzo-cacao-bg.webp';
 
@@ -16,18 +14,15 @@ import postFundacionProsperi from '@/images/home/post-fundacion-prosperi.webp';
 import postPintao from '@/images/home/post-pintao.webp';
 import postTesoro from '@/images/home/post-tesoro.webp';
 
-import mundoDeSaboresPanel from '@/images/home/mundo-de-sabores-panel-es.webp';
 import lienzoMundoBg from '@/images/home/lienzo-mundo-bg.webp';
 import logo from '@/images/global/logo.webp';
-import logoInteracao from '@/images/global/logo-intercacao.webp';
-import logoWhiteImagotipoCacaoGourmet from '@/images/global/logo-white-imagotipo-cacao-gourmet.webp';
 
 import { CarouselPost } from '@/components/ui/carousel/Post';
-import { ChocolateGallery } from '@/components/ChocolateGallery';
+import { ChocolateGallery } from '@/components/home/ChocolateGallery';
 import { DialogFlavours } from '@/components/ui/morphing-dialog/DialogFlavours';
 
 import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
-import { getLangFromUrl, useTranslations } from '@/assets/lib/i18n/utils';
+import { getLangFromUrl, useTranslations } from '@/lib/translations';
 import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
 
 const lang = getLangFromUrl(Astro.url);
