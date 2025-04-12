@@ -12,7 +12,7 @@ import {
 import { PlusIcon } from 'lucide-react';
 
 import ruedaMundoDeSabores from '@/images/home/rueda-mundo-de-sabores-es.png';
-import { cn } from '@/assets/lib/utils';
+import { cn } from '@/lib/cn';
 
 export function DialogFlavours({ trans }: { trans: Record<string, any> }) {
   return (

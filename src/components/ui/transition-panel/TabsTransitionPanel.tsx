@@ -6,7 +6,7 @@ import { AnimatedBackground } from '@/components/ui/animated-background';
 import { motion, AnimatePresence, useInView } from 'motion/react';
 import logoFundacionProsperi from '@/images/global/logo-fundacion-prosperi.webp';
 
-import { cn } from '@/assets/lib/utils';
+import { cn } from '@/lib/cn';
 
 import {
   Carousel,
@@ -17,7 +17,6 @@ import {
 } from '@/components/ui/carousel';
 import { DialogTimeLine } from '@/components/ui/morphing-dialog/DialogTimeLine';
 import HorizontalScrollSection from '@/components/ui/carousel/HorizontalScrollSection';
-import VideoComponent from '@/components/VideoComponent';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface TabsTransitionPanelProps {
@@ -94,7 +93,6 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
         <DialogTimeLine trans={trans} />
 
         <HorizontalScrollSection trans={trans.horizontal_scroll} />
-
       </>
     </>
   );

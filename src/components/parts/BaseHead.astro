@@ -3,7 +3,7 @@
 // all pages through the use of the <BaseHead /> component.
 import '@/assets/css/global.css';
 import '@/assets/css/rawline.css';
-import { SITE_TITLE } from '@/consts';
+import { SITE_TITLE } from "@/types/home/website";
 
 interface Props {
   title: string;
@@ -55,3 +55,14 @@ const { title, description, image = '/blog-placeholder-1.jpg', keywords } = Astr
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RJY1Y8RB08"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RJY1Y8RB08');
+</script>

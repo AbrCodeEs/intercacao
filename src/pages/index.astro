@@ -1,8 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-
 import Layout from '@/layouts/MainLayout.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/types/home/website';
 
 import banner from '@/images/home/banner.webp';
 import mundoDeSabores from '@/images/home/imagotipo-mundo-de-sabores.webp';
@@ -23,9 +22,9 @@ import logoInteracao from '@/images/global/logo-intercacao.webp';
 import logoWhiteImagotipoCacaoGourmet from '@/images/global/logo-white-imagotipo-cacao-gourmet.webp';
 
 import { CarouselPost } from '@/components/ui/carousel/Post';
-import { ChocolateGallery } from '@/components/ChocolateGallery';
+import { ChocolateGallery } from '@/components/home/ChocolateGallery';
 import { PlusIcon } from 'lucide-react';
-import { getLangFromUrl, useTranslations } from '@/assets/lib/i18n/utils';
+import { getLangFromUrl, useTranslations } from '@/lib/translations';
 import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
 import { DialogFlavours } from '@/components/ui/morphing-dialog/DialogFlavours';
 
@@ -91,6 +90,8 @@ const posts = [
     },
   },
 ];
+
+// Astro.redirect(`/${trans}/index.astro`);
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} pubDate={new Date()} keywords="">
@@ -99,6 +100,7 @@ const posts = [
       id="section-home"
       class="relative size-dvw flex-1 md:w-full lg:w-full xl:h-screen xl:w-full"
     >
+  
       <Image
         loading="eager"
         inferSize={true}
@@ -218,7 +220,7 @@ const posts = [
         <CarouselPost posts={posts} client:load />
       </div>
       <div class="flex w-full items-center justify-center gap-5">
-        <h3 class="py-4 text-3xl text-neutral-600 uppercase w-1/2 text-center">
+        <h3 class="w-1/2 py-4 text-center text-3xl text-neutral-600 uppercase">
           Exportamos el mejor cacao para los mejores chocolateros del mundo.
         </h3>
       </div>
@@ -276,7 +278,7 @@ const posts = [
           </svg>
 
           <div class="text-primary text-lg md:text-2xl lg:text-3xl xl:text-3xl">
-            +1 (786) 7190106
+            +1 (786) 905-2396
           </div>
         </li>
         <li class="flex items-center justify-center gap-5">
