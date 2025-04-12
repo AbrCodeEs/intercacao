@@ -31,11 +31,41 @@ export function DialogTimeLine({ trans }: { trans: [string, string] }) {
 
   return (
     <div className="container mx-auto my-10 flex w-full flex-col px-10">
-      <div className="flex flex-col items-center gap-5 pb-20 xl:text-center md:text-center text-zinc-950">
-        <h1 className="text-4xl font-bold text-center">{trans.timeline_preview.title}</h1>
+      <div className="flex h-auto w-full flex-col items-center justify-center gap-5 pb-20">
+        <img
+          loading="eager"
+          src={trans.horizontal_scroll.bar.img.src}
+          alt={trans.horizontal_scroll.bar.img.alt}
+          className="size-50 rounded-full md:size-50 xl:size-60"
+          width="1000"
+          height="1000"
+        />
+
+        <h1 className="w-1/2 text-center text-2xl font-bold capitalize lg:text-3xl xl:text-4xl">
+          {trans.horizontal_scroll.bar.title}
+        </h1>
+
+        <p className="text-lg text-center">
+          {trans.horizontal_scroll.bar.description.map((description: string, index: number) => (
+            <span key={index}>{description}</span>
+          ))}
+        </p>
+
+        <img
+          loading="eager"
+          src={trans.horizontal_scroll.bar.banner.src}
+          alt={trans.horizontal_scroll.bar.banner.alt}
+          className="size-90 rounded-2xl xl:size-130"
+          width="1000"
+          height="1000"
+        />
+      </div>
+
+      <div className="flex flex-col items-center gap-5 pb-20 text-zinc-950 md:text-center xl:text-center">
+        <h1 className="text-center text-4xl font-bold">{trans.timeline_preview.title}</h1>
         <p className="text-lg">{trans.timeline_preview.description}</p>
         <img src={carousel3.src} alt="" className="size-50 rounded-full object-cover" />
-        <h2 className="text-4xl font-bold text-center">{trans.timeline_preview.title_two}</h2>
+        <h2 className="text-center text-4xl font-bold">{trans.timeline_preview.title_two}</h2>
       </div>
 
       <Accordion
@@ -56,7 +86,7 @@ export function DialogTimeLine({ trans }: { trans: [string, string] }) {
             <AccordionContent>
               <div className="flex flex-col items-center justify-center gap-5 py-4 md:flex-row md:items-start xl:flex-row xl:items-start">
                 {item.img.length && (
-                  <Carousel className="w-full max-w-xs xl:px-5 md:px-5">
+                  <Carousel className="w-full max-w-xs md:px-5 xl:px-5">
                     <CarouselContent>
                       {item.img.map((img, index) => (
                         <CarouselItem key={index}>

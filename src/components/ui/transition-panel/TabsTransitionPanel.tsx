@@ -85,9 +85,10 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
                   className="w-100 pb-3"
                 />
               </div>
-              <p className="xl:text-center md:text-center text-lg">{trans.description}</p>
+              <p className="text-lg md:text-center xl:text-center">{trans.description}</p>
             </div>
           </div>
+
         </div>
 
         <DialogTimeLine trans={trans} />

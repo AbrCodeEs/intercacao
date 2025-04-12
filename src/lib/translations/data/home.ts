@@ -878,6 +878,21 @@ const es = {
         'Inspirados en los átomos, la Fundación Quirico Prosperi actúa como el centro (núcleo) que impulsa y sostiene diversos programas de responsabilidad social (electrones), diseñados para impactar positivamente en la comunidad de El Rincón y otros municipios, fortaleciendo el desarrollo social, cultural y ambiental, beneficiando a las familias y el entorno que hacen posible nuestra labor cacaotera.',
       current_news_title: 'Actualidad FQP: Novedades de Nuestra Fundación',
       view_more: 'Ver más',
+      bar: {
+        title: 'Mandarina Miel & Vainilla Bar',
+        description: [
+          'En Mandarina Miel & Vainilla Bar creemos en el poder de lo natural. Cada una de nuestras galletas y barras energéticas está elaborada con ingredientes auténticos, seleccionados con cuidado para ofrecer sabor, nutrición y bienestar.',
+          'Combinamos mandarina fresca, miel pura y vainilla natural para crear una experiencia que conecta con lo esencial: alimentos honestos, llenos de energía y propósito.',
+        ],
+        img: {
+          alt: 'Rueda de sabores del cacao',
+          src: barLogo.src,
+        },
+        banner: {
+          alt: 'Banner del mundo de sabores',
+          src: bar.src,
+        },
+      },
       explore_section: {
         title:
           'Explora cómo estamos transformando el futuro del cacao y conoce más sobre nuestros programas.',
@@ -948,21 +963,7 @@ const es = {
     filter_flavor: 'Mundo de sabores',
     link: 'Ver mas',
     title: 'Más de un siglo cultivando y exportando el mejor cacao fino de aroma del mundo.',
-    bar: {
-      title: 'Mandarina Miel & Vainilla Bar',
-      description: [
-        'En Mandarina Miel & Vainilla Bar creemos en el poder de lo natural. Cada una de nuestras galletas y barras energéticas está elaborada con ingredientes auténticos, seleccionados con cuidado para ofrecer sabor, nutrición y bienestar.',
-        'Combinamos mandarina fresca, miel pura y vainilla natural para crear una experiencia que conecta con lo esencial: alimentos honestos, llenos de energía y propósito.',
-      ],
-      img: {
-        alt: 'Rueda de sabores del cacao',
-        src: barLogo.src,
-      },
-      banner: {
-        alt: 'Banner del mundo de sabores',
-        src: bar.src,
-      },
-    },
+ 
     world_of_flavors: {
       types_options: [
         {
@@ -1340,6 +1341,21 @@ const en = {
         'Inspired by atoms, the Quirico Prosperi Foundation acts as the core (nucleus) that drives and sustains various social responsibility programs (electrons), designed to positively impact the community of El Rincón and other municipalities, strengthening social, cultural, and environmental development, benefiting families and the environment that make our cocoa work possible.',
       current_news_title: 'FQP Current News: Updates from Our Foundation',
       view_more: 'View more',
+      bar: {
+        title: 'Mandarina Honey & Vanilla Bar',
+        description: [
+          'At Mandarina Honey & Vanilla Bar, we believe in the power of nature. Each of our cookies and energy bars is made with authentic ingredients, carefully selected to offer flavor, nutrition, and well-being.',
+          'We combine fresh mandarin, pure honey, and natural vanilla to create an experience that connects with the essential: honest foods, full of energy and purpose.',
+        ],
+        img: {
+          alt: 'Rueda de sabores del cacao',
+          src: barLogo.src,
+        },
+        banner: {
+          alt: 'Banner del mundo de sabores',
+          src: bar.src,
+        },
+      },
       explore_section: {
         title:
           "Explore how we're transforming the future of cocoa and learn more about our programs.",
@@ -1411,21 +1427,6 @@ const en = {
     link: 'See',
     title:
       "For over a century, we have been cultivating and exporting the world's finest fine-flavored cocoa.",
-    bar: {
-      title: 'Mandarina Honey & Vanilla Bar',
-      description: [
-        'At Mandarina Honey & Vanilla Bar, we believe in the power of nature. Each of our cookies and energy bars is made with authentic ingredients, carefully selected to offer flavor, nutrition, and well-being.',
-        'We combine fresh mandarin, pure honey, and natural vanilla to create an experience that connects with the essential: honest foods, full of energy and purpose.',
-      ],
-      img: {
-        alt: 'Rueda de sabores del cacao',
-        src: barLogo.src,
-      },
-      banner: {
-        alt: 'Banner del mundo de sabores',
-        src: bar.src,
-      },
-    },
     world_of_flavors: {
       types_options: [
         {
