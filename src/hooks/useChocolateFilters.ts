@@ -22,8 +22,7 @@ export const useChocolateFilters = () => {
     });
   };
 
-  const handleFlavorSelect = (flavor: FlavorOption) => {   
-    console.log(flavor);
+  const handleFlavorSelect = (flavor: FlavorOption) => {
     // Actualización funcional del estado
     setSelectedFlavor((currentFlavor) => {
       const newFlavor = currentFlavor === flavor ? null : flavor;

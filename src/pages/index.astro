@@ -165,20 +165,21 @@ const posts = [
         />
       </div>
       <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:only="react" />
-    </div>
-
-    <div
-      id="section-prosperi"
-      class="bg-start flex h-auto min-h-screen w-full flex-col items-start justify-center overflow-hidden bg-no-repeat md:items-center lg:items-center xl:items-center"
-      style={`background-image: url(${lienzoCacao.src});`}
-    >
-      <TabsTransitionPanel
-        trans={trans('home').tabs_transition_panel}
-        items={trans('home').tabs_transition_panel.items}
-        client:only="react"
-      />
-    </div>
+    </div>  
   </div>
+
+  <div
+    id="section-prosperi"
+    class="bg-start flex h-auto min-h-screen w-full flex-col items-start justify-center bg-no-repeat md:items-center lg:items-center xl:items-center"
+    style={`background-image: url(${lienzoCacao.src});`}
+  >
+    <TabsTransitionPanel
+      trans={trans('home').tabs_transition_panel}
+      items={trans('home').tabs_transition_panel.items}
+      client:load
+    />
+  </div>
+  
 
   <div class="bg-primary h-5 w-full"></div>
 
