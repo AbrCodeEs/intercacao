@@ -17,118 +17,119 @@ import mundoDeSaboresEN from '@/images/home/imagotipo-world-of-flavors.webp';
 import mundoDeSaboresINGPanelConSombra from '@/images/home/mundo-de-sabores-panel-en.webp';
 import mundoDeSaboresESPanelConSombra from '@/images/home/mundo-de-sabores-panel-es.webp';
 
-import carouselDanza1 from '@/images/home/carousels/danza/01.jpg';
-import carouselDanza2 from '@/images/home/carousels/danza/02.jpg';
-import carouselDanza3 from '@/images/home/carousels/danza/03.jpg';
-import carouselDanza4 from '@/images/home/carousels/danza/04.jpg';
-import carouselDanza5 from '@/images/home/carousels/danza/05.jpg';
-import carouselDanza6 from '@/images/home/carousels/danza/06.jpg';
-import carouselDanza7 from '@/images/home/carousels/danza/07.jpg';
-import carouselDanza8 from '@/images/home/carousels/danza/08.jpg';
-import carouselDanza9 from '@/images/home/carousels/danza/09.jpg';
-import carouselDanza10 from '@/images/home/carousels/danza/10.jpg';
-import carouselDanza11 from '@/images/home/carousels/danza/11.jpg';
-import carouselDanza12 from '@/images/home/carousels/danza/12.jpg';
-import carouselDanza13 from '@/images/home/carousels/danza/13.jpg';
-import carouselDanza14 from '@/images/home/carousels/danza/14.jpg';
-import carouselDanza15 from '@/images/home/carousels/danza/15.jpg';
-import carouselDanza16 from '@/images/home/carousels/danza/16.jpg';
-import carouselDanza17 from '@/images/home/carousels/danza/17.jpg';
-import carouselDanza18 from '@/images/home/carousels/danza/18.jpg';
-import carouselDanza19 from '@/images/home/carousels/danza/19.jpg';
+import carouselDanza1 from '@/images/home/carousels/danza/carousel-1.jpg';
+import carouselDanza2 from '@/images/home/carousels/danza/carousel-2.jpg';
+import carouselDanza3 from '@/images/home/carousels/danza/carousel-3.jpg';
+import carouselDanza4 from '@/images/home/carousels/danza/carousel-4.jpg';
+import carouselDanza5 from '@/images/home/carousels/danza/carousel-5.jpg';
+import carouselDanza6 from '@/images/home/carousels/danza/carousel-6.jpg';
+import carouselDanza7 from '@/images/home/carousels/danza/carousel-7.jpg';
+import carouselDanza8 from '@/images/home/carousels/danza/carousel-8.jpg';
+import carouselDanza9 from '@/images/home/carousels/danza/carousel-9.jpg';
+import carouselDanza10 from '@/images/home/carousels/danza/carousel-10.jpg';
+import carouselDanza11 from '@/images/home/carousels/danza/carousel-11.jpg';
+import carouselDanza12 from '@/images/home/carousels/danza/carousel-12.jpg';
+import carouselDanza13 from '@/images/home/carousels/danza/carousel-13.jpg';
+import carouselDanza14 from '@/images/home/carousels/danza/carousel-14.jpg';
+import carouselDanza15 from '@/images/home/carousels/danza/carousel-15.jpg';
+import carouselDanza16 from '@/images/home/carousels/danza/carousel-16.jpg';
+import carouselDanza17 from '@/images/home/carousels/danza/carousel-17.jpg';
+import carouselDanza18 from '@/images/home/carousels/danza/carousel-18.jpg';
+import carouselDanza19 from '@/images/home/carousels/danza/carousel-19.jpg';
+import carouselDanza20 from '@/images/home/carousels/danza/carousel-20.jpg';
 
-import carouselRegresoAlAgua1 from '@/images/home/carousels/regreso-al-agua/carousel-1.jpeg';
-import carouselRegresoAlAgua2 from '@/images/home/carousels/regreso-al-agua/carousel-2.jpeg';
-import carouselRegresoAlAgua3 from '@/images/home/carousels/regreso-al-agua/carousel-3.jpeg';
-import carouselRegresoAlAgua4 from '@/images/home/carousels/regreso-al-agua/carousel-4.jpeg';
-import carouselRegresoAlAgua5 from '@/images/home/carousels/regreso-al-agua/carousel-5.jpeg';
-import carouselRegresoAlAgua6 from '@/images/home/carousels/regreso-al-agua/carousel-6.jpeg';
-import carouselRegresoAlAgua7 from '@/images/home/carousels/regreso-al-agua/carousel-7.jpeg';
-import carouselRegresoAlAgua8 from '@/images/home/carousels/regreso-al-agua/carousel-8.jpeg';
-import carouselRegresoAlAgua10 from '@/images/home/carousels/regreso-al-agua/carousel-9.jpeg';
-import carouselRegresoAlAgua9 from '@/images/home/carousels/regreso-al-agua/carousel-10.jpeg';
+import carouselRegresoAlAgua1 from '@/images/home/carousels/regreso-al-agua/carousel-1.jpg';
+import carouselRegresoAlAgua2 from '@/images/home/carousels/regreso-al-agua/carousel-2.jpg';
+import carouselRegresoAlAgua3 from '@/images/home/carousels/regreso-al-agua/carousel-3.jpg';
+import carouselRegresoAlAgua4 from '@/images/home/carousels/regreso-al-agua/carousel-4.jpg';
+import carouselRegresoAlAgua5 from '@/images/home/carousels/regreso-al-agua/carousel-5.jpg';
+import carouselRegresoAlAgua6 from '@/images/home/carousels/regreso-al-agua/carousel-6.jpg';
+import carouselRegresoAlAgua7 from '@/images/home/carousels/regreso-al-agua/carousel-7.jpg';
+import carouselRegresoAlAgua8 from '@/images/home/carousels/regreso-al-agua/carousel-8.jpg';
+import carouselRegresoAlAgua9 from '@/images/home/carousels/regreso-al-agua/carousel-9.jpg';
+import carouselRegresoAlAgua10 from '@/images/home/carousels/regreso-al-agua/carousel-10.jpg';
+import carouselRegresoAlAgua11 from '@/images/home/carousels/regreso-al-agua/carousel-11.jpg';
+import carouselRegresoAlAgua12 from '@/images/home/carousels/regreso-al-agua/carousel-12.jpg';
+import carouselRegresoAlAgua13 from '@/images/home/carousels/regreso-al-agua/carousel-13.jpg';
 
-import carouselWilfriedMerle1 from '@/images/home/carousels/wilfried-merle/carousel-1.jpeg';
-import carouselWilfriedMerle2 from '@/images/home/carousels/wilfried-merle/carousel-2.jpeg';
-import carouselWilfriedMerle3 from '@/images/home/carousels/wilfried-merle/carousel-3.jpeg';
-import carouselWilfriedMerle4 from '@/images/home/carousels/wilfried-merle/carousel-4.jpeg';
-import carouselWilfriedMerle5 from '@/images/home/carousels/wilfried-merle/carousel-5.jpeg';
-import carouselWilfriedMerle6 from '@/images/home/carousels/wilfried-merle/carousel-6.jpeg';
-import carouselWilfriedMerle7 from '@/images/home/carousels/wilfried-merle/carousel-7.jpeg';
-import carouselWilfriedMerle8 from '@/images/home/carousels/wilfried-merle/carousel-8.jpeg';
-import carouselWilfriedMerle9 from '@/images/home/carousels/wilfried-merle/carousel-9.jpeg';
-import carouselWilfriedMerle10 from '@/images/home/carousels/wilfried-merle/carousel-10.jpeg';
-import carouselWilfriedMerle11 from '@/images/home/carousels/wilfried-merle/carousel-11.jpeg';
-import carouselWilfriedMerle12 from '@/images/home/carousels/wilfried-merle/carousel-12.jpeg';
+import carouselWilfriedMerle1 from '@/images/home/carousels/wilfried-merle/carousel-1.jpg';
+import carouselWilfriedMerle2 from '@/images/home/carousels/wilfried-merle/carousel-2.jpg';
+import carouselWilfriedMerle3 from '@/images/home/carousels/wilfried-merle/carousel-3.jpg';
+import carouselWilfriedMerle4 from '@/images/home/carousels/wilfried-merle/carousel-4.jpg';
+import carouselWilfriedMerle5 from '@/images/home/carousels/wilfried-merle/carousel-5.jpg';
+import carouselWilfriedMerle6 from '@/images/home/carousels/wilfried-merle/carousel-6.jpg';
+import carouselWilfriedMerle7 from '@/images/home/carousels/wilfried-merle/carousel-7.jpg';
+import carouselWilfriedMerle8 from '@/images/home/carousels/wilfried-merle/carousel-8.jpg';
+import carouselWilfriedMerle9 from '@/images/home/carousels/wilfried-merle/carousel-9.jpg';
+import carouselWilfriedMerle10 from '@/images/home/carousels/wilfried-merle/carousel-10.jpg';
+import carouselWilfriedMerle11 from '@/images/home/carousels/wilfried-merle/carousel-11.jpg';
+import carouselWilfriedMerle12 from '@/images/home/carousels/wilfried-merle/carousel-12.jpg';
 import carouselWilfriedMerle13 from '@/images/home/carousels/wilfried-merle/carousel-13.jpeg';
 import carouselWilfriedMerle14 from '@/images/home/carousels/wilfried-merle/carousel-14.jpeg';
-import carouselWilfriedMerle15 from '@/images/home/carousels/wilfried-merle/carousel-15.jpeg';
+// import carouselWilfriedMerle15 from '@/images/home/carousels/wilfried-merle/carousel-15.jpeg';
 
-import carouselDeporte1 from '@/images/home/carousels/deporte/01.jpg';
-import carouselDeporte2 from '@/images/home/carousels/deporte/02.jpg';
-import carouselDeporte3 from '@/images/home/carousels/deporte/03.jpg';
-import carouselDeporte4 from '@/images/home/carousels/deporte/04.jpg';
-import carouselDeporte5 from '@/images/home/carousels/deporte/05.jpg';
-import carouselDeporte6 from '@/images/home/carousels/deporte/06.jpg';
-import carouselDeporte7 from '@/images/home/carousels/deporte/07.jpg';
-import carouselDeporte8 from '@/images/home/carousels/deporte/08.jpg';
-import carouselDeporte9 from '@/images/home/carousels/deporte/09.jpg';
-import carouselDeporte10 from '@/images/home/carousels/deporte/10.jpg';
-import carouselDeporte11 from '@/images/home/carousels/deporte/11.jpg';
-import carouselDeporte12 from '@/images/home/carousels/deporte/12.jpg';
-import carouselDeporte13 from '@/images/home/carousels/deporte/13.jpg';
-import carouselDeporte14 from '@/images/home/carousels/deporte/14.jpg';
-import carouselDeporte15 from '@/images/home/carousels/deporte/15.jpg';
-import carouselDeporte16 from '@/images/home/carousels/deporte/16.jpg';
+import carouselDeporte1 from '@/images/home/carousels/deporte/carousel-1.jpg';
+import carouselDeporte2 from '@/images/home/carousels/deporte/carousel-2.jpg';
+import carouselDeporte3 from '@/images/home/carousels/deporte/carousel-3.jpg';
+import carouselDeporte4 from '@/images/home/carousels/deporte/carousel-4.jpg';
+import carouselDeporte5 from '@/images/home/carousels/deporte/carousel-5.jpg';
+import carouselDeporte6 from '@/images/home/carousels/deporte/carousel-6.jpg';
+import carouselDeporte7 from '@/images/home/carousels/deporte/carousel-7.jpg';
+import carouselDeporte8 from '@/images/home/carousels/deporte/carousel-8.jpg';
+import carouselDeporte9 from '@/images/home/carousels/deporte/carousel-9.jpg';
+import carouselDeporte10 from '@/images/home/carousels/deporte/carousel-10.jpg';
+import carouselDeporte11 from '@/images/home/carousels/deporte/carousel-11.jpg';
+import carouselDeporte12 from '@/images/home/carousels/deporte/carousel-12.jpg';
+import carouselDeporte13 from '@/images/home/carousels/deporte/carousel-13.jpg';
+import carouselDeporte14 from '@/images/home/carousels/deporte/carousel-14.jpg';
+import carouselDeporte15 from '@/images/home/carousels/deporte/carousel-15.jpg';
+import carouselDeporte16 from '@/images/home/carousels/deporte/carousel-16.jpg';
+import carouselDeporte17 from '@/images/home/carousels/deporte/carousel-17.jpg';
 
-import carouselReligion1 from '@/images/home/carousels/religion/01.jpg';
-import carouselReligion2 from '@/images/home/carousels/religion/02.jpg';
-import carouselReligion3 from '@/images/home/carousels/religion/03.jpg';
-import carouselReligion4 from '@/images/home/carousels/religion/04.jpg';
-import carouselReligion5 from '@/images/home/carousels/religion/05.jpg';
-import carouselReligion6 from '@/images/home/carousels/religion/06.jpg';
-import carouselReligion7 from '@/images/home/carousels/religion/07.jpg';
-import carouselReligion8 from '@/images/home/carousels/religion/08.jpg';
-import carouselReligion9 from '@/images/home/carousels/religion/09.jpg';
-import carouselReligion10 from '@/images/home/carousels/religion/10.jpg';
-import carouselReligion11 from '@/images/home/carousels/religion/11.jpg';
-import carouselReligion12 from '@/images/home/carousels/religion/12.jpg';
-import carouselReligion13 from '@/images/home/carousels/religion/13.jpg';
-import carouselReligion14 from '@/images/home/carousels/religion/14.jpg';
-import carouselReligion15 from '@/images/home/carousels/religion/15.jpg';
-import carouselReligion16 from '@/images/home/carousels/religion/16.jpg';
-import carouselReligion17 from '@/images/home/carousels/religion/17.jpg';
-import carouselReligion18 from '@/images/home/carousels/religion/18.jpg';
+import carouselReligion1 from '@/images/home/carousels/religion/carousel-1.jpg';
+import carouselReligion2 from '@/images/home/carousels/religion/carousel-2.jpg';
+import carouselReligion3 from '@/images/home/carousels/religion/carousel-3.jpg';
+import carouselReligion4 from '@/images/home/carousels/religion/carousel-4.jpg';
+import carouselReligion5 from '@/images/home/carousels/religion/carousel-5.jpg';
+import carouselReligion6 from '@/images/home/carousels/religion/carousel-6.jpg';
+import carouselReligion7 from '@/images/home/carousels/religion/carousel-7.jpg';
+import carouselReligion8 from '@/images/home/carousels/religion/carousel-8.jpg';
+import carouselReligion9 from '@/images/home/carousels/religion/carousel-9.jpg';
+import carouselReligion10 from '@/images/home/carousels/religion/carousel-10.jpg';
+import carouselReligion11 from '@/images/home/carousels/religion/carousel-11.jpg';
+import carouselReligion12 from '@/images/home/carousels/religion/carousel-12.jpg';
+import carouselReligion13 from '@/images/home/carousels/religion/carousel-13.jpg';
+import carouselReligion14 from '@/images/home/carousels/religion/carousel-14.jpg';
 
-import carouselAgro1 from '@/images/home/carousels/agro/01.jpg';
-import carouselAgro2 from '@/images/home/carousels/agro/02.jpg';
-import carouselAgro3 from '@/images/home/carousels/agro/03.jpg';
-import carouselAgro4 from '@/images/home/carousels/agro/04.jpg';
-import carouselAgro5 from '@/images/home/carousels/agro/05.jpg';
-import carouselAgro6 from '@/images/home/carousels/agro/06.jpg';
-import carouselAgro7 from '@/images/home/carousels/agro/07.jpg';
-import carouselAgro8 from '@/images/home/carousels/agro/08.jpg';
-import carouselAgro9 from '@/images/home/carousels/agro/09.jpg';
-import carouselAgro10 from '@/images/home/carousels/agro/10.jpg';
+import carouselAgro1 from '@/images/home/carousels/agro/carousel-1.jpg';
+import carouselAgro2 from '@/images/home/carousels/agro/carousel-2.jpg';
+import carouselAgro3 from '@/images/home/carousels/agro/carousel-3.jpg';
+import carouselAgro4 from '@/images/home/carousels/agro/carousel-4.jpg';
+import carouselAgro5 from '@/images/home/carousels/agro/carousel-5.jpg';
+import carouselAgro6 from '@/images/home/carousels/agro/carousel-6.jpg';
+import carouselAgro7 from '@/images/home/carousels/agro/carousel-7.jpg';
+import carouselAgro8 from '@/images/home/carousels/agro/carousel-8.jpg';
+import carouselAgro9 from '@/images/home/carousels/agro/carousel-9.jpg';
+import carouselAgro10 from '@/images/home/carousels/agro/carousel-10.jpg';
 
-import carrouselProperi1 from '@/images/home/carousels/prosperi/01.jpg';
-import carrouselProperi2 from '@/images/home/carousels/prosperi/02.jpg';
-import carrouselProperi3 from '@/images/home/carousels/prosperi/03.jpg';
-import carrouselProperi4 from '@/images/home/carousels/prosperi/04.jpg';
-import carrouselProperi5 from '@/images/home/carousels/prosperi/05.jpg';
-import carrouselProperi6 from '@/images/home/carousels/prosperi/06.jpg';
-import carrouselProperi7 from '@/images/home/carousels/prosperi/07.jpg';
-import carrouselProperi8 from '@/images/home/carousels/prosperi/08.jpg';
-import carrouselProperi9 from '@/images/home/carousels/prosperi/09.jpg';
-import carrouselProperi10 from '@/images/home/carousels/prosperi/10.jpg';
-import carrouselProperi11 from '@/images/home/carousels/prosperi/11.jpg';
-import carrouselProperi12 from '@/images/home/carousels/prosperi/12.jpg';
-import carrouselProperi13 from '@/images/home/carousels/prosperi/13.jpg';
-import carrouselProperi14 from '@/images/home/carousels/prosperi/14.jpg';
-import carrouselProperi15 from '@/images/home/carousels/prosperi/15.jpg';
-import carrouselProperi16 from '@/images/home/carousels/prosperi/16.jpg';
-import carrouselProperi17 from '@/images/home/carousels/prosperi/17.jpg';
-import carrouselProperi18 from '@/images/home/carousels/prosperi/18.jpg';
+import carrouselProperi1 from '@/images/home/carousels/prosperi/carousel-1.jpg';
+import carrouselProperi2 from '@/images/home/carousels/prosperi/carousel-2.jpg';
+import carrouselProperi3 from '@/images/home/carousels/prosperi/carousel-3.jpg';
+import carrouselProperi4 from '@/images/home/carousels/prosperi/carousel-4.jpg';
+import carrouselProperi5 from '@/images/home/carousels/prosperi/carousel-5.jpg';
+import carrouselProperi6 from '@/images/home/carousels/prosperi/carousel-6.jpg';
+import carrouselProperi7 from '@/images/home/carousels/prosperi/carousel-7.jpg';
+import carrouselProperi8 from '@/images/home/carousels/prosperi/carousel-8.jpg';
+import carrouselProperi9 from '@/images/home/carousels/prosperi/carousel-9.jpg';
+import carrouselProperi10 from '@/images/home/carousels/prosperi/carousel-10.jpg';
+import carrouselProperi11 from '@/images/home/carousels/prosperi/carousel-11.jpg';
+import carrouselProperi12 from '@/images/home/carousels/prosperi/carousel-12.jpg';
+import carrouselProperi13 from '@/images/home/carousels/prosperi/carousel-13.jpg';
+import carrouselProperi14 from '@/images/home/carousels/prosperi/carousel-14.jpg';
+import carrouselProperi15 from '@/images/home/carousels/prosperi/carousel-15.jpg';
+import carrouselProperi16 from '@/images/home/carousels/prosperi/carousel-16.jpg';
+import carrouselProperi17 from '@/images/home/carousels/prosperi/carousel-17.jpg';
+import carrouselProperi18 from '@/images/home/carousels/prosperi/carousel-18.jpg';
 
 import brigadaMerle from '@/images/home/brigada_merle.jpg';
 import regresoAlAgua from '@/images/home/regreso_al_agua.jpg';
@@ -209,7 +210,16 @@ const carouselRegresoAlAgua = [
   {
     src: carouselRegresoAlAgua10.src,
     alt: 'Regreso al Agua',
-  },
+  },  {
+    src: carouselRegresoAlAgua11.src,
+    alt: 'Regreso al Agua',
+  },  {
+    src: carouselRegresoAlAgua12.src,
+    alt: 'Regreso al Agua',
+  },  {
+    src: carouselRegresoAlAgua13.src,
+    alt: 'Regreso al Agua',
+  }, 
 ];
 
 const carouselWilfriedMerle = [
@@ -269,10 +279,10 @@ const carouselWilfriedMerle = [
     src: carouselWilfriedMerle14.src,
     alt: 'Regreso al Agua',
   },
-  {
-    src: carouselWilfriedMerle15.src,
-    alt: 'Regreso al Agua',
-  },
+  // {
+  //   src: carouselWilfriedMerle15.src,
+  //   alt: 'Regreso al Agua',
+  // },
 ];
 
 const carouselRegresoAlAgro = [
@@ -450,22 +460,22 @@ const carouselReligion = [
     src: carouselReligion14.src,
     alt: 'Regreso al Agua',
   },
-  {
-    src: carouselReligion15.src,
-    alt: 'Regreso al Agua',
-  },
-  {
-    src: carouselReligion16.src,
-    alt: 'Regreso al Agua',
-  },
-  {
-    src: carouselReligion17.src,
-    alt: 'Regreso al Agua',
-  },
-  {
-    src: carouselReligion18.src,
-    alt: 'Regreso al Agua',
-  },
+  // {
+  //   src: carouselReligion15.src,
+  //   alt: 'Regreso al Agua',
+  // },
+  // {
+  //   src: carouselReligion16.src,
+  //   alt: 'Regreso al Agua',
+  // },
+  // {
+  //   src: carouselReligion17.src,
+  //   alt: 'Regreso al Agua',
+  // },
+  // {
+  //   src: carouselReligion18.src,
+  //   alt: 'Regreso al Agua',
+  // },
 ];
 
 const carouselDanza = [
@@ -544,6 +554,9 @@ const carouselDanza = [
   {
     src: carouselDanza19.src,
     alt: 'Danza',
+  }, {
+    src: carouselDanza20.src,
+    alt: 'Danza',
   },
 ];
 
@@ -610,6 +623,9 @@ const carouselDeporte = [
   },
   {
     src: carouselDeporte16.src,
+    alt: 'Deporte',
+  },{
+    src: carouselDeporte17.src,
     alt: 'Deporte',
   },
 ];

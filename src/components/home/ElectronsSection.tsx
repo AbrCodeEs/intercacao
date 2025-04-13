@@ -14,51 +14,6 @@ import atomo from '@/images/home/atomo.png';
 
 import { cn } from '@/lib/cn';
 
-// const logos = [
-//   {
-//     name: 'Fundación Prosperi',
-//     src: logoFundacionProsperi.src,
-//     link: '#card-3',
-//     style: 'xl:top-[50%] xl:left-[45%] w-70',
-//   },
-//   {
-//     name: 'Vivero Wilfried Merle',
-//     src: logoViveroWilfriedMerle.src,
-//     link: '#card-1',
-//     style: 'xl:top-10 xl:left-[45%] top-5',
-//   },
-//   {
-//     name: 'Regreso al Agro',
-//     src: logoRegresoAlAgro.src,
-//     link: '#card-2',
-//     style: 'xl:top-[22%] xl:right-50 top-20 right-2',
-//   },
-//   {
-//     name: 'Regreso del Agua',
-//     src: logoRegresoDelAgua.src,
-//     link: '#card-0',
-//     style: 'xl:top-[22%] xl:left-50 top-20 left-2',
-//   },
-//   {
-//     name: 'Electrón Religión',
-//     src: logoElectronReligion.src,
-//     link: '#card-4',
-//     style: 'xl:bottom-[22%] xl:left-50 bottom-20 left-2',
-//   },
-//   {
-//     name: 'Electrón Música & Danza',
-//     src: logoElectronMusicaDanza.src,
-//     link: '#card-5',
-//     style: 'xl:bottom-10 xl:left-[45%] bottom-10',
-//   },
-//   {
-//     name: 'Electrón Deporte',
-//     src: logoElectronDeporte.src,
-//     link: '#card-6',
-//     style: 'xl:bottom-[22%] xl:right-50 bottom-20 right-2',
-//   },
-// ];
-
 const logos = [
   {
     name: 'Fundación Prosperi',
