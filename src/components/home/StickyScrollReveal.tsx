@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useRef, useState } from 'react';
 import { useMotionValueEvent, useScroll, motion } from 'motion/react';
 import { cn } from '@/lib/cn';
@@ -8,7 +9,7 @@ interface StickyScrollProps {
   content: {
     title: string;
     description: string;
-    content?: React.ReactNode | any;
+    content?: React.ReactNode;
     url: string | boolean;
     icon: string;
   }[];
@@ -46,63 +47,63 @@ const buttonVariants = {
 };
 
 export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) => {
+  // Por defecto, se arranca con la primera tarjeta (índice 0)
   const [activeCard, setActiveCard] = useState(0);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
+  // containerRef se sigue utilizando para observar la visibilidad de la sección sticky
   const containerRef = useRef<HTMLDivElement>(null);
-  const cardLength = content.length;
-  const [isContainerVisible, setIsContainerVisible] = useState(true);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const [isContainerVisible, setIsContainerVisible] = useState(false);
   const observer = useRef<IntersectionObserver | null>(null);
+  const cardLength = content.length;
 
-  const backgroundColors = [
-    '#ffffff',
-    '#ccd5ae',
-    '#e9edc9',
-    '#fefae0',
-    '#faedcd',
-    '#f1dbb7',
-  ];
+  const backgroundColors = ['#ffffff', '#ccd5ae', '#e9edc9', '#fefae0', '#faedcd', '#f1dbb7'];
 
+  // Usamos el scroll global de la ventana
   const { scrollYProgress } = useScroll({
-    container: containerRef,
-    offset: ['start start', 'end start'],
+    target: containerRef,
   });
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    observer.current = new IntersectionObserver(
-      ([entry]) => {
-        setIsContainerVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 },
-    );
-
-    observer.current.observe(containerRef.current);
-
-    return () => {
-      if (observer.current) observer.current.disconnect();
-    };
-  }, []);
-
+  // Actualizamos el índice activo a partir del progreso global de scroll.
+  // Esto asume que la sección tiene suficiente altura para generar scroll.
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const safeLatest = Math.max(0, Math.min(1, latest));
-    const cardsBreakpoints = content.map((_, index) => index / cardLength);
+    console.log('Scroll progress:', safeLatest);
 
-    const closestBreakpointIndex = cardsBreakpoints.reduce((acc, breakpoint, index) => {
-      const distance = Math.abs(safeLatest - breakpoint);
-      return distance < Math.abs(safeLatest - cardsBreakpoints[acc]) ? index : acc;
-    }, 0);
-
-    setActiveCard(Math.min(closestBreakpointIndex, content.length - 1));
+    // Usamos un mapeo lineal: al tener "cardLength" tarjetas, dividimos el recorrido en "cardLength" secciones.
+    const newCardIndex = Math.floor(safeLatest * cardLength);
+    // Evitamos índices fuera del rango.
+    const index = newCardIndex >= cardLength ? cardLength - 1 : newCardIndex;
+    setActiveCard(index);
+    console.log('Active card index:', index);
   });
+
+  // Usamos el sentinel para detectar si la sección sticky está visible.
+  useEffect(() => {
+    if (sentinelRef.current) {
+      observer.current = new IntersectionObserver(
+        ([entry]) => {
+          console.log('Sentinel intersection status:', entry.isIntersecting);
+          setIsContainerVisible(entry.isIntersecting);
+        },
+        { threshold: 0.1 }, // Umbral menor para activar más fácilmente.
+      );
+      observer.current.observe(sentinelRef.current);
+    }
+    return () => {
+      observer.current?.disconnect();
+    };
+  }, []);
 
   const handleScrollTo = (index: number) => {
     const element = document.getElementById(`card-${index}`);
     if (element) {
+      console.log(`Scrolling to card-${index}`);
       element.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'start',
       });
+    } else {
+      console.error(`Element with id "card-${index}" not found!`);
     }
     setActiveCard(index);
     setIsPanelOpen(false);
@@ -114,12 +115,13 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="relative flex h-full justify-center space-x-10 rounded-3xl py-10"
+      className="relative flex h-full min-h-screen justify-center space-x-10 rounded-3xl py-10"
     >
       <div className="relative container m-auto flex h-full items-stretch justify-stretch space-x-10 px-10 md:px-5 lg:px-5 xl:px-5">
+        {/* Contenedor sticky que muestra el contenido de la tarjeta activa. */}
         <div
           className={cn(
-            'sticky top-10 hidden h-[90vh] w-full overflow-hidden rounded-md md:w-2/5 lg:block lg:w-2/5 xl:w-2/5',
+            'sticky top-10 hidden h-[90vh] w-full rounded-md md:w-2/5 lg:block lg:w-2/5 xl:w-2/5',
             contentClassName,
           )}
           style={{
@@ -127,9 +129,14 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
           }}
         >
           {content[activeCard]?.content || content[activeCard]?.description}
+          {/* Sentinel colocado en la parte superior del contenedor */}
+          <div
+            ref={sentinelRef}
+            className="pointer-events-none absolute top-0 left-0 h-1 w-full opacity-0"
+          />
         </div>
 
-        <div className="relative flex w-full grow items-start md:w-2/5 lg:w-2/5 xl:w-2/5">
+        <section className="relative m-0 flex w-full grow items-start md:w-2/5 lg:w-2/5 xl:w-2/5">
           <div className="w-full">
             {content.map((item, index) => (
               <div
@@ -138,23 +145,23 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
                 className="flex h-full flex-col items-start justify-center gap-10 py-10 md:h-[90vh] md:py-0 lg:h-[90vh] lg:py-0 xl:h-[90vh] xl:py-0"
               >
                 <motion.h2
-                  initial={{ opacity: 0 }}
+                  initial={{ opacity: 0.3 }}
                   animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                  className="text-4xl font-medium text-zinc-800 md:text-4xl xl:text-5xl dark:text-zinc-100"
+                  className="text-4xl font-medium text-zinc-800 md:text-4xl xl:text-5xl"
                 >
                   {item.title}
                 </motion.h2>
                 <motion.div
-                  initial={{ opacity: 0 }}
+                  initial={{ opacity: 0.3 }}
                   animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                  className="overflow-hidden rounded-lg text-lg text-zinc-600 md:hidden lg:hidden xl:hidden dark:text-zinc-300"
+                  className="overflow-hidden rounded-lg text-lg text-zinc-600 md:hidden lg:hidden xl:hidden"
                 >
                   {item.content}
                 </motion.div>
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                  className="relative text-lg text-zinc-600 dark:text-zinc-300"
+                  className="relative text-lg text-zinc-600"
                 >
                   {item.description}
                 </motion.p>
@@ -163,7 +170,7 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
                     href={item.url as string}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                    className="mt-4 rounded-lg bg-zinc-100 px-4 py-2 text-lg text-zinc-600 transition-colors duration-300 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
+                    className="mt-4 rounded-lg bg-zinc-100 px-4 py-2 text-lg text-zinc-600 transition-colors duration-300 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700"
                   >
                     Ver más...
                   </motion.a>
@@ -172,11 +179,11 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
             ))}
             <div className="h-10" />
           </div>
-        </div>
+        </section>
 
         <motion.div
           className={cn(
-            'right-6 bottom-6 z-50 flex flex-col items-end gap-4',
+            'fixed right-6 bottom-6 z-50 flex flex-col items-end gap-4',
             activeCard === content.length - 1 ? 'absolute' : 'fixed',
           )}
           initial={{ opacity: 0 }}
@@ -210,19 +217,14 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
               >
                 <span className="text-sm font-medium text-white/90">
                   {item.icon.split('/').length > 1 ? (
-                    <img
-                      className="size-5"
-                      src={item.icon}
-                      alt={item.title}
-                      loading="eager"
-                    />
+                    <img className="size-5" src={item.icon} alt={item.title} loading="eager" />
                   ) : (
                     <span
                       className={cn(
                         'p-1',
-                        item.icon == 'R' && 'text-yellow-500',
-                        item.icon == 'M' && 'text-blue-500',
-                        item.icon == 'D' && 'text-red-500',
+                        item.icon === 'R' && 'text-yellow-500',
+                        item.icon === 'M' && 'text-blue-500',
+                        item.icon === 'D' && 'text-red-500',
                       )}
                     >
                       {item.icon}
@@ -234,7 +236,7 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
           </motion.div>
 
           <motion.button
-            className={`flex items-center justify-center rounded-full bg-black/20 p-3 shadow-xl backdrop-blur-md transition-colors hover:bg-black/30`}
+            className="flex items-center justify-center rounded-full bg-black/20 p-3 shadow-xl backdrop-blur-md transition-colors hover:bg-black/30"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsPanelOpen(!isPanelOpen)}
@@ -251,3 +253,5 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
     </motion.div>
   );
 };
+
+export default StickyScroll;

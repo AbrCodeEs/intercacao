@@ -55,7 +55,6 @@ const navItems = [
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log('aaa');
           if (entry.isIntersecting) {
             const target = entry.target;
 
@@ -107,7 +106,7 @@ const navItems = [
     <Header client:load items={navItems}>
       <Image class="size-auto" src={logo} alt="Logo" />
     </Header>
-    <main class="font-rawline">
+    <main class="font-rawline relative">
       <slot />
     </main>
   </body>

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Carousel,
@@ -6,36 +6,33 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from '@/components/ui/carousel';
 
-import { PROJECT_ITEMS } from "@/data/electrones";
+import { StickyScroll } from '@/components/home/StickyScrollReveal';
 
-import { StickyScroll } from "@/components/home/StickyScrollReveal";
-
-export const ProjectsSection = () => {
-  const projects = PROJECT_ITEMS.map((item) => {
+export const ProjectsSection = ({
+  items,
+}: {
+  items: any[];
+}) => {
+  const projects = items.map((item) => {
     return {
       title: item.title,
-      description: item.description,
+      description: item.content,
       url: item.url || false,
       icon: item.icon,
       content: (
-        <Carousel className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg h-full">
-          <CarouselContent
-            className="-ml-0 w-full h-full xl:min-h-[90vh]"
-          >
+        <Carousel className="h-full overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
+          <CarouselContent className="-ml-0 h-full w-full xl:min-h-[90vh]">
             {!!item.images.length &&
               item.images?.map((image: { src: string; alt: string }, index: number) => (
-                <CarouselItem
-                  key={index}
-                  className="basis-full p-0 xl:min-h-[90vh]"
-                >
-                  <div className="flex aspect-[4/5] xl:min-h-[90vh] items-center justify-center">
+                <CarouselItem key={index} className="basis-full p-0 xl:min-h-[90vh]">
+                  <div className="flex aspect-[4/5] items-center justify-center xl:min-h-[90vh]">
                     <img
                       src={image.src}
                       alt={image.alt}
                       loading="eager"
-                      className="aspect-[4/5] xl:min-h-[90vh] object-cover"
+                      className="aspect-[4/5] object-cover xl:min-h-[90vh]"
                     />
                   </div>
                 </CarouselItem>
@@ -47,12 +44,8 @@ export const ProjectsSection = () => {
       ),
     };
   });
-  return (
-    <>
-      <div className="w-full">
-        <StickyScroll content={projects} />
-      </div>
-    </>
-  );
+  return <div className="min-h-[300vh] w-full">
+    <StickyScroll content={projects} />
+  </div>;
 };
 export default ProjectsSection;
