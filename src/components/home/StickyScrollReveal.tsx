@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { useMotionValueEvent, useScroll, motion } from 'motion/react';
+import { useMotionValueEvent, useScroll, motion, useInView } from 'motion/react';
+
 import { cn } from '@/lib/cn';
 import { Atom } from 'lucide-react';
 
@@ -63,6 +64,11 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
   const { scrollYProgress } = useScroll({
     target: containerRef,
   });
+
+  const isContainerInView = useInView(containerRef, {
+    margin: '0px 0px -90% 0px',
+    amount: 'some',
+  });
   // Actualizamos el índice activo a partir del progreso global de scroll.
   // Esto asume que la sección tiene suficiente altura para generar scroll.
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
@@ -115,13 +121,13 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="relative flex h-full min-h-screen justify-center space-x-10 rounded-3xl py-10"
+      className="@container relative flex h-full min-h-screen justify-center space-x-10 rounded-3xl py-10"
     >
-      <div className="relative container m-auto flex h-full items-stretch justify-stretch space-x-10 px-10 md:px-5 lg:px-5 xl:px-5">
+      <div className="relative container m-auto flex h-full flex-col items-stretch justify-stretch space-x-10 px-10 md:px-5 lg:px-5 xl:flex-row xl:px-5">
         {/* Contenedor sticky que muestra el contenido de la tarjeta activa. */}
         <div
           className={cn(
-            'sticky top-10 hidden h-[90vh] w-full rounded-md md:w-2/5 lg:block lg:w-2/5 xl:w-2/5',
+            'sticky top-10 hidden h-[90vh] w-full rounded-md md:w-2/5 lg:w-2/5 xl:block xl:w-2/5',
             contentClassName,
           )}
           style={{
@@ -183,12 +189,12 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
 
         <motion.div
           className={cn(
-            'fixed right-6 bottom-6 z-50 flex flex-col items-end gap-4',
+            'fixed right-3 bottom-3 z-50 flex flex-col items-end gap-2 sm:right-6 sm:bottom-6 sm:gap-4', // Ajustes responsive
             activeCard === content.length - 1 ? 'absolute' : 'fixed',
           )}
           initial={{ opacity: 0 }}
           animate={{
-            opacity: isContainerVisible ? 1 : 0,
+            opacity: isContainerVisible || isContainerInView ? 1 : 0,
             transition: { duration: 0.3 },
           }}
           layout
