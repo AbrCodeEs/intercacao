@@ -6,7 +6,7 @@ export function VainillaBar({
   trans: any;
 }) {
   return (
-    <div className="container mx-auto flex w-full flex-col p-10">
+    <div className="container mx-auto flex w-full flex-col p-10 bg-[#3c5548] rounded-[3rem] -translate-y-11">
       <div className="flex flex-col items-center gap-5 text-zinc-950 md:text-center xl:text-center">
         <div className="flex h-auto w-full flex-col items-center justify-center gap-5">
           <img
