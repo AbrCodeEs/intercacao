@@ -27,6 +27,7 @@ import { PlusIcon } from 'lucide-react';
 import { getLangFromUrl, useTranslations } from '@/lib/translations';
 import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
 import { DialogFlavours } from '@/components/ui/morphing-dialog/DialogFlavours';
+import { VainillaBar } from '@/components/home/VainillaBar';
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -100,7 +101,6 @@ const posts = [
       id="section-home"
       class="relative size-dvw flex-1 md:w-full lg:w-full xl:h-screen xl:w-full"
     >
-  
       <Image
         loading="eager"
         inferSize={true}
@@ -165,7 +165,11 @@ const posts = [
         />
       </div>
       <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:only="react" />
-    </div>  
+    </div>
+  </div>
+
+  <div id="section-vanilla-bar" class="bg-[#efece1] h-auto w-full">
+    <VainillaBar trans={trans('home').tabs_transition_panel.vainilla_bar} client:load />
   </div>
 
   <div
@@ -179,7 +183,6 @@ const posts = [
       client:load
     />
   </div>
-  
 
   <div class="bg-primary h-5 w-full"></div>
 

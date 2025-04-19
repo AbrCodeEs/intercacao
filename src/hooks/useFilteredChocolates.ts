@@ -14,7 +14,7 @@ export const useFilteredChocolates = (
 
       if (typeof url !== 'string') url = '';
 
-      if (url === '/chuao') {
+      if (url === '/chuao' || url === '/porcelana') {
         url = `/${lang}${url}`;
       } else {
         url = lang === 'en' ? `${url}/${lang}` : url;

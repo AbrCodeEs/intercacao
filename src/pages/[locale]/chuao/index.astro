@@ -25,6 +25,7 @@ const {
   location,
   history,
   socialResponsibility,
+  generalInformation,
 } = data(Astro);
 
 export async function getStaticPaths() {
@@ -40,65 +41,7 @@ export async function getStaticPaths() {
 >
   <article class="w-full overflow-x-hidden overflow-y-auto">
     <!-- @ts-ignore -->
-    <GeneralInformation
-      generalInformation={{
-        title: 'evaluacion',
-        mainImage: {
-          src: ChuaoWeb,
-          alt: 'portada de chuao cacao',
-        },
-        rating: {
-          value: '5.0',
-          stars: {
-            src: ratingStars,
-            alt: 'estrellas de calificación 5.0',
-          },
-        },
-        sections: [
-          {
-            items: [
-              { label: 'AFRUTADO DULCE', value: '2.6' },
-              { label: 'AFRUTADO CÍTRICO', value: '4.0' },
-              { label: 'AFLORADO', value: '0.5' },
-              { label: 'ACRIOLLADO', value: '3.4' },
-              { label: 'CACAO', value: '3.6' },
-              { label: 'BOSCOSO', value: '0.8' },
-              { label: 'ESPECIAS', value: '0.6' },
-            ],
-          },
-          {
-            items: [
-              { label: 'PRODUCCIÓN ANUAL (TM)', value: '25' },
-              { label: 'COSECHA PRINCIPAL', value: 'DIC-MAR' },
-              { label: 'COSECHA MEDIA', value: 'JUN-JUL' },
-            ],
-          },
-          {
-            items: [{ label: 'GRANOS CRIOLLOS', value: '22%' }],
-          },
-          {
-            items: [
-              { label: 'GRANOS FERMENTADOS', value: '90%' },
-              { label: 'GRANOS VIOLETAS', value: '6%' },
-              { label: 'GRANOS PIZARROSOS', value: '2%' },
-              { label: 'TOTAL', value: '100%' },
-            ],
-          },
-          {
-            items: [
-              { label: 'Granos / 100g:', value: '83' },
-              { label: 'g./1 Grano:', value: '1,20 g' },
-            ],
-          },
-          {
-            items: [
-              { label: 'CERTIFICADO', value: 'SI' },
-              { label: 'PREMIOS', value: 'NO' },
-            ],
-          },
-        ],
-      }}
-    />
+    <GeneralInformation generalInformation={generalInformation} />
     <!-- @ts-ignore -->
     <Characteristics characteristics={characteristics} />
 

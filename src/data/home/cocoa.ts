@@ -1,5 +1,5 @@
 import chuao from '@/images/chuao/chuao-web.webp';
-import carupano from '@/images/carupano/carupano-pintao-web.webp';
+import carupano from '@/images/pintao/carupano-pintao-web.webp';
 import porcelana from '@/images/porcelana/porcelana-web.webp';
 import tesoro from '@/images/tesoro/tesoro-web.webp';
 import patanemo from '@/images/patanemo/patanemo-web.webp';
@@ -59,7 +59,7 @@ export const chocolateBars: CocoaBar[] = [
       wood: 0.5,
       spices: 1.2,
     },
-    url: 'http://porcelana.intercacao.com',
+    url: '/porcelana',
   },
   {
     id: '3',
