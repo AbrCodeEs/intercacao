@@ -2,7 +2,7 @@ const es = {
   generalInformation: {
     title: 'evaluacion',
     image: {
-      alt: 'portada de chuao cacao',
+      alt: 'portada de procelana cacao',
     },
     rating: {
       stars: 'estrellas de calificación 5.0',
@@ -90,21 +90,21 @@ const es = {
     },
     information: [
       {
-        title: 'Aroma:',
+        title: 'A = Aroma:',
         description: {
           boldText: 'ALTO',
           additionalText: 'Sabores a nueces y caramelo',
         },
       },
       {
-        title: 'Sabor:',
+        title: 'S = Sabor:',
         description: {
           boldText: 'FUERTE',
           additionalText: 'Destaca el aroma a nueces y dulces caramelizadosn',
         },
       },
       {
-        title: 'Fermentación:',
+        title: 'F = Fermentación:',
         description: {
           boldText: 'ALTA',
           additionalText: 'Bajos niveles de astringencia y amargura',
@@ -239,21 +239,22 @@ const es = {
     content: [
       {
         text: [
-          'El cacao de Porcelana obtuvo el premio International',
-          'categória bronce y',
-          'categoria oro, representedado  por',
-        ],
-        link: [
+          { type: 'bold', text: 'El cacao de Porcelana obtuvo el premio International' },
           {
-            label: 'Chocolate Awards British 2016',
+            type: 'link',
+            text: 'Chocolate Awards British 2016',
             url: 'https://www.chocolateawards.com/',
           },
+          { type: 'bold', text: 'categória bronce y' },
           {
-            label: 'European International Chocolate Awards 2016',
+            type: 'link',
+            text: 'European International Chocolate Awards 2016',
             url: 'https://www.chocolateawards.com/',
           },
+          { type: 'bold', text: 'categoria oro, representedado  por' },
           {
-            label: 'Chocolate Tree.',
+            type: 'link',
+            text: 'Chocolate Tree.',
             url: 'https://www.choctree.co.uk/',
           },
         ],
@@ -389,7 +390,7 @@ const en = {
   generalInformation: {
     title: 'Evaluation',
     image: {
-      alt: 'Chuao cacao cover',
+      alt: 'Porcelana cocoa cover',
     },
     rating: {
       stars: '5.0 rating stars',
@@ -401,7 +402,7 @@ const en = {
           { label: 'CITRUS FRUITY', value: '1.8' },
           { label: 'FLORAL', value: '0.4' },
           { label: 'CREOLE', value: '4.9' },
-          { label: 'CACAO', value: '2.5' },
+          { label: 'COCOA', value: '2.5' },
           { label: 'WOODSY', value: '0.5' },
           { label: 'SPICES', value: '1.2' },
         ],
@@ -420,7 +421,7 @@ const en = {
         items: [
           { label: 'FERMENTED BEANS', value: '98%' },
           { label: 'PURPLE BEANS', value: '2%' },
-          { label: 'SLATE BEANS', value: '0%' },
+          { label: 'SLATEY BEANS', value: '0%' },
           { label: 'TOTAL', value: '100%' },
         ],
       },
@@ -443,19 +444,19 @@ const en = {
     flavors: [
       {
         name: 'Sweet Fruity',
-        description: 'Raisins • Prunes',
+        description: 'Raisins • Dried plums',
       },
       {
         name: 'Citrus Fruity',
         description: 'Orange',
       },
       {
-        name: 'Flower',
+        name: 'Floral',
         description: 'Orange • Tangerine',
       },
       {
-        name: 'Creole Notes',
-        description: 'Malt • Sugarcane • Panela • Roasted Peanuts • Almonds • Walnut • Caramel',
+        name: 'Creole',
+        description: 'Malt • Sugarcane • Panela • Roasted peanuts • Almonds • Walnut • Caramel',
       },
       {
         name: 'Cocoa',
@@ -471,27 +472,27 @@ const en = {
       },
     ],
     assessment: {
-      title: 'Evaluation',
+      title: 'Assessment',
       classification: 'Chuao Classification',
-      equipment: 'Tasting Panel',
+      equipment: 'Tasting Team',
     },
     information: [
       {
-        title: 'Aroma:',
+        title: 'A = Aroma:',
         description: {
           boldText: 'HIGH',
           additionalText: 'Nutty and caramel flavors',
         },
       },
       {
-        title: 'Flavor:',
+        title: 'F = Flavor:',
         description: {
           boldText: 'STRONG',
-          additionalText: 'The aroma of nuts and caramelized sweets stands out.',
+          additionalText: 'Prominent nutty and caramelized sweet aromas',
         },
       },
       {
-        title: 'Fermentation:',
+        title: 'F = Fermentation:',
         description: {
           boldText: 'HIGH',
           additionalText: 'Low levels of astringency and bitterness',
@@ -499,42 +500,40 @@ const en = {
       },
     ],
     analysis: {
-      title: 'Cut Analysis',
-      alt: 'Porcelain Cacao',
+      title: 'Cut Test Analysis',
+      alt: 'Porcelana Cocoa',
       description: [
         {
-          text: 'Porcelain is an ancestral creole cocoa. The cut test reveals 98% white beans. This high percentage gives Porcelain cocoa beans their unique notes of malt, nuts, and caramel.',
+          text: 'Porcelana is an ancestral Creole cocoa. The cut test reveals 98% white beans. This high percentage gives Porcelana cocoa beans their unique notes of malt, nuts, and caramel.',
         },
         {
-          text: 'Porcelana cocoa, due to its high Creole ancestry, produces up to 72% white beans that give it its quality and aroma.',
+          text: 'Due to its high Creole ancestry, Porcelana cocoa produces up to 72% white beans that provide its quality and aroma.',
         },
         {
-          text: 'A typical cut would show: (±98%) fermented beans, (±2%) purple beans, (±0%) slate beans.',
+          text: 'A typical cut test would show: (±98%) fermented beans, (±2%) purple beans, (±0%) slatey beans.',
         },
         {
-          text: 'Weight: Typically, each pod contains 83 almond-sized cocoa beans with a total weight of 100g; this means each bean weighs 1.28g.',
+          text: 'Weight: Typically each pod contains 83 almond-sized cocoa beans with a total weight of 100g; meaning each bean weighs 1.28g.',
         },
       ],
     },
   },
   cocoaMap: [
     {
-      title: 'Flavor Profile',
+      title: 'Flavor Map',
       content: [
         {
           type: 'quote',
           quote:
-            'Porcelana cocoa from the South of Lake Maracaibo - a region that receives the essence of surrounding mountains through its watersheds - stands unique in the country for its morphological characteristics: rounded almonds with cotyledons of unmatched white resembling tender coconut pulp. Requiring brief fermentation and special microclimate conditions like those found along the lake margins, its delicate caramelized nut flavors distinguish it as one of the purest and finest Creole cacaos in Venezuela and the world.',
-          author: 'as detailed by Eng. Ms. Gladys Ramos.',
+            'Porcelana cocoa from the southern shore of Lake Maracaibo, a region that receives the essence of surrounding mountains in its slopes, is unique in the country for its morphology of rounded almonds with unparalleled white cotyledons like tender coconut pulp. With brief fermentation and special microclimate requirements like those of the lake shores, its delicate caramelized nut flavors distinguish it as one of the purest and finest Creole cocoas in Venezuela and the world.',
+          author: 'explained Engineer Ms Gladys Ramos.',
         },
         {
           type: 'paragraph',
-          text: "Its delicate caramelized pecan flavors establish Porcelana cocoa as 'the purest form of ancestral Creole'. Nutrients from the alluvial plains of South Lake Maracaibo combined with its pure genetics - globally unique in morphology with white almond cotyledons (green beans) resembling white coconut pulp - contribute to its distinctive Creole flavors. These characteristics are enhanced through a brief fermentation protocol and slow sun-drying process.",
+          text: 'Its delicate Pecan nut caramelized flavors distinguish Porcelana cocoa as "the purest form of ancestral Creole". Nutrients from the alluvial plain of South Lake Maracaibo and its pure genetics (characterized by being unique in the world for its white cotyledon almond morphology) contribute to its unique Creole flavors, enhanced by a brief fermentation protocol and slow sun-drying.',
         },
       ],
-      image: {
-        alt: 'Cocoa flavor wheel',
-      },
+      image: { alt: 'Cocoa flavor wheel' },
     },
     {
       title: 'Sensory Map',
@@ -542,47 +541,47 @@ const en = {
         {
           type: 'quote',
           quote:
-            '“The slow drying protocol of this valuable Criollo variety makes it possible to anticipate the sweetness that characterizes Porcelana. These sensorial attributes of caramelized Noix de Pekans and smooth texture allows this flavors to stay in the mouth for prolonged periods, increasing the delights of those who enjoy the purest food of the Gods”',
-          author: 'as detailed by Eng. Ms. Gladys Ramos.',
+            '"From the drying phases of these valuable Creole cocoa beans, it\'s possible to anticipate their characteristic sweetness by observing sugar crystals on their skin. These sensory attributes of caramelized nuts and texture that allows prolonged mouthfeel increase the delight of those who enjoy the Food of the Gods,"',
+          author: 'stated Engineer Ms. Gladys Ramos.',
         },
       ],
       image: {
-        alt: 'Sensory Flavor Map',
+        alt: 'Flavor Sensory Map',
       },
     },
   ],
   postHarvestBenefit: {
-    title: 'Post-Harvest Processing',
+    title: 'Post-Harvest Benefit',
     content: [
       {
-        text: 'The Porcelana cocoa harvesting process involves pod collection and fruit selection, followed by fermentation in wooden boxes and drying on wooden beds or concrete patios.',
+        text: 'The Porcelana Cocoa harvest process consists of pod collection and fruit selection, followed by placement in fermentation boxes and drying on wooden beds or concrete patios',
       },
       {
         protocols: [
           {
-            title: 'Fermentation Protocol',
+            title: 'Refinement Protocol',
             items: [
               {
                 key: 'Cocoa Type',
               },
               {
-                alt: 'porcelana seeds',
+                alt: 'porcelana seed',
                 text: 'Creole',
               },
               {
-                key: 'Fermentation Period',
+                key: 'Fermentation Days',
                 value: '3 days',
               },
               {
                 items: [
-                  'Box type: Wooden',
-                  'Turning frequency: Every 24 hours',
-                  'Fermentation method: Post-harvest processing utilizes fermentation boxes - 9 elevated boxes (three 70x70x70 cm and two 60x60x60 cm) with capacity for 60-80 kg of cocoa.',
+                  'Box type: Wood',
+                  'Turning frequency: every 24 hours',
+                  'Fermentation method: For post-harvest processing they have fermentation boxes - 9 elevated boxes, three 70x70x70 cm and two 60x60x60 cm boxes, storing between 60-80 kg of cocoa.',
                 ],
               },
             ],
             image: {
-              alt: 'fermentation protocol diagram',
+              alt: 'fermentation protocol',
             },
           },
           {
@@ -592,11 +591,11 @@ const en = {
                 key: 'Cocoa Type',
               },
               {
-                alt: 'porcelana seeds',
+                alt: 'porcelana seed',
                 text: 'Creole',
               },
               {
-                key: 'Drying Period',
+                key: 'Drying Days',
                 value: '5 to 8 days',
               },
               {
@@ -604,18 +603,18 @@ const en = {
               },
               {
                 items: [
-                  'Drying surface: Wooden beds/concrete',
-                  'Moisture content: 6%',
-                  'Drying method: Direct sun exposure',
+                  'Floor type: wooden beds/cement',
+                  'Humidity: 6%',
+                  'Drying method: direct sun exposure',
                 ],
               },
             ],
             image: {
-              alt: 'drying protocol diagram',
+              alt: 'drying protocol',
             },
             video: {
-              title: 'Chuao drying process video',
-              text: 'Drying occurs on sliding wooden beds and concrete patios, with gradual sun exposure. Workers carefully rotate beans using rakes to prevent damage. The process takes 5-12 days: Day 1 - fermented beans are spread on concrete to remove pulp remnants with rakes; subsequent days involve even distribution on drying beds. Critical note: Cocoa beans are protected from intense sunlight between 11:00 AM - 2:00 PM to prevent premature roasting.',
+              title: 'Chuao drying video',
+              text: "Drying is done on sliding wooden beds and concrete patios, slowly exposed to sunlight, carefully using rakes to rotate beans without breaking them. The process takes 5-12 days. On the first day, fermented beans are spread on concrete floors to remove pulp residues with rakes. Subsequent days involve even distribution on beds until drying completes. Importantly, from 11am to 2pm, beans aren't sun-exposed due to intensity that could roast them.",
             },
           },
         ],
@@ -628,52 +627,43 @@ const en = {
     content: [
       {
         text: [
-          'Porcelana cocoa won the International Prize',
-          'bronze category and',
-          'gold category, represented by',
-        ],
-        link: [
+          { type: 'bold', text: 'Porcelana cocoa won the International' },
           {
-            label: 'Chocolate Awards British 2016',
+            type: 'link',
+            text: 'Chocolate Awards British 2016',
             url: 'https://www.chocolateawards.com/',
           },
+          { type: 'bold', text: 'bronze category and' },
           {
-            label: 'European International Chocolate Awards 2016',
+            type: 'link',
+            text: 'European International Chocolate Awards 2016',
             url: 'https://www.chocolateawards.com/',
           },
+          { type: 'bold', text: 'gold category, represented by' },
           {
-            label: 'Chocolate Tree.',
+            type: 'link',
+            text: 'Chocolate Tree.',
             url: 'https://www.choctree.co.uk/',
           },
         ],
       },
       {
-        text: 'Porcelana Cacao, an ancestral Criollo variety cultivated for centuries in the western mountains of Venezuela (Táchira, Mérida, Trujillo and Zulia states), is unique in the world for its exceptional genetic conditions, which include completely white beans when immature, high fat content, smooth surface without prominent ridges on its cobs and leaves with a soft hairiness, distinctive features of its pure Criollo heritage. Globally recognized for its powerful aroma, smooth flavor and delicate texture, its name "Porcelana" alludes to the silky and pale appearance of its beans, similar to fine porcelain.',
+        text: 'Porcelana Cocoa, an ancestral Creole variety cultivated for centuries in western Venezuelan mountains (Táchira, Mérida, Trujillo and Zulia states), is unique worldwide for its exceptional genetic conditions including completely white immature beans, high fat content, smooth surface without prominent pod ridges, and leaves with soft hairiness - distinctive traits of pure Creole heritage. Globally recognized for its potent aroma, smooth flavor and delicate texture, its name "Porcelana" alludes to the silky pale appearance of its beans resembling fine porcelain.',
       },
       {
-        text: 'In the Colón Municipality of Zulia, located south of Lake Maracaibo on the western slopes of the Andean Mountains, is the Socialist Center for Research and Development of Cocoa (CESID-CACAO) of CORPOZULIA, a pioneering institution directed by Engineer Iraima Chacón, who for more than 25 years has promoted genetic research to preserve this variety.',
+        text: "In Zulia State's Colón Municipality, located south of Lake Maracaibo on the western slopes of the Andean Mountain Range, lies the Socialist Center for Cocoa Research and Development (CESID-CACAO) of CORPOZULIA. This pioneering institution, led by Engineer Ms. Iraima Chacón for over 25 years, has driven genetic research to preserve this variety.",
       },
       {
-        text: 'The center manages 30 hectares (74.13 acres), of which 7 are dedicated exclusively to the certified cultivation of Porcelana, preserving the only Porcelana Cocoa Germplasm Bank in the world, essential to guarantee its genetic purity. ',
+        text: "The center manages 30 hectares (74.13 acres), with 7 hectares exclusively dedicated to certified Porcelana cultivation, conserving the world's only Porcelana Cocoa Germplasm Bank essential for guaranteeing its genetic purity.",
       },
       {
-        text: "With an annual production of 5 tons (80% destined for nurseries to expand the crop and 20% for commercialization), its harvest cycles are divided into High (May to July) and Medium (November to January). The municipality's economy, a national agricultural axis, is based on agriculture (main producer of bananas and a reference in Porcelana cocoa, bananas, corn, yuca and sugar cane), livestock (second place in production of beef/pork and dairy products) and fishing (taking advantage of its coast on Lake Maracaibo and numerous rivers, creeks and ravines). ",
+        text: "With an annual production of 5 metric tons (80% allocated to nurseries for crop expansion and 20% to commercialization), its harvest cycles are divided into High (May-July) and Medium (November-January). The municipality's economy, a national agricultural hub, relies on agriculture (main producer of plantains and benchmark for Porcelana cocoa, bananas, corn, cassava and sugarcane), livestock (second in beef/pork and dairy production), and fishing (leveraging its Lake Maracaibo coastline and numerous rivers).",
       },
       {
-        text: 'This synergy between biodiversity, scientific innovation and ancestral practices positions Venezuela as the exclusive custodian of an invaluable biocultural heritage, where Porcelana emerges as a symbol of identity and agricultural excellence.',
+        text: 'This synergy between biodiversity, scientific innovation, and ancestral practices positions Venezuela as the exclusive custodian of invaluable biocultural heritage, where Porcelana emerges as a symbol of identity and agricultural excellence.',
       },
     ],
-    images: [
-      {
-        alt: 'Origin Certificate',
-      },
-      {
-        alt: 'Farmers',
-      },
-      {
-        alt: 'Mosaic',
-      },
-    ],
+    images: [{ alt: 'Certificate of origin' }, { alt: 'Farmers' }, { alt: 'Mosaic' }],
   },
   location: {
     title: 'Geographical Location and Ecology',
@@ -720,37 +710,36 @@ const en = {
   },
   history: {
     title: 'History',
-    images: [{ alt: 'Porcelana history' }, { alt: 'Porcelana history' }],
-
+    images: [{ alt: 'Porcelana history image' }, { alt: 'Porcelana historical cultivation' }],
     content: [
       {
-        text: 'Before the arrival of the conquistadors, these lands were populated by indigenous tribes, located on the coast of Lake Maracaibo and the banks of its rivers. The first inhabitants were the Arawakos, Aliles, Onotos and finally the Buredes; that for 700 years came from the northern part of Venezuela. In 1499, with the discovery of the Lake, a predominantly agricultural period began, marking a series of structural changes that led to the elimination of most of the indigenous groups by the Spanish conquerors, due to an economy turned abroad.',
+        text: 'Before the arrival of the conquistadors, these lands were inhabited by indigenous tribes, located on the shores of Lake Maracaibo and its riverbanks. The first inhabitants were Arawakos, Aliles, Onotos, and finally the Buredes, who for 700 years had migrated from northern Venezuela. In 1499, with the discovery of the lake, a predominantly agricultural period began, marked by structural changes that led to the elimination of most indigenous groups by Spanish conquistadors due to an externally oriented economy.',
       },
       {
-        text: 'Later, the communication routes evolved and commercial traffic began on the Escalante River',
+        text: 'Subsequently, communication routes evolved, and commercial traffic began along the Escalante River.',
       },
       {
-        text: 'In the year 1700, a development began due to the need for communication routes to Maracaibo and they needed more than San Carlos del Zulia to support the trips from one side to the other of Lake Maracaibo, with this the communication route evolved and commercial traffic on the Escalante River until achieving various routes that brought with them some farmers from San Carlos, thus achieving population growth until founding Santa Cruz del Zulia, Santa Bárbara and later Moralito and Urribarrí in 1778.',
+        text: 'In the year 1700, development began due to the need for communication routes to Maracaibo, requiring more than San Carlos del Zulia to support cross-lake travel. This led to the evolution of commercial traffic along the Escalante River and the arrival of farmers from San Carlos, resulting in population growth and the eventual founding of Santa Cruz del Zulia (1778), Santa Bárbara, and later Moralito and Urribarrí.',
       },
       {
-        text: 'On October 6, 1873, the Perijá District gained autonomy, forming the new Fraternidad district, later renamed the Colón District in 1881, and in 1989 it was declared a Municipality.',
+        text: 'On October 6, 1873, it gained autonomy from the Perijá District, forming the new Fraternidad District, later renamed Colón District in 1881, and finally declared a Municipality in 1989.',
       },
       {
-        text: 'It leads the way in the cultural field with the “Don Jesús Maria Semprún” Athenaeum, standing out for its dance groups, and others such as the Colón House of Culture, the Parish Hall, the Comprehensive Art Center, the “San Carlos” Movie Theater, the “Luís Alberto Camacho” Exhibition Park, and the Paseo Colón. They also have musical groups, such as bagpipe groups, theatre groups and bands.',
+        text: 'It leads culturally with the "Don Jesús María Semprún" Athenaeum, notable for its dance groups and other institutions like the Colón Cultural Center, Parish Hall, Integral Art Center, "San Carlos" Movie Theater, "Luís Alberto Camacho" Exhibition Park, and Colón Promenade. It also hosts musical groups like gaita ensembles, theater troupes, and bands.',
       },
       {
-        text: 'In the artisan sector we can find great variety, the predominant crafts are indigenous, made with reeds and coconut palms, they also build fishing canoes by hand, weave chinchorros, etc.',
+        text: 'In handicrafts, we find great variety. Predominant indigenous crafts include items made with bulrush and coconut palms. They also manually build fishing canoes, weave hammocks, etc.',
       },
       {
-        text: 'The main tourist attraction would be the Chama, an important river for the region that flows down with white Andean waters to the municipality and beyond. In this Municipality there is also the tourist part of the Urribarri Parish through Puerto Concha and its tourist stop, exhibition of crafts and the tasting of Colonial gastronomy.',
+        text: "The main tourist attraction is the Chama River, an important regional waterway carrying white Andean waters through the municipality. The Urribarrí Parish also offers tourism opportunities at Puerto Concha with its tourist stop, craft exhibitions, and tasting of Colón's gastronomy.",
       },
     ],
   },
   socialResponsibility: {
     title: 'Social Responsibility',
-    images: [{ alt: 'image1' }, { alt: 'image2' }],
+    images: [{ alt: 'Community image' }, { alt: 'Educational program' }],
     paragraphs:
-      "Our primary objective is promoting sustainable agricultural practices through next-generation training. Partnering with PROSPERI Foundation (non-profit), we preserve Venezuela's historical, cultural, and agricultural heritage. Educational programs like 'Return to Agriculture' demonstrate cocoa farming's viability as profitable profession driving social change.",
+      'The primary objective is to collaborate, enrich, and promote good agricultural practices in community succession planning. Through partnership with PROSPERI FOUNDATION, a non-profit organization committed to preserving Venezuela\'s historical, cultural, and agricultural values via educational programs like "Return to Agriculture", we demonstrate that cocoa cultivation is a profitable profession that drives social change.',
   },
 };
 

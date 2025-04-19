@@ -45,7 +45,7 @@ export function DialogFlavours({ trans }: { trans: Record<string, any> }) {
           className="pointer-events-auto relative flex h-190 w-100 flex-col overflow-auto border border-zinc-950/10 bg-white p-5 md:h-150 md:w-200 lg:h-150 lg:w-300 lg:flex-row xl:h-150 xl:w-300 xl:flex-row"
         >
           <div className="flex w-full items-center justify-center lg:w-1/2 xl:w-1/2">
-            <MorphingDialogImage
+            <img
               src={ruedaMundoDeSabores.src}
               alt="A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood."
               className="size-auto p-5"

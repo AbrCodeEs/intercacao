@@ -888,12 +888,7 @@ const es = {
       },
     ],
 
-    horizontal_scroll: {
-      title: 'Electrones: Programas de la Fundación',
-      description:
-        'Inspirados en los átomos, la Fundación Quirico Prosperi actúa como el centro (núcleo) que impulsa y sostiene diversos programas de responsabilidad social (electrones), diseñados para impactar positivamente en la comunidad de El Rincón y otros municipios, fortaleciendo el desarrollo social, cultural y ambiental, beneficiando a las familias y el entorno que hacen posible nuestra labor cacaotera.',
-      current_news_title: 'Actualidad FQP: Novedades de Nuestra Fundación',
-      view_more: 'Ver más',
+    vainilla_bar : {
       bar: {
         title: 'Mandarina Miel & Vainilla Bar',
         description: [
@@ -909,6 +904,14 @@ const es = {
           src: bar.src,
         },
       },
+    },
+
+    horizontal_scroll: {
+      title: 'Electrones: Programas de la Fundación',
+      description:
+        'Inspirados en los átomos, la Fundación Quirico Prosperi actúa como el centro (núcleo) que impulsa y sostiene diversos programas de responsabilidad social (electrones), diseñados para impactar positivamente en la comunidad de El Rincón y otros municipios, fortaleciendo el desarrollo social, cultural y ambiental, beneficiando a las familias y el entorno que hacen posible nuestra labor cacaotera.',
+      current_news_title: 'Actualidad FQP: Novedades de Nuestra Fundación',
+      view_more: 'Ver más',
       explore_section: {
         title:
           'Explora cómo estamos transformando el futuro del cacao y conoce más sobre nuestros programas.',
@@ -1351,12 +1354,8 @@ const en = {
         images: carouselDeporte,
       },
     ],
-    horizontal_scroll: {
-      title: 'Electrons: Foundation Programs',
-      description:
-        'Inspired by atoms, the Quirico Prosperi Foundation acts as the core (nucleus) that drives and sustains various social responsibility programs (electrons), designed to positively impact the community of El Rincón and other municipalities, strengthening social, cultural, and environmental development, benefiting families and the environment that make our cocoa work possible.',
-      current_news_title: 'FQP Current News: Updates from Our Foundation',
-      view_more: 'View more',
+    
+    vainilla_bar : {
       bar: {
         title: 'Mandarina Honey & Vanilla Bar',
         description: [
@@ -1372,6 +1371,14 @@ const en = {
           src: bar.src,
         },
       },
+    },
+
+    horizontal_scroll: {
+      title: 'Electrons: Foundation Programs',
+      description:
+        'Inspired by atoms, the Quirico Prosperi Foundation acts as the core (nucleus) that drives and sustains various social responsibility programs (electrons), designed to positively impact the community of El Rincón and other municipalities, strengthening social, cultural, and environmental development, benefiting families and the environment that make our cocoa work possible.',
+      current_news_title: 'FQP Current News: Updates from Our Foundation',
+      view_more: 'View more',
       explore_section: {
         title:
           "Explore how we're transforming the future of cocoa and learn more about our programs.",

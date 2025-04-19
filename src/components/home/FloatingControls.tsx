@@ -37,7 +37,7 @@ export const FloatingControls = ({
   const isOpen = !isTypePanelOpen;
   return (
     <motion.div
-      className="z-50"
+      className="!z-[90]"
       style={{
         position: isContainerEndVisible ? 'absolute' : 'fixed',
         bottom: 'calc(var(--spacing) * 5)',

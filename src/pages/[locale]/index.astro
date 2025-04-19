@@ -24,6 +24,7 @@ import { DialogFlavours } from '@/components/ui/morphing-dialog/DialogFlavours';
 import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { getLangFromUrl, useTranslations } from '@/lib/translations';
 import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
+import { VainillaBar } from '@/components/home/VainillaBar';
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -158,6 +159,12 @@ export async function getStaticPaths() {
         />
       </div>
       <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:load />
+    </div>
+  </div>
+  
+  <div id="section-vanilla-bar" class="h-auto w-full bg-[#e9edc9]">
+    <div class="p-10">
+      <VainillaBar trans={trans('home').tabs_transition_panel.vainilla_bar} client:load />
     </div>
   </div>
   

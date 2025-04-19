@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 
 import ImgDialog from '@/components/ui/dialog/Img';
+import { cn } from '@/lib/cn';
 type Props = CollectionEntry<'template'>['data'];
 
 const { traceability } = Astro.props;
@@ -26,23 +27,74 @@ const { traceability } = Astro.props;
       </h3>
 
       <!-- Contenido dinámico -->
+
       {
-        traceability.content.map((item) => (
-          <p
-            class:list={[
-              'text-lg',
-              item.type === 'highlight' && 'border-x border-black px-3 text-justify',
-            ]}
-          >
-            {item.type === 'highlight' ? (
-              <i>
-                <b>{item.text}</b>
-              </i>
-            ) : (
-              item.text
-            )}
-          </p>
-        ))
+        traceability.content.map(
+          (content: {
+            type: string;
+            text: string;
+            quote: string;
+            author: string;
+            border: boolean;
+          }) => {
+            switch (content.type) {
+              case 'highlight':
+                return (
+                  <p class={cn('border-x border-black px-3 text-justify text-lg')}>
+                    <i>
+                      <b>{content.text}</b>
+                    </i>
+                  </p>
+                );
+              case 'paragraph':
+                return <p class="text-lg">{content.text}</p>;
+              case 'bold':
+                return (
+                  <p class="text-lg">
+                    <b class="font-bold"> {content.text} </b>
+                  </p>
+                );
+              case 'multiImage':
+                return (
+                  <div class="flex flex-row justify-evenly gap-5">
+                    {content.src.map((image) => (
+                      <Image
+                        inferSize={true}
+                        loading="eager"
+                        src={image}
+                        alt={content.alt}
+                        class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+                      />
+                    ))}
+                  </div>
+                );
+              case 'richText':
+                return (
+                  <p class="text-lg">
+                    {content.text.map((item: { type: string; text: string }) => {
+                      switch (item.type) {
+                        case 'text':
+                          return item.text;
+                        case 'bold':
+                          return <b class="font-bold"> {item.text} </b>;
+                        case 'italic':
+                          return <i class="font-italic"> {item.text} </i>;
+                        case 'link':
+                          return (
+                            <a class="font-bold text-blue-500 hover:underline" href={item.text}>
+                              {' '}
+                              {item.text}{' '}
+                            </a>
+                          );
+                        default:
+                          return item.text;
+                      }
+                    })}
+                  </p>
+                );
+            }
+          },
+        )
       }
     </div>
 
@@ -51,34 +103,39 @@ const { traceability } = Astro.props;
       class="flex w-full flex-1 flex-col items-start justify-start gap-3 md:w-2/4 lg:w-2/4 xl:w-2/4"
     >
       {
-        traceability.images.map((image, index) => (
+        traceability.imagesDialog && (
           <div
             class:list={[
-              'group animate-trigger-left relative size-auto flex-none rounded-lg bg-white pt-4',
-              index === 0 &&
-                'h-80 w-auto -translate-y-10 scale-40 rounded-lg bg-white md:-translate-y-30 lg:-translate-y-30 xl:-translate-y-30',
-              index !== 0 && 'overflow-hidden',
+              'group animate-trigger-left relative size-auto h-80 w-auto flex-none -translate-y-10 scale-40 rounded-lg bg-white pt-4 md:-translate-y-30 lg:-translate-y-30 xl:-translate-y-30',
             ]}
           >
-            {image.useDialog ? (
-              <ImgDialog client:load>
-                <Image
-                  inferSize={true}
-                  loading="eager"
-                  src={image.src}
-                  alt={image.alt}
-                  class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
-                />
-              </ImgDialog>
-            ) : (
+            <ImgDialog client:load>
               <Image
                 inferSize={true}
                 loading="eager"
-                src={image.src}
-                alt={image.alt}
+                src={traceability.imagesDialog.src}
+                alt={traceability.imagesDialog.alt}
                 class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
               />
-            )}
+            </ImgDialog>
+          </div>
+        )
+      }
+
+      {
+        traceability.images.map((image, index) => (
+          <div
+            class:list={[
+              'group animate-trigger-left relative size-auto flex-none overflow-hidden rounded-lg bg-white pt-4',
+            ]}
+          >
+            <Image
+              inferSize={true}
+              loading="eager"
+              src={image.src}
+              alt={image.alt}
+              class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+            />
           </div>
         ))
       }

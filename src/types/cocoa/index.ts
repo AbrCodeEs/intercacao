@@ -154,7 +154,9 @@ const postHarvestBenefit = z.object({
                 src: z.union([z.string(), z.custom<ImageMetadata>()]),
                 alt: z.string(),
               })
+              .array()
               .optional(),
+            paragraph: z.string().optional(),
             video: z
               .object({
                 src: z.string(),
@@ -175,7 +177,7 @@ const traceability = z.object({
   subtitle: z.string(),
   content: z
     .object({
-      type: z.enum(['paragraph', 'highlight']),
+      type: z.enum(['paragraph', 'highlight', 'richText', 'multiImage', 'bold']),
       text: z.string(),
     })
     .array(),
@@ -269,7 +271,7 @@ const template = defineCollection({
     traceability,
     location,
     history,
-    socialResponsibility
+    socialResponsibility,
   }),
 });
 

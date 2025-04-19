@@ -2,7 +2,7 @@
 import Layout from '@/layouts/CocoaLayout.astro';
 import { Image } from 'astro:assets';
 
-import ratingStars from '@/images/chuao/rating-stars-cut.png';
+import corteChuao from '@/images/porcelana/cacao3.webp';
 
 import GeneralInformation from '@/components/template/GeneralInformation.astro';
 import Characteristics from '@/components/template/Characteristics.astro';
@@ -44,6 +44,17 @@ export async function getStaticPaths() {
     <!-- @ts-ignore -->
     <Characteristics characteristics={characteristics} />
 
+    <section
+    class="h-full w-full bg-gray-400 md:h-screen md:w-screen lg:h-screen lg:w-screen xl:h-screen xl:w-screen"
+  >
+    <!-- @ts-ignore -->
+    <Image
+      inferSize={true}
+      class="h-full w-full object-fill object-center"
+      src={corteChuao}
+      alt="corte Chuao"
+    />
+  </section>
     <!-- @ts-ignore -->
     <CocoaMap cocoaMap={cocoaMap} />
 

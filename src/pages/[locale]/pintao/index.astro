@@ -1,0 +1,76 @@
+---
+import Layout from '@/layouts/CocoaLayout.astro';
+import { Image } from 'astro:assets';
+
+import corte from '@/images/pintao/cortecacao2.webp';
+
+import GeneralInformation from '@/components/template/GeneralInformation.astro';
+import Characteristics from '@/components/template/Characteristics.astro';
+import CocoaMap from '@/components/template/CocoaMap.astro';
+import PostHarvestBenefit from '@/components/template/PostHarvestBenefit.astro';
+import Traceability from '@/components/template/Traceability.astro';
+import Location from '@/components/template/Location.astro';
+import History from '@/components/template/History.astro';
+import SocialResponsibility from '@/components/template/SocialResponsibility.astro';
+
+import data from '@/data/pintao/data';
+
+const {
+  generalInformation,
+  characteristics,
+  cocoaMap,
+  postHarvestBenefit,
+  traceability,
+  location,
+  history,
+  socialResponsibility,
+} = data(Astro);
+
+export async function getStaticPaths() {
+  return [{ params: { locale: 'en' } }, { params: { locale: 'es' } }];
+}
+---
+
+<Layout
+  title="Carupano Pintao, Venezuela | Intercacao Europe Bv"
+  description='Carupano Pintao Cocoa, a Venezuelan gem from Sucre State, embodies the perfect balance of Trinitario genetics and Criollo heritage. With 14% Creole beans, this cocoa offers a medium-intensity flavor profile featuring citrusy grapefruit, orange peel, caramelized nuts (3.0 Acriollado), and warm spices (cinnamon, cloves). Its 82% fermented beans and 8% slatey beans undergo a meticulous 6-7 day wooden-box fermentation, followed by sun-drying on cedar beds. Producing 50 MT annually, families in Rio Caribe La Concepción harvest pods using bamboo poles ("Lata"), while the Prosperi Foundation’s "Return to Agriculture" program ensures sustainable practices. Key landmarks like San Miguel Church (1717) and traditional "El Cacaito" cocoa drinks highlight its cultural legacy. El Cacao Carupano Pintao, joya venezolana del estado Sucre, equilibra genética Trinitario y herencia Criollo. Con 14% de granos criollos, ofrece sabores medianamente intensos: notas cítricas de pomelo, cáscara de naranja, nueces caramelizadas (3.0 Acriollado) y especias cálidas (canela, clavos). Sus 82% de granos fermentados y 8% pizarrosos pasan por 6-7 días de fermentación en cajones de madera y secado solar en camas de cedro. Producido por familias de Rio Caribe La Concepción que cosechan con varas de bambú ("Lata"), el programa "Regreso al Agro" de la Fundación Prosperi garantiza sostenibilidad. Iconos como la Iglesia San Miguel (1717) y la bebida "El Cacaito" reflejan su herencia cultural.'
+  pubDate={new Date()}
+  keywords="Carupano Pintao Cocoa, Venezuelan Trinitario-Criollo Hybrid, Citrus Notes, Caramelized Nuts, Warm Spices, 6-Day Wooden-Box Fermentation, Sun-Drying Protocol, 82% Fermented Beans, 8% Slatey Beans, Rio Caribe Cocoa, San Miguel Church Heritage, Prosperi Foundation, Ethical Cocoa Farming, El Cacaito Drink, Spiced Cocoa Recipes, Cocoa Cut Test Analysis, Moisture Content 8%, Cacao Carupano Pintao, Híbrido Trinitario-Criollo Venezolano, Notas Cítricas, Nueces Caramelizadas, Especias Cálidas, Fermentación de 6 Días en Madera, Protocolo de Secado Solar, 82% Granos Fermentados, 8% Granos Pizarrosos, Cacao Rio Caribe, Patrimonio de la Iglesia San Miguel, Fundación Prosperi, Cultivo Ético de Cacao, Bebida El Cacaito, Recetas con Cacao Especiado, Análisis de Corte de Cacao, Humedad 8%"
+>
+  <article class="w-full overflow-x-hidden overflow-y-auto">
+    <!-- @ts-ignore -->
+    <GeneralInformation generalInformation={generalInformation} />
+
+    <!-- @ts-ignore -->
+    <Characteristics characteristics={characteristics} />
+
+    <section
+      class="h-full w-full bg-gray-400 md:h-screen md:w-screen lg:h-screen lg:w-screen xl:h-screen xl:w-screen"
+    >
+      <!-- @ts-ignore -->
+      <Image
+        inferSize={true}
+        class="h-full w-full object-fill object-center"
+        src={corte}
+        alt="corte pintao"
+      />
+    </section>
+    <!-- @ts-ignore -->
+    <CocoaMap cocoaMap={cocoaMap} />
+
+    <!-- @ts-ignore -->
+    <PostHarvestBenefit postHarvestBenefit={postHarvestBenefit} />
+
+    <!-- @ts-ignore -->
+    <Traceability traceability={traceability} />
+
+    <!-- @ts-ignore -->
+    <Location location={location} />
+
+    <!-- @ts-ignore -->
+    <History history={history} />
+
+    <!-- @ts-ignore -->
+    <SocialResponsibility socialResponsibility={socialResponsibility} />
+  </article>
+</Layout>

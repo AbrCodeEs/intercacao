@@ -64,13 +64,18 @@ const {
 
                         case 'list':
                           return (
-                            <ul class="flex list-disc flex-col gap-3 px-10">
-                              {detail.items?.map((li) => (
-                                <li>
-                                  <p class="text-lg">{li}</p>
-                                </li>
-                              ))}
-                            </ul>
+                            <>
+                              {!!detail.key && (
+                                <h3 class="mb-3 border-b pb-2 text-xl font-bold">{detail.key}</h3>
+                              )}
+                              <ul class="flex list-disc flex-col gap-3 px-10">
+                                {detail.items?.map((li) => (
+                                  <li>
+                                    <p class="text-lg">{li}</p>
+                                  </li>
+                                ))}
+                              </ul>
+                            </>
                           );
                       }
                     })}
@@ -79,15 +84,22 @@ const {
               </div>
 
               <div class="flex flex-1 flex-col items-center justify-between gap-5">
-                {protocol.mainImage && (
-                  <div class="group animate-trigger-left relative w-full flex-none overflow-hidden rounded-lg bg-neutral-300">
-                    <Image
-                      inferSize={true}
-                      loading="eager"
-                      src={protocol.mainImage.src}
-                      class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
-                      alt={protocol.mainImage.alt}
-                    />
+                {protocol.mainImage.length &&
+                  protocol.mainImage.map((image: { src: string; alt: string }) => (
+                    <div class="group animate-trigger-left relative w-full flex-none overflow-hidden rounded-lg bg-neutral-300">
+                      <Image
+                        inferSize={true}
+                        loading="eager"
+                        src={image.src}
+                        class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+                        alt={image.alt}
+                      />
+                    </div>
+                  ))}
+
+                {protocol.paragraph && (
+                  <div class="w-full flex-none">
+                    <p class="text-lg">{protocol.paragraph}</p>
                   </div>
                 )}
 
