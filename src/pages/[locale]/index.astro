@@ -25,6 +25,7 @@ import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { getLangFromUrl, useTranslations } from '@/lib/translations';
 import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
 import { VainillaBar } from '@/components/home/VainillaBar';
+import { NewsSection } from '@/components/home/NewsSection';
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -212,11 +213,15 @@ export async function getStaticPaths() {
       <div class="flex w-full items-center justify-center gap-5">
         <CarouselPost posts={posts} client:load />
       </div>
-      <div class="flex w-full items-center justify-center gap-5">
-        <h3 class="py-4 text-3xl text-neutral-600 uppercase w-1/2 text-center">
-          {trans('home').about.farewell}
-        </h3>
-      </div>
+    </div>
+  </div>
+  
+  <div id="section-news" class="flex h-auto w-full items-start justify-center">
+    <div class="flex flex-col w-full items-center justify-center gap-5">
+      <h3 class=" py-4 text-center text-3xl text-neutral-600 uppercase">
+        {trans('home').about.farewell}
+      </h3>
+      <NewsSection client:only="react" />
     </div>
   </div>
 

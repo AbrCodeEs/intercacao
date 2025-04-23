@@ -73,14 +73,12 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
   // Esto asume que la sección tiene suficiente altura para generar scroll.
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const safeLatest = Math.max(0, Math.min(1, latest));
-    console.log('Scroll progress:', safeLatest);
-
+   
     // Usamos un mapeo lineal: al tener "cardLength" tarjetas, dividimos el recorrido en "cardLength" secciones.
     const newCardIndex = Math.floor(safeLatest * cardLength);
     // Evitamos índices fuera del rango.
     const index = newCardIndex >= cardLength ? cardLength - 1 : newCardIndex;
     setActiveCard(index);
-    console.log('Active card index:', index);
   });
 
   // Usamos el sentinel para detectar si la sección sticky está visible.
@@ -88,7 +86,6 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
     if (sentinelRef.current) {
       observer.current = new IntersectionObserver(
         ([entry]) => {
-          console.log('Sentinel intersection status:', entry.isIntersecting);
           setIsContainerVisible(entry.isIntersecting);
         },
         { threshold: 0.1 }, // Umbral menor para activar más fácilmente.
@@ -103,7 +100,6 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
   const handleScrollTo = (index: number) => {
     const element = document.getElementById(`card-${index}`);
     if (element) {
-      console.log(`Scrolling to card-${index}`);
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
@@ -192,9 +188,10 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
             'fixed right-3 bottom-3 z-50 flex flex-col items-end gap-2 sm:right-6 sm:bottom-6 sm:gap-4', // Ajustes responsive
             activeCard === content.length - 1 ? 'absolute' : 'fixed',
           )}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, display: 'none' }}
           animate={{
             opacity: isContainerVisible || isContainerInView ? 1 : 0,
+            display: isContainerVisible || isContainerInView ? 'flex' : 'none',
             transition: { duration: 0.3 },
           }}
           layout
