@@ -23,11 +23,11 @@ import logoWhiteImagotipoCacaoGourmet from '@/images/global/logo-white-imagotipo
 
 import { CarouselPost } from '@/components/ui/carousel/Post';
 import { ChocolateGallery } from '@/components/home/ChocolateGallery';
-import { PlusIcon } from 'lucide-react';
 import { getLangFromUrl, useTranslations } from '@/lib/translations';
 import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
 import { DialogFlavours } from '@/components/ui/morphing-dialog/DialogFlavours';
 import { VainillaBar } from '@/components/home/VainillaBar';
+import { NewsSection } from '@/components/home/NewsSection';
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -92,7 +92,6 @@ const posts = [
   },
 ];
 
-// Astro.redirect(`/${trans}/index.astro`);
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} pubDate={new Date()} keywords="">
@@ -223,11 +222,15 @@ const posts = [
       <div class="flex w-full items-center justify-center gap-5">
         <CarouselPost posts={posts} client:load />
       </div>
-      <div class="flex w-full items-center justify-center gap-5">
-        <h3 class="w-1/2 py-4 text-center text-3xl text-neutral-600 uppercase">
-          Exportamos el mejor cacao para los mejores chocolateros del mundo.
-        </h3>
-      </div>
+    </div>
+  </div>
+
+  <div id="section-news" class="flex h-auto w-full items-start justify-center">
+    <div class="flex flex-col w-full items-center justify-center gap-5">
+      <h3 class=" py-4 text-center text-3xl text-neutral-600 uppercase">
+        Exportamos el mejor cacao para los mejores chocolateros del mundo.
+      </h3>
+      <NewsSection client:only="react" />
     </div>
   </div>
 

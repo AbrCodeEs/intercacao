@@ -182,7 +182,7 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
           </Carousel>
         </div>
 
-        {/* Elemento 2 */}
+        {/* Elemento 2
         <div className="h-64 w-full rounded-lg md:h-auto">
           <div className="flex h-full items-center justify-center overflow-hidden rounded-lg">
             <iframe
@@ -197,7 +197,7 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
           </div>
         </div>
 
-        {/* Elemento 3 - Video */}
+        Elemento 3 - Video
         <div className="h-64 w-full rounded-lg bg-gray-300 md:h-auto">
           <div className="aspect-[5/6] h-full w-full overflow-hidden rounded-lg">
             <iframe
@@ -212,7 +212,7 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
           </div>
         </div>
 
-        {/* Elemento 4 - Video */}
+        Elemento 4 - Video
         <div className="h-64 w-full rounded-lg bg-gray-300 md:h-auto">
           <div className="aspect-[5/6] h-full w-full overflow-hidden rounded-lg">
             <iframe
@@ -227,7 +227,7 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
           </div>
         </div>
 
-        {/* Elemento 5 - Video */}
+        Elemento 5 - Video
         <div className="h-64 w-full rounded-lg bg-gray-300 md:h-auto">
           <div className="aspect-[5/6] h-full w-full overflow-hidden rounded-lg">
             <iframe
@@ -240,7 +240,7 @@ const HorizontalScrollSection = ({ trans }: Translations) => {
               allowfullscreen
             ></iframe>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

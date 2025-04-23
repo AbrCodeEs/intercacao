@@ -173,308 +173,311 @@ import AlejandroProsperi from '@/images/home/carousels/timeline/Alejandro_Prospe
 const carouselRegresoAlAgua = [
   {
     src: carouselRegresoAlAgua1.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselRegresoAlAgua2.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselRegresoAlAgua3.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselRegresoAlAgua4.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselRegresoAlAgua5.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselRegresoAlAgua6.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselRegresoAlAgua7.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselRegresoAlAgua8.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselRegresoAlAgua9.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselRegresoAlAgua10.src,
-    alt: 'Regreso al Agua',
-  },  {
+    alt: 'regreso del Agua',
+  },
+  {
     src: carouselRegresoAlAgua11.src,
-    alt: 'Regreso al Agua',
-  },  {
+    alt: 'regreso del Agua',
+  },
+  {
     src: carouselRegresoAlAgua12.src,
-    alt: 'Regreso al Agua',
-  },  {
+    alt: 'regreso del Agua',
+  },
+  {
     src: carouselRegresoAlAgua13.src,
-    alt: 'Regreso al Agua',
-  }, 
+    alt: 'regreso del Agua',
+  },
 ];
 
 const carouselWilfriedMerle = [
   {
     src: carouselWilfriedMerle1.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle2.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle3.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle4.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle5.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle6.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle7.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle8.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle9.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle10.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle11.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle12.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle13.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselWilfriedMerle14.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   // {
   //   src: carouselWilfriedMerle15.src,
-  //   alt: 'Regreso al Agua',
+  //   alt: 'regreso del Agua',
   // },
 ];
 
 const carouselRegresoAlAgro = [
   {
     src: carouselAgro1.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselAgro2.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselAgro3.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselAgro4.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselAgro5.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselAgro6.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselAgro7.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselAgro8.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselAgro9.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselAgro10.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
 ];
 
 const carouselFundacionProsperi = [
   {
     src: carrouselProperi1.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi2.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi3.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi4.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi5.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi6.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi7.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi8.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi9.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi10.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi11.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi12.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi13.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi14.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi15.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi16.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi17.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carrouselProperi18.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
 ];
 
 const carouselReligion = [
   {
     src: carouselReligion1.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion2.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion3.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion4.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion5.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion6.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion7.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion8.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion9.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion10.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion11.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion12.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion13.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   {
     src: carouselReligion14.src,
-    alt: 'Regreso al Agua',
+    alt: 'regreso del Agua',
   },
   // {
   //   src: carouselReligion15.src,
-  //   alt: 'Regreso al Agua',
+  //   alt: 'regreso del Agua',
   // },
   // {
   //   src: carouselReligion16.src,
-  //   alt: 'Regreso al Agua',
+  //   alt: 'regreso del Agua',
   // },
   // {
   //   src: carouselReligion17.src,
-  //   alt: 'Regreso al Agua',
+  //   alt: 'regreso del Agua',
   // },
   // {
   //   src: carouselReligion18.src,
-  //   alt: 'Regreso al Agua',
+  //   alt: 'regreso del Agua',
   // },
 ];
 
@@ -554,7 +557,8 @@ const carouselDanza = [
   {
     src: carouselDanza19.src,
     alt: 'Danza',
-  }, {
+  },
+  {
     src: carouselDanza20.src,
     alt: 'Danza',
   },
@@ -624,7 +628,8 @@ const carouselDeporte = [
   {
     src: carouselDeporte16.src,
     alt: 'Deporte',
-  },{
+  },
+  {
     src: carouselDeporte17.src,
     alt: 'Deporte',
   },
@@ -802,48 +807,12 @@ const es = {
     ],
     items: [
       {
-        title: 'Regreso al Agua',
-        content:
-          '"Regreso del Agua" actualmente recupera la cuenca del río El Rincón mediante reforestación y buenas prácticas agrícolas. Asegura agua para más de 3,800 personas y para la fauna, protegiendo el medio ambiente con especies autóctonas como la guadua. Este programa combina educación ambiental y acción comunitaria para garantizar un futuro sostenible, de la mano de entes gubernamentales.',
-        img: {
-          src: logoRegresoAlAgua.src,
-          alt: 'Regreso al Agua',
-        },
-        className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
-        icon: '/icons/agua.png',
-        images: carouselRegresoAlAgua,
-      },
-      {
-        title: 'Vivero Wilfried Merle',
-        content:
-          'El Vivero Wilfried Merle produce plantas de cacao, frutales y forestales para reforestar y reactivar la economía local. Programas como "Regreso al Agro" y "Regreso del Agua" son posibles gracias al vivero, que también promueve la sostenibilidad y la educación ambiental. Además, en sus espacios salvaguarda y preserva la identidad especies autóctonas como el cacao pariano.',
-        img: {
-          src: logoWilfriedMerle.src,
-          alt: 'Regreso al Agua',
-        },
-        className: 'flex justify-center items-center',
-        icon: '/icons/wilfried.png',
-        images: carouselWilfriedMerle,
-      },
-      {
-        title: 'Regreso al Agro',
-        content:
-          'Este programa fomenta el cultivo sostenible de cacao, donando plantas y capacitando a productores para mejorar su productividad y su calidad de vida. Preserva el cacao pariano, fomenta las buenas prácticas agrícolas y ecológicas, para garantizar un producto de calidad y dignificar la labor de los agricultores, asegurando un futuro próspero para la región.',
-        img: {
-          src: logoRegresoAlAgro.src,
-          alt: 'Regreso al Agua',
-        },
-        className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
-        icon: '/icons/grano.png',
-        images: carouselRegresoAlAgro,
-      },
-      {
         title: 'Fundación Quirico Prosperi',
         content:
           'Fundación Quirico Prosperi es una organización sin fines de lucro dedicada a promover los valores históricos, culturales y agrícolas de Venezuela, con especial énfasis en la región de Paria. A través de sus programas, la fundación impulsa el desarrollo sostenible, la educación y el rescate de tradiciones como el cultivo de cacao y café. La FQP busca mejorar la calidad de vida de las comunidades, promover la agricultura responsable y garantizar el bienestar de la región. ¡Descubra más sobre su impactante trabajo en su página web oficial!',
         img: {
           src: logoFundacionProsperi.src,
-          alt: 'Regreso al Agua',
+          alt: 'regreso del Agua',
         },
         className: 'flex justify-center items-center col-start-2 my-8',
         classNameImg: 'w-100',
@@ -851,12 +820,48 @@ const es = {
         images: carouselFundacionProsperi,
       },
       {
+        title: 'regreso del Agua',
+        content:
+          '"Regreso del Agua" actualmente recupera la cuenca del río El Rincón mediante reforestación y buenas prácticas agrícolas. Asegura agua para más de 3,800 personas y para la fauna, protegiendo el medio ambiente con especies autóctonas como la guadua. Este programa combina educación ambiental y acción comunitaria para garantizar un futuro sostenible, de la mano de entes gubernamentales.',
+        img: {
+          src: logoRegresoAlAgua.src,
+          alt: 'regreso del Agua',
+        },
+        className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
+        icon: '/icons/agua.png',
+        images: carouselRegresoAlAgua,
+      },
+      {
+        title: 'Regreso al Agro',
+        content:
+          'Este programa fomenta el cultivo sostenible de cacao, donando plantas y capacitando a productores para mejorar su productividad y su calidad de vida. Preserva el cacao pariano, fomenta las buenas prácticas agrícolas y ecológicas, para garantizar un producto de calidad y dignificar la labor de los agricultores, asegurando un futuro próspero para la región.',
+        img: {
+          src: logoRegresoAlAgro.src,
+          alt: 'regreso del Agua',
+        },
+        className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
+        icon: '/icons/grano.png',
+        images: carouselRegresoAlAgro,
+      },
+      {
+        title: 'Vivero Wilfried Merle',
+        content:
+          'El Vivero Wilfried Merle produce plantas de cacao, frutales y forestales para reforestar y reactivar la economía local. Programas como "Regreso al Agro" y "Regreso del Agua" son posibles gracias al vivero, que también promueve la sostenibilidad y la educación ambiental. Además, en sus espacios salvaguarda y preserva la identidad especies autóctonas como el cacao pariano.',
+        img: {
+          src: logoWilfriedMerle.src,
+          alt: 'regreso del Agua',
+        },
+        className: 'flex justify-center items-center',
+        icon: '/icons/wilfried.png',
+        images: carouselWilfriedMerle,
+      },
+      {
         title: 'Electron Religioso',
         content:
           'La Fundación Quirico Prosperi fortalece la fe y los valores en la comunidad a través de su programa de apoyo religioso. Contribuye a las iglesias Santa Rosa de Lima en Carúpano y la Iglesia Pedro y Pablo en El Rincón mediante donaciones, respaldo a los grupos y profesores de catequesis así como diversas iniciativas que unen y enriquecen la espiritualidad. ¡Fe, solidaridad y comunidad en acción!',
         img: {
           src: logoElectronReligion.src,
-          alt: 'Regreso al Agua',
+          alt: 'regreso del Agua',
         },
         className: 'flex justify-center items-center row-start-3 xl:mb-20 lg:mb-10 md:mb-10 mb-5',
         icon: 'R',
@@ -868,7 +873,7 @@ const es = {
           'La Fundación Quirico Prosperi celebra la cultura, el arte y el talento de los jóvenes de El Rincón con su programa  electrón de danza y música. A través de la danza folclórica dirigida desde hace más de 15 años por Roger Urbano y la formación musical del Sistema Nacional de Orquestas, herencia del maestro Abreu, niños y jóvenes descubren su pasión, fortalecen sus raíces y brillan con su arte. ¡Tradición y música que transforman vidas!',
         img: {
           src: logoElectronMusica.src,
-          alt: 'Regreso al Agua',
+          alt: 'regreso del Agua',
         },
         className: 'flex justify-center items-center row-start-3',
         icon: 'M',
@@ -880,7 +885,7 @@ const es = {
           'La Fundación Quirico Prosperi impulsa el talento deportivo en El Rincón a través de sus programas de baloncesto y fútbol, brindando a niños y jóvenes la oportunidad de entrenar, competir y crecer en un ambiente de disciplina y trabajo en equipo. ¡El deporte está transformando vidas y construyendo un futuro mejor para la comunidad!',
         img: {
           src: logoElectronDeporte.src,
-          alt: 'Regreso al Agua',
+          alt: 'regreso del Agua',
         },
         className: 'flex justify-center items-center row-start-3 xl:mb-20 lg:mb-10 md:mb-10 mb-5',
         icon: 'D',
@@ -888,7 +893,7 @@ const es = {
       },
     ],
 
-    vainilla_bar : {
+    vainilla_bar: {
       bar: {
         title: 'Mandarina Miel & Vainilla Bar',
         description: [
@@ -982,7 +987,7 @@ const es = {
     filter_flavor: 'Mundo de sabores',
     link: 'Ver mas',
     title: 'Más de un siglo cultivando y exportando el mejor cacao fino de aroma del mundo.',
- 
+
     world_of_flavors: {
       types_options: [
         {
@@ -1269,28 +1274,29 @@ const en = {
     ],
     items: [
       {
-        title: 'Return to Water',
+        title: 'Quirico Prosperi Foundation',
+        content:
+          "The Quirico Prosperi Foundation is a non-profit organization dedicated to promoting Venezuela's historical, cultural, and agricultural values, with special focus on the Paria region. Through its programs, the foundation drives sustainable development, education, and preservation of traditions like cocoa and coffee cultivation. FQP works to improve community quality of life, promote responsible agriculture, and ensure regional well-being. Discover more about their impactful work on their official website!",
+        img: {
+          src: logoFundacionProsperi.src,
+          alt: 'Return to Water',
+        },
+        className: 'flex justify-center items-center col-start-2 my-8',
+        classNameImg: 'w-100',
+        icon: '/icons/fqp.png',
+        images: carouselFundacionProsperi,
+      },
+      {
+        title: 'Return of the Water',
         content:
           'The Quirico Prosperi Foundation leads "Return to Water", an innovative project combining technology, research, and community action to revive river flows. Through eco-friendly crops and sustainable practices, we work together to bring water back, restoring life and hope to our land. A greener, more prosperous future awaits us! Yes, we can!',
         img: {
           src: logoRegresoAlAgua.src,
-          alt: 'Return to Water',
+          alt: 'Return of the Water',
         },
         className: 'flex justify-center items-center xl:mt-20 lg:mt-10 md:mt-10 mt-5',
         icon: '/icons/agua.png',
         images: carouselRegresoAlAgua,
-      },
-      {
-        title: 'Wilfried Merle Nursery',
-        content:
-          'The Wilfried Merle Nursery produces cocoa, fruit, and forestry plants to support reforestation and revitalize the local economy. Programs such as “Return to Agriculture” and “Return of Water” are made possible thanks to the nursery, which also promotes sustainability and environmental education. Additionally, it safeguards and preserves the identity of native species, such as Pariano cocoa.',
-        img: {
-          src: logoWilfriedMerle.src,
-          alt: 'Return to Water',
-        },
-        className: 'flex justify-center items-center',
-        icon: '/icons/wilfried.png',
-        images: carouselWilfriedMerle,
       },
       {
         title: 'Return to Agriculture',
@@ -1305,17 +1311,16 @@ const en = {
         images: carouselRegresoAlAgro,
       },
       {
-        title: 'Quirico Prosperi Foundation',
+        title: 'Wilfried Merle Nursery',
         content:
-          "The Quirico Prosperi Foundation is a non-profit organization dedicated to promoting Venezuela's historical, cultural, and agricultural values, with special focus on the Paria region. Through its programs, the foundation drives sustainable development, education, and preservation of traditions like cocoa and coffee cultivation. FQP works to improve community quality of life, promote responsible agriculture, and ensure regional well-being. Discover more about their impactful work on their official website!",
+          'The Wilfried Merle Nursery produces cocoa, fruit, and forestry plants to support reforestation and revitalize the local economy. Programs such as “Return to Agriculture” and “Return of Water” are made possible thanks to the nursery, which also promotes sustainability and environmental education. Additionally, it safeguards and preserves the identity of native species, such as Pariano cocoa.',
         img: {
-          src: logoFundacionProsperi.src,
-          alt: 'Return to Water',
+          src: logoWilfriedMerle.src,
+          alt: 'Return of the Water',
         },
-        className: 'flex justify-center items-center col-start-2 my-8',
-        classNameImg: 'w-100',
-        icon: '/icons/fqp.png',
-        images: carouselFundacionProsperi,
+        className: 'flex justify-center items-center',
+        icon: '/icons/wilfried.png',
+        images: carouselWilfriedMerle,
       },
       {
         title: 'Religious Initiatives',
@@ -1354,8 +1359,8 @@ const en = {
         images: carouselDeporte,
       },
     ],
-    
-    vainilla_bar : {
+
+    vainilla_bar: {
       bar: {
         title: 'Mandarina Honey & Vanilla Bar',
         description: [
