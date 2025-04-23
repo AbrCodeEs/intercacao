@@ -3,7 +3,7 @@ import type { BeeBar, Post, BeeBarTypes, BeeBarCategories } from '@/types/action
 
 if (!import.meta.env.PUBLIC_STRAPI_URL || !import.meta.env.PUBLIC_STRAPI_TOKEN) {
   throw new Error(
-    'NEXT_PUBLIC_STRAPI_URL y NEXT_PUBLIC_STRAPI_TOKEN deben estar definidos en el entorno',
+    'PUBLIC_STRAPI_URL y PUBLIC_STRAPI_TOKEN deben estar definidos en el entorno',
   );
 }
 
