@@ -4,7 +4,6 @@ import '@vidstack/react/player/styles/default/theme.css';
 import '@vidstack/react/player/styles/default/layouts/video.css';
 
 import { useEffect, useState } from 'react';
-import { ScrollArea } from '@radix-ui/react-scroll-area';
 
 import { MediaPlayer, MediaProvider, Poster } from '@vidstack/react';
 import { defaultLayoutIcons, DefaultVideoLayout } from '@vidstack/react/player/layouts/default';
@@ -28,15 +27,133 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
+  CarouselNavigation,
+  CarouselIndicator,
+} from '@/components/ui/carousel/carousel';
+import { Badge } from '@/components/ui/badge';
+
+const NewItems = ({ posts }: { posts: Post[] }) => {
+  const api_url = import.meta.env.PUBLIC_STRAPI_URL;
+
+  return (
+    <AnimatePresence mode="popLayout">
+      {posts.map((post) => (
+        <MorphingDialog
+          key={post.documentId}
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            damping: 24,
+          }}
+        >
+          <MorphingDialogTrigger
+            style={{
+              borderRadius: '4px',
+            }}
+          >
+            <div className="group flex flex-col text-start">
+              <div className="flex overflow-clip border border-white md:rounded-lg md:border-none xl:mb-5 xl:rounded-lg xl:border-none">
+                <div className="h-full w-full transition duration-300 group-hover:scale-105">
+                  <MorphingDialogImage
+                    src={`${api_url}${post.banner.url}`}
+                    alt={post.banner.documentId}
+                    className="aspect-[4/5] h-full w-full object-cover object-center md:aspect-[3/2] lg:aspect-[3/2] xl:aspect-[3/2]"
+                  />
+                </div>
+              </div>
+              <h1 className="text-md mb-2 line-clamp-3 hidden pt-2 text-start font-medium break-words md:mb-3 md:block md:pt-4 md:text-2xl lg:pt-4 lg:text-3xl xl:block">
+                {post.title}
+              </h1>
+              <div className="text-muted-foreground mb-4 hidden text-start text-xs md:mb-5 md:block md:text-base xl:block dark:text-gray-400">
+                <p className="line-clamp-2 leading-6">{post.description}</p>
+              </div>
+            </div>
+          </MorphingDialogTrigger>
+
+          <MorphingDialogContainer>
+            <MorphingDialogContent
+              style={{
+                borderRadius: '12px',
+                zIndex: 70,
+              }}
+              className="relative h-auto w-full xl:w-4/5"
+            >
+              <div
+                className="flex h-screen min-h-screen w-full flex-col items-stretch justify-between bg-white md:min-h-[90vh] md:flex-row lg:min-h-[90vh] lg:flex-row xl:min-h-[90vh] xl:flex-row"
+                style={{ overflowY: 'scroll' }}
+              >
+                <div className="w-full grow">
+                  <Carousel className="md:h-full lg:h-[90vh] xl:h-[90vh]">
+                    <CarouselContent>
+                      {post.media.map((media, i) => (
+                        <CarouselItem key={i} className="h-full">
+                          <div className="flex h-full w-full items-start justify-start">
+                            {media.ext === '.mp4' ? (
+                              <div className="relative flex aspect-[4/5] h-full w-full items-center justify-center overflow-hidden">
+                                <MediaPlayer
+                                  src={`${api_url}${media.url}`}
+                                  viewType="video"
+                                  streamType="on-demand"
+                                  logLevel="warn"
+                                  crossOrigin
+                                  playsInline
+                                  title="Sprite Fight"
+                                  className="object-fit h-full w-full object-center"
+                                >
+                                  <MediaProvider className="!aspect-[4/5] h-full w-full">
+                                    <Poster className="vds-poster" />
+                                  </MediaProvider>
+                                  <DefaultVideoLayout
+                                    icons={defaultLayoutIcons}
+                                    className="bottom-0 w-full bg-gradient-to-t from-black/60 to-transparent pt-6"
+                                  />
+                                </MediaPlayer>
+                              </div>
+                            ) : (
+                              <img
+                                src={`${api_url}${media.url}`}
+                                alt={media.name as string}
+                                width={1000}
+                                height={1000}
+                                className="object-cover object-center"
+                              />
+                            )}
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    {post.media.length > 1 && (
+                      <CarouselNavigation
+                        className="absolute top-1/2 md:top-1/2 xl:top-1/2"
+                        alwaysShow
+                      />
+                    )}
+                    <CarouselIndicator className="-bottom-6.5 px-15 xl:bottom-0" />
+                  </Carousel>
+                </div>
+                <div className="relative w-full grow bg-white p-10">
+                  <h2 className="mb-4 text-start text-3xl font-bold">{post.title}</h2>
+                  <div>
+                    <div className="line-clamp-3 pb-2 break-words">
+                      <Badge>{post.category?.name}</Badge>
+                    </div>
+                    <p className="text-muted-foreground text-start">{post.description}</p>
+                  </div>
+                  <MorphingDialogClose className="rounded-full bg-black p-2 text-white xl:top-5" />
+                </div>
+              </div>
+            </MorphingDialogContent>
+          </MorphingDialogContainer>
+        </MorphingDialog>
+      ))}
+    </AnimatePresence>
+  );
+};
 
 export const NewsSection = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const api_url = import.meta.env.PUBLIC_STRAPI_URL;
 
   // server actions
   useEffect(() => {
@@ -73,7 +190,17 @@ export const NewsSection = () => {
   };
 
   return (
-    <div id="news">
+    <div id="news" className="py-16">
+      <div className="pb-8">
+        <h1 className="mb-4 w-full p-0 text-3xl font-medium md:mb-5 md:px-5 md:text-4xl lg:mb-6 lg:text-5xl xl:px-5">
+          Últimas Noticias
+        </h1>
+
+        <p className="p-0 md:px-5 xl:px-5">
+          Las últimas noticias y actualizaciones sobre las actividades de la Fundación Quirico
+          Prosperi y sus programas Electrones.
+        </p>
+      </div>
       <div className="relative grid grid-cols-3 p-0 text-start md:gap-4 md:px-5 xl:gap-4 xl:px-5">
         {loading ? (
           <>
@@ -130,116 +257,9 @@ export const NewsSection = () => {
           </>
         ) : (
           <>
-            <AnimatePresence mode="popLayout">
-              {posts.map((post) => (
-                <MorphingDialog
-                  key={post.documentId}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 200,
-                    damping: 24,
-                  }}
-                >
-                  <MorphingDialogTrigger
-                    style={{
-                      borderRadius: '4px',
-                    }}
-                  >
-                    <div className="group flex flex-col text-start">
-                      <div className="flex overflow-clip border border-white md:rounded-lg md:border-none xl:mb-5 xl:rounded-lg xl:border-none">
-                        <div className="h-full w-full transition duration-300 group-hover:scale-105">
-                          <MorphingDialogImage
-                            src={`${api_url}${post.banner.url}`}
-                            alt={post.banner.documentId}
-                            className="aspect-[4/5] h-full w-full object-cover object-center md:aspect-[3/2] lg:aspect-[3/2] xl:aspect-[3/2]"
-                          />
-                        </div>
-                      </div>
-                      <div className="text-md mb-2 line-clamp-3 hidden pt-2 text-start font-medium break-words md:mb-3 md:block md:pt-4 md:text-2xl lg:pt-4 lg:text-3xl xl:block">
-                        {post.title}
-                      </div>
-                      <div className="text-muted-foreground mb-4 line-clamp-2 hidden text-start text-xs md:mb-5 md:block md:text-base xl:block">
-                        {post.description}
-                      </div>
-                    </div>
-                  </MorphingDialogTrigger>
+            <NewItems posts={posts} />
 
-                  <MorphingDialogContainer>
-                    <MorphingDialogContent
-                      style={{
-                        borderRadius: '12px',
-                        zIndex: 70,
-                      }}
-                      className="relative h-auto w-full xl:w-4/5"
-                    >
-                      <ScrollArea className="block h-[100vh] justify-center md:flex md:h-[90vh] md:items-center lg:flex lg:items-center xl:flex xl:h-[90vh] xl:items-center">
-                        <div className="size-screen relative flex flex-col items-center justify-center overflow-hidden rounded-lg xl:flex-row xl:items-stretch">
-                          <div className="relative flex w-full items-end justify-center bg-white md:w-3/4 md:items-center lg:items-center xl:w-1/2 xl:items-center">
-                            <Carousel className="w-full">
-                              <CarouselContent>
-                                {post.media.map((media, i) => (
-                                  <CarouselItem key={i} className="aspect-[4/5]">
-                                    <div className="flex !aspect-[4/5] items-center justify-center">
-                                      {media.ext === '.mp4' ? (
-                                        <MediaPlayer
-                                          src={`${api_url}${media.url}`}
-                                          viewType="video"
-                                          streamType="on-demand"
-                                          logLevel="warn"
-                                          crossOrigin
-                                          playsInline
-                                          title="Sprite Fight"
-                                          className="!aspect-[4/5]"
-                                        >
-                                          <MediaProvider className="!aspect-[4/5]">
-                                            <Poster className="vds-poster" />
-                                          </MediaProvider>
-                                          <DefaultVideoLayout
-                                            icons={defaultLayoutIcons}
-                                            className="!aspect-[4/5]"
-                                          />
-                                        </MediaPlayer>
-                                      ) : (
-                                        <img
-                                          src={`${api_url}${media.url}`}
-                                          alt={media.name as string}
-                                          width={1000}
-                                          height={1000}
-                                          className="object-cover object-center"
-                                        />
-                                      )}
-                                    </div>
-                                  </CarouselItem>
-                                ))}
-                              </CarouselContent>
-                              <CarouselPrevious className="-left-10 disabled:!opacity-1 md:left-7 lg:left-7 xl:left-7" />
-                              <CarouselNext className="-right-10 disabled:!opacity-1 md:right-7 lg:right-7 xl:right-7" />
-                            </Carousel>
-                          </div>
-                          <div className="relative flex min-h-[50vh] w-full items-start justify-start bg-white md:w-3/4 md:items-center md:py-10 lg:items-center xl:w-1/2 xl:items-stretch xl:py-10">
-                            <div className="p-12 md:p-10 xl:px-8">
-                              <h2 className="mb-4 text-start text-3xl font-bold">{post.title}</h2>
-                              <div
-                                className={`${
-                                  post.description.length > 100 ? 'overflow-y-scroll' : ''
-                                } h-full max-h-[80vh] w-full max-w-full min-w-[77vh] py-10`}
-                              >
-                                <p className="text-muted-foreground text-start">
-                                  {post.description}
-                                </p>
-                              </div>
-                            </div>
-                            <MorphingDialogClose className="text-zinc-500 xl:top-20" />
-                          </div>
-                        </div>
-                      </ScrollArea>
-                    </MorphingDialogContent>
-                  </MorphingDialogContainer>
-                </MorphingDialog>
-              ))}
-            </AnimatePresence>
-
-            <a href="/posts" className="group flex flex-col">
+            <a href="https://fqp.intercacao.com/posts" className="group flex flex-col">
               <div className="flex overflow-clip border border-gray-300 md:rounded-lg xl:mb-5 xl:rounded-lg">
                 <div className="flex aspect-[4/5] h-full w-full items-center justify-center transition duration-300 group-hover:scale-105 hover:bg-gray-100 md:aspect-[3/2] lg:aspect-[3/2] xl:aspect-[3/2]">
                   <span className="text-zinc-500 group-hover:underline">Ver mas</span>

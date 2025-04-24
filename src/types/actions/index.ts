@@ -65,6 +65,7 @@ interface Post {
   publishedAt: string;
   media: Media[];
   banner: Banner;
+  category: Categories;
 }
 
 interface Categories {
