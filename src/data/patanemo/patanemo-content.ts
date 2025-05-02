@@ -530,6 +530,9 @@ const en = {
                 value: '4 to 5 days',
               },
               {
+                key: 'Cocoa Type',
+              },
+              {
                 items: [
                   'Box type: Wooden',
                   'Turning frequency: every 48 hours',
