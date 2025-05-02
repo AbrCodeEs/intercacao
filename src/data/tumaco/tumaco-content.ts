@@ -336,11 +336,370 @@ const es = {
       },
     ],
   },
+  socialResponsibility: {
+    title: 'Responsabilidad Social',
+    images: [
+      {
+        alt: 'imagen1',
+      },
+      {
+        alt: 'imagen2',
+      },
+    ],
+    paragraphs:
+      'El objetivo primordial es colaborar, enriquecer y ser promotor de las buenas prácticas agrícolas en la generación de relevo de la comunidad, gracias al aporte y unión con la FUNDACION PROSPERI, fundación sin fines de lucro, que mantiene el compromiso de difundir los valores históricos, culturales y agrícolas de Venezuela, a través de sus programas educativos como “Regreso al agro”, se logra demostrar que el cultivo de cacao es una profesión rentable, que genera un cambio social.',
+  },
+};
+
+const en = {
+  generalInformation: {
+    title: 'Evaluation',
+    image: {
+      alt: 'gourmet tumaco fino cocoa cover',
+    },
+    rating: {
+      stars: 'rating stars 3.8',
+    },
+    sections: [
+      {
+        items: [
+          { label: 'SWEET FRUITY', value: '3.5' },
+          { label: 'CITRUS FRUITY', value: '3.0' },
+          { label: 'FLORAL', value: '1.5' },
+          { label: 'CREOLE', value: '2.2' },
+          { label: 'COCOA', value: '4.0' },
+          { label: 'WOODSY', value: '1.5' },
+          { label: 'SPICES', value: '0.0' },
+        ],
+      },
+      {
+        items: [
+          { label: 'ANNUAL PRODUCTION (TM)', value: '75' },
+          { label: 'MAIN HARVEST', value: 'DEC-MAR' },
+          { label: 'MID HARVEST', value: 'JUN-JUL' },
+        ],
+      },
+      {
+        items: [{ label: 'CREOLE BEANS', value: '12%' }],
+      },
+      {
+        items: [
+          { label: 'FERMENTED BEANS', value: '78%' },
+          { label: 'VIOLET BEANS', value: '10%' },
+          { label: 'SLATE BEANS', value: '12%' },
+          { label: 'TOTAL', value: '100%' },
+        ],
+      },
+      {
+        items: [
+          { label: 'Beans / 100g:', value: '79' },
+          { label: 'g./1 Bean:', value: '1.27 g' },
+        ],
+      },
+      {
+        items: [
+          { label: 'CERTIFIED', value: 'NO' },
+          { label: 'AWARDS', value: 'NO' },
+        ],
+      },
+    ],
+  },
+  characteristics: {
+    title: 'Physical and Organoleptic Characteristics',
+    flavors: [
+      {
+        name: 'Sweet Fruity',
+        description: '',
+      },
+      {
+        name: 'Citrus Fruity',
+        description: 'Orange',
+      },
+      {
+        name: 'Floral',
+        description: '',
+      },
+      {
+        name: 'Creole',
+        description: 'Nuts',
+      },
+      {
+        name: 'Cocoa',
+        description: 'Cocoa',
+      },
+      {
+        name: 'Woodsy',
+        description: 'Wood',
+      },
+      {
+        name: 'Spices',
+        description: '',
+      },
+    ],
+    assessment: {
+      title: 'Assessment',
+      classification: 'Tumaco Fino Classification',
+      equipment: 'Tasting Panel',
+    },
+    information: [
+      {
+        title: 'Flavor:',
+        description: {
+          boldText: 'MEDIUM',
+          additionalText: 'Notes of nuts and fruity flavors',
+        },
+      },
+      {
+        title: 'Aroma:',
+        description: {
+          boldText: 'MEDIUM',
+          additionalText: 'Essences of citrus flowers',
+        },
+      },
+      {
+        title: 'Fermentation:',
+        description: {
+          boldText: 'HIGH',
+          additionalText: 'Low astringency and bitterness',
+        },
+      },
+    ],
+    analysis: {
+      title: 'Cut Test Analysis',
+      alt: 'Tumaco Fino Cocoa',
+      description: [
+        {
+          text: 'Due to moderate creole genetics with 12% white beans and high trinitario descent, cut test results show: (±78%) fermented beans, (±10%) violet beans, and (±12%) slate beans.',
+        },
+        {
+          text: 'Regarding weight, it contains 79 almonds per 100g weight, meaning each almond weighs 1.27g.',
+        },
+      ],
+    },
+  },
+  cocoaMap: [
+    {
+      title: 'Flavor Map',
+      content: [
+        {
+          type: 'paragraph',
+          text: 'Responds to the humidity conditions of Tumaco, where moderate brackish waters from the local gulf shape this cocoa profile.',
+        },
+        {
+          type: 'paragraph',
+          text: 'Permanent atmospheric demand conditions are met, with no known water stress periods, maintaining moderate acidity of sweet fruits.',
+        },
+        {
+          type: 'paragraph',
+          text: 'Features a humid tropical climate with varied relief from coastal foothill mountains to Pacific plains containing geographical features like bays, islands, mangroves, rivers, and lagoons.',
+        },
+      ],
+      image: { alt: 'Cocoa Flavor Wheel' },
+    },
+    {
+      title: 'Sensory Map',
+      content: [
+        {
+          type: 'paragraph',
+          text: 'Predominates a solid cocoa base with proportional notes of acidic ripe fruits and nuts. Wood flavors reveal detectable floral and forest fragrances.',
+        },
+      ],
+      image: {
+        alt: 'Flavor Sensory Map',
+      },
+    },
+  ],
+  postHarvestBenefit: {
+    title: 'Post-Harvest Processing',
+    content: [
+      {
+        protocols: [
+          {
+            title: 'Fermentation Protocol',
+            items: [
+              {
+                key: 'Cocoa Type',
+              },
+              {
+                alt: 'tumaco seed',
+                text: 'Trinitario &',
+              },
+              {
+                alt: 'tumaco seed',
+                text: 'Criollo',
+              },
+              {
+                key: 'Fermentation Days',
+                value: '5 to 6 days',
+              },
+              {
+                items: [
+                  'Box type: Wooden',
+                  'Turning frequency: every 24 hours',
+                  'Fermentation method: Wooden boxes covered with plantain leaves.',
+                ],
+              },
+              {
+                text: 'Fresh cocoa pods are collected from farms during the day, transported to processing centers in plastic buckets, and placed in wooden boxes by late afternoon. Masses are covered with plantain leaves to activate acetic acid decomposition through natural yeasts.',
+              },
+              {
+                text: 'Central fermentation process lasts 5-6 days with daily turnings.',
+              },
+            ],
+            image: {
+              alt: 'fermentation protocol',
+            },
+          },
+          {
+            title: 'Drying Protocol',
+            items: [
+              {
+                key: 'Cocoa Type',
+              },
+              {
+                alt: 'trinitario seed',
+                text: 'Trinitario &',
+              },
+              {
+                alt: 'trinitario seed',
+                text: 'Criollo',
+              },
+              {
+                key: 'Drying Days',
+                value: '5 to 8 days',
+              },
+              {
+                key: 'Drying Techniques',
+              },
+              {
+                items: [
+                  'Floor type: concrete',
+                  'Humidity: 7.5% to 8%',
+                  'Drying method: Sun-dried on beds under marquees',
+                ],
+              },
+              {
+                text: 'Drying begins at 6 AM by spreading beans 3-4 cm thick on marquee beds. Drying time (5-8 days) depends on climate until reaching 7.5-8% humidity. Beans are stirred hourly during initial days to separate them.',
+              },
+              {
+                text: 'Marquee curtains remain open for airflow during daytime and closed at night to protect from humidity.',
+              },
+            ],
+            image: {
+              alt: 'drying protocol',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  traceability: {
+    title: 'Traceability',
+    subtitle: 'certifications and awards',
+    content: [
+      {
+        text: 'We established logistics to support farmers by reducing fermentation/drying/transport costs while guaranteeing product value at harvest. We collect fresh cocoa from high-yield farms on harvest day, then apply our "flor de baba" protocol to ensure premium quality.',
+      },
+      {
+        text: 'Approximately 12 farmers participate in special cocoa production.',
+      },
+      {
+        text: "Tumaco (Nariño) is primarily inhabited by Afro-Colombians and indigenous people (population 203,971: 60% urban, 40% rural). Residents face challenges from Colombia's historical public order issues and poor governance, resulting in low-middle class living standards.",
+      },
+      {
+        text: 'Economy based on agriculture (agroindustry), fishing, forestry, and tourism. Main products: African palm, cocoa, coconut. Contains significant hotel infrastructure.',
+      },
+      {
+        text: '19,400 hectares of cocoa plantations produce ~2,800 TM annually.',
+      },
+      {
+        text: '50% plantations use old regional hybrids (pajarito, hartón). Crop renewal programs replaced illicit crops with clonal materials: ICS 1, ICS 60, ICS 95, TSH 565, IMC 67, MON 1, and CCN 51.',
+      },
+    ],
+    images: [
+      {
+        alt: 'Certificate of Origin',
+      },
+      {
+        alt: 'Farmers',
+      },
+      {
+        alt: 'Mosaic',
+      },
+    ],
+  },
+  location: {
+    title: 'Geographical Location and Ecology',
+    subtitle: 'Geographical Location',
+    locationInfo: {
+      map: {
+        alt: 'Tumaco map',
+      },
+      details: [
+        { label: 'Country', value: 'Colombia' },
+        { label: 'State', value: 'Nariño' },
+        { label: 'Municipality', value: 'Tumaco' },
+        { label: 'Area', value: '19,400 km2' },
+        { label: 'Average Altitude', value: '2m' },
+        { label: 'GPS Coordinates', value: '1°48′24″N 78°45′53″W' },
+        { label: 'Population', value: '203,971' },
+      ],
+    },
+    paragraphs: [
+      'Tumaco, known as the Pearl of the Pacific, is located in southwestern Colombia on the Pacific coast of Nariño near Ecuador.',
+    ],
+    ecology: {
+      title: 'Ecology',
+      paragraphs: [
+        'Features humid tropical climate with varied relief from Andean foothills to Pacific plains containing geographical landmarks like Tumaco Bay, Ancón de Sardinas, Cabo Manglares, and El Morro Island. Hydrological network includes Mira and Patía rivers.',
+        "Temperatures range 23-29°C (average 26°C). As one of Earth's rainiest regions, annual precipitation reaches 2,800mm with relative humidity up to 98%.",
+      ],
+      images: [
+        {
+          alt: 'Tumaco location',
+        },
+        {
+          alt: 'Tumaco location',
+        },
+      ],
+    },
+  },
+  history: {
+    title: 'History',
+    images: [
+      {
+        alt: 'Tumaco Fino history',
+      },
+      {
+        alt: 'Tumaco Fino history',
+      },
+    ],
+    content: [
+      {
+        text: 'This Pacific pearl was discovered by Spanish conquistadors, originally home to the Tumaco-La Tolita culture whose indelible legacy remains part of municipal wealth.',
+      },
+      {
+        text: "Multiple accounts exist about Tumaco's founding. One suggests Spanish establishment over indigenous settlements in 1610 by missionary Onofre Esteban. Anthropologist Father José María Garrido officialized November 30, 1640 as foundation date.",
+      },
+      {
+        text: 'Pope John Paul II visited Tumaco in 1986.',
+      },
+      {
+        text: 'Recent years see social/political efforts to improve living standards and reduce regional violence affecting development.',
+      },
+    ],
+  },
+  socialResponsibility: {
+    title: 'Social Responsibility',
+    images: [{ alt: 'Community project' }, { alt: 'Education program' }],
+    paragraphs:
+      'Primary objective: Promote sustainable agricultural practices through partnership with PROSPERI FOUNDATION. Their "Return to Agriculture" program demonstrates cocoa farming\'s profitability and social impact, preserving Venezuela\'s agricultural heritage.',
+  },
 };
 
 const tumaco = {
   es,
-  // en,
+  en,
 };
 
 export { tumaco };

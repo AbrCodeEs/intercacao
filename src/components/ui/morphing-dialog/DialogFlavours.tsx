@@ -27,12 +27,12 @@ export function DialogFlavours({ trans }: { trans: Record<string, any> }) {
         style={{
           borderRadius: '12px',
         }}
-        className="flex flex-col overflow-hidden border border-zinc-950/10 bg-white"
+        className="flex flex-col overflow-hidden border border-zinc-950/10 bg-primary"
       >
-        <div className="flex grow flex-row items-end justify-between px-5 py-4">
+        <div className="flex grow flex-row items-end justify-between p-3">
           <div>
-            <MorphingDialogTitle className="text-zinc-950">
-              <PlusIcon size={12} />
+            <MorphingDialogTitle className="text-white">
+              <PlusIcon size={15} />
             </MorphingDialogTitle>
           </div>
         </div>
@@ -55,9 +55,9 @@ export function DialogFlavours({ trans }: { trans: Record<string, any> }) {
             <MorphingDialogTitle className="text-3xl font-bold text-zinc-950">
               {trans.title}
             </MorphingDialogTitle>
-            <MorphingDialogSubtitle className="text-2xl text-zinc-600">
+            <h2 className="text-2xl text-zinc-600">
               {trans.description}
-            </MorphingDialogSubtitle>
+            </h2>
             <MorphingDialogDescription
               disableLayoutAnimation
               variants={{

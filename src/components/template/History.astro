@@ -17,15 +17,15 @@ const { history } = Astro.props;
       history.images && (
         <div class="flex w-full flex-none flex-col gap-5 md:w-1/2 md:flex-row lg:w-90 lg:flex-col xl:w-90 xl:flex-col">
           {history.images.map((image) => (
-          <div class="group animate-trigger-right relative size-full flex-none overflow-hidden rounded-lg md:size-full lg:size-90 xl:size-90">
-            <Image
-              inferSize={true}
-              loading="eager"
-              src={image.src}
-              alt={image.alt}
-              class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
-            />
-          </div>
+            <div class="group animate-trigger-right relative size-full flex-none overflow-hidden rounded-lg md:size-full lg:size-90 xl:size-90">
+              <Image
+                inferSize={true}
+                loading="eager"
+                src={image.src}
+                alt={image.alt}
+                class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+              />
+            </div>
           ))}
         </div>
       )

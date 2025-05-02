@@ -132,14 +132,13 @@ const posts = [
       />
     </div>
 
-    <div class="bg-primary h-5 w-full"></div>
+    <!-- <div class="bg-primary h-5 w-full"></div> -->
 
     <div
       id="section-flavours"
-      class="size-auen/world-of-flavors/to relative flex items-center justify-center md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
+      class="size-auen/world-of-flavors/to relative flex flex-col gap-10 items-center justify-center md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
       style={`background-image: url(${lienzo.src});`}
     >
-      <!-- <a href={`https://www.intercacao.com/${lang}/world-of-flavors/`}> -->
       <Image
         loading="lazy"
         inferSize={true}
@@ -147,10 +146,9 @@ const posts = [
         alt="Intercacao banner principal"
         class="object-fill object-center shadow-2xl"
       />
-      <div class="absolute inset-0 flex items-center justify-center">
+      <div class="flex items-center justify-center">
         <DialogFlavours client:only="react" trans={trans('home').info_mundo_de_sabores} />
       </div>
-      <!-- </a> -->
     </div>
 
     <div id="section-gourmet" class="bg-primary h-auto w-full">

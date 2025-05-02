@@ -87,6 +87,7 @@ interface CocoaBar {
   ingredients: {
     [key: string]: number;
   };
+  watermark?: boolean;
 }
 
 export type {
