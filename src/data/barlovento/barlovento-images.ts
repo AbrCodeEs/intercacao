@@ -18,14 +18,14 @@ import TraceabilityOne from '@/images/barlovento/negro.webp';
 import TraceabilityTwo from '@/images/barlovento/negroTwo.webp';
 import TraceabilityThree from '@/images/barlovento/negros.webp';
 
-import map from '@/images/porcelana/mapa.webp';
-import locationOne from '@/images/porcelana/paisaje1.webp';
-import locationTwo from '@/images/porcelana/paisaje2.webp';
-import locationThree from '@/images/porcelana/paisaje3.webp';
+import map from '@/images/surdellago/placeholder.webp';
+import locationOne from '@/images/surdellago/placeholder.webp';
+import locationTwo from '@/images/surdellago/placeholder.webp';
+import locationThree from '@/images/surdellago/placeholder.webp';
 
-import historiaOne from '@/images/porcelana/historia1.webp';
-import historiaTwo from '@/images/porcelana/historia2.webp';
-import historiaThree from '@/images/porcelana/historia3.webp';
+import historiaOne from '@/images/surdellago/placeholder.webp';
+import historiaTwo from '@/images/surdellago/placeholder.webp';
+import historiaThree from '@/images/surdellago/placeholder.webp';
 
 const images = {
   es: {
