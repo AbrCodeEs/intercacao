@@ -3,25 +3,22 @@ import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/porcelana/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
 import EquipoCata from '@/images/porcelana/equipodecata.webp';
-import CuencaCacao from '@/images/porcelana/cacao2.webp';
-import RuedaSabores from '@/images/porcelana/ruedadesabores.webp';
-import MapaSensorial from '@/images/porcelana/mapasensorial.webp';
-import TipoDeCacaoOne from '@/images/porcelana/tipodecacao.webp';
-import TipoDeCacaoTwo from '@/images/porcelana/tipodecacao2.webp';
+import CuencaCacao from '@/images/surdellago/placeholder.webp';
+import RuedaSabores from '@/images/barlovento/ruedaDeSabores.webp';
+import MapaSensorial from '@/images/barlovento/ruedaDeSaboresTwo.webp';
+import TipoDeCacaoOne from '@/images/surdellago/placeholder.webp';
+import TipoDeCacaoTwo from '@/images/surdellago/placeholder.webp';
 
-import ProtocoloFermentacionOne from '@/images/surdellago/placeholder.webp';
-import ProtocoloFermentacionTwo from '@/images/surdellago/placeholder.webp';
-import ProtocoloFermentacionThree from '@/images/surdellago/placeholder.webp';
+import ProtocoloFermentacionOne from '@/images/barinas/agricolas.webp';
+import ProtocoloFermentacionTwo from '@/images/barinas/agricolasTwo.webp';
 
-import CosechaOne from '@/images/surdellago/cacao.jpeg';
-// import CosechaTwo from '@/images/porcelana/cosecha2.webp';
+import CosechaOne from '@/images/barinas/agricolasThre.webp';
+import CosechaTwo from '@/images/barinas/cacao.webp';
+import CosechaThre from '@/images/barinas/cacaoTwo.webp';
 
-import CertificadoOrigenOne from '@/images/surdellago/placeholder.webp';
-import CertificadoOrigenTwo from '@/images/surdellago/placeholder.webp';
-import CertificadoOrigenTree from '@/images/surdellago/placeholder.webp';
-
-import TraceabilityOne from '@/images/surdellago/placeholder.webp';
-import TraceabilityTwo from '@/images/surdellago/placeholder.webp';
+import TraceabilityOne from '@/images/barinas/agricultores.webp';
+import TraceabilityTwo from '@/images/barinas/agricultoresTwo.webp';
+import TraceabilityThree from '@/images/barinas/agricultoresThre.webp';
 
 import map from '@/images/surdellago/placeholder.webp';
 import locationOne from '@/images/surdellago/placeholder.webp';
@@ -51,14 +48,13 @@ const images = {
       fermentacion: [
         ProtocoloFermentacionOne,
         ProtocoloFermentacionTwo,
-        ProtocoloFermentacionThree,
       ],
-      secado: [CosechaOne],
+      secado: [CosechaOne, CosechaTwo, CosechaThre],
     },
     certifications: {
-      certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
-      certificadoOrigen: CertificadoOrigenTree,
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      // certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
+      // certificadoOrigen: CertificadoOrigenTree,
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree],
     },
     location: {
       map: map,
@@ -84,14 +80,13 @@ const images = {
       fermentacion: [
         ProtocoloFermentacionOne,
         ProtocoloFermentacionTwo,
-        ProtocoloFermentacionThree,
       ],
-      secado: [CosechaOne],
+      secado: [CosechaOne, CosechaTwo, CosechaThre],
     },
     certifications: {
-      certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
-      certificadoOrigen: CertificadoOrigenTree,
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      // certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
+      // certificadoOrigen: CertificadoOrigenTree,
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree],
     },
     location: {
       map: map,

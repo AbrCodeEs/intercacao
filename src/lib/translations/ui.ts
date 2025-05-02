@@ -9,6 +9,8 @@ import { tumaco } from '@/data/tumaco/tumaco-content';
 import { canoabo } from '@/data/canoabo/canoabo-content';
 import { surDelLago } from '@/data/surDelLago/surDelLago-content';
 import { barlovento } from '@/data/barlovento/barlovento-content';
+import { cajaseca } from '@/data/cajaSeca/cajaseca-content';
+import { barinas } from '@/data/barinas/barinas-content';
 
 export const languages = {
   eng: 'English',
@@ -29,7 +31,9 @@ export const ui = {
     canoabo: canoabo.es,
     // ultimos productos
     surdellago: surDelLago.es,
-    barlovento: barlovento.es
+    barlovento: barlovento.es,
+    cajaseca: cajaseca.es,
+    barinas: barinas.es
   },
   eng: {
     home: home.en,
@@ -42,6 +46,8 @@ export const ui = {
     canoabo: canoabo.en,
     // ultimos productos
     surdellago: surDelLago.en,
-    barlovento: barlovento.es
+    barlovento: barlovento.en,
+    cajaseca: cajaseca.en,
+    barinas: barinas.en
   },
 } as const;
