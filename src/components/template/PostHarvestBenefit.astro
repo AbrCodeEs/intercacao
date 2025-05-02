@@ -120,8 +120,8 @@ const {
                       allowfullscreen
                       title={protocol.video.title}
                       class="h-full w-full overflow-hidden rounded-lg"
-                      src={protocol.video.src}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      src={`${protocol.video.src}?autoplay=0`}
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     />
                   </div>
                 )}
