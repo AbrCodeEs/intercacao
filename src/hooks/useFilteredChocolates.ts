@@ -14,11 +14,11 @@ export const useFilteredChocolates = (
 
       if (typeof url !== 'string') url = '';
 
-      if (url === '/chuao' || url === '/porcelana') {
-        url = `/${lang}${url}`;
-      } else {
-        url = lang === 'en' ? `${url}/${lang}` : url;
+      if (!url.startsWith('http://')) {
+        url = `/${lang}/${url}`;
       }
+
+      console.log(url)
 
       return { ...cocoa, url };
     })

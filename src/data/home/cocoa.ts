@@ -13,6 +13,7 @@ import piura from '@/images/piura/piura-web.webp';
 import tumaco from '@/images/tumaco/tumaco-web.webp';
 import chulu from '@/images/chulu/chulu-web.webp';
 import trinchera from '@/images/trinchera/trincheras-web.webp';
+import surdellago from '@/images/surdellago/placeholder.webp';
 
 import type { CocoaBar } from '@/types/home';
 
@@ -37,7 +38,7 @@ export const chocolateBars: CocoaBar[] = [
       wood: 0,
       spices: 0,
     },
-    url: '/chuao',
+    url: 'chuao',
   },
   {
     id: '2',
@@ -59,7 +60,7 @@ export const chocolateBars: CocoaBar[] = [
       wood: 0.5,
       spices: 1.2,
     },
-    url: '/porcelana',
+    url: 'porcelana',
   },
   {
     id: '3',
@@ -81,7 +82,8 @@ export const chocolateBars: CocoaBar[] = [
       wood: 0.4,
       spices: 0.1,
     },
-    url: 'http://pintao.intercacao.com',
+    // url: 'http://pintao.intercacao.com',
+    url: 'pintao'
   },
   {
     id: '4',
@@ -103,7 +105,8 @@ export const chocolateBars: CocoaBar[] = [
       wood: 0.1,
       spices: 0.6,
     },
-    url: 'http://tesoro.intercacao.com',
+    // url: 'http://tesoro.intercacao.com',
+    url: 'tesoro'
   },
   {
     id: '5',
@@ -126,6 +129,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 1.7,
     },
     url: 'http://patanemo.intercacao.com',
+    // url : 'patanemo' 
   },
   {
     id: '6',
@@ -137,7 +141,7 @@ export const chocolateBars: CocoaBar[] = [
     awarded: 0,
     creole: 12,
     flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
-    country: 'Venezuela',
+    country: 'Colombia',
     ingredients: {
       fruity_sweet: 3.5,
       fruity_citrus: 3.0,
@@ -148,6 +152,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://tumaco.intercacao.com',
+    // url: '/tumaco'
   },
   {
     id: '7',
@@ -170,6 +175,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://canoabo.intercacao.com',
+    // url: '/canoabo'
   },
   {
     id: '8',
@@ -192,6 +198,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://choroni.intercacao.com',
+    // url: '/choroni'
   },
   {
     id: '9',
@@ -203,7 +210,7 @@ export const chocolateBars: CocoaBar[] = [
     awarded: 1,
     creole: 10,
     flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
-    country: 'Venezuela',
+    country: 'Colombia',
     ingredients: {
       fruity_sweet: 3.5,
       fruity_citrus: 3.0,
@@ -214,6 +221,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://huila.intercacao.com',
+    // url: '/huila'
   },
   {
     id: '10',
@@ -236,6 +244,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://manapiare.intercacao.com',
+    // url: '/manapiare'
   },
   {
     id: '11',
@@ -258,6 +267,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://mantuano.intercacao.com',
+    // url: '/mantuano'
   },
   {
     id: '12',
@@ -280,6 +290,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://ocumare.intercacao.com',
+    // url: '/ocumare'
   },
   {
     id: '13',
@@ -302,7 +313,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://nativoblanco.intercacao.com',
-    disabled: true,
+    // disabled: true,
   },
   {
     id: '14',
@@ -347,6 +358,98 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://paloblanco.intercacao.com',
-    disabled: true,
+    // disabled: true,
+  },
+  {
+    id: '16',
+    name: 'Sur del Lago Clasificado',
+    image: surdellago.src,
+    rating: 4.5,
+    fermented: 98,
+    certified: 1,
+    awarded: 2,
+    creole: 98,
+    flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
+    country: 'Venezuela',
+    ingredients: {
+      fruity_sweet: 3.2,
+      fruity_citrus: 1.8,
+      flower: 0.4,
+      creole: 4.9,
+      cocoa: 2.5,
+      wood: 0.5,
+      spices: 1.2,
+    },
+    url: 'surdellago',
+    watermark: true
+  },
+  {
+    id: '17',
+    name: 'Barlovento Fermentado Superior',
+    image: surdellago.src,
+    rating: 0.1,
+    fermented: 80,
+    certified: 0,
+    awarded: 0,
+    creole: 0,
+    flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole'],
+    country: 'Venezuela',
+    ingredients: {
+      fruity_sweet: 3.2,
+      fruity_citrus: 1.7,
+      flower: 1.0,
+      creole: 3.2,
+      cocoa: 0,
+      wood: 0,
+      spices: 0,
+    },
+    url: 'barlovento',
+    watermark: true
+  },
+  {
+    id: '18',
+    name: 'Tesoro Caja Seca',
+    image: surdellago.src,
+    rating: 2.7,
+    fermented: 88,
+    certified: 0,
+    awarded: 0,
+    creole: 18,
+    flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
+    country: 'Venezuela',
+    ingredients: {
+      fruity_sweet: 2.5,
+      fruity_citrus: 2.9,
+      flower: 0.8,
+      creole: 3.2,
+      cocoa: 3.5,
+      wood: 0.1,
+      spices: 0.6,
+    },
+    url: 'cajaseca',
+    watermark: true
+  },
+  {
+    id: '19',
+    name: 'Barinas',
+    image: surdellago.src,
+    rating: 2.7,
+    fermented: 88,
+    certified: 0,
+    awarded: 0,
+    creole: 18,
+    flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
+    country: 'Venezuela',
+    ingredients: {
+      fruity_sweet: 2.5,
+      fruity_citrus: 2.9,
+      flower: 0.8,
+      creole: 3.2,
+      cocoa: 3.5,
+      wood: 0.1,
+      spices: 0.6,
+    },
+    url: 'barinas',
+    watermark: true
   },
 ];

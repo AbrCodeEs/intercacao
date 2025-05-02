@@ -341,9 +341,344 @@ const es = {
   },
 };
 
+const en = {
+  generalInformation: {
+    title: 'Evaluation',
+    image: {
+      alt: 'gourmet canoabo fino cocoa cover',
+    },
+    rating: {
+      stars: 'rating stars 2.4',
+    },
+    sections: [
+      {
+        items: [
+          { label: 'SWEET FRUITY', value: '1.6' },
+          { label: 'CITRUS FRUITY', value: '2.5' },
+          { label: 'FLORAL', value: '1.3' },
+          { label: 'CREOLE', value: '2.5' },
+          { label: 'COCOA', value: '2.3' },
+          { label: 'WOODSY', value: '0.5' },
+          { label: 'SPICES', value: '0.0' },
+        ],
+      },
+      {
+        items: [
+          { label: 'ANNUAL PRODUCTION (TM)', value: '10' },
+          { label: 'MAIN HARVEST', value: 'DEC-APR' },
+          { label: 'MID HARVEST', value: 'JUN-JUL' },
+        ],
+      },
+      {
+        items: [{ label: 'CREOLE BEANS', value: '6%' }],
+      },
+      {
+        items: [
+          { label: 'FERMENTED BEANS', value: '86%' },
+          { label: 'VIOLET BEANS', value: '6%' },
+          { label: 'SLATE BEANS', value: '8%' },
+          { label: 'TOTAL', value: '100%' },
+        ],
+      },
+      {
+        items: [
+          { label: 'Beans / 100g:', value: '85' },
+          { label: 'g./1 Bean:', value: '1.18 g' },
+        ],
+      },
+      {
+        items: [
+          { label: 'CERTIFIED', value: 'YES' },
+          { label: 'AWARDS', value: 'NO' },
+        ],
+      },
+    ],
+  },
+  characteristics: {
+    title: 'Physical and Organoleptic Characteristics',
+    flavors: [
+      {
+        name: 'Sweet Fruity',
+        description: '',
+      },
+      {
+        name: 'Citrus Fruity',
+        description: '',
+      },
+      {
+        name: 'Floral',
+        description: '',
+      },
+      {
+        name: 'Creole',
+        description: 'Nuts • Pistachio • Brown Sugar Malt • Caramel',
+      },
+      {
+        name: 'Cocoa',
+        description: 'Cocoa',
+      },
+      {
+        name: 'Woodsy',
+        description: 'Herbs • Wood',
+      },
+      {
+        name: 'Spices',
+        description: '',
+      },
+    ],
+    assessment: {
+      title: 'Assessment',
+      classification: 'Canoabo Fino Classification',
+      equipment: 'Tasting Panel',
+    },
+    information: [
+      {
+        title: 'Flavor:',
+        description: {
+          boldText: 'MEDIUM',
+          additionalText: 'Presence of fruity flavors, candies, nuts',
+        },
+      },
+      {
+        title: 'Aroma:',
+        description: {
+          boldText: 'LOW',
+          additionalText: 'Floral and herbal essences',
+        },
+      },
+      {
+        title: 'Fermentation:',
+        description: {
+          boldText: 'MEDIUM',
+          additionalText: 'Moderate astringency and bitterness',
+        },
+      },
+    ],
+    analysis: {
+      title: 'Cut Test Analysis',
+      alt: 'Canoabo Fino Cocoa',
+      description: [
+        {
+          text: 'Due to creole genetics and high trinitario descent, Canoabo\'s miscellaneous beans show (±6%) creole beans in cut tests, (±86%) fermented beans, (±6%) violet beans, and (±8%) slate beans.',
+        },
+        {
+          text: 'Regarding weight, there are 85 almonds per 100g, meaning each almond weighs 1.18g.',
+        },
+      ],
+    },
+  },
+  cocoaMap: [
+    {
+      title: 'Flavor Map',
+      content: [
+        {
+          type: 'paragraph',
+          text: 'Canoabo cocoa is characterized by the sweet attribute of caramelized nuts reminiscent of pistachio. It presents a creamy sensation and attractive unctuousness that invites continued tasting. Its lasting aftertaste makes it unforgettable and special, with a pleasant cocoa base of 2.6 and sweet caramel notes.',
+        },
+        {
+          type: 'quote',
+          quote: '"All characteristic creole flavors intertwine with well-processed trinitarios, creating a unique, desirable, and lasting experience", detailed Eng. Ms. Gladys Ramos.',
+        },
+      ],
+      image: { alt: 'Cocoa Flavor Wheel' },
+    },
+    {
+      title: 'Sensory Map',
+      content: [
+        {
+          type: 'paragraph',
+          text: 'The region\'s coastal proximity in north-central Venezuela intensely shapes Canoabo cocoa\'s sensory profile, featuring unctuous texture of light creole cocoas with excellent combinations of fruity, floral, herbal, sweet, and caramel notes - making it premium material for gourmet chocolates.',
+        },
+        {
+          type: 'quote',
+          quote: '"Its most distinctive attributes are its persistent creamy texture and caramel flavor", indicated Eng. Ms. Gladys Ramos.',
+        },
+      ],
+      image: {
+        alt: 'Flavor Sensory Map',
+      },
+    },
+  ],
+  postHarvestBenefit: {
+    title: 'Post-Harvest Processing',
+    content: [
+      {
+        protocols: [
+          {
+            title: 'Fermentation Protocol',
+            items: [
+              {
+                text: 'For Canoabo bean fermentation (high trinitario genetics with moderate creole descent), follow this process:',
+              },
+              {
+                key: 'Cocoa Type',
+              },
+              {
+                alt: 'canoabo seed',
+                text: 'Trinitario',
+              },
+              {
+                key: 'Fermentation Days',
+                value: '5 to 7 days',
+              },
+              {
+                items: [
+                  'Box type: Wooden',
+                  'Turning frequency: First turn at 24 hours, second at 72 hours, third at 120 hours',
+                  'Fermentation method: Beans placed on nylon material without direct container contact',
+                ],
+              },
+            ],
+            image: {
+              alt: 'fermentation protocol',
+            },
+          },
+          {
+            title: 'Drying Protocol',
+            items: [
+              {
+                text: 'Procedure depends on fermentation days and bean consistency. For drying evolution, stir every half hour.',
+              },
+              {
+                key: 'Cocoa Type',
+              },
+              {
+                alt: 'canoabo seed',
+                text: 'Dry Trinitario',
+              },
+              {
+                key: 'Drying Days',
+                value: '5 to 6 days',
+              },
+              {
+                key: 'Drying Techniques',
+              },
+              {
+                items: [
+                  'Floor type: concrete',
+                  'Humidity: 7.5%',
+                  'Drying method: Sun-dried',
+                ],
+              },
+            ],
+            image: {
+              alt: 'drying protocol',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  traceability: {
+    title: 'Traceability',
+    subtitle: 'certifications and awards',
+    content: [
+      {
+        text: 'Agriculture and tourism sustain Canoabo, an important cocoa plantation center and one of Carabobo\'s best preserved ecological zones.',
+      },
+      {
+        text: 'Canoabo covers 187 km² with 3,900 inhabitants across 650 homes, including cocoa producers like engineer Luis Morales from Chile. Captivated by Venezuela\'s reputation for world-class coastal cocoa, he established the beautiful San Cayetano Estate with his son Rodrigo.',
+      },
+      {
+        text: 'Current production reaches 10,000 kg annually across two harvest seasons: main (Dec-Apr) and mid (Jun-Jul).',
+      },
+      {
+        text: 'Since 2004 when Mrs. Josefina (daughter of José Joaquín Mirét) sold part of the estate for cocoa farming, Morales started with original seeds. Their 7,000-tree plantation now yields 20kg daily.',
+      },
+      {
+        text: 'The processing facility contains necessary machinery: dehuskers, mills, refiners, and vibrating tables for chocolate production.',
+      },
+      {
+        text: 'Father and son are self-taught, preserving ancestral farming knowledge despite being non-natives, maintaining tradition while achieving dreams.',
+      },
+    ],
+    images: [
+      {
+        alt: 'Certificate of Origin',
+      },
+      {
+        alt: 'Farmers',
+      },
+      {
+        alt: 'Mosaic',
+      },
+    ],
+  },
+  location: {
+    title: 'Geographical Location and Ecology',
+    subtitle: 'Geographical Location',
+    locationInfo: {
+      map: {
+        alt: 'Bejuma map',
+      },
+      details: [
+        { label: 'Country', value: 'Venezuela' },
+        { label: 'State', value: 'Carabobo' },
+        { label: 'Municipality', value: 'Bejuma' },
+        { label: 'Area', value: '170 km2' },
+        { label: 'Average Altitude', value: '287 m.a.s.l.' },
+        { label: 'GPS Coordinates', value: '10° 18.595`N, 68° 16.757`W (at the church)' },
+        { label: 'Population', value: '3,900' },
+      ],
+    },
+    paragraphs: [
+      'Canoabo village in Bejuma Municipality, Carabobo State sits at 287m elevation. Surrounding hamlets include Canoabito, La Sabana, Los Naranjos, and Santa Ana, featuring mountain settlements like Santa Eduviges Urbanization (El Cerro del Cacho) amidst biodiverse forests attractive to visitors.',
+    ],
+    ecology: {
+      title: 'Ecology',
+      paragraphs: [
+        'Warm climate cooling at night (average 26°C).',
+        'The parish is surrounded by high hills with large trees. An ancient theory suggests Canoabo lies in a prehistoric lakebed whose waters drained through river courses to the sea.',
+      ],
+      images: [
+        {
+          alt: 'Bejuma location',
+        },
+        {
+          alt: 'Bejuma location',
+        },
+      ],
+    },
+  },
+  history: {
+    title: 'History',
+    images: [
+      {
+        alt: 'Canoabo Fino history',
+      },
+      {
+        alt: 'Canoabo Fino history',
+      },
+    ],
+    content: [
+      {
+        text: 'Founded March 19, 1711 as San José de Canoabo by Father Andrés Páez Vargas, it\'s Bejuma\'s largest parish with extensive cocoa plantations.',
+      },
+      {
+        text: 'Cocoa production began in 1720, expanding before declining due to 1809 economic shifts when landowners replaced cocoa with coffee.',
+      },
+      {
+        text: 'Its indigenous name means "village beside fresh water". This Carabobo town features bicycles, large-windowed houses with central gardens, stores, and a square.',
+      },
+      {
+        text: 'Situated in Carabobo\'s fertile western mountain valleys (collectively called Altos Valles de Carabobo), it\'s home to gentlemen, artisans, and poets like Vicente Gerbasi - Venezuela\'s most representative 20th century writer.',
+      },
+      {
+        text: 'Maintaining colonial style since foundation: narrow streets, old houses with high windows and tile roofs. Considered paradise, many Spaniards traveled through surrounding mountains from Urama to Puerto Cabello via donkeys and carts.',
+      },
+      {
+        text: 'The town preserves traditions including Dancing Devils (originating c.1770) who parade during Corpus Christi in colorful costumes. Their hornless masks (except the Lead Devil) feature animal/demon figures.',
+      },
+      {
+        text: 'Local woodcarvers create magnificent works in small workshops, full of town essence and joy.',
+      },
+    ],
+  },
+};
+
 const canoabo = {
   es,
-  // en,
+  en,
 };
 
 export { canoabo };

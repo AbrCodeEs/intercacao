@@ -1,0 +1,76 @@
+---
+import Layout from '@/layouts/CocoaLayout.astro';
+import { Image } from 'astro:assets';
+
+import corte from '@/images/patanemo/corte2.webp';
+
+import GeneralInformation from '@/components/template/GeneralInformation.astro';
+import Characteristics from '@/components/template/Characteristics.astro';
+import CocoaMap from '@/components/template/CocoaMap.astro';
+import PostHarvestBenefit from '@/components/template/PostHarvestBenefit.astro';
+import Traceability from '@/components/template/Traceability.astro';
+import Location from '@/components/template/Location.astro';
+import History from '@/components/template/History.astro';
+import SocialResponsibility from '@/components/template/SocialResponsibility.astro';
+
+import data from '@/data/huila/data';
+
+const {
+  generalInformation,
+  characteristics,
+  cocoaMap,
+  postHarvestBenefit,
+  traceability,
+  location,
+  history,
+  socialResponsibility,
+} = data(Astro);
+
+export async function getStaticPaths() {
+  return [{ params: { locale: 'eng' } }, { params: { locale: 'es' } }];
+}
+---
+
+<Layout
+  title="Patanemo fino, Venezuela | Intercacao Europe Bv"
+  description='Descubre el Cacao Carupano Pintao, un patanemo venezolano cultivado en los campos bañados por el sol del estado Sucre. Este híbrido Trinitario-Criollo ofrece un perfil de sabores complejo: notas cítricas de pomelo y cáscara de naranja, equilibradas con nueces caramelizadas, especias cálidas (canela y clavos) y un sutil aroma a bosque fresco. Fermentado artesanalmente por 6-7 días en cajones de madera y secado al sol en camas de cedro, cada grano preserva calidad premium. Con 82% de fermentación eficiente y solo 8% de granos pizarrosos, es ideal para chocolates finos con astringencia equilibrada. Cultivado sosteniblemente por familias locales y apoyado por el programa "Regreso al Agro" de la Fundación Prosperi, este cacao representa la herencia cacaotera de Venezuela y su compromiso con la agricultura ética.'
+  pubDate={new Date()}
+  keywords="Carupano Pintao Cocoa, Cacao Carupano Pintao Venezuelan Trinitario Cocoa, Cacao Trinitario Venezolano Artisanal Cocoa Beans, Granos de Cacao Artesanales  Single-Origin Venezuelan Cocoa, Cacao Venezolano de Origen Único Cocoa Flavor Profile, Perfil de Sabores del Cacao  Organic Cocoa Production, Producción de Cacao Orgánico Post-Harvest Fermentation Techniques, Técnicas de Fermentación Postcosecha Cocoa Bean Classification, Clasificación de Granos de Cacao  Sustainable Cocoa Farming, Cultivo Sostenible de Cacao Criollo-Trinitario Hybrid Cocoa, Cacao Híbrido Criollo-Trinitario Rio Caribe La Concepción Cocoa, Cacao Rio Caribe La Concepción Venezuela Sucre Cocoa, Cacao Sucre Venezuela Tropical Fruit Notes in Cocoa, Notas de Frutas Tropicales en el Cacao Woodsy Cocoa Aroma, Aroma Boscoso en el Cacao Cocoa Fermentation Protocols, Protocolos de Fermentación del Cacao Traditional Cocoa Drying Methods, Métodos Tradicionales de Secado de Cacao Cocoa Traceability Certification, Certificación de Trazabilidad del Cacao Cocoa Bean Cut Test Analysis, Análisis de Corte de Granos de Cacao Family-Run Cocoa Farms, Fincas de Cacao Familiares Cocoa Harvest Seasons Venezuela, Temporadas de Cosecha de Cacao en Venezuela  Buy Carupano Pintao Trinitario Cocoa Beans, Comprar Granos de Cacao Trinitario Carupano Pintao How to Identify High-Quality Venezuelan Cocoa, Cómo Identificar Cacao Venezolano de Alta Calidad Cocoa with Citrus and Nutty Flavor Notes, Cacao con Notas Cítricas y Nueces Traditional Wooden Box Fermentation Process, Proceso de Fermentación en Cajones de Madera Cocoa Production in Paria Peninsula Venezuela, Producción de Cacao en la Península de Paria Venezuela Corsican Heritage in Venezuelan Cocoa Farming, Herencia Corsa en el Cultivo de Cacao Venezolano Social Responsibility in Cocoa Communities, Responsabilidad Social en Comunidades Cacaoteras San Miguel Church and Cocoa History, Iglesia San Miguel e Historia del Cacao Best Cocoa for Chocolate with Spicy Notes, Mejor Cacao para Chocolate con Notas Especiadas Ethical Cocoa Farming in Sucre State, Cultivo Ético de Cacao en el Estado Sucre Cocoa from Arismendi Municipality, Cacao del Municipio Arismendi Paria Peninsula Cocoa Farms, Fincas de Cacao de la Península de Paria Carúpano Cocoa Producers, Productores de Cacao de Carúpano Rio Caribe Cocoa Processing, Procesamiento de Cacao en Rio Caribe Cocoa Farming in Eastern Venezuela, Cultivo de Cacao en el Oriente Venezolano Citrusy Cocoa Flavor, Sabor Cítrico en el Cacao Caramelized Nut Cocoa Notes, Notas de Nueces Caramelizadas en el Cacao Cinnamon-Clove Cocoa Profile, Perfil de Canela y Clavo en el Cacao Balanced Astringency in Cocoa, Astringencia Equilibrada en el Cacao Fresh Forest Aroma in Chocolate, Aroma a Bosque Fresco en el Chocolate 4-Stage Cocoa Fermentation, Fermentación de Cacao en 4 Etapas Sun-Drying Cocoa Techniques, Técnicas de Secado Solar del Cacao Cocoa Moisture Content 7.5%, Contenido de Humedad del Cacao 7.5% Wooden Rake Drying Process, Proceso de Secado con Rastrillo de Madera Post-Harvest Quality Control, Control de Calidad Postcosecha Corsican Settlers in Cocoa Farming, Colonos Corsos en el Cultivo de Cacao San Benito Festival Cocoa Tradition, Tradición del Cacao en el Festival de San Benito Colonial Architecture and Cocoa, Arquitectura Colonial y Cacao El Cacaito Cocoa Drink Recipe, Receta de la Bebida El Cacaito con Cacao Venezuelan Gaita Music and Cocoa, Música Gaita Venezolana y Cacao Prosperi Foundation Cocoa Program, Programa de Cacao de la Fundación Prosperi Community-Based Cocoa Farming, Cultivo de Cacao Basado en la Comunidad Women in Cocoa Agriculture, Mujeres en la Agricultura Cacaotera Cocoa Farming as Social Change, Cultivo de Cacao como Cambio Social Regreso al Agro Education Initiative, Iniciativa Educativa Regreso al Agro"
+>
+  <article class="w-full overflow-x-hidden overflow-y-auto">
+    <!-- @ts-ignore -->
+    <GeneralInformation generalInformation={generalInformation} />
+
+    <!-- @ts-ignore -->
+    <Characteristics characteristics={characteristics} />
+
+    <section
+      class="h-full w-full bg-gray-400 md:h-screen md:w-screen lg:h-screen lg:w-screen xl:h-screen xl:w-screen"
+    >
+      <!-- @ts-ignore -->
+      <Image
+        inferSize={true}
+        class="h-full w-full object-fill object-center"
+        src={corte}
+        alt="corte Chuao"
+      />
+    </section>
+    <!-- @ts-ignore -->
+    <CocoaMap cocoaMap={cocoaMap} />
+
+    <!-- @ts-ignore -->
+    <PostHarvestBenefit postHarvestBenefit={postHarvestBenefit} />
+
+    <!-- @ts-ignore -->
+    <Traceability traceability={traceability} />
+
+    <!-- @ts-ignore -->
+    <Location location={location} />
+
+    <!-- @ts-ignore -->
+    <History history={history} />
+
+    <!-- @ts-ignore -->
+    <SocialResponsibility socialResponsibility={socialResponsibility} />
+  </article>
+</Layout>

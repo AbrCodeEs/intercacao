@@ -57,11 +57,11 @@ const NewItems = ({ posts }: { posts: Post[] }) => {
                   <MorphingDialogImage
                     src={`${api_url}${post.banner.url}`}
                     alt={post.banner.documentId}
-                    className="aspect-[4/5] h-full w-full object-cover object-center md:aspect-[3/2] lg:aspect-[3/2] xl:aspect-[3/2]"
+                    className="aspect-[4/5] h-full w-full object-cover object-center md:aspect-[4/5] lg:aspect-[4/5] xl:aspect-[4/5]"
                   />
                 </div>
               </div>
-              <h1 className="text-md mb-2 line-clamp-3 hidden pt-2 text-start font-medium break-words md:mb-3 md:block md:pt-4 md:text-2xl lg:pt-4 lg:text-3xl xl:block">
+              <h1 className="text-md mb-2 leading-10 truncate hidden pt-2 text-start font-medium break-words md:mb-3 md:block md:pt-4 md:text-2xl lg:pt-4 lg:text-3xl xl:block">
                 {post.title}
               </h1>
               <div className="text-muted-foreground mb-4 hidden text-start text-xs md:mb-5 md:block md:text-base xl:block dark:text-gray-400">
@@ -79,15 +79,15 @@ const NewItems = ({ posts }: { posts: Post[] }) => {
               className="relative h-auto w-full xl:w-4/5"
             >
               <div
-                className="flex h-screen min-h-screen w-full flex-col items-stretch justify-between bg-white md:min-h-[90vh] md:flex-row lg:min-h-[90vh] lg:flex-row xl:min-h-[90vh] xl:flex-row"
+                className="relative flex h-screen min-h-screen w-full flex-col items-stretch justify-between bg-white md:min-h-[90vh] md:flex-row lg:min-h-[90vh] lg:flex-row xl:min-h-[90vh] xl:flex-row"
                 style={{ overflowY: 'scroll' }}
               >
-                <div className="w-full grow">
-                  <Carousel className="md:h-full lg:h-[90vh] xl:h-[90vh]">
-                    <CarouselContent>
+                <div className="sticky top-0 xl:pb-0 lg:pb-0 md:pb-0 pb-10 w-full grow">
+                  <Carousel classNameWrapper="md:h-full lg:h-screen xl:h-screen" className="md:h-full lg:h-screen xl:h-screen">
+                    <CarouselContent className="md:h-full lg:h-screen xl:h-screen">
                       {post.media.map((media, i) => (
                         <CarouselItem key={i} className="h-full">
-                          <div className="flex h-full w-full items-start justify-start">
+                          <div className="flex h-full xl:h-screen lg:h-screen md:h-screen w-full items-start justify-start">
                             {media.ext === '.mp4' ? (
                               <div className="relative flex aspect-[4/5] h-full w-full items-center justify-center overflow-hidden">
                                 <MediaPlayer
@@ -115,7 +115,7 @@ const NewItems = ({ posts }: { posts: Post[] }) => {
                                 alt={media.name as string}
                                 width={1000}
                                 height={1000}
-                                className="object-cover object-center"
+                                className="object-cover object-center h-full xl:h-screen lg:h-screen md:h-screen"
                               />
                             )}
                           </div>
@@ -128,11 +128,12 @@ const NewItems = ({ posts }: { posts: Post[] }) => {
                         alwaysShow
                       />
                     )}
-                    <CarouselIndicator className="-bottom-6.5 px-15 xl:bottom-0" />
+                    <CarouselIndicator className="-bottom-6.5 px-15 xl:bottom-5" />
                   </Carousel>
                 </div>
-                <div className="relative w-full grow bg-white p-10">
-                  <h2 className="mb-4 text-start text-3xl font-bold">{post.title}</h2>
+
+                <div className="relative w-full grow bg-white p-10 flex flex-col gap-3">
+                  <h2 className="text-start text-3xl font-bold">{post.title}</h2>
                   <div>
                     <div className="line-clamp-3 pb-2 break-words">
                       <Badge>{post.category?.name}</Badge>
@@ -191,12 +192,12 @@ export const NewsSection = () => {
 
   return (
     <div id="news" className="py-16">
-      <div className="pb-8">
-        <h1 className="mb-4 w-full p-0 text-3xl font-medium md:mb-5 md:px-5 md:text-4xl lg:mb-6 lg:text-5xl xl:px-5">
+      <div className="pb-8 xl:px-0 lg:px-0 md:px-0 px-5">
+        <h1 className="mb-4 w-full p-0 text-3xl font-medium md:mb-5 md:px-5 lg:mb-6 xl:px-5 uppercase text-neutral-600">
           Últimas Noticias
         </h1>
 
-        <p className="p-0 md:px-5 xl:px-5">
+        <p className="p-0 md:px-5 xl:px-5 text-muted-foreground text-lg">
           Las últimas noticias y actualizaciones sobre las actividades de la Fundación Quirico
           Prosperi y sus programas Electrones.
         </p>
@@ -261,7 +262,7 @@ export const NewsSection = () => {
 
             <a href="https://fqp.intercacao.com/posts" className="group flex flex-col">
               <div className="flex overflow-clip border border-gray-300 md:rounded-lg xl:mb-5 xl:rounded-lg">
-                <div className="flex aspect-[4/5] h-full w-full items-center justify-center transition duration-300 group-hover:scale-105 hover:bg-gray-100 md:aspect-[3/2] lg:aspect-[3/2] xl:aspect-[3/2]">
+                <div className="flex aspect-[4/5] h-full w-full items-center justify-center transition duration-300 group-hover:scale-105 hover:bg-gray-100 md:aspect-[4/5] lg:aspect-[4/5] xl:aspect-[4/5]">
                   <span className="text-zinc-500 group-hover:underline">Ver mas</span>
                 </div>
               </div>

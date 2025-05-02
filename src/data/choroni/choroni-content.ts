@@ -350,10 +350,354 @@ const es = {
     },
 };
 
+const en = {
+  generalInformation: {
+    title: 'Evaluation',
+    image: {
+      alt: 'gourmet choroni fino cocoa cover',
+    },
+    rating: {
+      stars: 'rating stars 2.8',
+    },
+    sections: [
+      {
+        items: [
+          { label: 'SWEET FRUITY', value: '1.5' },
+          { label: 'CITRUS FRUITY', value: '2.5' },
+          { label: 'FLORAL', value: '0.5' },
+          { label: 'CREOLE', value: '2.1' },
+          { label: 'COCOA', value: '4.2' },
+          { label: 'WOODSY', value: '1.0' },
+          { label: 'SPICES', value: '0.0' },
+        ],
+      },
+      {
+        items: [
+          { label: 'ANNUAL PRODUCTION (TM)', value: '1.5' },
+          { label: 'MAIN HARVEST', value: 'DEC-FEB' },
+          { label: 'MID HARVEST', value: 'FEB-APR' },
+        ],
+      },
+      {
+        items: [{ label: 'CREOLE BEANS', value: '16%' }],
+      },
+      {
+        items: [
+          { label: 'FERMENTED BEANS', value: '84%' },
+          { label: 'VIOLET BEANS', value: '6%' },
+          { label: 'SLATE BEANS', value: '10%' },
+          { label: 'TOTAL', value: '100%' },
+        ],
+      },
+      {
+        items: [
+          { label: 'Beans / 100g:', value: '79' },
+          { label: 'g./1 Bean:', value: '1.27 g' },
+        ],
+      },
+      {
+        items: [
+          { label: 'CERTIFIED', value: 'YES' },
+          { label: 'AWARDS', value: 'NO' },
+        ],
+      },
+    ],
+  },
+  characteristics: {
+    title: 'Physical and Organoleptic Characteristics',
+    flavors: [
+      {
+        name: 'Sweet Fruity',
+        description: '',
+      },
+      {
+        name: 'Citrus Fruity',
+        description: 'Citrus Fruits • Red Fruits',
+      },
+      {
+        name: 'Floral',
+        description: '',
+      },
+      {
+        name: 'Creole',
+        description: 'Nuts • Brown Sugar Malt',
+      },
+      {
+        name: 'Cocoa',
+        description: 'Cocoa',
+      },
+      {
+        name: 'Woodsy',
+        description: 'Wood',
+      },
+      {
+        name: 'Spices',
+        description: '',
+      },
+    ],
+    assessment: {
+      title: 'Assessment',
+      classification: 'Choroni Fino Classification',
+      equipment: 'Tasting Panel',
+    },
+    information: [
+      {
+        title: 'Flavor:',
+        description: {
+          boldText: 'STRONG',
+          additionalText: 'Notes of fresh fruits, nuts, and brown sugar malt',
+        },
+      },
+      {
+        title: 'Aroma:',
+        description: {
+          boldText: 'LOW',
+          additionalText: 'Floral and herbal essences',
+        },
+      },
+      {
+        title: 'Fermentation:',
+        description: {
+          boldText: 'MEDIUM',
+          additionalText: 'Moderate astringency and bitterness',
+        },
+      },
+    ],
+    analysis: {
+      title: 'Cut Test Analysis',
+      alt: 'Choroni Fino Cocoa',
+      description: [
+        {
+          text: 'With moderate creole genetics (16% white beans) and high trinitario descent, cut tests show: (±84%) fermented beans, (±6%) violet beans, and (±10%) slate beans.',
+        },
+        {
+          text: 'Weight analysis reveals 79 almonds per 100g, each weighing 1.27g.',
+        },
+      ],
+    },
+  },
+  cocoaMap: [
+    {
+      title: 'Flavor Map',
+      content: [
+        {
+          type: 'paragraph',
+          text: 'Features characteristic flavors of modern creoles with balanced nutty attributes, mild floral notes, moderate fresh fruit acidity typical of citrus and red fruits.',
+        },
+        {
+          type: 'paragraph',
+          text: 'These notes overlay a moderate cocoa base allowing enjoyment of herbal, woody, and malted sugar notes - showcasing Venezuelan creole cocoa\'s diverse attributes.',
+        },
+        {
+          type: 'paragraph',
+          text: 'A well-crafted Choroni cocoa liquor offers a flavor symphony shaped by spring waters, Henry Pittier Park forests, and coastal breezes from Choroni/ Puerto Colombia beaches - where waters meet amidst drumbeat celebrations.',
+        },
+      ],
+      image: { alt: 'Cocoa Flavor Wheel' },
+    },
+    {
+      title: 'Sensory Map',
+      content: [
+        {
+          type: 'paragraph',
+          text: 'Presents fruity notes typical of modern creole cocoas with attribute profiles ranging from ancient creoles to hybrid characteristics, featuring medium cocoa flavor intensity.',
+        },
+        {
+          type: 'paragraph',
+          quote: '"These materials showcase Venezuela\'s complete sensory spectrum of specialty cocoas."',
+        },
+      ],
+      image: {
+        alt: 'Flavor Sensory Map',
+      },
+    },
+  ],
+  postHarvestBenefit: {
+    title: 'Post-Harvest Processing',
+    content: [
+      {
+        protocols: [
+          {
+            title: 'Fermentation Protocol',
+            items: [
+              {
+                key: 'Cocoa Type',
+              },
+              {
+                alt: 'choroni seed',
+                text: 'Trinitario &',
+              },
+              {
+                alt: 'choroni seed',
+                text: 'Criollo',
+              },
+              {
+                key: 'Fermentation Days',
+                value: '4 to 5 days',
+              },
+              {
+                items: [
+                  'Box type: Wooden',
+                  'Turning frequency: First turn at 48 hours, then every 24 hours from day 3',
+                  'Fermentation method: ~1000kg fresh beans distributed across 3 boxes wrapped in plantain leaves',
+                ],
+              },
+            ],
+            image: {
+              alt: 'fermentation protocol',
+            },
+          },
+          {
+            title: 'Drying Protocol',
+            items: [
+              {
+                key: 'Cocoa Type',
+              },
+              {
+                alt: 'choroni seed',
+                text: 'Dry Trinitario &',
+              },
+              {
+                alt: 'choroni seed',
+                text: 'Criollo',
+              },
+              {
+                key: 'Drying Days',
+                value: '4 to 5 days',
+              },
+              {
+                key: 'Drying Techniques',
+              },
+              {
+                items: [
+                  'Floor type: concrete',
+                  'Humidity: 7.5%',
+                  'Drying method: Beans stirred every 3 hours (days 1-2), every 5 hours (days 3-4)',
+                ],
+              },
+            ],
+            image: {
+              alt: 'drying protocol',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  traceability: {
+    title: 'Traceability',
+    subtitle: 'certifications and awards',
+    content: [
+      {
+        text: 'Certificate of Origin and Traceability validating cocoa bean provenance.',
+      },
+      {
+        text: 'Choroni village has ~3,102 residents with nearly one million seasonal visitors.',
+      },
+      {
+        text: 'From magical Choroni lands, we guarantee traceability certificates validating this distinguished bean\'s authenticity.',
+      },
+      {
+        text: 'Among dedicated coastal producers is 68-year-old Vicente Ramón Fuentes Zapata - independent cocoa farmer preserving ancestral traditions through exquisite bean cultivation.',
+      },
+      {
+        text: 'His workday begins at 6 AM at Hacienda Torres, managing pruning, cleaning, harvesting, and post-harvest processing.',
+      },
+      {
+        text: 'As one of the coast range\'s first estates, its 30Ha plantation (15Ha productive) yields 1500kg annually across main (Dec-Feb) and mid (Feb-Apr) harvests.',
+      },
+      {
+        text: 'Located at GPS 10°29\'12.8"N, 67°36\'33.5"W (~1km from parish main square).',
+      },
+      {
+        text: 'Harvesting challenges include labor shortages, yet traditional processes endure.',
+      },
+      {
+        text: 'Main economic activities combine fishing, tourism, and influential cocoa agriculture.',
+      },
+      {
+        text: 'Choroni is renowned not only for beaches and warm people but also lands producing cocoa with high trinitario introgression and creole genetics.',
+      },
+    ],
+    images: [
+      {
+        alt: 'Certificate of Origin',
+      },
+      {
+        alt: 'Farmers',
+      },
+      {
+        alt: 'Mosaic',
+      },
+    ],
+  },
+  location: {
+    title: 'Geographical Location and Ecology',
+    subtitle: 'Geographical Location',
+    locationInfo: {
+      map: {
+        alt: 'Girardot map',
+      },
+      details: [
+        { label: 'Country', value: 'Venezuela' },
+        { label: 'State', value: 'Aragua' },
+        { label: 'Municipality', value: 'Girardot' },
+        { label: 'Area', value: '-' },
+        { label: 'Average Altitude', value: '-' },
+        { label: 'GPS Coordinates', value: '10°29\'12.8"N, 67°36\'33.5"W' },
+        { label: 'Population', value: '3,102' },
+      ],
+    },
+    paragraphs: [
+      'Choroni parish lies on Venezuela\'s northern coast within Aragua State, bordered by Henri Pittier National Park\'s cloud forests and exotic vegetation.',
+    ],
+    ecology: {
+      title: 'Ecology',
+      paragraphs: [
+        'Vegetation includes cloud forests, savannas, and mountains hosting diverse wildlife including endemic and migratory species.',
+        'Notable flora: arums, orchids, bromeliads, and pepper plants.',
+        'Soils are fertile alluvial plains with loamy/sandy textures and slightly acidic to neutral pH levels.',
+      ],
+      images: [
+        {
+          alt: 'Girardot location',
+        },
+        {
+          alt: 'Girardot location',
+        },
+      ],
+    },
+  },
+  history: {
+    title: 'History',
+    images: [
+      {
+        alt: 'Choroni Fino history',
+      },
+      {
+        alt: 'Choroni Fino history',
+      },
+    ],
+    content: [
+      {
+        text: 'Magical Choroni preserves indelible historical marks from indigenous Choroni people, Spanish settlers, and African influences.',
+      },
+      {
+        text: 'Beyond colorful architecture and rivers, cultural expressions include Santa Clara/Virgin del Carmen festivals and infectious drumbeats recalling Afro-descendant dances.',
+      },
+      {
+        text: 'Founded in 1616 with church construction by Francisco Mendoza and Pedro Gutiérrez. Established as parish in 1664 as Santa Clara del Valle de Choroni.',
+      },
+      {
+        text: 'Pedro José Olavarriaga\'s 1721 report noted fertile lands producing abundant cocoa traded with Dutch merchants, sparking disputes among landowners.',
+      },
+    ],
+  },
+};
 
 const choroni = {
   es,
-  // en,
+  en,
 };
 
 export { choroni };

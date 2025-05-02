@@ -77,6 +77,7 @@ export type CarouselProps = {
   index?: number;
   onIndexChange?: (newIndex: number) => void;
   disableDrag?: boolean;
+  classNameWrapper?: string;
 };
 
 function Carousel({
@@ -86,6 +87,7 @@ function Carousel({
   index: externalIndex,
   onIndexChange,
   disableDrag = false,
+  classNameWrapper
 }: CarouselProps) {
   const [internalIndex, setInternalIndex] = useState<number>(initialIndex);
   const isControlled = externalIndex !== undefined;
@@ -105,7 +107,7 @@ function Carousel({
       disableDrag={disableDrag}
     >
       <div className={cn('group/hover relative', className)}>
-        <div className="overflow-hidden">{children}</div>
+        <div className={cn('overflow-hidden', classNameWrapper)}>{children}</div>
       </div>
     </CarouselProvider>
   );
@@ -190,7 +192,7 @@ function CarouselIndicator({ className, classNameButton, dataCount }: CarouselIn
             onClick={() => setIndex(i)}
             className={cn(
               'rounded-full transition-opacity duration-300',
-              index === i ? 'h-2 w-3 bg-white' : 'bg-primary h-2 w-2',
+              index === i ? 'h-2.5 w-5 bg-gray-800' : 'bg-gray-500 h-2 w-2',
               classNameButton,
             )}
           />
@@ -287,7 +289,7 @@ function CarouselContent({ children, className, transition, itemsPerPage }: Caro
       {Children.map(children, (child, index) => (
         <motion.div
           key={index}
-          className="w-full min-w-0 shrink-0 grow-0"
+          className="w-full h-full min-w-0 shrink-0 grow-0"
           style={{
             width: `${100 / effectiveItemsPerPage}%`,
             flex: `0 0 ${100 / effectiveItemsPerPage}%`,

@@ -129,6 +129,7 @@ const postHarvestBenefit = z.object({
         protocols: z
           .object({
             title: z.string(),
+            description: z.string(),
             items: z
               .discriminatedUnion('category', [
                 z.object({

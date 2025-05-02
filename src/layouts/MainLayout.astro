@@ -9,7 +9,7 @@ import logo from '@/images/chuao/logo-intercacao.png';
 
 import { getLangFromUrl } from '@/lib/translations';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<"blog">['data'];
 
 const { title, description, keywords } = Astro.props;
 
@@ -17,31 +17,31 @@ const lang = getLangFromUrl(Astro.url);
 
 const navItems = [
   {
-    title: lang === 'en' ? 'Home' : 'Inicio',
+    title: lang === 'eng' ? 'Home' : 'Inicio',
     href: '#section-home',
   },
   {
-    title: lang === 'en' ? 'Flavours world' : 'Mundo de sabores',
+    title: lang === 'eng' ? 'World of Flavours' : 'Mundo de sabores',
     href: '#section-flavours',
   },
   {
-    title: lang === 'en' ? 'Cacao gourmet' : 'Cacao gourmet',
+    title: lang === 'eng' ? 'Cacao gourmet' : 'Cacao gourmet',
     href: '#section-gourmet',
   },
   {
-    title: lang === 'en' ? 'Mandarin Honey & Vanilla Bar' : 'Mandarina Miel & Vainilla Bar',
+    title: lang === 'eng' ? 'Mandarina Miel & Vainilla Bar' : 'Mandarina Miel & Vainilla Bar',
     href: '#section-vanilla-bar',
   },
   {
-    title: lang === 'en' ? 'Fundación Quirico Prosperi' : 'Fundación Quirico Prosperi',
+    title: lang === 'eng' ? 'Fundación Quirico Prosperi' : 'Fundación Quirico Prosperi',
     href: '#section-prosperi',
   },
   {
-    title: lang === 'en' ? 'Sobre Nosotros' : 'Sobre Nosotros',
+    title: lang === 'eng' ? 'Abuot us' : 'Sobre Nosotros',
     href: '#section-about',
   },
   {
-    title: lang === 'en' ? 'Contactanos' : 'Contactanos',
+    title: lang === 'eng' ? 'Contact us' : 'Contactanos',
     href: '#section-contact',
   },
 ];

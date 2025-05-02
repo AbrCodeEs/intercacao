@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import type { CocoaBar, SortOption, FlavorOption } from '@/types/home';
 import { Sort } from '@/types/home';
 import { Star, Award, Trophy, Nut, CornerRightUp } from 'lucide-react';
+import miel from '@/images/home/beeBar/MIEL.webp';
 
 import { motion } from 'motion/react';
 
@@ -30,6 +31,7 @@ export function ChocolateCard({
   trans: Record<string, any>;
 }) {
   const [isHovered, setIsHovered] = useState(false);
+
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
       <Card
@@ -41,17 +43,29 @@ export function ChocolateCard({
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 200 }}
-            className="relative aspect-square"
+            className="relative aspect-square bg-gray-500"
           >
-            <img
-              src={chocolate.image}
-              alt={chocolate.name}
-              loading="eager"
-              decoding="async"
-              width={1000}
-              height={1000}
-              className={`object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 ${isHovered && 'blur'}`}
-            />
+            {chocolate.image && (
+              <img
+                src={chocolate.image}
+                alt={chocolate.name}
+                loading="eager"
+                decoding="async"
+                width={1000}
+                height={1000}
+                className={`object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 ${isHovered && 'blur'}`}
+              />
+            )}
+
+            {chocolate.watermark && (
+              <img
+                loading="eager"
+                src={miel.src}
+                alt="bee"
+                className="absolute right-5 bottom-5 h-auto xl:w-20"
+              />
+            )}
+
             <div className="absolute inset-0 flex flex-col justify-start p-2 text-xl md:p-4 lg:p-4 xl:p-6">
               <div className="flex grow items-start justify-start">
                 {(flavors || sortBy) && (
