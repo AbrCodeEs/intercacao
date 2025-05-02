@@ -62,7 +62,7 @@ export function ChocolateCard({
                 loading="eager"
                 src={miel.src}
                 alt="bee"
-                className="absolute right-5 bottom-5 h-auto xl:w-20"
+                className="absolute right-5 bottom-5 h-auto w-20"
               />
             )}
 
