@@ -15,6 +15,8 @@ import chulu from '@/images/chulu/chulu-web.webp';
 import trinchera from '@/images/trinchera/trincheras-web.webp';
 import surdellago from '@/images/surdellago/placeholder.webp';
 
+import barlovento from '@/images/barlovento/barlovento-web.webp'
+
 import type { CocoaBar } from '@/types/home';
 
 export const chocolateBars: CocoaBar[] = [
@@ -386,7 +388,7 @@ export const chocolateBars: CocoaBar[] = [
   {
     id: '17',
     name: 'Barlovento Fermentado Superior',
-    image: surdellago.src,
+    image: barlovento.src,
     rating: 0.1,
     fermented: 80,
     certified: 0,
@@ -404,7 +406,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'barlovento',
-    watermark: true
+    // watermark: true
   },
   {
     id: '18',
