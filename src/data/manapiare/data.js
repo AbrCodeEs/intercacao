@@ -3,7 +3,7 @@ import { getLangFromUrl, useTranslations } from '@/lib/translations';
 import RespSocial from '@/images/chuao/responsabilidad-social-fundacion-prosperi-color.png';
 import RespSocial2 from '@/images/chuao/responsabilidad-social-regreso-al-agro-color.png';
 
-import { images } from './patanemo-images';
+import { images } from './manapiare-images';
 
 export default (Astro) => {
   const lang = getLangFromUrl(Astro.url);

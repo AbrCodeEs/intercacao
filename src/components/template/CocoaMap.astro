@@ -22,7 +22,7 @@ const { cocoaMap } = Astro.props;
                     class={`px-3 text-justify text-lg ${content.border ? 'border-x border-black' : ''}`}
                   >
                     <i>
-                      <b>{content.quote}</b>, {content.author}
+                      <b>{content.quote}</b>{content.author}
                     </i>
                   </p>
                 );

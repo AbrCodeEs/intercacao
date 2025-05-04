@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '@/layouts/MainLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/types/home/website';
+import { registerServiceWorker } from '../utils/registerServiceWorker';
 
 import banner from '@/images/home/banner.webp';
 import mundoDeSabores from '@/images/home/imagotipo-mundo-de-sabores.webp';
@@ -37,7 +38,7 @@ const posts = [
   {
     title: 'Metodo de evaluación',
     description:
-      'El metodo de evaluacion “cacao grader” complementa el metodo tradicional con un una evaluacion organoléptica completa, desarrollada por la reconocida Chloe Doutre',
+      'El metodo de evaluacion "cacao grader" complementa el metodo tradicional con un una evaluacion organoléptica completa, desarrollada por la reconocida Chloe Doutre',
     image: {
       src: postGranoDeDacao.src,
       alt: 'Metodo de evaluación',
@@ -65,7 +66,7 @@ const posts = [
   {
     title: 'Fundacion Quirico Prosperi',
     description:
-      'Organización sin fines de lucro creada con la misión de promover y difundir los valores históricos y agrícolas de Venezuela a través de programas educativos y sociales como “Regreso al agro” y “Proyecto Agua”. ',
+      'Organización sin fines de lucro creada con la misión de promover y difundir los valores históricos y agrícolas de Venezuela a través de programas educativos y sociales como "Regreso al agro" y "Proyecto Agua". ',
     image: {
       src: postFundacionProsperi.src,
       alt: 'Metodo de evaluación',
@@ -73,7 +74,7 @@ const posts = [
     url: 'http://fundacionprosperi.org/',
   },
   {
-    title: 'Central de Beneficio “Pintao“',
+    title: 'Central de Beneficio "Pintao"',
     description:
       'Situado en La Concepción, Rio Caribe, nuestras instalaciones cuentan con un equipo de expertos que garantiza los mejores protocolos de fermentación y secado y trazabilidad',
     image: {
@@ -82,7 +83,7 @@ const posts = [
     },
   },
   {
-    title: 'Central de Beneficio “Tesoro”',
+    title: 'Central de Beneficio "Tesoro"',
     description:
       'Situado en el sur del lago (SDLG), nuestras instalaciones cuentan con un equipo de expertos que garantiza los mejores protocolos de fermentacion y secado y trazabilidad',
     image: {
@@ -91,6 +92,11 @@ const posts = [
     },
   },
 ];
+
+// Registrar el Service Worker
+if (typeof window !== 'undefined') {
+  registerServiceWorker();
+}
 
 ---
 

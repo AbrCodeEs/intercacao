@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { Snowflake, Coffee } from 'lucide-react';
-import { getBeeBarTypes, getBeeBarCategories, getBeeBar } from '@/api/post';
+import { getBeeBarTypes, getBeeBar } from '@/api/post';
 import type { BeeBar, BeeBarCategories, BeeBarTypes } from '@/types/actions';
 import mandarina from '@/images/home/beeBar/MANDARINA.webp';
 import miel from '@/images/home/beeBar/MIEL.webp';

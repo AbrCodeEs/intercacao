@@ -249,7 +249,7 @@ export const PROJECT_ITEMS = [
   {
     title: 'Electron Deporte',
     description:
-      'La Escuela de Fútbol Sala “Los Prosperi” F.C., creada por Alejandro Prosperi en 2021, es un programa deportivo que busca fortalecer el talento local y promover valores como la disciplina y el trabajo en equipo. Con más de 90 niños y jóvenes divididos en categorías desde sub-8 hasta sub-21, la escuela ha logrado destacar en torneos regionales, obteniendo varios títulos. Gracias al apoyo de la Fundación Quirico Prosperi, se han dotado implementos deportivos, uniformes y se ha mejorado la infraestructura de la cancha.',
+      'La Escuela de Fútbol Sala “Los Prosperi” F.C, creada por Alejandro Prosperi en 2021, es un programa deportivo que busca fortalecer el talento local y promover valores como la disciplina y el trabajo en equipo. Con más de 90 niños y jóvenes divididos en categorías desde sub-8 hasta sub-21, la escuela ha logrado destacar en torneos regionales, obteniendo varios títulos. Gracias al apoyo de la Fundación Quirico Prosperi, se han dotado implementos deportivos, uniformes y se ha mejorado la infraestructura de la cancha.',
     img: {
       src: '/images/logos/logo-electron-deporte.png',
       alt: 'Electron Deporte',

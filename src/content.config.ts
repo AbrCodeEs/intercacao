@@ -1,8 +1,14 @@
-import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
 
 const generalInformation = z.object({
   title: z.string(),
+  cocoa: z
+    .object({
+      title: z.string(),
+      subtitle: z.string(),
+      color: z.string(),
+    })
+    .optional(),
   mainImage: z.object({
     src: z.union([z.string(), z.custom<ImageMetadata>()]),
     alt: z.string(),

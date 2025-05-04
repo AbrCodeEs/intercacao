@@ -7,14 +7,116 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-
 import { StickyScroll } from '@/components/home/StickyScrollReveal';
+import { motion } from 'framer-motion';
+import { useEffect, useState, useCallback } from 'react';
 
-export const ProjectsSection = ({
-  items,
-}: {
-  items: any[];
-}) => {
+interface ImageProps {
+  src: string;
+  alt: string;
+}
+
+// Función para precargar imágenes
+const preloadImage = (src: string): Promise<HTMLImageElement> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = src;
+  });
+};
+
+// Función para verificar si una imagen está en caché
+const isImageCached = async (src: string): Promise<boolean> => {
+  try {
+    const cache = await caches.open('images-cache-v1');
+    const response = await cache.match(src);
+    return !!response;
+  } catch (error) {
+    return false;
+  }
+};
+
+const ImageWithPlaceholder = ({ src, alt }: ImageProps) => {
+  const [retryCount, setRetryCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isCached, setIsCached] = useState(false);
+  const maxRetries = 3;
+
+  const loadImage = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      const cached = await isImageCached(src);
+      setIsCached(cached);
+
+      if (cached) {
+        setIsLoading(false);
+        return;
+      }
+
+      await preloadImage(src);
+      setIsLoading(false);
+    } catch (error) {
+      if (retryCount < maxRetries) {
+        setRetryCount(prev => prev + 1);
+      }
+    }
+  }, [src, retryCount]);
+
+  useEffect(() => {
+    loadImage();
+  }, [loadImage]);
+
+  return (
+    <div className="relative flex aspect-[4/5] items-center justify-center xl:min-h-[90vh]">
+      {isLoading ? (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
+          <div className="flex flex-col items-center gap-2">
+            <div className="border-t-primary h-8 w-8 animate-spin rounded-full border-4 border-gray-300"></div>
+            <span className="text-sm text-gray-500">
+              {isCached ? 'Cargando desde caché...' : 'Cargando imagen...'}
+            </span>
+          </div>
+        </div>
+      ) : (
+        <motion.img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className="aspect-[4/5] object-cover xl:min-h-[90vh]"
+          onError={() => {
+            if (retryCount < maxRetries) {
+              setRetryCount(prev => prev + 1);
+            }
+          }}
+        />
+      )}
+    </div>
+  );
+};
+
+export const ProjectsSection = ({ items }: { items: any[] }) => {
+  useEffect(() => {
+    // Precargar las primeras 3 imágenes
+    const preloadImages = async () => {
+      const imagesToPreload = items
+        .flatMap(item => item.images)
+        .slice(0, 3)
+        .map(img => img.src);
+
+      try {
+        await Promise.all(imagesToPreload.map(preloadImage));
+      } catch (error) {
+        console.error('Error al precargar imágenes:', error);
+      }
+    };
+
+    preloadImages();
+  }, [items]);
+
   const projects = items.map((item) => {
     return {
       title: item.title,
@@ -27,14 +129,7 @@ export const ProjectsSection = ({
             {!!item.images.length &&
               item.images?.map((image: { src: string; alt: string }, index: number) => (
                 <CarouselItem key={index} className="basis-full p-0 xl:min-h-[90vh]">
-                  <div className="flex aspect-[4/5] items-center justify-center xl:min-h-[90vh]">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      loading="eager"
-                      className="aspect-[4/5] object-cover xl:min-h-[90vh]"
-                    />
-                  </div>
+                  <ImageWithPlaceholder src={image.src} alt={image.alt} />
                 </CarouselItem>
               ))}
           </CarouselContent>
@@ -44,8 +139,11 @@ export const ProjectsSection = ({
       ),
     };
   });
-  return <div className="min-h-[300vh] w-full">
-    <StickyScroll content={projects} />
-  </div>;
+  return (
+    <div className="min-h-[300vh] w-full">
+      <StickyScroll content={projects} />
+    </div>
+  );
 };
+
 export default ProjectsSection;
