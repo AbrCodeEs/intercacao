@@ -123,7 +123,7 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
         {/* Contenedor sticky que muestra el contenido de la tarjeta activa. */}
         <div
           className={cn(
-            'sticky top-10 hidden h-[90vh] w-full rounded-md md:w-2/5 lg:w-2/5 xl:block xl:w-2/5',
+            'sticky top-10 hidden h-[90vh] w-full rounded-md md:w-2/5 lg:w-2/5 md:block lg:block xl:block xl:w-2/5',
             contentClassName,
           )}
           style={{
