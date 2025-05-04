@@ -124,46 +124,79 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
         </div>
       </div>
 
+
+      {/* <Gallery /> */}
+
       <div className="relative flex h-auto w-full flex-col items-center justify-center gap-5 py-15">
         {/* <WorldMap
-          dots={[
-            {
-              start: { lat: -10.4238, lng: -66.5897 },
-              end: {
-                lat: 34.0522,
-                lng: -118.2437,
-              }, // Los Angeles
-            },
-            {
-              start: { lat: -10.4238, lng: -66.5897 },
-              end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
-            },
-            {
-              start: { lat: -10.4238, lng: -66.5897 },
-              end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
-            },
-            {
-              start: { lat: -10.4238, lng: -66.5897 },
-              end: { lat: 28.6139, lng: 77.209 }, // New Delhi
-            },
-            {
-              start: { lat: -10.4238, lng: -66.5897 },
-              end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
-            },
-            {
-              start: { lat: -10.4238, lng: -66.5897 },
-              end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
-            },
-          ]}
+          // dots={[
+          //   {
+          //     start: { lat: -10.4238, lng: -66.5897 },
+          //     end: {
+          //       lat: 34.0522,
+          //       lng: -118.2437,
+          //     }, // Los Angeles
+          //   },
+          //   {
+          //     start: { lat: -10.4238, lng: -66.5897 },
+          //     end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+          //   },
+          //   {
+          //     start: { lat: -10.4238, lng: -66.5897 },
+          //     end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
+          //   },
+          //   {
+          //     start: { lat: -10.4238, lng: -66.5897 },
+          //     end: { lat: 28.6139, lng: 77.209 }, // New Delhi
+          //   },
+          //   {
+          //     start: { lat: -10.4238, lng: -66.5897 },
+          //     end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
+          //   },
+          //   {
+          //     start: { lat: -10.4238, lng: -66.5897 },
+          //     end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+          //   },
+          // ]}
         /> */}
         {/* absolute inset-0  */}
         <div className="flex items-center justify-center">
-        {/* bg-black/50 */}
-          <h1 className="block w-1/2 rounded-lg  p-2 text-center text-2xl font-bold text-gray-200 capitalize backdrop-blur-[3px] lg:text-3xl xl:text-4xl">
+          {/* bg-black/50 */}
+          <h1 className="block w-1/2 rounded-lg p-2 text-center text-2xl font-bold text-gray-200 capitalize backdrop-blur-[3px] lg:text-3xl xl:text-4xl">
             {trans.title}
           </h1>
         </div>
       </div>
     </>
+  );
+}
+
+function Gallery() {
+  return (
+    <div className="relative min-h-screen">
+      {/* Grid Gallery */}
+      <div  className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-4 xl:grid-cols-3 xl:gap-4">
+        {/* Ejemplo de 9 elementos - puedes reemplazar con tus imágenes/content */}
+        {[...Array(9)].map((_, i) => (
+          <div
+            key={i}
+            className="h-48 rounded-lg bg-gray-200 shadow-md transition-shadow hover:shadow-lg"
+          >
+            {i}
+            {/* Contenido del grid item */}
+            {/* <img src="..." className="w-full h-full object-cover rounded-lg" /> */}
+          </div>
+        ))}
+      </div>
+
+      {/* Sección Sticky */}
+      <div className="sticky right-4 bottom-4 z-50 flex justify-end">
+        <div className="rounded-lg border border-gray-100 bg-white p-4 shadow-xl">
+          <button className="rounded-md bg-blue-500 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-600">
+            Botón Sticky
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }

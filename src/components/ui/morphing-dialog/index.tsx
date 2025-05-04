@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useCallback, useContext, useEffect, useId, useMemo, useRef, useState } from 'react';
-import { motion, AnimatePresence, MotionConfig, type Transition, type Variant } from 'motion/react';
+import { motion, AnimatePresence, MotionConfig, type Transition, type Variant, useDragControls } from 'motion/react';
 import { createPortal } from 'react-dom';
 import { cn } from '@/lib/cn';
 import { XIcon } from 'lucide-react';
@@ -123,7 +123,9 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
   const containerRef = useRef<HTMLDivElement>(null!);
   const [firstFocusableElement, setFirstFocusableElement] = useState<HTMLElement | null>(null);
   const [lastFocusableElement, setLastFocusableElement] = useState<HTMLElement | null>(null);
-
+  const dragControls = useDragControls();
+  const isMobile = true;
+  //  useIsMobile();
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -177,6 +179,18 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
   });
 
   return (
+    // <motion.div
+    //   ref={containerRef}
+    //   layoutId={`dialog-${uniqueId}`}
+    //   className={cn('overflow-hidden', className)}
+    //   style={style}
+    //   role="dialog"
+    //   aria-modal="true"
+    //   aria-labelledby={`motion-ui-morphing-dialog-title-${uniqueId}`}
+    //   aria-describedby={`motion-ui-morphing-dialog-description-${uniqueId}`}
+    // >
+    //   {children}
+    // </motion.div>
     <motion.div
       ref={containerRef}
       layoutId={`dialog-${uniqueId}`}
@@ -184,9 +198,70 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
       style={style}
       role="dialog"
       aria-modal="true"
-      aria-labelledby={`motion-ui-morphing-dialog-title-${uniqueId}`}
-      aria-describedby={`motion-ui-morphing-dialog-description-${uniqueId}`}
+      drag={isMobile ? 'y' : false}
+      dragControls={dragControls}
+      dragListener={false}
+      dragConstraints={{ top: 0 }}
+      dragElastic={0.1}
+      onDragEnd={(e, { offset, velocity }) => {
+        if (offset.y > 100 || velocity.y > 150) {
+          setIsOpen(false);
+        }
+      }}
     >
+      {isMobile && (
+        <>
+        <div
+          className="drag-handle"
+          onPointerDown={(e) => dragControls.start(e)}
+          style={{
+            position: 'absolute',
+            top: '10px',
+            left: 0,
+            right: 0,
+            height: '30px',
+            zIndex: 150,
+            touchAction: 'none',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <div
+            style={{
+              width: '40px',
+              height: '4px',
+              borderRadius: '2px',
+              backgroundColor: 'rgb(99 99 99 / 81%)',
+            }}
+          />
+        </div>
+        <div
+          className="drag-handle"
+          onPointerDown={(e) => dragControls.start(e)}
+          style={{
+            position: 'absolute',
+            top: '38%',
+            right: '10px',
+            height: '30px',
+            zIndex: 100,
+            touchAction: 'none',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          {/* <div
+            style={{
+              width: '40px',
+              height: '200px',
+              borderRadius: '2px',
+              backgroundColor: 'rgb(255 255 255 / 71%)',
+            }}
+          /> */}
+        </div>
+        </>
+      )}
       {children}
     </motion.div>
   );

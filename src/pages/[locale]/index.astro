@@ -130,11 +130,9 @@ export async function getStaticPaths() {
       />
     </div>
 
-    <div class="bg-primary h-5 w-full"></div>
-
     <div
       id="section-flavours"
-      class="relative flex size-auto items-center justify-center md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
+      class="size-auen/world-of-flavors/to relative flex flex-col items-center justify-center gap-10 md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
       style={`background-image: url(${lienzo.src});`}
     >
       <Image
@@ -144,29 +142,29 @@ export async function getStaticPaths() {
         alt={trans('home').mundo_de_sabores_panel.alt}
         class="object-fill object-center shadow-2xl"
       />
-      <div class="absolute inset-0 flex items-center justify-center">
+      <div class="flex items-center justify-center">
         <DialogFlavours client:only="react" trans={trans('home').info_mundo_de_sabores} />
       </div>
     </div>
-
-    <div id="section-gourmet" class="bg-primary h-auto w-full">
-      <div class="flex w-full items-center justify-center pt-10">
-        <Image
-          loading="lazy"
-          inferSize={true}
-          src={trans('home').logo_white_imagotipo_cacao_gourmet.src}
-          alt={trans('home').logo_white_imagotipo_cacao_gourmet.alt}
-          class="w-75 object-fill object-center"
-        />
-      </div>
-      <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:load />
-    </div>
   </div>
   
-  <div id="section-vanilla-bar" class="bg-[#efece1] h-auto w-full">
+  <div id="section-gourmet" class="bg-primary h-auto w-full">
+    <div class="flex w-full items-center justify-center pt-10">
+      <Image
+        loading="lazy"
+        inferSize={true}
+        src={trans('home').logo_white_imagotipo_cacao_gourmet.src}
+        alt={trans('home').logo_white_imagotipo_cacao_gourmet.alt}
+        class="w-75 object-fill object-center"
+      />
+    </div>
+    <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:load />
+  </div>
+
+  <div id="section-vanilla-bar" class="h-auto w-full bg-[#efece1]">
     <VainillaBar trans={trans('home').tabs_transition_panel.vainilla_bar} client:load />
   </div>
-  
+
   <div
     id="section-prosperi"
     class="bg-start flex h-auto min-h-screen w-full flex-col items-start justify-center bg-no-repeat md:items-center lg:items-center xl:items-center"
@@ -197,7 +195,7 @@ export async function getStaticPaths() {
           {trans('home').about.subtitle}
         </h3>
       </div>
-      <p class="text-lg text-center">
+      <p class="text-center text-lg">
         {trans('home').about.description}
       </p>
       <div class="flex h-70 w-full items-center justify-center gap-5 md:h-100 lg:h-130 xl:h-150">
@@ -215,10 +213,10 @@ export async function getStaticPaths() {
       </div>
     </div>
   </div>
-  
+
   <div id="section-news" class="flex h-auto w-full items-start justify-center">
-    <div class="flex flex-col w-full items-center justify-center gap-5">
-      <h3 class=" py-4 text-center text-3xl text-neutral-600 uppercase">
+    <div class="flex w-full flex-col items-center justify-center gap-5">
+      <h3 class="py-4 text-center text-3xl text-neutral-600 uppercase">
         {trans('home').about.farewell}
       </h3>
       <NewsSection client:only="react" />

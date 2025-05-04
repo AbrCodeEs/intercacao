@@ -90,21 +90,21 @@ const es = {
     },
     information: [
       {
-        title: 'Sabor:',
+        title: 'S = Sabor:',
         description: {
           boldText: 'MEDIO',
           additionalText: 'Denota sabor a nueces, afrutado',
         },
       },
       {
-        title: 'Aroma:',
+        title: 'A = Aroma:',
         description: {
           boldText: 'MEDIO',
           additionalText: 'Esencias a flores cítricas',
         },
       },
       {
-        title: 'Fermentación:',
+        title: 'F = Fermentación:',
         description: {
           boldText: 'ALTA',
           additionalText: 'Baja astringencia y amargura',
@@ -443,21 +443,21 @@ const en = {
     },
     information: [
       {
-        title: 'Flavor:',
+        title: 'S = Flavor:',
         description: {
           boldText: 'MEDIUM',
           additionalText: 'Notes of nuts and fruity flavors',
         },
       },
       {
-        title: 'Aroma:',
+        title: 'A = Aroma:',
         description: {
           boldText: 'MEDIUM',
           additionalText: 'Essences of citrus flowers',
         },
       },
       {
-        title: 'Fermentation:',
+        title: 'F = Fermentation:',
         description: {
           boldText: 'HIGH',
           additionalText: 'Low astringency and bitterness',

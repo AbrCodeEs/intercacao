@@ -9,7 +9,7 @@ export default (Astro) => {
   const lang = getLangFromUrl(Astro.url);
   const trans = useTranslations(lang);  
   const langImages = images[lang];
-  const langContent = trans('porcelana');
+  const langContent = trans('huila');
 
   return {
     generalInformation: {
@@ -166,14 +166,6 @@ export default (Astro) => {
             text: langContent.characteristics.analysis.description[1].text,
             information_block: true,
           },
-          {
-            text: langContent.characteristics.analysis.description[2].text,
-            information_block: false,
-          },
-          {
-            text: langContent.characteristics.analysis.description[3].text,
-            information_block: false,
-          },
         ],
       },
     },
@@ -187,10 +179,6 @@ export default (Astro) => {
             author: langContent.cocoaMap[0].content[0].author,
             border: true,
           },
-          {
-            type: 'paragraph',
-            text: langContent.cocoaMap[0].content[1].text,
-          },
         ],
         image: {
           src: langImages.general.ruedaSabores,
@@ -202,10 +190,8 @@ export default (Astro) => {
         title: langContent.cocoaMap[1].title,
         content: [
           {
-            type: 'quote',
-            quote: langContent.cocoaMap[1].content[0].quote,
-            author: langContent.cocoaMap[1].content[0].author,
-            border: true,
+            type: 'paragraph',
+            text: langContent.cocoaMap[1].content[0].text,
           },
         ],
         image: {
@@ -326,7 +312,7 @@ export default (Astro) => {
           alt: 'traceability-certificates',
         },
         {
-          type: 'paragraph',
+          type: 'highlight',
           text: langContent.traceability.content[1].text,
         },
         {
@@ -334,7 +320,7 @@ export default (Astro) => {
           text: langContent.traceability.content[2].text,
         },
         {
-          type: 'paragraph',
+          type: 'highlight',
           text: langContent.traceability.content[3].text,
         },
         {
@@ -346,10 +332,6 @@ export default (Astro) => {
           text: langContent.traceability.content[5].text,
         },
       ],
-      imagesDialog: {
-        src: langImages.certifications.certificadoOrigen,
-        alt: langContent.traceability.images[0].alt,
-      },
       images: [
         {
           src: langImages.certifications.traceability[0],
@@ -357,6 +339,14 @@ export default (Astro) => {
         },
         {
           src: langImages.certifications.traceability[1],
+          alt: langContent.traceability.images[2].alt,
+        },
+        {
+          src: langImages.certifications.traceability[2],
+          alt: langContent.traceability.images[2].alt,
+        },
+        {
+          src: langImages.certifications.traceability[3],
           alt: langContent.traceability.images[2].alt,
         },
       ],
@@ -380,14 +370,6 @@ export default (Astro) => {
           {
             src: langImages.location.location[0],
             alt: langContent.location.ecology.images[0].alt,
-          },
-          {
-            src: langImages.location.location[1],
-            alt: langContent.location.ecology.images[1].alt,
-          },
-          {
-            src: langImages.location.location[2],
-            alt: langContent.location.ecology.images[1].alt,
           }
         ],
       },
@@ -398,14 +380,6 @@ export default (Astro) => {
         {
           src: langImages.history[0],
           alt: langContent.history.images[0].alt,
-        },
-        {
-          src: langImages.history[1],
-          alt: langContent.history.images[1].alt,
-        },
-        {
-          src: langImages.history[2],
-          alt: langContent.history.images[1].alt,
         },
       ],
       content: [
@@ -429,14 +403,14 @@ export default (Astro) => {
           type: 'paragraph',
           text: langContent.history.content[4].text,
         },
-        {
-          type: 'paragraph',
-          text: langContent.history.content[5].text,
-        },
-        {
-          type: 'paragraph',
-          text: langContent.history.content[6].text,
-        },
+        // {
+        //   type: 'paragraph',
+        //   text: langContent.history.content[5].text,
+        // },
+        // {
+        //   type: 'paragraph',
+        //   text: langContent.history.content[6].text,
+        // },
       ],
     },
     socialResponsibility: {

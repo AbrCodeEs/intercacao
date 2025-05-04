@@ -90,21 +90,21 @@ const es = {
     },
     information: [
       {
-        title: 'Sabor:',
+        title: 'S = Sabor:',
         description: {
           boldText: 'MEDIO',
           additionalText: 'Presencia de sabores afrutados, caramelos, nueces',
         },
       },
       {
-        title: 'Aroma:',
+        title: 'A = Aroma:',
         description: {
           boldText: 'BAJO',
           additionalText: 'Esencias florales y herbales',
         },
       },
       {
-        title: 'Fermentación:',
+        title: 'F = Fermentación:',
         description: {
           boldText: 'MEDIO',
           additionalText: 'Moderada astringencia y amargura',
@@ -135,7 +135,8 @@ const es = {
         {
           type: 'quote',
           quote:
-            '"Se perfilan todos los sabores característicos de los criollos entrelazados con trinitarios bien beneficiados que conducen a una experiencia única, deseable y permanente en el tiempo", Detalló la Ing. Ms. Gladys Ramos.',
+            '"Se perfilan todos los sabores característicos de los criollos entrelazados con trinitarios bien beneficiados que conducen a una experiencia única, deseable y permanente en el tiempo"',
+          author: 'Detalló la Ing. Ms. Gladys Ramos.',
         },
       ],
       image: { alt: 'Rueda de sabores del cacao' },
@@ -165,10 +166,9 @@ const es = {
         protocols: [
           {
             title: 'Protocolo de Fermentación',
+            description:
+              'Para el inicio de la etapa de fermentación del grano de Canoabo, por contener un alto nivel de genética Trinitaria y descendencia criolla moderada, se debe seguir el siguiente proceso:',
             items: [
-              {
-                text: 'Para el inicio de la etapa de fermentación del grano de Canoabo, por contener un alto nivel de genética Trinitaria y descendencia criolla moderada, se debe seguir el siguiente proceso:',
-              },
               {
                 key: 'Tipo de Cacao',
               },
@@ -194,10 +194,9 @@ const es = {
           },
           {
             title: 'Protocolo de Secado',
+            description:
+              'El procedimiento depende de los días de fermentación y la consistencia que tomen los granos durante el proceso, para la evolución del grano o secado, Se realizan remociones cada media hora.',
             items: [
-              {
-                text: 'El procedimiento depende de los días de fermentación y la consistencia que tomen los granos durante el proceso, para la evolución del grano o secado, Se realizan remociones cada media hora.',
-              },
               {
                 key: 'Tipo de Cacao',
               },
@@ -339,6 +338,19 @@ const es = {
       },
     ],
   },
+  socialResponsibility: {
+    title: 'Responsabilidad Social',
+    images: [
+      {
+        alt: 'imagen1',
+      },
+      {
+        alt: 'imagen2',
+      },
+    ],
+    paragraphs:
+      'El objetivo primordial es colaborar, enriquecer y ser promotor de las buenas prácticas agrícolas en la generación de relevo de la comunidad, gracias al aporte y unión con la FUNDACION PROSPERI, fundación sin fines de lucro, que mantiene el compromiso de difundir los valores históricos, culturales y agrícolas de Venezuela, a través de sus programas educativos como “Regreso al agro”, se logra demostrar que el cultivo de cacao es una profesión rentable, que genera un cambio social.',
+  },
 };
 
 const en = {
@@ -433,21 +445,21 @@ const en = {
     },
     information: [
       {
-        title: 'Flavor:',
+        title: 'S = Flavor:',
         description: {
           boldText: 'MEDIUM',
           additionalText: 'Presence of fruity flavors, candies, nuts',
         },
       },
       {
-        title: 'Aroma:',
+        title: 'A = Aroma:',
         description: {
           boldText: 'LOW',
           additionalText: 'Floral and herbal essences',
         },
       },
       {
-        title: 'Fermentation:',
+        title: 'F = Fermentation:',
         description: {
           boldText: 'MEDIUM',
           additionalText: 'Moderate astringency and bitterness',
@@ -459,7 +471,7 @@ const en = {
       alt: 'Canoabo Fino Cocoa',
       description: [
         {
-          text: 'Due to creole genetics and high trinitario descent, Canoabo\'s miscellaneous beans show (±6%) creole beans in cut tests, (±86%) fermented beans, (±6%) violet beans, and (±8%) slate beans.',
+          text: "Due to creole genetics and high trinitario descent, Canoabo's miscellaneous beans show (±6%) creole beans in cut tests, (±86%) fermented beans, (±6%) violet beans, and (±8%) slate beans.",
         },
         {
           text: 'Regarding weight, there are 85 almonds per 100g, meaning each almond weighs 1.18g.',
@@ -477,7 +489,9 @@ const en = {
         },
         {
           type: 'quote',
-          quote: '"All characteristic creole flavors intertwine with well-processed trinitarios, creating a unique, desirable, and lasting experience", detailed Eng. Ms. Gladys Ramos.',
+          quote:
+            '"All characteristic creole flavors intertwine with well-processed trinitarios, creating a unique, desirable, and lasting experience"',
+          author: 'Detalló la Ing. Ms. Gladys Ramos.',
         },
       ],
       image: { alt: 'Cocoa Flavor Wheel' },
@@ -487,11 +501,12 @@ const en = {
       content: [
         {
           type: 'paragraph',
-          text: 'The region\'s coastal proximity in north-central Venezuela intensely shapes Canoabo cocoa\'s sensory profile, featuring unctuous texture of light creole cocoas with excellent combinations of fruity, floral, herbal, sweet, and caramel notes - making it premium material for gourmet chocolates.',
+          text: "The region's coastal proximity in north-central Venezuela intensely shapes Canoabo cocoa's sensory profile, featuring unctuous texture of light creole cocoas with excellent combinations of fruity, floral, herbal, sweet, and caramel notes - making it premium material for gourmet chocolates.",
         },
         {
           type: 'quote',
-          quote: '"Its most distinctive attributes are its persistent creamy texture and caramel flavor", indicated Eng. Ms. Gladys Ramos.',
+          quote:
+            '"Its most distinctive attributes are its persistent creamy texture and caramel flavor", indicated Eng. Ms. Gladys Ramos.',
         },
       ],
       image: {
@@ -506,10 +521,9 @@ const en = {
         protocols: [
           {
             title: 'Fermentation Protocol',
+            description:
+              'For Canoabo bean fermentation (high trinitario genetics with moderate creole descent), follow this process:',
             items: [
-              {
-                text: 'For Canoabo bean fermentation (high trinitario genetics with moderate creole descent), follow this process:',
-              },
               {
                 key: 'Cocoa Type',
               },
@@ -535,10 +549,9 @@ const en = {
           },
           {
             title: 'Drying Protocol',
+            description:
+              'Procedure depends on fermentation days and bean consistency. For drying evolution, stir every half hour.',
             items: [
-              {
-                text: 'Procedure depends on fermentation days and bean consistency. For drying evolution, stir every half hour.',
-              },
               {
                 key: 'Cocoa Type',
               },
@@ -554,11 +567,7 @@ const en = {
                 key: 'Drying Techniques',
               },
               {
-                items: [
-                  'Floor type: concrete',
-                  'Humidity: 7.5%',
-                  'Drying method: Sun-dried',
-                ],
+                items: ['Floor type: concrete', 'Humidity: 7.5%', 'Drying method: Sun-dried'],
               },
             ],
             image: {
@@ -574,10 +583,10 @@ const en = {
     subtitle: 'certifications and awards',
     content: [
       {
-        text: 'Agriculture and tourism sustain Canoabo, an important cocoa plantation center and one of Carabobo\'s best preserved ecological zones.',
+        text: "Agriculture and tourism sustain Canoabo, an important cocoa plantation center and one of Carabobo's best preserved ecological zones.",
       },
       {
-        text: 'Canoabo covers 187 km² with 3,900 inhabitants across 650 homes, including cocoa producers like engineer Luis Morales from Chile. Captivated by Venezuela\'s reputation for world-class coastal cocoa, he established the beautiful San Cayetano Estate with his son Rodrigo.',
+        text: "Canoabo covers 187 km² with 3,900 inhabitants across 650 homes, including cocoa producers like engineer Luis Morales from Chile. Captivated by Venezuela's reputation for world-class coastal cocoa, he established the beautiful San Cayetano Estate with his son Rodrigo.",
       },
       {
         text: 'Current production reaches 10,000 kg annually across two harvest seasons: main (Dec-Apr) and mid (Jun-Jul).',
@@ -652,27 +661,39 @@ const en = {
     ],
     content: [
       {
-        text: 'Founded March 19, 1711 as San José de Canoabo by Father Andrés Páez Vargas, it\'s Bejuma\'s largest parish with extensive cocoa plantations.',
+        text: 'The Canoabo parish was founded more than 300 years ago, specifically on March 19, 1711, by Father Andrés Páez Vargas, under the name of San José de Canoabo. It is considered the largest area in the Bejuma municipality, already home to large expanses of the idyllic seed.',
       },
       {
-        text: 'Cocoa production began in 1720, expanding before declining due to 1809 economic shifts when landowners replaced cocoa with coffee.',
+        text: 'By 1720, cacao production began in Canoabo. Its land area, tall trees, and production in bushels increased, only to plummet due to the economic activity that occurred during those years.',
       },
       {
-        text: 'Its indigenous name means "village beside fresh water". This Carabobo town features bicycles, large-windowed houses with central gardens, stores, and a square.',
+        text: 'Marco Tulio Merida points out, in his book Historia de Canoabo, it was an agricultural period where the countrys large landowners began to replace cacao planting with coffee. This was the reality in 1809, when its producers were the first to begin commercially planting the prized coffee. grain.',
       },
       {
-        text: 'Situated in Carabobo\'s fertile western mountain valleys (collectively called Altos Valles de Carabobo), it\'s home to gentlemen, artisans, and poets like Vicente Gerbasi - Venezuela\'s most representative 20th century writer.',
+        text: 'Its name comes from an indigenous term meaning “village by fresh water.” A small town in Carabobo state where bicycles, houses with large windows and gardens in the center, wineries, and a plaza are what make this place attractive.',
       },
       {
-        text: 'Maintaining colonial style since foundation: narrow streets, old houses with high windows and tile roofs. Considered paradise, many Spaniards traveled through surrounding mountains from Urama to Puerto Cabello via donkeys and carts.',
+        text: 'Canoabo is a friendly town located in one of the many fertile and beautiful valleys that open up in the mountains of western Carabobo state, collectively known as the Valles Altos de Carabobo.',
       },
       {
-        text: 'The town preserves traditions including Dancing Devils (originating c.1770) who parade during Corpus Christi in colorful costumes. Their hornless masks (except the Lead Devil) feature animal/demon figures.',
+        text: 'A town of gentlemen, cradle of artisans and great poets, which saw the birth of Vicente Gerbasi, Venezuelan poet, politician, and diplomat, considered the most representative contemporary Venezuelan writer and one of the most brilliant and influential of the 20th century.',
       },
       {
-        text: 'Local woodcarvers create magnificent works in small workshops, full of town essence and joy.',
+        text: 'Canoabo still maintains its colonial style that has characterized it since its founding, with narrow streets and old mansions with high windows and tiled roofs. This parish was considered a paradise, and many Spaniards traveled from Urama on donkeys and carts through the mountains overlooking Puerto Cabello.',
+      },
+      {
+        text: 'This welcoming town also works to keep our traditions alive, as it has a small brotherhood of Dancing Devils (whose origins date back to around 1770). Every year they go out to dance through the streets of the town on Corpus Christi. They are characterized by not having horns on their masks, except for that of the Capataz or Devil Mayor. For the festivity, they wear costumes of different colors, and their masks represent figures of animals or demons.',
+      },
+      {
+        text: 'Among its inhabitants are also great artisans and wood carvers, who within their tiny workshops produce magnificent works filled with the essence and joy of the town.',
       },
     ],
+  },
+  socialResponsibility: {
+    title: 'Social Responsibility',
+    images: [{ alt: 'image1' }, { alt: 'image2' }],
+    paragraphs:
+      "Our primary objective is promoting sustainable agricultural practices through next-generation training. Partnering with PROSPERI Foundation (non-profit), we preserve Venezuela's historical, cultural, and agricultural heritage. Educational programs like 'Return to Agriculture' demonstrate cocoa farming's viability as profitable profession driving social change.",
   },
 };
 

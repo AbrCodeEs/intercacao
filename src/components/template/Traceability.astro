@@ -126,7 +126,7 @@ const { traceability } = Astro.props;
         traceability.images.map((image, index) => (
           <div
             class:list={[
-              'group animate-trigger-left relative size-auto flex-none overflow-hidden rounded-lg bg-white pt-4',
+              'group animate-trigger-left relative w-full flex-none overflow-hidden rounded-lg bg-neutral-300 animate-once animate-ease-in-out',
             ]}
           >
             <Image
@@ -134,7 +134,7 @@ const { traceability } = Astro.props;
               loading="eager"
               src={image.src}
               alt={image.alt}
-              class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+              class="w-full transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
             />
           </div>
         ))
