@@ -154,7 +154,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     // url: 'http://tumaco.intercacao.com',
-    url: '/tumaco'
+    url: 'tumaco'
   },
   {
     id: '7',
@@ -176,8 +176,8 @@ export const chocolateBars: CocoaBar[] = [
       wood: 0.5,
       spices: 0,
     },
-    url: 'http://canoabo.intercacao.com',
-    // url: '/canoabo'
+    // url: 'http://canoabo.intercacao.com',
+    url: 'canoabo'
   },
   {
     id: '8',
@@ -199,8 +199,8 @@ export const chocolateBars: CocoaBar[] = [
       wood: 1.0,
       spices: 0,
     },
-    url: 'http://choroni.intercacao.com',
-    // url: '/choroni'
+    // url: 'http://choroni.intercacao.com',
+    url: 'choroni'
   },
   {
     id: '9',
@@ -222,8 +222,8 @@ export const chocolateBars: CocoaBar[] = [
       wood: 0,
       spices: 0,
     },
-    url: 'http://huila.intercacao.com',
-    // url: '/huila'
+    // url: 'http://huila.intercacao.com',
+    url: 'huila'
   },
   {
     id: '10',
