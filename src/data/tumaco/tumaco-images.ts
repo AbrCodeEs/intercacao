@@ -1,36 +1,31 @@
-import PorcelanaWeb from '@/images/porcelana/porcelana-web.webp';
+import PorcelanaWeb from '@/images/tumaco/tumaco-web.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
-import Clasificacion from '@/images/porcelana/evaluacion.webp';
+import Clasificacion from '@/images/tumaco/evaluacion.webp';
+import ClasificacionEn from '@/images/tumaco/evaluacionEn.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
-import EquipoCata from '@/images/porcelana/equipodecata.webp';
-import CuencaCacao from '@/images/porcelana/cacao2.webp';
-import RuedaSabores from '@/images/porcelana/ruedadesabores.webp';
-import MapaSensorial from '@/images/porcelana/mapasensorial.webp';
-import TipoDeCacaoOne from '@/images/porcelana/tipodecacao.webp';
-import TipoDeCacaoTwo from '@/images/porcelana/tipodecacao2.webp';
+import EquipoCata from '@/images/tumaco/equipodecata.webp';
+import CuencaCacao from '@/images/tumaco/corte.webp';
+import RuedaSabores from '@/images/tumaco/mapadesabores.webp';
+import MapaSensorial from '@/images/tumaco/mapasensorial.webp';
+import TipoDeCacaoOne from '@/images/tumaco/cacaotrinitario.webp';
+import TipoDeCacaoTwo from '@/images/tumaco/cacaocriollo.webp';
+import TipoDeCacaoThre from '@/images/tumaco/secotrinitario.webp';
+import TipoDeCacaoFour from '@/images/tumaco/secocriollo.webp';
 
-import ProtocoloFermentacionOne from '@/images/porcelana/fermentado1.webp';
-import ProtocoloFermentacionTwo from '@/images/porcelana/fermentado2.webp';
-import ProtocoloFermentacionThree from '@/images/porcelana/fermentado3.webp';
+import ProtocoloFermentacionOne from '@/images/tumaco/fermentacion.webp';
+import ProtocoloFermentacionTwo from '@/images/tumaco/fermentacion2.webp';
+import ProtocoloFermentacionThree from '@/images/tumaco/fermentacion3.webp';
 
-import CosechaOne from '@/images/porcelana/cosecha1.webp';
-import CosechaTwo from '@/images/porcelana/cosecha2.webp';
+import CosechaOne from '@/images/tumaco/secado.webp';
+import CosechaTwo from '@/images/tumaco/secado2.webp';
 
-import CertificadoOrigenOne from '@/images/porcelana/certificaciones1.webp';
-import CertificadoOrigenTwo from '@/images/porcelana/certificaciones2.webp';
-import CertificadoOrigenTree from '@/images/porcelana/certificaciones3.webp';
+import TraceabilityOne from '@/images/tumaco/trazabilidad.webp';
+import TraceabilityTwo from '@/images/tumaco/trazabilidad2.webp';
 
-import TraceabilityOne from '@/images/porcelana/trazabilidad.webp';
-import TraceabilityTwo from '@/images/porcelana/trazabilidad2.webp';
+import map from '@/images/tumaco/mapa.webp';
 
-import map from '@/images/porcelana/mapa.webp';
-import locationOne from '@/images/porcelana/paisaje1.webp';
-import locationTwo from '@/images/porcelana/paisaje2.webp';
-import locationThree from '@/images/porcelana/paisaje3.webp';
-
-import historiaOne from '@/images/porcelana/historia1.webp';
-import historiaTwo from '@/images/porcelana/historia2.webp';
-import historiaThree from '@/images/porcelana/historia3.webp';
+import historiaOne from '@/images/tumaco/historia.webp';
+import historiaTwo from '@/images/tumaco/historia2.webp';
 
 const images = {
   es: {
@@ -45,7 +40,7 @@ const images = {
       mapaSensorial: MapaSensorial,
     },
     benefit: {
-      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
+      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThre, TipoDeCacaoFour],
     },
     protocols: {
       fermentacion: [
@@ -56,21 +51,19 @@ const images = {
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
-      certificadoOrigen: CertificadoOrigenTree,
       traceability: [TraceabilityOne, TraceabilityTwo],
     },
     location: {
       map: map,
-      location: [locationOne, locationTwo, locationThree],
+      location: [],
     },
-    history: [historiaOne, historiaTwo, historiaThree],
+    history: [historiaOne, historiaTwo],
   },
   eng: {
     general: {
       porcelanaWeb: PorcelanaWeb,
       ratingStars: RatingStars,
-      clasificacion: Clasificacion,
+      clasificacion: ClasificacionEn,
       saboresPositivos: SaboresPositivos,
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
@@ -78,7 +71,7 @@ const images = {
       mapaSensorial: MapaSensorial,
     },
     benefit: {
-      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
+      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThre, TipoDeCacaoFour],
     },
     protocols: {
       fermentacion: [
@@ -89,15 +82,13 @@ const images = {
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
-      certificadoOrigen: CertificadoOrigenTree,
       traceability: [TraceabilityOne, TraceabilityTwo],
     },
     location: {
       map: map,
-      location: [locationOne, locationTwo, locationThree],
+      location: [],
     },
-    history: [historiaOne, historiaTwo, historiaThree],
+    history: [historiaOne, historiaTwo],
   },
 };
 

@@ -1,35 +1,27 @@
-import PorcelanaWeb from '@/images/pintao/carupano-pintao-web.webp';
-
+import PorcelanaWeb from '@/images/canoabo/canoabo-web.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
-
-import Clasificacion from '@/images/pintao/evaluacion.webp';
+import Clasificacion from '@/images/canoabo/evaluacion.webp';
 import SaboresPositivos from '@/images/pintao/cacaoesencia.webp';
-import EquipoCata from '@/images/pintao/equipocata.webp';
-import CuencaCacao from '@/images/pintao/cortecacao.webp';
-import RuedaSabores from '@/images/pintao/ruedadesabores.webp';
-import MapaSensorial from '@/images/pintao/mapasensorial.webp';
+import EquipoCata from '@/images/canoabo/equipodecata.webp';
+import CuencaCacao from '@/images/canoabo/corte.webp';
+import RuedaSabores from '@/images/canoabo/mapadesabores.webp';
+import MapaSensorial from '@/images/canoabo/mapasensorial.webp';
 
-import TipoDeCacaoOne from '@/images/pintao/cacaotrinitario.webp';
-import TipoDeCacaoTwo from '@/images/pintao/cacaocriollo.webp';
-import TipoDeCacaoThree from '@/images/pintao/secadocriollo.webp';
-import TipoDeCacaoFour from '@/images/pintao/secadotrinitario.webp';
+import TipoDeCacaoOne from '@/images/canoabo/cacaotrinitario.webp';
+import TipoDeCacaoTwo from '@/images/canoabo/trinitarioseco.webp';
 
-import ProtocoloFermentacionOne from '@/images/pintao/cosecha1.webp';
-import ProtocoloFermentacionTwo from '@/images/pintao/cosecha2.webp';
-import ProtocoloFermentacionThree from '@/images/pintao/cosecha3.webp';
+import ProtocoloFermentacionOne from '@/images/canoabo/fermentacion.webp';
 
-import CosechaOne from '@/images/pintao/secado1.webp';
-import CosechaTwo from '@/images/pintao/secado2.webp';
+import CosechaOne from '@/images/canoabo/secado.webp';
+import CosechaTwo from '@/images/canoabo/secado2.webp';
 
-import TraceabilityOne from '@/images/pintao/trazabilidad.webp';
-import TraceabilityTwo from '@/images/pintao/trazabilidad2.webp';
+import TraceabilityOne from '@/images/canoabo/trazabilidad.webp';
 
-import map from '@/images/pintao/mapa.webp';
-import locationOne from '@/images/pintao/paisaje.webp';
+import map from '@/images/canoabo/mapa.webp';
+import locationOne from '@/images/canoabo/ecologia.webp';
 
-import historiaOne from '@/images/pintao/historia1.webp';
-import historiaTwo from '@/images/pintao/historia2.webp';
-import historiaThree from '@/images/pintao/historia3.webp';
+import historiaOne from '@/images/canoabo/historia.webp';
+import historiaTwo from '@/images/canoabo/historia2.webp';
 
 const images = {
   es: {
@@ -44,25 +36,23 @@ const images = {
       mapaSensorial: MapaSensorial,
     },
     benefit: {
-      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThree, TipoDeCacaoFour],
+      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
       fermentacion: [
         ProtocoloFermentacionOne,
-        ProtocoloFermentacionTwo,
-        ProtocoloFermentacionThree,
       ],
       secado: [CosechaOne, CosechaTwo],
      
     },
     certifications: {
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      traceability: [TraceabilityOne],
     },
     location: {
       map: map,
       location: [locationOne],
     },
-    history: [historiaOne, historiaTwo, historiaThree],
+    history: [historiaOne, historiaTwo],
   },
   eng: {
     general: {
@@ -76,25 +66,23 @@ const images = {
       mapaSensorial: MapaSensorial,
     },
     benefit: {
-      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThree, TipoDeCacaoFour],
+      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
       fermentacion: [
         ProtocoloFermentacionOne,
-        ProtocoloFermentacionTwo,
-        ProtocoloFermentacionThree,
       ],
       secado: [CosechaOne, CosechaTwo],
      
     },
     certifications: {
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      traceability: [TraceabilityOne],
     },
     location: {
       map: map,
       location: [locationOne],
     },
-    history: [historiaOne, historiaTwo, historiaThree],
+    history: [historiaOne, historiaTwo],
   },
 };
 

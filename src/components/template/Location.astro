@@ -57,7 +57,9 @@ const { location } = Astro.props;
   <!-- Sección de ecología -->
   <div class="flex w-full flex-col gap-5 md:flex-row lg:flex-row xl:flex-row">
     <!-- Texto de ecología -->
-    <div class="flex w-full flex-1 flex-col gap-5 md:w-2/4 lg:w-2/4 xl:w-2/4">
+    <div
+      class={`flex w-full flex-1 flex-col gap-5 ${location.ecology.images.length ? ' md:w-2/4 lg:w-2/4 xl:w-2/4' : 'w-full'}`}
+    >
       <h3 class="py-4 text-3xl text-neutral-600 uppercase">
         {location.ecology.title}
       </h3>
@@ -65,20 +67,22 @@ const { location } = Astro.props;
     </div>
 
     <!-- Imágenes de ecología -->
-    <div class="flex w-full flex-1 flex-col gap-5 md:w-2/4 lg:w-2/4 xl:w-2/4">
-      {
-        location.ecology.images.map((image) => (
-          <div class="group animate-trigger-left relative h-auto w-full flex-none overflow-hidden rounded-lg">
-            <Image
-              inferSize={true}
-              src={image.src}
-              alt={image.alt}
-              loading="lazy"
-              class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
-            />
-          </div>
-        ))
-      }
-    </div>
+    {
+      !!location.ecology.images.length && (
+        <div class="flex w-full flex-1 flex-col gap-5 md:w-2/4 lg:w-2/4 xl:w-2/4">
+          {location.ecology.images.map((image) => (
+            <div class="group animate-trigger-left relative h-auto w-full flex-none overflow-hidden rounded-lg">
+              <Image
+                inferSize={true}
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+      )
+    }
   </div>
 </section>

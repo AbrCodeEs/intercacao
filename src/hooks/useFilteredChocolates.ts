@@ -18,8 +18,6 @@ export const useFilteredChocolates = (
         url = `/${lang}/${url}`;
       }
 
-      console.log(url)
-
       return { ...cocoa, url };
     })
     .filter((cocoa) => !cocoa.disabled);

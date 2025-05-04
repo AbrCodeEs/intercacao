@@ -20,7 +20,7 @@ export function WorldMap({
   const map = new DottedMap({ height: 100, grid: "diagonal" });
 
   const svgMap = map.getSVG({
-    radius: 0.1,
+    radius: 0.2,
     color: '#FFFFFF',
     shape: "circle",
   });
@@ -39,6 +39,7 @@ export function WorldMap({
     const midY = Math.min(start.y, end.y) - 50;
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
   };
+  console.log(encodeURIComponent(svgMap))
 
   return (
     <div className="w-full aspect-[2/1]  bg-w hite rounded-lg  relative font-sans">

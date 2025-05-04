@@ -1,36 +1,32 @@
-import PorcelanaWeb from '@/images/porcelana/porcelana-web.webp';
+import PorcelanaWeb from '@/images/huila/huila-web.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
-import Clasificacion from '@/images/porcelana/evaluacion.webp';
+import Clasificacion from '@/images/huila/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
-import EquipoCata from '@/images/porcelana/equipodecata.webp';
-import CuencaCacao from '@/images/porcelana/cacao2.webp';
-import RuedaSabores from '@/images/porcelana/ruedadesabores.webp';
-import MapaSensorial from '@/images/porcelana/mapasensorial.webp';
-import TipoDeCacaoOne from '@/images/porcelana/tipodecacao.webp';
-import TipoDeCacaoTwo from '@/images/porcelana/tipodecacao2.webp';
+import EquipoCata from '@/images/huila/equipodecata.webp';
+import CuencaCacao from '@/images/huila/corte.webp';
+import RuedaSabores from '@/images/huila/mapadesabores.webp';
+import MapaSensorial from '@/images/huila/mapasensorial.webp';
+import TipoDeCacaoOne from '@/images/huila/cacaotrinitario.webp';
+import TipoDeCacaoTwo from '@/images/huila/trinitarioseco.webp';
 
-import ProtocoloFermentacionOne from '@/images/porcelana/fermentado1.webp';
-import ProtocoloFermentacionTwo from '@/images/porcelana/fermentado2.webp';
-import ProtocoloFermentacionThree from '@/images/porcelana/fermentado3.webp';
+import ProtocoloFermentacionOne from '@/images/huila/fermentacion.webp';
+import ProtocoloFermentacionTwo from '@/images/huila/fermentacion2.webp';
+import ProtocoloFermentacionThree from '@/images/huila/fermentacion3.webp';
 
-import CosechaOne from '@/images/porcelana/cosecha1.webp';
-import CosechaTwo from '@/images/porcelana/cosecha2.webp';
+import CosechaOne from '@/images/huila/secado.webp';
+import CosechaTwo from '@/images/huila/secado2.webp';
 
-import CertificadoOrigenOne from '@/images/porcelana/certificaciones1.webp';
-import CertificadoOrigenTwo from '@/images/porcelana/certificaciones2.webp';
-import CertificadoOrigenTree from '@/images/porcelana/certificaciones3.webp';
+import CertificadoOrigenOne from '@/images/huila/certificaciones.webp';
 
-import TraceabilityOne from '@/images/porcelana/trazabilidad.webp';
-import TraceabilityTwo from '@/images/porcelana/trazabilidad2.webp';
+import TraceabilityOne from '@/images/huila/trazabilidad.webp';
+import TraceabilityTwo from '@/images/huila/trazabilidad2.webp';
+import TraceabilityThre from '@/images/huila/trazabilidad3.webp';
+import TraceabilityFour from '@/images/huila/trazabilidad4.webp';
 
-import map from '@/images/porcelana/mapa.webp';
-import locationOne from '@/images/porcelana/paisaje1.webp';
-import locationTwo from '@/images/porcelana/paisaje2.webp';
-import locationThree from '@/images/porcelana/paisaje3.webp';
+import map from '@/images/huila/mapa.webp';
+import locationOne from '@/images/huila/ecologia.webp';
 
-import historiaOne from '@/images/porcelana/historia1.webp';
-import historiaTwo from '@/images/porcelana/historia2.webp';
-import historiaThree from '@/images/porcelana/historia3.webp';
+import historiaOne from '@/images/huila/historia.webp';
 
 const images = {
   es: {
@@ -56,15 +52,14 @@ const images = {
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
-      certificadoOrigen: CertificadoOrigenTree,
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      certificados: [CertificadoOrigenOne],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThre, TraceabilityFour],
     },
     location: {
       map: map,
-      location: [locationOne, locationTwo, locationThree],
+      location: [locationOne],
     },
-    history: [historiaOne, historiaTwo, historiaThree],
+    history: [historiaOne],
   },
   eng: {
     general: {
@@ -89,15 +84,14 @@ const images = {
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
-      certificadoOrigen: CertificadoOrigenTree,
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      certificados: [CertificadoOrigenOne],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThre, TraceabilityFour],
     },
     location: {
       map: map,
-      location: [locationOne, locationTwo, locationThree],
+      location: [locationOne],
     },
-    history: [historiaOne, historiaTwo, historiaThree],
+    history: [historiaOne],
   },
 };
 

@@ -148,6 +148,10 @@ const postHarvestBenefit = z.object({
                   category: z.literal('list'),
                   items: z.array(z.string()),
                 }),
+                z.object({
+                  category: z.literal('paragraph'),
+                  paragraph: z.string(),
+                }),
               ])
               .array(),
             mainImage: z

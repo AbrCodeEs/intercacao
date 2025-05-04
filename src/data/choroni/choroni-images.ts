@@ -1,36 +1,31 @@
-import PorcelanaWeb from '@/images/porcelana/porcelana-web.webp';
+import PorcelanaWeb from '@/images/choroni/choroni-web.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
-import Clasificacion from '@/images/porcelana/evaluacion.webp';
+import Clasificacion from '@/images/choroni/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
-import EquipoCata from '@/images/porcelana/equipodecata.webp';
-import CuencaCacao from '@/images/porcelana/cacao2.webp';
-import RuedaSabores from '@/images/porcelana/ruedadesabores.webp';
-import MapaSensorial from '@/images/porcelana/mapasensorial.webp';
-import TipoDeCacaoOne from '@/images/porcelana/tipodecacao.webp';
-import TipoDeCacaoTwo from '@/images/porcelana/tipodecacao2.webp';
+import EquipoCata from '@/images/choroni/equipodecata.webp';
+import CuencaCacao from '@/images/choroni/corte.webp';
+import RuedaSabores from '@/images/choroni/mapadesabores.webp';
+import MapaSensorial from '@/images/choroni/mapasensorial.webp';
 
-import ProtocoloFermentacionOne from '@/images/porcelana/fermentado1.webp';
-import ProtocoloFermentacionTwo from '@/images/porcelana/fermentado2.webp';
-import ProtocoloFermentacionThree from '@/images/porcelana/fermentado3.webp';
+import TipoDeCacaoOne from '@/images/choroni/cacaotrinitario.webp';
+import TipoDeCacaoTwo from '@/images/choroni/cacaocriollo.webp';
 
-import CosechaOne from '@/images/porcelana/cosecha1.webp';
-import CosechaTwo from '@/images/porcelana/cosecha2.webp';
+import TipoDeCacaoThre from '@/images/choroni/trinitarioseco.webp';
+import TipoDeCacaoFour from '@/images/choroni/criolloseco.webp';
 
-import CertificadoOrigenOne from '@/images/porcelana/certificaciones1.webp';
-import CertificadoOrigenTwo from '@/images/porcelana/certificaciones2.webp';
-import CertificadoOrigenTree from '@/images/porcelana/certificaciones3.webp';
+import ProtocoloFermentacionOne from '@/images/choroni/fermentacion.webp';
 
-import TraceabilityOne from '@/images/porcelana/trazabilidad.webp';
-import TraceabilityTwo from '@/images/porcelana/trazabilidad2.webp';
+import CosechaOne from '@/images/choroni/secado.webp';
+import CosechaTwo from '@/images/choroni/secado2.webp';
 
-import map from '@/images/porcelana/mapa.webp';
-import locationOne from '@/images/porcelana/paisaje1.webp';
-import locationTwo from '@/images/porcelana/paisaje2.webp';
-import locationThree from '@/images/porcelana/paisaje3.webp';
+import CertificadoOrigenTree from '@/images/choroni/trazabilidad.webp';
 
-import historiaOne from '@/images/porcelana/historia1.webp';
-import historiaTwo from '@/images/porcelana/historia2.webp';
-import historiaThree from '@/images/porcelana/historia3.webp';
+import TraceabilityOne from '@/images/choroni/trazabilidad2.webp';
+
+import map from '@/images/choroni/mapa.webp';
+
+import historiaOne from '@/images/choroni/historia.webp';
+import historiaTwo from '@/images/choroni/historia2.webp';
 
 const images = {
   es: {
@@ -45,26 +40,21 @@ const images = {
       mapaSensorial: MapaSensorial,
     },
     benefit: {
-      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
+      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThre, TipoDeCacaoFour],
     },
     protocols: {
-      fermentacion: [
-        ProtocoloFermentacionOne,
-        ProtocoloFermentacionTwo,
-        ProtocoloFermentacionThree,
-      ],
+      fermentacion: [ProtocoloFermentacionOne],
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
       certificadoOrigen: CertificadoOrigenTree,
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      traceability: [TraceabilityOne],
     },
     location: {
       map: map,
-      location: [locationOne, locationTwo, locationThree],
+      location: [],
     },
-    history: [historiaOne, historiaTwo, historiaThree],
+    history: [historiaOne, historiaTwo],
   },
   eng: {
     general: {
@@ -78,26 +68,21 @@ const images = {
       mapaSensorial: MapaSensorial,
     },
     benefit: {
-      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
+      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThre, TipoDeCacaoFour],
     },
     protocols: {
-      fermentacion: [
-        ProtocoloFermentacionOne,
-        ProtocoloFermentacionTwo,
-        ProtocoloFermentacionThree,
-      ],
+      fermentacion: [ProtocoloFermentacionOne],
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
       certificadoOrigen: CertificadoOrigenTree,
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      traceability: [TraceabilityOne],
     },
     location: {
       map: map,
-      location: [locationOne, locationTwo, locationThree],
+      location: [],
     },
-    history: [historiaOne, historiaTwo, historiaThree],
+    history: [historiaOne, historiaTwo],
   },
 };
 

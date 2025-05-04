@@ -58,16 +58,11 @@ export function ChocolateCard({
             )}
 
             {chocolate.watermark && (
-              <>
-                <div className="absolute left-0 top-5 flex items-center justify-center">
-                  <span className="relative w-20 flex justify-center before:absolute before:-inset-1 before:block before:-skew-y-20 before:bg-red-500">
-                    <span className="relative text-white -rotate-20">new</span>
-                  </span>
-                </div>
-                <div className="absolute inset-x-0 bottom-5 flex items-center justify-center">
-                  <h3 className="mb-1 font-semibold text-gray-600 xl:text-4xl text-center">{chocolate.name}</h3>
-                </div>
-              </>
+              <div className="absolute inset-x-0 bottom-5 flex items-center justify-center">
+                <h3 className="mb-1 text-center font-semibold text-gray-600 xl:text-4xl">
+                  {chocolate.name}
+                </h3>
+              </div>
             )}
 
             <div className="absolute inset-0 flex flex-col justify-start p-2 text-xl md:p-4 lg:p-4 xl:p-6">

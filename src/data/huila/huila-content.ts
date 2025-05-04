@@ -90,21 +90,21 @@ const es = {
     },
     information: [
       {
-        title: 'Sabor:',
+        title: 'S = Sabor:',
         description: {
           boldText: 'MEDIO',
           additionalText: 'Denota sabor a dulce y afrutado',
         },
       },
       {
-        title: 'Aroma:',
+        title: 'A = Aroma:',
         description: {
           boldText: 'MEDIO',
           additionalText: 'Esencia a postre caliente, manjar',
         },
       },
       {
-        title: 'Fermentación:',
+        title: 'F = Fermentación:',
         description: {
           boldText: 'MEDIO',
           additionalText: 'Moderada astringencia y amargura',
@@ -131,7 +131,8 @@ const es = {
         {
           type: 'quote',
           quote:
-            '"Se destaca como característica positiva el dulce del cafeto, lo que permite una gran diversidad de insectos polinizadores", Indicó la Ing. Gladys Ramos.',
+            '"Se destaca como característica positiva el dulce del cafeto, lo que permite una gran diversidad de insectos polinizadores",',
+          author: 'Indicó la Ing. Gladys Ramos.',
         },
       ],
       image: { alt: 'Rueda de sabores del cacao' },
@@ -152,6 +153,9 @@ const es = {
   postHarvestBenefit: {
     title: 'Beneficio Post Cosecha',
     content: [
+      {
+        text: 'Los agricultores dejan escurrir por 12 horas el cacao cosechado en sacos plásticos y posteriormente es llevado a la central de beneficio y vaciado en los cajones de madera.',
+      },
       {
         protocols: [
           {
@@ -218,7 +222,23 @@ const es = {
     subtitle: 'certificaciones y premios',
     content: [
       {
-        text: 'El cacao de Huila cuenta con una estatuilla plata de la Academy of Chocolate 2016, representado por Choctree.',
+        text: [
+          {
+            type: 'bold',
+            text: 'El cacao de Huila cuenta con una estatuilla plata de la Academy of',
+          },
+          {
+            type: 'link',
+            text: 'Chocolate 2016',
+            url: 'https://www.internationalchocolateawards.com/2016/10/world-final-winners-2016/',
+          },
+          { type: 'bold', text: ', representado por' },
+          {
+            type: 'link',
+            text: 'Choctree.',
+            url: 'https://www.choctree.co.uk/',
+          },
+        ],
       },
       {
         text: 'En sus inicios la asociación de productores de Huila la conformaban 60 productores, actualmente la asociación cuenta con 180 socios y participan trabajando en la central de beneficio entre 15 y 20 agricultores todos con la convicción de desarrollar el mejor proyecto de modernización del preciado grano.',
@@ -314,6 +334,19 @@ const es = {
       },
     ],
   },
+  socialResponsibility: {
+    title: 'Responsabilidad Social',
+    images: [
+      {
+        alt: 'imagen1',
+      },
+      {
+        alt: 'imagen2',
+      },
+    ],
+    paragraphs:
+      'El objetivo primordial es colaborar, enriquecer y ser promotor de las buenas prácticas agrícolas en la generación de relevo de la comunidad, gracias al aporte y unión con la FUNDACION PROSPERI, fundación sin fines de lucro, que mantiene el compromiso de difundir los valores históricos, culturales y agrícolas de Venezuela, a través de sus programas educativos como “Regreso al agro”, se logra demostrar que el cultivo de cacao es una profesión rentable, que genera un cambio social.',
+  },
 };
 
 const en = {
@@ -408,21 +441,21 @@ const en = {
     },
     information: [
       {
-        title: 'Flavor:',
+        title: 'S = Flavor:',
         description: {
           boldText: 'MEDIUM',
           additionalText: 'Notes of sweetness and fruity flavors',
         },
       },
       {
-        title: 'Aroma:',
+        title: 'A = Aroma:',
         description: {
           boldText: 'MEDIUM',
           additionalText: 'Essence of warm desserts and delicacies',
         },
       },
       {
-        title: 'Fermentation:',
+        title: 'F = Fermentation:',
         description: {
           boldText: 'MEDIUM',
           additionalText: 'Moderate astringency and bitterness',
@@ -470,6 +503,9 @@ const en = {
   postHarvestBenefit: {
     title: 'Post-Harvest Processing',
     content: [
+      {
+        text: 'Farmers let the harvested cocoa drain in plastic sacks for 12 hours, then take it to the processing plant and empty it into wooden crates.',
+      },
       {
         protocols: [
           {
@@ -536,7 +572,20 @@ const en = {
     subtitle: 'certifications and awards',
     content: [
       {
-        text: 'Huila cocoa won a 2016 Silver statuette from the Academy of Chocolate, represented by Choctree.',
+        text: [
+          { type: 'bold', text: 'Huila cacao has a silver statuette from the Academy of' },
+          {
+            type: 'link',
+            text: 'Chocolate 2016',
+            url: 'https://www.internationalchocolateawards.com/2016/10/world-final-winners-2016/',
+          },
+          { type: 'bold', text: ', represented by' },
+          {
+            type: 'link',
+            text: 'Choctree.',
+            url: 'https://www.choctree.co.uk/',
+          },
+        ],
       },
       {
         text: 'Originally 60 producers, the Huila association now has 180 members with 15-20 farmers working at the processing center to modernize cocoa production.',
@@ -628,6 +677,12 @@ const en = {
         text: "Residents take pride in their land's blue skies, crystal waters, and mountain vistas that shaped their past and present.",
       },
     ],
+  },
+  socialResponsibility: {
+    title: 'Social Responsibility',
+    images: [{ alt: 'image1' }, { alt: 'image2' }],
+    paragraphs:
+      "Our primary objective is promoting sustainable agricultural practices through next-generation training. Partnering with PROSPERI Foundation (non-profit), we preserve Venezuela's historical, cultural, and agricultural heritage. Educational programs like 'Return to Agriculture' demonstrate cocoa farming's viability as profitable profession driving social change.",
   },
 };
 

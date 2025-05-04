@@ -24,12 +24,10 @@ function Header({
   }, []);
 
   const changeLanguage = (lang: string) => {
-    console.log(lang)
     if (typeof window !== 'undefined') {
       const pathSegments = window.location.pathname.split('/');
       pathSegments[1] = lang;
       const newPath = pathSegments.join('/');
-      console.log(newPath)
       // Forzar recarga completa
       window.location.href = newPath;
     }

@@ -130,8 +130,8 @@ export const chocolateBars: CocoaBar[] = [
       wood: 1.5,
       spices: 1.7,
     },
-    url: 'http://patanemo.intercacao.com',
-    // url : 'patanemo' 
+    // url: 'http://patanemo.intercacao.com',
+    url : 'patanemo' 
   },
   {
     id: '6',
@@ -153,8 +153,8 @@ export const chocolateBars: CocoaBar[] = [
       wood: 1.5,
       spices: 0,
     },
-    url: 'http://tumaco.intercacao.com',
-    // url: '/tumaco'
+    // url: 'http://tumaco.intercacao.com',
+    url: '/tumaco'
   },
   {
     id: '7',

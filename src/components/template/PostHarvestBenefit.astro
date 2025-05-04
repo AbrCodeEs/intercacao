@@ -67,8 +67,8 @@ const {
 
                         case 'paragraph':
                           return (
-                            <div class="w-full flex-none">
-                              <p class="text-lg">{protocol.paragraph}</p>
+                            <div class="w-full flex-none py-3">
+                              <p class="text-lg">{detail.paragraph}</p>
                             </div>
                           );
 
@@ -101,7 +101,7 @@ const {
                         inferSize={true}
                         loading="eager"
                         src={image.src}
-                        class="transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+                        class="w-full transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
                         alt={image.alt}
                       />
                     </div>

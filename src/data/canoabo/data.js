@@ -3,13 +3,13 @@ import { getLangFromUrl, useTranslations } from '@/lib/translations';
 import RespSocial from '@/images/chuao/responsabilidad-social-fundacion-prosperi-color.png';
 import RespSocial2 from '@/images/chuao/responsabilidad-social-regreso-al-agro-color.png';
 
-import { images } from '@/data/canoabo/canoabo-images';
+import { images } from './canoabo-images';
 
 export default (Astro) => {
   const lang = getLangFromUrl(Astro.url);
   const trans = useTranslations(lang);
   const langImages = images[lang];
-  const langContent = trans('pintao');
+  const langContent = trans('canoabo');
 
   return {
     generalInformation: {
@@ -166,10 +166,7 @@ export default (Astro) => {
             text: langContent.characteristics.analysis.description[1].text,
             information_block: false,
           },
-          {
-            text: langContent.characteristics.analysis.description[2].text,
-            information_block: false,
-          },
+        
         ],
       },
     },
@@ -178,9 +175,13 @@ export default (Astro) => {
         title: langContent.cocoaMap[0].title,
         content: [
           {
+            type: 'paragraph',
+            text: langContent.cocoaMap[0].content[0].text,
+          },
+          {
             type: 'quote',
-            quote: langContent.cocoaMap[0].content[0].quote,
-            author: langContent.cocoaMap[0].content[0].author,
+            quote: langContent.cocoaMap[0].content[1].quote,
+            author: langContent.cocoaMap[0].content[1].author,
             border: true,
           },
         ],
@@ -194,9 +195,13 @@ export default (Astro) => {
         title: langContent.cocoaMap[1].title,
         content: [
           {
+            type: 'paragraph',
+            text: langContent.cocoaMap[1].content[0].text,
+          },
+          {
             type: 'quote',
-            quote: langContent.cocoaMap[1].content[0].quote,
-            author: langContent.cocoaMap[1].content[0].author,
+            quote: langContent.cocoaMap[1].content[1].quote,
+            author: langContent.cocoaMap[1].content[1].author,
             border: true,
           },
         ],
@@ -212,110 +217,86 @@ export default (Astro) => {
       backgroundColor: 'bg-neutral-100',
       content: [
         {
-          type: 'quote',
-          text: langContent.postHarvestBenefit.content[0].text,
-          border: true,
-        },
-        {
           type: 'protocols',
           protocols: [
             {
-              title: langContent.postHarvestBenefit.content[1].protocols[0].title,
+              title: langContent.postHarvestBenefit.content[0].protocols[0].title,
+              description: langContent.postHarvestBenefit.content[0].protocols[0].description,
               items: [
                 {
                   category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[1].protocols[0].items[0].key,
+                  key: langContent.postHarvestBenefit.content[0].protocols[0].items[0].key,
                   value: '',
                 },
                 {
                   category: 'imageText',
                   image: langImages.benefit.tipoDeCacao[0],
-                  alt: langContent.postHarvestBenefit.content[1].protocols[0].items[1].alt,
-                  text: langContent.postHarvestBenefit.content[1].protocols[0].items[1].text,
-                  size: 24,
-                },
-                {
-                  category: 'imageText',
-                  image: langImages.benefit.tipoDeCacao[1],
-                  alt: langContent.postHarvestBenefit.content[1].protocols[0].items[2].alt,
-                  text: langContent.postHarvestBenefit.content[1].protocols[0].items[2].text,
+                  alt: langContent.postHarvestBenefit.content[0].protocols[0].items[1].alt,
+                  text: langContent.postHarvestBenefit.content[0].protocols[0].items[1].text,
                   size: 24,
                 },
                 {
                   category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[1].protocols[0].items[3].key,
-                  value: langContent.postHarvestBenefit.content[1].protocols[0].items[3].value,
+                  key: langContent.postHarvestBenefit.content[0].protocols[0].items[2].key,
+                  value: langContent.postHarvestBenefit.content[0].protocols[0].items[2].value,
                 },
                 {
                   category: 'list',
-                  key: langContent.postHarvestBenefit.content[1].protocols[0].items[4].key,
-                  items: langContent.postHarvestBenefit.content[1].protocols[0].items[4].items,
+                  key: langContent.postHarvestBenefit.content[0].protocols[0].items[3].key,
+                  items: langContent.postHarvestBenefit.content[0].protocols[0].items[3].items,
                 },
               ],
               mainImage: [
                 {
                   src: langImages.protocols.fermentacion[0],
-                  alt: langContent.postHarvestBenefit.content[1].protocols[0].image.alt,
-                },
-                {
-                  src: langImages.protocols.fermentacion[1],
-                  alt: langContent.postHarvestBenefit.content[1].protocols[0].image.alt,
-                },
-                {
-                  src: langImages.protocols.fermentacion[2],
-                  alt: langContent.postHarvestBenefit.content[1].protocols[0].image.alt,
+                  alt: langContent.postHarvestBenefit.content[0].protocols[0].image.alt,
                 },
               ],
-              paragraph: langContent.postHarvestBenefit.content[1].protocols[0].paragraph,
+              paragraph: langContent.postHarvestBenefit.content[0].protocols[0].paragraph,
             },
             {
-              title: langContent.postHarvestBenefit.content[1].protocols[1].title,
+              title: langContent.postHarvestBenefit.content[0].protocols[1].title,
+              description: langContent.postHarvestBenefit.content[0].protocols[1].description,
+
               items: [
                 {
                   category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[1].protocols[1].items[0].key,
+                  key: langContent.postHarvestBenefit.content[0].protocols[1].items[0].key,
                   value: '',
                 },
                 {
                   category: 'imageText',
-                  image: langImages.benefit.tipoDeCacao[2],
-                  alt: langContent.postHarvestBenefit.content[1].protocols[1].items[1].alt,
-                  text: langContent.postHarvestBenefit.content[1].protocols[1].items[1].text,
-                  size: 24,
-                },
-                {
-                  category: 'imageText',
-                  image: langImages.benefit.tipoDeCacao[3],
-                  alt: langContent.postHarvestBenefit.content[1].protocols[1].items[2].alt,
-                  text: langContent.postHarvestBenefit.content[1].protocols[1].items[2].text,
+                  image: langImages.benefit.tipoDeCacao[1],
+                  alt: langContent.postHarvestBenefit.content[0].protocols[1].items[1].alt,
+                  text: langContent.postHarvestBenefit.content[0].protocols[1].items[1].text,
                   size: 24,
                 },
                 {
                   category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[1].protocols[1].items[3].key,
-                  value: langContent.postHarvestBenefit.content[1].protocols[1].items[3].value,
+                  key: langContent.postHarvestBenefit.content[0].protocols[1].items[2].key,
+                  value: langContent.postHarvestBenefit.content[0].protocols[1].items[2].value,
                 },
                 {
                   category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[1].protocols[1].items[4].key,
+                  key: langContent.postHarvestBenefit.content[0].protocols[1].items[3].key,
                   value: '',
                 },
                 {
                   category: 'list',
-                  items: langContent.postHarvestBenefit.content[1].protocols[1].items[5].items,
+                  items: langContent.postHarvestBenefit.content[0].protocols[1].items[4].items,
                 },
               ],
               mainImage: [
                 {
                   src: langImages.protocols.secado[0],
-                  alt: langContent.postHarvestBenefit.content[1].protocols[1].image.alt,
+                  alt: langContent.postHarvestBenefit.content[0].protocols[1].image.alt,
                 },
                 {
                   src: langImages.protocols.secado[1],
-                  alt: langContent.postHarvestBenefit.content[1].protocols[1].image.alt,
+                  alt: langContent.postHarvestBenefit.content[0].protocols[1].image.alt,
                 },
               ],
-              paragraph: langContent.postHarvestBenefit.content[1].protocols[1].paragraph,
+              paragraph: langContent.postHarvestBenefit.content[0].protocols[1].paragraph,
             },
           ],
         },
@@ -326,31 +307,35 @@ export default (Astro) => {
       subtitle: langContent.traceability.subtitle,
       content: [
         {
-          type: 'paragraph',
+          type: 'bold',
           text: langContent.traceability.content[0].text,
         },
         {
-          type: 'bold',
+          type: 'paragraph',
           text: langContent.traceability.content[1].text,
         },
         {
-          type: 'paragraph',
+          type: 'bold',
           text: langContent.traceability.content[2].text,
         },
         {
           type: 'paragraph',
           text: langContent.traceability.content[3].text,
         },
+        {
+          type: 'paragraph',
+          text: langContent.traceability.content[4].text,
+        },
+        {
+          type: 'paragraph',
+          text: langContent.traceability.content[5].text,
+        },
       ],
       images: [
         {
           src: langImages.certifications.traceability[0],
           alt: langContent.traceability.images[0].alt,
-        },
-        {
-          src: langImages.certifications.traceability[1],
-          alt: langContent.traceability.images[1].alt,
-        },
+        }
       ],
     },
     location: {
@@ -386,11 +371,7 @@ export default (Astro) => {
         {
           src: langImages.history[1],
           alt: langContent.history.images[1].alt,
-        },
-        {
-          src: langImages.history[2],
-          alt: langContent.history.images[1].alt,
-        },
+        }
       ],
       content: [
         {
@@ -414,15 +395,25 @@ export default (Astro) => {
           text: langContent.history.content[4].text,
         },
         {
-          type: 'highlight',
+          type: 'paragraph',
           text: langContent.history.content[5].text,
         },
-       
+        {
+          type: 'paragraph',
+          text: langContent.history.content[6].text,
+        },
+        {
+          type: 'paragraph',
+          text: langContent.history.content[7].text,
+        },
+        {
+          type: 'paragraph',
+          text: langContent.history.content[8].text,
+        },
       ],
     },
     socialResponsibility: {
       title: langContent.socialResponsibility.title,
-
       images: [
         {
           src: RespSocial,
