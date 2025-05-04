@@ -8,9 +8,11 @@ import Nav from '@/components/ui/nav';
 function Header({
   children,
   items,
+  isCloseButton = false,
 }: {
   children: React.ReactNode;
   items: { title: string; href: string }[];
+  isCloseButton?: boolean;
 }) {
   const [isActive, setIsActive] = useState(false);
 
@@ -61,7 +63,7 @@ function Header({
       </div>
       <AnimatePresence mode="wait">
         {isActive && (
-          <Nav setIsActive={setIsActive} items={items}>
+          <Nav setIsActive={setIsActive} items={items} isCloseButton={isCloseButton}>
             {children}
           </Nav>
         )}
