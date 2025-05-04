@@ -134,7 +134,7 @@ function CarouselNavigation({ className, classNameButton, alwaysShow, dataCount 
         type="button"
         aria-label="Previous page"
         className={cn(
-          'pointer-events-auto z-60 h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950',
+          'pointer-events-auto z-60 h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950/50',
           alwaysShow ? 'opacity-100' : 'opacity-0 group-hover/hover:opacity-100',
           alwaysShow ? 'disabled:opacity-40' : 'disabled:group-hover/hover:opacity-40',
           classNameButton,
@@ -151,7 +151,7 @@ function CarouselNavigation({ className, classNameButton, alwaysShow, dataCount 
       <button
         type="button"
         className={cn(
-          'pointer-events-auto z-60 h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950',
+          'pointer-events-auto z-60 h-fit w-fit rounded-full bg-zinc-50 p-2 transition-opacity duration-300 dark:bg-zinc-950/50',
           alwaysShow ? 'opacity-100' : 'opacity-0 group-hover/hover:opacity-100',
           alwaysShow ? 'disabled:opacity-40' : 'disabled:group-hover/hover:opacity-40',
           classNameButton,
