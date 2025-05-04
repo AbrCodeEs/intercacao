@@ -220,7 +220,7 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
             left: 0,
             right: 0,
             height: '30px',
-            zIndex: 150,
+            zIndex: 1,
             touchAction: 'none',
             display: 'flex',
             justifyContent: 'center',
@@ -241,24 +241,24 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
           onPointerDown={(e) => dragControls.start(e)}
           style={{
             position: 'absolute',
-            top: '38%',
-            right: '10px',
+            top: '47%',
+            right: '0',
             height: '30px',
-            zIndex: 100,
+            zIndex: 1,
             touchAction: 'none',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
           }}
         >
-          {/* <div
+          <div
             style={{
-              width: '40px',
-              height: '200px',
+              width: '1000px',
+              height: '61px',
               borderRadius: '2px',
-              backgroundColor: 'rgb(255 255 255 / 71%)',
+              // backgroundColor: 'rgb(199 199 199 / 71%)',
             }}
-          /> */}
+          />
         </div>
         </>
       )}

@@ -84,7 +84,6 @@ const MenuItem = ({ item, apiUrl }: MenuItemProps) => {
       <div className="px-5 xl:px-2">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-bold text-gray-300">{item.name}</h1>
-          <span className="text-5xl font-extrabold text-yellow-300 xl:text-4xl">{item.price}$</span>
         </div>
         <p className="text-start text-gray-100">{item.description}</p>
       </div>

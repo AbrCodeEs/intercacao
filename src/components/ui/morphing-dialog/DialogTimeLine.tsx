@@ -26,7 +26,7 @@ export interface TimelineEntry {
   tile?: undefined;
 }
 
-export function DialogTimeLine({ trans }: { trans: [string, string | Record<string, any | Record<string, any>>] }) {
+export function DialogTimeLine({ trans }: { trans: any }) {
   return (
     <div className="container mx-auto my-10 flex w-full flex-col px-10">
       <div className="flex flex-col items-center gap-5 pb-20 text-zinc-950 md:text-center xl:text-center">

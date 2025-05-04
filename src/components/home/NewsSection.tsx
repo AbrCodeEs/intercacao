@@ -132,7 +132,7 @@ const NewItems = ({ posts }: { posts: Post[] }) => {
                   </Carousel>
                 </div>
 
-                <div className="relative w-full grow bg-white p-10 flex flex-col gap-3">
+                <div className="relative w-full grow bg-white p-10 flex flex-col gap-3 z-20">
                   <h2 className="text-start text-3xl font-bold">{post.title}</h2>
                   <div>
                     <div className="line-clamp-3 pb-2 break-words">

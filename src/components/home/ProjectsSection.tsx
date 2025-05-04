@@ -4,9 +4,9 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
+  CarouselNavigation,
+  CarouselIndicator,
+} from '@/components/ui/carousel/carousel';
 import { StickyScroll } from '@/components/home/StickyScrollReveal';
 import { motion } from 'framer-motion';
 import { useEffect, useState, useCallback } from 'react';
@@ -86,7 +86,7 @@ const ImageWithPlaceholder = ({ src, alt }: ImageProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="aspect-[4/5] object-cover xl:min-h-[90vh]"
+          className="aspect-[4/5] object-cover xl:min-h-[90vh] rounded-lg"
           onError={() => {
             if (retryCount < maxRetries) {
               setRetryCount(prev => prev + 1);
@@ -124,8 +124,8 @@ export const ProjectsSection = ({ items }: { items: any[] }) => {
       url: item.url || false,
       icon: item.icon,
       content: (
-        <Carousel className="h-full overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
-          <CarouselContent className="-ml-0 h-full w-full xl:min-h-[90vh]">
+        <Carousel initialIndex={0} className="xl:h-[90vh] lg:h-[90vh] md:h-[90vh] overflow-hidden h-full xl:min-h-[90vh] rounded-lg pb-10">
+          <CarouselContent itemsPerPage={1} className="-ml-0 h-full w-full xl:min-h-[90vh]">
             {!!item.images.length &&
               item.images?.map((image: { src: string; alt: string }, index: number) => (
                 <CarouselItem key={index} className="basis-full p-0 xl:min-h-[90vh]">
@@ -133,8 +133,11 @@ export const ProjectsSection = ({ items }: { items: any[] }) => {
                 </CarouselItem>
               ))}
           </CarouselContent>
-          <CarouselPrevious className="-left-10 disabled:!opacity-1 md:left-7 lg:left-7 xl:left-7" />
-          <CarouselNext className="-right-10 disabled:!opacity-1 md:right-7 lg:right-7 xl:right-7" />
+          <CarouselNavigation
+              className="absolute top-1/2 md:top-1/2 xl:top-1/2"
+              alwaysShow
+            />
+          <CarouselIndicator className="xl:-bottom-6.5 lg:-bottom-6.5 md:-bottom-6.5 bottom-0 px-15 xl:bottom-5" />
         </Carousel>
       ),
     };

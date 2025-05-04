@@ -10,7 +10,15 @@ import ProjectsSection from '@/components/home/ProjectsSection';
 import ElectronsSection from '@/components/home/ElectronsSection';
 
 interface TabsTransitionPanelProps {
-  trans: [string, string];
+  trans: {
+    description: string;
+    tabs_transition_panel: {
+      vainilla_bar: {
+        title: string;
+        description: string;
+      };
+    };
+  };
   items: { title: string; icon: string; images: { src: string; alt: string }[] }[];
 }
 
@@ -36,15 +44,7 @@ export function TabsTransitionPanel({ trans, items }: TabsTransitionPanelProps) 
 
       <ElectronsSection />
 
-      {/* <img
-        src={electronesFqp.src}
-        alt="Electrones FQP"
-        className="size-auto w-full rounded-lg object-cover"
-      /> */}
-
       <ProjectsSection items={items} />
-
-      {/* <HorizontalScrollSection trans={trans.horizontal_scroll} /> */}
     </>
   );
 }

@@ -48,15 +48,14 @@ const buttonVariants = {
 };
 
 export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) => {
-  // Por defecto, se arranca con la primera tarjeta (índice 0)
   const [activeCard, setActiveCard] = useState(0);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
-  // containerRef se sigue utilizando para observar la visibilidad de la sección sticky
   const containerRef = useRef<HTMLDivElement>(null);
   const sentinelRef = useRef<HTMLDivElement>(null);
   const [isContainerVisible, setIsContainerVisible] = useState(false);
   const observer = useRef<IntersectionObserver | null>(null);
   const cardLength = content.length;
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const backgroundColors = ['#ffffff', '#ccd5ae', '#e9edc9', '#fefae0', '#faedcd', '#f1dbb7'];
 
@@ -69,26 +68,23 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
     margin: '0px 0px -90% 0px',
     amount: 'some',
   });
-  // Actualizamos el índice activo a partir del progreso global de scroll.
-  // Esto asume que la sección tiene suficiente altura para generar scroll.
+
+  // Actualizamos el índice activo a partir del progreso global de scroll
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const safeLatest = Math.max(0, Math.min(1, latest));
-   
-    // Usamos un mapeo lineal: al tener "cardLength" tarjetas, dividimos el recorrido en "cardLength" secciones.
     const newCardIndex = Math.floor(safeLatest * cardLength);
-    // Evitamos índices fuera del rango.
     const index = newCardIndex >= cardLength ? cardLength - 1 : newCardIndex;
     setActiveCard(index);
   });
 
-  // Usamos el sentinel para detectar si la sección sticky está visible.
+  // Usamos el sentinel para detectar si la sección sticky está visible
   useEffect(() => {
     if (sentinelRef.current) {
       observer.current = new IntersectionObserver(
         ([entry]) => {
           setIsContainerVisible(entry.isIntersecting);
         },
-        { threshold: 0.1 }, // Umbral menor para activar más fácilmente.
+        { threshold: 0.1 }
       );
       observer.current.observe(sentinelRef.current);
     }
@@ -98,14 +94,12 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
   }, []);
 
   const handleScrollTo = (index: number) => {
-    const element = document.getElementById(`card-${index}`);
+    const element = cardRefs.current[index];
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
-    } else {
-      console.error(`Element with id "card-${index}" not found!`);
     }
     setActiveCard(index);
     setIsPanelOpen(false);
@@ -117,10 +111,10 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="@container relative flex h-full min-h-screen justify-center space-x-10 rounded-3xl py-10"
+      className="@container relative flex h-full min-h-screen justify-center space-x-10 rounded-3xl py-10 snap-y snap-mandatory scrollbar-hide"
     >
       <div className="relative container m-auto flex h-full flex-col items-stretch justify-stretch space-x-10 px-10 md:px-5 lg:px-5 xl:flex-row xl:px-5">
-        {/* Contenedor sticky que muestra el contenido de la tarjeta activa. */}
+        {/* Contenedor sticky que muestra el contenido de la tarjeta activa */}
         <div
           className={cn(
             'sticky top-10 hidden h-[90vh] w-full rounded-md md:w-2/5 lg:w-2/5 md:block lg:block xl:block xl:w-2/5',
@@ -131,7 +125,6 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
           }}
         >
           {content[activeCard]?.content || content[activeCard]?.description}
-          {/* Sentinel colocado en la parte superior del contenedor */}
           <div
             ref={sentinelRef}
             className="pointer-events-none absolute top-0 left-0 h-1 w-full opacity-0"
@@ -143,8 +136,10 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
             {content.map((item, index) => (
               <div
                 key={item.title + index}
-                id={`card-${index}`}
-                className="flex h-full flex-col items-start justify-center gap-10 py-10 md:h-[90vh] md:py-0 lg:h-[90vh] lg:py-0 xl:h-[90vh] xl:py-0"
+                ref={(el) => {
+                  if (el) cardRefs.current[index] = el;
+                }}
+                className="flex h-full snap-start flex-col items-start justify-center gap-10 py-10 md:h-[90vh] md:py-0 lg:h-[90vh] lg:py-0 xl:h-[90vh] xl:py-0"
               >
                 <motion.h2
                   initial={{ opacity: 0.3 }}
@@ -156,7 +151,7 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
                 <motion.div
                   initial={{ opacity: 0.3 }}
                   animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                  className="overflow-hidden rounded-lg text-lg text-zinc-600 md:hidden lg:hidden xl:hidden"
+                  className=" rounded-lg text-lg text-zinc-600 md:hidden lg:hidden xl:hidden"
                 >
                   {item.content}
                 </motion.div>
@@ -185,7 +180,7 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
 
         <motion.div
           className={cn(
-            'fixed right-3 bottom-3 z-50 flex flex-col items-end gap-2 sm:right-6 sm:bottom-6 sm:gap-4', // Ajustes responsive
+            'fixed right-3 bottom-3 z-50 flex flex-col items-end gap-2 sm:right-6 sm:bottom-6 sm:gap-4',
             activeCard === content.length - 1 ? 'absolute' : 'fixed',
           )}
           initial={{ opacity: 0, display: 'none' }}
