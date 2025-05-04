@@ -402,15 +402,7 @@ export default (Astro) => {
         {
           type: 'paragraph',
           text: langContent.history.content[4].text,
-        },
-        // {
-        //   type: 'paragraph',
-        //   text: langContent.history.content[5].text,
-        // },
-        // {
-        //   type: 'paragraph',
-        //   text: langContent.history.content[6].text,
-        // },
+        }
       ],
     },
     socialResponsibility: {

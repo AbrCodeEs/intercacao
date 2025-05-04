@@ -665,16 +665,19 @@ const en = {
     ],
     content: [
       {
-        text: "Rivera's history begins with 19th century Tama indigenous people who fled feared volcanic activity near Salado and Aguas Calientes.",
+        text: 'The people of Rivera remember the hue of their beautiful mountains, the endless blue of their sky, and their crystalline waters. They are part of the present and the past, led by the first settlers of the municipality in the 1800s, when their lands had no name, were naive, small, and so humble that they were lost in the height of the mountain. Within it, there were the Tama indigenous people, who were characterized by their belligerence. According to stories from their ancestors, they all fled because they were terrified by the volcano, still supposed to be located in the area of ​​Salado and Aguas Calientes.',
       },
       {
-        text: 'In 1888, mountain settlers joined traders and Augustinian missionaries to establish San Mateo - now Rivera, named after "La Vorágine" author José Eustasio Rivera.',
+        text: 'Later, in 1888, these inhabitants who came from the mountains joined with some settlers, merchants, and Augustinian missionaries to found San Mateo. As this territory, now known as Rivera Huila, was first called.',
       },
       {
-        text: 'Declared a municipality in 1943, Rivera endured conflicts including 1987 guerrilla attacks and political violence, yet remains optimistic.',
+        text: 'It was in 1943 that the founding of San Mateo was declared as a municipality, which would later be named Rivera, in honor of the author of La Vorágine.',
       },
       {
-        text: "Residents take pride in their land's blue skies, crystal waters, and mountain vistas that shaped their past and present.",
+        text: 'Despite the fact that Rivera is located in a conflict zone and has experienced some violent events such as those caused by the Bogotazo, the attempted takeover by the guerrillas on August 13, 1987, the assassinations of some municipal leaders and politicians, including the massacre of the council members, among others, Rivera lives peacefully, knowing that these outbreaks of violence have been isolated.',
+      },
+      {
+        text: 'Day after day, the people of Rivera are optimistic and dream of a better future for their people and are proud of the land where they were born.',
       },
     ],
   },
