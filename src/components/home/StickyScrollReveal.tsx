@@ -10,11 +10,11 @@ interface StickyScrollProps {
   content: {
     title: string;
     description: string;
-    content?: React.ReactNode;
-    url: string | boolean;
+    content: React.ReactNode;
     icon: string;
+    url?: string;
   }[];
-  contentClassName?: string;
+  onProjectChange?: (index: number) => void;
 }
 
 const panelVariants = {
@@ -37,17 +37,15 @@ const panelVariants = {
 const buttonVariants = {
   closed: {
     scale: 0,
-    opacity: 0,
     transition: { type: 'spring', stiffness: 300, damping: 20 },
   },
   open: {
     scale: 1,
-    opacity: 1,
     transition: { type: 'spring', stiffness: 300, damping: 20 },
   },
 };
 
-export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) => {
+export const StickyScroll = ({ content, onProjectChange }: StickyScrollProps) => {
   const [activeCard, setActiveCard] = useState(0);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -75,6 +73,7 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
     const newCardIndex = Math.floor(safeLatest * cardLength);
     const index = newCardIndex >= cardLength ? cardLength - 1 : newCardIndex;
     setActiveCard(index);
+    onProjectChange?.(index);
   });
 
   // Usamos el sentinel para detectar si la sección sticky está visible
@@ -111,14 +110,13 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="@container relative flex h-full min-h-screen justify-center space-x-10 rounded-3xl py-10 snap-y snap-mandatory scrollbar-hide"
+      className="@container relative flex h-full min-h-screen justify-center space-x-10 rounded-3xl py-10"
     >
       <div className="relative container m-auto flex h-full flex-col items-stretch justify-stretch space-x-10 px-10 md:px-5 lg:px-5 xl:flex-row xl:px-5">
         {/* Contenedor sticky que muestra el contenido de la tarjeta activa */}
         <div
           className={cn(
             'sticky top-10 hidden h-[90vh] w-full rounded-md md:w-2/5 lg:w-2/5 md:block lg:block xl:block xl:w-2/5',
-            contentClassName,
           )}
           style={{
             backgroundColor: backgroundColors[(activeCard + 1) % backgroundColors.length],
@@ -142,22 +140,16 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
                 className="flex h-full snap-start flex-col items-start justify-center gap-10 py-10 md:h-[90vh] md:py-0 lg:h-[90vh] lg:py-0 xl:h-[90vh] xl:py-0"
               >
                 <motion.h2
-                  initial={{ opacity: 0.3 }}
-                  animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                   className="text-4xl font-medium text-zinc-800 md:text-4xl xl:text-5xl"
                 >
                   {item.title}
                 </motion.h2>
                 <motion.div
-                  initial={{ opacity: 0.3 }}
-                  animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                  className=" rounded-lg text-lg text-zinc-600 md:hidden lg:hidden xl:hidden"
+                  className="rounded-lg text-lg text-zinc-600 md:hidden lg:hidden xl:hidden"
                 >
                   {item.content}
                 </motion.div>
                 <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                   className="relative text-lg text-zinc-600"
                 >
                   {item.description}
@@ -165,8 +157,6 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
                 {item.url && (
                   <motion.a
                     href={item.url as string}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                     className="mt-4 rounded-lg bg-zinc-100 px-4 py-2 text-lg text-zinc-600 transition-colors duration-300 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700"
                   >
                     Ver más...
@@ -214,7 +204,7 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
                 onClick={() => handleScrollTo(index)}
               >
                 <span className="text-sm font-medium text-white/90">
-                  {item.icon.split('/').length > 1 ? (
+                  {typeof item.icon === 'string' && item.icon.split('/').length > 1 ? (
                     <img className="size-5" src={item.icon} alt={item.title} loading="eager" />
                   ) : (
                     <span

@@ -11,9 +11,9 @@ import { FloatingControls } from '@/components/home/FloatingControls';
 import { useContainerPosition } from '@/hooks/useContainerPosition';
 import { useSectionVisibility } from '@/hooks/useSectionVisibility';
 import { useFilteredChocolates } from '@/hooks/useFilteredChocolates';
-import { WorldMap } from '@/components/ui/world-map';
+import worldMap from '@/images/global/mapa_mundo.webp';
 
-export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<string, any> }) {
+export function ChocolateGallery({ lang, trans }: { lang: 'es' | 'eng'; trans: Record<string, any> }) {
   const {
     sortBy,
     selectedFlavor,
@@ -116,6 +116,7 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
                     sortBy={sortBy}
                     flavors={selectedFlavor}
                     trans={trans}
+                    lang={lang}
                   />
                 </motion.div>
               ))}
@@ -128,41 +129,11 @@ export function ChocolateGallery({ lang, trans }: { lang: string; trans: Record<
       {/* <Gallery /> */}
 
       <div className="relative flex h-auto w-full flex-col items-center justify-center gap-5 py-15">
-        {/* <WorldMap
-          // dots={[
-          //   {
-          //     start: { lat: -10.4238, lng: -66.5897 },
-          //     end: {
-          //       lat: 34.0522,
-          //       lng: -118.2437,
-          //     }, // Los Angeles
-          //   },
-          //   {
-          //     start: { lat: -10.4238, lng: -66.5897 },
-          //     end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
-          //   },
-          //   {
-          //     start: { lat: -10.4238, lng: -66.5897 },
-          //     end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
-          //   },
-          //   {
-          //     start: { lat: -10.4238, lng: -66.5897 },
-          //     end: { lat: 28.6139, lng: 77.209 }, // New Delhi
-          //   },
-          //   {
-          //     start: { lat: -10.4238, lng: -66.5897 },
-          //     end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
-          //   },
-          //   {
-          //     start: { lat: -10.4238, lng: -66.5897 },
-          //     end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
-          //   },
-          // ]}
-        /> */}
+        <img src={worldMap.src} alt="Intercacao banner principal" className="w-full object-fill object-center" />
         {/* absolute inset-0  */}
-        <div className="flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
           {/* bg-black/50 */}
-          <h1 className="block w-1/2 rounded-lg p-2 text-center text-2xl font-bold text-gray-200 capitalize backdrop-blur-[3px] lg:text-3xl xl:text-4xl">
+          <h1 className="block w-full xl:w-1/2 lg:w-1/2 md:w-1/2 rounded-lg p-2 text-center text-2xl font-bold text-gray-200 capitalize backdrop-blur-[3px] lg:text-3xl xl:text-4xl">
             {trans.title}
           </h1>
         </div>

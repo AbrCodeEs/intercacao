@@ -186,7 +186,7 @@ section.active {
   position: fixed;
   left: 0px;
   margin: 20px;
-  z-index: 5;
+  z-index: 80;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -203,7 +203,7 @@ section.active {
 
 .burger {
   width: 100%;
-  z-index: 2;
+  z-index: 60;
 
   &::after,
   &::before {
@@ -253,7 +253,7 @@ section.active {
   left: -100px;
   top: 0;
   color: white;
-  z-index: 50;
+  z-index: 70;
 
   .body {
     box-sizing: border-box;

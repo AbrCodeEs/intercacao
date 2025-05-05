@@ -41,7 +41,7 @@ function Header({
         onClick={() => {
           setIsActive(!isActive);
         }}
-        className="button !z-[60]"
+        className="button"
       >
         <div className={`burger ${isActive ? 'burgerActive' : ''}`}></div>
       </div>

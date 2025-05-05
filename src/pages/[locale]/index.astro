@@ -21,7 +21,7 @@ import { CarouselPost } from '@/components/ui/carousel/Post';
 import { ChocolateGallery } from '@/components/home/ChocolateGallery';
 import { DialogFlavours } from '@/components/ui/morphing-dialog/DialogFlavours';
 
-import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
+// import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { getLangFromUrl, useTranslations } from '@/lib/translations';
 import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
 import { VainillaBar } from '@/components/home/VainillaBar';
@@ -99,6 +99,7 @@ export async function getStaticPaths() {
     >
       <Image
         loading="eager"
+        fetchpriority="high"
         inferSize={true}
         src={trans('home').banner.src}
         alt={trans('home').banner.alt}
@@ -109,6 +110,7 @@ export async function getStaticPaths() {
       >
         <Image
           loading="eager"
+          fetchpriority="high"
           inferSize={true}
           class="w-20 md:w-30 lg:w-30 xl:w-30"
           src={trans('home').logo.src}
@@ -122,7 +124,8 @@ export async function getStaticPaths() {
       style={`background-image: url(${lienzo.src});`}
     >
       <Image
-        loading="lazy"
+        loading="eager"
+        fetchpriority="high"
         inferSize={true}
         src={trans('home').mundo_de_sabores.src}
         alt={trans('home').mundo_de_sabores.alt}
