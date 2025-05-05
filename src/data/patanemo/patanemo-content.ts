@@ -440,21 +440,21 @@ const en = {
     },
     information: [
       {
-        title: 'Aroma:',
-        description: {
-          boldText: 'MEDIUM',
-          additionalText: 'Moderate notes of spices',
-        },
-      },
-      {
-        title: 'Flavor:',
+        title: 'S = Flavor:',
         description: {
           boldText: 'MEDIUM',
           additionalText: 'Flavors of herbs, fruits, nuts, and flowers',
         },
       },
       {
-        title: 'Fermentation:',
+        title: 'A = Aroma:',
+        description: {
+          boldText: 'MEDIUM',
+          additionalText: 'Moderate notes of spices',
+        },
+      },
+      {
+        title: 'F = Fermentation:',
         description: {
           boldText: 'MEDIUM',
           additionalText: 'Moderate astringency and bitterness',

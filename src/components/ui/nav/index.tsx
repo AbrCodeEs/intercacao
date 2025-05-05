@@ -8,10 +8,19 @@ interface Props {
   children: React.ReactNode;
   setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
   items: { title: string; href: string }[];
+  isCloseButton?: boolean;
 }
 
-export default function Index({ children, setIsActive, items }: Props) {
+export default function Index({ children, setIsActive, items, isCloseButton }: Props) {
   const [selectedIndicator, setSelectedIndicator] = useState('');
+
+  const handleGoBack = () => {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.close();
+    }
+  };
 
   return (
     <>
@@ -23,7 +32,15 @@ export default function Index({ children, setIsActive, items }: Props) {
         className="menu border-r border-gray-500/50 shadow-lg"
       >
         <nav className="body z-50 justify-start">
-          <div className="flex w-full items-center justify-center pt-10">{children}</div>
+          <div className="flex w-full items-center justify-center px-4 pt-10">
+            {isCloseButton ? (
+              <button className="cursor-pointer" onClick={handleGoBack}>
+                {children}
+              </button>
+            ) : (
+              children
+            )}
+          </div>
           <ul className="nav pt-20">
             {items.map((data, index) => (
               <Link

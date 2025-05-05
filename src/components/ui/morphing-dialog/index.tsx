@@ -241,7 +241,7 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
           onPointerDown={(e) => dragControls.start(e)}
           style={{
             position: 'absolute',
-            top: '47%',
+            top: '51%',
             right: '0',
             height: '30px',
             zIndex: 1,
@@ -254,7 +254,7 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
           <div
             style={{
               width: '1000px',
-              height: '61px',
+              height: '100px',
               borderRadius: '2px',
               // backgroundColor: 'rgb(199 199 199 / 71%)',
             }}

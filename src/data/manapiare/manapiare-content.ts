@@ -2,45 +2,45 @@ const es = {
   generalInformation: {
     title: 'evaluacion',
     image: {
-      alt: 'portada cacao gourmet patanemo fino',
+      alt: 'portada de manapiare cacao',
     },
     rating: {
-      stars: 'estrellas de calificación 2.7',
+      stars: 'estrellas de calificación 4.0',
     },
     sections: [
       {
         items: [
           { label: 'AFRUTADO DULCE', value: '1.2' },
-          { label: 'AFRUTADO CÍTRICO', value: '2.3' },
-          { label: 'AFLORADO', value: '1.3' },
-          { label: 'ACRIOLLADO', value: '0.6' },
+          { label: 'AFRUTADO CÍTRICO', value: '3.1' },
+          { label: 'AFLORADO', value: '2.0' },
+          { label: 'ACRIOLLADO', value: '0.0' },
           { label: 'CACAO', value: '3.5' },
-          { label: 'BOSCOSO', value: '1.5' },
-          { label: 'ESPECIAS', value: '1.7' },
+          { label: 'BOSCOSO', value: '2.1' },
+          { label: 'ESPECIAS', value: '0.0' },
         ],
       },
       {
         items: [
-          { label: 'PRODUCCIÓN ANUAL (TM)', value: '30' },
-          { label: 'COSECHA PRINCIPAL', value: 'DIC-ABR' },
-          { label: 'COSECHA MEDIA', value: 'JUN-JUL' },
+          { label: 'PRODUCCIÓN ANUAL (TM)', value: '12' },
+          { label: 'COSECHA PRINCIPAL', value: 'DIC-FEB' },
+          { label: 'COSECHA MEDIA', value: 'MAR-ABR' },
         ],
       },
       {
-        items: [{ label: 'GRANOS CRIOLLOS', value: '20%' }],
+        items: [{ label: 'GRANOS CRIOLLOS', value: '12%' }],
       },
       {
         items: [
-          { label: 'GRANOS FERMENTADOS', value: '82%' },
-          { label: 'GRANOS VIOLETAS', value: '14%' },
-          { label: 'GRANOS PIZARROSOS', value: '4%' },
+          { label: 'GRANOS FERMENTADOS', value: '85%' },
+          { label: 'GRANOS VIOLETAS', value: '10%' },
+          { label: 'GRANOS PIZARROSOS', value: '5%' },
           { label: 'TOTAL', value: '100%' },
         ],
       },
       {
         items: [
-          { label: 'Granos / 100g:', value: '78' },
-          { label: 'g./1 Grano:', value: '1,28 g' },
+          { label: 'Granos / 100g:', value: '81' },
+          { label: 'g./1 Grano:', value: '1,23 g' },
         ],
       },
       {
@@ -56,7 +56,7 @@ const es = {
     flavors: [
       {
         name: 'Afrutado Dulce',
-        description: '',
+        description: 'Frutas Frescas',
       },
       {
         name: 'Afrutado Cítrico',
@@ -64,11 +64,11 @@ const es = {
       },
       {
         name: 'Aflorado',
-        description: 'Flores Frescas',
+        description: 'Flores Silvestres',
       },
       {
         name: 'Acriollado',
-        description: 'Nuez • Panela Malta',
+        description: '',
       },
       {
         name: 'Cacao',
@@ -76,31 +76,31 @@ const es = {
       },
       {
         name: 'Boscoso',
-        description: 'Corteza',
+        description: 'Corteza • Madera Fresca',
       },
       {
         name: 'Especias',
-        description: 'Canela • Clavito de Olor',
+        description: '',
       },
     ],
     assessment: {
       title: 'Evaluación',
-      classification: 'Clasificación de Patanemo Fino',
+      classification: 'Clasificacion de Manapiare',
       equipment: 'Equipo de Cata',
     },
     information: [
       {
-        title: 'S = Sabor:',
+        title: 'A = Aroma:',
         description: {
-          boldText: 'MEDIO',
-          additionalText: 'Sabores a hierbas, frutas, nueces y flores',
+          boldText: 'FUERTE',
+          additionalText: 'Esencia a hierba y madera',
         },
       },
       {
-        title: 'A = Aroma:',
+        title: 'S = Sabor:',
         description: {
           boldText: 'MEDIO',
-          additionalText: 'Notas moderadas a especies',
+          additionalText: 'Presencia de sabores afrutados',
         },
       },
       {
@@ -113,16 +113,13 @@ const es = {
     ],
     analysis: {
       title: 'Análisis de Corte',
-      alt: 'Cacao de Patanemo Fino',
+      alt: 'Cacao de Manapiare Fino',
       description: [
         {
-          text: 'El grano de Patanemo posee unas características de alta genética trinitaria y mediana descendencia criolla con 20% de granos blancos, a causa de la hibridación y el estándar de calidad que constituye.',
+          text: 'Dentro de los atributos que componen el exquisito grano posiblemente por la mezcla de plantaciones con genética acriollada y de cacaos híbridos se adquieren los siguientes resultados de (±12%) en granos criollos, (±85%) en granos fermentados, en granos violeta (±10%) y en granos pizarrosos (±5%).',
         },
         {
-          text: 'En sus análisis de corte los resultados contienen : (±20%) de granos blancos,   (±82%) granos fermentados (± 14%) con granos violetas, (±4%) granos pizarrosos.',
-        },
-        {
-          text: 'En relación a su peso generalmente los granos contienen 78 almendras sobre un peso de 100 gr; es decir que  cada almendra pesa 1,28 gr.',
+          text: 'En cuanto al peso contiene 81 almendras referentes a un peso de 100 gr, en otros términos cada almendra pesa 1,23gr.',
         },
       ],
     },
@@ -134,8 +131,8 @@ const es = {
         {
           type: 'quote',
           quote:
-            '"El cacao de Patanemo presenta una intensa variedad de atributos que combinan suaves notas de flores, frutas y nueces acompañadas con aromas de especies dulces como canela y clavitos de olor",',
-          author: 'precisó la Ing Ms Gladys Ramos',
+            '"Las notas herbales y de vegetales como corteza y madera intensifica el atributo floral de este material. Asimismo el sabor ácido se muestra en intensidad moderada y se compenetra con el atributo de frutas frescas de manera interesante."',
+          author: 'detalló la Ing Ms Gladys Ramos.',
         },
       ],
       image: { alt: 'Rueda de sabores del cacao' },
@@ -146,7 +143,8 @@ const es = {
         {
           type: 'quote',
           quote:
-            'Se destacan los atributos intensos de la canela, los aromáticos de las especies y los suaves a hierbas, flores, lluvia y tierra mojada. Las condiciones de suelo y clima de la zona, así como la vegetación xerófila y la fauna de aves como el flamenco, caracterizan y moldean los atributos de sabor de los productos del cacao de Patanemo.',
+            '"Muestra notas de un cacao híbrido con sabores de madera fresca, corteza y flores silvestres con aromas de bosque, notas perfumadas, sensaciones de ardiente y acholado"',
+          author: 'indicó la Ing. Ms. Gladys Ramos.',
         },
       ],
       image: {
@@ -158,35 +156,28 @@ const es = {
     title: 'Beneficio Post Cosecha',
     content: [
       {
-        text: 'El grano de Patanemo posee un alto porcentaje de genética trinitaria y mesurada descendencia criolla, el cual debe cumplir el siguiente proceso de fermentación.',
-      },
-      {
-        text: 'Son trasladados aproximadamente 200 kg de cacao a través de un burro de carga a la vivienda correspondiente.',
-      },
-      {
         protocols: [
           {
-            title: 'Protocolo de Fermentación',
+            title: 'Protocolo de Fermentacion',
+            description:
+              'El grano de Manapiare posee un alto porcentaje de genética trinitaria y mediana descendencia criolla, el cual cumple el siguiente proceso de fermentación:',
             items: [
               {
                 key: 'Tipo de Cacao',
               },
               {
-                alt: 'semilla patanemo',
+                alt: 'semilla manapiare',
                 text: 'Trinitario',
               },
               {
                 key: 'Días de Fermentación',
-                value: '4 a 5 días',
-              },
-              {
-                key: 'Técnicas de Fermentación'
+                value: '9 días',
               },
               {
                 items: [
                   'Tipo de cajon: Madera',
-                  'Frecuencia de volteos: cada 48 horas',
-                  'Forma de Fermentación: Los granos son empaquetados en sacos de nylon y cubiertos con enormes plásticos transparentes.',
+                  'Frecuencia de volteos: cada 24 horas',
+                  'Forma de Fermentación: La fermentación se realiza en cajones de madera.',
                 ],
               },
             ],
@@ -196,29 +187,30 @@ const es = {
           },
           {
             title: 'Protocolo de Secado',
-            description:
-              'Para el proceso de secado los granos son trasladados en un burro de carga a la vivienda pertinente donde las semillas son esparcidas en la superficie de cemento para ser parcialmente conservados de la fuerza del sol, con las siguientes características:',
             items: [
               {
                 key: 'Tipo de Cacao',
               },
               {
-                alt: 'semilla patanemo',
-                text: 'Trinitario seco',
+                alt: 'semilla manapiare',
+                text: 'Trinitario Seco',
               },
               {
                 key: 'Días de Secado',
-                value: '4 a 5 días',
+                value: '8 a 9 días',
               },
               {
                 key: 'Técnicas de Secado',
               },
               {
                 items: [
-                  'Tipo de piso: cemento / concreto con techo corredizo',
-                  'Humedad: 7,5%',
-                  'Forma de Secado: Al Sol',
+                  'Tipo de piso: cemento / concreto',
+                  'Humedad: 7%',
+                  'Forma de Secado: al sol',
                 ],
+              },
+              {
+                text: 'El secado inicia a tempranas horas de la mañana extendiendo los granos en los patios de cemento, haciendo remociones frecuentes para lograr un secado uniforme.',
               },
             ],
             image: {
@@ -234,25 +226,31 @@ const es = {
     subtitle: 'certificaciones y premios',
     content: [
       {
-        text: 'En este sector se encuentran distribuidos entre 25 y 30 productores, la mayoría oriundos del sector así como también agricultores andinos que desde hace 20 años trabajan en el campo, su labor la realizan con la participación de todo el grupo familiar, donde cada uno aporta y ejecuta su función, no solo de recolección y proceso de post cosecha del exquisito fruto, sino también artesanal con la preparación de ponches, dulces y panelas que le permiten adquirir remuneración y seguir con el legado de sus antepasados.',
+        text: 'Amazonas cuenta con una población de 178.670 habitantes de los cuales 45% es o se identifica como indígena.',
       },
       {
-        text: 'Como base principal económica es la agricultura, se dedican también a la pesca, a la siembra y venta de yuca, plátano, vacuno, cambur, naranja y variedad de flores exóticas como bastón de caballero, micrófono y arpinia.',
+        text: 'El sector más representativo es la comunidad Piaroa, ubicada en San juan de Manapiare donde se encuentra la Asociación indígena y productora de cacao (APIPROCA).',
       },
       {
-        text: 'En Patanemo, se encuentran productores que trabajan en enlace con la red cooperativa de productores y artesanos, y otros que laboran por su cuenta como es el caso de Juan Antonio Ávila de 47 años de edad, reconocido como uno de los productores con mayor plantación de cacao en la zona, quien junto a su familia y amigos de siempre, le dedican el tiempo y el amor necesarios para obtener el mejor fruto.',
+        text: 'Las comunidades de este místico pueblo, llevan un modo de vida austero, residen en viviendas de palma y barro, así como también en algunas viviendas de bloques.',
       },
       {
-        text: 'La superficie de la unidad productiva del señor Ávila es de 16 hectáreas, donde solo 12 Ha son del inagotable fruto, obteniendo aproximadamente 1000 kg anuales de cacao durante las temporadas, "Pascuera" comprende los meses noviembre y diciembre y "Sanjuanera" en los meses junio y julio.',
+        text: 'Sus pobladores trabajan en esquema de unidad familiar; entre ellos se encuentra la familia Rodríguez, conformada por el señor Pastor Rodríguez, junto con su hija Susana, acompañados también por Silvino Rodríguez y Marcos García, quienes son los encargados de (APIPROCA);la asociación fue constituida hace catorce años y está conformada por 14 productores, que le imprimen todo el esfuerzo y dedicación a la preservación del distinguido grano.',
       },
       {
-        text: 'Un día de trabajo de Ávila y su familia inicia aproximadamente a las 5:00 de la mañana, lo primero que hace es “Dar las gracias a Dios”, su enfoque primordial es la limpieza y aplica un cronograma de actividades comenzando el lunes con la recolección y quiebre del fruto para posteriormente tenderlo en unos troncos para que bote la baba hasta el día sábado.',
+        text: 'Se mantienen activas 24 Ha productivas, con la estupenda labor de la cultura Piaroa para proporcionar el mejor grano, ya que producen en armonía 10.000 kg anuales de cacao durante dos temporadas de cosecha, la principal en los meses entre Octubre - Noviembre (7000kg) y la media entre los meses Diciembre - enero(3000Kg).',
       },
       {
-        text: '"Una de las ventajas que tenemos es la cercanía al agua del mar proveniente de la falda de la montaña, es así como el riego lo realizamos con una manguera construida por nosotros mismos y como es costumbre, el producto debería ser tirado al sol, pero aquí se trabaja con la sombra, ya que los rayos del sol son muy fuertes en esta zona.", Indicó el señor Ávila.',
+        text: 'Su jornada inicia a las 7:00 am donde realizan la limpieza y poda hasta culminar a las 5:00 pm, (generalmente la cosecha la realizan entre los meses de noviembre y diciembre) una vez culminado el proceso se trasladan al conuco y se dedican a otros rubros.',
       },
       {
-        text: 'En cuanto a las diferencias de este fruto con los de otras zonas costeras, el señor Juan, nos informó, que la floración de las montañas ayuda con el polen y el fruto se nutre con un suave aroma y toma un sabor a “clavito dulce” que le añade ese toque particular que solo posee el “Cacao Patanemo”',
+        text: 'Ya recolectado el cacao se dedican a otras actividades como producir ají, variedades de yuca, maíz, naranja, mañongo (fruto que comen en horas de la mañana para aguantar el trabajo del día), licor yareke y cazabe, aunado a esto elaboran curiaras con madera tipo sasafrás, estas últimas utilizadas como principal medio de transporte.',
+      },
+      {
+        text: '"El proceso de recolección posee una característica muy particular; ya que se realiza un recorrido por las comunidades aledañas (recogiendo las mazorcas) de las cuales la población más cercana se encuentra a 40 min en curiara, una vez reunido el fruto se traslada al centro para realizar el proceso de beneficio post cosecha. Aproximadamente 5000 kg se trasladan de Manapiare a Puerto Ayacucho realizando un recorrido por el rio Ventuari, pernoctando en cada una de las comunidades durante 7 días.", Explicó, el señor Pastor Rodríguez miembro de APIPROCA y encargado de la recolección.',
+      },
+      {
+        text: 'Finalmente el producto es trasladado en camiones de Puerto Ayacucho a Caracas.',
       },
     ],
     images: [
@@ -276,31 +274,34 @@ const es = {
       },
       details: [
         { label: 'País', value: 'Venezuela' },
-        { label: 'Estado', value: 'Carabobo' },
-        { label: 'Municipio', value: 'Puerto Cabello' },
-        { label: 'Superficie', value: '51 km2' },
-        { label: 'Altitud Promedio', value: '19 m.s.n.m.' },
-        { label: 'Coordenadas GPS', value: '10°27′13″N 67°55′24″O' },
-        { label: 'Habitantes', value: '2176' },
+        { label: 'Estado', value: 'Amazonas' },
+        { label: 'Municipio', value: 'Manapiare' },
+        { label: 'Superficie', value: '178.95 km2' },
+        { label: 'Coordenadas GPS', value: 'Manapiare: 5º04´28”N 65º32´40”W' },
+        { label: 'Coordenadas GPS', value: 'Amazona: 03º30´N 66º00”W' },
+        { label: 'Habitantes', value: '178.670' },
       ],
     },
     paragraphs: [
-      'La Bahía de Patanemo pertenece al Municipio Puerto Cabello del Estado Carabobo, le antecede la Laguna de Bocaína, la extensa vegetación y fauna da la bienvenida al pueblo lleno de esencia y labor de la tierra, sus estrechas calles y viviendas de bahareque nos evoca una época de sacrificio y trabajo.',
+      'El Estado Amazonas se encuentra localizado en la Guayana Venezolana, cuya capital es Puerto Ayacucho, posee una superficie de 178.095 Km2, la superficie limita por el norte con el Estado Bolívar, por el sur y el este con la República de Brasil, y por el oeste con la República de Colombia.',
+      'El caserío de San Juan de Manapiare se encuentra ubicado en una zona selvática a orillas del río Manapiare y el rio Ventuari, al sur de la Serranía Guanay y al este del Cerro Morrocoy.',
     ],
     ecology: {
       title: 'Ecología',
       paragraphs: [
-        'El sistema vegetal de la subregión está caracterizada por una gran diversidad de bosques tropófilos basimontanos, caducifolios entre los 0-400 msnm, y bosques umbrófilos semicaducifolios ,entre los 400-1200 msnm.',
-        'La Bahía forma parte de la superficie del parque San Esteban, considerado un área de notable belleza, conformado por diferentes paisajes; selvas nubladas, costas e islas, por lo tanto presenta una vegetación rica y variada donde se pueden observar lugares xerófilos y sabanas. En las costas abundan los manglares, hacia el sur se puedes apreciar cardones y espinares.',
-        'La fauna de Patanemo, está asociada a los tipos de vegetación y a las características geográficas del área.',
-        'En el tramo de la costa se encuentran formaciones coralinas en la Laguna de Patanemo y en el grupo de islas que se encuentran entre ésta y Puerto Cabello, observándose áreas de manglares, cocoteros, cardones y espinares. A partir de los 200 y hasta los 400 m es característico el bosque seco, destacándose especies como flamencos, y garzas. Dentro de las aves destacan la perdiz de montaña, el gavilán blanco, el paují copete de piedra, el perico siete colores y la guacharaca.',
+        'La vegetación que predomina es el bosque tropical húmedo con formaciones de dos a cuatro estratos vegetales verticales; con niveles inferiores de arbustos y los superiores de árboles de gran desarrollo (30 a 40 m), con troncos lisos y rectos. Entre sus suelos se determina el de montaña, de peniplanicie y de valle.',
+        'Los suelos de valle, que pueden ser considerados como acumulaciones de aluviones recientes son de color rojizo son los de mayor interés para la población nativa, pues sustentan la producción agrícola.',
+        'El sistema de riego para la producción es natural, a través del agua de lluvia.',
+        'La fauna se encuentra constituida por una gran variedad de mamíferos como el mono tití, el mono araña, y la ardilla amazónica, así como también el báquiro cachete blanco, la nutria y el cachicamo gigante, los cuales son consumidos por los indígenas y criollos de la zona. Entre las aves encontramos el paují nocturno, pájaro paragua, guacamaya, y gran variedad de especies de tucanes.',
+        'Las tortugas son comunes en la red de ríos; entre los cocodrilos es común observar la babilla negra y en serpientes, entre los más representativos se encuentra la culebra lora y la mapanare del Amazonas.',
+        'Finalmente, en el Amazonas destacan una serie de especies de ranas arborícolas endémicas',
       ],
       images: [
         {
-          alt: 'ubicacion de Chuao',
+          alt: 'ubicacion de Manapiare',
         },
         {
-          alt: 'ubicacion de Chuao',
+          alt: 'ubicacion de Manapiare',
         },
       ],
     },
@@ -309,27 +310,27 @@ const es = {
     title: 'Historia',
     images: [
       {
-        alt: 'historia de Patanemo Fino',
+        alt: 'historia de Manapiare',
       },
       {
-        alt: 'historia de Patanemo Fino',
+        alt: 'historia de Manapiare',
       },
     ],
     content: [
       {
-        text: 'Patanemo es la población venezolana más apartada del litoral carabobeño, justo donde termina la carretera,  se encuentra en un estado de inanición, olvidado en el tiempo , pero ello no impide que mantenga en vigencia la tradición y cuidado de la atesorada semilla.',
+        text: 'Durante los años 1990 y 1996 en amazonas se realizó la recolección de todos los tipos de cacao puro, iniciando con las siembras de cacao criollo puro, donde predominó de acuerdo a las cualidades del suelo y clima amazónico, el cacao híbrido Chuao y Ocumare.',
       },
       {
-        text: 'Inicialmente Patanemo fue un sitio de encomiendas, dominado por los colonizadores. Para 1661 recibió la visita del gobernador de Venezuela Pedro Porres de Toledo, quien contó haber encontrado 20 indios en la encomienda administrada por la viuda del capitán Gaspar Camacho Ravelo, estos se dedicaban al cultivo de cacao. Hacia 1670, el alférez Juan Francisco de Elgueta promueve el establecimiento del pueblo y de una iglesia, que finalmente fue aprobada por el Cabildo el 22 de abril de ese año.',
+        text: 'San Juan de Manapiare fue fundada en 1940 por el explorador Don Melicio Pérez.',
       },
       {
-        text: 'En el año 1773, el obispo viajero Mariano Martí, visita a la bahía y le otorga el nombre de San Juan Bautista del valle de Patanemo. Para la fecha habían 61 habitantes, que se distribuyeron en viviendas dispersas de bahareque y posteriormente de bloques.',
+        text: 'La enigmática tierra del Amazonas preserva su inmarcesible energía y modo de vida desde que llegaron a las ancestrales tierras los aborígenes ,sus habitantes mantienen formas culturales relativamente autóctonas, tales como: establecimientos dispersos y semi-nómada, un sistema sencillo en el cual los elementos tradicionales son todavía notables, también se encuentra las aldeas transculturizadas que son los que han emigrado a las orillas de los ríos Ventuari y Manapiare, cuentan con una economía de subsistencia y su religión autóctona.',
       },
       {
-        text: 'La tierra de Patanemo es rica en acervo cultural donde por costumbres ancestrales se celebran a finales de Junio La Fiesta de San Juan Bautista y Los Diablos Danzantes de Patanemo, acompañada con el repique de los mejores tambores que ponen a vibrar a lugareños y hasta al más rígido de los turistas.',
+        text: 'Así mismo mantienen piezas de su cultura material, casas comunitarias de forma cónico-elíptica con techos de palma que llegan hasta el suelo, cerbatanas con flechas humedecidas con curare, pinturas vegetales, embarcaciones de motor y remo.',
       },
       {
-        text: 'La bahía de Patanemo, es un lugar muy singular de bellos paisajes rodeado de enormes montañas donde se encuentra una buena infraestructura  y sobre todo de una hermosa playa que hace honor a su nombre; es así como se disfruta bajo la luz de su resplandeciente sol.',
+        text: 'Años posteriores, cuando los españoles jesuitas descubrieron en este valioso territorio, la tierra rica en cacao, decidieron propagar y promover el cultivo, de la forma silvestre a una forma tecnificada; hecho que se comprueba con los testimonios de los productores de cacao del valle del río Marañón cuando relatan el proceso de la siembra al trasplante, a abonar y a cuidar las plantaciones.',
       },
     ],
   },
@@ -352,45 +353,45 @@ const en = {
   generalInformation: {
     title: 'Evaluation',
     image: {
-      alt: 'gourmet patanemo fino cocoa cover',
+      alt: 'Manapiare Cocoa Cover',
     },
     rating: {
-      stars: 'rating stars 2.7',
+      stars: 'Rating Stars 4.0',
     },
     sections: [
       {
         items: [
           { label: 'SWEET FRUITY', value: '1.2' },
-          { label: 'CITRUS FRUITY', value: '2.3' },
-          { label: 'FLORAL', value: '1.3' },
-          { label: 'CREOLE', value: '0.6' },
+          { label: 'CITRUS FRUITY', value: '3.1' },
+          { label: 'FLORAL', value: '2.0' },
+          { label: 'CREOLE', value: '0.0' },
           { label: 'COCOA', value: '3.5' },
-          { label: 'WOODSY', value: '1.5' },
-          { label: 'SPICES', value: '1.7' },
+          { label: 'WOODSY', value: '2.1' },
+          { label: 'SPICES', value: '0.0' },
         ],
       },
       {
         items: [
-          { label: 'ANNUAL PRODUCTION (TM)', value: '30' },
-          { label: 'MAIN HARVEST', value: 'DEC-APR' },
-          { label: 'MID HARVEST', value: 'JUN-JUL' },
+          { label: 'ANNUAL PRODUCTION (MT)', value: '12' },
+          { label: 'MAIN HARVEST', value: 'DEC-FEB' },
+          { label: 'MID HARVEST', value: 'MAR-APR' },
         ],
       },
       {
-        items: [{ label: 'CREOLE BEANS', value: '20%' }],
+        items: [{ label: 'CREOLE BEANS', value: '12%' }],
       },
       {
         items: [
-          { label: 'FERMENTED BEANS', value: '82%' },
-          { label: 'VIOLET BEANS', value: '14%' },
-          { label: 'SLATE BEANS', value: '4%' },
+          { label: 'FERMENTED BEANS', value: '85%' },
+          { label: 'VIOLET BEANS', value: '10%' },
+          { label: 'SLATE BEANS', value: '5%' },
           { label: 'TOTAL', value: '100%' },
         ],
       },
       {
         items: [
-          { label: 'Beans / 100g:', value: '78' },
-          { label: 'g./1 Bean:', value: '1.28 g' },
+          { label: 'Beans / 100g:', value: '81' },
+          { label: 'g./1 Bean:', value: '1.23 g' },
         ],
       },
       {
@@ -406,7 +407,7 @@ const en = {
     flavors: [
       {
         name: 'Sweet Fruity',
-        description: '',
+        description: 'Fresh Fruits',
       },
       {
         name: 'Citrus Fruity',
@@ -414,11 +415,11 @@ const en = {
       },
       {
         name: 'Floral',
-        description: 'Fresh Flowers',
+        description: 'Wild Flowers',
       },
       {
         name: 'Creole',
-        description: 'Nut • Brown Sugar Malt',
+        description: '',
       },
       {
         name: 'Cocoa',
@@ -426,35 +427,35 @@ const en = {
       },
       {
         name: 'Woodsy',
-        description: 'Tree Bark',
+        description: 'Bark • Fresh Wood',
       },
       {
         name: 'Spices',
-        description: 'Cinnamon • Clove',
+        description: '',
       },
     ],
     assessment: {
-      title: 'Assessment',
-      classification: 'Patanemo Fino Classification',
-      equipment: 'Tasting Panel',
+      title: 'Evaluation',
+      classification: 'Manapiare Classification',
+      equipment: 'Tasting Team',
     },
     information: [
       {
-        title: 'Aroma:',
+        title: 'A = Aroma:',
         description: {
-          boldText: 'MEDIUM',
-          additionalText: 'Moderate notes of spices',
+          boldText: 'STRONG',
+          additionalText: 'Essence of grass and wood',
         },
       },
       {
-        title: 'Flavor:',
+        title: 'F = Flavor:',
         description: {
           boldText: 'MEDIUM',
-          additionalText: 'Flavors of herbs, fruits, nuts, and flowers',
+          additionalText: 'Presence of fruity flavors',
         },
       },
       {
-        title: 'Fermentation:',
+        title: 'F = Fermentation:',
         description: {
           boldText: 'MEDIUM',
           additionalText: 'Moderate astringency and bitterness',
@@ -462,17 +463,14 @@ const en = {
       },
     ],
     analysis: {
-      title: 'Cut Test Analysis',
-      alt: 'Patanemo Fino Cocoa',
+      title: 'Cut Analysis',
+      alt: 'Fine Manapiare Cocoa',
       description: [
         {
-          text: 'The Patanemo bean has characteristics of high trinitario genetics and medium creole descent with 20% white beans, due to hybridization and quality standards.',
+          text: 'Among the attributes that compose this exquisite bean, possibly due to the mix of plantations with Creole genetics and hybrid cocoas, we obtain the following results: (±12%) in Creole beans, (±85%) in fermented beans, (±10%) in violet beans, and (±5%) in slate beans.',
         },
         {
-          text: 'Cut test results show: (±20%) white beans, (±82%) fermented beans, (±14%) violet beans, (±4%) slate beans.',
-        },
-        {
-          text: 'Regarding weight, beans typically contain 78 almonds per 100g weight; meaning each almond weighs 1.28g.',
+          text: 'In terms of weight, it contains 81 almonds, corresponding to a weight of 100 g; in other words, each almond weighs 1.23 g.',
         },
       ],
     },
@@ -484,8 +482,8 @@ const en = {
         {
           type: 'quote',
           quote:
-            '"Patanemo cocoa presents an intense variety of attributes combining soft notes of flowers, fruits, and nuts with aromas of sweet spices like cinnamon and clove",',
-          author: 'stated Eng. Ms Gladys Ramos',
+            '"Herbal and vegetal notes like bark and fresh wood intensify the floral attribute of this material. Similarly, the acidic flavor shows moderate intensity and interestingly intertwines with the fresh fruit attribute."',
+          author: 'detailed by Ms. Gladys Ramos, Engineer.',
         },
       ],
       image: { alt: 'Cocoa Flavor Wheel' },
@@ -496,7 +494,8 @@ const en = {
         {
           type: 'quote',
           quote:
-            'Intense cinnamon attributes stand out along with aromatic spices and soft herbal, floral, rain, and wet earth notes. The soil and climate conditions, xerophilous vegetation, and bird fauna like flamingos shape the flavor attributes of Patanemo cocoa products.',
+            '"Shows notes of a hybrid cocoa with flavors of fresh wood, bark, and wild flowers combined with forest aromas, perfumed notes, and sensations of warmth and acholado"',
+          author: 'stated by Ms. Gladys Ramos, Engineer.',
         },
       ],
       image: {
@@ -505,39 +504,35 @@ const en = {
     },
   ],
   postHarvestBenefit: {
-    title: 'Post-Harvest Processing',
+    title: 'Post-Harvest Benefit',
     content: [
-      {
-        text: 'Patanemo beans have high trinitario genetics and measured creole descent, requiring the following fermentation process.',
-      },
-      {
-        text: 'Approximately 200 kg of cocoa are transported via pack donkeys to the corresponding household.',
-      },
       {
         protocols: [
           {
             title: 'Fermentation Protocol',
+            description:
+              'Manapiare beans have a high percentage of Trinitario genetics and medium Creole descent, undergoing the following fermentation process:',
             items: [
               {
                 key: 'Cocoa Type',
               },
               {
-                alt: 'patanemo seed',
+                alt: 'manapiare seed',
                 text: 'Trinitario',
               },
               {
                 key: 'Fermentation Days',
-                value: '4 to 5 days',
-              },
-              {
-                key: 'Cocoa Type',
+                value: '9 days',
               },
               {
                 items: [
-                  'Box type: Wooden',
-                  'Turning frequency: every 48 hours',
-                  'Fermentation method: Beans are packed in nylon sacks and covered with large transparent plastics.',
+                  'Crate Type: Wood',
+                  'Turning Frequency: Every 24 hours',
+                  'Fermentation Method: Fermentation takes place in wooden crates.',
                 ],
+              },
+              {
+                text: 'Drying begins early in the morning, spreading the grains on the cement patios, stirring frequently to achieve uniform drying.',
               },
             ],
             image: {
@@ -546,29 +541,26 @@ const en = {
           },
           {
             title: 'Drying Protocol',
-            description:
-              'For drying, beans are transported via pack donkeys to households where they are spread on concrete surfaces under partial sun protection:',
             items: [
               {
                 key: 'Cocoa Type',
               },
               {
-                alt: 'patanemo seed',
+                alt: 'manapiare seed',
                 text: 'Dry Trinitario',
               },
               {
                 key: 'Drying Days',
-                value: '4 to 5 days',
+                value: '8 to 9 days',
               },
               {
                 key: 'Drying Techniques',
               },
               {
-                items: [
-                  'Floor type: concrete/corrugated roof',
-                  'Humidity: 7.5%',
-                  'Drying method: Sun-dried',
-                ],
+                items: ['Floor type: cement/concrete', 'Humidity: 7%', 'Drying method: sun-dried'],
+              },
+              {
+                text: 'Drying begins early in the morning, spreading the grains on the cement patios, stirring frequently to achieve uniform drying.',
               },
             ],
             image: {
@@ -584,25 +576,31 @@ const en = {
     subtitle: 'certifications and awards',
     content: [
       {
-        text: 'This sector has 25-30 producers, mostly locals and Andean farmers working for 20 years. Whole families participate in harvesting, post-harvest processing, and crafting traditional products.',
+        text: 'Amazonas has a population of 178,670 inhabitants, of which 45% are or identify as indigenous.',
       },
       {
-        text: 'While agriculture is the main economy, they also engage in fishing, and cultivate/sell yuca, plantain, cattle, banana, orange, and exotic flowers.',
+        text: 'The most representative sector is the Piaroa community, located in San Juan de Manapiare, where the Indigenous and Cacao Producers Association (APIPROCA) is located.',
       },
       {
-        text: 'Juan Antonio Ávila, 47, is recognized as the largest cocoa producer in the area, working with family and friends to cultivate quality beans.',
+        text: 'The communities of this mystical town lead an austere lifestyle, living in palm and mud houses, as well as in some block houses.',
       },
       {
-        text: 'Mr. Ávila\'s 16-hectare farm includes 12Ha of cocoa, producing ~1000 kg annually during "Pascuera" (Nov-Dec) and "Sanjuanera" (Jun-Jul) seasons.',
+        text: 'Its residents work as a family unit; Among them is the Rodríguez family, made up of Mr. Pastor Rodríguez, along with his daughter Susana, accompanied by Silvino Rodríguez and Marcos García, who are in charge of (APIPROCA); the association was established fourteen years ago and is made up of 14 producers, who put all their effort and dedication into the preservation of the distinguished bean.',
       },
       {
-        text: 'The Ávila family starts work at 5 AM with cleaning and follows a strict schedule: Monday harvest and pod-breaking, then sun-drying until Saturday.',
+        text: '24 productive hectares remain active, with the stupendous work of the Piaroa culture to provide the best bean, as they harmoniously produce 10,000 kg of cocoa annually during two harvest seasons, the main one in the months between October and November (7,000 kg) and the mid-season between December and January (3,000 kg).',
       },
       {
-        text: '"We use seawater from mountain runoff for irrigation through homemade hoses. We dry in shade due to intense sun," explained Mr. Ávila.',
+        text: 'Their day begins at 7:00 am, where they clean and prunes until finishing at 5:00 pm (generally, the harvest takes place between the months of November and December) once the process is complete, they move to the conuco and dedicate themselves to other activities.',
       },
       {
-        text: '"Mountain flowering provides unique pollen that gives our cocoa its distinctive \'sweet clove\' aroma unmatched in other coastal areas," added Juan.',
+        text: "Once the cacao is harvested, they dedicate themselves to other activities such as producing chili peppers, varieties of yuca, corn, oranges, mañongo (a fruit they eat in the morning to endure the day's work), yareke liquor, and cassava. In addition, they make curiaras with sassafras-type wood, the latter used as their primary means of transportation.",
+      },
+      {
+        text: '"The harvesting process has a very particular characteristic; a tour is made of the surrounding communities (collecting the cobs), from which the nearest town is a 40-minute drive by curiara. Once the fruit is gathered, it is transported to the center for the post-harvest processing process. Approximately 5,000 kg are transported from Manapiare to Puerto Ayacucho along the Ventuari River, spending the night in each community for 7 days," explained Mr. Pastor Rodríguez, a member of APIPROCA and in charge of the collection.',
+      },
+      {
+        text: 'Finally, the product is transported by truck from Puerto Ayacucho to Caracas.',
       },
     ],
     images: [
@@ -626,30 +624,31 @@ const en = {
       },
       details: [
         { label: 'Country', value: 'Venezuela' },
-        { label: 'State', value: 'Carabobo' },
-        { label: 'Municipality', value: 'Puerto Cabello' },
-        { label: 'Area', value: '51 km2' },
-        { label: 'Average Altitude', value: '19 m.a.s.l.' },
-        { label: 'GPS Coordinates', value: '10°27′13″N 67°55′24″W' },
-        { label: 'Population', value: '2176' },
+        { label: 'State', value: 'Amazonas' },
+        { label: 'Municipality', value: 'Manapiare' },
+        { label: 'Area', value: '178.95 km²' },
+        { label: 'GPS Coordinates', value: 'Manapiare: 5º04´28”N 65º32´40”W' },
+        { label: 'GPS Coordinates', value: 'Amazonas: 03º30´N 66º00”W' },
+        { label: 'Inhabitants', value: '178,670' },
       ],
     },
     paragraphs: [
-      'Patanemo Bay belongs to Puerto Cabello Municipality, preceded by Bocaína Lagoon. Its vegetation and fauna welcome visitors to this land of essence and labor, with narrow streets and bahareque houses evoking sacrifice and work.',
+      'Amazonas State is located in the Venezuelan Guayana region, with Puerto Ayacucho as its capital. It covers 178,095 km², bordering Bolívar State to the north, Brazil to the south and east, and Colombia to the west.',
+      'The village of San Juan de Manapiare is situated in a jungle area along the Manapiare and Ventuari rivers, south of the Guanay Mountain Range and east of Morrocoy Hill.',
     ],
     ecology: {
       title: 'Ecology',
       paragraphs: [
-        'The vegetation system features diverse tropophilous basimontane forests (0-400m) and ombrophilous semi-deciduous forests (400-1200m).',
-        'The bay is part of San Esteban Park, containing cloud forests, coasts, islands, xerophilous areas, and savannas. Coastal mangroves transition to southern cardones and thorny shrubs.',
-        'Local fauna adapts to vegetation and geography: coastal coral formations host mangroves and coconut palms, while higher altitudes feature flamingos, herons, mountain partridges, white hawks, and colorful parrots.',
+        'The predominant vegetation is tropical humid forest with 2-4 vertical vegetative strata. Valley soils of reddish alluvial deposits support native agricultural production.',
+        'Natural rainfall provides irrigation. The fauna includes titi monkeys, spider monkeys, Amazonian squirrels, white-lipped peccaries, giant otters, and armadillos. Notable birds include nocturnal curassows, umbrella birds, and macaws.',
+        'Reptilian species feature black caimans, Amazonian parrot snakes, and tree frogs. The ecosystem sustains both indigenous subsistence and biodiversity conservation.',
       ],
       images: [
         {
-          alt: 'Chuao location',
+          alt: 'Manapiare location',
         },
         {
-          alt: 'Chuao location',
+          alt: 'Manapiare location',
         },
       ],
     },
@@ -658,38 +657,45 @@ const en = {
     title: 'History',
     images: [
       {
-        alt: 'Patanemo Fino history',
+        alt: 'Manapiare history',
       },
       {
-        alt: 'Patanemo Fino history',
+        alt: 'Manapiare history',
       },
     ],
     content: [
       {
-        text: "Patanemo remains Venezuela's most remote coastal Carabobo town, forgotten in time but preserving cocoa traditions.",
+        text: 'During the years 1990 and 1996, all types of pure cacao were harvested in the Amazon, beginning with the planting of pure criollo cacao, where, according to the qualities of the Amazonian soil and climate, the hybrid Chuao and Ocumare cacao predominated.',
       },
       {
-        text: 'Originally an encomienda site, Governor Pedro Porres de Toledo documented 20 indigenous cocoa growers in 1661. The town was officially established in 1670 with church approval.',
+        text: 'San Juan de Manapiare was founded in 1940 by the explorer Don Melicio Pérez.',
       },
       {
-        text: 'In 1773, Bishop Mariano Martí named it San Juan Bautista del Valle de Patanemo, documenting 61 inhabitants in bahareque houses.',
+        text: 'The enigmatic land of the Amazon preserves its unfading energy and way of life since the aboriginal people arrived on their ancestral lands. Its inhabitants maintain relatively indigenous cultural forms, such as: dispersed and semi-nomadic settlements, a simple system in which traditional elements are still notable. There are also transculturalized villages, which are those that have migrated to the banks of the Ventuari and Manapiare rivers. They have an economy of subsistence and their indigenous religion.',
       },
       {
-        text: 'Cultural heritage includes the June San Juan Bautista Festival and Dancing Devils of Patanemo, accompanied by vibrant drumming.',
+        text: 'They also maintain pieces of their material culture, conical-elliptical community houses with palm roofs that reach the ground, blowguns with arrows moistened with curare, plant paintings, motorboats, and oars.',
       },
       {
-        text: 'Patanemo Bay offers unique landscapes with mountains and beaches under radiant sunshine, maintaining its ancestral legacy.',
+        text: 'Years later, when the Spanish Jesuits discovered cacao-rich soil in this valuable territory, they decided to propagate and promote the cultivation, from the wild to a technologically advanced form; a fact confirmed by the testimonies of cacao producers in the Marañón River Valley when they describe the process from planting to transplanting, fertilizing, and caring for the plantations.',
       },
     ],
   },
   socialResponsibility: {
     title: 'Social Responsibility',
-    images: [{ alt: 'image1' }, { alt: 'image2' }],
+    images: [
+      {
+        alt: 'image1',
+      },
+      {
+        alt: 'image2',
+      },
+    ],
     paragraphs:
-      "Our primary objective is promoting sustainable agricultural practices through next-generation training. Partnering with PROSPERI Foundation (non-profit), we preserve Venezuela's historical, cultural, and agricultural heritage. Educational programs like 'Return to Agriculture' demonstrate cocoa farming's viability as profitable profession driving social change.",
+      'Through collaboration with PROSPERI FOUNDATION - a non-profit promoting Venezuelan agricultural values - we support agricultural best practices and youth education via programs like "Return to Agriculture", demonstrating cocoa cultivation as a viable profession driving social change.',
   },
 };
 
-const patanemo = { es, en };
+const manapiare = { es, en };
 
-export { patanemo };
+export { manapiare };

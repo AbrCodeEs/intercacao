@@ -37,8 +37,8 @@ export default (Astro) => {
       flavors: [
         {
           name: langContent.characteristics.flavors[0].name,
-          percentage: '3.2',
-          progress: 64,
+          percentage: '1.5',
+          progress: 30,
           icon: {
             src: '/icons/afrutado_dulces-white-icon.svg',
             alt: 'Ceresa-white-icon',
@@ -49,7 +49,7 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[1].name,
-          percentage: '1.8',
+          percentage: '2.5',
           progress: 50,
           icon: {
             src: '/icons/afrutado_citricos-white-icon.svg',
@@ -61,8 +61,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[2].name,
-          percentage: '0.4',
-          progress: 8,
+          percentage: '0.5',
+          progress: 10,
           icon: {
             src: '/icons/aflorado-white-icon.svg',
             alt: 'Flor-white-icon',
@@ -73,8 +73,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[3].name,
-          percentage: '4.9',
-          progress: 82,
+          percentage: '2.1',
+          progress: 42,
           icon: {
             src: '/icons/acriollado-white-icon.svg',
             alt: 'Bellota-white-icon',
@@ -85,8 +85,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[4].name,
-          percentage: '2.5',
-          progress: 66,
+          percentage: '4.2',
+          progress: 84,
           icon: {
             src: '/icons/cacao-white-icon.svg',
             alt: 'Cacao-white-icon',
@@ -97,8 +97,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[5].name,
-          percentage: '0.5',
-          progress: 10,
+          percentage: '1.0',
+          progress: 20,
           icon: {
             src: '/icons/boscoso-white-icon.svg',
             alt: 'Pino-white-icon',
@@ -109,8 +109,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[6].name,
-          percentage: '1.2',
-          progress: 28.8,
+          percentage: '0.0',
+          progress: 0,
           icon: {
             src: '/icons/especias-white-icon.svg',
             alt: 'Clabos-white-icon',

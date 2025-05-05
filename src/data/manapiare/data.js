@@ -9,22 +9,22 @@ export default (Astro) => {
   const lang = getLangFromUrl(Astro.url);
   const trans = useTranslations(lang);
   const langImages = images[lang];
-  const langContent = trans('patanemo');
+  const langContent = trans('manapiare');
 
   return {
     generalInformation: {
       title: langContent.generalInformation.title,
       cocoa: {
         title: 'cacao gourmet',
-        subtitle: 'patanemo fino',
-        color: 'bg-teal-700'
+        subtitle: 'manapiare fino',
+        color: 'bg-fuchsia-800'
       },
       mainImage: {
         src: langImages.general.bannerWeb,
         alt: langContent.generalInformation.image.alt,
       },
       rating: {
-        value: '2.7',
+        value: '3.7',
         stars: {
           src: langImages.general.ratingStars,
           alt: langContent.generalInformation.rating.stars,
@@ -49,8 +49,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[1].name,
-          percentage: '2.3',
-          progress: 46,
+          percentage: '3.1',
+          progress: 62,
           icon: {
             src: '/icons/afrutado_citricos-white-icon.svg',
             alt: 'Naranja-white-icon',
@@ -61,8 +61,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[2].name,
-          percentage: '1.3',
-          progress: 26,
+          percentage: '2.0',
+          progress: 40,
           icon: {
             src: '/icons/aflorado-white-icon.svg',
             alt: 'Flor-white-icon',
@@ -73,8 +73,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[3].name,
-          percentage: '0.6',
-          progress: 12,
+          percentage: '0.0',
+          progress: 0,
           icon: {
             src: '/icons/acriollado-white-icon.svg',
             alt: 'Bellota-white-icon',
@@ -97,8 +97,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[5].name,
-          percentage: '1.5',
-          progress: 30,
+          percentage: '2.1',
+          progress: 42,
           icon: {
             src: '/icons/boscoso-white-icon.svg',
             alt: 'Pino-white-icon',
@@ -109,8 +109,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[6].name,
-          percentage: '1.7',
-          progress: 34,
+          percentage: '0.0',
+          progress: 0,
           icon: {
             src: '/icons/especias-white-icon.svg',
             alt: 'Clabos-white-icon',
@@ -165,16 +165,12 @@ export default (Astro) => {
         description: [
           {
             text: langContent.characteristics.analysis.description[0].text,
-            information_block: true,
+            information_block: false,
           },
           {
             text: langContent.characteristics.analysis.description[1].text,
             information_block: false,
-          },
-          {
-            text: langContent.characteristics.analysis.description[2].text,
-            information_block: false,
-          },
+          }
         ],
       },
     },
@@ -217,90 +213,88 @@ export default (Astro) => {
       backgroundColor: 'bg-neutral-100',
       content: [
         {
-          type: 'quote',
-          text: langContent.postHarvestBenefit.content[0].text,
-          border: true,
-        },
-        {
-          type: 'paragraph',
-          text: langContent.postHarvestBenefit.content[1].text,
-          border: true,
-        },
-        {
           type: 'protocols',
           protocols: [
             {
-              title: langContent.postHarvestBenefit.content[2].protocols[0].title,
+              title: langContent.postHarvestBenefit.content[0].protocols[0].title,
+              description: langContent.postHarvestBenefit.content[0].protocols[0].description,
               items: [
                 {
                   category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[2].protocols[0].items[0].key,
+                  key: langContent.postHarvestBenefit.content[0].protocols[0].items[0].key,
                   value: '',
                 },
                 {
                   category: 'imageText',
                   image: langImages.benefit.tipoDeCacao[0],
-                  alt: langContent.postHarvestBenefit.content[2].protocols[0].items[1].alt,
-                  text: langContent.postHarvestBenefit.content[2].protocols[0].items[1].text,
+                  alt: langContent.postHarvestBenefit.content[0].protocols[0].items[1].alt,
+                  text: langContent.postHarvestBenefit.content[0].protocols[0].items[1].text,
                   size: 24,
                 },
                 {
                   category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[2].protocols[0].items[2].key,
-                  value: langContent.postHarvestBenefit.content[2].protocols[0].items[2].value,
-                },
-                {
-                  category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[2].protocols[0].items[3].key,
-                  value: '',
+                  key: langContent.postHarvestBenefit.content[0].protocols[0].items[2].key,
+                  value: langContent.postHarvestBenefit.content[0].protocols[0].items[2].value,
                 },
                 {
                   category: 'list',
-                  items: langContent.postHarvestBenefit.content[2].protocols[0].items[4].items,
+                  items: langContent.postHarvestBenefit.content[0].protocols[0].items[3].items,
                 },
               ],
               mainImage: [
                 {
                   src: langImages.protocols.fermentacion[0],
-                  alt: langContent.postHarvestBenefit.content[2].protocols[0].image.alt,
+                  alt: langContent.postHarvestBenefit.content[0].protocols[0].image.alt,
+                },
+                {
+                  src: langImages.protocols.fermentacion[1],
+                  alt: langContent.postHarvestBenefit.content[0].protocols[0].image.alt,
                 },
               ],
             },
             {
-              title: langContent.postHarvestBenefit.content[2].protocols[1].title,
-              description: langContent.postHarvestBenefit.content[2].protocols[1].description,
+              title: langContent.postHarvestBenefit.content[0].protocols[1].title,
+              description: langContent.postHarvestBenefit.content[0].protocols[1].description,
               items: [
                 {
                   category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[2].protocols[1].items[0].key,
+                  key: langContent.postHarvestBenefit.content[0].protocols[1].items[0].key,
                   value: '',
                 },
                 {
                   category: 'imageText',
                   image: langImages.benefit.tipoDeCacao[1],
-                  alt: langContent.postHarvestBenefit.content[2].protocols[1].items[1].alt,
-                  text: langContent.postHarvestBenefit.content[2].protocols[1].items[1].text,
+                  alt: langContent.postHarvestBenefit.content[0].protocols[1].items[1].alt,
+                  text: langContent.postHarvestBenefit.content[0].protocols[1].items[1].text,
                   size: 24,
                 },
                 {
                   category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[2].protocols[1].items[2].key,
-                  value: langContent.postHarvestBenefit.content[2].protocols[1].items[2].value,
+                  key: langContent.postHarvestBenefit.content[0].protocols[1].items[2].key,
+                  value: langContent.postHarvestBenefit.content[0].protocols[1].items[2].value,
                 },
                 {
                   category: 'keyValue',
-                  key: langContent.postHarvestBenefit.content[2].protocols[1].items[3].key,
+                  key: langContent.postHarvestBenefit.content[0].protocols[1].items[3].key,
                   value: '',
                 },
                 {
                   category: 'list',
-                  items: langContent.postHarvestBenefit.content[2].protocols[1].items[4].items,
+                  items: langContent.postHarvestBenefit.content[0].protocols[1].items[4].items,
                 },
+                {
+                  category: 'paragraph',
+                  paragraph: langContent.postHarvestBenefit.content[0].protocols[1].items[5].text,
+                }
               ],
               mainImage: [
                 {
                   src: langImages.protocols.secado[0],
-                  alt: langContent.postHarvestBenefit.content[2].protocols[1].image.alt,
+                  alt: langContent.postHarvestBenefit.content[0].protocols[1].image.alt,
+                },
+                {
+                  src: langImages.protocols.secado[1],
+                  alt: langContent.postHarvestBenefit.content[0].protocols[1].image.alt,
                 },
               ],
             },
@@ -317,7 +311,7 @@ export default (Astro) => {
           text: langContent.traceability.content[0].text,
         },
         {
-          type: 'paragraph',
+          type: 'highlight',
           text: langContent.traceability.content[1].text,
         },
         {
@@ -329,12 +323,24 @@ export default (Astro) => {
           text: langContent.traceability.content[3].text,
         },
         {
-          type: 'paragraph',
+          type: 'highlight',
           text: langContent.traceability.content[4].text,
         },
         {
           type: 'paragraph',
           text: langContent.traceability.content[5].text,
+        },
+        {
+          type: 'paragraph',
+          text: langContent.traceability.content[6].text,
+        },
+        {
+          type: 'highlight',
+          text: langContent.traceability.content[7].text,
+        },
+        {
+          type: 'paragraph',
+          text: langContent.traceability.content[8].text,
         },
       ],
       images: [
@@ -385,7 +391,7 @@ export default (Astro) => {
       ],
       content: [
         {
-          type: 'paragraph',
+          type: 'highlight',
           text: langContent.history.content[0].text,
         },
         {
@@ -397,7 +403,7 @@ export default (Astro) => {
           text: langContent.history.content[2].text,
         },
         {
-          type: 'highlight',
+          type: 'paragraph',
           text: langContent.history.content[3].text,
         },
         {

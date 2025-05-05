@@ -245,8 +245,8 @@ export const chocolateBars: CocoaBar[] = [
       wood: 2.1,
       spices: 0,
     },
-    url: 'http://manapiare.intercacao.com',
-    // url: '/manapiare'
+    // url: 'http://manapiare.intercacao.com',
+    url: 'manapiare'
   },
   {
     id: '11',
