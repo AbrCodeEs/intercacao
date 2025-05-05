@@ -17,6 +17,8 @@ import {
   CarouselIndicator,
 } from '@/components/ui/carousel/carousel'; // Asegúrate de tener la ruta correcta
 
+import yeih from '@/images/global/logo-yeih.webp';
+
 interface MenuItemProps {
   item: BeeBar;
   apiUrl: string;
@@ -54,7 +56,9 @@ const MenuItem = ({ item, apiUrl }: MenuItemProps) => {
       <Snowflake className="text-3xl text-blue-400" />
     ) : categoryName.includes('caliente') ? (
       <Coffee className="text-3xl text-red-400" />
-    ) : null;
+    ) : categoryName.includes('Yeih producto') ?
+      <img src={yeih.src} alt="Yeih" className="text-3xl text-red-400" />
+      : null;
   };
 
   return (
@@ -74,7 +78,7 @@ const MenuItem = ({ item, apiUrl }: MenuItemProps) => {
           loading="lazy"
           decoding="async"
         />
-        {item.bee_bar_category && (
+        {(item.bee_bar_category && getCategoryIcon()) && (
           <div className="absolute right-5 bottom-5 rounded-full bg-[#3c5548]/20 p-2 backdrop-blur-sm">
             {getCategoryIcon()}
           </div>
@@ -280,11 +284,10 @@ export const VainillaBar = ({ trans }: VainillaBarProps) => {
                   <button
                     key={`type-${type.name}`}
                     onClick={() => toggleFilter('type', type.name)}
-                    className={`flex items-center gap-2 rounded-full px-4 py-2 transition-colors ${
-                      selectedTypes.includes(type.name)
+                    className={`flex items-center gap-2 rounded-full px-4 py-2 transition-colors ${selectedTypes.includes(type.name)
                         ? 'bg-yellow-300 text-gray-800'
                         : 'bg-gray-700/50 text-gray-200 hover:bg-gray-700'
-                    }`}
+                      }`}
                   >
                     {type.name}
                   </button>
@@ -304,11 +307,10 @@ export const VainillaBar = ({ trans }: VainillaBarProps) => {
                       <button
                         key={`category-${category.name}`}
                         onClick={() => toggleFilter('category', category.name)}
-                        className={`flex items-center gap-2 rounded-full px-4 py-2 transition-colors ${
-                          selectedCategories.includes(category.name)
+                        className={`flex items-center gap-2 rounded-full px-4 py-2 transition-colors ${selectedCategories.includes(category.name)
                             ? 'bg-yellow-300 text-gray-800'
                             : 'bg-gray-700/50 text-gray-200 hover:bg-gray-700'
-                        }`}
+                          }`}
                       >
                         {category.name.toLowerCase() === 'frio' && <Snowflake />}
                         {category.name.toLowerCase() === 'caliente' && <Coffee />}
@@ -327,7 +329,7 @@ export const VainillaBar = ({ trans }: VainillaBarProps) => {
             style={{ scrollBehavior: 'smooth' }}
           >
             <Carousel initialIndex={0} className="relative w-full">
-              <CarouselContent itemsPerPage={itemsPerPage} className="py-4">
+              <CarouselContent dataCount={filteredItems.length} itemsPerPage={itemsPerPage} className="py-4">
                 {filteredItems.map((item) => (
                   <CarouselItem
                     key={item.id}

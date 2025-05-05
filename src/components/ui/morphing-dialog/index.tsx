@@ -211,55 +211,34 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
     >
       {isMobile && (
         <>
-        <div
-          className="drag-handle"
-          onPointerDown={(e) => dragControls.start(e)}
-          style={{
-            position: 'absolute',
-            top: '10px',
-            left: 0,
-            right: 0,
-            height: '30px',
-            zIndex: 1,
-            touchAction: 'none',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
           <div
+            className="drag-handle"
+            onPointerDown={(e) => dragControls.start(e)}
             style={{
-              width: '40px',
-              height: '4px',
-              borderRadius: '2px',
-              backgroundColor: 'rgb(99 99 99 / 81%)',
+              position: 'absolute',
+              top: '0',
+              left: 0,
+              right: 0,
+              height: '200px',
+              zIndex: 1,
+              touchAction: 'none',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'start',
+              // backgroundColor: 'rgb(99 99 99 / 81%)',
             }}
-          />
-        </div>
-        <div
-          className="drag-handle"
-          onPointerDown={(e) => dragControls.start(e)}
-          style={{
-            position: 'absolute',
-            top: '51%',
-            right: '0',
-            height: '30px',
-            zIndex: 1,
-            touchAction: 'none',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <div
-            style={{
-              width: '1000px',
-              height: '100px',
-              borderRadius: '2px',
-              // backgroundColor: 'rgb(199 199 199 / 71%)',
-            }}
-          />
-        </div>
+          >
+            <div
+              style={{
+                marginTop: '20px',
+                width: '40px',
+                height: '4px',
+                borderRadius: '2px',
+                backgroundColor: 'rgb(99 99 99 / 90%)',
+              }}
+            />
+          </div>
+
         </>
       )}
       {children}

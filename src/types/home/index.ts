@@ -88,6 +88,7 @@ interface CocoaBar {
     [key: string]: number;
   };
   watermark?: boolean;
+  soldout?: boolean;
 }
 
 export type {

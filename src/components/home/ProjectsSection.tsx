@@ -99,8 +99,11 @@ const ImageWithPlaceholder = ({ src, alt }: ImageProps) => {
 };
 
 export const ProjectsSection = ({ items }: { items: any[] }) => {
+  const [visibleImages, setVisibleImages] = useState<Set<string>>(new Set());
+  const [preloadedImages, setPreloadedImages] = useState<Set<string>>(new Set());
+
+  // Precargar las primeras 3 imágenes
   useEffect(() => {
-    // Precargar las primeras 3 imágenes
     const preloadImages = async () => {
       const imagesToPreload = items
         .flatMap(item => item.images)
@@ -109,6 +112,7 @@ export const ProjectsSection = ({ items }: { items: any[] }) => {
 
       try {
         await Promise.all(imagesToPreload.map(preloadImage));
+        setPreloadedImages(new Set(imagesToPreload));
       } catch (error) {
         console.error('Error al precargar imágenes:', error);
       }
@@ -116,6 +120,26 @@ export const ProjectsSection = ({ items }: { items: any[] }) => {
 
     preloadImages();
   }, [items]);
+
+  // Precargar imágenes adyacentes cuando cambia el proyecto activo
+  const handleProjectChange = useCallback((index: number) => {
+    const currentImages = items[index].images.map((img: any) => img.src);
+    const nextImages = items[(index + 1) % items.length].images.map((img: any) => img.src);
+    const prevImages = items[(index - 1 + items.length) % items.length].images.map((img: any) => img.src);
+
+    const newVisibleImages = new Set([...currentImages, ...nextImages, ...prevImages]);
+    setVisibleImages(newVisibleImages);
+
+    // Precargar imágenes que aún no están precargadas
+    const imagesToPreload = [...newVisibleImages].filter(src => !preloadedImages.has(src));
+    if (imagesToPreload.length > 0) {
+      Promise.all(imagesToPreload.map(preloadImage))
+        .then(() => {
+          setPreloadedImages(prev => new Set([...prev, ...imagesToPreload]));
+        })
+        .catch(error => console.error('Error al precargar imágenes:', error));
+    }
+  }, [items, preloadedImages]);
 
   const projects = items.map((item) => {
     return {
@@ -142,9 +166,10 @@ export const ProjectsSection = ({ items }: { items: any[] }) => {
       ),
     };
   });
+
   return (
     <div className="min-h-[300vh] w-full">
-      <StickyScroll content={projects} />
+      <StickyScroll content={projects} onProjectChange={handleProjectChange} />
     </div>
   );
 };

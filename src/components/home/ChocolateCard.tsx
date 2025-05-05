@@ -5,9 +5,15 @@ import { Card, CardContent } from '@/components/ui/card';
 import type { CocoaBar, SortOption, FlavorOption } from '@/types/home';
 import { Sort } from '@/types/home';
 import { Star, Award, Trophy, Nut, CornerRightUp } from 'lucide-react';
-import miel from '@/images/home/beeBar/MIEL.webp';
-
 import { motion } from 'motion/react';
+
+import watermarkEs from '@/images/global/agotado.webp';
+import watermarkEn from '@/images/global/soldout.webp';
+
+const watermark = {
+  es: watermarkEs,
+  eng: watermarkEn,
+};
 
 const IconTraslation = {
   fruity_sweet: 'fruity_sweet',
@@ -24,11 +30,13 @@ export function ChocolateCard({
   sortBy,
   flavors,
   trans,
+  lang,
 }: {
   chocolate: CocoaBar;
   sortBy: SortOption | null;
   flavors: FlavorOption[] | string | null;
   trans: Record<string, any>;
+  lang: 'es' | 'eng';
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -54,6 +62,14 @@ export function ChocolateCard({
                 width={1000}
                 height={1000}
                 className={`object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 ${isHovered && 'blur'}`}
+              />
+            )}
+
+            {chocolate.soldout && (
+              <img
+                className="absolute top-0 left-0 size-20"
+                src={watermark[lang].src}
+                alt="soldout"
               />
             )}
 

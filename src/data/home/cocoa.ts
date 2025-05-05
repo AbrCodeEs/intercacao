@@ -154,7 +154,8 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     // url: 'http://tumaco.intercacao.com',
-    url: 'tumaco'
+    url: 'tumaco',
+    soldout: true
   },
   {
     id: '7',
@@ -223,7 +224,8 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     // url: 'http://huila.intercacao.com',
-    url: 'huila'
+    url: 'huila',
+    soldout: true
   },
   {
     id: '10',
@@ -304,7 +306,7 @@ export const chocolateBars: CocoaBar[] = [
     awarded: 1,
     creole: 57,
     flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
-    country: 'Venezuela',
+    country: 'Perú',
     ingredients: {
       fruity_sweet: 1.5,
       fruity_citrus: 1.5,
@@ -316,6 +318,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     url: 'http://nativoblanco.intercacao.com',
     // disabled: true,
+    // soldout: true
   },
   {
     id: '14',
@@ -349,7 +352,7 @@ export const chocolateBars: CocoaBar[] = [
     awarded: 1,
     creole: 30,
     flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
-    country: 'Venezuela',
+    country: 'Perú',
     ingredients: {
       fruity_sweet: 2.5,
       fruity_citrus: 2.0,
@@ -361,6 +364,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     url: 'http://paloblanco.intercacao.com',
     // disabled: true,
+    // soldout: true
   },
   {
     id: '16',

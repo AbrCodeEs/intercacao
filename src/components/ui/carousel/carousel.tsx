@@ -207,14 +207,15 @@ export type CarouselContentProps = {
   className?: string;
   transition?: Transition;
   itemsPerPage?: number;
+  dataCount?: number;
 };
 
-function CarouselContent({ children, className, transition, itemsPerPage }: CarouselContentProps) {
+function CarouselContent({ children, className, transition, itemsPerPage, dataCount }: CarouselContentProps) {
   const { index, setIndex, setItemsCount, disableDrag } = useCarousel();
   const [visibleItemsCount, setVisibleItemsCount] = useState<number>(itemsPerPage || 1);
   const dragX = useMotionValue(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  const itemsLength = Children.count(children);
+  const itemsLength = dataCount || Children.count(children);
 
   const effectiveItemsPerPage = itemsPerPage || visibleItemsCount;
   const pageCount = Math.max(1, Math.ceil(itemsLength / effectiveItemsPerPage));
@@ -247,9 +248,24 @@ function CarouselContent({ children, className, transition, itemsPerPage }: Caro
 
   const onDragEnd = () => {
     const x = dragX.get();
-    const threshold = 50; // Umbral mínimo para pasar de página
+    const threshold = 10;
+    const velocity = dragX.getVelocity();
 
-    if (x <= -threshold && index < pageCount - 1) {
+    // Calcular el número total de items visibles en la última página
+    const lastPageItems = itemsLength % effectiveItemsPerPage;
+    const isLastPage = index === pageCount - 1;
+    const hasPartialLastPage = lastPageItems > 0;
+
+    // Si estamos en la última página y hay items parciales, ajustar el umbral
+    const adjustedThreshold = isLastPage && hasPartialLastPage ? threshold * 2 : threshold;
+
+    if (Math.abs(velocity) > 100) {
+      if (velocity < 0 && index < pageCount - 1) {
+        setIndex(index + 1);
+      } else if (velocity > 0 && index > 0) {
+        setIndex(index - 1);
+      }
+    } else if (x <= -adjustedThreshold && index < pageCount - 1) {
       setIndex(index + 1);
     } else if (x >= threshold && index > 0) {
       setIndex(index - 1);
@@ -267,7 +283,8 @@ function CarouselContent({ children, className, transition, itemsPerPage }: Caro
               right: 0,
             }
       }
-      dragMomentum={disableDrag ? undefined : false}
+      dragMomentum={false}
+      dragElastic={0.1}
       style={{
         x: disableDrag ? undefined : dragX,
       }}
@@ -277,13 +294,13 @@ function CarouselContent({ children, className, transition, itemsPerPage }: Caro
       onDragEnd={disableDrag ? undefined : onDragEnd}
       transition={
         transition || {
-          damping: 18,
-          stiffness: 90,
           type: 'spring',
-          duration: 0.2,
+          stiffness: 300,
+          damping: 30,
+          mass: 0.5,
         }
       }
-      className={cn('flex items-center select-none', className)}
+      className={cn('flex items-center select-none touch-pan-x', className)}
       ref={containerRef}
     >
       {Children.map(children, (child, index) => (
