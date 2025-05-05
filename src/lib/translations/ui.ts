@@ -13,6 +13,7 @@ import { cajaseca } from '@/data/cajaSeca/cajaseca-content';
 import { barinas } from '@/data/barinas/barinas-content';
 import { choroni } from '@/data/choroni/choroni-content';
 import { huila } from '@/data/huila/huila-content';
+import { manapiare } from '@/data/manapiare/manapiare-content';
 
 export const languages = {
   eng: 'English',
@@ -32,7 +33,8 @@ export const ui = {
     tumaco: tumaco.es,  // ✅
     canoabo: canoabo.es, // ✅
     choroni: choroni.es, // ✅
-    huila: huila.es,
+    huila: huila.es, // ✅
+    manapiare: manapiare.es,
     // ultimos productos
     surdellago: surDelLago.es,
     barlovento: barlovento.es,
@@ -50,6 +52,7 @@ export const ui = {
     canoabo: canoabo.en,
     choroni: choroni.en,
     huila: huila.en,
+    manapiare: manapiare.en,
     // ultimos productos
     surdellago: surDelLago.en,
     barlovento: barlovento.en,

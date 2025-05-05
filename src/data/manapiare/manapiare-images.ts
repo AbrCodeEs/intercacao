@@ -1,18 +1,20 @@
-import PatanemoWeb from '@/images/patanemo/patanemo-web.webp';
+import PatanemoWeb from '@/images/manapiare/manapiare-web.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
-import Clasificacion from '@/images/patanemo/evaluacion.webp';
+import Clasificacion from '@/images/manapiare/evaluacion.webp';
 import SaboresPositivos from '@/images/patanemo/cacao.webp';
-import EquipoCata from '@/images/patanemo/equipodecata.webp';
-import CuencaCacao from '@/images/patanemo/corte.webp';
-import RuedaSabores from '@/images/patanemo/ruedadesabores.webp';
-import MapaSensorial from '@/images/patanemo/mapasensorial.webp';
+import EquipoCata from '@/images/manapiare/equipodecata.webp';
+import CuencaCacao from '@/images/manapiare/corte.webp';
+import RuedaSabores from '@/images/manapiare/mapadesabore.webp';
+import MapaSensorial from '@/images/manapiare/mapasensorial.webp';
 
-import TipoDeCacaoOne from '@/images/patanemo/cacaotrinitario.webp';
-import TipoDeCacaoTwo from '@/images/patanemo/trinitarioseco.webp';
+import TipoDeCacaoOne from '@/images/manapiare/cacaotrinitario.webp';
+import TipoDeCacaoTwo from '@/images/manapiare/trinitarioseco.webp';
 
-import ProtocoloFermentacionOne from '@/images/patanemo/fermentacion1.webp';
+import ProtocoloFermentacionOne from '@/images/manapiare/fermentacion.webp';
+import ProtocoloFermentacionTwo from '@/images/manapiare/fermentacion2.webp';
 
-import CosechaOne from '@/images/patanemo/secado1.webp';
+import CosechaOne from '@/images/manapiare/secado.webp';
+import CosechaTwo from '@/images/manapiare/secado2.webp';
 import TraceabilityOne from '@/images/patanemo/trazabilidad.webp';
 
 import map from '@/images/patanemo/mapa.webp';
@@ -40,8 +42,8 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [ProtocoloFermentacionOne],
-      secado: [CosechaOne],
+      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo],
+      secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
       traceability: [
@@ -71,8 +73,8 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [ProtocoloFermentacionOne],
-      secado: [CosechaOne],
+      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo],
+      secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
       traceability: [
