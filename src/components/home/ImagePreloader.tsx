@@ -1,18 +1,37 @@
 'use client';
 
 import { useEffect } from 'react';
-import { chocolateBars } from '@/data/home/cocoa';
 
-export function ImagePreloader() {
+interface ImagePreloaderProps {
+  images: string[];
+}
+
+export const ImagePreloader = ({ images = [] }: ImagePreloaderProps) => {
   useEffect(() => {
-    // Preload images for the first 4 chocolates (most important ones)
-    const importantImages = chocolateBars.slice(0, 4).map(chocolate => chocolate.image);
-    
-    importantImages.forEach(imageUrl => {
-      const img = new Image();
-      img.src = imageUrl;
-    });
-  }, []);
+    if (!Array.isArray(images) || images.length === 0) {
+      return;
+    }
 
-  return null; // Este componente no renderiza nada visualmente
-} 
+    const preloadImages = async () => {
+      try {
+        await Promise.all(
+          images.map((src) => {
+            if (!src) return Promise.resolve();
+            return new Promise((resolve, reject) => {
+              const img = new Image();
+              img.onload = resolve;
+              img.onerror = reject;
+              img.src = src;
+            });
+          })
+        );
+      } catch (error) {
+        console.warn('Error preloading images:', error);
+      }
+    };
+
+    preloadImages();
+  }, [images]);
+
+  return null;
+}; 
