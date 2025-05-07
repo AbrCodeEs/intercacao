@@ -295,7 +295,7 @@ function CarouselContent({ children, className, transition, itemsPerPage, dataCo
       transition={
         transition || {
           type: 'spring',
-          stiffness: 300,
+          stiffness: 150,
           damping: 30,
           mass: 0.5,
         }

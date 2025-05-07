@@ -131,7 +131,8 @@ export const chocolateBars: CocoaBar[] = [
       spices: 1.7,
     },
     // url: 'http://patanemo.intercacao.com',
-    url : 'patanemo' 
+    url : 'patanemo',
+    soldout: true
   },
   {
     id: '6',
@@ -178,7 +179,8 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     // url: 'http://canoabo.intercacao.com',
-    url: 'canoabo'
+    url: 'canoabo',
+    soldout: true
   },
   {
     id: '8',
@@ -201,7 +203,8 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     // url: 'http://choroni.intercacao.com',
-    url: 'choroni'
+    url: 'choroni',
+    soldout: true
   },
   {
     id: '9',
@@ -248,7 +251,8 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     // url: 'http://manapiare.intercacao.com',
-    url: 'manapiare'
+    url: 'manapiare',
+    soldout: true
   },
   {
     id: '11',
@@ -271,7 +275,8 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://mantuano.intercacao.com',
-    // url: '/mantuano'
+    // url: '/mantuano',
+    soldout: true
   },
   {
     id: '12',
@@ -294,7 +299,8 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://ocumare.intercacao.com',
-    // url: '/ocumare'
+    // url: '/ocumare',
+    soldout: true
   },
   {
     id: '13',
@@ -317,6 +323,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://nativoblanco.intercacao.com',
+    soldout: true
     // disabled: true,
     // soldout: true
   },
@@ -341,6 +348,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'http://trincheras.intercacao.com',
+    soldout: true
   },
   {
     id: '15',
@@ -364,7 +372,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     url: 'http://paloblanco.intercacao.com',
     // disabled: true,
-    // soldout: true
+    soldout: true
   },
   {
     id: '16',
@@ -412,29 +420,29 @@ export const chocolateBars: CocoaBar[] = [
     url: 'barlovento',
     watermark: true
   },
-  {
-    id: '18',
-    name: 'Tesoro Caja Seca',
-    image: surdellago.src,
-    rating: 2.7,
-    fermented: 88,
-    certified: 0,
-    awarded: 0,
-    creole: 18,
-    flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
-    country: 'Venezuela',
-    ingredients: {
-      fruity_sweet: 2.5,
-      fruity_citrus: 2.9,
-      flower: 0.8,
-      creole: 3.2,
-      cocoa: 3.5,
-      wood: 0.1,
-      spices: 0.6,
-    },
-    url: 'cajaseca',
-    watermark: true
-  },
+  // {
+  //   id: '18',
+  //   name: 'Tesoro Caja Seca',
+  //   image: surdellago.src,
+  //   rating: 2.7,
+  //   fermented: 88,
+  //   certified: 0,
+  //   awarded: 0,
+  //   creole: 18,
+  //   flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole', 'Cocoa', 'Wood', 'Spices'],
+  //   country: 'Venezuela',
+  //   ingredients: {
+  //     fruity_sweet: 2.5,
+  //     fruity_citrus: 2.9,
+  //     flower: 0.8,
+  //     creole: 3.2,
+  //     cocoa: 3.5,
+  //     wood: 0.1,
+  //     spices: 0.6,
+  //   },
+  //   url: 'cajaseca',
+  //   watermark: true
+  // },
   {
     id: '19',
     name: 'Barinas',
