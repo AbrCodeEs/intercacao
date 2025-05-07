@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 
 import Layout from '@/layouts/MainLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/types/home/website';
+import { chocolateBars } from '@/data/home/cocoa';
 
 import lienzo from '@/images/home/lienzo-bg.webp';
 import lienzoCacao from '@/images/home/lienzo-cacao-bg.webp';
@@ -22,14 +23,24 @@ import { ChocolateGallery } from '@/components/home/ChocolateGallery';
 import { DialogFlavours } from '@/components/ui/morphing-dialog/DialogFlavours';
 
 // import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
-import { getLangFromUrl, useTranslations } from '@/lib/translations';
+import { useTranslations } from '@/lib/translations';
 import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
 import { VainillaBar } from '@/components/home/VainillaBar';
 import { NewsSection } from '@/components/home/NewsSection';
 
-const lang = getLangFromUrl(Astro.url);
+// Validar que el locale sea válido
+const { locale } = Astro.params;
+if (!locale || !['es', 'eng'].includes(locale)) {
+  return Astro.redirect('/es/');
+}
 
+const lang = locale as 'es' | 'eng';
 const trans = useTranslations(lang);
+
+// Obtener las URLs de las imágenes para preload
+const preloadImages = chocolateBars
+  .filter((bar) => bar.image && typeof bar.image === 'string')
+  .map((bar) => (typeof bar.image === 'string' ? bar.image : bar.image.src));
 
 const posts = [
   {
@@ -89,9 +100,16 @@ const posts = [
 export async function getStaticPaths() {
   return [{ params: { locale: 'eng' } }, { params: { locale: 'es' } }];
 }
+
 ---
 
-<Layout title={SITE_TITLE} description={SITE_DESCRIPTION} pubDate={new Date()} keywords="">
+<Layout
+  title={SITE_TITLE}
+  description={SITE_DESCRIPTION}
+  pubDate={new Date()}
+  keywords=""
+  preloadImages={preloadImages}
+>
   <div id="section-home" class="relative size-dvw flex-1 md:w-full lg:w-full xl:h-screen xl:w-full">
     <Image
       loading="eager"
@@ -131,7 +149,7 @@ export async function getStaticPaths() {
 
   <div
     id="section-flavours"
-    class="size-auen/world-of-flavors/to relative flex flex-col items-center justify-center pb-5 gap-10 md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
+    class="size-auen/world-of-flavors/to relative flex flex-col items-center justify-center gap-10 pb-5 md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
     style={`background-image: url(${lienzo.src});`}
   >
     <Image

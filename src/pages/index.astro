@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '@/layouts/MainLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/types/home/website';
-import { registerServiceWorker } from '../utils/registerServiceWorker';
+import { getLangFromUrl } from '@/lib/translations';
 
 import banner from '@/images/home/banner.webp';
 import mundoDeSabores from '@/images/home/imagotipo-mundo-de-sabores.webp';
@@ -24,7 +24,7 @@ import logoWhiteImagotipoCacaoGourmet from '@/images/global/logo-white-imagotipo
 
 import { CarouselPost } from '@/components/ui/carousel/Post';
 import { ChocolateGallery } from '@/components/home/ChocolateGallery';
-import { getLangFromUrl, useTranslations } from '@/lib/translations';
+import { useTranslations } from '@/lib/translations';
 import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
 import { DialogFlavours } from '@/components/ui/morphing-dialog/DialogFlavours';
 import { VainillaBar } from '@/components/home/VainillaBar';
@@ -93,9 +93,10 @@ const posts = [
   },
 ];
 
-// Registrar el Service Worker
-if (typeof window !== 'undefined') {
-  registerServiceWorker();
+// Redirigir a la ruta localizada
+const { pathname } = Astro.url;
+if (pathname === '/') {
+  return Astro.redirect('/es/');
 }
 ---
 

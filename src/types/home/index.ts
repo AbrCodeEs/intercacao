@@ -74,7 +74,7 @@ interface FilterOptionCountryItems {
 interface CocoaBar {
   id: string;
   name: string;
-  image: string;
+  image: string | { src: string };
   rating: number;
   fermented: number;
   certified: number;
