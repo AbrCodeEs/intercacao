@@ -85,11 +85,11 @@ const MenuItem = ({ item, apiUrl }: MenuItemProps) => {
         <img
           src={imageError ? defaultImage : `${apiUrl}${item.media[0]?.url || ''}`}
           alt={item.media[0]?.alternativeText || item.name}
-          className={`aspect-square w-full rounded-xl object-cover xl:aspect-[16/12] ${isLoading ? 'hidden' : ''}`}
+          className='aspect-square w-full rounded-xl object-cover xl:aspect-[16/12]'
           loading="lazy"
           decoding="async"
-          onLoad={handleImageLoad}
-          onError={handleImageError}
+          onLoad={() => handleImageLoad()}
+          onError={() => handleImageError()}
         />
         {(item.bee_bar_category && getCategoryIcon()) && (
           <div className="absolute right-5 bottom-5 rounded-full bg-[#3c5548]/20 p-2 backdrop-blur-sm">
@@ -226,11 +226,10 @@ export const VainillaBar = ({ trans }: VainillaBarProps) => {
                     <button
                       key={`type-${type.name}`}
                       onClick={() => toggleFilter('type', type.name)}
-                      className={`flex items-center gap-2 rounded-full px-4 py-2 transition-colors ${
-                        selectedTypes.includes(type.name)
+                      className={`flex items-center gap-2 rounded-full px-4 py-2 transition-colors ${selectedTypes.includes(type.name)
                           ? 'bg-yellow-300 text-gray-800'
                           : 'bg-gray-700/50 text-gray-200 hover:bg-gray-700'
-                      }`}
+                        }`}
                     >
                       {type.name}
                     </button>
@@ -250,11 +249,10 @@ export const VainillaBar = ({ trans }: VainillaBarProps) => {
                         <button
                           key={`category-${category.name}`}
                           onClick={() => toggleFilter('category', category.name)}
-                          className={`flex items-center gap-2 rounded-full px-4 py-2 transition-colors ${
-                            selectedCategories.includes(category.name)
+                          className={`flex items-center gap-2 rounded-full px-4 py-2 transition-colors ${selectedCategories.includes(category.name)
                               ? 'bg-yellow-300 text-gray-800'
                               : 'bg-gray-700/50 text-gray-200 hover:bg-gray-700'
-                          }`}
+                            }`}
                         >
                           {category.name.toLowerCase() === 'frio' && <Snowflake />}
                           {category.name.toLowerCase() === 'caliente' && <Coffee />}
@@ -277,7 +275,7 @@ export const VainillaBar = ({ trans }: VainillaBarProps) => {
                   {filteredItems.map((item) => (
                     <CarouselItem
                       key={item.id}
-                      className="h-100 w-full lg:basis-1/3"
+                      className="xl:h-100 lg:h-100 md:h-100 h-130 w-full lg:basis-1/3"
                     >
                       <MenuItem item={item} apiUrl={apiUrl} />
                     </CarouselItem>

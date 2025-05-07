@@ -93,11 +93,6 @@ const posts = [
   },
 ];
 
-// Redirigir a la ruta localizada
-const { pathname } = Astro.url;
-if (pathname === '/') {
-  return Astro.redirect('/es/');
-}
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} pubDate={new Date()} keywords="">
