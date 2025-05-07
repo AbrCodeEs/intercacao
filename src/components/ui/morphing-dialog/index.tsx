@@ -225,8 +225,9 @@ const MorphingDialogDragContent = ({ children }: { children: React.ReactNode }) 
   const dragStartY = useRef<number>(0);
   const dragStartX = useRef<number>(0);
   const isDragging = useRef(false);
-  const dragThreshold = 16;
+  const dragThreshold = 12;
   const containerRef = useRef<HTMLDivElement>(null);
+  const isVerticalDrag = useRef(false);
 
   const resetPosition = useCallback(() => {
     if (containerRef.current) {
@@ -245,6 +246,7 @@ const MorphingDialogDragContent = ({ children }: { children: React.ReactNode }) 
       dragStartY.current = e.clientY;
       dragStartX.current = e.clientX;
       isDragging.current = true;
+      isVerticalDrag.current = false;
       if (containerRef.current) {
         containerRef.current.style.transition = '';
       }
@@ -257,7 +259,19 @@ const MorphingDialogDragContent = ({ children }: { children: React.ReactNode }) 
     const deltaY = e.clientY - dragStartY.current;
     const deltaX = Math.abs(e.clientX - dragStartX.current);
     
-    if (deltaY > 0 && deltaY > deltaX) {
+    // Determinar si es un arrastre vertical o horizontal
+    if (!isVerticalDrag.current) {
+      if (deltaY > deltaX && deltaY > 5) {
+        isVerticalDrag.current = true;
+      } else if (deltaX > deltaY && deltaX > 5) {
+        isVerticalDrag.current = false;
+        isDragging.current = false;
+        return;
+      }
+    }
+    
+    // Solo procesar el arrastre si es vertical
+    if (isVerticalDrag.current && deltaY > 0) {
       const resistance = Math.min(1, deltaY / 200);
       const resistedDeltaY = deltaY * (1 - resistance * 0.3);
       
@@ -277,13 +291,14 @@ const MorphingDialogDragContent = ({ children }: { children: React.ReactNode }) 
     
     const deltaY = e.clientY - dragStartY.current;
     
-    if (deltaY > dragThreshold) {
+    if (isVerticalDrag.current && deltaY > dragThreshold) {
       setIsOpen(false);
     } else {
       resetPosition();
     }
     
     isDragging.current = false;
+    isVerticalDrag.current = false;
   };
 
   return (
@@ -294,6 +309,7 @@ const MorphingDialogDragContent = ({ children }: { children: React.ReactNode }) 
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerLeave={handlePointerUp}
+      style={{ touchAction: 'pan-x' }} // Permite el arrastre horizontal nativo
     >
       {children}
     </div>

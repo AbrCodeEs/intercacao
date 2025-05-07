@@ -7,6 +7,7 @@ import { ChocolateCard } from '@/components/home/ChocolateCard';
 import { IconsSortOption } from '@/components/home/FilterElements';
 import { FilterControls } from '@/components/home/FilterControls';
 import { FloatingControls } from '@/components/home/FloatingControls';
+import { ImagePreloader } from '@/components/home/ImagePreloader';
 
 import { useContainerPosition } from '@/hooks/useContainerPosition';
 import { useSectionVisibility } from '@/hooks/useSectionVisibility';
@@ -37,6 +38,7 @@ export function ChocolateGallery({ lang, trans }: { lang: 'es' | 'eng'; trans: R
 
   return (
     <>
+      <ImagePreloader />
       <div className="relative p-5" ref={containerRef}>
         <FilterControls
           trans={trans}
