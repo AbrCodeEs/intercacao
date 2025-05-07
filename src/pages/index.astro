@@ -97,81 +97,73 @@ const posts = [
 if (typeof window !== 'undefined') {
   registerServiceWorker();
 }
-
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} pubDate={new Date()} keywords="">
-  <div class="overflow-hidden">
+  <div id="section-home" class="relative size-dvw flex-1 md:w-full lg:w-full xl:h-screen xl:w-full">
+    <Image
+      loading="eager"
+      inferSize={true}
+      src={banner}
+      alt="Intercacao banner principal"
+      class="h-full w-full object-cover object-center"
+    />
     <div
-      id="section-home"
-      class="relative size-dvw flex-1 md:w-full lg:w-full xl:h-screen xl:w-full"
+      class="absolute inset-x-0 top-0 flex w-full items-center justify-center p-10 md:justify-between lg:justify-between xl:justify-between"
     >
       <Image
         loading="eager"
         inferSize={true}
-        src={banner}
+        class="w-20 md:w-30 lg:w-30 xl:w-30"
+        src={logoInteracao}
         alt="Intercacao banner principal"
-        class="h-full w-full object-cover object-center"
       />
-      <div
-        class="absolute inset-x-0 top-0 flex w-full items-center justify-center p-10 md:justify-between lg:justify-between xl:justify-between"
-      >
-        <Image
-          loading="eager"
-          inferSize={true}
-          class="w-20 md:w-30 lg:w-30 xl:w-30"
-          src={logoInteracao}
-          alt="Intercacao banner principal"
-        />
-      </div>
     </div>
-    <div
-      class="flex w-full items-center justify-center p-10"
-      style={`background-image: url(${lienzo.src});`}
-    >
+  </div>
+  <div
+    class="flex w-full items-center justify-center p-10"
+    style={`background-image: url(${lienzo.src});`}
+  >
+    <Image
+      loading="lazy"
+      inferSize={true}
+      src={mundoDeSabores}
+      alt="Intercacao banner principal"
+      class="w-75 object-fill object-center"
+    />
+  </div>
+
+  <div
+    id="section-flavours"
+    class="size-auen/world-of-flavors/to relative flex flex-col items-center justify-center gap-10 md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
+    style={`background-image: url(${lienzo.src});`}
+  >
+    <Image
+      loading="lazy"
+      inferSize={true}
+      src={mundoDeSaboresPanel}
+      alt="Intercacao banner principal"
+      class="object-fill object-center shadow-2xl"
+    />
+    <div class="flex items-center justify-center">
+      <DialogFlavours client:only="react" trans={trans('home').info_mundo_de_sabores} />
+    </div>
+  </div>
+
+  <div id="section-gourmet" class="bg-primary h-auto w-full">
+    <div class="flex w-full items-center justify-center py-10">
       <Image
         loading="lazy"
         inferSize={true}
-        src={mundoDeSabores}
+        src={logoWhiteImagotipoCacaoGourmet}
         alt="Intercacao banner principal"
         class="w-75 object-fill object-center"
       />
     </div>
-
-    <!-- <div class="bg-primary h-5 w-full"></div> -->
-
-    <div
-      id="section-flavours"
-      class="size-auen/world-of-flavors/to relative flex flex-col gap-10 items-center justify-center md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
-      style={`background-image: url(${lienzo.src});`}
-    >
-      <Image
-        loading="lazy"
-        inferSize={true}
-        src={mundoDeSaboresPanel}
-        alt="Intercacao banner principal"
-        class="object-fill object-center shadow-2xl"
-      />
-      <div class="flex items-center justify-center">
-        <DialogFlavours client:only="react" trans={trans('home').info_mundo_de_sabores} />
-      </div>
-    </div>
-
-    <div id="section-gourmet" class="bg-primary h-auto w-full">
-      <div class="flex w-full items-center justify-center py-10">
-        <Image
-          loading="lazy"
-          inferSize={true}
-          src={logoWhiteImagotipoCacaoGourmet}
-          alt="Intercacao banner principal"
-          class="w-75 object-fill object-center"
-        />
-      </div>
-      <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:only="react" />
-    </div>
+    <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:only="react" />
   </div>
 
-  <div id="section-vanilla-bar" class="bg-[#efece1] h-auto w-full">
+  <div id="section-vanilla-bar" class="h-auto w-full bg-[#efece1]">
     <VainillaBar trans={trans('home').tabs_transition_panel.vainilla_bar} client:load />
   </div>
 
@@ -230,8 +222,8 @@ if (typeof window !== 'undefined') {
   </div>
 
   <div id="section-news" class="flex h-auto w-full items-start justify-center">
-    <div class="flex flex-col w-full items-center justify-center gap-5">
-      <h3 class=" py-4 text-center text-3xl text-neutral-600 uppercase">
+    <div class="flex w-full flex-col items-center justify-center gap-5">
+      <h3 class="py-4 text-center text-3xl text-neutral-600 uppercase">
         Exportamos el mejor cacao para los mejores chocolateros del mundo.
       </h3>
       <NewsSection client:only="react" />

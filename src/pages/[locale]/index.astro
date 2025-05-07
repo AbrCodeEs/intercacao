@@ -92,65 +92,60 @@ export async function getStaticPaths() {
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} pubDate={new Date()} keywords="">
-  <div class="overflow-hidden">
+  <div id="section-home" class="relative size-dvw flex-1 md:w-full lg:w-full xl:h-screen xl:w-full">
+    <Image
+      loading="eager"
+      fetchpriority="high"
+      inferSize={true}
+      src={trans('home').banner.src}
+      alt={trans('home').banner.alt}
+      class="h-full w-full object-cover object-center"
+    />
     <div
-      id="section-home"
-      class="relative size-dvw flex-1 md:w-full lg:w-full xl:h-screen xl:w-full"
+      class="absolute inset-x-0 top-0 flex w-full items-center justify-center p-10 md:justify-between lg:justify-between xl:justify-between"
     >
       <Image
         loading="eager"
         fetchpriority="high"
         inferSize={true}
-        src={trans('home').banner.src}
-        alt={trans('home').banner.alt}
-        class="h-full w-full object-cover object-center"
+        class="w-20 md:w-30 lg:w-30 xl:w-30"
+        src={trans('home').logo.src}
+        alt={trans('home').logo.alt}
       />
-      <div
-        class="absolute inset-x-0 top-0 flex w-full items-center justify-center p-10 md:justify-between lg:justify-between xl:justify-between"
-      >
-        <Image
-          loading="eager"
-          fetchpriority="high"
-          inferSize={true}
-          class="w-20 md:w-30 lg:w-30 xl:w-30"
-          src={trans('home').logo.src}
-          alt={trans('home').logo.alt}
-        />
-      </div>
-    </div>
-
-    <div
-      class="flex w-full items-center justify-center p-10"
-      style={`background-image: url(${lienzo.src});`}
-    >
-      <Image
-        loading="eager"
-        fetchpriority="high"
-        inferSize={true}
-        src={trans('home').mundo_de_sabores.src}
-        alt={trans('home').mundo_de_sabores.alt}
-        class="w-75 object-fill object-center"
-      />
-    </div>
-
-    <div
-      id="section-flavours"
-      class="size-auen/world-of-flavors/to relative flex flex-col items-center justify-center gap-10 md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
-      style={`background-image: url(${lienzo.src});`}
-    >
-      <Image
-        loading="lazy"
-        inferSize={true}
-        src={trans('home').mundo_de_sabores_panel.src}
-        alt={trans('home').mundo_de_sabores_panel.alt}
-        class="object-fill object-center shadow-2xl"
-      />
-      <div class="flex items-center justify-center">
-        <DialogFlavours client:only="react" trans={trans('home').info_mundo_de_sabores} />
-      </div>
     </div>
   </div>
-  
+
+  <div
+    class="flex w-full items-center justify-center p-10"
+    style={`background-image: url(${lienzo.src});`}
+  >
+    <Image
+      loading="eager"
+      fetchpriority="high"
+      inferSize={true}
+      src={trans('home').mundo_de_sabores.src}
+      alt={trans('home').mundo_de_sabores.alt}
+      class="w-75 object-fill object-center"
+    />
+  </div>
+
+  <div
+    id="section-flavours"
+    class="size-auen/world-of-flavors/to relative flex flex-col items-center justify-center gap-10 md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
+    style={`background-image: url(${lienzo.src});`}
+  >
+    <Image
+      loading="lazy"
+      inferSize={true}
+      src={trans('home').mundo_de_sabores_panel.src}
+      alt={trans('home').mundo_de_sabores_panel.alt}
+      class="object-fill object-center shadow-2xl"
+    />
+    <div class="flex items-center justify-center">
+      <DialogFlavours client:only="react" trans={trans('home').info_mundo_de_sabores} />
+    </div>
+  </div>
+
   <div id="section-gourmet" class="bg-primary h-auto w-full">
     <div class="flex w-full items-center justify-center pt-10">
       <Image
