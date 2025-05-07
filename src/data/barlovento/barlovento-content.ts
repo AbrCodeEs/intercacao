@@ -5,48 +5,48 @@ const es = {
       alt: 'Lorem Ipsum is',
     },
     rating: {
-      stars: 'estrellas de calificación 5.0',
+      stars: 'estrellas de calificación 4.5',
     },
     sections: [
       {
         items: [
-          { label: 'AFRUTADO DULCE', value: '3.2' },
-          { label: 'AFRUTADO CÍTRICO', value: '1.8' },
-          { label: 'AFLORADO', value: '0.4' },
-          { label: 'ACRIOLLADO', value: '4.9' },
-          { label: 'CACAO', value: '2.5' },
-          { label: 'BOSCOSO', value: '0.5' },
-          { label: 'ESPECIAS', value: '1.2' },
+          { label: 'AFRUTADO DULCE', value: '2.5' },
+          { label: 'AFRUTADO CÍTRICO', value: '1.75' },
+          { label: 'AFLORADO', value: '0.0' },
+          { label: 'ACRIOLLADO', value: '2.5' },
+          { label: 'CACAO', value: '4.0' },
+          { label: 'BOSCOSO', value: '0.0' },
+          { label: 'ESPECIAS', value: '0.0' },
         ],
       },
       {
         items: [
-          { label: 'PRODUCCIÓN ANUAL (TM)', value: '1.5' },
-          { label: 'COSECHA PRINCIPAL', value: 'MAY-JUL' },
-          { label: 'COSECHA MEDIA', value: 'NOB-ENE' },
+          { label: 'PRODUCCIÓN ANUAL (TM)', value: '' },
+          { label: 'COSECHA PRINCIPAL', value: '' },
+          { label: 'COSECHA MEDIA', value: '' },
         ],
       },
       {
-        items: [{ label: 'GRANOS CRIOLLOS', value: '98%' }],
+        items: [{ label: 'GRANOS CRIOLLOS', value: '6%' }],
       },
       {
         items: [
-          { label: 'GRANOS FERMENTADOS', value: '98%' },
-          { label: 'GRANOS VIOLETAS', value: '2%' },
-          { label: 'GRANOS PIZARROSOS', value: '0%' },
+          { label: 'GRANOS FERMENTADOS', value: '84%' },
+          { label: 'GRANOS VIOLETAS', value: '6%' },
+          { label: 'GRANOS PIZARROSOS', value: '2%' },
           { label: 'TOTAL', value: '100%' },
         ],
       },
       {
         items: [
-          { label: 'Granos / 100g:', value: '83' },
+          { label: 'Granos / 100g:', value: '82' },
           { label: 'g./1 Grano:', value: '1,28 g' },
         ],
       },
       {
         items: [
-          { label: 'CERTIFICADO', value: 'SI' },
-          { label: 'PREMIOS', value: 'sI' },
+          { label: 'CERTIFICADO', value: 'NO' },
+          { label: 'PREMIOS', value: 'NO' },
         ],
       },
     ],
@@ -393,48 +393,48 @@ const en = {
       alt: 'Lorem Ipsum is',
     },
     rating: {
-      stars: '5.0 rating stars',
+      stars: '4.5 rating stars',
     },
     sections: [
       {
         items: [
-          { label: 'SWEET FRUITY', value: '3.2' },
-          { label: 'CITRUS FRUITY', value: '1.8' },
-          { label: 'FLORAL', value: '0.4' },
-          { label: 'CREOLE', value: '4.9' },
-          { label: 'COCOA', value: '2.5' },
-          { label: 'WOODSY', value: '0.5' },
-          { label: 'SPICES', value: '1.2' },
+          { label: 'SWEET FRUITY', value: '2.5' },
+          { label: 'CITRUS FRUITY', value: '1.75' },
+          { label: 'FLORAL', value: '0.0' },
+          { label: 'CREOLE', value: '2.5' },
+          { label: 'COCOA', value: '4.0' },
+          { label: 'WOODSY', value: '0.0' },
+          { label: 'SPICES', value: '0.0' },
         ],
       },
       {
         items: [
-          { label: 'ANNUAL PRODUCTION (MT)', value: '1.5' },
-          { label: 'MAIN HARVEST', value: 'MAY-JUL' },
-          { label: 'MID HARVEST', value: 'NOV-JAN' },
+          { label: 'ANNUAL PRODUCTION (MT)', value: '' },
+          { label: 'MAIN HARVEST', value: '' },
+          { label: 'MID HARVEST', value: '' },
         ],
       },
       {
-        items: [{ label: 'CREOLE BEANS', value: '98%' }],
+        items: [{ label: 'CREOLE BEANS', value: '6%' }],
       },
       {
         items: [
-          { label: 'FERMENTED BEANS', value: '98%' },
-          { label: 'VIOLET BEANS', value: '2%' },
-          { label: 'SLATEY BEANS', value: '0%' },
+          { label: 'FERMENTED BEANS', value: '84%' },
+          { label: 'VIOLET BEANS', value: '6%' },
+          { label: 'SLATEY BEANS', value: '2%' },
           { label: 'TOTAL', value: '100%' },
         ],
       },
       {
         items: [
-          { label: 'Beans / 100g:', value: '83' },
+          { label: 'Beans / 100g:', value: '82' },
           { label: 'g./1 Bean:', value: '1.28 g' },
         ],
       },
       {
         items: [
-          { label: 'CERTIFIED', value: 'YES' },
-          { label: 'AWARDS', value: 'Yes' },
+          { label: 'CERTIFIED', value: 'NO' },
+          { label: 'AWARDS', value: 'NO' },
         ],
       },
     ],

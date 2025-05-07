@@ -13,6 +13,7 @@ import {
   MorphingDialogClose,
   MorphingDialogContainer,
   MorphingDialogContent,
+  MorphingDialogDragContent,
   MorphingDialogImage,
   MorphingDialogTrigger,
 } from '@/components/ui/morphing-dialog';
@@ -83,53 +84,55 @@ const NewItems = ({ posts }: { posts: Post[] }) => {
                 style={{ overflowY: 'scroll' }}
               >
                 <div className="sticky top-0 xl:pb-0 lg:pb-0 md:pb-0 pb-10 w-full grow">
-                  <Carousel classNameWrapper="md:h-full lg:h-screen xl:h-screen" className="md:h-full lg:h-screen xl:h-screen">
-                    <CarouselContent className="md:h-full lg:h-screen xl:h-screen">
-                      {post.media.map((media, i) => (
-                        <CarouselItem key={i} className="h-full">
-                          <div className="flex h-full xl:h-screen lg:h-screen md:h-screen w-full items-start justify-start">
-                            {media.ext === '.mp4' ? (
-                              <div className="relative flex aspect-[4/5] h-full w-full items-center justify-center overflow-hidden">
-                                <MediaPlayer
+                  <MorphingDialogDragContent>
+                    <Carousel classNameWrapper="md:h-full lg:h-screen xl:h-screen" className="md:h-full lg:h-screen xl:h-screen">
+                      <CarouselContent className="md:h-full lg:h-screen xl:h-screen">
+                        {post.media.map((media, i) => (
+                          <CarouselItem key={i} className="h-full">
+                            <div className="flex h-full xl:h-screen lg:h-screen md:h-screen w-full items-start justify-start">
+                              {media.ext === '.mp4' ? (
+                                <div className="relative flex aspect-[4/5] h-full w-full items-center justify-center overflow-hidden">
+                                  <MediaPlayer
+                                    src={`${api_url}${media.url}`}
+                                    viewType="video"
+                                    streamType="on-demand"
+                                    logLevel="warn"
+                                    crossOrigin
+                                    playsInline
+                                    title="Sprite Fight"
+                                    className="object-fit h-full w-full object-center"
+                                  >
+                                    <MediaProvider className="!aspect-[4/5] h-full w-full">
+                                      <Poster className="vds-poster" />
+                                    </MediaProvider>
+                                    <DefaultVideoLayout
+                                      icons={defaultLayoutIcons}
+                                      className="bottom-0 w-full bg-gradient-to-t from-black/60 to-transparent pt-6"
+                                    />
+                                  </MediaPlayer>
+                                </div>
+                              ) : (
+                                <img
                                   src={`${api_url}${media.url}`}
-                                  viewType="video"
-                                  streamType="on-demand"
-                                  logLevel="warn"
-                                  crossOrigin
-                                  playsInline
-                                  title="Sprite Fight"
-                                  className="object-fit h-full w-full object-center"
-                                >
-                                  <MediaProvider className="!aspect-[4/5] h-full w-full">
-                                    <Poster className="vds-poster" />
-                                  </MediaProvider>
-                                  <DefaultVideoLayout
-                                    icons={defaultLayoutIcons}
-                                    className="bottom-0 w-full bg-gradient-to-t from-black/60 to-transparent pt-6"
-                                  />
-                                </MediaPlayer>
-                              </div>
-                            ) : (
-                              <img
-                                src={`${api_url}${media.url}`}
-                                alt={media.name as string}
-                                width={1000}
-                                height={1000}
-                                className="object-cover object-center h-full xl:h-screen lg:h-screen md:h-screen"
-                              />
-                            )}
-                          </div>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    {post.media.length > 1 && (
-                      <CarouselNavigation
-                        className="absolute top-1/2 md:top-1/2 xl:top-1/2"
-                        alwaysShow
-                      />
-                    )}
-                    <CarouselIndicator className="-bottom-6.5 px-15 xl:bottom-5" />
-                  </Carousel>
+                                  alt={media.name as string}
+                                  width={1000}
+                                  height={1000}
+                                  className="object-cover object-center h-full xl:h-screen lg:h-screen md:h-screen"
+                                />
+                              )}
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      {post.media.length > 1 && (
+                        <CarouselNavigation
+                          className="absolute top-1/2 md:top-1/2 xl:top-1/2"
+                          alwaysShow
+                        />
+                      )}
+                      <CarouselIndicator className="-bottom-6.5 px-15 xl:bottom-5" />
+                    </Carousel>
+                  </MorphingDialogDragContent>
                 </div>
 
                 <div className="relative w-full grow bg-white p-10 flex flex-col gap-3 z-20">

@@ -9,8 +9,7 @@ type FloatingControlsProps = {
   absolutePosition: { bottom: number; right: number };
   isFlavorPanelOpen: boolean;
   isTypePanelOpen: boolean;
-  setIsFlavorPanelOpen: (open: boolean) => void;
-  setIsTypePanelOpen: (open: boolean) => void;
+  togglePanel: (panelType: 'flavor' | 'type') => void;
   flavorItems: Array<any>;
   typeItems: Array<any>;
   selectedFlavor: string | null;
@@ -18,11 +17,9 @@ type FloatingControlsProps = {
   onFlavorSelect: (value: string) => void;
   onTypeSelect: (value: string) => void;
   isVisible: boolean;
-  togglePanel: (panelType: 'flavor' | 'type') => void;
 };
 
 export const FloatingControls = ({
-  isContainerEndVisible,
   isFlavorPanelOpen,
   isTypePanelOpen,
   togglePanel,
@@ -35,59 +32,53 @@ export const FloatingControls = ({
   isVisible,
 }: FloatingControlsProps) => {
   const isOpen = !isTypePanelOpen;
+  
   return (
-    <motion.div
-      className="!z-[90]"
-      style={{
-        position: isContainerEndVisible ? 'absolute' : 'fixed',
-        bottom: 'calc(var(--spacing) * 5)',
-        right: isContainerEndVisible ? 'calc(var(--spacing) * 0)' : 'calc(var(--spacing) * 5)',
-      }}
-      transition={{
-        type: 'spring',
-        stiffness: 200,
-        damping: 20,
-        layout: {
+    <div className="sticky bottom-5 right-5 z-[90] flex justify-end h-[5px]">
+      <motion.div
+        className="flex flex-col items-end gap-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isVisible ? 1 : 0 }}
+        transition={{
           type: 'spring',
-          stiffness: 300,
+          stiffness: 200,
           damping: 20,
-        },
-      }}
-      layout
-    >
-      <div className="flex flex-col items-end gap-4">
-        <AnimatePresence mode="popLayout">
-          {isVisible && (
-            <motion.div
-              key="controls-container"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ type: 'spring', duration: 0.3 }}
-            >
-              <FilterPanel
-                isOpen={isFlavorPanelOpen || isOpen}
-                items={flavorItems}
-                selectedValue={selectedFlavor}
-                onSelect={onFlavorSelect}
-              />
+        }}
+      >
+        <div className="flex flex-col items-end gap-4 -translate-y-[101%]">
+          <AnimatePresence mode="popLayout">
+            {isVisible && (
+              <motion.div
+                key="controls-container"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ type: 'spring', duration: 0.3 }}
+              >
+                <FilterPanel
+                  isOpen={isFlavorPanelOpen || isOpen}
+                  items={flavorItems}
+                  selectedValue={selectedFlavor}
+                  onSelect={onFlavorSelect}
+                />
 
-              <FilterPanel
-                isOpen={isTypePanelOpen}
-                items={typeItems}
-                selectedValue={selectedType}
-                onSelect={onTypeSelect}
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
+                <FilterPanel
+                  isOpen={isTypePanelOpen}
+                  items={typeItems}
+                  selectedValue={selectedType}
+                  onSelect={onTypeSelect}
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-        <FilterButtons
-          isVisible={isVisible}
-          onFlavorClick={() => togglePanel('flavor')}
-          onTypeClick={() => togglePanel('type')}
-        />
-      </div>
-    </motion.div>
+          <FilterButtons
+            isVisible={isVisible}
+            onFlavorClick={() => togglePanel('flavor')}
+            onTypeClick={() => togglePanel('type')}
+          />
+        </div>
+      </motion.div>
+    </div>
   );
 };

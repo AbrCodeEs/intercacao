@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 
 import { Progress } from '@/components/ui/progress';
+import Rating from '@/components/ui/Rating';
 type Props = CollectionEntry<'template'>['data'];
 
 const { generalInformation } = Astro.props;
@@ -12,11 +13,13 @@ const { generalInformation } = Astro.props;
   id="section-home"
   class="flex h-auto w-full flex-col flex-wrap bg-gray-200 md:flex-row lg:flex-row xl:flex-row"
 >
-  <div class="relative size-auto flex-1 md:w-auto lg:w-auto xl:w-auto overflow-hidden bg-neutral-700">
+  <div
+    class="relative size-auto flex-1 overflow-hidden bg-neutral-700 md:w-auto lg:w-auto xl:w-auto"
+  >
     <Image
       inferSize={true}
       loading="eager"
-      class="h-full w-full object-contain object-start relative "
+      class="object-start relative h-full w-full object-contain"
       src={generalInformation.mainImage.src}
       alt={generalInformation.mainImage.alt}
     />
@@ -27,31 +30,28 @@ const { generalInformation } = Astro.props;
     <div class="flex flex-col gap-7 text-base font-thin">
       <!-- Sección de Rating -->
       <div>
+        {
+          generalInformation.cocoa && (
+            <div class="flex flex-col gap-2 pb-5">
+              <h1 class="text-center text-xl font-medium tracking-[8px] uppercase md:text-2xl lg:text-2xl xl:text-2xl">
+                {generalInformation.cocoa.title}
+              </h1>
+              <h2 class="text-center text-xl font-bold tracking-[7px] uppercase md:text-3xl lg:text-3xl xl:text-3xl">
+                {generalInformation.cocoa.subtitle}
+              </h2>
+              <div class={`h-2 w-full pt-2 ${generalInformation.cocoa.color}`} />
+            </div>
+          )
+        }
 
-          {generalInformation.cocoa && (
-          <div class="pb-5 flex flex-col gap-2">
-            <h1 class="xl:text-2xl lg:text-2xl md:text-2xl text-xl text-center font-medium uppercase tracking-[8px]">{generalInformation.cocoa.title}</h1>
-            <h2 class="xl:text-3xl lg:text-3xl md:text-3xl text-xl text-center font-bold uppercase tracking-[7px]">{generalInformation.cocoa.subtitle}</h2>
-            <div class={`pt-2 w-full h-2 ${generalInformation.cocoa.color}`}></div>
-          </div>
-          )}
-
-        <p class="flex justify-between gap-2 md:flex-wrap lg:flex-wrap xl:flex-wrap">
-          <!-- <span>EVALUACIÓN</span> -->
-
-          <span class="uppercase">{generalInformation.title}</span>
-          <span class="mb-2 flex-grow border-b border-dashed border-gray-300"></span>
-          <span class="flex items-center justify-between gap-2 md:gap-5 lg:gap-5 xl:gap-5">
+        <div class="flex flex-row gap-0.5">
+          <p class="flex flex-wrap justify-between gap-2 w-full"> 
+            <span class="uppercase">{generalInformation.title}</span>
+            <span class="mb-2 flex-grow border-b border-dashed border-gray-300"></span>
             <b>{generalInformation.rating.value}</b>
-            <Image
-              inferSize={true}
-              class="h-full w-30 object-fill"
-              src={generalInformation.rating.stars.src}
-              alt={generalInformation.rating.stars.alt}
-              loading="eager"
-            />
-          </span>
-        </p>
+          </p>
+          <Rating value={Number(generalInformation.rating.value)} />
+        </div>
       </div>
 
       <!-- Secciones dinámicas -->

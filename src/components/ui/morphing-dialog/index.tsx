@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useCallback, useContext, useEffect, useId, useMemo, useRef, useState } from 'react';
-import { motion, AnimatePresence, MotionConfig, type Transition, type Variant, useDragControls } from 'motion/react';
+import { motion, AnimatePresence, MotionConfig, type Transition, type Variant, useDragControls, type DragControls } from 'motion/react';
 import { createPortal } from 'react-dom';
 import { cn } from '@/lib/cn';
 import { XIcon } from 'lucide-react';
@@ -12,6 +12,12 @@ export type MorphingDialogContextType = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   uniqueId: string;
   triggerRef: React.RefObject<HTMLDivElement>;
+  dragControls: DragControls;
+  isDragging: boolean;
+  setIsDragging: React.Dispatch<React.SetStateAction<boolean>>;
+  dragStartY: React.MutableRefObject<number>;
+  dragStartX: React.MutableRefObject<number>;
+  isVerticalDrag: React.MutableRefObject<boolean>;
 };
 
 const MorphingDialogContext = React.createContext<MorphingDialogContextType | null>(null);
@@ -31,8 +37,13 @@ export type MorphingDialogProviderProps = {
 
 function MorphingDialogProvider({ children, transition }: MorphingDialogProviderProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
   const uniqueId = useId();
   const triggerRef = useRef<HTMLDivElement>(null!);
+  const dragControls = useDragControls();
+  const dragStartY = useRef<number>(0);
+  const dragStartX = useRef<number>(0);
+  const isVerticalDrag = useRef<boolean>(false);
 
   const contextValue = useMemo(
     () => ({
@@ -40,8 +51,14 @@ function MorphingDialogProvider({ children, transition }: MorphingDialogProvider
       setIsOpen,
       uniqueId,
       triggerRef,
+      dragControls,
+      isDragging,
+      setIsDragging,
+      dragStartY,
+      dragStartX,
+      isVerticalDrag,
     }),
-    [isOpen, uniqueId],
+    [isOpen, uniqueId, dragControls, isDragging],
   );
 
   return (
@@ -123,9 +140,20 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
   const containerRef = useRef<HTMLDivElement>(null!);
   const [firstFocusableElement, setFirstFocusableElement] = useState<HTMLElement | null>(null);
   const [lastFocusableElement, setLastFocusableElement] = useState<HTMLElement | null>(null);
-  const dragControls = useDragControls();
   const isMobile = true;
-  //  useIsMobile();
+
+  const resetPosition = useCallback(() => {
+    if (containerRef.current) {
+      containerRef.current.style.transition = 'transform 0.2s ease-out';
+      containerRef.current.style.transform = '';
+      setTimeout(() => {
+        if (containerRef.current) {
+          containerRef.current.style.transition = '';
+        }
+      }, 200);
+    }
+  }, []);
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -179,18 +207,6 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
   });
 
   return (
-    // <motion.div
-    //   ref={containerRef}
-    //   layoutId={`dialog-${uniqueId}`}
-    //   className={cn('overflow-hidden', className)}
-    //   style={style}
-    //   role="dialog"
-    //   aria-modal="true"
-    //   aria-labelledby={`motion-ui-morphing-dialog-title-${uniqueId}`}
-    //   aria-describedby={`motion-ui-morphing-dialog-description-${uniqueId}`}
-    // >
-    //   {children}
-    // </motion.div>
     <motion.div
       ref={containerRef}
       layoutId={`dialog-${uniqueId}`}
@@ -198,53 +214,91 @@ function MorphingDialogContent({ children, className, style }: MorphingDialogCon
       style={style}
       role="dialog"
       aria-modal="true"
-      drag={isMobile ? 'y' : false}
-      dragControls={dragControls}
-      dragListener={false}
-      dragConstraints={{ top: 0 }}
-      dragElastic={0.1}
-      onDragEnd={(e, { offset, velocity }) => {
-        if (offset.y > 100 || velocity.y > 150) {
-          setIsOpen(false);
-        }
-      }}
     >
-      {isMobile && (
-        <>
-          <div
-            className="drag-handle"
-            onPointerDown={(e) => dragControls.start(e)}
-            style={{
-              position: 'absolute',
-              top: '0',
-              left: 0,
-              right: 0,
-              height: '200px',
-              zIndex: 1,
-              touchAction: 'none',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'start',
-              // backgroundColor: 'rgb(99 99 99 / 81%)',
-            }}
-          >
-            <div
-              style={{
-                marginTop: '20px',
-                width: '40px',
-                height: '4px',
-                borderRadius: '2px',
-                backgroundColor: 'rgb(99 99 99 / 90%)',
-              }}
-            />
-          </div>
-
-        </>
-      )}
       {children}
     </motion.div>
   );
 }
+
+const MorphingDialogDragContent = ({ children }: { children: React.ReactNode }) => {
+  const { setIsOpen } = useMorphingDialog();
+  const dragStartY = useRef<number>(0);
+  const dragStartX = useRef<number>(0);
+  const isDragging = useRef(false);
+  const dragThreshold = 16;
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const resetPosition = useCallback(() => {
+    if (containerRef.current) {
+      containerRef.current.style.transition = 'transform 0.2s ease-out';
+      containerRef.current.style.transform = '';
+      setTimeout(() => {
+        if (containerRef.current) {
+          containerRef.current.style.transition = '';
+        }
+      }, 200);
+    }
+  }, []);
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    if (e.target === containerRef.current || containerRef.current?.contains(e.target as Node)) {
+      dragStartY.current = e.clientY;
+      dragStartX.current = e.clientX;
+      isDragging.current = true;
+      if (containerRef.current) {
+        containerRef.current.style.transition = '';
+      }
+    }
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!isDragging.current) return;
+    
+    const deltaY = e.clientY - dragStartY.current;
+    const deltaX = Math.abs(e.clientX - dragStartX.current);
+    
+    if (deltaY > 0 && deltaY > deltaX) {
+      const resistance = Math.min(1, deltaY / 200);
+      const resistedDeltaY = deltaY * (1 - resistance * 0.3);
+      
+      if (containerRef.current) {
+        containerRef.current.style.transform = `translateY(${resistedDeltaY}px)`;
+      }
+      
+      if (deltaY > dragThreshold) {
+        setIsOpen(false);
+        isDragging.current = false;
+      }
+    }
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    if (!isDragging.current) return;
+    
+    const deltaY = e.clientY - dragStartY.current;
+    
+    if (deltaY > dragThreshold) {
+      setIsOpen(false);
+    } else {
+      resetPosition();
+    }
+    
+    isDragging.current = false;
+  };
+
+  return (
+    <div 
+      ref={containerRef}
+      className="drag-handle"
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerLeave={handlePointerUp}
+    >
+      {children}
+    </div>
+  );
+};
 
 export type MorphingDialogContainerProps = {
   children: React.ReactNode;
@@ -423,4 +477,5 @@ export {
   MorphingDialogSubtitle,
   MorphingDialogDescription,
   MorphingDialogImage,
+  MorphingDialogDragContent,
 };
