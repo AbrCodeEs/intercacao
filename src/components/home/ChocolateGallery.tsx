@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useChocolateFilters } from '@/hooks/useChocolateFilters';
 import { ChocolateCard } from '@/components/home/ChocolateCard';
@@ -8,7 +8,6 @@ import { IconsSortOption } from '@/components/home/FilterElements';
 import { FilterControls } from '@/components/home/FilterControls';
 import { FloatingControls } from '@/components/home/FloatingControls';
 import { ImagePreloader } from '@/components/home/ImagePreloader';
-
 import { useContainerPosition } from '@/hooks/useContainerPosition';
 import { useSectionVisibility } from '@/hooks/useSectionVisibility';
 import { useFilteredChocolates } from '@/hooks/useFilteredChocolates';
@@ -36,9 +35,50 @@ export function ChocolateGallery({ lang, trans }: { lang: 'es' | 'eng'; trans: R
 
   const filteredChocolates = useFilteredChocolates(lang, sortBy, selectedFlavor);
 
+  // Extraer URLs de imágenes para precarga
+  const imageUrls = useMemo(() => {
+    const urls = new Set<string>();
+    
+    // Agregar mapa del mundo
+    if (worldMap && typeof worldMap === 'object' && 'src' in worldMap) {
+      urls.add(worldMap.src);
+    }
+    
+    // Agregar imágenes de chocolates
+    filteredChocolates.forEach(chocolate => {
+      if (chocolate.image) {
+        const imageUrl = typeof chocolate.image === 'string' 
+          ? chocolate.image 
+          : chocolate.image.src;
+        if (imageUrl) urls.add(imageUrl);
+      }
+      if (chocolate.flavorIcon) {
+        const iconUrl = typeof chocolate.flavorIcon === 'string'
+          ? chocolate.flavorIcon
+          : chocolate.flavorIcon.src;
+        if (iconUrl) urls.add(iconUrl);
+      }
+    });
+    
+    return Array.from(urls).filter(url => url && url.startsWith('/'));
+  }, [filteredChocolates]);
+
+  // Pasar las URLs al BaseHead a través de un atributo data
+  useEffect(() => {
+    const head = document.head;
+    const preloadMeta = document.createElement('meta');
+    preloadMeta.setAttribute('name', 'preload-images');
+    preloadMeta.setAttribute('content', JSON.stringify(imageUrls));
+    head.appendChild(preloadMeta);
+
+    return () => {
+      head.removeChild(preloadMeta);
+    };
+  }, [imageUrls]);
+
   return (
     <>
-      <ImagePreloader />
+      <ImagePreloader images={imageUrls} />
       <div className="relative p-5" ref={containerRef}>
         <FilterControls
           trans={trans}

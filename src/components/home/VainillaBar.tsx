@@ -45,6 +45,19 @@ interface MenuItemProps {
 }
 
 const MenuItem = ({ item, apiUrl }: MenuItemProps) => {
+  const [imageError, setImageError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const defaultImage = '/images/placeholder.webp';
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+    setIsLoading(false);
+  };
+
   const getCategoryIcon = () => {
     if (!item.bee_bar_category) return null;
     const categoryName = item.bee_bar_category.name.toLowerCase();
@@ -66,12 +79,17 @@ const MenuItem = ({ item, apiUrl }: MenuItemProps) => {
       transition={{ duration: 0.5, delay: 0.1 }}
     >
       <div className="relative flex flex-col gap-4">
+        {isLoading && (
+          <div className="aspect-square w-full animate-pulse rounded-xl bg-gray-700 xl:aspect-[16/12]" />
+        )}
         <img
-          src={`${apiUrl}${item.media[0]?.url || item.media[0].url}`}
-          alt={item.media[0].alternativeText || item.name}
-          className="aspect-square w-full rounded-xl object-cover xl:aspect-[16/12]"
+          src={imageError ? defaultImage : `${apiUrl}${item.media[0]?.url || ''}`}
+          alt={item.media[0]?.alternativeText || item.name}
+          className={`aspect-square w-full rounded-xl object-cover xl:aspect-[16/12] ${isLoading ? 'hidden' : ''}`}
           loading="lazy"
           decoding="async"
+          onLoad={handleImageLoad}
+          onError={handleImageError}
         />
         {(item.bee_bar_category && getCategoryIcon()) && (
           <div className="absolute right-5 bottom-5 rounded-full bg-[#3c5548]/20 p-2 backdrop-blur-sm">

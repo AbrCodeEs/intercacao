@@ -49,12 +49,16 @@ export function OptimizedImage({
     );
 
     const img = new Image();
-    img.src = src;
     img.onload = () => {
       if (isInView) {
         setImageSrc(src);
       }
     };
+    img.onerror = () => {
+      console.warn(`Error loading image: ${src}`);
+      setImageSrc(placeholder);
+    };
+    img.src = src;
 
     const currentImg = document.querySelector(`[data-src="${src}"]`);
     if (currentImg) {
@@ -62,7 +66,7 @@ export function OptimizedImage({
     }
 
     return () => observer.disconnect();
-  }, [src, priority, isInView]);
+  }, [src, priority, isInView, placeholder]);
 
   return (
     <div className={cn('relative overflow-hidden', className)}>
@@ -73,7 +77,7 @@ export function OptimizedImage({
         height={height}
         data-src={src}
         className={cn(
-          'transition-all duration-500',
+          'transition-all duration-500 object-cover object-center size-full',
           isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
         )}
         onLoad={() => setIsLoaded(true)}

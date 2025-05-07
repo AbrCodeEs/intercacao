@@ -4,14 +4,15 @@ import { Image } from 'astro:assets';
 
 import { Header } from '@/components/ui/header';
 import BaseHead from '@/components/parts/BaseHead.astro';
-import Footer from '@/components/parts/Footer.astro';
 import logo from '@/images/chuao/logo-intercacao.png';
 
 import { getLangFromUrl } from '@/lib/translations';
 
-type Props = CollectionEntry<"blog">['data'];
+type Props = CollectionEntry<"blog">['data'] & {
+  preloadImages?: string[];
+};
 
-const { title, description, keywords } = Astro.props;
+const { title, description, keywords, preloadImages = [] } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -103,7 +104,12 @@ const navItems = [
 
 <html lang="es">
   <head>
-    <BaseHead title={title} description={description} keywords={keywords} />
+    <BaseHead 
+      title={title} 
+      description={description} 
+      keywords={keywords} 
+      preloadImages={preloadImages}
+    />
   </head>
 
   <body>

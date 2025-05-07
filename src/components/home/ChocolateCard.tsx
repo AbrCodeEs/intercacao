@@ -173,7 +173,7 @@ export const ChocolateCard = memo(function ChocolateCard({
           >
             {chocolate.image && (
               <OptimizedImage
-                src={chocolate.image}
+                src={typeof chocolate.image === 'string' ? chocolate.image : chocolate.image.src}
                 alt={chocolate.name}
                 className={`object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 ${isHovered ? 'blur' : ''}`}
                 priority={chocolate.rating >= 4}
@@ -184,7 +184,7 @@ export const ChocolateCard = memo(function ChocolateCard({
             {chocolate.soldout && (
               <img
                 className="absolute top-0 left-0 xl:size-20 lg:size-16 md:size-14 size-12"
-                src={watermark[lang].src}
+                src={typeof watermark[lang] === 'string' ? watermark[lang] : watermark[lang].src}
                 alt="soldout"
                 loading="eager"
               />
@@ -215,7 +215,7 @@ export const ChocolateCard = memo(function ChocolateCard({
             transition={{ duration: 0.2 }}
           >
             <div className="relative flex w-10/12 flex-col justify-between space-y-2 text-center">
-              <div className="mb-2 flex hidden flex-wrap justify-center gap-1 md:hidden lg:block xl:block">
+              <div className="mb-2 flex flex-wrap justify-center gap-1 md:hidden lg:block xl:block">
                 <h3 className="mb-1 text-4xl font-semibold text-white">{chocolate.name}</h3>
               </div>
 
