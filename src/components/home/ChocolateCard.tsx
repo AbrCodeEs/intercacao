@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, memo, useCallback } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import type { CocoaBar, SortOption, FlavorOption } from '@/types/home';
 import { Sort } from '@/types/home';
 import { Star, Award, Trophy, Nut, CornerRightUp } from 'lucide-react';
 import { motion } from 'motion/react';
+import { OptimizedImage } from '../ui/OptimizedImage';
 
 import watermarkEs from '@/images/global/agotado.webp';
 import watermarkEn from '@/images/global/soldout.webp';
@@ -13,19 +14,103 @@ import watermarkEn from '@/images/global/soldout.webp';
 const watermark = {
   es: watermarkEs,
   eng: watermarkEn,
-};
+} as const;
 
 const IconTraslation = {
-  fruity_sweet: 'fruity_sweet',
-  fruity_citrus: 'fruity_citrus',
-  flower: 'flower',
-  creole: 'creole',
-  cocoa: 'cocoa',
-  wood: 'wood',
-  spices: 'spices',
-};
+  fruity_sweet: 'afrutado_dulces',
+  fruity_citrus: 'afrutado_citricos',
+  flower: 'aflorado',
+  creole: 'acriollado',
+  cocoa: 'cacao',
+  wood: 'boscoso',
+  spices: 'especias',
+} as const;
 
-export function ChocolateCard({
+const FlavorIcon = memo(function FlavorIcon({ 
+  flavor, 
+  value 
+}: { 
+  flavor: keyof typeof IconTraslation; 
+  value: number;
+}) {
+  const iconPath = `/icons/${IconTraslation[flavor]}-white-icon.svg`;
+  const altText = {
+    fruity_sweet: 'afrutado dulces',
+    fruity_citrus: 'afrutado citricos',
+    flower: 'aflorados',
+    creole: 'acriollado',
+    cocoa: 'cacao',
+    wood: 'boscoso',
+    spices: 'especias',
+  }[flavor];
+
+  return (
+    <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+      <img
+        className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
+        loading="eager"
+        src={iconPath}
+        alt={altText}
+      />
+      <span>{value.toFixed(1)}</span>
+    </div>
+  );
+});
+
+const SortIcon = memo(function SortIcon({ 
+  sortBy, 
+  value 
+}: { 
+  sortBy: SortOption; 
+  value: number;
+}) {
+  switch (sortBy) {
+    case Sort.rated:
+      return (
+        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+          <Star className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+          <span>{value.toFixed(1)}</span>
+        </div>
+      );
+    case Sort.fermented:
+      return (
+        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+          <img
+            src="/icons/fermentado.png"
+            alt="fermentado"
+            loading="eager"
+            className="mr-1 h-5 w-5 brightness-100 contrast-100 invert filter transition-all hover:opacity-80"
+          />
+          <span>{value.toFixed(1)}%</span>
+        </div>
+      );
+    case Sort.certified:
+      return (
+        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+          <Award className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+          <span>{value}</span>
+        </div>
+      );
+    case Sort.awarded:
+      return (
+        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+          <Trophy className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+          <span>{value}</span>
+        </div>
+      );
+    case Sort.creole:
+      return (
+        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
+          <Nut className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
+          <span>{value.toFixed(1)}%</span>
+        </div>
+      );
+    default:
+      return null;
+  }
+});
+
+export const ChocolateCard = memo(function ChocolateCard({
   chocolate,
   sortBy,
   flavors,
@@ -40,12 +125,45 @@ export function ChocolateCard({
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
+  const handleMouseEnter = useCallback(() => setIsHovered(true), []);
+  const handleMouseLeave = useCallback(() => setIsHovered(false), []);
+
+  const renderIcon = useCallback(() => {
+    if (!flavors && !sortBy) return null;
+
+    if (typeof flavors === 'string') {
+      const flavorKey = flavors.toLowerCase().replace(' ', '_') as keyof typeof IconTraslation;
+      if (flavorKey in IconTraslation) {
+        return (
+          <FlavorIcon 
+            flavor={flavorKey} 
+            value={chocolate.ingredients[flavorKey]} 
+          />
+        );
+      }
+    }
+
+    if (sortBy) {
+      const value = {
+        [Sort.rated]: chocolate.rating,
+        [Sort.fermented]: chocolate.fermented,
+        [Sort.certified]: chocolate.certified,
+        [Sort.awarded]: chocolate.awarded,
+        [Sort.creole]: chocolate.creole,
+      }[sortBy];
+
+      return <SortIcon sortBy={sortBy} value={value} />;
+    }
+
+    return null;
+  }, [chocolate, flavors, sortBy]);
+
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
       <Card
         className="group relative w-full overflow-hidden"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <CardContent className="p-0">
           <motion.div
@@ -54,22 +172,21 @@ export function ChocolateCard({
             className="relative aspect-square bg-gray-500"
           >
             {chocolate.image && (
-              <img
+              <OptimizedImage
                 src={chocolate.image}
                 alt={chocolate.name}
-                loading="eager"
-                decoding="async"
-                width={1000}
-                height={1000}
-                className={`object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 ${isHovered && 'blur'}`}
+                className={`object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 ${isHovered ? 'blur' : ''}`}
+                priority={chocolate.rating >= 4}
+                quality={85}
               />
             )}
 
             {chocolate.soldout && (
               <img
-                className="absolute top-0 left-0 size-20"
+                className="absolute top-0 left-0 xl:size-20 lg:size-16 md:size-14 size-12"
                 src={watermark[lang].src}
                 alt="soldout"
+                loading="eager"
               />
             )}
 
@@ -85,132 +202,7 @@ export function ChocolateCard({
               <div className="flex grow items-start justify-start">
                 {(flavors || sortBy) && (
                   <div className="bg-primary rounded-xl p-2">
-                    {!flavors && sortBy === Sort.rated && (
-                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                        <Star className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-                        <span>{chocolate.rating.toFixed(1)}</span>
-                      </div>
-                    )}
-                    {!flavors && sortBy === Sort.fermented && (
-                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                        <img
-                          src="/icons/fermentado.png"
-                          alt="fermentado"
-                          loading="eager"
-                          className="mr-1 h-5 w-5 brightness-100 contrast-100 invert filter transition-all hover:opacity-80"
-                        />
-                        <span>{chocolate.fermented.toFixed(1)}%</span>
-                      </div>
-                    )}
-                    {!flavors && sortBy === Sort.certified && (
-                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                        <Award className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-                        <span>{chocolate.certified}</span>
-                      </div>
-                    )}
-                    {!flavors && sortBy === Sort.awarded && (
-                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                        <Trophy className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-                        <span>{chocolate.awarded}</span>
-                      </div>
-                    )}
-
-                    {!flavors && sortBy === Sort.creole && (
-                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                        <Nut className="mr-1 size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-                        <span>{chocolate.creole.toFixed(1)}%</span>
-                      </div>
-                    )}
-
-                    {flavors &&
-                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.fruity_sweet && (
-                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                          <img
-                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
-                            loading="eager"
-                            src="/icons/afrutado_dulces-white-icon.svg"
-                            alt="afrutado dulces"
-                          />
-                          <span>{chocolate.ingredients.fruity_sweet.toFixed(1)}</span>
-                        </div>
-                      )}
-
-                    {flavors &&
-                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.fruity_citrus && (
-                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                          <img
-                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
-                            loading="eager"
-                            src="/icons/afrutado_citricos-white-icon.svg"
-                            alt="afrutado citricos"
-                          />
-                          <span>{chocolate.ingredients.fruity_citrus.toFixed(1)}</span>
-                        </div>
-                      )}
-
-                    {flavors &&
-                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.flower && (
-                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                          <img
-                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
-                            loading="eager"
-                            src="/icons/aflorado-white-icon.svg"
-                            alt="aflorados"
-                          />
-                          <span>{chocolate.ingredients.flower.toFixed(1)}</span>
-                        </div>
-                      )}
-
-                    {flavors &&
-                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.creole && (
-                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                          <img
-                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
-                            loading="eager"
-                            src="/icons/acriollado-white-icon.svg"
-                            alt="acriollado"
-                          />
-                          <span>{chocolate.ingredients.creole.toFixed(1)}</span>
-                        </div>
-                      )}
-
-                    {flavors &&
-                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.cocoa && (
-                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                          <img
-                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
-                            loading="eager"
-                            src="/icons/cacao-white-icon.svg"
-                            alt="cacao"
-                          />
-                          <span>{chocolate.ingredients.cocoa.toFixed(1)}</span>
-                        </div>
-                      )}
-
-                    {flavors && flavors.toLowerCase().replace(' ', '_') === IconTraslation.wood && (
-                      <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                        <img
-                          className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
-                          loading="eager"
-                          src="/icons/boscoso-white-icon.svg"
-                          alt="boscoso"
-                        />
-                        <span>{chocolate.ingredients.wood.toFixed(1)}</span>
-                      </div>
-                    )}
-
-                    {flavors &&
-                      flavors.toLowerCase().replace(' ', '_') === IconTraslation.spices && (
-                        <div className="flex items-center text-xs text-white md:text-base lg:text-base xl:text-base">
-                          <img
-                            className="mr-1 size-3 md:size-5 lg:size-5 xl:size-5"
-                            loading="eager"
-                            src="/icons/especias-white-icon.svg"
-                            alt="especias"
-                          />
-                          <span>{chocolate.ingredients.spices.toFixed(1)}</span>
-                        </div>
-                      )}
+                    {renderIcon()}
                   </div>
                 )}
               </div>
@@ -248,17 +240,14 @@ export function ChocolateCard({
                   </div>
                   <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
                     <Award className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-
                     <span>{chocolate.certified}</span>
                   </div>
                   <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
                     <Trophy className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-
                     <span>{chocolate.awarded}</span>
                   </div>
                   <div className="flex items-center justify-start gap-1 text-center text-white md:gap-2 lg:gap-5 xl:gap-5">
                     <Nut className="size-3 fill-current text-white md:size-5 lg:size-5 xl:size-5" />
-
                     <span>{chocolate.creole}%</span>
                   </div>
                 </div>
@@ -290,4 +279,4 @@ export function ChocolateCard({
       </Card>
     </motion.div>
   );
-}
+});
