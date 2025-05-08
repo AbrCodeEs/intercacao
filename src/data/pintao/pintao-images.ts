@@ -6,8 +6,12 @@ import Clasificacion from '@/images/pintao/evaluacion.webp';
 import SaboresPositivos from '@/images/pintao/cacaoesencia.webp';
 import EquipoCata from '@/images/pintao/equipocata.webp';
 import CuencaCacao from '@/images/pintao/cortecacao.webp';
+
 import RuedaSabores from '@/images/pintao/ruedadesabores.webp';
 import MapaSensorial from '@/images/pintao/mapasensorial.webp';
+
+import RuedaSaboresEn from '@/images/pintao/ruedadesaboresEn.webp';
+import MapaSensorialEn from '@/images/pintao/mapasensorialEn.webp';
 
 import TipoDeCacaoOne from '@/images/pintao/cacaotrinitario.webp';
 import TipoDeCacaoTwo from '@/images/pintao/cacaocriollo.webp';
@@ -23,6 +27,9 @@ import CosechaTwo from '@/images/pintao/secado2.webp';
 
 import TraceabilityOne from '@/images/pintao/trazabilidad.webp';
 import TraceabilityTwo from '@/images/pintao/trazabilidad2.webp';
+import TraceabilityThree from '@/images/pintao/trazabilidad3.webp';
+import TraceabilityFour from '@/images/pintao/trazabilidad4.webp';
+
 
 import map from '@/images/pintao/mapa.webp';
 import locationOne from '@/images/pintao/paisaje.webp';
@@ -56,7 +63,7 @@ const images = {
      
     },
     certifications: {
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree, TraceabilityFour],
     },
     location: {
       map: map,
@@ -72,8 +79,8 @@ const images = {
       saboresPositivos: SaboresPositivos,
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
-      ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      ruedaSabores: RuedaSaboresEn,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThree, TipoDeCacaoFour],
@@ -88,7 +95,7 @@ const images = {
      
     },
     certifications: {
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree, TraceabilityFour],
     },
     location: {
       map: map,

@@ -4,8 +4,12 @@ import Clasificacion from '@/images/porcelana/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
 import EquipoCata from '@/images/porcelana/equipodecata.webp';
 import CuencaCacao from '@/images/porcelana/cacao2.webp';
+
 import RuedaSabores from '@/images/porcelana/ruedadesabores.webp';
 import MapaSensorial from '@/images/porcelana/mapasensorial.webp';
+import RuedaSaboresEn from '@/images/porcelana/ruedadesaboresEN.webp';
+import MapaSensorialEn from '@/images/porcelana/mapasensorialEn.webp';
+
 import TipoDeCacaoOne from '@/images/porcelana/tipodecacao.webp';
 import TipoDeCacaoTwo from '@/images/porcelana/tipodecacao2.webp';
 
@@ -22,6 +26,9 @@ import CertificadoOrigenTree from '@/images/porcelana/certificaciones3.webp';
 
 import TraceabilityOne from '@/images/porcelana/trazabilidad.webp';
 import TraceabilityTwo from '@/images/porcelana/trazabilidad2.webp';
+import TraceabilityThree from '@/images/porcelana/trazabilidad3.webp';
+import TraceabilityFour from '@/images/porcelana/trazabilidad4.webp';
+
 
 import map from '@/images/porcelana/mapa.webp';
 import locationOne from '@/images/porcelana/paisaje1.webp';
@@ -58,7 +65,7 @@ const images = {
     certifications: {
       certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
       certificadoOrigen: CertificadoOrigenTree,
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree, TraceabilityFour],
     },
     location: {
       map: map,
@@ -74,8 +81,8 @@ const images = {
       saboresPositivos: SaboresPositivos,
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
-      ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      ruedaSabores: RuedaSaboresEn,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
@@ -91,7 +98,7 @@ const images = {
     certifications: {
       certificados: [CertificadoOrigenOne, CertificadoOrigenTwo],
       certificadoOrigen: CertificadoOrigenTree,
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree, TraceabilityFour],
     },
     location: {
       map: map,

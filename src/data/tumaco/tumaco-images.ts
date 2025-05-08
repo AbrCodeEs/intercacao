@@ -5,8 +5,12 @@ import ClasificacionEn from '@/images/tumaco/evaluacionEn.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
 import EquipoCata from '@/images/tumaco/equipodecata.webp';
 import CuencaCacao from '@/images/tumaco/corte.webp';
+
 import RuedaSabores from '@/images/tumaco/mapadesabores.webp';
 import MapaSensorial from '@/images/tumaco/mapasensorial.webp';
+import RuedaSaboresEn from '@/images/tumaco/mapadesaboresEn.webp';
+import MapaSensorialEn from '@/images/tumaco/mapasensorialEn.webp';
+
 import TipoDeCacaoOne from '@/images/tumaco/cacaotrinitario.webp';
 import TipoDeCacaoTwo from '@/images/tumaco/cacaocriollo.webp';
 import TipoDeCacaoThre from '@/images/tumaco/secotrinitario.webp';
@@ -67,8 +71,8 @@ const images = {
       saboresPositivos: SaboresPositivos,
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
-      ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      ruedaSabores: RuedaSaboresEn,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThre, TipoDeCacaoFour],

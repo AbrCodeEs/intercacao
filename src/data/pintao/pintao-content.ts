@@ -5,7 +5,7 @@ const es = {
       alt: 'portada de carupano pintao cacao',
     },
     rating: {
-      stars: 'estrellas de calificación 5.0',
+      stars: 'estrellas de calificación 2.9',
     },
     sections: [
       {

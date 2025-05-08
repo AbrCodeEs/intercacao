@@ -250,6 +250,10 @@ export default (Astro) => {
                   src: langImages.protocols.fermentacion[1],
                   alt: langContent.postHarvestBenefit.content[0].protocols[0].image.alt,
                 },
+                {
+                  src: langImages.protocols.fermentacion[2],
+                  alt: langContent.postHarvestBenefit.content[0].protocols[0].image.alt,
+                },
               ],
             },
             {

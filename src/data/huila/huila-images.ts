@@ -4,8 +4,12 @@ import Clasificacion from '@/images/huila/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
 import EquipoCata from '@/images/huila/equipodecata.webp';
 import CuencaCacao from '@/images/huila/corte.webp';
+
 import RuedaSabores from '@/images/huila/mapadesabores.webp';
 import MapaSensorial from '@/images/huila/mapasensorial.webp';
+import RuedaSaboresEn from '@/images/huila/mapadesaboresEn.webp';
+import MapaSensorialEn from '@/images/huila/mapasensorialEn.webp';
+
 import TipoDeCacaoOne from '@/images/huila/cacaotrinitario.webp';
 import TipoDeCacaoTwo from '@/images/huila/trinitarioseco.webp';
 
@@ -69,8 +73,8 @@ const images = {
       saboresPositivos: SaboresPositivos,
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
-      ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      ruedaSabores: RuedaSaboresEn,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],

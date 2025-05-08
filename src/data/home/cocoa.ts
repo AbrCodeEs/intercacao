@@ -16,6 +16,7 @@ import trinchera from '@/images/trinchera/trincheras-web.webp';
 import surdellago from '@/images/surdellago/placeholder.webp';
 
 import barlovento from '@/images/barlovento/barlovento-web.webp'
+import barina from '@/images/barinas/barinas-web.webp'
 
 import type { CocoaBar } from '@/types/home';
 
@@ -46,7 +47,7 @@ export const chocolateBars: CocoaBar[] = [
     id: '2',
     name: 'Porcelana',
     image: porcelana.src,
-    rating: 4.5,
+    rating: 5,
     fermented: 98,
     certified: 1,
     awarded: 2,
@@ -91,7 +92,7 @@ export const chocolateBars: CocoaBar[] = [
     id: '4',
     name: 'Tesoro',
     image: tesoro.src,
-    rating: 2.7,
+    rating: 5,
     fermented: 88,
     certified: 0,
     awarded: 0,
@@ -402,19 +403,19 @@ export const chocolateBars: CocoaBar[] = [
     id: '17',
     name: 'Barlovento Fermentado Superior',
     image: barlovento.src,
-    rating: 0,
-    fermented: 0,
+    rating: 4.5,
+    fermented: 84,
     certified: 0,
     awarded: 0,
-    creole: 0,
+    creole: 6,
     flavors: ['Fruity Sweet', 'Fruity Citrus', 'Flower', 'Creole'],
     country: 'Venezuela',
     ingredients: {
-      fruity_sweet: 0,
-      fruity_citrus: 0,
+      fruity_sweet: 2.5,
+      fruity_citrus: 1.75,
       flower: 0,
-      creole: 0,
-      cocoa: 0,
+      creole: 2.5,
+      cocoa: 4,
       wood: 0,
       spices: 0,
     },
@@ -423,7 +424,7 @@ export const chocolateBars: CocoaBar[] = [
   {
     id: '18',
     name: 'Barinas',
-    image: surdellago.src,
+    image: barina.src,
     rating: 4.0,
     fermented: 68,
     certified: 0,
@@ -441,6 +442,5 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'barinas',
-    watermark: true
   },
 ];

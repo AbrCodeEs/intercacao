@@ -4,14 +4,18 @@ import Clasificacion from '@/images/manapiare/evaluacion.webp';
 import SaboresPositivos from '@/images/patanemo/cacao.webp';
 import EquipoCata from '@/images/manapiare/equipodecata.webp';
 import CuencaCacao from '@/images/manapiare/corte.webp';
+
 import RuedaSabores from '@/images/manapiare/mapadesabore.webp';
 import MapaSensorial from '@/images/manapiare/mapasensorial.webp';
+import RuedaSaboresEn from '@/images/manapiare/mapadesaboreEn.webp';
+import MapaSensorialEn from '@/images/manapiare/mapasensorialEn.webp';
 
 import TipoDeCacaoOne from '@/images/manapiare/cacaotrinitario.webp';
 import TipoDeCacaoTwo from '@/images/manapiare/trinitarioseco.webp';
 
 import ProtocoloFermentacionOne from '@/images/manapiare/fermentacion.webp';
 import ProtocoloFermentacionTwo from '@/images/manapiare/fermentacion2.webp';
+import ProtocoloFermentacionThree from '@/images/manapiare/fermentacion3.webp';
 
 import CosechaOne from '@/images/manapiare/secado.webp';
 import CosechaTwo from '@/images/manapiare/secado2.webp';
@@ -45,7 +49,7 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo],
+      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo, ProtocoloFermentacionThree],
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
@@ -69,14 +73,14 @@ const images = {
       saboresPositivos: SaboresPositivos,
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
-      ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      ruedaSabores: RuedaSaboresEn,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo],
+      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo, ProtocoloFermentacionThree],
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {

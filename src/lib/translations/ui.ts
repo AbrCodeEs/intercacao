@@ -27,21 +27,21 @@ export const defaultLang = 'es';
 
 export const ui = {
   es: {
-    home: home.es, // ✅
-    chuao: chuao.es, // ✅
-    porcelana: porcelana.es, // ✅
-    tesoro: tesoro.es, // ✅
-    pintao: pintao.es, // ✅
-    patanemo: patanemo.es, // ✅
-    tumaco: tumaco.es,  // ✅
-    canoabo: canoabo.es, // ✅
-    choroni: choroni.es, // ✅
-    huila: huila.es, // ✅
-    manapiare: manapiare.es, // ✅
-    mantuano: mantuano.es, // ✅
-    ocumare: ocumare.es, // ✅
-    trinchera: trinchera.es, // ✅
-    // ultimos productos
+    home: home.es,
+    chuao: chuao.es,
+    porcelana: porcelana.es,
+    tesoro: tesoro.es,
+    pintao: pintao.es,
+    patanemo: patanemo.es,
+    tumaco: tumaco.es, 
+    canoabo: canoabo.es,
+    choroni: choroni.es,
+    huila: huila.es,
+    manapiare: manapiare.es,
+    mantuano: mantuano.es,
+    ocumare: ocumare.es,
+    trinchera: trinchera.es,
+    
     surdellago: surDelLago.es,
     barlovento: barlovento.es,
     cajaseca: cajaseca.es,
@@ -62,7 +62,7 @@ export const ui = {
     mantuano: mantuano.en,
     ocumare: ocumare.en,
     trinchera: trinchera.en,
-    // ultimos productos
+    
     surdellago: surDelLago.en,
     barlovento: barlovento.en,
     cajaseca: cajaseca.en,

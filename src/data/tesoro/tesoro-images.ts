@@ -5,8 +5,8 @@ import Clasificacion from '@/images/tesoro/evaluacion.webp';
 import SaboresPositivos from '@/images/tesoro/cacaoesencia.webp';
 import EquipoCata from '@/images/tesoro/equipocata.webp';
 import CuencaCacao from '@/images/tesoro/corte1.webp';
-import RuedaSabores from '@/images/porcelana/ruedadesabores.webp';
-import MapaSensorial from '@/images/porcelana/mapasensorial.webp';
+import RuedaSabores from '@/images/tesoro/ruedamundodesabores.webp';
+import MapaSensorial from '@/images/tesoro/mapaperfilsensorial.webp';
 
 import TipoDeCacaoOne from '@/images/tesoro/cacaotrinitario.webp';
 import TipoDeCacaoTwo from '@/images/tesoro/cacaocriollo.webp';
@@ -16,21 +16,17 @@ import TipoDeCacaoFour from '@/images/tesoro/secadocriollo.webp';
 
 import ProtocoloFermentacionOne from '@/images/tesoro/cosecha1.webp';
 import ProtocoloFermentacionTwo from '@/images/tesoro/cosecha2.webp';
+import ProtocoloFermentacionThree from '@/images/tesoro/cosecha3.webp';
 
 import CosechaOne from '@/images/tesoro/secado1.webp';
 
 import TraceabilityOne from '@/images/tesoro/traz1.webp';
 import TraceabilityTwo from '@/images/tesoro/traz2.webp';
-
+import TraceabilityThree from '@/images/tesoro/traz3.webp';
+import TraceabilityFour from '@/images/tesoro/traz4.webp';
 
 import map from '@/images/tesoro/mapa.webp';
 import locationOne from '@/images/tesoro/paisaje1.webp';
-// import locationTwo from '@/images/tesoro/paisaje2.webp';
-// import locationThree from '@/images/tesoro/paisaje3.webp';
-
-// import historiaOne from '@/images/porcelana/historia1.webp';
-// import historiaTwo from '@/images/porcelana/historia2.webp';
-// import historiaThree from '@/images/porcelana/historia3.webp';
 
 const images = {
   es: {
@@ -51,12 +47,13 @@ const images = {
       fermentacion: [
         ProtocoloFermentacionOne,
         ProtocoloFermentacionTwo,
+        ProtocoloFermentacionThree,
       ],
       secado: [CosechaOne],
       corteChuao: '@/images/chuao/corte-chuao-trinitario.png',
     },
     certifications: {
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree, TraceabilityFour],
     },
     location: {
       map: map,
@@ -82,11 +79,12 @@ const images = {
       fermentacion: [
         ProtocoloFermentacionOne,
         ProtocoloFermentacionTwo,
+        ProtocoloFermentacionThree,
       ],
       secado: [CosechaOne],
     },
     certifications: {
-      traceability: [TraceabilityOne, TraceabilityTwo],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree, TraceabilityFour],
     },
     location: {
       map: map,

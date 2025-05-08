@@ -1,11 +1,14 @@
 import PorcelanaWeb from '@/images/canoabo/canoabo-web.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/canoabo/evaluacion.webp';
-import SaboresPositivos from '@/images/pintao/cacaoesencia.webp';
+import SaboresPositivos from '@/images/canoabo/cacao.webp';
 import EquipoCata from '@/images/canoabo/equipodecata.webp';
 import CuencaCacao from '@/images/canoabo/corte.webp';
+
 import RuedaSabores from '@/images/canoabo/mapadesabores.webp';
 import MapaSensorial from '@/images/canoabo/mapasensorial.webp';
+import RuedaSaboresEn from '@/images/canoabo/mapadesaboresEn.webp';
+import MapaSensorialEn from '@/images/canoabo/mapasensorialEn.webp';
 
 import TipoDeCacaoOne from '@/images/canoabo/cacaotrinitario.webp';
 import TipoDeCacaoTwo from '@/images/canoabo/trinitarioseco.webp';
@@ -62,8 +65,8 @@ const images = {
       saboresPositivos: SaboresPositivos,
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
-      ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      ruedaSabores: RuedaSaboresEn,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
