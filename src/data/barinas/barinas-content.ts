@@ -5,48 +5,48 @@ const es = {
       alt: 'Lorem Ipsum is',
     },
     rating: {
-      stars: 'estrellas de calificación 5.0',
+      stars: 'estrellas de calificación 4.0',
     },
     sections: [
       {
         items: [
-          { label: 'AFRUTADO DULCE', value: '0' },
-          { label: 'AFRUTADO CÍTRICO', value: '0' },
-          { label: 'AFLORADO', value: '0' },
-          { label: 'ACRIOLLADO', value: '0' },
-          { label: 'CACAO', value: '0' },
-          { label: 'BOSCOSO', value: '0' },
-          { label: 'ESPECIAS', value: '0' },
+          { label: 'AFRUTADO DULCE', value: '2.5' },
+          { label: 'AFRUTADO CÍTRICO', value: '1.25' },
+          { label: 'AFLORADO', value: '0.0' },
+          { label: 'ACRIOLLADO', value: '2.0' },
+          { label: 'CACAO', value: '4.0' },
+          { label: 'BOSCOSO', value: '0.0' },
+          { label: 'ESPECIAS', value: '0.0' },
         ],
       },
       {
         items: [
-          { label: 'PRODUCCIÓN ANUAL (TM)', value: '0' },
-          { label: 'COSECHA PRINCIPAL', value: 'MAY-JUL' },
-          { label: 'COSECHA MEDIA', value: 'NOB-ENE' },
+          { label: 'PRODUCCIÓN ANUAL (TM)', value: '' },
+          { label: 'COSECHA PRINCIPAL', value: '' },
+          { label: 'COSECHA MEDIA', value: '' },
         ],
       },
       {
-        items: [{ label: 'GRANOS CRIOLLOS', value: '0%' }],
+        items: [{ label: 'GRANOS CRIOLLOS', value: '6%' }],
       },
       {
         items: [
-          { label: 'GRANOS FERMENTADOS', value: '0%' },
-          { label: 'GRANOS VIOLETAS', value: '0%' },
-          { label: 'GRANOS PIZARROSOS', value: '0%' },
-          { label: 'TOTAL', value: '0%' },
-        ],
-      },
-      {
-        items: [
-          { label: 'Granos / 100g:', value: '0' },
-          { label: 'g./0 Grano:', value: '0 g' },
+          { label: 'GRANOS FERMENTADOS', value: '68%' },
+          { label: 'GRANOS VIOLETAS', value: '10%' },
+          { label: 'GRANOS PIZARROSOS', value: '2%' },
+          { label: 'TOTAL', value: '100%' },
         ],
       },
       {
         items: [
-          { label: 'CERTIFICADO', value: 'SI' },
-          { label: 'PREMIOS', value: 'SI' },
+          { label: 'Granos / 100g:', value: '89' },
+          { label: 'g./0 Grano:', value: '1 g' },
+        ],
+      },
+      {
+        items: [
+          { label: 'CERTIFICADO', value: 'NO' },
+          { label: 'PREMIOS', value: 'NO' },
         ],
       },
     ],

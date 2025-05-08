@@ -14,6 +14,9 @@ import { barinas } from '@/data/barinas/barinas-content';
 import { choroni } from '@/data/choroni/choroni-content';
 import { huila } from '@/data/huila/huila-content';
 import { manapiare } from '@/data/manapiare/manapiare-content';
+import { mantuano } from '@/data/mantuano/mantuano-content';
+import { ocumare } from '@/data/ocumare/ocumare-content';
+import { trinchera } from '@/data/trinchera/trinchera-content';
 
 export const languages = {
   eng: 'English',
@@ -34,7 +37,10 @@ export const ui = {
     canoabo: canoabo.es, // ✅
     choroni: choroni.es, // ✅
     huila: huila.es, // ✅
-    manapiare: manapiare.es,
+    manapiare: manapiare.es, // ✅
+    mantuano: mantuano.es, // ✅
+    ocumare: ocumare.es, // ✅
+    trinchera: trinchera.es, // ✅
     // ultimos productos
     surdellago: surDelLago.es,
     barlovento: barlovento.es,
@@ -53,6 +59,9 @@ export const ui = {
     choroni: choroni.en,
     huila: huila.en,
     manapiare: manapiare.en,
+    mantuano: mantuano.en,
+    ocumare: ocumare.en,
+    trinchera: trinchera.en,
     // ultimos productos
     surdellago: surDelLago.en,
     barlovento: barlovento.en,
