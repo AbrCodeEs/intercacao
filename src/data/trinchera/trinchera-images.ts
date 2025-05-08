@@ -4,8 +4,11 @@ import Clasificacion from '@/images/trinchera/evaluacion.webp';
 import SaboresPositivos from '@/images/patanemo/cacao.webp';
 import EquipoCata from '@/images/trinchera/equipodecata.webp';
 import CuencaCacao from '@/images/trinchera/corte.webp';
+
 import RuedaSabores from '@/images/trinchera/mapadesabores.webp';
 import MapaSensorial from '@/images/trinchera/mapasensorial.webp';
+import RuedaSaboresEn from '@/images/trinchera/mapadesaboresEn.webp';
+import MapaSensorialEn from '@/images/trinchera/mapasensorialEn.webp';
 
 import TipoDeCacaoOne from '@/images/trinchera/cacaotrinitario.webp';
 import TipoDeCacaoTwo from '@/images/trinchera/trinitarioseco.webp';
@@ -65,8 +68,8 @@ const images = {
       saboresPositivos: SaboresPositivos,
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
-      ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      ruedaSabores: RuedaSaboresEn,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],

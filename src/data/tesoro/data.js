@@ -19,7 +19,7 @@ export default (Astro) => {
         alt: langContent.generalInformation.image.alt,
       },
       rating: {
-        value: '4.5',
+        value: '5',
         stars: {
           src: langImages.general.ratingStars,
           alt: langContent.generalInformation.rating.stars,
@@ -265,6 +265,10 @@ export default (Astro) => {
                   src: langImages.protocols.fermentacion[1],
                   alt: langContent.postHarvestBenefit.content[1].protocols[0].image.alt,
                 },
+                {
+                  src: langImages.protocols.fermentacion[2],
+                  alt: langContent.postHarvestBenefit.content[1].protocols[0].image.alt,
+                },
               ],
             },
             {
@@ -356,6 +360,14 @@ export default (Astro) => {
         },
         {
           src: langImages.certifications.traceability[1],
+          alt: langContent.traceability.images[2].alt,
+        },
+        {
+          src: langImages.certifications.traceability[2],
+          alt: langContent.traceability.images[2].alt,
+        },
+        {
+          src: langImages.certifications.traceability[3],
           alt: langContent.traceability.images[2].alt,
         },
       ],

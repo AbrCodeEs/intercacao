@@ -137,6 +137,9 @@
 .bg-cocoa-dark {
   background: var(--color-cocoa-dark);
 }
+.bg-barinas {
+  background: #82600e;
+}
 
 .border-fruity-sweet {
   border-color: var(--color-fruity-sweet);

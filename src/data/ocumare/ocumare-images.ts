@@ -4,8 +4,11 @@ import Clasificacion from '@/images/ocumare/evaluacion.webp';
 import SaboresPositivos from '@/images/patanemo/cacao.webp';
 import EquipoCata from '@/images/ocumare/equipodecata.webp';
 import CuencaCacao from '@/images/ocumare/corte.webp';
+
 import RuedaSabores from '@/images/ocumare/mapadesabores.webp';
 import MapaSensorial from '@/images/ocumare/mapasensorial.webp';
+import RuedaSaboresEn from '@/images/ocumare/mapadesaboresEn.webp';
+import MapaSensorialEn from '@/images/ocumare/mapasensorialEn.webp';
 
 import TipoDeCacaoOne from '@/images/ocumare/cacaotrinitario.webp';
 import TipoDeCacaoTwo from '@/images/ocumare/cacaocriollo.webp';
@@ -67,8 +70,8 @@ const images = {
       saboresPositivos: SaboresPositivos,
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
-      ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      ruedaSabores: RuedaSaboresEn,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThree, TipoDeCacaoFour],

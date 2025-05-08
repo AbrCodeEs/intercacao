@@ -1,4 +1,4 @@
-import PorcelanaWeb from '@/images/surdellago/placeholder.webp';
+import PorcelanaWeb from '@/images/barinas/barinas-web.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/porcelana/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';

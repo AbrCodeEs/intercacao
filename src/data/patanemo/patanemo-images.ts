@@ -4,8 +4,11 @@ import Clasificacion from '@/images/patanemo/evaluacion.webp';
 import SaboresPositivos from '@/images/patanemo/cacao.webp';
 import EquipoCata from '@/images/patanemo/equipodecata.webp';
 import CuencaCacao from '@/images/patanemo/corte.webp';
+
 import RuedaSabores from '@/images/patanemo/ruedadesabores.webp';
 import MapaSensorial from '@/images/patanemo/mapasensorial.webp';
+import RuedaSaboresEn from '@/images/patanemo/ruedadesaboresEn.webp';
+import MapaSensorialEn from '@/images/patanemo/mapasensorialEn.webp';
 
 import TipoDeCacaoOne from '@/images/patanemo/cacaotrinitario.webp';
 import TipoDeCacaoTwo from '@/images/patanemo/trinitarioseco.webp';
@@ -64,8 +67,8 @@ const images = {
       saboresPositivos: SaboresPositivos,
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
-      ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      ruedaSabores: RuedaSaboresEn,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
