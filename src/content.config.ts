@@ -6,6 +6,7 @@ const generalInformation = z.object({
     .object({
       title: z.string(),
       subtitle: z.string(),
+      header: z.string().optional(),
       color: z.string(),
     })
     .optional(),

@@ -14,6 +14,12 @@ export default (Astro) => {
   return {
     generalInformation: {
       title: langContent.generalInformation.title,
+      cocoa: {
+        title: 'cacao gourmet',
+        subtitle: 'barlovento',
+        header: 'fermentado superior',
+        color: 'bg-orange-700',
+      },
       mainImage: {
         src: langImages.general.porcelanaWeb,
         alt: langContent.generalInformation.image.alt,
