@@ -215,7 +215,7 @@ export const ChocolateCard = memo(function ChocolateCard({
             transition={{ duration: 0.2 }}
           >
             <div className="relative flex w-10/12 flex-col justify-between space-y-2 text-center">
-              <div className="mb-2 flex flex-wrap justify-center gap-1 md:hidden lg:block xl:block">
+              <div className="mb-2 hidden flex-wrap justify-center gap-1 md:hidden lg:flex xl:flex">
                 <h3 className="mb-1 text-4xl font-semibold text-white">{chocolate.name}</h3>
               </div>
 

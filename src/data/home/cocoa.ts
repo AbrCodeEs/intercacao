@@ -419,7 +419,6 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'barlovento',
-    watermark: true
   },
   {
     id: '18',
