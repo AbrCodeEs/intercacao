@@ -52,7 +52,7 @@ const { location } = Astro.props;
   </div>
 
   <!-- Párrafos descriptivos -->
-  {location.paragraphs.map((paragraph) => <p class="text-lg">{paragraph}</p>)}
+  {location.paragraphs && location.paragraphs.map((paragraph) => <p class="text-lg">{paragraph}</p>)}
 
   <!-- Sección de ecología -->
   <div class="flex w-full flex-col gap-5 md:flex-row lg:flex-row xl:flex-row">

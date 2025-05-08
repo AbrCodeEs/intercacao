@@ -15,16 +15,19 @@ import ProtocoloFermentacionTwo from '@/images/manapiare/fermentacion2.webp';
 
 import CosechaOne from '@/images/manapiare/secado.webp';
 import CosechaTwo from '@/images/manapiare/secado2.webp';
-import TraceabilityOne from '@/images/patanemo/trazabilidad.webp';
+import TraceabilityOne from '@/images/manapiare/trazabilidad.webp';
+import TraceabilityTwo from '@/images/manapiare/trazabilidad2.webp';
+import TraceabilityThree from '@/images/manapiare/trazabilidad3.webp';
 
-import map from '@/images/patanemo/mapa.webp';
-import locationOne from '@/images/patanemo/ecologia.webp';
-import locationTwo from '@/images/patanemo/ecologia2.webp';
-import locationThree from '@/images/patanemo/ecologia3.webp';
 
-import historiaOne from '@/images/patanemo/historia.webp';
-import historiaTwo from '@/images/patanemo/historia2.webp';
-// import historiaThree from '@/images/patanemo/historia3.webp';
+import map from '@/images/manapiare/mapa.webp';
+import locationOne from '@/images/manapiare/ecologia.webp';
+import locationTwo from '@/images/manapiare/ecologia2.webp';
+import locationThree from '@/images/manapiare/ecologia3.webp';
+
+import historiaOne from '@/images/manapiare/historia.webp';
+import historiaTwo from '@/images/manapiare/historia2.webp';
+import historiaThree from '@/images/manapiare/historia3.webp';
 
 const images = {
   es: {
@@ -47,16 +50,16 @@ const images = {
     },
     certifications: {
       traceability: [
-        TraceabilityOne
+        TraceabilityOne,
+        TraceabilityTwo,
+        TraceabilityThree,
       ],
     },
     location: {
       map: map,
       location: [locationOne, locationTwo, locationThree],
     },
-    history: [historiaOne, historiaTwo, 
-      // historiaThree
-    ],
+    history: [historiaOne, historiaTwo, historiaThree],
   },
   eng: {
     general: {
@@ -79,14 +82,15 @@ const images = {
     certifications: {
       traceability: [
         TraceabilityOne,
+        TraceabilityTwo,
+        TraceabilityThree,
       ],
     },
     location: {
       map: map,
       location: [locationOne, locationTwo, locationThree],
     },
-    history: [historiaOne, historiaTwo
-    ],
+    history: [historiaOne, historiaTwo, historiaThree],
   },
 };
 

@@ -31,13 +31,24 @@ const Rating: React.FC<RatingProps> = ({
   // Agregar media estrella si es necesario
   if (hasHalfStar) {
     stars.push(
-      <Star 
-        key="half" 
-        size={size} 
-        fill={color}
-        color={color}
-        style={{ clipPath: 'inset(0 50% 0 0)' }}
-      />
+      <div key="half" style={{ position: 'relative' }}>
+        <Star 
+          size={size} 
+          fill={color}
+          color={color}
+          style={{ clipPath: 'inset(0 50% 0 0)' }}
+        />
+        <Star 
+          size={size} 
+          color={color}
+          style={{ 
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            clipPath: 'inset(0 0 0 50%)'
+          }}
+        />
+      </div>
     );
   }
 
