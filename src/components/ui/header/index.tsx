@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 import Nav from '@/components/ui/nav';
+import { ArrowBigLeft  } from 'lucide-react';
 
 function Header({
   children,
@@ -45,6 +46,18 @@ function Header({
       >
         <div className={`burger ${isActive ? 'burgerActive' : ''}`}></div>
       </div>
+
+      {isCloseButton && (
+        <div
+          className="fixed top-20 left-6.5 z-50 p-2 bg-primary rounded-full cursor-pointer"
+          onClick={() => {
+            window.close();
+          }}
+        >
+          <ArrowBigLeft className="h-5 w-5 text-white  fill-white" />
+        </div>
+      )}
+
       <div className="absolute top-0 right-0 z-50">
         <ul className="flex w-full flex-col justify-end gap-1 px-5 py-5">
           <li

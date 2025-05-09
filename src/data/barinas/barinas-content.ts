@@ -21,7 +21,7 @@ const es = {
       },
       {
         items: [
-          { label: 'PRODUCCIÓN ANUAL (TM)', value: '-500' },
+          { label: 'PRODUCCIÓN ANUAL (TM)', value: '< 500' },
           // { label: 'COSECHA PRINCIPAL', value: '' },
           // { label: 'COSECHA MEDIA', value: '' },
         ],
@@ -429,7 +429,7 @@ const en = {
       },
       {
         items: [
-          { label: 'ANNUAL PRODUCTION (MT)', value: '-500' },
+          { label: 'ANNUAL PRODUCTION (MT)', value: '< 500' },
           // { label: 'MAIN HARVEST', value: 'MAY-JUL' },
           // { label: 'MID HARVEST', value: 'NOV-JAN' },
         ],
