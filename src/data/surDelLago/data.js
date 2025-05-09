@@ -133,32 +133,7 @@ export default (Astro) => {
           imageAlt: langContent.characteristics.assessment.equipment,
         },
       },
-      information: [
-        {
-          title: langContent.characteristics.information[0].title,
-          indicatorColor: 'bg-amber-950',
-          description: {
-            boldText: langContent.characteristics.information[0].description.boldText,
-            additionalText: langContent.characteristics.information[0].description.additionalText,
-          },
-        },
-        {
-          title: langContent.characteristics.information[1].title,
-          indicatorColor: 'bg-amber-950',
-          description: {
-            boldText: langContent.characteristics.information[1].description.boldText,
-            additionalText: langContent.characteristics.information[1].description.additionalText,
-          },
-        },
-        {
-          title: langContent.characteristics.information[2].title,
-          indicatorColor: 'bg-amber-950',
-          description: {
-            boldText: langContent.characteristics.information[2].description.boldText,
-            additionalText: langContent.characteristics.information[2].description.additionalText,
-          },
-        },
-      ],
+      information: [],
       analysis: {
         title: langContent.characteristics.analysis.title,
         image: langImages.general.cuencaCacao,
@@ -166,52 +141,59 @@ export default (Astro) => {
         description: [
           {
             text: langContent.characteristics.analysis.description[0].text,
-            information_block: true,
-          },
-          {
-            text: langContent.characteristics.analysis.description[1].text,
-            information_block: true,
-          },
-          {
-            text: langContent.characteristics.analysis.description[2].text,
             information_block: false,
           },
           {
-            text: langContent.characteristics.analysis.description[3].text,
+            text: langContent.characteristics.analysis.description[1].text,
             information_block: false,
           },
         ],
       },
     },
     cocoaMap: [
-      {
-        title: langContent.cocoaMap[0].title,
-        content: [
-          {
-            type: 'quote',
-            quote: langContent.cocoaMap[0].content[0].quote,
-            author: langContent.cocoaMap[0].content[0].author,
-            border: true,
-          },
-          {
-            type: 'paragraph',
-            text: langContent.cocoaMap[0].content[1].text,
-          },
-        ],
-        image: {
-          src: langImages.general.ruedaSabores,
-          alt: langContent.cocoaMap[0].image.alt,
-          align: 'right',
-        },
-      },
+      // {
+      //   title: langContent.cocoaMap[0].title,
+      //   content: [
+      //     {
+      //       type: 'quote',
+      //       quote: langContent.cocoaMap[0].content[0].quote,
+      //       author: langContent.cocoaMap[0].content[0].author,
+      //       border: true,
+      //     },
+      //     {
+      //       type: 'paragraph',
+      //       text: langContent.cocoaMap[0].content[1].text,
+      //     },
+      //   ],
+      //   image: {
+      //     src: langImages.general.ruedaSabores,
+      //     alt: langContent.cocoaMap[0].image.alt,
+      //     align: 'right',
+      //   },
+      // },
       {
         title: langContent.cocoaMap[1].title,
         content: [
           {
             type: 'quote',
-            quote: langContent.cocoaMap[1].content[0].quote,
-            author: langContent.cocoaMap[1].content[0].author,
+            quote: langContent.cocoaMap[1].content[0].text,
             border: true,
+          },
+          {
+            type: 'paragraph',
+            text: langContent.cocoaMap[1].content[1].text,
+          },
+          {
+            type: 'paragraph',
+            text: langContent.cocoaMap[1].content[2].text,
+          },
+          {
+            type: 'paragraph',
+            text: langContent.cocoaMap[1].content[3].text,
+          },
+          {
+            type: 'paragraph',
+            text: langContent.cocoaMap[1].content[4].text,
           },
         ],
         image: {
@@ -258,24 +240,11 @@ export default (Astro) => {
                   items: langContent.postHarvestBenefit.content[1].protocols[0].items[3].items,
                 },
               ],
-              mainImage: [
-                // {
-                //   src: langImages.protocols.fermentacion[0],
-                //   alt: langContent.postHarvestBenefit.content[1].protocols[0].image.alt,
-                // },
-                // {
-                //   src: langImages.protocols.fermentacion[1],
-                //   alt: langContent.postHarvestBenefit.content[1].protocols[0].image.alt,
-                // },
-                // {
-                //   src: langImages.protocols.fermentacion[2],
-                //   alt: langContent.postHarvestBenefit.content[1].protocols[0].image.alt,
-                // },
-              ],
+              mainImage: [],
               video: {
                 src: '/videos/surdellago/videoOne.mp4',
                 title: langContent.postHarvestBenefit.content[1].protocols[1].video.title,
-                text: langContent.postHarvestBenefit.content[1].protocols[1].video.text,
+                text: '',
               },
             },
             {
@@ -317,7 +286,7 @@ export default (Astro) => {
               video: {
                 src: '/videos/surdellago/videoTwo.mp4',
                 title: langContent.postHarvestBenefit.content[1].protocols[1].video.title,
-                text: langContent.postHarvestBenefit.content[1].protocols[1].video.text,
+                text: '',
               },
             },
             {
@@ -326,7 +295,7 @@ export default (Astro) => {
               video: {
                 src: '/videos/surdellago/videoThre.mp4',
                 title: langContent.postHarvestBenefit.content[1].protocols[1].video.title,
-                text: langContent.postHarvestBenefit.content[1].protocols[1].video.text,
+                text: '',
               },
             },
             {
@@ -335,7 +304,7 @@ export default (Astro) => {
               video: {
                 src: '/videos/surdellago/videoFour.mp4',
                 title: langContent.postHarvestBenefit.content[1].protocols[1].video.title,
-                text: langContent.postHarvestBenefit.content[1].protocols[1].video.text,
+                text: '',
               },
             },
           ],
@@ -344,14 +313,13 @@ export default (Astro) => {
     },
     traceability: {
       title: langContent.traceability.title,
-      subtitle: langContent.traceability.subtitle,
       content: [
         {
-          type: 'richText',
+          type: 'paragraph',
           text: langContent.traceability.content[0].text,
         },
         {
-          type: 'paragraph',
+          type: 'richText',
           text: langContent.traceability.content[1].text,
         },
         {
@@ -359,7 +327,7 @@ export default (Astro) => {
           text: langContent.traceability.content[2].text,
         },
         {
-          type: 'paragraph',
+          type: 'richText',
           text: langContent.traceability.content[3].text,
         },
         {
@@ -367,18 +335,34 @@ export default (Astro) => {
           text: langContent.traceability.content[4].text,
         },
         {
-          type: 'paragraph',
+          type: 'richText',
           text: langContent.traceability.content[5].text,
         },
       ],
       images: [
         {
-          src: langImages.certifications.traceability[0],
-          alt: langContent.traceability.images[1].alt,
+          type: 'video',
+          src: '/videos/surdellago/videoOne.mp4',
+          title: langContent.postHarvestBenefit.content[1].protocols[1].video.title,
         },
         {
-          src: langImages.certifications.traceability[1],
-          alt: langContent.traceability.images[2].alt,
+          src: langImages.protocols.secado[0],
+          alt: langContent.postHarvestBenefit.content[1].protocols[1].image.alt,
+        },
+        {
+          type: 'video',
+          src: '/videos/surdellago/videoTwo.mp4',
+          title: langContent.postHarvestBenefit.content[1].protocols[1].video.title,
+        },
+        {
+          type: 'video',
+          src: '/videos/surdellago/videoThre.mp4',
+          title: langContent.postHarvestBenefit.content[1].protocols[1].video.title,
+        },
+        {
+          type: 'video',
+          src: '/videos/surdellago/videoFour.mp4',
+          title: langContent.postHarvestBenefit.content[1].protocols[1].video.title,
         },
       ],
     },

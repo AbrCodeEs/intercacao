@@ -212,15 +212,17 @@ const traceability = z.object({
   subtitle: z.string(),
   content: z
     .object({
-      type: z.enum(['paragraph', 'highlight', 'richText', 'multiImage', 'bold']),
+      type: z.enum(['paragraph', 'highlight', 'richText', 'multiImage', 'bold', 'list']),
       text: z.string(),
     })
     .array(),
   certificate: z.union([z.string(), z.custom<ImageMetadata>()]),
   images: z
     .object({
+      type: z.enum(['image', 'video']),
       src: z.union([z.string(), z.custom<ImageMetadata>()]),
       alt: z.string(),
+      title: z.string().optional(),
       useDialog: z.boolean().optional(),
     })
     .array(),
