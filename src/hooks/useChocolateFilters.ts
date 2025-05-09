@@ -1,7 +1,7 @@
 // hooks/useChocolateFilters.ts
 import { useState } from 'react';
 
-import type{ SortOption, FlavorOption } from '@/types/home';
+import type { SortOption, FlavorOption } from '@/types/home';
 
 export const useChocolateFilters = () => {
   const [sortBy, setSortBy] = useState<SortOption | null>(null);

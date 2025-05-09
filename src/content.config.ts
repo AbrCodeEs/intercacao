@@ -7,6 +7,7 @@ const generalInformation = z.object({
       title: z.string(),
       subtitle: z.string(),
       header: z.string().optional(),
+      scale: z.boolean().optional().default(true),
       color: z.string(),
     })
     .optional(),
@@ -36,6 +37,28 @@ const generalInformation = z.object({
 const characteristics = z
   .object({
     title: z.string(),
+    flavors_by_date_cata: z
+      .object({
+        date: z.string(),
+        flavors: z
+          .object({
+            name: z.string(),
+            percentage: z.string(),
+            progress: z.number(),
+            icon: z
+              .object({
+                src: z.string(),
+                alt: z.string(),
+              })
+              .optional(),
+            className: z.string().optional(),
+            description: z.string(),
+            color: z.string().optional(),
+          })
+          .array(),
+      })
+      .array()
+      .optional(),
     flavors: z
       .object({
         name: z.string(),
@@ -193,6 +216,7 @@ const traceability = z.object({
       text: z.string(),
     })
     .array(),
+  certificate: z.union([z.string(), z.custom<ImageMetadata>()]),
   images: z
     .object({
       src: z.union([z.string(), z.custom<ImageMetadata>()]),

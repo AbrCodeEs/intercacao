@@ -1,4 +1,4 @@
-import PatanemoWeb from '@/images/mantuano/mantuano-web.webp';
+import PatanemoWeb from '@/images/mantuano/acuarela-mantuano.png';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/mantuano/evaluacion.webp';
 import SaboresPositivos from '@/images/patanemo/cacao.webp';
@@ -47,9 +47,7 @@ const images = {
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      traceability: [
-        TraceabilityOne,
-      ],
+      traceability: [TraceabilityOne],
     },
     location: {
       map: map,
@@ -76,9 +74,7 @@ const images = {
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      traceability: [
-        TraceabilityOne,
-      ],
+      traceability: [TraceabilityOne],
     },
     location: {
       map: map,

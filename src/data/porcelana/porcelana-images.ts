@@ -29,7 +29,6 @@ import TraceabilityTwo from '@/images/porcelana/trazabilidad2.webp';
 import TraceabilityThree from '@/images/porcelana/trazabilidad3.webp';
 import TraceabilityFour from '@/images/porcelana/trazabilidad4.webp';
 
-
 import map from '@/images/porcelana/mapa.webp';
 import locationOne from '@/images/porcelana/paisaje1.webp';
 import locationTwo from '@/images/porcelana/paisaje2.webp';

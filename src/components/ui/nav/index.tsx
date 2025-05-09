@@ -29,7 +29,7 @@ export default function Index({ children, setIsActive, items, isCloseButton }: P
         initial="initial"
         animate="enter"
         exit="exit"
-        className="menu border-r border-gray-500/50 shadow-lg z-[900]"
+        className="menu z-[900] border-r border-gray-500/50 shadow-lg"
       >
         <nav className="body z-50 justify-start">
           <div className="flex w-full items-center justify-center px-4 pt-10">

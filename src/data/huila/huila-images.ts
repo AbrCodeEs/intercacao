@@ -1,4 +1,4 @@
-import PorcelanaWeb from '@/images/huila/huila-web.webp';
+import PorcelanaWeb from '@/images/huila/acuarelas-huila.png';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/huila/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';

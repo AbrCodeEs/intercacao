@@ -7,7 +7,7 @@ import { images } from './huila-images';
 
 export default (Astro) => {
   const lang = getLangFromUrl(Astro.url);
-  const trans = useTranslations(lang);  
+  const trans = useTranslations(lang);
   const langImages = images[lang];
   const langContent = trans('huila');
 
@@ -17,7 +17,7 @@ export default (Astro) => {
       cocoa: {
         title: 'cacao gourmet',
         subtitle: 'huila fino',
-        color: 'bg-green-900'
+        color: 'bg-green-900',
       },
       mainImage: {
         src: langImages.general.porcelanaWeb,
@@ -135,7 +135,7 @@ export default (Astro) => {
       information: [
         {
           title: langContent.characteristics.information[0].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-orange-500',
           description: {
             boldText: langContent.characteristics.information[0].description.boldText,
             additionalText: langContent.characteristics.information[0].description.additionalText,
@@ -143,7 +143,7 @@ export default (Astro) => {
         },
         {
           title: langContent.characteristics.information[1].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-orange-500',
           description: {
             boldText: langContent.characteristics.information[1].description.boldText,
             additionalText: langContent.characteristics.information[1].description.additionalText,
@@ -151,7 +151,7 @@ export default (Astro) => {
         },
         {
           title: langContent.characteristics.information[2].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-orange-500',
           description: {
             boldText: langContent.characteristics.information[2].description.boldText,
             additionalText: langContent.characteristics.information[2].description.additionalText,
@@ -337,6 +337,7 @@ export default (Astro) => {
           text: langContent.traceability.content[5].text,
         },
       ],
+      certificates: langImages.certifications.certificados,
       images: [
         {
           src: langImages.certifications.traceability[0],
@@ -375,7 +376,7 @@ export default (Astro) => {
           {
             src: langImages.location.location[0],
             alt: langContent.location.ecology.images[0].alt,
-          }
+          },
         ],
       },
     },
@@ -407,7 +408,7 @@ export default (Astro) => {
         {
           type: 'paragraph',
           text: langContent.history.content[4].text,
-        }
+        },
       ],
     },
     socialResponsibility: {

@@ -1,7 +1,15 @@
 'use client';
 
 import React, { useCallback, useContext, useEffect, useId, useMemo, useRef, useState } from 'react';
-import { motion, AnimatePresence, MotionConfig, type Transition, type Variant, useDragControls, type DragControls } from 'motion/react';
+import {
+  motion,
+  AnimatePresence,
+  MotionConfig,
+  type Transition,
+  type Variant,
+  useDragControls,
+  type DragControls,
+} from 'motion/react';
 import { createPortal } from 'react-dom';
 import { cn } from '@/lib/cn';
 import { XIcon } from 'lucide-react';
@@ -255,10 +263,10 @@ const MorphingDialogDragContent = ({ children }: { children: React.ReactNode }) 
 
   const handlePointerMove = (e: React.PointerEvent) => {
     if (!isDragging.current) return;
-    
+
     const deltaY = e.clientY - dragStartY.current;
     const deltaX = Math.abs(e.clientX - dragStartX.current);
-    
+
     // Determinar si es un arrastre vertical o horizontal
     if (!isVerticalDrag.current) {
       if (deltaY > deltaX && deltaY > 5) {
@@ -269,16 +277,16 @@ const MorphingDialogDragContent = ({ children }: { children: React.ReactNode }) 
         return;
       }
     }
-    
+
     // Solo procesar el arrastre si es vertical
     if (isVerticalDrag.current && deltaY > 0) {
       const resistance = Math.min(1, deltaY / 200);
       const resistedDeltaY = deltaY * (1 - resistance * 0.3);
-      
+
       if (containerRef.current) {
         containerRef.current.style.transform = `translateY(${resistedDeltaY}px)`;
       }
-      
+
       if (deltaY > dragThreshold) {
         setIsOpen(false);
         isDragging.current = false;
@@ -288,21 +296,21 @@ const MorphingDialogDragContent = ({ children }: { children: React.ReactNode }) 
 
   const handlePointerUp = (e: React.PointerEvent) => {
     if (!isDragging.current) return;
-    
+
     const deltaY = e.clientY - dragStartY.current;
-    
+
     if (isVerticalDrag.current && deltaY > dragThreshold) {
       setIsOpen(false);
     } else {
       resetPosition();
     }
-    
+
     isDragging.current = false;
     isVerticalDrag.current = false;
   };
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="drag-handle"
       onPointerDown={handlePointerDown}

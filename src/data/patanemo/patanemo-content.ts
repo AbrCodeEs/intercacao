@@ -180,7 +180,7 @@ const es = {
                 value: '4 a 5 días',
               },
               {
-                key: 'Técnicas de Fermentación'
+                key: 'Técnicas de Fermentación',
               },
               {
                 items: [

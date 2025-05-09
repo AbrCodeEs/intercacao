@@ -130,7 +130,7 @@ export default (Astro) => {
       information: [
         {
           title: langContent.characteristics.information[0].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-red-800',
           description: {
             boldText: langContent.characteristics.information[0].description.boldText,
             additionalText: langContent.characteristics.information[0].description.additionalText,
@@ -138,7 +138,7 @@ export default (Astro) => {
         },
         {
           title: langContent.characteristics.information[1].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-red-800',
           description: {
             boldText: langContent.characteristics.information[1].description.boldText,
             additionalText: langContent.characteristics.information[1].description.additionalText,
@@ -146,7 +146,7 @@ export default (Astro) => {
         },
         {
           title: langContent.characteristics.information[2].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-red-700',
           description: {
             boldText: langContent.characteristics.information[2].description.boldText,
             additionalText: langContent.characteristics.information[2].description.additionalText,
@@ -313,10 +313,12 @@ export default (Astro) => {
                   items: langContent.postHarvestBenefit.content[1].protocols[1].items[5].items,
                 },
               ],
-              mainImage: [{
-                src: langImages.protocols.secado[0],
-                alt: langContent.postHarvestBenefit.content[1].protocols[1].image.alt,
-              }],
+              mainImage: [
+                {
+                  src: langImages.protocols.secado[0],
+                  alt: langContent.postHarvestBenefit.content[1].protocols[1].image.alt,
+                },
+              ],
               video: {
                 src: 'https://www.youtube.com/embed/RXWVmyqSa2o',
                 title: langContent.postHarvestBenefit.content[1].protocols[1].video.title,

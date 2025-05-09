@@ -19,26 +19,27 @@ export const IconsSortOption = {
   creole: <Nut className="h-6 w-6 fill-current text-black" />,
 };
 
-export const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
-  ({ className, children, ...props }, ref) => {
-    return (
-      <li className="border-b border-gray-400/50">
-        <NavigationMenuLink asChild>
-          <a
-            ref={ref}
-            className={cn(
-              'block space-y-1 p-3 leading-none no-underline transition-colors outline-none select-none hover:text-black focus:text-black',
-              className,
-            )}
-            {...props}
-          >
-            <p className="line-clamp-2 text-sm leading-snug">{children}</p>
-          </a>
-        </NavigationMenuLink>
-      </li>
-    );
-  },
-);
+export const ListItem = React.forwardRef<
+  React.ElementRef<'a'>,
+  React.ComponentPropsWithoutRef<'a'>
+>(({ className, children, ...props }, ref) => {
+  return (
+    <li className="border-b border-gray-400/50">
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            'block space-y-1 p-3 leading-none no-underline transition-colors outline-none select-none hover:text-black focus:text-black',
+            className,
+          )}
+          {...props}
+        >
+          <p className="line-clamp-2 text-sm leading-snug">{children}</p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
 
 ListItem.displayName = 'ListItem';
 

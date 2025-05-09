@@ -3,7 +3,7 @@
 // all pages through the use of the <BaseHead /> component.
 import '@/assets/css/global.css';
 import '@/assets/css/rawline.css';
-import { SITE_TITLE } from "@/types/home/website";
+import { SITE_TITLE } from '@/types/home/website';
 
 interface Props {
   title: string;
@@ -15,30 +15,23 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { 
-  title, 
-  description, 
-  image = '/blog-placeholder-1.jpg', 
+const {
+  title,
+  description,
+  image = '/blog-placeholder-1.jpg',
   keywords,
-  preloadImages = [] 
+  preloadImages = [],
 } = Astro.props;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- Preload Critical Images -->
-{preloadImages.map((src) => (
-  <link 
-    rel="preload" 
-    as="image" 
-    href={src} 
-    fetchpriority="high"
-  />
-))}
+{preloadImages.map((src) => <link rel="preload" as="image" href={src} fetchpriority="high" />)}
 
 <link
   rel="alternate"
@@ -79,7 +72,9 @@ const {
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJY1Y8RB08"></script>
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() {
+    dataLayer.push(arguments);
+  }
   gtag('js', new Date());
 
   gtag('config', 'G-RJY1Y8RB08');

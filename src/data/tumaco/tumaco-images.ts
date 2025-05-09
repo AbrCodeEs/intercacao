@@ -1,4 +1,4 @@
-import PorcelanaWeb from '@/images/tumaco/tumaco-web.webp';
+import PorcelanaWeb from '@/images/tumaco/acuarelas-tumaco.png';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/tumaco/evaluacion.webp';
 import ClasificacionEn from '@/images/tumaco/evaluacionEn.webp';

@@ -1,4 +1,4 @@
-import PatanemoWeb from '@/images/ocumare/ocumare-web.webp';
+import PatanemoWeb from '@/images/ocumare/acuarelas-ocumare.png';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/ocumare/evaluacion.webp';
 import SaboresPositivos from '@/images/patanemo/cacao.webp';
@@ -19,7 +19,6 @@ import TipoDeCacaoFour from '@/images/ocumare/criolloseco.webp';
 import ProtocoloFermentacionOne from '@/images/ocumare/fermentacion.webp';
 import ProtocoloFermentacionTwo from '@/images/ocumare/fermentacion2.webp';
 import ProtocoloFermentacionThree from '@/images/ocumare/fermentacion3.webp';
-
 
 import CosechaOne from '@/images/ocumare/secado.webp';
 import CosechaTwo from '@/images/ocumare/secado2.webp';
@@ -48,13 +47,15 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThree, TipoDeCacaoFour],
     },
     protocols: {
-      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo, ProtocoloFermentacionThree],
+      fermentacion: [
+        ProtocoloFermentacionOne,
+        ProtocoloFermentacionTwo,
+        ProtocoloFermentacionThree,
+      ],
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      traceability: [
-        TraceabilityOne,
-      ],
+      traceability: [TraceabilityOne],
     },
     location: {
       map: map,
@@ -77,13 +78,15 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThree, TipoDeCacaoFour],
     },
     protocols: {
-      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo, ProtocoloFermentacionThree],
+      fermentacion: [
+        ProtocoloFermentacionOne,
+        ProtocoloFermentacionTwo,
+        ProtocoloFermentacionThree,
+      ],
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      traceability: [
-        TraceabilityOne,
-      ],
+      traceability: [TraceabilityOne],
     },
     location: {
       map: map,

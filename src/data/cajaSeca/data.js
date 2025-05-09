@@ -406,7 +406,7 @@ export default (Astro) => {
           {
             src: langImages.location.location[2],
             alt: langContent.location.ecology.images[1].alt,
-          }
+          },
         ],
       },
     },

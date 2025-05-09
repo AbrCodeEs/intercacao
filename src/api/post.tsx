@@ -2,9 +2,7 @@ import { strapi } from '@strapi/client';
 import type { BeeBar, Post, BeeBarTypes, BeeBarCategories } from '@/types/actions';
 
 if (!import.meta.env.PUBLIC_STRAPI_URL || !import.meta.env.PUBLIC_STRAPI_TOKEN) {
-  throw new Error(
-    'PUBLIC_STRAPI_URL y PUBLIC_STRAPI_TOKEN deben estar definidos en el entorno',
-  );
+  throw new Error('PUBLIC_STRAPI_URL y PUBLIC_STRAPI_TOKEN deben estar definidos en el entorno');
 }
 
 const strapiClient = strapi({

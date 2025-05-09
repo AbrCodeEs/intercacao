@@ -161,7 +161,8 @@ const es = {
         protocols: [
           {
             title: 'Protocolo de Fermentacion',
-            description: 'Los frijoles Trinchera tienen una alta ascendencia criolla y una genética trinitaria significativa, lo que requiere este proceso específico:',
+            description:
+              'Los frijoles Trinchera tienen una alta ascendencia criolla y una genética trinitaria significativa, lo que requiere este proceso específico:',
             items: [
               {
                 key: 'Tipo de Cacao',
@@ -227,7 +228,7 @@ const es = {
     subtitle: 'certificaciones y premios',
     content: [
       {
-        text: 'En el sector de Trincheras hay tres haciendas muy antiguas e importantes, una de ellas es la hacienda La Unión ubicada en un valle cultivado con cacao de aproximadamente 66 Ha donde se encuentra establecida la Asociación de productores Unidos de Trincheras, allí trabajan 53 productores divididos en tres grupos de los cuales solo 18 realizan el beneficio post cosecha en la emblemática hacienda. Cada uno de ellos se disputa cual es el mejor cacao a pesar de cultivar en la misma zona.'
+        text: 'En el sector de Trincheras hay tres haciendas muy antiguas e importantes, una de ellas es la hacienda La Unión ubicada en un valle cultivado con cacao de aproximadamente 66 Ha donde se encuentra establecida la Asociación de productores Unidos de Trincheras, allí trabajan 53 productores divididos en tres grupos de los cuales solo 18 realizan el beneficio post cosecha en la emblemática hacienda. Cada uno de ellos se disputa cual es el mejor cacao a pesar de cultivar en la misma zona.',
       },
       {
         text: 'Cada productor posee 3 hectáreas y media activas en producción con 1.500 plantaciones de cacao por Ha.',
@@ -464,13 +465,13 @@ const en = {
       alt: 'Ocumare Cocoa',
       description: [
         {
-          text: 'Due to the properties of Creole genetics and high Trinitarian ancestry, the kernels are (±6%) Creole kernels.'
+          text: 'Due to the properties of Creole genetics and high Trinitarian ancestry, the kernels are (±6%) Creole kernels.',
         },
         {
-          text: 'In the cutting test, they have (±84%) fermented kernels, (±8%) violet kernels, and (±8%) slate kernels.'
+          text: 'In the cutting test, they have (±84%) fermented kernels, (±8%) violet kernels, and (±8%) slate kernels.',
         },
         {
-          text: 'In relation to weight, there are 84 almonds, referring to a weight of 100 g; in other words, each almond weighs 1.19 g.'
+          text: 'In relation to weight, there are 84 almonds, referring to a weight of 100 g; in other words, each almond weighs 1.19 g.',
         },
       ],
     },
@@ -510,7 +511,8 @@ const en = {
         protocols: [
           {
             title: 'Fermentation Protocol',
-            description: 'Ocumare beans have high Creole ancestry and significant Trinitario genetics, requiring this specific process:',
+            description:
+              'Ocumare beans have high Creole ancestry and significant Trinitario genetics, requiring this specific process:',
             items: [
               {
                 key: 'Cocoa Type',
@@ -587,31 +589,31 @@ const en = {
     subtitle: 'certifications and awards',
     content: [
       {
-        text: 'In the Trincheras sector, there are three very old and important haciendas. One of them is the La Unión hacienda, located in a cacao-growing valley of approximately 66 hectares, where the United Producers Association of Trincheras is based. Fifty-three producers work there, divided into three groups, of which only 18 carry out post-harvest processing at the iconic hacienda. Each of them competes for the best cacao, despite growing in the same area.'
+        text: 'In the Trincheras sector, there are three very old and important haciendas. One of them is the La Unión hacienda, located in a cacao-growing valley of approximately 66 hectares, where the United Producers Association of Trincheras is based. Fifty-three producers work there, divided into three groups, of which only 18 carry out post-harvest processing at the iconic hacienda. Each of them competes for the best cacao, despite growing in the same area.',
       },
       {
-        text: 'Each producer owns 3.5 hectares in active production, with 1,500 cacao plantations per hectare.'
+        text: 'Each producer owns 3.5 hectares in active production, with 1,500 cacao plantations per hectare.',
       },
       {
-        text: 'Currently, 10,000 kg of cacao are produced annually in Trincheras during two harvest seasons: the Easter harvest, between December and April, and the San Juan harvest, during the months of June and July.'
+        text: 'Currently, 10,000 kg of cacao are produced annually in Trincheras during two harvest seasons: the Easter harvest, between December and April, and the San Juan harvest, during the months of June and July.',
       },
       {
-        text: 'As an additional economic activity, they develop tourism, as they have high potential in that area. It has a high level of fishing activity, as well as the cultivation of other crops such as oranges, avocados, cassava, bananas, among others.'
+        text: 'As an additional economic activity, they develop tourism, as they have high potential in that area. It has a high level of fishing activity, as well as the cultivation of other crops such as oranges, avocados, cassava, bananas, among others.',
       },
       {
-        text: 'Within the lands of Trincheras, the warmth and welcome of its producers stand out. Among the most important is Mr. José Bisamon, 77 years old, a native of the area who has dedicated himself to working the land since he was 20 years old. Part of the nation\'s agricultural development, having worked since the farm was established, which stood out for its large coffee production in the 1960s.'
+        text: "Within the lands of Trincheras, the warmth and welcome of its producers stand out. Among the most important is Mr. José Bisamon, 77 years old, a native of the area who has dedicated himself to working the land since he was 20 years old. Part of the nation's agricultural development, having worked since the farm was established, which stood out for its large coffee production in the 1960s.",
       },
       {
-        text: 'In the town, cacao farming is one of the main sources of income. They also grow bananas, cassava, and avocados.'
+        text: 'In the town, cacao farming is one of the main sources of income. They also grow bananas, cassava, and avocados.',
       },
       {
-        text: 'They have a good infrastructure with well-organized concrete houses, with enormous yards, surrounded by extensive vegetation and a very humid and warm climate.'
+        text: 'They have a good infrastructure with well-organized concrete houses, with enormous yards, surrounded by extensive vegetation and a very humid and warm climate.',
       },
       {
-        text: 'Trinchera cacao has a particular touch since the red fruits are what characterize its flavor.'
+        text: 'Trinchera cacao has a particular touch since the red fruits are what characterize its flavor.',
       },
       {
-        text: 'The producers carry out their harvest, break the cob, extract the fruit, then pour the beans into plastic containers to be transported by pack donkeys to the area where the association is located for the post-harvest processing process.'
+        text: 'The producers carry out their harvest, break the cob, extract the fruit, then pour the beans into plastic containers to be transported by pack donkeys to the area where the association is located for the post-harvest processing process.',
       },
     ],
     images: [
@@ -674,22 +676,22 @@ const en = {
     ],
     content: [
       {
-        text: 'In 1895, the Aguas Caliente and Palmarito haciendas, located in the Trincheras sector, became part of the textile and leather industry in Venezuela. The textile industry developed with large cotton plantations, as well as cocoa and coffee plantations.'
+        text: 'In 1895, the Aguas Caliente and Palmarito haciendas, located in the Trincheras sector, became part of the textile and leather industry in Venezuela. The textile industry developed with large cotton plantations, as well as cocoa and coffee plantations.',
       },
       {
-        text: 'These two haciendas were unified under the name La Unión. Both were owned by Mr. Ernesto Branger, one of the first men to promote the textile sector.'
+        text: 'These two haciendas were unified under the name La Unión. Both were owned by Mr. Ernesto Branger, one of the first men to promote the textile sector.',
       },
       {
-        text: 'For many years, this emblematic hacienda, known as Venezuelan Cultural Heritage, was the site of grand gatherings and celebrations for the wealthiest people of the time.'
+        text: 'For many years, this emblematic hacienda, known as Venezuelan Cultural Heritage, was the site of grand gatherings and celebrations for the wealthiest people of the time.',
       },
       {
-        text: 'The development that took place within the hacienda led to the creation of an internal leather token marked with the value of the measure to be acquired.'
+        text: 'The development that took place within the hacienda led to the creation of an internal leather token marked with the value of the measure to be acquired.',
       },
       {
-        text: 'Around 1962, La Unión was expropriated by the National Agrarian Institute to distribute the land among the farmers in the area, granting each one 3.5 hectares of land.'
+        text: 'Around 1962, La Unión was expropriated by the National Agrarian Institute to distribute the land among the farmers in the area, granting each one 3.5 hectares of land.',
       },
       {
-        text: 'To this day, each of the farmers, now members of the producers\' association, maintains the legacy of cultivating the prized Trincheras cocoa.'
+        text: "To this day, each of the farmers, now members of the producers' association, maintains the legacy of cultivating the prized Trincheras cocoa.",
       },
     ],
   },

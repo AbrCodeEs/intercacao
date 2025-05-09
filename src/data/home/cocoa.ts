@@ -13,10 +13,10 @@ import piura from '@/images/piura/piura-web.webp';
 import tumaco from '@/images/tumaco/tumaco-web.webp';
 import chulu from '@/images/chulu/chulu-web.webp';
 import trinchera from '@/images/trinchera/trincheras-web.webp';
-import surdellago from '@/images/surdellago/placeholder.webp';
+import surdellago from '@/images/surdellago/sur-del-lago.webp';
 
-import barlovento from '@/images/barlovento/barlovento-web.webp'
-import barina from '@/images/barinas/barinas-web.webp'
+import barlovento from '@/images/barlovento/barlovento-web.webp';
+import barina from '@/images/barinas/barinas-web.webp';
 
 import type { CocoaBar } from '@/types/home';
 
@@ -86,7 +86,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0.1,
     },
     // url: 'http://pintao.intercacao.com',
-    url: 'pintao'
+    url: 'pintao',
   },
   {
     id: '4',
@@ -109,7 +109,7 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0.6,
     },
     // url: 'http://tesoro.intercacao.com',
-    url: 'tesoro'
+    url: 'tesoro',
   },
   {
     id: '5',
@@ -132,8 +132,8 @@ export const chocolateBars: CocoaBar[] = [
       spices: 1.7,
     },
     // url: 'http://patanemo.intercacao.com',
-    url : 'patanemo',
-    soldout: true
+    url: 'patanemo',
+    soldout: true,
   },
   {
     id: '6',
@@ -157,7 +157,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     // url: 'http://tumaco.intercacao.com',
     url: 'tumaco',
-    soldout: true
+    soldout: true,
   },
   {
     id: '7',
@@ -181,7 +181,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     // url: 'http://canoabo.intercacao.com',
     url: 'canoabo',
-    soldout: true
+    soldout: true,
   },
   {
     id: '8',
@@ -205,7 +205,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     // url: 'http://choroni.intercacao.com',
     url: 'choroni',
-    soldout: true
+    soldout: true,
   },
   {
     id: '9',
@@ -229,7 +229,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     // url: 'http://huila.intercacao.com',
     url: 'huila',
-    soldout: true
+    soldout: true,
   },
   {
     id: '10',
@@ -253,7 +253,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     // url: 'http://manapiare.intercacao.com',
     url: 'manapiare',
-    soldout: true
+    soldout: true,
   },
   {
     id: '11',
@@ -277,7 +277,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     // url: 'http://mantuano.intercacao.com',
     url: 'mantuano',
-    soldout: true
+    soldout: true,
   },
   {
     id: '12',
@@ -301,7 +301,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     // url: 'http://ocumare.intercacao.com',
     url: 'ocumare',
-    soldout: true
+    soldout: true,
   },
   {
     id: '13',
@@ -323,10 +323,8 @@ export const chocolateBars: CocoaBar[] = [
       wood: 2.0,
       spices: 0,
     },
-    url: 'http://nativoblanco.intercacao.com',
-    soldout: true
-    // disabled: true,
-    // soldout: true
+    url: 'piura',
+    soldout: true,
   },
   {
     id: '14',
@@ -350,7 +348,7 @@ export const chocolateBars: CocoaBar[] = [
     },
     // url: 'http://trincheras.intercacao.com',
     url: 'trinchera',
-    soldout: true
+    soldout: true,
   },
   {
     id: '15',
@@ -372,9 +370,8 @@ export const chocolateBars: CocoaBar[] = [
       wood: 2.0,
       spices: 0,
     },
-    url: 'http://paloblanco.intercacao.com',
-    // disabled: true,
-    soldout: true
+    url: 'chulucanas',
+    soldout: true,
   },
   {
     id: '16',
@@ -397,7 +394,6 @@ export const chocolateBars: CocoaBar[] = [
       spices: 0,
     },
     url: 'surdellago',
-    watermark: true
   },
   {
     id: '17',

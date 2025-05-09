@@ -8,11 +8,12 @@ import logo from '@/images/chuao/logo-intercacao.png';
 
 import { getLangFromUrl } from '@/lib/translations';
 
-type Props = CollectionEntry<"blog">['data'] & {
+type Props = CollectionEntry<'blog'>['data'] & {
   preloadImages?: string[];
+  offMenu?: boolean;
 };
 
-const { title, description, keywords, preloadImages = [] } = Astro.props;
+const { title, description, keywords, preloadImages = [], offMenu = false } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -104,18 +105,18 @@ const navItems = [
 
 <html lang="es">
   <head>
-    <BaseHead 
-      title={title} 
-      description={description} 
-      keywords={keywords} 
+    <BaseHead
+      title={title}
+      description={description}
+      keywords={keywords}
       preloadImages={preloadImages}
     />
   </head>
 
   <body>
-    <Header client:load items={navItems}>
+    {!offMenu && <Header client:load items={navItems}>
       <Image class="size-auto" src={logo} alt="Logo" />
-    </Header>
+    </Header>}
     <main class="font-rawline relative">
       <slot />
     </main>

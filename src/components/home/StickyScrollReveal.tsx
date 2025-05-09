@@ -83,7 +83,7 @@ export const StickyScroll = ({ content, onProjectChange }: StickyScrollProps) =>
         ([entry]) => {
           setIsContainerVisible(entry.isIntersecting);
         },
-        { threshold: 0.1 }
+        { threshold: 0.1 },
       );
       observer.current.observe(sentinelRef.current);
     }
@@ -116,7 +116,7 @@ export const StickyScroll = ({ content, onProjectChange }: StickyScrollProps) =>
         {/* Contenedor sticky que muestra el contenido de la tarjeta activa */}
         <div
           className={cn(
-            'sticky top-10 hidden h-[90vh] w-full rounded-md md:w-2/5 lg:w-2/5 md:block lg:block xl:block xl:w-2/5',
+            'sticky top-10 hidden h-[90vh] w-full rounded-md md:block md:w-2/5 lg:block lg:w-2/5 xl:block xl:w-2/5',
           )}
           style={{
             backgroundColor: backgroundColors[(activeCard + 1) % backgroundColors.length],
@@ -139,21 +139,13 @@ export const StickyScroll = ({ content, onProjectChange }: StickyScrollProps) =>
                 }}
                 className="flex h-full snap-start flex-col items-start justify-center gap-10 py-10 md:h-[90vh] md:py-0 lg:h-[90vh] lg:py-0 xl:h-[90vh] xl:py-0"
               >
-                <motion.h2
-                  className="text-4xl font-medium text-zinc-800 md:text-4xl xl:text-5xl"
-                >
+                <motion.h2 className="text-4xl font-medium text-zinc-800 md:text-4xl xl:text-5xl">
                   {item.title}
                 </motion.h2>
-                <motion.div
-                  className="rounded-lg text-lg text-zinc-600 md:hidden lg:hidden xl:hidden"
-                >
+                <motion.div className="rounded-lg text-lg text-zinc-600 md:hidden lg:hidden xl:hidden">
                   {item.content}
                 </motion.div>
-                <motion.p
-                  className="relative text-lg text-zinc-600"
-                >
-                  {item.description}
-                </motion.p>
+                <motion.p className="relative text-lg text-zinc-600">{item.description}</motion.p>
                 {item.url && (
                   <motion.a
                     href={item.url as string}

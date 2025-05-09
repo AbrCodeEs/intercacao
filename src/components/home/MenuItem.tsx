@@ -77,4 +77,4 @@ const MenuItem = memo(({ item, apiUrl }: MenuItemProps) => {
 
 MenuItem.displayName = 'MenuItem';
 
-export default MenuItem; 
+export default MenuItem;

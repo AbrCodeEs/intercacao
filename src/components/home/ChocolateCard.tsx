@@ -26,11 +26,11 @@ const IconTraslation = {
   spices: 'especias',
 } as const;
 
-const FlavorIcon = memo(function FlavorIcon({ 
-  flavor, 
-  value 
-}: { 
-  flavor: keyof typeof IconTraslation; 
+const FlavorIcon = memo(function FlavorIcon({
+  flavor,
+  value,
+}: {
+  flavor: keyof typeof IconTraslation;
   value: number;
 }) {
   const iconPath = `/icons/${IconTraslation[flavor]}-white-icon.svg`;
@@ -57,13 +57,7 @@ const FlavorIcon = memo(function FlavorIcon({
   );
 });
 
-const SortIcon = memo(function SortIcon({ 
-  sortBy, 
-  value 
-}: { 
-  sortBy: SortOption; 
-  value: number;
-}) {
+const SortIcon = memo(function SortIcon({ sortBy, value }: { sortBy: SortOption; value: number }) {
   switch (sortBy) {
     case Sort.rated:
       return (
@@ -134,12 +128,7 @@ export const ChocolateCard = memo(function ChocolateCard({
     if (typeof flavors === 'string') {
       const flavorKey = flavors.toLowerCase().replace(' ', '_') as keyof typeof IconTraslation;
       if (flavorKey in IconTraslation) {
-        return (
-          <FlavorIcon 
-            flavor={flavorKey} 
-            value={chocolate.ingredients[flavorKey]} 
-          />
-        );
+        return <FlavorIcon flavor={flavorKey} value={chocolate.ingredients[flavorKey]} />;
       }
     }
 
@@ -183,7 +172,7 @@ export const ChocolateCard = memo(function ChocolateCard({
 
             {chocolate.soldout && (
               <img
-                className="absolute top-0 left-0 xl:size-20 lg:size-16 md:size-14 size-12"
+                className="absolute top-0 left-0 size-12 md:size-14 lg:size-16 xl:size-20"
                 src={typeof watermark[lang] === 'string' ? watermark[lang] : watermark[lang].src}
                 alt="soldout"
                 loading="eager"
@@ -201,9 +190,7 @@ export const ChocolateCard = memo(function ChocolateCard({
             <div className="absolute inset-0 flex flex-col justify-start p-2 text-xl md:p-4 lg:p-4 xl:p-6">
               <div className="flex grow items-start justify-start">
                 {(flavors || sortBy) && (
-                  <div className="bg-primary rounded-xl p-2">
-                    {renderIcon()}
-                  </div>
+                  <div className="bg-primary rounded-xl p-2">{renderIcon()}</div>
                 )}
               </div>
             </div>

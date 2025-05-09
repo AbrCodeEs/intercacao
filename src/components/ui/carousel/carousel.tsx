@@ -87,7 +87,7 @@ function Carousel({
   index: externalIndex,
   onIndexChange,
   disableDrag = false,
-  classNameWrapper
+  classNameWrapper,
 }: CarouselProps) {
   const [internalIndex, setInternalIndex] = useState<number>(initialIndex);
   const isControlled = externalIndex !== undefined;
@@ -120,7 +120,12 @@ export type CarouselNavigationProps = {
   dataCount?: number;
 };
 
-function CarouselNavigation({ className, classNameButton, alwaysShow, dataCount }: CarouselNavigationProps) {
+function CarouselNavigation({
+  className,
+  classNameButton,
+  alwaysShow,
+  dataCount,
+}: CarouselNavigationProps) {
   const { index, setIndex, itemsCount } = useCarousel();
 
   return (
@@ -192,7 +197,7 @@ function CarouselIndicator({ className, classNameButton, dataCount }: CarouselIn
             onClick={() => setIndex(i)}
             className={cn(
               'rounded-full transition-opacity duration-300',
-              index === i ? 'h-2.5 w-5 bg-gray-800' : 'bg-gray-500 h-2 w-2',
+              index === i ? 'h-2.5 w-5 bg-gray-800' : 'h-2 w-2 bg-gray-500',
               classNameButton,
             )}
           />
@@ -210,7 +215,13 @@ export type CarouselContentProps = {
   dataCount?: number;
 };
 
-function CarouselContent({ children, className, transition, itemsPerPage, dataCount }: CarouselContentProps) {
+function CarouselContent({
+  children,
+  className,
+  transition,
+  itemsPerPage,
+  dataCount,
+}: CarouselContentProps) {
   const { index, setIndex, setItemsCount, disableDrag } = useCarousel();
   const [visibleItemsCount, setVisibleItemsCount] = useState<number>(itemsPerPage || 1);
   const dragX = useMotionValue(0);
@@ -300,13 +311,13 @@ function CarouselContent({ children, className, transition, itemsPerPage, dataCo
           mass: 0.5,
         }
       }
-      className={cn('flex items-center select-none touch-pan-x', className)}
+      className={cn('flex touch-pan-x items-center select-none', className)}
       ref={containerRef}
     >
       {Children.map(children, (child, index) => (
         <motion.div
           key={index}
-          className="w-full h-full min-w-0 shrink-0 grow-0"
+          className="h-full w-full min-w-0 shrink-0 grow-0"
           style={{
             width: `${100 / effectiveItemsPerPage}%`,
             flex: `0 0 ${100 / effectiveItemsPerPage}%`,

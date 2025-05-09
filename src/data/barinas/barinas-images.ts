@@ -4,8 +4,11 @@ import Clasificacion from '@/images/porcelana/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
 import EquipoCata from '@/images/porcelana/equipodecata.webp';
 import CuencaCacao from '@/images/surdellago/placeholder.webp';
+
 import RuedaSabores from '@/images/barlovento/ruedaDeSabores.webp';
 import MapaSensorial from '@/images/barlovento/ruedaDeSaboresTwo.webp';
+import MapaSensorialEn from '@/images/barlovento/mapasensorialEn.webp';
+
 import TipoDeCacaoOne from '@/images/surdellago/placeholder.webp';
 import TipoDeCacaoTwo from '@/images/surdellago/placeholder.webp';
 
@@ -20,7 +23,7 @@ import TraceabilityOne from '@/images/barinas/agricultores.webp';
 import TraceabilityTwo from '@/images/barinas/agricultoresTwo.webp';
 import TraceabilityThree from '@/images/barinas/agricultoresThre.webp';
 
-import map from '@/images/surdellago/placeholder.webp';
+import map from '@/images/barinas/mapa.webp';
 import locationOne from '@/images/surdellago/placeholder.webp';
 import locationTwo from '@/images/surdellago/placeholder.webp';
 import locationThree from '@/images/surdellago/placeholder.webp';
@@ -45,10 +48,7 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [
-        ProtocoloFermentacionOne,
-        ProtocoloFermentacionTwo,
-      ],
+      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo],
       secado: [CosechaOne, CosechaTwo, CosechaThre],
     },
     certifications: {
@@ -71,16 +71,13 @@ const images = {
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
       ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [
-        ProtocoloFermentacionOne,
-        ProtocoloFermentacionTwo,
-      ],
+      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo],
       secado: [CosechaOne, CosechaTwo, CosechaThre],
     },
     certifications: {

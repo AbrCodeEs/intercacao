@@ -21,9 +21,9 @@ const es = {
       },
       {
         items: [
-          { label: 'PRODUCCIÓN ANUAL (TM)', value: '' },
-          { label: 'COSECHA PRINCIPAL', value: '' },
-          { label: 'COSECHA MEDIA', value: '' },
+          { label: 'PRODUCCIÓN ANUAL (TM)', value: '4.200' },
+          // { label: 'COSECHA PRINCIPAL', value: '' },
+          // { label: 'COSECHA MEDIA', value: '' },
         ],
       },
       {
@@ -56,19 +56,19 @@ const es = {
     flavors: [
       {
         name: 'Afrutado Dulce',
-        description: 'Uvas pasas • Ciruelas pasas',
+        description: '',
       },
       {
         name: 'Afrutado Cítrico',
-        description: 'Naranja',
+        description: '',
       },
       {
         name: 'Aflorado',
-        description: 'Naranja • Mandarina',
+        description: '',
       },
       {
         name: 'Acriollado',
-        description: 'Malta • Caña de azúcar • Panela • Maní tostado • Almendras • Nuez • Caramelo',
+        description: 'Malta • Nuez',
       },
       {
         name: 'Cacao',
@@ -154,7 +154,8 @@ const es = {
           type: 'quote',
           quote:
             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          author: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          author:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
         },
       ],
       image: {
@@ -182,7 +183,8 @@ const es = {
               },
               {
                 key: 'Días de Fermentación',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 items: [
@@ -208,7 +210,8 @@ const es = {
               },
               {
                 key: 'Días de Secado',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 key: 'Técnicas de Secado',
@@ -225,7 +228,8 @@ const es = {
               alt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
             video: {
-              title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+              title:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
           },
@@ -239,7 +243,10 @@ const es = {
     content: [
       {
         text: [
-          { type: 'bold', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' },
+          {
+            type: 'bold',
+            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          },
           {
             type: 'link',
             text: 'Lorem Ipsum is simply dummy ',
@@ -295,12 +302,15 @@ const es = {
         alt: 'mapa de Chuao',
       },
       details: [
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
+        { label: 'Country', value: 'Venezuela' },
+        { label: 'State', value: 'Miranda' },
+        { label: 'Subregion', value: 'Barlovento' },
+        { label: 'Area', value: '2,500 km²' },
+        {
+          label: 'Average altitude',
+          value: '10 - 50 masl (low coastal area, with some hills inland)',
+        },
+        { label: 'Inhabitants', value: '200,000' },
       ],
     },
     paragraphs: [
@@ -409,9 +419,9 @@ const en = {
       },
       {
         items: [
-          { label: 'ANNUAL PRODUCTION (MT)', value: '' },
-          { label: 'MAIN HARVEST', value: '' },
-          { label: 'MID HARVEST', value: '' },
+          { label: 'ANNUAL PRODUCTION (MT)', value: '4.200' },
+          // { label: 'MAIN HARVEST', value: '' },
+          // { label: 'MID HARVEST', value: '' },
         ],
       },
       {
@@ -444,19 +454,19 @@ const en = {
     flavors: [
       {
         name: 'Sweet Fruity',
-        description: 'Raisins • Prunes',
+        description: '',
       },
       {
         name: 'Citrus Fruity',
-        description: 'Orange',
+        description: '',
       },
       {
         name: 'Floral',
-        description: 'Orange • Tangerine',
+        description: '',
       },
       {
         name: 'Creole',
-        description: 'Malt • Sugar cane • Panela • Roasted peanuts • Almonds • Walnut • Caramel',
+        description: 'Malt • Walnut',
       },
       {
         name: 'Cocoa',
@@ -524,7 +534,8 @@ const en = {
       content: [
         {
           type: 'quote',
-          quote: 'Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it',
+          quote:
+            'Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it',
           author: 'detailed by Ing. Ms Gladys Ramos.',
         },
         {
@@ -539,8 +550,10 @@ const en = {
       content: [
         {
           type: 'quote',
-          quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          author: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          quote:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          author:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
         },
       ],
       image: {
@@ -568,7 +581,8 @@ const en = {
               },
               {
                 key: 'Fermentation Days',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 items: [
@@ -594,7 +608,8 @@ const en = {
               },
               {
                 key: 'Drying Days',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 key: 'Drying Techniques',
@@ -611,7 +626,8 @@ const en = {
               alt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
             video: {
-              title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+              title:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
           },
@@ -625,7 +641,10 @@ const en = {
     content: [
       {
         text: [
-          { type: 'bold', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' },
+          {
+            type: 'bold',
+            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          },
           {
             type: 'link',
             text: 'Lorem Ipsum is simply dummy ',
@@ -678,15 +697,18 @@ const en = {
     subtitle: 'Geographic Location',
     locationInfo: {
       map: {
-        alt: 'Chuao map',
+        alt: 'barlovento map',
       },
       details: [
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
+        { label: 'País', value: 'Venezuela' },
+        { label: 'Estado', value: 'Miranda' },
+        { label: 'Subregión', value: 'Barlovento' },
+        { label: 'Superficie', value: '2,500 km²' },
+        {
+          label: 'Altitud promedio',
+          value: '10 - 50 msnm (zona costera baja, con algunas colinas hacia el interior)',
+        },
+        { label: 'Habitantes', value: '200,000' },
       ],
     },
     paragraphs: [
@@ -767,7 +789,8 @@ const en = {
         alt: 'image2',
       },
     ],
-    paragraphs: 'The primary objective is to collaborate, enrich, and promote good agricultural practices in community succession, thanks to the contribution and alliance with the PROSPERI FOUNDATION, a non-profit foundation committed to disseminating the historical, cultural, and agricultural values of Venezuela. Through educational programs like "Return to Agriculture", it demonstrates that cocoa cultivation is a profitable profession that generates social change.'
+    paragraphs:
+      'The primary objective is to collaborate, enrich, and promote good agricultural practices in community succession, thanks to the contribution and alliance with the PROSPERI FOUNDATION, a non-profit foundation committed to disseminating the historical, cultural, and agricultural values of Venezuela. Through educational programs like "Return to Agriculture", it demonstrates that cocoa cultivation is a profitable profession that generates social change.',
   },
 };
 

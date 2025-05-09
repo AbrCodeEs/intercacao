@@ -18,7 +18,7 @@ import TraceabilityOne from '@/images/barlovento/negro.webp';
 import TraceabilityTwo from '@/images/barlovento/negroTwo.webp';
 import TraceabilityThree from '@/images/barlovento/negros.webp';
 
-import map from '@/images/surdellago/placeholder.webp';
+import map from '@/images/barlovento/mapa.webp';
 import locationOne from '@/images/surdellago/placeholder.webp';
 import locationTwo from '@/images/surdellago/placeholder.webp';
 import locationThree from '@/images/surdellago/placeholder.webp';
@@ -43,10 +43,7 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [
-        ProtocoloFermentacionOne,
-        ProtocoloFermentacionTwo,
-      ],
+      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo],
       secado: [CosechaOne],
     },
     certifications: {
@@ -75,10 +72,7 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [
-        ProtocoloFermentacionOne,
-        ProtocoloFermentacionTwo,
-      ],
+      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo],
       secado: [CosechaOne],
     },
     certifications: {

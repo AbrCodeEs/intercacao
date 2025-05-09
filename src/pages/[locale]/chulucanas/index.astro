@@ -1,0 +1,76 @@
+---
+import Layout from '@/layouts/CocoaLayout.astro';
+import { Image } from 'astro:assets';
+
+import corteChuao from '@/images/chulu/corte2.webp';
+
+import GeneralInformation from '@/components/template/GeneralInformation.astro';
+import Characteristics from '@/components/template/Characteristics.astro';
+import CocoaMap from '@/components/template/CocoaMap.astro';
+import PostHarvestBenefit from '@/components/template/PostHarvestBenefit.astro';
+import Traceability from '@/components/template/Traceability.astro';
+import Location from '@/components/template/Location.astro';
+import History from '@/components/template/History.astro';
+import SocialResponsibility from '@/components/template/SocialResponsibility.astro';
+
+import data from '@/data/chulucanas/data';
+
+const {
+  generalInformation,
+  characteristics,
+  cocoaMap,
+  postHarvestBenefit,
+  traceability,
+  location,
+  history,
+  socialResponsibility,
+} = data(Astro);
+
+export async function getStaticPaths() {
+  return [{ params: { locale: 'eng' } }, { params: { locale: 'es' } }];
+}
+---
+
+<Layout
+  title="Cacao Chulucanas Gran Palo Blanco | Cacao Ultra Premium | Intercacao Europe Bv"
+  description="Descubre el exclusivo Cacao Chulucanas Gran Palo Blanco, un cacao ultra premium de 5 estrellas con notas de frutas dulces (3.2/5), cítricos (1.8/5) y un destacado perfil criollo (4.9/5). Cultivado en Perú, este cacao único destaca por su alta calidad y complejidad aromática. Conoce su proceso de producción sostenible, trazabilidad y el impacto social en la región de Piura."
+  pubDate={new Date()}
+  keywords="Cacao Chulucanas, Gran Palo Blanco, cacao ultra premium, cacao peruano, notas de frutas dulces, notas cítricas, perfil criollo, análisis sensorial del cacao, cacao de alta calidad, producción sostenible, trazabilidad del cacao, cacao gourmet, cacao artesanal, fermentación del cacao, secado del cacao, certificación de origen, historia del cacao, cultura del cacao, responsabilidad social, cacao 5 estrellas, cacao premium, Piura"
+>
+  <article class="w-full overflow-x-hidden overflow-y-auto">
+    <!-- @ts-ignore -->
+    <GeneralInformation generalInformation={generalInformation} traceability={traceability} />
+
+    <!-- @ts-ignore -->
+    <Characteristics characteristics={characteristics} />
+
+    <section
+      class="h-full w-full bg-gray-400 md:h-screen md:w-screen lg:h-screen lg:w-screen xl:h-screen xl:w-screen"
+    >
+      <!-- @ts-ignore -->
+      <Image
+        inferSize={true}
+        class="h-full w-full object-fill object-center"
+        src={corteChuao}
+        alt="corte Chuao"
+      />
+    </section>
+    <!-- @ts-ignore -->
+    <CocoaMap cocoaMap={cocoaMap} />
+
+    <!-- @ts-ignore -->
+    <PostHarvestBenefit postHarvestBenefit={postHarvestBenefit} />
+
+    <!-- @ts-ignore -->
+    <Traceability traceability={traceability} />
+
+    <!-- @ts-ignore -->
+    <Location location={location} />
+
+    <!-- @ts-ignore -->
+    <History history={history} />
+
+    <!-- @ts-ignore -->
+    <SocialResponsibility socialResponsibility={socialResponsibility} />
+  </article>
+</Layout>

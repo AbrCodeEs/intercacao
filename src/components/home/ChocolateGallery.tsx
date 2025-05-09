@@ -13,7 +13,13 @@ import { useSectionVisibility } from '@/hooks/useSectionVisibility';
 import { useFilteredChocolates } from '@/hooks/useFilteredChocolates';
 import worldMap from '@/images/global/mapa_mundo.webp';
 
-export function ChocolateGallery({ lang, trans }: { lang: 'es' | 'eng'; trans: Record<string, any> }) {
+export function ChocolateGallery({
+  lang,
+  trans,
+}: {
+  lang: 'es' | 'eng';
+  trans: Record<string, any>;
+}) {
   const {
     sortBy,
     selectedFlavor,
@@ -38,29 +44,29 @@ export function ChocolateGallery({ lang, trans }: { lang: 'es' | 'eng'; trans: R
   // Extraer URLs de imágenes para precarga
   const imageUrls = useMemo(() => {
     const urls = new Set<string>();
-    
+
     // Agregar mapa del mundo
     if (worldMap && typeof worldMap === 'object' && 'src' in worldMap) {
       urls.add(worldMap.src);
     }
-    
+
     // Agregar imágenes de chocolates
-    filteredChocolates.forEach(chocolate => {
+    filteredChocolates.forEach((chocolate) => {
       if (chocolate.image) {
-        const imageUrl = typeof chocolate.image === 'string' 
-          ? chocolate.image 
-          : chocolate.image.src;
+        const imageUrl =
+          typeof chocolate.image === 'string' ? chocolate.image : chocolate.image.src;
         if (imageUrl) urls.add(imageUrl);
       }
       if (chocolate.flavorIcon) {
-        const iconUrl = typeof chocolate.flavorIcon === 'string'
-          ? chocolate.flavorIcon
-          : chocolate.flavorIcon.src;
+        const iconUrl =
+          typeof chocolate.flavorIcon === 'string'
+            ? chocolate.flavorIcon
+            : chocolate.flavorIcon.src;
         if (iconUrl) urls.add(iconUrl);
       }
     });
-    
-    return Array.from(urls).filter(url => url && url.startsWith('/'));
+
+    return Array.from(urls).filter((url) => url && url.startsWith('/'));
   }, [filteredChocolates]);
 
   // Pasar las URLs al BaseHead a través de un atributo data
@@ -95,7 +101,7 @@ export function ChocolateGallery({ lang, trans }: { lang: 'es' | 'eng'; trans: R
           />
 
           <motion.div
-            className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-4 xl:grid-cols-3 xl:gap-4 mb-0"
+            className="mb-0 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-3 lg:gap-4 xl:grid-cols-3 xl:gap-4"
             layout
           >
             <AnimatePresence initial={false}>
@@ -145,9 +151,13 @@ export function ChocolateGallery({ lang, trans }: { lang: 'es' | 'eng'; trans: R
       </div>
 
       <div className="relative flex h-auto w-full flex-col items-center justify-center gap-5 py-15">
-        <img src={worldMap.src} alt="Intercacao banner principal" className="w-full object-fill object-center" />
+        <img
+          src={worldMap.src}
+          alt="Intercacao banner principal"
+          className="w-full object-fill object-center"
+        />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="block w-full xl:w-1/2 lg:w-1/2 md:w-1/2 rounded-lg p-2 text-center text-2xl font-bold text-gray-200 capitalize backdrop-blur-[3px] lg:text-3xl xl:text-4xl">
+          <h1 className="block w-full rounded-lg p-2 text-center text-2xl font-bold text-gray-200 capitalize backdrop-blur-[3px] md:w-1/2 lg:w-1/2 lg:text-3xl xl:w-1/2 xl:text-4xl">
             {trans.title}
           </h1>
         </div>

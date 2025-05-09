@@ -21,13 +21,13 @@ const es = {
       },
       {
         items: [
-          { label: 'PRODUCCIÓN ANUAL (TM)', value: '' },
-          { label: 'COSECHA PRINCIPAL', value: '' },
-          { label: 'COSECHA MEDIA', value: '' },
+          { label: 'PRODUCCIÓN ANUAL (TM)', value: '-500' },
+          // { label: 'COSECHA PRINCIPAL', value: '' },
+          // { label: 'COSECHA MEDIA', value: '' },
         ],
       },
       {
-        items: [{ label: 'GRANOS CRIOLLOS', value: '6%' }],
+        items: [{ label: 'GRANOS CRIOLLOS', value: '7%' }],
       },
       {
         items: [
@@ -154,7 +154,8 @@ const es = {
           type: 'quote',
           quote:
             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          author: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          author:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
         },
       ],
       image: {
@@ -182,7 +183,8 @@ const es = {
               },
               {
                 key: 'Días de Fermentación',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 items: [
@@ -208,7 +210,8 @@ const es = {
               },
               {
                 key: 'Días de Secado',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 key: 'Técnicas de Secado',
@@ -225,7 +228,8 @@ const es = {
               alt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
             video: {
-              title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+              title:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
           },
@@ -239,7 +243,10 @@ const es = {
     content: [
       {
         text: [
-          { type: 'bold', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' },
+          {
+            type: 'bold',
+            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          },
           {
             type: 'link',
             text: 'Lorem Ipsum is simply dummy ',
@@ -295,12 +302,12 @@ const es = {
         alt: 'mapa de Chuao',
       },
       details: [
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
+        { label: 'País', value: 'Venezuela' },
+        { label: 'Estado', value: 'Barinas' },
+        { label: 'Municipio', value: 'Barinas' },
+        { label: 'Superficie (municipio)', value: '3,304 km² (aprox.)' },
+        { label: 'Altitud promedio', value: '187 msnm' },
+        { label: 'Habitantes', value: '350,000 - 400,000 (sin cifras oficiales actualizadas)' },
       ],
     },
     paragraphs: [
@@ -398,43 +405,43 @@ const en = {
     sections: [
       {
         items: [
-          { label: 'SWEET FRUITY', value: '3.2' },
-          { label: 'CITRUS FRUITY', value: '1.8' },
-          { label: 'FLORAL', value: '0.4' },
-          { label: 'CREOLE', value: '4.9' },
-          { label: 'COCOA', value: '2.5' },
-          { label: 'WOODSY', value: '0.5' },
-          { label: 'SPICES', value: '1.2' },
+          { label: 'SWEET FRUITY', value: '2.5' },
+          { label: 'CITRUS FRUITY', value: '1.25' },
+          { label: 'FLORAL', value: '0.0' },
+          { label: 'CREOLE', value: '2.0' },
+          { label: 'COCOA', value: '4.0' },
+          { label: 'WOODSY', value: '0.0' },
+          { label: 'SPICES', value: '0.0' },
         ],
       },
       {
         items: [
-          { label: 'ANNUAL PRODUCTION (MT)', value: '1.5' },
-          { label: 'MAIN HARVEST', value: 'MAY-JUL' },
-          { label: 'MID HARVEST', value: 'NOV-JAN' },
+          { label: 'ANNUAL PRODUCTION (MT)', value: '-500' },
+          // { label: 'MAIN HARVEST', value: 'MAY-JUL' },
+          // { label: 'MID HARVEST', value: 'NOV-JAN' },
         ],
       },
       {
-        items: [{ label: 'CREOLE BEANS', value: '98%' }],
+        items: [{ label: 'CREOLE BEANS', value: '7%' }],
       },
       {
         items: [
-          { label: 'FERMENTED BEANS', value: '98%' },
-          { label: 'VIOLET BEANS', value: '2%' },
-          { label: 'SLATEY BEANS', value: '0%' },
+          { label: 'FERMENTED BEANS', value: '68%' },
+          { label: 'VIOLET BEANS', value: '10%' },
+          { label: 'SLATEY BEANS', value: '2%' },
           { label: 'TOTAL', value: '100%' },
         ],
       },
       {
         items: [
-          { label: 'Beans / 100g:', value: '83' },
-          { label: 'g./1 Bean:', value: '1.28 g' },
+          { label: 'Beans / 100g:', value: '89' },
+          { label: 'g./1 Bean:', value: '1 g' },
         ],
       },
       {
         items: [
-          { label: 'CERTIFIED', value: 'YES' },
-          { label: 'AWARDS', value: 'Yes' },
+          { label: 'CERTIFIED', value: 'NO' },
+          { label: 'AWARDS', value: 'NO' },
         ],
       },
     ],
@@ -524,7 +531,8 @@ const en = {
       content: [
         {
           type: 'quote',
-          quote: 'Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it',
+          quote:
+            'Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it',
           author: 'detailed by Ing. Ms Gladys Ramos.',
         },
         {
@@ -539,8 +547,10 @@ const en = {
       content: [
         {
           type: 'quote',
-          quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          author: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          quote:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          author:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
         },
       ],
       image: {
@@ -568,7 +578,8 @@ const en = {
               },
               {
                 key: 'Fermentation Days',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 items: [
@@ -594,7 +605,8 @@ const en = {
               },
               {
                 key: 'Drying Days',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 key: 'Drying Techniques',
@@ -611,7 +623,8 @@ const en = {
               alt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
             video: {
-              title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+              title:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
           },
@@ -625,7 +638,10 @@ const en = {
     content: [
       {
         text: [
-          { type: 'bold', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' },
+          {
+            type: 'bold',
+            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          },
           {
             type: 'link',
             text: 'Lorem Ipsum is simply dummy ',
@@ -681,12 +697,12 @@ const en = {
         alt: 'Chuao map',
       },
       details: [
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
+        { label: 'Country', value: 'Venezuela' },
+        { label: 'State', value: 'Barinas' },
+        { label: 'Municipality', value: 'Barinas' },
+        { label: 'Area (municipality)', value: '3,304 km² (approx.)' },
+        { label: 'Average altitude', value: '187 meters above sea level' },
+        { label: 'Inhabitants', value: '350,000 - 400,000 (no updated official figures)' },
       ],
     },
     paragraphs: [
@@ -767,7 +783,8 @@ const en = {
         alt: 'image2',
       },
     ],
-    paragraphs: 'The primary objective is to collaborate, enrich, and promote good agricultural practices in community succession, thanks to the contribution and alliance with the PROSPERI FOUNDATION, a non-profit foundation committed to disseminating the historical, cultural, and agricultural values of Venezuela. Through educational programs like "Return to Agriculture", it demonstrates that cocoa cultivation is a profitable profession that generates social change.'
+    paragraphs:
+      'The primary objective is to collaborate, enrich, and promote good agricultural practices in community succession, thanks to the contribution and alliance with the PROSPERI FOUNDATION, a non-profit foundation committed to disseminating the historical, cultural, and agricultural values of Venezuela. Through educational programs like "Return to Agriculture", it demonstrates that cocoa cultivation is a profitable profession that generates social change.',
   },
 };
 

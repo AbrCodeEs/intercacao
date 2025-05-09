@@ -1,4 +1,4 @@
-import PorcelanaWeb from '@/images/choroni/choroni-web.webp';
+import PorcelanaWeb from '@/images/choroni/acuarela-choroni.png';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/choroni/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';

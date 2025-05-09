@@ -58,7 +58,7 @@ const ImageWithPlaceholder = ({ src, alt }: ImageProps) => {
       setIsLoading(false);
     } catch (error) {
       if (retryCount < maxRetries) {
-        setRetryCount(prev => prev + 1);
+        setRetryCount((prev) => prev + 1);
       }
     }
   }, [src, retryCount]);
@@ -86,10 +86,10 @@ const ImageWithPlaceholder = ({ src, alt }: ImageProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="aspect-[4/5] object-cover xl:min-h-[90vh] rounded-lg"
+          className="aspect-[4/5] rounded-lg object-cover xl:min-h-[90vh]"
           onError={() => {
             if (retryCount < maxRetries) {
-              setRetryCount(prev => prev + 1);
+              setRetryCount((prev) => prev + 1);
             }
           }}
         />
@@ -106,9 +106,9 @@ export const ProjectsSection = ({ items }: { items: any[] }) => {
   useEffect(() => {
     const preloadImages = async () => {
       const imagesToPreload = items
-        .flatMap(item => item.images)
+        .flatMap((item) => item.images)
         .slice(0, 3)
-        .map(img => img.src);
+        .map((img) => img.src);
 
       try {
         await Promise.all(imagesToPreload.map(preloadImage));
@@ -122,24 +122,29 @@ export const ProjectsSection = ({ items }: { items: any[] }) => {
   }, [items]);
 
   // Precargar imágenes adyacentes cuando cambia el proyecto activo
-  const handleProjectChange = useCallback((index: number) => {
-    const currentImages = items[index].images.map((img: any) => img.src);
-    const nextImages = items[(index + 1) % items.length].images.map((img: any) => img.src);
-    const prevImages = items[(index - 1 + items.length) % items.length].images.map((img: any) => img.src);
+  const handleProjectChange = useCallback(
+    (index: number) => {
+      const currentImages = items[index].images.map((img: any) => img.src);
+      const nextImages = items[(index + 1) % items.length].images.map((img: any) => img.src);
+      const prevImages = items[(index - 1 + items.length) % items.length].images.map(
+        (img: any) => img.src,
+      );
 
-    const newVisibleImages = new Set([...currentImages, ...nextImages, ...prevImages]);
-    setVisibleImages(newVisibleImages);
+      const newVisibleImages = new Set([...currentImages, ...nextImages, ...prevImages]);
+      setVisibleImages(newVisibleImages);
 
-    // Precargar imágenes que aún no están precargadas
-    const imagesToPreload = [...newVisibleImages].filter(src => !preloadedImages.has(src));
-    if (imagesToPreload.length > 0) {
-      Promise.all(imagesToPreload.map(preloadImage))
-        .then(() => {
-          setPreloadedImages(prev => new Set([...prev, ...imagesToPreload]));
-        })
-        .catch(error => console.error('Error al precargar imágenes:', error));
-    }
-  }, [items, preloadedImages]);
+      // Precargar imágenes que aún no están precargadas
+      const imagesToPreload = [...newVisibleImages].filter((src) => !preloadedImages.has(src));
+      if (imagesToPreload.length > 0) {
+        Promise.all(imagesToPreload.map(preloadImage))
+          .then(() => {
+            setPreloadedImages((prev) => new Set([...prev, ...imagesToPreload]));
+          })
+          .catch((error) => console.error('Error al precargar imágenes:', error));
+      }
+    },
+    [items, preloadedImages],
+  );
 
   const projects = items.map((item) => {
     return {
@@ -148,7 +153,10 @@ export const ProjectsSection = ({ items }: { items: any[] }) => {
       url: item.url || false,
       icon: item.icon,
       content: (
-        <Carousel initialIndex={0} className="xl:h-[90vh] lg:h-[90vh] md:h-[90vh] overflow-hidden h-full xl:min-h-[90vh] rounded-lg pb-10">
+        <Carousel
+          initialIndex={0}
+          className="h-full overflow-hidden rounded-lg pb-10 md:h-[90vh] lg:h-[90vh] xl:h-[90vh] xl:min-h-[90vh]"
+        >
           <CarouselContent itemsPerPage={1} className="-ml-0 h-full w-full xl:min-h-[90vh]">
             {!!item.images.length &&
               item.images?.map((image: { src: string; alt: string }, index: number) => (
@@ -157,11 +165,8 @@ export const ProjectsSection = ({ items }: { items: any[] }) => {
                 </CarouselItem>
               ))}
           </CarouselContent>
-          <CarouselNavigation
-              className="absolute top-1/2 md:top-1/2 xl:top-1/2"
-              alwaysShow
-            />
-          <CarouselIndicator className="xl:-bottom-6.5 lg:-bottom-6.5 md:-bottom-6.5 bottom-0 px-15 xl:bottom-5" />
+          <CarouselNavigation className="absolute top-1/2 md:top-1/2 xl:top-1/2" alwaysShow />
+          <CarouselIndicator className="bottom-0 px-15 md:-bottom-6.5 lg:-bottom-6.5 xl:-bottom-6.5 xl:bottom-5" />
         </Carousel>
       ),
     };
