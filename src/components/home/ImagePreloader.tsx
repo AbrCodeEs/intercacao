@@ -23,7 +23,7 @@ export const ImagePreloader = ({ images = [] }: ImagePreloaderProps) => {
               img.onerror = reject;
               img.src = src;
             });
-          })
+          }),
         );
       } catch (error) {
         console.warn('Error preloading images:', error);
@@ -34,4 +34,4 @@ export const ImagePreloader = ({ images = [] }: ImagePreloaderProps) => {
   }, [images]);
 
   return null;
-}; 
+};

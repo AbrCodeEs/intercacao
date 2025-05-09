@@ -1,4 +1,4 @@
-import PatanemoWeb from '@/images/trinchera/trincheras-web.webp';
+import PatanemoWeb from '@/images/trinchera/acuarelas-trinchera.png';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/trinchera/evaluacion.webp';
 import SaboresPositivos from '@/images/patanemo/cacao.webp';
@@ -21,7 +21,6 @@ import CosechaTwo from '@/images/trinchera/secado2.webp';
 import TraceabilityOne from '@/images/trinchera/trazabilidad.webp';
 import TraceabilityTwo from '@/images/trinchera/trazabilidad2.webp';
 import TraceabilityThree from '@/images/trinchera/trazabilidad3.webp';
-
 
 import map from '@/images/trinchera/mapa.webp';
 
@@ -48,11 +47,7 @@ const images = {
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      traceability: [
-        TraceabilityOne,
-        TraceabilityTwo,
-        TraceabilityThree,
-      ],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree],
     },
     location: {
       map: map,
@@ -79,11 +74,7 @@ const images = {
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      traceability: [
-        TraceabilityOne,
-        TraceabilityTwo,
-        TraceabilityThree,
-      ],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree],
     },
     location: {
       map: map,

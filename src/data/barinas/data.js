@@ -19,6 +19,7 @@ export default (Astro) => {
         subtitle: 'barinas',
         // header: 'fermentado superior',
         color: 'bg-barinas',
+        scale: false,
       },
       mainImage: {
         src: langImages.general.porcelanaWeb,
@@ -378,28 +379,15 @@ export default (Astro) => {
         map: {
           src: langImages.location.map,
           alt: langContent.location.locationInfo.map.alt,
-          link: 'https://www.google.co.ve/maps/place/Chuao,+Aragua/@10.490428,-67.5375832,15z/data=!3m1!4b1!4m5!3m4!1s0x8e81d2c13131e607:0xf4644f78cc342be5!8m2!3d10.4898143!4d-67.5276414?hl=en',
+          link: 'https://www.google.com/maps/place/Barinas+5201,+Barinas/@8.6221682,-70.3179519,12z/data=!3m1!4b1!4m6!3m5!1s0x8e7b583bb9f6f665:0x6b4ce066ae95450c!8m2!3d8.6206206!4d-70.2310676!16zL20vMDNmN21i?entry=ttu&g_ep=EgoyMDI1MDUwNi4wIKXMDSoASAFQAw%3D%3D',
         },
         details: langContent.location.locationInfo.details,
       },
       paragraphs: langContent.location.paragraphs,
       ecology: {
-        title: langContent.location.ecology.title,
-        paragraphs: langContent.location.ecology.paragraphs,
-        images: [
-          {
-            src: langImages.location.location[0],
-            alt: langContent.location.ecology.images[0].alt,
-          },
-          {
-            src: langImages.location.location[1],
-            alt: langContent.location.ecology.images[1].alt,
-          },
-          {
-            src: langImages.location.location[2],
-            alt: langContent.location.ecology.images[1].alt,
-          }
-        ],
+        title: '',
+        paragraphs: '',
+        images: [],
       },
     },
     history: {

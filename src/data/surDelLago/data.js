@@ -14,6 +14,12 @@ export default (Astro) => {
   return {
     generalInformation: {
       title: langContent.generalInformation.title,
+      cocoa: {
+        title: 'cacao gourmet',
+        subtitle: 'sur del lago',
+        header: 'clasificado',
+        color: 'bg-orange-700',
+      },
       mainImage: {
         src: langImages.general.porcelanaWeb,
         alt: langContent.generalInformation.image.alt,
@@ -331,7 +337,7 @@ export default (Astro) => {
                 title: langContent.postHarvestBenefit.content[1].protocols[1].video.title,
                 text: langContent.postHarvestBenefit.content[1].protocols[1].video.text,
               },
-            }
+            },
           ],
         },
       ],
@@ -383,28 +389,15 @@ export default (Astro) => {
         map: {
           src: langImages.location.map,
           alt: langContent.location.locationInfo.map.alt,
-          link: 'https://www.google.co.ve/maps/place/Chuao,+Aragua/@10.490428,-67.5375832,15z/data=!3m1!4b1!4m5!3m4!1s0x8e81d2c13131e607:0xf4644f78cc342be5!8m2!3d10.4898143!4d-67.5276414?hl=en',
+          link: 'https://maps.app.goo.gl/6jrsyZAhnqZHG2TV9',
         },
         details: langContent.location.locationInfo.details,
       },
       paragraphs: langContent.location.paragraphs,
       ecology: {
-        title: langContent.location.ecology.title,
-        paragraphs: langContent.location.ecology.paragraphs,
-        images: [
-          {
-            src: langImages.location.location[0],
-            alt: langContent.location.ecology.images[0].alt,
-          },
-          {
-            src: langImages.location.location[1],
-            alt: langContent.location.ecology.images[1].alt,
-          },
-          {
-            src: langImages.location.location[2],
-            alt: langContent.location.ecology.images[1].alt,
-          }
-        ],
+        title: '',
+        paragraphs: '',
+        images: [],
       },
     },
     history: {

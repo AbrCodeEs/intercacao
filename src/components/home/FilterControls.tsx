@@ -26,7 +26,7 @@ export const FilterControls = ({
   selectedFlavor,
   handleSortSelect,
   handleFlavorSelect,
-  flavorsSectionRef
+  flavorsSectionRef,
 }: FilterControlsProps) => (
   <div className="space-y-4 py-5">
     {/* Desktop Sort Controls */}
@@ -47,7 +47,6 @@ export const FilterControls = ({
                   : 'bg-gray-300 text-black hover:bg-gray-400'
               }
             >
-                
               {IconsSortOption[key]}
               <span className="ml-2">{label.charAt(0).toUpperCase() + label.slice(1)}</span>
             </Button>
@@ -97,22 +96,14 @@ export const FilterControls = ({
       <div ref={flavorsSectionRef} className="flex flex-wrap items-center justify-center gap-2">
         <AnimatePresence>
           {(trans.world_of_flavors.flavors as Array<any>).map((flavor) => (
-            <motion.div
-              key={flavor.value}
-              layoutId={`flavor-${flavor.value}`}
-            >
+            <motion.div key={flavor.value} layoutId={`flavor-${flavor.value}`}>
               <Button
                 variant={selectedFlavor === flavor.value ? 'default' : 'ghost'}
                 onClick={() => handleFlavorSelect(flavor.value)}
                 size="sm"
                 className={flavor.className}
               >
-                <img
-                  className="size-4"
-                  loading="eager"
-                  src={flavor.iconWhite}
-                  alt={flavor.label}
-                />
+                <img className="size-4" loading="eager" src={flavor.iconWhite} alt={flavor.label} />
                 {flavor.label.charAt(0).toUpperCase() + flavor.label.slice(1)}
               </Button>
             </motion.div>

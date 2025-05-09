@@ -32,9 +32,9 @@ export const FloatingControls = ({
   isVisible,
 }: FloatingControlsProps) => {
   const isOpen = !isTypePanelOpen;
-  
+
   return (
-    <div className="sticky bottom-5 right-5 z-[90] flex justify-end h-[5px]">
+    <div className="sticky right-5 bottom-5 z-[90] flex h-[5px] justify-end">
       <motion.div
         className="flex flex-col items-end gap-4"
         initial={{ opacity: 0 }}
@@ -45,7 +45,7 @@ export const FloatingControls = ({
           damping: 20,
         }}
       >
-        <div className="flex flex-col items-end gap-4 -translate-y-[101%]">
+        <div className="flex -translate-y-[101%] flex-col items-end gap-4">
           <AnimatePresence mode="popLayout">
             {isVisible && (
               <motion.div

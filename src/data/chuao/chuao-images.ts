@@ -41,7 +41,7 @@ const images = {
     },
     protocols: {
       fermentacion: [ProtocoloFermentacion],
-      secado: [ProtocoloSecado, ],
+      secado: [ProtocoloSecado],
       corteChuao: CorteChuaoCriollo,
     },
     certifications: {
@@ -67,7 +67,7 @@ const images = {
       mapaSensorial: MapaSensorial,
     },
     benefit: {
-      tipoDeCacao: [SemillaPorcelana, SemillaPorcelanaDos,  CorteChuaoTrinitario, CorteChuaoCriollo],
+      tipoDeCacao: [SemillaPorcelana, SemillaPorcelanaDos, CorteChuaoTrinitario, CorteChuaoCriollo],
     },
     protocols: {
       fermentacion: [ProtocoloFermentacion],

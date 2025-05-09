@@ -57,4 +57,4 @@ export const useFilterLogic = (bar: BeeBar[], types: BeeBarTypes[]) => {
     toggleFilter,
     updateAvailableCategories,
   };
-}; 
+};

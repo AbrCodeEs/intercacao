@@ -17,7 +17,8 @@ export default (Astro) => {
       cocoa: {
         title: 'cacao gourmet',
         subtitle: 'manapiare fino',
-        color: 'bg-fuchsia-800'
+        color: 'bg-fuchsia-800',
+        scale: true,
       },
       mainImage: {
         src: langImages.general.bannerWeb,
@@ -135,7 +136,7 @@ export default (Astro) => {
       information: [
         {
           title: langContent.characteristics.information[0].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-red-800',
           description: {
             boldText: langContent.characteristics.information[0].description.boldText,
             additionalText: langContent.characteristics.information[0].description.additionalText,
@@ -143,7 +144,7 @@ export default (Astro) => {
         },
         {
           title: langContent.characteristics.information[1].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-orange-500',
           description: {
             boldText: langContent.characteristics.information[1].description.boldText,
             additionalText: langContent.characteristics.information[1].description.additionalText,
@@ -151,7 +152,7 @@ export default (Astro) => {
         },
         {
           title: langContent.characteristics.information[2].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-orange-500',
           description: {
             boldText: langContent.characteristics.information[2].description.boldText,
             additionalText: langContent.characteristics.information[2].description.additionalText,
@@ -170,7 +171,7 @@ export default (Astro) => {
           {
             text: langContent.characteristics.analysis.description[1].text,
             information_block: false,
-          }
+          },
         ],
       },
     },
@@ -289,7 +290,7 @@ export default (Astro) => {
                 {
                   category: 'paragraph',
                   paragraph: langContent.postHarvestBenefit.content[0].protocols[1].items[5].text,
-                }
+                },
               ],
               mainImage: [
                 {

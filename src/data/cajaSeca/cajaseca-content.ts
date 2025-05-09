@@ -154,7 +154,8 @@ const es = {
           type: 'quote',
           quote:
             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          author: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          author:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
         },
       ],
       image: {
@@ -182,7 +183,8 @@ const es = {
               },
               {
                 key: 'Días de Fermentación',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 items: [
@@ -208,7 +210,8 @@ const es = {
               },
               {
                 key: 'Días de Secado',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 key: 'Técnicas de Secado',
@@ -225,7 +228,8 @@ const es = {
               alt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
             video: {
-              title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+              title:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
           },
@@ -239,7 +243,10 @@ const es = {
     content: [
       {
         text: [
-          { type: 'bold', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' },
+          {
+            type: 'bold',
+            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          },
           {
             type: 'link',
             text: 'Lorem Ipsum is simply dummy ',
@@ -524,7 +531,8 @@ const en = {
       content: [
         {
           type: 'quote',
-          quote: 'Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it',
+          quote:
+            'Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it',
           author: 'detailed by Ing. Ms Gladys Ramos.',
         },
         {
@@ -539,8 +547,10 @@ const en = {
       content: [
         {
           type: 'quote',
-          quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          author: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          quote:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          author:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
         },
       ],
       image: {
@@ -568,7 +578,8 @@ const en = {
               },
               {
                 key: 'Fermentation Days',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 items: [
@@ -594,7 +605,8 @@ const en = {
               },
               {
                 key: 'Drying Days',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 key: 'Drying Techniques',
@@ -611,7 +623,8 @@ const en = {
               alt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
             video: {
-              title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+              title:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
           },
@@ -625,7 +638,10 @@ const en = {
     content: [
       {
         text: [
-          { type: 'bold', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' },
+          {
+            type: 'bold',
+            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          },
           {
             type: 'link',
             text: 'Lorem Ipsum is simply dummy ',
@@ -767,7 +783,8 @@ const en = {
         alt: 'image2',
       },
     ],
-    paragraphs: 'The primary objective is to collaborate, enrich, and promote good agricultural practices in community succession, thanks to the contribution and alliance with the PROSPERI FOUNDATION, a non-profit foundation committed to disseminating the historical, cultural, and agricultural values of Venezuela. Through educational programs like "Return to Agriculture", it demonstrates that cocoa cultivation is a profitable profession that generates social change.'
+    paragraphs:
+      'The primary objective is to collaborate, enrich, and promote good agricultural practices in community succession, thanks to the contribution and alliance with the PROSPERI FOUNDATION, a non-profit foundation committed to disseminating the historical, cultural, and agricultural values of Venezuela. Through educational programs like "Return to Agriculture", it demonstrates that cocoa cultivation is a profitable profession that generates social change.',
   },
 };
 

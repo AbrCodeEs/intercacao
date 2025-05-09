@@ -1,10 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
+import { getLangFromUrl } from '@/lib/translations';
 
 import { Progress } from '@/components/ui/progress';
 import { CarouselImages } from '@/components/ui/carousel/Img';
+import { TabsCata } from '@/components/ui/transition-panel/TabsCata';
 type Props = CollectionEntry<'template'>['data'];
+
+const lang = getLangFromUrl(Astro.url);
 
 const { characteristics } = Astro.props;
 ---
@@ -16,6 +20,13 @@ const { characteristics } = Astro.props;
 
     <div class="flex w-full flex-col gap-5 pb-10 md:flex-row lg:flex-row xl:flex-row">
       <div class="flex w-auto flex-1 flex-col justify-start gap-4">
+        {
+          characteristics?.flavors_by_date_cata &&
+            characteristics.flavors_by_date_cata.length > 0 && (
+              <TabsCata client:load catas={characteristics.flavors_by_date_cata as any} />
+            )
+        }
+
         {
           characteristics?.flavors?.map((flavor: any) => (
             <div class="flex w-full flex-col justify-between gap-1">
@@ -37,7 +48,7 @@ const { characteristics } = Astro.props;
                   <span>{flavor.percentage}</span>
                 </div>
               </Progress>
-              <p class="text-lg">{flavor.description}</p>
+              {flavor.description ?<p class="text-lg">{flavor.description}</p> : <div class="py-2.5"></div>}
             </div>
           ))
         }
@@ -98,11 +109,11 @@ const { characteristics } = Astro.props;
           <div>
             <p class="text-blue-500">
               <em>
-                <a href="http://www.intercacao.com/ing-gladys-ramos/">Ing. Ms. Gladys Ramos</a></em
+                <a href={`/${lang}/gladysramos`}>Ing. Ms. Gladys Ramos</a></em
               >
             </p>
             <p class="text-blue-500">
-              <em><a href="http://www.intercacao.com/evaluacion/">Manual de Evaluación</a></em>
+              <em><a href={`/${lang}/evaluacion/`}>Manual de Evaluación</a></em>
             </p>
           </div>
         </div>

@@ -36,6 +36,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-image": "^4.1.0",
+    "react-use-measure": "^2.1.7",
     "sharp": "^0.33.5",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animated": "^2.0.0",

@@ -27,7 +27,7 @@ export function DialogFlavours({ trans }: { trans: Record<string, any> }) {
         style={{
           borderRadius: '12px',
         }}
-        className="flex flex-col overflow-hidden border border-zinc-950/10 bg-primary"
+        className="bg-primary flex flex-col overflow-hidden border border-zinc-950/10"
       >
         <div className="flex grow flex-row items-end justify-between p-3">
           <div>
@@ -55,9 +55,7 @@ export function DialogFlavours({ trans }: { trans: Record<string, any> }) {
             <MorphingDialogTitle className="text-3xl font-bold text-zinc-950">
               {trans.title}
             </MorphingDialogTitle>
-            <h2 className="text-2xl text-zinc-600">
-              {trans.description}
-            </h2>
+            <h2 className="text-2xl text-zinc-600">{trans.description}</h2>
             <MorphingDialogDescription
               disableLayoutAnimation
               variants={{
@@ -69,10 +67,20 @@ export function DialogFlavours({ trans }: { trans: Record<string, any> }) {
               <div className="flex flex-col gap-2">
                 {trans.items.map((profile, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <div className='w-10'>
-                        <div className={cn("flex items-center justify-center rounded-full size-10", profile.icon.className)}>
-                            <img className="size-5" src={profile.icon.src} loading="eager"  alt={profile.title}  />
-                        </div>
+                    <div className="w-10">
+                      <div
+                        className={cn(
+                          'flex size-10 items-center justify-center rounded-full',
+                          profile.icon.className,
+                        )}
+                      >
+                        <img
+                          className="size-5"
+                          src={profile.icon.src}
+                          loading="eager"
+                          alt={profile.title}
+                        />
+                      </div>
                     </div>
                     <p>
                       <b>{profile.title}: </b>

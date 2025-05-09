@@ -94,7 +94,7 @@ const {
               </div>
 
               <div class="flex flex-1 flex-col items-center justify-between gap-5">
-                {protocol.mainImage.length &&
+                {!!protocol.mainImage.length &&
                   protocol.mainImage.map((image: { src: string; alt: string }) => (
                     <div class="group animate-trigger-left relative w-full flex-none overflow-hidden rounded-lg bg-neutral-300">
                       <Image

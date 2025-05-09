@@ -159,7 +159,8 @@ const es = {
         protocols: [
           {
             title: 'Protocolo de Fermentacion',
-            description: 'Los granos de Ocumare contienen un alto porcentaje en descendencia criolla y elevada genética trinitaria, por ello, para su etapa de transformación se debe cumplir el siguiente proceso:',
+            description:
+              'Los granos de Ocumare contienen un alto porcentaje en descendencia criolla y elevada genética trinitaria, por ello, para su etapa de transformación se debe cumplir el siguiente proceso:',
             items: [
               {
                 key: 'Tipo de Cacao',
@@ -218,9 +219,9 @@ const es = {
                   'Humedad: Entre 7,5% y 8%',
                   'Forma de Secado: Las remociones del grano se aplican cada 6 horas.',
                   {
-        text: 'En esta fase los granos son tendidos en una superficie, en la cual durante el primer día, las remociones se aplican cada 6 horas, durante todo el proceso dependerá del clima que se presente.',
-              },
-                ],  
+                    text: 'En esta fase los granos son tendidos en una superficie, en la cual durante el primer día, las remociones se aplican cada 6 horas, durante todo el proceso dependerá del clima que se presente.',
+                  },
+                ],
               },
             ],
             image: {
@@ -236,7 +237,7 @@ const es = {
     subtitle: 'certificaciones y premios',
     content: [
       {
-        text: 'Ocumare tiene una población de 13.043 habitantes, cuenta con un desarrollo agrícola significativo destacándose el cultivo del cacao con alta descendencia criolla y genética trinitaria.'
+        text: 'Ocumare tiene una población de 13.043 habitantes, cuenta con un desarrollo agrícola significativo destacándose el cultivo del cacao con alta descendencia criolla y genética trinitaria.',
       },
       {
         text: 'Dentro de sus pobladores se encuentra, el señor José Lugo, tiene 52 años de edad y es productor de cacao que por herencia familiar se dedica a la labor de la tierra desde hace 41 años, donde trabaja toda la unidad familiar, compuesta por sus 3 hijos y en ocasiones cuando la producción aumenta, contrata personal para ejecutar el trabajo.',
@@ -563,7 +564,7 @@ const en = {
                   {
                     text: 'During this phase, beans are spread on a surface where they are turned every 6 hours on the first day. Subsequent turning depends on weather conditions.',
                   },
-                ],  
+                ],
               },
             ],
             image: {
@@ -579,7 +580,7 @@ const en = {
     subtitle: 'certifications and awards',
     content: [
       {
-        text: 'Ocumare has a population of 13,043 inhabitants with significant agricultural development, particularly in cocoa cultivation with high Creole ancestry and Trinitario genetics.'
+        text: 'Ocumare has a population of 13,043 inhabitants with significant agricultural development, particularly in cocoa cultivation with high Creole ancestry and Trinitario genetics.',
       },
       {
         text: 'Among its residents is Mr. José Lugo, a 52-year-old cocoa producer who has worked the land for 41 years as a family tradition. His entire family unit works the plantation, including his 3 children, with additional hired help during peak production.',
@@ -660,10 +661,10 @@ const en = {
         text: 'Originally inhabited by indigenous groups led by Chief Barriga, it later became a cocoa plantation encomienda under Captain Lorenzo Martínez Madrid in the colonial era.',
       },
       {
-        text: 'The town flourished as a cocoa plantation from 1721. Historical records note Francisco de Miranda\'s attempted landing on April 27, 1806 during Venezuela\'s independence struggle.',
+        text: "The town flourished as a cocoa plantation from 1721. Historical records note Francisco de Miranda's attempted landing on April 27, 1806 during Venezuela's independence struggle.",
       },
       {
-        text: 'Officially established on June 16, 1766 in the San Sebastián de Ocumare valley, the town\'s church was built amidst extensive cocoa plantations under orders from Caracas Bishop Diego Antonio Diez.',
+        text: "Officially established on June 16, 1766 in the San Sebastián de Ocumare valley, the town's church was built amidst extensive cocoa plantations under orders from Caracas Bishop Diego Antonio Diez.",
       },
       {
         text: 'Residents preserve rich traditions like the San Sebastián celebrations, Dancing Devils rituals, and drum ceremonies honoring Saint John the Baptist.',

@@ -4,8 +4,8 @@ import { useInView } from 'motion/react';
 import React from 'react';
 
 export const useSectionVisibility = (
-    sectionRef: React.RefObject<HTMLElement>,
-    containerRef: React.RefObject<HTMLElement>
+  sectionRef: React.RefObject<HTMLElement>,
+  containerRef: React.RefObject<HTMLElement>,
 ) => {
   const isFlavorSectionInView = useInView(sectionRef, {
     margin: '0px 0px -50px 0px',

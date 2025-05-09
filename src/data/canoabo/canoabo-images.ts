@@ -1,4 +1,4 @@
-import PorcelanaWeb from '@/images/canoabo/canoabo-web.webp';
+import PorcelanaWeb from '@/images/canoabo/acuarela-canoabo.png';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/canoabo/evaluacion.webp';
 import SaboresPositivos from '@/images/canoabo/cacao.webp';
@@ -42,11 +42,8 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [
-        ProtocoloFermentacionOne,
-      ],
+      fermentacion: [ProtocoloFermentacionOne],
       secado: [CosechaOne, CosechaTwo],
-     
     },
     certifications: {
       traceability: [TraceabilityOne],
@@ -72,11 +69,8 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [
-        ProtocoloFermentacionOne,
-      ],
+      fermentacion: [ProtocoloFermentacionOne],
       secado: [CosechaOne, CosechaTwo],
-     
     },
     certifications: {
       traceability: [TraceabilityOne],

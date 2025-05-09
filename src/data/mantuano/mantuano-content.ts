@@ -162,7 +162,8 @@ const es = {
         protocols: [
           {
             title: 'Protocolo de Fermentacion',
-            description: 'El grano de Mantuano posee un alto porcentaje de genética trinitaria y mediana descendencia criolla, el cual cumple el siguiente proceso de fermentación:',
+            description:
+              'El grano de Mantuano posee un alto porcentaje de genética trinitaria y mediana descendencia criolla, el cual cumple el siguiente proceso de fermentación:',
             items: [
               {
                 key: 'Tipo de Cacao',
@@ -192,7 +193,8 @@ const es = {
           },
           {
             title: 'Protocolo de Secado',
-            description: 'El proceso de secado del cacao de Mantuano se realiza cumpliendo el siguiente protocolo:',
+            description:
+              'El proceso de secado del cacao de Mantuano se realiza cumpliendo el siguiente protocolo:',
             items: [
               {
                 key: 'Tipo de Cacao',
@@ -229,7 +231,7 @@ const es = {
     subtitle: 'certificaciones y premios',
     content: [
       {
-        text: 'Los productores de Mantuano están organizados, puesto que forman parte de la Asociación de Productores y Artesanos LA FLOR DE MANTUANO, actualmente integrado por 25 productores, todos nativos de la parroquia.'
+        text: 'Los productores de Mantuano están organizados, puesto que forman parte de la Asociación de Productores y Artesanos LA FLOR DE MANTUANO, actualmente integrado por 25 productores, todos nativos de la parroquia.',
       },
       {
         text: 'Cuentan con una dirigente apasionada por el trabajo a la tierra, su nombre es Beatriz García, tiene 36 años de edad y actualmente es presidenta de la cooperativa, quien día tras día entrega su alma y corazón a esta labor, luchando por preservar el patrimonio que heredó de su madre; colabora e impulsa a los productores que no cuentan con apoyo económico.',
@@ -278,7 +280,10 @@ const es = {
         { label: 'Municipio', value: 'Puerto Cabello' },
         { label: 'Superficie', value: '104 km2' },
         { label: 'Altitud Promedio', value: '28 m. s. n. m' },
-        { label: 'Coordenadas GPS', value: 'Longitud 68° 73’ 40” O. de G, Latitud de 19°25’00” N. de E.' },
+        {
+          label: 'Coordenadas GPS',
+          value: 'Longitud 68° 73’ 40” O. de G, Latitud de 19°25’00” N. de E.',
+        },
         { label: 'Habitantes', value: 'Aun no se tiene información' },
       ],
     },
@@ -485,7 +490,8 @@ const en = {
       content: [
         {
           type: 'quote',
-          quote: '"The flavor attributes of Mantuano cocoa are of mild intensity where acidic and fruity flavors are most perceived. This profile denotes that the genetics of this material correspond to a modern Creole,"',
+          quote:
+            '"The flavor attributes of Mantuano cocoa are of mild intensity where acidic and fruity flavors are most perceived. This profile denotes that the genetics of this material correspond to a modern Creole,"',
           author: 'explained Ms. Gladys Ramos, Agricultural Engineer.',
         },
       ],
@@ -496,7 +502,8 @@ const en = {
       content: [
         {
           type: 'quote',
-          quote: '"By minimizing and controlling the sensation of astringency, the characteristic flavors of Mantuano cocoa are better explored, such as floral and nutty notes. The genetics of this cocoa are truly promising, as well as its almond index that offers a good yield of edible material"',
+          quote:
+            '"By minimizing and controlling the sensation of astringency, the characteristic flavors of Mantuano cocoa are better explored, such as floral and nutty notes. The genetics of this cocoa are truly promising, as well as its almond index that offers a good yield of edible material"',
           author: 'explained Ms. Gladys Ramos, cocoa expert and food science researcher',
         },
       ],
@@ -512,7 +519,8 @@ const en = {
         protocols: [
           {
             title: 'Fermentation Protocol',
-            description: 'The Mantuano bean has a high percentage of Trinitario genetics and moderate Creole descent, following this fermentation process:',
+            description:
+              'The Mantuano bean has a high percentage of Trinitario genetics and moderate Creole descent, following this fermentation process:',
             items: [
               {
                 key: 'Cocoa Type',
@@ -579,28 +587,28 @@ const en = {
     subtitle: 'certifications and awards',
     content: [
       {
-        text: 'The producers of Mantuano are organized, as they are part of the Association of Producers and Artisans LA FLOR DE MANTUANO, currently made up of 25 producers, all natives of the parish.'
+        text: 'The producers of Mantuano are organized, as they are part of the Association of Producers and Artisans LA FLOR DE MANTUANO, currently made up of 25 producers, all natives of the parish.',
       },
       {
-        text: 'They have a leader passionate about working the land. Her name is Beatriz García. She is 36 years old and is currently the president of the cooperative. Day after day, she gives her heart and soul to this work, fighting to preserve the heritage she inherited from her mother. collaborates and encourages producers who lack financial support.'
+        text: 'They have a leader passionate about working the land. Her name is Beatriz García. She is 36 years old and is currently the president of the cooperative. Day after day, she gives her heart and soul to this work, fighting to preserve the heritage she inherited from her mother. collaborates and encourages producers who lack financial support.',
       },
       {
-        text: '"The Mantuano Producers Association employs nine people who receive no financial benefit, but the satisfaction of caring for the valuable seed, providing support to producers, and carrying out the harvest process with the highest quality, keeps them convinced that the best cacao is found in Mantuano," reported Beatriz García, President of the Mantuano Producers and Artisans Association.'
+        text: '"The Mantuano Producers Association employs nine people who receive no financial benefit, but the satisfaction of caring for the valuable seed, providing support to producers, and carrying out the harvest process with the highest quality, keeps them convinced that the best cacao is found in Mantuano," reported Beatriz García, President of the Mantuano Producers and Artisans Association.',
       },
       {
-        text: 'The communities of this mystical town lead an austere lifestyle, living in palm and mud houses, as well as in some block houses.'
+        text: 'The communities of this mystical town lead an austere lifestyle, living in palm and mud houses, as well as in some block houses.',
       },
       {
-        text: 'The walls of the enclosure were built by the men and women who today perform the pre- and post-harvest work.'
+        text: 'The walls of the enclosure were built by the men and women who today perform the pre- and post-harvest work.',
       },
       {
-        text: 'They have manual machines such as toaster ovens, hullers, pre-mills, pulverizing mills, vibrating tables, and Conching plant, all reserved for optimizing the production, processing, and distribution of cocoa in its various forms.'
+        text: 'They have manual machines such as toaster ovens, hullers, pre-mills, pulverizing mills, vibrating tables, and Conching plant, all reserved for optimizing the production, processing, and distribution of cocoa in its various forms.',
       },
       {
-        text: 'Currently, 6,000 kg of cocoa are produced annually in Mantuano.'
+        text: 'Currently, 6,000 kg of cocoa are produced annually in Mantuano.',
       },
       {
-        text: 'Their work days are 12 hours a day, beginning with the harvesting of cocoa brought by affiliated producers. Once received, they break it up immediately.'
+        text: 'Their work days are 12 hours a day, beginning with the harvesting of cocoa brought by affiliated producers. Once received, they break it up immediately.',
       },
     ],
     images: [
@@ -639,7 +647,7 @@ const en = {
       title: 'Ecology',
       paragraphs: [
         'Mantuano is located within the San Esteban National Park, considered an area of biodiversity with splendid landscapes including cloud forests, coasts, and islands. The vegetation is rich and varied with xerophilous areas and savannas. Mangroves abound on the coasts, while cardones and thorny shrubs are found to the south.',
-        'Mantuano\'s fauna is associated with the vegetation types and geographical characteristics of the San Esteban National Park area.',
+        "Mantuano's fauna is associated with the vegetation types and geographical characteristics of the San Esteban National Park area.",
       ],
       images: [
         {

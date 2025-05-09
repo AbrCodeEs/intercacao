@@ -21,9 +21,9 @@ const es = {
       },
       {
         items: [
-          { label: 'PRODUCCIÓN ANUAL (TM)', value: '1.5' },
-          { label: 'COSECHA PRINCIPAL', value: '' },
-          { label: 'COSECHA MEDIA', value: '' },
+          { label: 'PRODUCCIÓN ANUAL (TM)', value: '3.800' },
+          // { label: 'COSECHA PRINCIPAL', value: '' },
+          // { label: 'COSECHA MEDIA', value: '' },
         ],
       },
       {
@@ -154,7 +154,8 @@ const es = {
           type: 'quote',
           quote:
             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          author: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          author:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
         },
       ],
       image: {
@@ -182,7 +183,8 @@ const es = {
               },
               {
                 key: 'Días de Fermentación',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 items: [
@@ -208,7 +210,8 @@ const es = {
               },
               {
                 key: 'Días de Secado',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 key: 'Técnicas de Secado',
@@ -225,7 +228,8 @@ const es = {
               alt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
             video: {
-              title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+              title:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
           },
@@ -239,7 +243,10 @@ const es = {
     content: [
       {
         text: [
-          { type: 'bold', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' },
+          {
+            type: 'bold',
+            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          },
           {
             type: 'link',
             text: 'Lorem Ipsum is simply dummy ',
@@ -295,12 +302,22 @@ const es = {
         alt: 'mapa de Chuao',
       },
       details: [
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
+        { label: 'País', value: 'Venezuela' },
+        { label: 'Estado', value: 'Zulia' },
+        { label: 'Subregión', value: 'Sur del Lago' },
+        {
+          label: 'Superficie',
+          value: '12.000 km² (estimated, includes parts of Zulia and Mérida)',
+        },
+        {
+          label: 'Altitud promedio',
+          value: '0 - 100 msnm (flat and lacustre zone, with some elevations towards the Andes)',
+        },
+        {
+          label: 'Habitantes',
+          value:
+            '500.000 - 600.000 (includes municipalities like Francisco Javier Pulgar, Catatumbo, Sucre in Zulia, and Alberto Adriani in Mérida)',
+        },
       ],
     },
     paragraphs: [
@@ -409,9 +426,9 @@ const en = {
       },
       {
         items: [
-          { label: 'ANNUAL PRODUCTION (MT)', value: '1.5' },
-          { label: 'MAIN CROP', value: '' },
-          { label: 'HARVEST MEDIUM', value: '' },
+          { label: 'ANNUAL PRODUCTION (MT)', value: '3.800' },
+          // { label: 'MAIN CROP', value: '' },
+          // { label: 'HARVEST MEDIUM', value: '' },
         ],
       },
       {
@@ -524,7 +541,8 @@ const en = {
       content: [
         {
           type: 'quote',
-          quote: 'Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it',
+          quote:
+            'Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it',
           author: 'detailed by Ing. Ms Gladys Ramos.',
         },
         {
@@ -539,8 +557,10 @@ const en = {
       content: [
         {
           type: 'quote',
-          quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          author: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          quote:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          author:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
         },
       ],
       image: {
@@ -568,7 +588,8 @@ const en = {
               },
               {
                 key: 'Fermentation Days',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 items: [
@@ -594,7 +615,8 @@ const en = {
               },
               {
                 key: 'Drying Days',
-                value: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+                value:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               },
               {
                 key: 'Drying Techniques',
@@ -611,7 +633,8 @@ const en = {
               alt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
             video: {
-              title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+              title:
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
             },
           },
@@ -625,7 +648,10 @@ const en = {
     content: [
       {
         text: [
-          { type: 'bold', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' },
+          {
+            type: 'bold',
+            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+          },
           {
             type: 'link',
             text: 'Lorem Ipsum is simply dummy ',
@@ -681,12 +707,19 @@ const en = {
         alt: 'Chuao map',
       },
       details: [
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
-        { label: 'Lorem Ipsum', value: 'Lorem Ipsum' },
+        { label: 'Country', value: 'Venezuela' },
+        { label: 'State', value: 'Zulia' },
+        { label: 'Subregion', value: 'South of the Lake' },
+        { label: 'Area', value: '12,000 km² (estimated, includes parts of Zulia and Mérida)' },
+        {
+          label: 'Average altitude',
+          value: '0 - 100 masl (flat and lacustre zone, with some elevations towards the Andes)',
+        },
+        {
+          label: 'Inhabitants',
+          value:
+            '500,000 - 600,000 (includes municipalities like Francisco Javier Pulgar, Catatumbo, Sucre in Zulia, and Alberto Adriani in Mérida)',
+        },
       ],
     },
     paragraphs: [
@@ -767,7 +800,8 @@ const en = {
         alt: 'image2',
       },
     ],
-    paragraphs: 'The primary objective is to collaborate, enrich, and promote good agricultural practices in community succession, thanks to the contribution and alliance with the PROSPERI FOUNDATION, a non-profit foundation committed to disseminating the historical, cultural, and agricultural values of Venezuela. Through educational programs like "Return to Agriculture", it demonstrates that cocoa cultivation is a profitable profession that generates social change.'
+    paragraphs:
+      'The primary objective is to collaborate, enrich, and promote good agricultural practices in community succession, thanks to the contribution and alliance with the PROSPERI FOUNDATION, a non-profit foundation committed to disseminating the historical, cultural, and agricultural values of Venezuela. Through educational programs like "Return to Agriculture", it demonstrates that cocoa cultivation is a profitable profession that generates social change.',
   },
 };
 

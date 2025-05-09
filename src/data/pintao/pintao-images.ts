@@ -30,7 +30,6 @@ import TraceabilityTwo from '@/images/pintao/trazabilidad2.webp';
 import TraceabilityThree from '@/images/pintao/trazabilidad3.webp';
 import TraceabilityFour from '@/images/pintao/trazabilidad4.webp';
 
-
 import map from '@/images/pintao/mapa.webp';
 import locationOne from '@/images/pintao/paisaje.webp';
 
@@ -60,7 +59,6 @@ const images = {
         ProtocoloFermentacionThree,
       ],
       secado: [CosechaOne, CosechaTwo],
-     
     },
     certifications: {
       traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree, TraceabilityFour],
@@ -92,7 +90,6 @@ const images = {
         ProtocoloFermentacionThree,
       ],
       secado: [CosechaOne, CosechaTwo],
-     
     },
     certifications: {
       traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree, TraceabilityFour],

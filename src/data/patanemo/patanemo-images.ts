@@ -1,4 +1,4 @@
-import PatanemoWeb from '@/images/patanemo/patanemo-web.webp';
+import PatanemoWeb from '@/images/patanemo/acuarela-patanemo.png';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/patanemo/evaluacion.webp';
 import SaboresPositivos from '@/images/patanemo/cacao.webp';
@@ -47,15 +47,15 @@ const images = {
       secado: [CosechaOne],
     },
     certifications: {
-      traceability: [
-        TraceabilityOne
-      ],
+      traceability: [TraceabilityOne],
     },
     location: {
       map: map,
       location: [locationOne, locationTwo, locationThree],
     },
-    history: [historiaOne, historiaTwo, 
+    history: [
+      historiaOne,
+      historiaTwo,
       // historiaThree
     ],
   },
@@ -78,16 +78,13 @@ const images = {
       secado: [CosechaOne],
     },
     certifications: {
-      traceability: [
-        TraceabilityOne,
-      ],
+      traceability: [TraceabilityOne],
     },
     location: {
       map: map,
       location: [locationOne, locationTwo, locationThree],
     },
-    history: [historiaOne, historiaTwo
-    ],
+    history: [historiaOne, historiaTwo],
   },
 };
 

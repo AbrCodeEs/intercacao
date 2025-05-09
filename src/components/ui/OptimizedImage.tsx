@@ -23,7 +23,7 @@ export function OptimizedImage({
   width,
   height,
   quality = 75,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlZWUiLz48L3N2Zz4='
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlZWUiLz48L3N2Zz4=',
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -44,8 +44,8 @@ export function OptimizedImage({
       },
       {
         rootMargin: '100px 0px',
-        threshold: 0.1
-      }
+        threshold: 0.1,
+      },
     );
 
     const img = new Image();
@@ -77,16 +77,14 @@ export function OptimizedImage({
         height={height}
         data-src={src}
         className={cn(
-          'transition-all duration-500 object-cover object-center size-full',
-          isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+          'size-full object-cover object-center transition-all duration-500',
+          isLoaded ? 'scale-100 opacity-100' : 'scale-105 opacity-0',
         )}
         onLoad={() => setIsLoaded(true)}
         loading={priority ? 'eager' : 'lazy'}
         decoding="async"
       />
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
-      )}
+      {!isLoaded && <div className="absolute inset-0 animate-pulse bg-gray-200" />}
     </div>
   );
-} 
+}

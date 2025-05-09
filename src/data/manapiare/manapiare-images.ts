@@ -1,4 +1,4 @@
-import PatanemoWeb from '@/images/manapiare/manapiare-web.webp';
+import PatanemoWeb from '@/images/manapiare/acuarela-manapiare.png';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/manapiare/evaluacion.webp';
 import SaboresPositivos from '@/images/patanemo/cacao.webp';
@@ -22,7 +22,6 @@ import CosechaTwo from '@/images/manapiare/secado2.webp';
 import TraceabilityOne from '@/images/manapiare/trazabilidad.webp';
 import TraceabilityTwo from '@/images/manapiare/trazabilidad2.webp';
 import TraceabilityThree from '@/images/manapiare/trazabilidad3.webp';
-
 
 import map from '@/images/manapiare/mapa.webp';
 import locationOne from '@/images/manapiare/ecologia.webp';
@@ -49,15 +48,15 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo, ProtocoloFermentacionThree],
+      fermentacion: [
+        ProtocoloFermentacionOne,
+        ProtocoloFermentacionTwo,
+        ProtocoloFermentacionThree,
+      ],
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      traceability: [
-        TraceabilityOne,
-        TraceabilityTwo,
-        TraceabilityThree,
-      ],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree],
     },
     location: {
       map: map,
@@ -80,15 +79,15 @@ const images = {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],
     },
     protocols: {
-      fermentacion: [ProtocoloFermentacionOne, ProtocoloFermentacionTwo, ProtocoloFermentacionThree],
+      fermentacion: [
+        ProtocoloFermentacionOne,
+        ProtocoloFermentacionTwo,
+        ProtocoloFermentacionThree,
+      ],
       secado: [CosechaOne, CosechaTwo],
     },
     certifications: {
-      traceability: [
-        TraceabilityOne,
-        TraceabilityTwo,
-        TraceabilityThree,
-      ],
+      traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree],
     },
     location: {
       map: map,

@@ -41,7 +41,7 @@ const images = {
       mapaSensorial: MapaSensorial,
     },
     benefit: {
-      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThree,TipoDeCacaoFour],
+      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThree, TipoDeCacaoFour],
     },
     protocols: {
       fermentacion: [
@@ -73,7 +73,7 @@ const images = {
       mapaSensorial: MapaSensorial,
     },
     benefit: {
-      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThree,TipoDeCacaoFour],
+      tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo, TipoDeCacaoThree, TipoDeCacaoFour],
     },
     protocols: {
       fermentacion: [

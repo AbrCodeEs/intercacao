@@ -52,7 +52,10 @@ const { location } = Astro.props;
   </div>
 
   <!-- Párrafos descriptivos -->
-  {location.paragraphs && location.paragraphs.map((paragraph) => <p class="text-lg">{paragraph}</p>)}
+  {
+    location.paragraphs &&
+      location.paragraphs.map((paragraph) => <p class="text-lg">{paragraph}</p>)
+  }
 
   <!-- Sección de ecología -->
   <div class="flex w-full flex-col gap-5 md:flex-row lg:flex-row xl:flex-row">
@@ -63,7 +66,10 @@ const { location } = Astro.props;
       <h3 class="py-4 text-3xl text-neutral-600 uppercase">
         {location.ecology.title}
       </h3>
-      {location.ecology.paragraphs.map((paragraph) => <p class="text-lg">{paragraph}</p>)}
+      {
+        location.ecology.paragraphs &&
+          location.ecology.paragraphs.map((paragraph) => <p class="text-lg">{paragraph}</p>)
+      }
     </div>
 
     <!-- Imágenes de ecología -->

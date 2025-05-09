@@ -1,11 +1,14 @@
-import PorcelanaWeb from '@/images/surdellago/placeholder.webp';
+import PorcelanaWeb from '@/images/surdellago/sur-del-lago.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/porcelana/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
 import EquipoCata from '@/images/porcelana/equipodecata.webp';
 import CuencaCacao from '@/images/porcelana/cacao2.webp';
+
 import RuedaSabores from '@/images/porcelana/ruedadesabores.webp';
 import MapaSensorial from '@/images/porcelana/mapasensorial.webp';
+import MapaSensorialEn from '@/images/barlovento/mapasensorialEn.webp';
+
 import TipoDeCacaoOne from '@/images/porcelana/tipodecacao.webp';
 import TipoDeCacaoTwo from '@/images/porcelana/tipodecacao2.webp';
 
@@ -23,7 +26,7 @@ import CertificadoOrigenTree from '@/images/surdellago/placeholder.webp';
 import TraceabilityOne from '@/images/surdellago/placeholder.webp';
 import TraceabilityTwo from '@/images/surdellago/placeholder.webp';
 
-import map from '@/images/surdellago/placeholder.webp';
+import map from '@/images/surdellago/mapa.webp';
 import locationOne from '@/images/surdellago/placeholder.webp';
 import locationTwo from '@/images/surdellago/placeholder.webp';
 import locationThree from '@/images/surdellago/placeholder.webp';
@@ -75,7 +78,7 @@ const images = {
       equipoCata: EquipoCata,
       cuencaCacao: CuencaCacao,
       ruedaSabores: RuedaSabores,
-      mapaSensorial: MapaSensorial,
+      mapaSensorial: MapaSensorialEn,
     },
     benefit: {
       tipoDeCacao: [TipoDeCacaoOne, TipoDeCacaoTwo],

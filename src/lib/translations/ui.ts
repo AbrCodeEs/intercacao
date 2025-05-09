@@ -17,6 +17,8 @@ import { manapiare } from '@/data/manapiare/manapiare-content';
 import { mantuano } from '@/data/mantuano/mantuano-content';
 import { ocumare } from '@/data/ocumare/ocumare-content';
 import { trinchera } from '@/data/trinchera/trinchera-content';
+import { piura } from '@/data/piura/piura-content';
+import { chulucanas } from '@/data/chulucanas/chulucanas-content';
 
 export const languages = {
   eng: 'English',
@@ -33,7 +35,7 @@ export const ui = {
     tesoro: tesoro.es,
     pintao: pintao.es,
     patanemo: patanemo.es,
-    tumaco: tumaco.es, 
+    tumaco: tumaco.es,
     canoabo: canoabo.es,
     choroni: choroni.es,
     huila: huila.es,
@@ -41,11 +43,12 @@ export const ui = {
     mantuano: mantuano.es,
     ocumare: ocumare.es,
     trinchera: trinchera.es,
-    
+    piura: piura.es,
+    chulucanas: chulucanas.es,
     surdellago: surDelLago.es,
     barlovento: barlovento.es,
     cajaseca: cajaseca.es,
-    barinas: barinas.es
+    barinas: barinas.es,
   },
   eng: {
     home: home.en,
@@ -62,10 +65,11 @@ export const ui = {
     mantuano: mantuano.en,
     ocumare: ocumare.en,
     trinchera: trinchera.en,
-    
+    piura: piura.en,
+    chulucanas: chulucanas.en,
     surdellago: surDelLago.en,
     barlovento: barlovento.en,
     cajaseca: cajaseca.en,
-    barinas: barinas.en
+    barinas: barinas.en,
   },
 } as const;

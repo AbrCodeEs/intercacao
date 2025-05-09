@@ -17,7 +17,8 @@ export default (Astro) => {
       cocoa: {
         title: 'cacao gourmet',
         subtitle: 'ocumare fino',
-        color: 'bg-indigo-900'
+        color: 'bg-indigo-900',
+        scale: true,
       },
       mainImage: {
         src: langImages.general.bannerWeb,
@@ -135,7 +136,7 @@ export default (Astro) => {
       information: [
         {
           title: langContent.characteristics.information[0].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-orange-500',
           description: {
             boldText: langContent.characteristics.information[0].description.boldText,
             additionalText: langContent.characteristics.information[0].description.additionalText,
@@ -143,7 +144,7 @@ export default (Astro) => {
         },
         {
           title: langContent.characteristics.information[1].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-yellow-500',
           description: {
             boldText: langContent.characteristics.information[1].description.boldText,
             additionalText: langContent.characteristics.information[1].description.additionalText,
@@ -151,7 +152,7 @@ export default (Astro) => {
         },
         {
           title: langContent.characteristics.information[2].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-orange-500',
           description: {
             boldText: langContent.characteristics.information[2].description.boldText,
             additionalText: langContent.characteristics.information[2].description.additionalText,
@@ -348,13 +349,13 @@ export default (Astro) => {
         {
           type: 'paragraph',
           text: langContent.traceability.content[4].text,
-        }
+        },
       ],
       images: [
         {
           src: langImages.certifications.traceability[0],
           alt: langContent.traceability.images[0].alt,
-        }
+        },
       ],
     },
     location: {

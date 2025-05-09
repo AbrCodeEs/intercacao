@@ -130,7 +130,7 @@ export default (Astro) => {
       information: [
         {
           title: langContent.characteristics.information[0].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-orange-500',
           description: {
             boldText: langContent.characteristics.information[0].description.boldText,
             additionalText: langContent.characteristics.information[0].description.additionalText,
@@ -138,7 +138,7 @@ export default (Astro) => {
         },
         {
           title: langContent.characteristics.information[1].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-red-800',
           description: {
             boldText: langContent.characteristics.information[1].description.boldText,
             additionalText: langContent.characteristics.information[1].description.additionalText,
@@ -146,7 +146,7 @@ export default (Astro) => {
         },
         {
           title: langContent.characteristics.information[2].title,
-          indicatorColor: 'bg-amber-950',
+          indicatorColor: 'bg-orange-500',
           description: {
             boldText: langContent.characteristics.information[2].description.boldText,
             additionalText: langContent.characteristics.information[2].description.additionalText,
@@ -359,7 +359,6 @@ export default (Astro) => {
           src: langImages.certifications.traceability[3],
           alt: langContent.traceability.images[2].alt,
         },
-        
       ],
     },
     location: {
@@ -426,7 +425,6 @@ export default (Astro) => {
           type: 'highlight',
           text: langContent.history.content[5].text,
         },
-       
       ],
     },
     socialResponsibility: {
