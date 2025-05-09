@@ -2,7 +2,7 @@
 import Layout from '@/layouts/CocoaLayout.astro';
 import { Image } from 'astro:assets';
 
-import corteChuao from '@/images/surdellago/placeholder.webp';
+import corteChuao from '@/images/surdellago/corte.webp';
 
 import GeneralInformation from '@/components/template/GeneralInformation.astro';
 import Characteristics from '@/components/template/Characteristics.astro';
@@ -59,7 +59,7 @@ export async function getStaticPaths() {
     <CocoaMap cocoaMap={cocoaMap} />
 
     <!-- @ts-ignore -->
-    <PostHarvestBenefit postHarvestBenefit={postHarvestBenefit} />
+    <!-- <PostHarvestBenefit postHarvestBenefit={postHarvestBenefit} /> -->
 
     <!-- @ts-ignore -->
     <Traceability traceability={traceability} />

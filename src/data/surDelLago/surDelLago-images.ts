@@ -1,12 +1,12 @@
 import PorcelanaWeb from '@/images/surdellago/sur-del-lago.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
-import Clasificacion from '@/images/porcelana/evaluacion.webp';
+import Clasificacion from '@/images/surdellago/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
-import EquipoCata from '@/images/porcelana/equipodecata.webp';
-import CuencaCacao from '@/images/porcelana/cacao2.webp';
+import EquipoCata from '@/images/surdellago/equipodecata2.webp';
+import CuencaCacao from '@/images/surdellago/equipodecata3.webp';
 
 import RuedaSabores from '@/images/porcelana/ruedadesabores.webp';
-import MapaSensorial from '@/images/porcelana/mapasensorial.webp';
+import MapaSensorial from '@/images/porcelana/mapasensorialEn.webp';
 import MapaSensorialEn from '@/images/barlovento/mapasensorialEn.webp';
 
 import TipoDeCacaoOne from '@/images/porcelana/tipodecacao.webp';

@@ -1,12 +1,12 @@
 import PorcelanaWeb from '@/images/barinas/barinas-web.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
-import Clasificacion from '@/images/porcelana/evaluacion.webp';
+import Clasificacion from '@/images/barinas/evaluacion.webp';
 import SaboresPositivos from '@/images/porcelana/cacao.webp';
-import EquipoCata from '@/images/porcelana/equipodecata.webp';
-import CuencaCacao from '@/images/surdellago/placeholder.webp';
+import EquipoCata from '@/images/barinas/equipodecata2.webp';
+import CuencaCacao from '@/images/barinas/equipodecata3.webp';
 
 import RuedaSabores from '@/images/barlovento/ruedaDeSabores.webp';
-import MapaSensorial from '@/images/barlovento/ruedaDeSaboresTwo.webp';
+import MapaSensorial from '@/images/barlovento/mapasensorialEn.webp';
 import MapaSensorialEn from '@/images/barlovento/mapasensorialEn.webp';
 
 import TipoDeCacaoOne from '@/images/surdellago/placeholder.webp';

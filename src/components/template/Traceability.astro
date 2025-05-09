@@ -36,6 +36,7 @@ const { traceability } = Astro.props;
             quote: string;
             author: string;
             border: boolean;
+            items: string[];
           }) => {
             switch (content.type) {
               case 'highlight':
@@ -86,6 +87,15 @@ const { traceability } = Astro.props;
                               {item.text}{' '}
                             </a>
                           );
+                        case 'list':
+                          return (
+                            <ul class="list-disc pl-5">
+                              {item.items.map((item) => (
+                                <li class="py-2 text-lg">{item}</li>
+                              ))}
+                            </ul>
+                          );
+
                         default:
                           return item.text;
                       }
@@ -129,13 +139,24 @@ const { traceability } = Astro.props;
               'group animate-trigger-left animate-once animate-ease-in-out relative w-full flex-none overflow-hidden rounded-lg bg-neutral-300',
             ]}
           >
-            <Image
-              inferSize={true}
-              loading="eager"
-              src={image.src}
-              alt={image.alt}
-              class="w-full transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
-            />
+            {image.type === 'video' ? (
+              <iframe
+                loading="lazy"
+                allowfullscreen
+                title={image.title}
+                class="h-100 w-full overflow-hidden rounded-lg"
+                src={`${image.src}?autoplay=0`}
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              />
+            ) : (
+              <Image
+                inferSize={true}
+                loading="eager"
+                src={image.src}
+                alt={image.alt}
+                class="w-full transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
+              />
+            )}
           </div>
         ))
       }

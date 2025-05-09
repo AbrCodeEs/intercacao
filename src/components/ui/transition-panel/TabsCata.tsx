@@ -120,7 +120,7 @@ export function TabsCata({ catas }: TabsCataProps) {
                       <span>{flavor.percentage}</span>
                     </div>
                   </Progress>
-                  <p className="text-lg">{flavor.description}</p>
+                  {flavor.description ?<p className="text-lg">{flavor.description}</p> : <div className="py-3"></div>}
                 </div>
               ))}
             </div>
