@@ -1,245 +1,72 @@
 ---
-import { Image } from 'astro:assets';
-
 import Layout from '@/layouts/MainLayout.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/types/home/website';
-import { chocolateBars } from '@/data/home/cocoa';
-
-import lienzo from '@/images/home/lienzo-bg.webp';
-import lienzoCacao from '@/images/home/lienzo-cacao-bg.webp';
-
-import postGranoDeDacao from '@/images/home/post-grano-de-cacao.webp';
-import postChloeDoutre from '@/images/home/post-chloe-doutre.webp';
-import postIngAlexis from '@/images/home/post-ing-alexys.webp';
-import postFundacionProsperi from '@/images/home/post-fundacion-prosperi.webp';
-import postPintao from '@/images/home/post-pintao.webp';
-import postTesoro from '@/images/home/post-tesoro.webp';
-
 import lienzoMundoBg from '@/images/home/lienzo-mundo-bg.webp';
 import logo from '@/images/global/logo.webp';
+import { getLangFromUrl } from '@/lib/translations';
+import gladysRamos from '@/images/global/alexys-sanchez.webp';
 
-import { CarouselPost } from '@/components/ui/carousel/Post';
-import { ChocolateGallery } from '@/components/home/ChocolateGallery';
-import { DialogFlavours } from '@/components/ui/morphing-dialog/DialogFlavours';
-
-// import { Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
-import { useTranslations } from '@/lib/translations';
-import { TabsTransitionPanel } from '@/components/ui/transition-panel/TabsTransitionPanel';
-import { VainillaBar } from '@/components/home/VainillaBar';
-import { NewsSection } from '@/components/home/NewsSection';
-
-// Validar que el locale sea válido
-const { locale } = Astro.params;
-if (!locale || !['es', 'eng'].includes(locale)) {
-  return Astro.redirect('/es/');
-}
-
-const lang = locale as 'es' | 'eng';
-const trans = useTranslations(lang);
-
-// Obtener las URLs de las imágenes para preload
-const preloadImages = chocolateBars
-  .filter((bar) => bar.image && typeof bar.image === 'string')
-  .map((bar) => (typeof bar.image === 'string' ? bar.image : bar.image.src));
-
-const posts = [
-  {
-    title: trans('home').posts[0].title,
-    description: trans('home').posts[0].description,
-    image: {
-      src: postGranoDeDacao.src,
-      alt: trans('home').posts[0].image_alt,
-    },
-    url: `/${lang}/evaluacion/`,
-  },
-  {
-    title: trans('home').posts[1].title,
-    description: trans('home').posts[1].description,
-    image: {
-      src: postChloeDoutre.src,
-      alt: trans('home').posts[1].image_alt,
-    },
-    url: `/${lang}/chloedoutreroussel/`,
-  },
-  {
-    title: trans('home').posts[2].title,
-    description: trans('home').posts[2].description,
-    image: {
-      src: postIngAlexis.src,
-      alt: trans('home').posts[2].image_alt,
-    },
-    url: `/${lang}/alexiszambrano/`,
-  },
-  {
-    title: trans('home').posts[3].title,
-    description: trans('home').posts[3].description,
-    image: {
-      src: postFundacionProsperi.src,
-      alt: trans('home').posts[3].image_alt,
-    },
-    url: 'http://fqp.intercacao.com/',
-  },
-  {
-    title: trans('home').posts[4].title,
-    description: trans('home').posts[4].description,
-    image: {
-      src: postPintao.src,
-      alt: trans('home').posts[4].image_alt,
-    },
-  },
-  {
-    title: trans('home').posts[5].title,
-    description: trans('home').posts[5].description,
-    image: {
-      src: postTesoro.src,
-      alt: trans('home').posts[5].image_alt,
-    },
-  },
-];
+const lang = getLangFromUrl(Astro.url);
 
 export async function getStaticPaths() {
-  return [{ params: { locale: 'eng' } }, { params: { locale: 'es' } }];
+  return [{ params: { locale: 'es' } }, { params: { locale: 'eng' } }];
 }
+const translations = {
+  es: {
+    title: 'Ing. Alexis Zambrano',
+    content: [
+      'El ing. Alexis Zambrano es químico con una maestría en ciencias del suelo y un doctorado. en biotecnología de microorganismos.',
+      'El Dr. Zambrano es actualmente profesor en la Universidad de Los Andes. Ha trabajado en diferentes trabajos de investigación sobre el cacao, publicados en revistas científicas venezolanas e internacionales.',
+      'Ha asistido a innumerables conferencias nacionales e internacionales sobre perfiles sensoriales del cacao y licor de cacao. Además, ha sido premiado como investigador por el Ministerio de Ciencia, Tecnología e Innovación de Venezuela.',
+      'En Intercacao, el Dr. Zambrano ha capacitado a nuestro panel del mundo de los sabores, en cuanto al análisis corporal en licor de cacao y rueda de sabor.'
+    ],
+    back: 'Volver atras',
+  },
+  eng: {
+    title: 'Ing. Alexis Zambrano',
+    content: [
+      'Alexis Zambrano is a chemist with a master\'s degree in soil science and a doctorate in microbial biotechnology.',
+      'Dr. Zambrano is currently a professor at the University of Los Andes. He has worked on various research projects on cacao, published in Venezuelan and international scientific journals.',
+      'He has attended countless national and international conferences on the sensory profiles of cacao and cacao liquor. He has also received a research award from the Venezuelan Ministry of Science, Technology, and Innovation.',
+      'At Intercacao, Dr. Zambrano has trained our flavor panel on cacao liquor and flavor wheel analysis.',
+    ],
+    back: 'Back to home',
+  },
+};
+
+const t = translations[lang];
 ---
 
 <Layout
-  title={SITE_TITLE}
-  description={SITE_DESCRIPTION}
+  title={t.title}
+  description={t.content[0]}
   pubDate={new Date()}
-  keywords=""
-  preloadImages={preloadImages}
+  keywords="cacao, chocolate, gladys ramos, experta cacao, fine aroma cocoa, cocoa expert"
+  offMenu={true}
 >
-  <div id="section-home" class="relative size-dvw flex-1 md:w-full lg:w-full xl:h-screen xl:w-full">
-    <Image
-      loading="eager"
-      fetchpriority="high"
-      inferSize={true}
-      src={trans('home').banner.src}
-      alt={trans('home').banner.alt}
-      class="h-full w-full object-cover object-center"
-    />
-    <div
-      class="absolute inset-x-0 top-0 flex w-full items-center justify-center p-10 md:justify-between lg:justify-between xl:justify-between"
-    >
-      <Image
-        loading="eager"
-        fetchpriority="high"
-        inferSize={true}
-        class="w-20 md:w-30 lg:w-30 xl:w-30"
-        src={trans('home').logo.src}
-        alt={trans('home').logo.alt}
-      />
-    </div>
-  </div>
-
-  <div
-    class="flex w-full items-center justify-center p-10"
-    style={`background-image: url(${lienzo.src});`}
+  <main
+    class="container m-auto mt-10 flex flex-col items-center justify-center rounded-lg bg-white p-10 shadow-md"
   >
-    <Image
-      loading="eager"
-      fetchpriority="high"
-      inferSize={true}
-      src={trans('home').mundo_de_sabores.src}
-      alt={trans('home').mundo_de_sabores.alt}
-      class="w-75 object-fill object-center"
-    />
-  </div>
-
-  <div
-    id="section-flavours"
-    class="size-auen/world-of-flavors/to relative flex flex-col items-center justify-center gap-10 pb-5 md:w-full md:px-10 md:pb-10 lg:w-full lg:px-10 lg:pb-10 xl:w-full xl:px-10 xl:pb-10"
-    style={`background-image: url(${lienzo.src});`}
-  >
-    <Image
-      loading="lazy"
-      inferSize={true}
-      src={trans('home').mundo_de_sabores_panel.src}
-      alt={trans('home').mundo_de_sabores_panel.alt}
-      class="object-fill object-center shadow-2xl"
-    />
-    <div class="flex items-center justify-center">
-      <DialogFlavours client:only="react" trans={trans('home').info_mundo_de_sabores} />
-    </div>
-  </div>
-
-  <div id="section-gourmet" class="bg-primary h-auto w-full">
-    <div class="flex w-full items-center justify-center pt-10">
-      <Image
-        loading="lazy"
-        inferSize={true}
-        src={trans('home').logo_white_imagotipo_cacao_gourmet.src}
-        alt={trans('home').logo_white_imagotipo_cacao_gourmet.alt}
-        class="w-75 object-fill object-center"
-      />
-    </div>
-    <ChocolateGallery lang={lang} trans={trans('home').cocoa_gallery} client:load />
-  </div>
-
-  <div id="section-vanilla-bar" class="h-auto w-full bg-[#efece1]">
-    <VainillaBar trans={trans('home').tabs_transition_panel.vainilla_bar} client:load />
-  </div>
-
-  <div
-    id="section-prosperi"
-    class="bg-start flex h-auto min-h-screen w-full flex-col items-start justify-center bg-no-repeat md:items-center lg:items-center xl:items-center"
-    style={`background-image: url(${lienzoCacao.src});`}
-  >
-    <TabsTransitionPanel
-      trans={trans('home').tabs_transition_panel}
-      items={trans('home').tabs_transition_panel.items}
-      client:only="react"
-    />
-  </div>
-
-  <div class="bg-primary h-5 w-full"></div>
-
-  <div
-    id="section-about"
-    class="bg-start flex h-auto w-full items-start justify-center bg-no-repeat py-20 md:items-center lg:items-center xl:items-center"
-    style={`background-image: url(${lienzoCacao.src});`}
-  >
-    <div
-      class="flex w-full flex-col items-center justify-center gap-10 p-10 md:w-4/5 md:p-0 lg:w-2/3 lg:p-0 xl:w-4/5 xl:p-0"
-    >
-      <div>
-        <h1 class="text-4xl font-bold text-neutral-600 uppercase">{trans('home').about.title}</h1>
+    <div class="flex w-2/3 flex-col items-center justify-center">
+      <h1 style="font-size: 2.2rem; font-weight: bold; margin-bottom: 1.5rem;">{t.title}</h1>
+      <div class="flex flex-row flex-wrap items-start gap-4">
+        <img
+          src={gladysRamos.src}
+          alt="Gladys Ramos"
+          class="w-full max-w-96 rounded-lg bg-gray-200 object-cover"
+        />
+        <div style="flex: 1;">
+          {t.content.map((parrafo) => <p class="mb-4 text-lg">{parrafo}</p>)}
+        </div>
       </div>
-      <div>
-        <h3 class="py-4 text-3xl text-neutral-600 uppercase">
-          {trans('home').about.subtitle}
-        </h3>
-      </div>
-      <p class="text-center text-lg">
-        {trans('home').about.description}
-      </p>
-      <div class="flex h-70 w-full items-center justify-center gap-5 md:h-100 lg:h-130 xl:h-150">
-        <iframe
-          loading="lazy"
-          allowfullscreen
-          title="Intercacao"
-          class="h-full w-full overflow-hidden rounded-lg"
-          src="https://www.youtube.com/embed/7jUvTbe8DPE"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
-      </div>
-      <div class="flex w-full items-center justify-center gap-5">
-        <CarouselPost posts={posts} client:load />
+      <div style="margin-top: 2.5rem; display: flex; justify-content: flex-end;">
+        <a
+          href="/"
+          style="background: #222; color: #fff; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 2px 8px #0002; transition: background 0.2s;"
+          >{t.back}</a
+        >
       </div>
     </div>
-  </div>
-
-  <div id="section-news" class="flex h-auto w-full items-start justify-center">
-    <div class="flex w-full flex-col items-center justify-center gap-5">
-      <h3 class="py-4 text-center text-3xl text-neutral-600 uppercase">
-        {trans('home').about.farewell}
-      </h3>
-      <NewsSection client:only="react" />
-    </div>
-  </div>
-
-  <div class="bg-primary h-5 w-full"></div>
-
+  </main>
   <div
     id="section-contact"
     class="bg-start flex size-dvw h-auto items-center justify-center bg-no-repeat md:w-auto lg:w-auto xl:w-auto"
@@ -248,7 +75,7 @@ export async function getStaticPaths() {
     <div
       class="flex w-full flex-col items-center justify-center gap-10 py-30 md:w-4/5 lg:w-2/3 xl:w-4/5"
     >
-      <Image class="w-60" src={logo} alt="Intercacao banner principal" />
+      <img class="w-60" src={logo.src} alt="Intercacao banner principal" />
       <ul class="flex flex-col items-start justify-start gap-5">
         <li class="flex gap-5">
           <svg
