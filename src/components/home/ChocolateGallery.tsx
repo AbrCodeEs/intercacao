@@ -150,6 +150,16 @@ export function ChocolateGallery({
         </div>
       </div>
 
+      <div class="flex justify-center py-8">
+        <a
+          href="/pdf/Venezuelan Cocoa Beans Japanese clients presentation 2025 protected.pdf"
+          download
+          class="rounded-lg bg-neutral-800 px-4 py-2 text-base font-semibold text-white transition-all hover:bg-neutral-700"
+        >
+          Cocoa presentation  intercacao.com/
+        </a>
+      </div>
+
       <div className="relative flex h-auto w-full flex-col items-center justify-center gap-5 py-15">
         <img
           src={worldMap.src}
