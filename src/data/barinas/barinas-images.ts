@@ -6,8 +6,8 @@ import EquipoCata from '@/images/barinas/equipodecata2.webp';
 import CuencaCacao from '@/images/barinas/equipodecata3.webp';
 
 import RuedaSabores from '@/images/barlovento/ruedaDeSabores.webp';
-import MapaSensorial from '@/images/barlovento/mapasensorialEn.webp';
-import MapaSensorialEn from '@/images/barlovento/mapasensorialEn.webp';
+import MapaSensorial from '@/images/barinas/mapasensorialEn.webp';
+import MapaSensorialEn from '@/images/barinas/mapasensorialEn.webp';
 
 import TipoDeCacaoOne from '@/images/surdellago/placeholder.webp';
 import TipoDeCacaoTwo from '@/images/surdellago/placeholder.webp';
