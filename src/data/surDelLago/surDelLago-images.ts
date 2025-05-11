@@ -6,7 +6,7 @@ import EquipoCata from '@/images/surdellago/equipodecata2.webp';
 import CuencaCacao from '@/images/surdellago/equipodecata3.webp';
 
 import RuedaSabores from '@/images/porcelana/ruedadesabores.webp';
-import MapaSensorial from '@/images/porcelana/mapasensorialEn.webp';
+import MapaSensorial from '@/images/barlovento/mapasensorialEn.webp';
 import MapaSensorialEn from '@/images/barlovento/mapasensorialEn.webp';
 
 import TipoDeCacaoOne from '@/images/porcelana/tipodecacao.webp';

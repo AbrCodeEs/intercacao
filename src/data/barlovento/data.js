@@ -34,8 +34,9 @@ export default (Astro) => {
       },
       sections: langContent.generalInformation.sections,
     },
-    characteristics: {
+   characteristics: {
       title: langContent.characteristics.title,
+      subtitle: langContent.characteristics.subtitle,
       flavors_by_date_cata: [
         {
           date: '2025/05/09',

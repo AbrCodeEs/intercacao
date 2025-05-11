@@ -10,10 +10,10 @@ const es = {
     sections: [
       {
         items: [
-          { label: 'AFRUTADO DULCE', value: '2.25' },
-          { label: 'AFRUTADO CÍTRICO', value: '1.75' },
+          { label: 'FRUTAS SECAS', value: '2.25' },
+          { label: 'FRUTAS FRESCA', value: '1.75' },
           { label: 'AFLORADO', value: '0.0' },
-          { label: 'ACRIOLLADO', value: '2.0' },
+          { label: 'ACRIOLLADO', value: '3.0' },
           { label: 'CACAO', value: '4.0' },
           { label: 'BOSCOSO', value: '0.0' },
           { label: 'ESPECIAS', value: '0.0' },
@@ -53,22 +53,23 @@ const es = {
   },
   characteristics: {
     title: 'Características Físicas y Organolépticas',
+    subtitle: 'Sabores Positivos',
     flavors: [
       {
-        name: 'Afrutado Dulce',
-        description: 'Uvas pasas • Ciruelas pasas',
+        name: 'Frutas Secas',
+        description: '',
       },
       {
-        name: 'Afrutado Cítrico',
-        description: 'Naranja',
+        name: 'Fruta Fresca',
+        description: '',
       },
       {
         name: 'Aflorado',
-        description: 'Naranja • Mandarina',
+        description: '',
       },
       {
         name: 'Acriollado',
-        description: 'Malta • Caña de azúcar • Panela • Maní tostado • Almendras • Nuez • Caramelo',
+        description: 'Malta • Panela • Nuez',
       },
       {
         name: 'Cacao',
@@ -438,10 +439,10 @@ const en = {
     sections: [
       {
         items: [
-          { label: 'SWEET FRUITY', value: '2.25' },
-          { label: 'CITRUS FRUITY', value: '1.75' },
+          { label: 'DRIED FRUITS', value: '2.25' },
+          { label: 'FRESH FRUITS', value: '1.75' },
           { label: 'FLOWERY', value: '0.0' },
-          { label: 'ACRIOLLATED', value: '2.0' },
+          { label: 'ACRIOLLATED', value: '3.0' },
           { label: 'COCOA', value: '4.0' },
           { label: 'WOODY', value: '0.0' },
           { label: 'SPICES', value: '0.0' },
@@ -481,22 +482,23 @@ const en = {
   },
   characteristics: {
     title: 'Physical and Organoleptic Characteristics',
+    subtitle: 'Positive Flavors',
     flavors: [
       {
-        name: 'Sweet Fruity',
-        description: 'Raisins • Prunes',
+        name: 'Dried Fruits',
+        description: '',
       },
       {
-        name: 'Citrus Fruity',
-        description: 'Orange',
+        name: 'Fresh Fruit',
+        description: '',
       },
       {
         name: 'Floral',
-        description: 'Orange • Tangerine',
+        description: '',
       },
       {
         name: 'Creole',
-        description: 'Malt • Sugar cane • Panela • Roasted peanuts • Almonds • Walnut • Caramel',
+        description: 'Malt • Panela • Nut',
       },
       {
         name: 'Cocoa',

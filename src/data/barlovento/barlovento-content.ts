@@ -10,8 +10,8 @@ const es = {
     sections: [
       {
         items: [
-          { label: 'AFRUTADO DULCE', value: '2.5' },
-          { label: 'AFRUTADO CÍTRICO', value: '1.75' },
+          { label: 'FRUTAS SECAS', value: '2.5' },
+          { label: 'FRUTAS FRESCA', value: '1.75' },
           { label: 'AFLORADO', value: '0.0' },
           { label: 'ACRIOLLADO', value: '2.5' },
           { label: 'CACAO', value: '4.0' },
@@ -53,13 +53,14 @@ const es = {
   },
   characteristics: {
     title: 'Características Físicas y Organolépticas',
+    subtitle: 'Sabores Positivos',
     flavors: [
       {
-        name: 'Afrutado Dulce',
+        name: 'Frutas Secas',
         description: '',
       },
       {
-        name: 'Afrutado Cítrico',
+        name: 'Fruta Fresca',
         description: '',
       },
       {
@@ -453,8 +454,8 @@ const en = {
     sections: [
       {
         items: [
-          { label: 'SWEET FRUITY', value: '2.5' },
-          { label: 'CITRUS FRUITY', value: '1.75' },
+          { label: 'DRIED FRUITS', value: '2.5' },
+          { label: 'FRESH FRUITS', value: '1.75' },
           { label: 'FLORAL', value: '0.0' },
           { label: 'CREOLE', value: '2.5' },
           { label: 'COCOA', value: '4.0' },
@@ -496,13 +497,14 @@ const en = {
   },
   characteristics: {
     title: 'Physical and Organoleptic Characteristics',
+    subtitle: 'Positive Flavors',
     flavors: [
       {
-        name: 'Sweet Fruity',
+        name: 'Dried Fruits',
         description: '',
       },
       {
-        name: 'Citrus Fruity',
+        name: 'Fresh Fruit',
         description: '',
       },
       {
