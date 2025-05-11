@@ -10,8 +10,8 @@ const es = {
     sections: [
       {
         items: [
-          { label: 'FRUTAS SECAS', value: '2.5' },
-          { label: 'FRUTAS FRESCA', value: '1.25' },
+          { label: 'AFRUTADO DULCE', value: '2.5' },
+          { label: 'AFRUTADO CÍTRICO', value: '1.25' },
           { label: 'AFLORADO', value: '0.0' },
           { label: 'ACRIOLLADO', value: '3.0' },
           { label: 'CACAO', value: '4.0' },
@@ -56,11 +56,11 @@ const es = {
     subtitle: 'Sabores Positivos',
     flavors: [
       {
-        name: 'Frutas Secas',
+        name: 'Afrutado Dulce',
         description: '',
       },
       {
-        name: 'Fruta Fresca',
+        name: 'Afrutado Cítrico',
         description: '',
       },
       {
@@ -419,8 +419,8 @@ const en = {
     sections: [
       {
         items: [
-          { label: 'DRIED FRUITS', value: '2.5' },
-          { label: 'FRESH FRUITS', value: '1.25' },
+          { label: 'SWEET FRUITY', value: '2.5' },
+          { label: 'CITRUS FRUITY', value: '1.25' },
           { label: 'FLORAL', value: '0.0' },
           { label: 'CREOLE', value: '3.0' },
           { label: 'COCOA', value: '4.0' },
@@ -465,11 +465,11 @@ const en = {
     subtitle: 'Positive Flavors',
     flavors: [
       {
-        name: 'Dried Fruits',
+        name: 'Sweet Fruity',
         description: '',
       },
       {
-        name: 'Fresh Fruit',
+        name: 'Citrus Fruity',
         description: '',
       },
       {
