@@ -91,8 +91,8 @@ export default (Astro) => {
             },
             {
               name: langContent.characteristics.flavors[4].name,
-              percentage: '2.5',
-              progress: 50,
+              percentage: '4.0',
+              progress: 90,
               icon: {
                 src: '/icons/cacao-white-icon.svg',
                 alt: 'Cacao-white-icon',

@@ -1,7 +1,7 @@
 import PorcelanaWeb from '@/images/surdellago/sur-del-lago.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/surdellago/evaluacion.webp';
-import SaboresPositivos from '@/images/porcelana/cacao.webp';
+import SaboresPositivos from '@/images/surdellago/essencecocoa.webp';
 import EquipoCata from '@/images/surdellago/equipodecata2.webp';
 import CuencaCacao from '@/images/surdellago/equipodecata3.webp';
 

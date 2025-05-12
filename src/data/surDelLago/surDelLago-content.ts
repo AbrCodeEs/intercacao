@@ -153,7 +153,7 @@ const es = {
         },
         {
           type: 'paragraph',
-          text: 'Técnicamente, este cacao muestra una astringencia baja (1) y un amargor medio-alto (2.75), lo que genera una experiencia gustativa firme pero sin resultar áspera. La acidez, presente en niveles medio-bajos (2), añade un leve brillo al perfil general sin generar disonancia. La textura, aunque no evaluada con valores específicos, se percibe como homogénea y sin defectos.',
+          text: 'Técnicamente, este cacao muestra una astringencia baja (1) y un amargor medio-bajo (2.75), lo que genera una experiencia gustativa firme pero sin resultar áspera. La acidez, presente en niveles medio-bajos (2), añade un leve brillo al perfil general sin generar disonancia. La textura, aunque no evaluada con valores específicos, se percibe como homogénea y sin defectos.',
         },
         {
           type: 'paragraph',
@@ -578,7 +578,7 @@ const en = {
         },
         {
           type: 'paragraph',
-          text: 'Technically, this cacao displays low astringency (1) and medium-high bitterness (2.75), creating a firm but not harsh taste experience. The acidity, present at medium-low levels (2), adds a slight brightness to the overall profile without creating dissonance. The texture, although not evaluated with specific values, is perceived as homogeneous and without defects.',
+          text: 'Technically, this cacao displays low astringency (1) and medium-low bitterness (2.75), creating a firm but not harsh taste experience. The acidity, present at medium-low levels (2), adds a slight brightness to the overall profile without creating dissonance. The texture, although not evaluated with specific values, is perceived as homogeneous and without defects.',
         },
         {
           type: 'paragraph',

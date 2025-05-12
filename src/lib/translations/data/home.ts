@@ -38,19 +38,16 @@ import carouselDanza18 from '@/images/home/carousels/danza/carousel-18.webp';
 import carouselDanza19 from '@/images/home/carousels/danza/carousel-19.webp';
 import carouselDanza20 from '@/images/home/carousels/danza/carousel-20.webp';
 
-import carouselRegresoAlAgua1 from '@/images/home/carousels/regreso-al-agua/carousel-1.webp';
-import carouselRegresoAlAgua2 from '@/images/home/carousels/regreso-al-agua/carousel-2.webp';
-import carouselRegresoAlAgua3 from '@/images/home/carousels/regreso-al-agua/carousel-3.webp';
-import carouselRegresoAlAgua4 from '@/images/home/carousels/regreso-al-agua/carousel-4.webp';
-import carouselRegresoAlAgua5 from '@/images/home/carousels/regreso-al-agua/carousel-5.webp';
-import carouselRegresoAlAgua6 from '@/images/home/carousels/regreso-al-agua/carousel-6.webp';
-import carouselRegresoAlAgua7 from '@/images/home/carousels/regreso-al-agua/carousel-7.webp';
-import carouselRegresoAlAgua8 from '@/images/home/carousels/regreso-al-agua/carousel-8.webp';
-import carouselRegresoAlAgua9 from '@/images/home/carousels/regreso-al-agua/carousel-9.webp';
-import carouselRegresoAlAgua10 from '@/images/home/carousels/regreso-al-agua/carousel-10.webp';
-import carouselRegresoAlAgua11 from '@/images/home/carousels/regreso-al-agua/carousel-11.webp';
-import carouselRegresoAlAgua12 from '@/images/home/carousels/regreso-al-agua/carousel-12.webp';
-import carouselRegresoAlAgua13 from '@/images/home/carousels/regreso-al-agua/carousel-13.webp';
+import carouselRegresoAlAgua1 from '@/images/home/carousels/regreso-al-agua/carrousel-1.webp';
+import carouselRegresoAlAgua2 from '@/images/home/carousels/regreso-al-agua/carrousel-2.webp';
+import carouselRegresoAlAgua3 from '@/images/home/carousels/regreso-al-agua/carrousel-3.webp';
+import carouselRegresoAlAgua4 from '@/images/home/carousels/regreso-al-agua/carrousel-4.webp';
+import carouselRegresoAlAgua5 from '@/images/home/carousels/regreso-al-agua/carrousel-5.webp';
+import carouselRegresoAlAgua6 from '@/images/home/carousels/regreso-al-agua/carrousel-6.webp';
+import carouselRegresoAlAgua7 from '@/images/home/carousels/regreso-al-agua/carrousel-7.webp';
+import carouselRegresoAlAgua8 from '@/images/home/carousels/regreso-al-agua/carrousel-8.webp';
+import carouselRegresoAlAgua9 from '@/images/home/carousels/regreso-al-agua/carrousel-9.webp';
+import carouselRegresoAlAgua10 from '@/images/home/carousels/regreso-al-agua/carrousel-10.webp';
 
 import carouselWilfriedMerle1 from '@/images/home/carousels/wilfried-merle/carousel-1.webp';
 import carouselWilfriedMerle2 from '@/images/home/carousels/wilfried-merle/carousel-2.webp';
@@ -209,18 +206,6 @@ const carouselRegresoAlAgua = [
   },
   {
     src: carouselRegresoAlAgua10.src,
-    alt: 'regreso del Agua',
-  },
-  {
-    src: carouselRegresoAlAgua11.src,
-    alt: 'regreso del Agua',
-  },
-  {
-    src: carouselRegresoAlAgua12.src,
-    alt: 'regreso del Agua',
-  },
-  {
-    src: carouselRegresoAlAgua13.src,
     alt: 'regreso del Agua',
   },
 ];

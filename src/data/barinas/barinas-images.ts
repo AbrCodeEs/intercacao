@@ -1,7 +1,7 @@
 import PorcelanaWeb from '@/images/barinas/barinas-web.webp';
 import RatingStars from '@/images/chuao/rating-stars-cut.png';
 import Clasificacion from '@/images/barinas/evaluacion.webp';
-import SaboresPositivos from '@/images/porcelana/cacao.webp';
+import SaboresPositivos from '@/images/barinas/essencecocoa.webp';
 import EquipoCata from '@/images/barinas/equipodecata2.webp';
 import CuencaCacao from '@/images/barinas/equipodecata3.webp';
 
