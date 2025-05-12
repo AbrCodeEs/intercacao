@@ -46,8 +46,6 @@ import carouselRegresoAlAgua5 from '@/images/home/carousels/regreso-al-agua/carr
 import carouselRegresoAlAgua6 from '@/images/home/carousels/regreso-al-agua/carrousel-6.webp';
 import carouselRegresoAlAgua7 from '@/images/home/carousels/regreso-al-agua/carrousel-7.webp';
 import carouselRegresoAlAgua8 from '@/images/home/carousels/regreso-al-agua/carrousel-8.webp';
-import carouselRegresoAlAgua9 from '@/images/home/carousels/regreso-al-agua/carrousel-9.webp';
-import carouselRegresoAlAgua10 from '@/images/home/carousels/regreso-al-agua/carrousel-10.webp';
 
 import carouselWilfriedMerle1 from '@/images/home/carousels/wilfried-merle/carousel-1.webp';
 import carouselWilfriedMerle2 from '@/images/home/carousels/wilfried-merle/carousel-2.webp';
@@ -198,14 +196,6 @@ const carouselRegresoAlAgua = [
   },
   {
     src: carouselRegresoAlAgua8.src,
-    alt: 'regreso del Agua',
-  },
-  {
-    src: carouselRegresoAlAgua9.src,
-    alt: 'regreso del Agua',
-  },
-  {
-    src: carouselRegresoAlAgua10.src,
     alt: 'regreso del Agua',
   },
 ];
