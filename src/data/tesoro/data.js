@@ -367,14 +367,18 @@ export default (Astro) => {
         },
       ],
       images: [
-        // {
-        //   src: langImages.certifications.traceability[0],
-        //   alt: langContent.traceability.images[1].alt,
-        // },
         {
           type: 'video',
           src: '/videos/tesoro/tesoro.mp4',
           alt: langContent.traceability.images[1].alt,
+        },
+        {
+          src: langImages.certifications.traceability[0],
+          alt: langContent.traceability.images[1].alt,
+        },
+        {
+          src: langImages.certifications.traceability[1],
+          alt: langContent.traceability.images[2].alt,
         },
       ],
     },
