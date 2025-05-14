@@ -4,7 +4,6 @@ import { Image } from 'astro:assets';
 import { getLangFromUrl } from '@/lib/translations';
 
 import { Progress } from '@/components/ui/progress';
-import { CarouselImages } from '@/components/ui/carousel/Img';
 import { TabsCata } from '@/components/ui/transition-panel/TabsCata';
 type Props = CollectionEntry<'template'>['data'];
 
@@ -16,7 +15,7 @@ const { characteristics } = Astro.props;
 <section class="px-5 md:px-30 lg:px-50 xl:px-50">
   <div class="my-10 flex flex-col gap-5">
     <h1 class="text-4xl font-bold text-neutral-600 uppercase">{characteristics?.title}</h1>
-    <h3 class="py-4 text-3xl text-neutral-600 uppercase">Sabores Positivos</h3>
+    <h3 class="py-4 text-3xl text-neutral-600 uppercase">{characteristics?.subtitle}</h3>
 
     <div class="flex w-full flex-col gap-5 pb-10 md:flex-row lg:flex-row xl:flex-row">
       <div class="flex w-auto flex-1 flex-col justify-start gap-4">

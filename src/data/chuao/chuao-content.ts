@@ -53,6 +53,7 @@ const es = {
   },
   characteristics: {
     title: 'Características Físicas y Organolépticas',
+    subtitle: 'Sabores Positivos',
     flavors: [
       {
         name: 'Afrutado Dulce',
@@ -443,6 +444,7 @@ const en = {
   },
   characteristics: {
     title: 'Physical and Organoleptic Characteristics',
+    subtitle: 'Positive Flavors',
     flavors: [
       {
         name: 'Sweet Fruity',

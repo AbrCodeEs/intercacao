@@ -13,7 +13,7 @@ const es = {
           { label: 'AFRUTADO DULCE', value: '2.5' },
           { label: 'AFRUTADO CÍTRICO', value: '1.25' },
           { label: 'AFLORADO', value: '0.0' },
-          { label: 'ACRIOLLADO', value: '2.0' },
+          { label: 'ACRIOLLADO', value: '3.0' },
           { label: 'CACAO', value: '4.0' },
           { label: 'BOSCOSO', value: '0.0' },
           { label: 'ESPECIAS', value: '0.0' },
@@ -53,22 +53,23 @@ const es = {
   },
   characteristics: {
     title: 'Características Físicas y Organolépticas',
+    subtitle: 'Sabores Positivos',
     flavors: [
       {
         name: 'Afrutado Dulce',
-        description: 'Uvas pasas • Ciruelas pasas',
+        description: '',
       },
       {
         name: 'Afrutado Cítrico',
-        description: 'Naranja',
+        description: '',
       },
       {
         name: 'Aflorado',
-        description: 'Naranja • Mandarina',
+        description: '',
       },
       {
         name: 'Acriollado',
-        description: 'Malta • Caña de azúcar • Panela • Maní tostado • Almendras • Nuez • Caramelo',
+        description: 'Malta • Panela • Nuez',
       },
       {
         name: 'Cacao',
@@ -421,7 +422,7 @@ const en = {
           { label: 'SWEET FRUITY', value: '2.5' },
           { label: 'CITRUS FRUITY', value: '1.25' },
           { label: 'FLORAL', value: '0.0' },
-          { label: 'CREOLE', value: '2.0' },
+          { label: 'CREOLE', value: '3.0' },
           { label: 'COCOA', value: '4.0' },
           { label: 'WOODSY', value: '0.0' },
           { label: 'SPICES', value: '0.0' },
@@ -461,22 +462,23 @@ const en = {
   },
   characteristics: {
     title: 'Physical and Organoleptic Characteristics',
+    subtitle: 'Positive Flavors',
     flavors: [
       {
         name: 'Sweet Fruity',
-        description: 'Raisins • Prunes',
+        description: '',
       },
       {
         name: 'Citrus Fruity',
-        description: 'Orange',
+        description: '',
       },
       {
         name: 'Floral',
-        description: 'Orange • Tangerine',
+        description: '',
       },
       {
         name: 'Creole',
-        description: 'Malt • Sugar cane • Panela • Roasted peanuts • Almonds • Walnut • Caramel',
+        description: 'Malt • Panela • Nut',
       },
       {
         name: 'Cocoa',

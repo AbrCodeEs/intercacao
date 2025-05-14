@@ -13,7 +13,7 @@ const es = {
           { label: 'AFRUTADO DULCE', value: '2.25' },
           { label: 'AFRUTADO CÍTRICO', value: '1.75' },
           { label: 'AFLORADO', value: '0.0' },
-          { label: 'ACRIOLLADO', value: '2.0' },
+          { label: 'ACRIOLLADO', value: '3.0' },
           { label: 'CACAO', value: '4.0' },
           { label: 'BOSCOSO', value: '0.0' },
           { label: 'ESPECIAS', value: '0.0' },
@@ -53,22 +53,23 @@ const es = {
   },
   characteristics: {
     title: 'Características Físicas y Organolépticas',
+    subtitle: 'Sabores Positivos',
     flavors: [
       {
-        name: 'Afrutado Dulce',
-        description: 'Uvas pasas • Ciruelas pasas',
+        name: 'Frutas Dulce',
+        description: '',
       },
       {
-        name: 'Afrutado Cítrico',
-        description: 'Naranja',
+        name: 'Fruta cirtica',
+        description: '',
       },
       {
         name: 'Aflorado',
-        description: 'Naranja • Mandarina',
+        description: '',
       },
       {
         name: 'Acriollado',
-        description: 'Malta • Caña de azúcar • Panela • Maní tostado • Almendras • Nuez • Caramelo',
+        description: 'Malta • Panela • Nuez',
       },
       {
         name: 'Cacao',
@@ -152,7 +153,7 @@ const es = {
         },
         {
           type: 'paragraph',
-          text: 'Técnicamente, este cacao muestra una astringencia baja (1) y un amargor medio-alto (2.75), lo que genera una experiencia gustativa firme pero sin resultar áspera. La acidez, presente en niveles medio-bajos (2), añade un leve brillo al perfil general sin generar disonancia. La textura, aunque no evaluada con valores específicos, se percibe como homogénea y sin defectos.',
+          text: 'Técnicamente, este cacao muestra una astringencia baja (1) y un amargor medio-bajo (2.75), lo que genera una experiencia gustativa firme pero sin resultar áspera. La acidez, presente en niveles medio-bajos (2), añade un leve brillo al perfil general sin generar disonancia. La textura, aunque no evaluada con valores específicos, se percibe como homogénea y sin defectos.',
         },
         {
           type: 'paragraph',
@@ -441,7 +442,7 @@ const en = {
           { label: 'SWEET FRUITY', value: '2.25' },
           { label: 'CITRUS FRUITY', value: '1.75' },
           { label: 'FLOWERY', value: '0.0' },
-          { label: 'ACRIOLLATED', value: '2.0' },
+          { label: 'ACRIOLLATED', value: '3.0' },
           { label: 'COCOA', value: '4.0' },
           { label: 'WOODY', value: '0.0' },
           { label: 'SPICES', value: '0.0' },
@@ -481,22 +482,23 @@ const en = {
   },
   characteristics: {
     title: 'Physical and Organoleptic Characteristics',
+    subtitle: 'Positive Flavors',
     flavors: [
       {
         name: 'Sweet Fruity',
-        description: 'Raisins • Prunes',
+        description: '',
       },
       {
         name: 'Citrus Fruity',
-        description: 'Orange',
+        description: '',
       },
       {
         name: 'Floral',
-        description: 'Orange • Tangerine',
+        description: '',
       },
       {
         name: 'Creole',
-        description: 'Malt • Sugar cane • Panela • Roasted peanuts • Almonds • Walnut • Caramel',
+        description: 'Malt • Panela • Nut',
       },
       {
         name: 'Cocoa',
@@ -576,7 +578,7 @@ const en = {
         },
         {
           type: 'paragraph',
-          text: 'Technically, this cacao displays low astringency (1) and medium-high bitterness (2.75), creating a firm but not harsh taste experience. The acidity, present at medium-low levels (2), adds a slight brightness to the overall profile without creating dissonance. The texture, although not evaluated with specific values, is perceived as homogeneous and without defects.',
+          text: 'Technically, this cacao displays low astringency (1) and medium-low bitterness (2.75), creating a firm but not harsh taste experience. The acidity, present at medium-low levels (2), adds a slight brightness to the overall profile without creating dissonance. The texture, although not evaluated with specific values, is perceived as homogeneous and without defects.',
         },
         {
           type: 'paragraph',

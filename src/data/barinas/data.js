@@ -34,8 +34,9 @@ export default (Astro) => {
       },
       sections: langContent.generalInformation.sections,
     },
-    characteristics: {
+   characteristics: {
       title: langContent.characteristics.title,
+      subtitle: langContent.characteristics.subtitle,
       flavors: [
         {
           name: langContent.characteristics.flavors[0].name,
@@ -75,8 +76,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[3].name,
-          percentage: '2.0',
-          progress: 40,
+          percentage: '3.0',
+          progress: 60,
           icon: {
             src: '/icons/acriollado-white-icon.svg',
             alt: 'Bellota-white-icon',

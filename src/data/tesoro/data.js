@@ -29,6 +29,7 @@ export default (Astro) => {
     },
     characteristics: {
       title: langContent.characteristics.title,
+      subtitle: langContent.characteristics.subtitle,
       flavors: [
         {
           name: langContent.characteristics.flavors[0].name,
@@ -313,6 +314,18 @@ export default (Astro) => {
                   src: langImages.protocols.secado[0],
                   alt: langContent.postHarvestBenefit.content[1].protocols[1].image.alt,
                 },
+                {
+                  src: langImages.protocols.secado[1],
+                  alt: langContent.postHarvestBenefit.content[1].protocols[1].image.alt,
+                },
+                {
+                  src: langImages.protocols.secado[2],
+                  alt: langContent.postHarvestBenefit.content[1].protocols[1].image.alt,
+                },
+                {
+                  src: langImages.protocols.secado[3],
+                  alt: langContent.postHarvestBenefit.content[1].protocols[1].image.alt,
+                },
               ],
               paragraph: langContent.postHarvestBenefit.content[1].protocols[1].paragraph,
             },
@@ -355,19 +368,16 @@ export default (Astro) => {
       ],
       images: [
         {
+          type: 'video',
+          src: '/videos/tesoro/tesoro.mp4',
+          alt: langContent.traceability.images[1].alt,
+        },
+        {
           src: langImages.certifications.traceability[0],
           alt: langContent.traceability.images[1].alt,
         },
         {
           src: langImages.certifications.traceability[1],
-          alt: langContent.traceability.images[2].alt,
-        },
-        {
-          src: langImages.certifications.traceability[2],
-          alt: langContent.traceability.images[2].alt,
-        },
-        {
-          src: langImages.certifications.traceability[3],
           alt: langContent.traceability.images[2].alt,
         },
       ],

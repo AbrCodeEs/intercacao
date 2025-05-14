@@ -32,8 +32,9 @@ export default (Astro) => {
       },
       sections: langContent.generalInformation.sections,
     },
-    characteristics: {
+   characteristics: {
       title: langContent.characteristics.title,
+      subtitle: langContent.characteristics.subtitle,
       flavors: [
         {
           name: langContent.characteristics.flavors[0].name,

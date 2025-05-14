@@ -4,35 +4,38 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from '@/components/ui/carousel';
+  CarouselNavigation,
+  CarouselIndicator,
+} from '@/components/ui/carousel/carousel';
 
-export function CarouselImages({ images, ...props }: { images: { src: string; alt: string }[] }) {
+export function CarouselImages({ images, ...props }: { images: { src: string | ImageMetadata; alt: string, type?: "image" | "video"; title?: string | undefined; }[] }) {
+  console.log(images)
   return (
-    <Carousel {...props} className="overflow-hidden md:rounded-lg lg:rounded-lg xl:rounded-lg">
-      <CarouselContent
-        classNameWrapper="w-full xl:overflow-hidden lg:overflow-hidden md:overflow-hidden overflow-visible"
-        className="-ml-0 w-full"
-      >
+    <Carousel
+      {...props}
+      initialIndex={0}
+      className="h-full overflow-hidden rounded-lg pb-10 md:h-full lg:h-full xl:h-full xl:min-h-screen"
+    >
+      <CarouselContent itemsPerPage={1} className="relative -ml-0 h-full w-full xl:min-h-screen">
         {images?.map((image, index) => (
           <CarouselItem
             key={index}
-            className="basis-120 pl-0 md:basis-1/2 lg:basis-1/3 xl:basis-1/3"
+            className="basis-full p-0 xl:min-h-[90vh]"
           >
-            <div className="flex aspect-square items-center justify-center">
+            <div className='relative flex aspect-[4/5] items-stretch justify-between'>
+
               <img
-                src={image.src}
+                src={image.src.src}
                 alt={image.alt}
                 loading="eager"
-                className="aspect-[4/5] object-cover"
+                className="aspect-[4/5] rounded-lg object-cover xl:min-h-[90vh]"
               />
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-5 disabled:!opacity-1 md:left-5 lg:left-10 xl:left-10" />
-      <CarouselNext className="right-5 disabled:!opacity-1 md:right-5 lg:right-10 xl:right-10" />
+      <CarouselNavigation className="absolute top-1/2 md:top-1/2 xl:top-1/2" alwaysShow />
+      <CarouselIndicator className="bottom-0 px-15 md:-bottom-6.5 lg:-bottom-6.5 xl:-bottom-6.5" />
     </Carousel>
   );
 }

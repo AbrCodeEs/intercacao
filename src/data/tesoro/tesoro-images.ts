@@ -19,6 +19,9 @@ import ProtocoloFermentacionTwo from '@/images/tesoro/cosecha2.webp';
 import ProtocoloFermentacionThree from '@/images/tesoro/cosecha3.webp';
 
 import CosechaOne from '@/images/tesoro/secado1.webp';
+import CosechaTwo from '@/images/tesoro/secado2.webp';
+import CosechaThree from '@/images/tesoro/secado3.webp';
+import CosechaFour from '@/images/tesoro/secado4.webp';
 
 import TraceabilityOne from '@/images/tesoro/traz1.webp';
 import TraceabilityTwo from '@/images/tesoro/traz2.webp';
@@ -49,7 +52,7 @@ const images = {
         ProtocoloFermentacionTwo,
         ProtocoloFermentacionThree,
       ],
-      secado: [CosechaOne],
+      secado: [CosechaOne, CosechaTwo, CosechaThree, CosechaFour],
       corteChuao: '@/images/chuao/corte-chuao-trinitario.png',
     },
     certifications: {
@@ -81,7 +84,7 @@ const images = {
         ProtocoloFermentacionTwo,
         ProtocoloFermentacionThree,
       ],
-      secado: [CosechaOne],
+      secado: [CosechaOne, CosechaTwo, CosechaThree, CosechaFour],
     },
     certifications: {
       traceability: [TraceabilityOne, TraceabilityTwo, TraceabilityThree, TraceabilityFour],

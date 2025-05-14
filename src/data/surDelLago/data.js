@@ -33,13 +33,14 @@ export default (Astro) => {
       },
       sections: langContent.generalInformation.sections,
     },
-    characteristics: {
+   characteristics: {
       title: langContent.characteristics.title,
+      subtitle: langContent.characteristics.subtitle,
       flavors: [
         {
           name: langContent.characteristics.flavors[0].name,
           percentage: '2,25',
-          progress: 45,
+          progress: 42,
           icon: {
             src: '/icons/afrutado_dulces-white-icon.svg',
             alt: 'Ceresa-white-icon',
@@ -50,8 +51,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[1].name,
-          percentage: '1,75',
-          progress: 50,
+          percentage: '1.75',
+          progress: 24,
           icon: {
             src: '/icons/afrutado_citricos-white-icon.svg',
             alt: 'Naranja-white-icon',
@@ -74,8 +75,8 @@ export default (Astro) => {
         },
         {
           name: langContent.characteristics.flavors[3].name,
-          percentage: '2.0',
-          progress: 40,
+          percentage: '3.0',
+          progress: 60,
           icon: {
             src: '/icons/acriollado-white-icon.svg',
             alt: 'Bellota-white-icon',

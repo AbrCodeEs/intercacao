@@ -166,7 +166,7 @@ export const ProjectsSection = ({ items }: { items: any[] }) => {
               ))}
           </CarouselContent>
           <CarouselNavigation className="absolute top-1/2 md:top-1/2 xl:top-1/2" alwaysShow />
-          <CarouselIndicator className="bottom-0 px-15 md:-bottom-6.5 lg:-bottom-6.5 xl:-bottom-6.5 xl:bottom-5" />
+          <CarouselIndicator className="bottom-0 px-15 md:-bottom-6.5 lg:-bottom-6.5 xl:-bottom-6.5" />
         </Carousel>
       ),
     };
