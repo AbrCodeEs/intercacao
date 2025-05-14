@@ -2,6 +2,8 @@
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 
+import { CarouselImages } from '@/components/ui/carousel/Img';
+
 type Props = CollectionEntry<'template'>['data'];
 
 const {
@@ -94,9 +96,12 @@ const {
               </div>
 
               <div class="flex flex-1 flex-col items-center justify-between gap-5">
-                {!!protocol.mainImage.length &&
-                  protocol.mainImage.map((image: { src: string; alt: string }) => (
+                {!!protocol?.mainImage?.length && (
+                  <CarouselImages client:load images={protocol.mainImage} />
+                )}
+                {/* protocol.mainImage.map((image: { src: string | ImageMetadata; alt: string }) => (
                     <div class="group animate-trigger-left relative w-full flex-none overflow-hidden rounded-lg bg-neutral-300">
+                    
                       <Image
                         inferSize={true}
                         loading="eager"
@@ -105,7 +110,7 @@ const {
                         alt={image.alt}
                       />
                     </div>
-                  ))}
+                  )) */}
 
                 {protocol.paragraph && (
                   <div class="w-full flex-none">

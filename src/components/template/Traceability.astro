@@ -3,6 +3,8 @@ import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 
 import ImgDialog from '@/components/ui/dialog/Img';
+import { CarouselImages } from '@/components/ui/carousel/Img';
+
 import { cn } from '@/lib/cn';
 type Props = CollectionEntry<'template'>['data'];
 
@@ -139,26 +141,27 @@ const { traceability } = Astro.props;
               'group animate-trigger-left animate-once animate-ease-in-out relative w-full flex-none overflow-hidden rounded-lg bg-neutral-300',
             ]}
           >
-            {image.type === 'video' ? (
+            {image.type === 'video' && (
               <iframe
                 loading="lazy"
                 allowfullscreen
                 title={image.title}
-                class="h-100 w-full overflow-hidden rounded-lg"
+                class="h-150 w-full overflow-hidden rounded-lg"
                 src={`${image.src}?autoplay=0`}
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              />
-            ) : (
-              <Image
-                inferSize={true}
-                loading="eager"
-                src={image.src}
-                alt={image.alt}
-                class="w-full transform rounded-lg object-fill object-center transition-all duration-500 ease-out group-hover:scale-105"
               />
             )}
           </div>
         ))
+      }
+
+      {
+        traceability.images.length && (
+          <CarouselImages
+            client:load
+            images={traceability.images.filter(({ type }) => type !== 'video')}
+          />
+        )
       }
     </div>
   </div>
