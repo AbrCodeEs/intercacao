@@ -152,7 +152,7 @@ export function ChocolateGallery({
 
       <div className="flex justify-center py-8">
         <a
-          href="/pdf/Venezuelan Cocoa Beans Japanese clients presentation 2025 protected.pdf"
+          href="/pdf/Venezuelan Cocoa Beans Japanese clients presentation 2025 source_removed_protected.pdf"
           download
           className="rounded-lg bg-neutral-800 px-4 py-2 text-base font-semibold text-white transition-all hover:bg-neutral-700"
         >
