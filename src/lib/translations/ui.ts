@@ -21,7 +21,7 @@ import { piura } from '@/data/piura/piura-content';
 import { chulucanas } from '@/data/chulucanas/chulucanas-content';
 
 export const languages = {
-  eng: 'English',
+  en:'English',
   es: 'Español',
 };
 
@@ -50,7 +50,7 @@ export const ui = {
     cajaseca: cajaseca.es,
     barinas: barinas.es,
   },
-  eng: {
+  en:{
     home: home.en,
     chuao: chuao.en,
     porcelana: porcelana.en,

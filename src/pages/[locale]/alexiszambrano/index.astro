@@ -8,7 +8,7 @@ import gladysRamos from '@/images/global/alexys-sanchez.webp';
 const lang = getLangFromUrl(Astro.url);
 
 export async function getStaticPaths() {
-  return [{ params: { locale: 'es' } }, { params: { locale: 'eng' } }];
+  return [{ params: { locale: 'es' } }, { params: { locale: 'en' } }];
 }
 const translations = {
   es: {
@@ -21,7 +21,7 @@ const translations = {
     ],
     back: 'Volver atras',
   },
-  eng: {
+  en:{
     title: 'Ing. Alexis Zambrano',
     content: [
       'Alexis Zambrano is a chemist with a master\'s degree in soil science and a doctorate in microbial biotechnology.',

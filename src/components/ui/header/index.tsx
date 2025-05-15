@@ -67,8 +67,8 @@ function Header({
             es
           </li>
           <li
-            onClick={() => changeLanguage('eng')}
-            className={`cursor-pointer rounded-lg px-2.5 py-2 ${currentLang === 'eng' ? 'bg-black font-bold text-white' : 'bg-gray-400 opacity-50'}`}
+            onClick={() => changeLanguage('en')}
+            className={`cursor-pointer rounded-lg px-2.5 py-2 ${currentLang === 'en' ? 'bg-black font-bold text-white' : 'bg-gray-400 opacity-50'}`}
           >
             en
           </li>

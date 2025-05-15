@@ -59,7 +59,7 @@ const images = {
       // historiaThree
     ],
   },
-  eng: {
+  en:{
     general: {
       bannerWeb: PatanemoWeb,
       ratingStars: RatingStars,

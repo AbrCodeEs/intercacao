@@ -30,11 +30,11 @@ import { NewsSection } from '@/components/home/NewsSection';
 
 // Validar que el locale sea válido
 const { locale } = Astro.params;
-if (!locale || !['es', 'eng'].includes(locale)) {
+if (!locale || !['es', 'en'].includes(locale)) {
   return Astro.redirect('/es/');
 }
 
-const lang = locale as 'es' | 'eng';
+const lang = locale as 'es' | 'en';
 const trans = useTranslations(lang);
 
 // Obtener las URLs de las imágenes para preload
@@ -98,7 +98,7 @@ const posts = [
 ];
 
 export async function getStaticPaths() {
-  return [{ params: { locale: 'eng' } }, { params: { locale: 'es' } }];
+  return [{ params: { locale: 'en' } }, { params: { locale: 'es' } }];
 }
 ---
 
