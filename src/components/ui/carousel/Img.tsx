@@ -9,7 +9,6 @@ import {
 } from '@/components/ui/carousel/carousel';
 
 export function CarouselImages({ images, ...props }: { images: { src: string | ImageMetadata; alt: string, type?: "image" | "video"; title?: string | undefined; }[] }) {
-  console.log(images)
   return (
     <Carousel
       {...props}

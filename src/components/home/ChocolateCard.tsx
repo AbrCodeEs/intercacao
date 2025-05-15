@@ -13,7 +13,7 @@ import watermarkEn from '@/images/global/soldout.webp';
 
 const watermark = {
   es: watermarkEs,
-  eng: watermarkEn,
+  en:watermarkEn,
 } as const;
 
 const IconTraslation = {
@@ -115,7 +115,7 @@ export const ChocolateCard = memo(function ChocolateCard({
   sortBy: SortOption | null;
   flavors: FlavorOption[] | string | null;
   trans: Record<string, any>;
-  lang: 'es' | 'eng';
+  lang: 'es' | 'en';
 }) {
   const [isHovered, setIsHovered] = useState(false);
 

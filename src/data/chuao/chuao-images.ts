@@ -55,7 +55,7 @@ const images = {
     },
     history: [Historia, Historia2],
   },
-  eng: {
+  en:{
     general: {
       chuaoWeb: ChuaoWeb,
       ratingStars: RatingStars,

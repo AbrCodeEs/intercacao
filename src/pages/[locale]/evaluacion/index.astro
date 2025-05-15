@@ -14,7 +14,7 @@ import evaluacion7 from '@/assets/img/global/evaluacion7.webp';
 const lang = getLangFromUrl(Astro.url);
 
 export async function getStaticPaths() {
-  return [{ params: { locale: 'es' } }, { params: { locale: 'eng' } }];
+  return [{ params: { locale: 'es' } }, { params: { locale: 'en' } }];
 }
 const translations = {
   es: {
@@ -109,7 +109,7 @@ const translations = {
     ],
     back: 'Volver atras',
   },
-  eng: {
+  en:{
     title: 'GRADER METHOD',
     subtitle: 'COCOA QUALITY ANALYSIS',
     description: [

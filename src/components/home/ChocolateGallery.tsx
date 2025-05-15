@@ -17,7 +17,7 @@ export function ChocolateGallery({
   lang,
   trans,
 }: {
-  lang: 'es' | 'eng';
+  lang: 'es' | 'en';
   trans: Record<string, any>;
 }) {
   const {

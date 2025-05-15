@@ -33,7 +33,6 @@ export function WorldMap({ dots = [], lineColor = '#f2cc8f85' }: MapProps) {
     const midY = Math.min(start.y, end.y) - 50;
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
   };
-  console.log(encodeURIComponent(svgMap));
 
   return (
     <div className="bg-w hite relative aspect-[2/1] w-full rounded-lg font-sans">

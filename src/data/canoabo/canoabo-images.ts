@@ -54,7 +54,7 @@ const images = {
     },
     history: [historiaOne, historiaTwo],
   },
-  eng: {
+  en:{
     general: {
       porcelanaWeb: PorcelanaWeb,
       ratingStars: RatingStars,

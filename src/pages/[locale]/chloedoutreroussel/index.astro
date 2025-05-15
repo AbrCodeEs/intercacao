@@ -8,7 +8,7 @@ import chloeDoutreRoussel from '@/images/global/chloe-doutre.webp';
 const lang = getLangFromUrl(Astro.url);
 
 export async function getStaticPaths() {
-  return [{ params: { locale: 'es' } }, { params: { locale: 'eng' } }];
+  return [{ params: { locale: 'es' } }, { params: { locale: 'en' } }];
 }
 const translations = {
   es: {
@@ -19,7 +19,7 @@ const translations = {
     ],
     back: 'Volver atras',
   },
-  eng: {
+  en:{
     title: 'Chloé Doutre Roussel',
     content: [
       'She is an international expert in almond-to-bar chocolate and a cacao specialist. She travels worldwide to train and advise people on the development of high-quality chocolate and/or specialty cacao, and their related business models. She has trained our sensory laboratory team in the quality analysis methodology developed by the FCCI (Fine Cacao and Chocolate Institute) and develops comprehensive quality analysis reports for some Intercacao cacao lots.',

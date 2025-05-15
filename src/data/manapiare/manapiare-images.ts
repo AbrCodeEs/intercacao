@@ -64,7 +64,7 @@ const images = {
     },
     history: [historiaOne, historiaTwo, historiaThree],
   },
-  eng: {
+  en:{
     general: {
       bannerWeb: PatanemoWeb,
       ratingStars: RatingStars,

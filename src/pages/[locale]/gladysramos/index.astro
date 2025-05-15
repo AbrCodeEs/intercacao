@@ -8,7 +8,7 @@ import gladysRamos from '@/images/global/ing-gladys-ramos.webp';
 const lang = getLangFromUrl(Astro.url);
 
 export async function getStaticPaths() {
-  return [{ params: { locale: 'es' } }, { params: { locale: 'eng' } }];
+  return [{ params: { locale: 'es' } }, { params: { locale: 'en' } }];
 }
 const translations = {
   es: {
@@ -22,7 +22,7 @@ const translations = {
     ],
     back: 'Volver atras',
   },
-  eng: {
+  en:{
     title: 'Eng. Ms. Gladys Isabel Ramos Carranza',
     content: [
       "Gladys Ramos is an agricultural engineer with many years of experience. She holds a master's degree in Water and Land Resources Development from CIDIAT in Mérida and a position as a V researcher at INIA in Venezuela. Engineer Ramos is considered an expert in the world of fine aroma cocoa, with extensive experience and participation in national and international events, as coordinator, facilitator, and organizer of more than a hundred training activities with producers and technicians in the area of ​​quality and sensory analysis of cocoa liqueurs.",
